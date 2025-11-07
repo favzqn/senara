@@ -4,27 +4,39 @@
     "title": "Yang Tidak Terlihat",
     "tags": ["Emotional Skills", "Self-Worth"],
     "age": "16+",
-    "thumbnail": "/senara/assets/thumbnails/burnout.png"
+    "thumbnail": "/senara/assets/thumbnails/burnout.png",
+    "featured": true,
+    "series": "Emotional Skills Series",
+    "description": "Cerita tentang seorang remaja yang berjuang dengan burnout dan menemukan nilai dirinya kembali."
   },
   {
     "id": "logic101",
     "title": "Kopi & Algoritma",
     "tags": ["Coding", "Problem Solving"],
     "age": "14+",
-    "thumbnail": "/senara/assets/thumbnails/logic.png"
+    "thumbnail": "/senara/assets/thumbnails/logic.png",
+    "featured": true,
+    "series": "Coding Series",
+    "description": "Petualangan seorang pemula dalam dunia pemrograman melalui cerita yang menyenangkan."
   },
   {
     "id": "friendship",
     "title": "Cerita Persahabatan",
     "tags": ["Social Skills", "Empathy"],
     "age": "12+",
-    "thumbnail": "/senara/assets/thumbnails/friendship.png"
+    "thumbnail": "/senara/assets/thumbnails/friendship.png",
+    "featured": false,
+    "series": "Social Skills Series",
+    "description": "Belajar tentang persahabatan sejati dan bagaimana mengatasi konflik dengan empati."
   },
   {
     "id": "resilience",
     "title": "Bangkit Kembali",
     "tags": ["Life Skills", "Resilience"],
     "age": "15+",
-    "thumbnail": "/senara/assets/thumbnails/resilience.png"
+    "thumbnail": "/senara/assets/thumbnails/resilience.png",
+    "featured": true,
+    "series": "Life Skills Series",
+    "description": "Inspirasi tentang bagaimana bangkit dari kegagalan dan membangun resiliensi."
   }
 ]

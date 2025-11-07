@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koleksi — Senara</title>
+  <title>Kategori — Senara</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -64,7 +64,7 @@
       </div>
       <div class="hidden md:flex gap-8">
         <a href="index.html" class="text-amber-900 hover:text-amber-700 transition font-medium">Beranda</a>
-        <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 transition font-semibold">Koleksi</a>
+        <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 transition font-medium">Koleksi</a>
         <a href="index.html#tentang" class="text-amber-900 hover:text-amber-700 transition font-medium">Tentang</a>
       </div>
       <button id="mobileMenuBtn" class="md:hidden text-amber-900 hover:text-amber-700 transition">
@@ -87,32 +87,11 @@
   <!-- Header -->
   <section class="bg-gradient-to-r from-amber-100 to-amber-50 py-16 px-4">
     <div class="max-w-6xl mx-auto">
-      <h1 class="text-5xl md:text-6xl font-bold text-amber-900 mb-4">Koleksi Cerita</h1>
-      <p class="text-lg text-amber-800 max-w-2xl">
-        Jelajahi koleksi visual novel edukatif kami. Pilih cerita yang sesuai dengan minat dan usia Anda.
+      <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 font-semibold mb-4 inline-block">← Kembali ke Koleksi</a>
+      <h1 id="categoryTitle" class="text-5xl md:text-6xl font-bold text-amber-900 mb-4">Kategori</h1>
+      <p id="categoryDesc" class="text-lg text-amber-800 max-w-2xl">
+        Jelajahi cerita dari kategori ini.
       </p>
-    </div>
-  </section>
-
-  <!-- Search & Filter -->
-  <section class="py-8 px-4 bg-white border-b border-amber-100">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row gap-4 items-center">
-        <div class="flex-1 w-full">
-          <input 
-            type="text" 
-            id="searchInput" 
-            placeholder="Cari cerita..." 
-            class="w-full px-4 py-3 rounded-lg border border-amber-200 bg-amber-50 text-amber-900 placeholder-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500"
-          >
-        </div>
-        <div class="flex gap-2 flex-wrap justify-center md:justify-end w-full md:w-auto">
-          <button class="filter-btn px-4 py-2 rounded-full bg-amber-100 text-amber-900 font-medium hover:bg-amber-200 transition" data-filter="all">Semua</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Emotional Skills">Emotional</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Coding">Coding</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Social Skills">Social</button>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -120,7 +99,7 @@
   <section class="py-16 px-4">
     <div class="max-w-6xl mx-auto">
       <div id="storiesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Stories will be loaded here by JavaScript -->
+        <!-- Stories will be loaded here -->
         <div class="col-span-full text-center py-12">
           <p class="text-amber-700">Loading stories...</p>
         </div>
@@ -157,7 +136,7 @@
   </footer>
 
   <script>
-    // Hardcoded stories data - no external JSON needed
+    // Hardcoded stories data
     const allStoriesData = [
       {
         "id": "burnout",
@@ -201,32 +180,43 @@
       }
     ];
 
-    let allStories = [];
-    let currentFilter = 'all';
-    let currentSearch = '';
+    const categoryMap = {
+      'emotional-skills': 'Emotional Skills',
+      'coding': 'Coding',
+      'social-skills': 'Social Skills',
+      'life-skills': 'Life Skills',
+      'bahasa': 'Bahasa',
+      'kreativitas': 'Kreativitas',
+      'critical-thinking': 'Critical Thinking',
+      'sejarah-budaya': 'Sejarah & Budaya'
+    };
 
-    // Load stories from hardcoded data
-    function loadStories() {
-      allStories = allStoriesData;
-      filterAndRender();
+    // Get category from URL
+    function getCategory() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('cat');
     }
 
-    // Filter and render stories
-    function filterAndRender() {
-      let filtered = allStories;
+    // Load stories by category
+    function loadStoriesByCategory() {
+      const categorySlug = getCategory();
+      const categoryName = categoryMap[categorySlug];
 
-      // Apply search filter
-      if (currentSearch) {
-        filtered = filtered.filter(story =>
-          story.title.toLowerCase().includes(currentSearch.toLowerCase()) ||
-          story.tags.some(tag => tag.toLowerCase().includes(currentSearch.toLowerCase()))
-        );
+      if (!categoryName) {
+        document.getElementById('storiesContainer').innerHTML = 
+          '<div class="col-span-full text-center py-12"><p class="text-red-600">Kategori tidak ditemukan.</p></div>';
+        return;
       }
 
-      // Apply category filter
-      if (currentFilter !== 'all') {
-        filtered = filtered.filter(story => story.tags.includes(currentFilter));
-      }
+      // Update page title and description
+      document.getElementById('categoryTitle').textContent = categoryName;
+      document.getElementById('categoryDesc').textContent = `Jelajahi semua cerita dari kategori ${categoryName}.`;
+      document.title = `${categoryName} — Senara`;
+
+      // Filter stories by category
+      const filtered = allStoriesData.filter(story => 
+        story.tags.some(tag => tag.toLowerCase().includes(categoryName.toLowerCase()))
+      );
 
       renderStories(filtered);
     }
@@ -236,23 +226,22 @@
       const container = document.getElementById('storiesContainer');
       
       if (stories.length === 0) {
-        container.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-amber-700">Tidak ada cerita yang sesuai dengan pencarian Anda.</p></div>';
+        container.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-amber-700">Belum ada cerita di kategori ini.</p></div>';
         return;
       }
 
       container.innerHTML = '';
 
+      const emojiMap = {
+        'burnout': '💭',
+        'logic101': '💻',
+        'friendship': '🤝',
+        'resilience': '🌱'
+      };
+
       stories.forEach(story => {
         const card = document.createElement('div');
         card.className = 'card-hover bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm';
-        
-        // Create emoji-based placeholder thumbnail
-        const emojiMap = {
-          'burnout': '💭',
-          'logic101': '💻',
-          'friendship': '🤝',
-          'resilience': '🌱'
-        };
         const emoji = emojiMap[story.id] || '📖';
         
         card.innerHTML = `
@@ -261,6 +250,7 @@
           </div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-amber-900 mb-2">${story.title}</h3>
+            <p class="text-amber-700 text-sm mb-4">${story.description}</p>
             <div class="flex flex-wrap gap-2 mb-4">
               ${story.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
             </div>
@@ -279,51 +269,22 @@
       });
     }
 
-    // Setup event listeners
-    function setupEventListeners() {
-      // Search input
-      document.getElementById('searchInput').addEventListener('input', (e) => {
-        currentSearch = e.target.value;
-        filterAndRender();
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
       });
-
-      // Filter buttons
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          // Update active state
-          document.querySelectorAll('.filter-btn').forEach(b => {
-            b.classList.remove('bg-amber-100');
-            b.classList.add('bg-amber-50');
-          });
-          e.target.classList.remove('bg-amber-50');
-          e.target.classList.add('bg-amber-100');
-
-          // Update filter
-          currentFilter = e.target.dataset.filter;
-          filterAndRender();
-        });
-      });
-
-      // Mobile menu
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-      
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
-    }
+    });
 
     // Load stories on page load
-    document.addEventListener('DOMContentLoaded', () => {
-      loadStories();
-      setupEventListeners();
-    });
+    document.addEventListener('DOMContentLoaded', loadStoriesByCategory);
   </script>
 </body>
 </html>
