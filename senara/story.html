@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story — Senara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', 'Nunito', sans-serif;
+    }
+    
+    body {
+      background-color: #faf8f3;
+    }
+    
+    .story-container {
+      background: linear-gradient(135deg, #faf8f3 0%, #f5f0e8 100%);
+      border-radius: 2rem;
+      border: 2px solid #e8dcc8;
+    }
+    
+    .play-btn-large {
+      background-color: #8b7355;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .play-btn-large:hover {
+      background-color: #6d5844;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="bg-amber-50">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-amber-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold text-amber-900">
+        <a href="index.html" class="hover:text-amber-700 transition">Senara</a>
+      </div>
+      <div class="hidden md:flex gap-8">
+        <a href="index.html" class="text-amber-900 hover:text-amber-700 transition font-medium">Beranda</a>
+        <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 transition font-medium">Koleksi</a>
+        <a href="index.html#tentang" class="text-amber-900 hover:text-amber-700 transition font-medium">Tentang</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden text-amber-900 hover:text-amber-700 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-amber-100">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Beranda</a>
+        <a href="koleksi.html" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Koleksi</a>
+        <a href="index.html#tentang" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Tentang</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Story Player Container -->
+  <section class="min-h-screen flex items-center justify-center px-4 py-16">
+    <div class="max-w-4xl w-full">
+      <div id="storyContent" class="story-container p-8 md:p-12">
+        <!-- Story content will be loaded here -->
+        <div class="text-center py-12">
+          <p class="text-amber-700 mb-4">Loading story...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-amber-900 text-white py-12 px-4 mt-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Senara</h3>
+          <p class="text-amber-100">Platform visual novel edukatif untuk segala usia.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Navigasi</h4>
+          <ul class="space-y-2 text-amber-100">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="koleksi.html" class="hover:text-white transition">Koleksi</a></li>
+            <li><a href="index.html#tentang" class="hover:text-white transition">Tentang</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Kontak</h4>
+          <p class="text-amber-100">Email: hello@senara.id</p>
+          <p class="text-amber-100">Ikuti kami di media sosial</p>
+        </div>
+      </div>
+      <div class="border-t border-amber-800 pt-8 text-center text-amber-100">
+        <p>&copy; 2024 Senara. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hardcoded stories data - no external JSON needed
+    const allStoriesData = [
+      {
+        "id": "burnout",
+        "title": "Yang Tidak Terlihat",
+        "tags": ["Emotional Skills", "Self-Worth"],
+        "age": "16+",
+        "thumbnail": "/senara/assets/thumbnails/burnout.png"
+      },
+      {
+        "id": "logic101",
+        "title": "Kopi & Algoritma",
+        "tags": ["Coding", "Problem Solving"],
+        "age": "14+",
+        "thumbnail": "/senara/assets/thumbnails/logic.png"
+      },
+      {
+        "id": "friendship",
+        "title": "Cerita Persahabatan",
+        "tags": ["Social Skills", "Empathy"],
+        "age": "12+",
+        "thumbnail": "/senara/assets/thumbnails/friendship.png"
+      },
+      {
+        "id": "resilience",
+        "title": "Bangkit Kembali",
+        "tags": ["Life Skills", "Resilience"],
+        "age": "15+",
+        "thumbnail": "/senara/assets/thumbnails/resilience.png"
+      }
+    ];
+
+    // Get story ID from URL parameters
+    function getStoryId() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+
+    // Load story data from hardcoded data
+    function loadStory() {
+      const storyId = getStoryId();
+      
+      if (!storyId) {
+        document.getElementById('storyContent').innerHTML = `
+          <div class="text-center py-12">
+            <p class="text-red-600 mb-4">Story not found.</p>
+            <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 font-semibold">← Back to Collection</a>
+          </div>
+        `;
+        return;
+      }
+
+      try {
+        const story = allStoriesData.find(s => s.id === storyId);
+
+        if (!story) {
+          throw new Error('Story not found');
+        }
+
+        renderStory(story);
+      } catch (error) {
+        console.error('Error loading story:', error);
+        document.getElementById('storyContent').innerHTML = `
+          <div class="text-center py-12">
+            <p class="text-red-600 mb-4">Error loading story. Please try again.</p>
+            <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 font-semibold">← Back to Collection</a>
+          </div>
+        `;
+      }
+    }
+
+    // Render story player
+    function renderStory(story) {
+      const emojiMap = {
+        'burnout': '💭',
+        'logic101': '💻',
+        'friendship': '🤝',
+        'resilience': '🌱'
+      };
+      const emoji = emojiMap[story.id] || '📖';
+
+      const content = `
+        <div class="text-center">
+          <div class="text-8xl mb-6">${emoji}</div>
+          <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">${story.title}</h1>
+          
+          <div class="flex flex-wrap gap-2 justify-center mb-6">
+            ${story.tags.map(tag => `
+              <span class="bg-amber-100 text-amber-900 px-4 py-2 rounded-full font-semibold">
+                ${tag}
+              </span>
+            `).join('')}
+          </div>
+          
+          <p class="text-amber-700 mb-8 text-lg">
+            Recommended age: ${story.age}
+          </p>
+          
+          <div class="bg-white rounded-xl p-8 mb-8 border border-amber-100">
+            <p class="text-amber-800 mb-6 text-lg leading-relaxed">
+              Siap untuk memulai petualangan? Klik tombol di bawah untuk memainkan visual novel ini.
+            </p>
+            <p class="text-amber-700 text-sm mb-6">
+              💡 Tip: Pilihan yang Anda buat akan mempengaruhi jalan cerita. Nikmati pengalaman unik Anda!
+            </p>
+          </div>
+          
+          <button class="play-btn-large px-12 py-4 rounded-lg font-bold text-xl mb-6 w-full md:w-auto">
+            ▶ Mainkan Visual Novel
+          </button>
+          
+          <div class="mt-12 pt-8 border-t border-amber-200">
+            <p class="text-amber-700 text-sm mb-4">
+              📝 Monogatari.js integration coming soon!
+            </p>
+            <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 font-semibold">
+              ← Kembali ke Koleksi
+            </a>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('storyContent').innerHTML = content;
+      
+      // Add event listener to play button
+      document.querySelector('.play-btn-large').addEventListener('click', () => {
+        alert('Visual novel player akan segera tersedia!\n\nMonogatari.js akan diintegrasikan di sini untuk pengalaman bermain yang lengkap.');
+      });
+    }
+
+    // Mobile menu toggle
+    function setupMobileMenu() {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Load story on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      loadStory();
+      setupMobileMenu();
+    });
+  </script>
+</body>
+</html>

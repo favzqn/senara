@@ -1,0 +1,30 @@
+[
+  {
+    "id": "burnout",
+    "title": "Yang Tidak Terlihat",
+    "tags": ["Emotional Skills", "Self-Worth"],
+    "age": "16+",
+    "thumbnail": "/senara/assets/thumbnails/burnout.png"
+  },
+  {
+    "id": "logic101",
+    "title": "Kopi & Algoritma",
+    "tags": ["Coding", "Problem Solving"],
+    "age": "14+",
+    "thumbnail": "/senara/assets/thumbnails/logic.png"
+  },
+  {
+    "id": "friendship",
+    "title": "Cerita Persahabatan",
+    "tags": ["Social Skills", "Empathy"],
+    "age": "12+",
+    "thumbnail": "/senara/assets/thumbnails/friendship.png"
+  },
+  {
+    "id": "resilience",
+    "title": "Bangkit Kembali",
+    "tags": ["Life Skills", "Resilience"],
+    "age": "15+",
+    "thumbnail": "/senara/assets/thumbnails/resilience.png"
+  }
+]
