@@ -65,6 +65,12 @@
   <!-- Story Player Container -->
   <section class="min-h-screen flex items-center justify-center px-4 py-16">
     <div class="max-w-4xl w-full">
+      <!-- Monogatari.js Player (will be initialized here) -->
+      <div id="monogatari-container" style="display: none;">
+        <!-- Monogatari.js will render here -->
+      </div>
+
+      <!-- Story Info & Placeholder (shown when Monogatari.js is not available) -->
       <div id="storyContent" class="story-container p-8 md:p-12">
         <!-- Story content will be loaded here -->
         <div class="text-center py-12">
@@ -222,9 +228,28 @@
             </p>
           </div>
           
-          <button class="play-btn-large px-12 py-4 rounded-lg font-bold text-xl mb-6 w-full md:w-auto">
+          <button id="playBtn" class="play-btn-large px-12 py-4 rounded-lg font-bold text-xl mb-6 w-full md:w-auto">
             ▶ Mainkan Visual Novel
           </button>
+          
+          <!-- Social Sharing -->
+          <div class="mt-8 pt-8 border-t border-amber-200">
+            <p class="text-amber-700 text-sm font-semibold mb-4">📢 Bagikan cerita ini:</p>
+            <div class="flex flex-wrap gap-3 justify-center">
+              <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" class="bg-blue-400 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-500 transition flex items-center gap-2">
+                𝕏 Twitter
+              </a>
+              <a id="shareFacebook" href="#" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center gap-2">
+                f Facebook
+              </a>
+              <a id="shareWhatsApp" href="#" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition flex items-center gap-2">
+                💬 WhatsApp
+              </a>
+              <button id="shareCopy" class="bg-amber-900 text-white px-4 py-2 rounded-lg font-semibold hover:bg-amber-800 transition flex items-center gap-2">
+                🔗 Salin Link
+              </button>
+            </div>
+          </div>
           
           <div class="mt-12 pt-8 border-t border-amber-200">
             <p class="text-amber-700 text-sm mb-4">
@@ -239,9 +264,41 @@
 
       document.getElementById('storyContent').innerHTML = content;
       
-      // Add event listener to play button
-      document.querySelector('.play-btn-large').addEventListener('click', () => {
-        alert('Visual novel player akan segera tersedia!\n\nMonogatari.js akan diintegrasikan di sini untuk pengalaman bermain yang lengkap.');
+      // Add event listener to play button - redirect to Monogatari engine
+      document.getElementById('playBtn').addEventListener('click', () => {
+        // Redirect to main Monogatari engine with story parameter
+        window.location.href = `../index.html?story=${story.id}`;
+      });
+
+      // Setup social sharing
+      setupSocialSharing(story);
+    }
+
+    // Setup social sharing buttons
+    function setupSocialSharing(story) {
+      const pageUrl = window.location.href;
+      const pageTitle = `Baca "${story.title}" di Senara`;
+      const pageDescription = story.description;
+
+      // Twitter share
+      document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`;
+
+      // Facebook share
+      document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+
+      // WhatsApp share
+      document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodeURIComponent(pageTitle + ' ' + pageUrl)}`;
+
+      // Copy link button
+      document.getElementById('shareCopy').addEventListener('click', () => {
+        navigator.clipboard.writeText(pageUrl).then(() => {
+          const btn = document.getElementById('shareCopy');
+          const originalText = btn.innerHTML;
+          btn.innerHTML = '✓ Disalin!';
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+          }, 2000);
+        });
       });
     }
 
@@ -261,11 +318,42 @@
       });
     }
 
+    // Initialize Monogatari.js (if available)
+    function initMonogatariPlayer(storyId) {
+      // Check if Monogatari is loaded
+      if (typeof Monogatari !== 'undefined') {
+        const container = document.getElementById('monogatari-container');
+        const storyContent = document.getElementById('storyContent');
+        
+        // Hide placeholder and show Monogatari container
+        storyContent.style.display = 'none';
+        container.style.display = 'block';
+        
+        // Load story script dynamically
+        const scriptPath = `stories/${storyId}.js`;
+        const script = document.createElement('script');
+        script.src = scriptPath;
+        script.onload = function() {
+          console.log('Story script loaded:', storyId);
+        };
+        script.onerror = function() {
+          console.error('Failed to load story script:', scriptPath);
+          storyContent.style.display = 'block';
+          container.style.display = 'none';
+        };
+        document.body.appendChild(script);
+      } else {
+        console.log('Monogatari.js not loaded. Showing placeholder.');
+      }
+    }
+
     // Load story on page load
     document.addEventListener('DOMContentLoaded', () => {
+      const storyId = getStoryId();
       loadStory();
       setupMobileMenu();
     });
   </script>
+
 </body>
 </html>

@@ -27,6 +27,29 @@ const { $_ready, $_ } = Monogatari;
 
 // 1. Outside the $_ready function:
 
+// Get story ID from URL parameter (from Senara platform)
+function getStoryFromURL() {
+	const params = new URLSearchParams(window.location.search);
+	return params.get('story');
+}
+
+// Load story script dynamically
+function loadStoryScript(storyId) {
+	if (storyId) {
+		const script = document.createElement('script');
+		script.src = `./senara/stories/${storyId}.js`;
+		script.onerror = function() {
+			console.error('Failed to load story script:', storyId);
+		};
+		document.head.appendChild(script);
+	}
+}
+
+// Load story if coming from Senara
+const storyId = getStoryFromURL();
+if (storyId) {
+	loadStoryScript(storyId);
+}
 
 $_ready (() => {
 	// 2. Inside the $_ready function:

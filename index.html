@@ -89,6 +89,14 @@
 
 	<body>
 
+		<script>
+			// Redirect to Senara if no story parameter is provided
+			const params = new URLSearchParams(window.location.search);
+			if (!params.has('story')) {
+				window.location.href = './senara/index.html';
+			}
+		</script>
+
 		<!-- Fallback when JavaScript is not available -->
 		<noscript>
 			<div class="middle text--center">
