@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koleksi — Senara</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', 'Nunito', sans-serif;
+    }
+    
+    body {
+      background-color: #faf8f3;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tag {
+      display: inline-block;
+      background-color: #e8dcc8;
+      color: #6d5844;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    
+    .play-btn {
+      background-color: #8b7355;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .play-btn:hover {
+      background-color: #6d5844;
+      transform: scale(1.05);
+    }
+    
+    .thumbnail-placeholder {
+      background: linear-gradient(135deg, #e8dcc8 0%, #d4c4b0 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #8b7355;
+    }
+  </style>
+</head>
+<body class="bg-amber-50">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-amber-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold text-amber-900">
+        <a href="index.html" class="hover:text-amber-700 transition">Senara</a>
+      </div>
+      <div class="hidden md:flex gap-8">
+        <a href="index.html" class="text-amber-900 hover:text-amber-700 transition font-medium">Beranda</a>
+        <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 transition font-semibold">Koleksi</a>
+        <a href="index.html#tentang" class="text-amber-900 hover:text-amber-700 transition font-medium">Tentang</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden text-amber-900 hover:text-amber-700 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-amber-100">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Beranda</a>
+        <a href="koleksi.html" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Koleksi</a>
+        <a href="index.html#tentang" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Tentang</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="bg-gradient-to-r from-amber-100 to-amber-50 py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-amber-900 mb-4">Koleksi Cerita</h1>
+      <p class="text-lg text-amber-800 max-w-2xl">
+        Jelajahi koleksi visual novel edukatif kami. Pilih cerita yang sesuai dengan minat dan usia Anda.
+      </p>
+    </div>
+  </section>
+
+  <!-- Search & Filter -->
+  <section class="py-8 px-4 bg-white border-b border-amber-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row gap-4 items-center">
+        <div class="flex-1 w-full">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Cari cerita..." 
+            class="w-full px-4 py-3 rounded-lg border border-amber-200 bg-amber-50 text-amber-900 placeholder-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          >
+        </div>
+        <div class="flex gap-2 flex-wrap justify-center md:justify-end w-full md:w-auto">
+          <button class="filter-btn px-4 py-2 rounded-full bg-amber-100 text-amber-900 font-medium hover:bg-amber-200 transition" data-filter="all">Semua</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Emotional Skills">Emotional</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Coding">Coding</button>
+          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Social Skills">Social</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories Grid -->
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div id="storiesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Stories will be loaded here by JavaScript -->
+        <div class="col-span-full text-center py-12">
+          <p class="text-amber-700">Loading stories...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-amber-900 text-white py-12 px-4 mt-20">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Senara</h3>
+          <p class="text-amber-100">Platform visual novel edukatif untuk segala usia.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Navigasi</h4>
+          <ul class="space-y-2 text-amber-100">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="koleksi.html" class="hover:text-white transition">Koleksi</a></li>
+            <li><a href="index.html#tentang" class="hover:text-white transition">Tentang</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Kontak</h4>
+          <p class="text-amber-100">Email: hello@senara.id</p>
+          <p class="text-amber-100">Ikuti kami di media sosial</p>
+        </div>
+      </div>
+      <div class="border-t border-amber-800 pt-8 text-center text-amber-100">
+        <p>&copy; 2024 Senara. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hardcoded stories data - no external JSON needed
+    const allStoriesData = [
+      {
+        "id": "burnout",
+        "title": "Yang Tidak Terlihat",
+        "tags": ["Emotional Skills", "Self-Worth"],
+        "age": "16+",
+        "thumbnail": "/senara/assets/thumbnails/burnout.png",
+        "featured": true,
+        "series": "Emotional Skills Series",
+        "description": "Cerita tentang seorang remaja yang berjuang dengan burnout dan menemukan nilai dirinya kembali."
+      },
+      {
+        "id": "logic101",
+        "title": "Kopi & Algoritma",
+        "tags": ["Coding", "Problem Solving"],
+        "age": "14+",
+        "thumbnail": "/senara/assets/thumbnails/logic.png",
+        "featured": true,
+        "series": "Coding Series",
+        "description": "Petualangan seorang pemula dalam dunia pemrograman melalui cerita yang menyenangkan."
+      },
+      {
+        "id": "friendship",
+        "title": "Cerita Persahabatan",
+        "tags": ["Social Skills", "Empathy"],
+        "age": "12+",
+        "thumbnail": "/senara/assets/thumbnails/friendship.png",
+        "featured": false,
+        "series": "Social Skills Series",
+        "description": "Belajar tentang persahabatan sejati dan bagaimana mengatasi konflik dengan empati."
+      },
+      {
+        "id": "resilience",
+        "title": "Bangkit Kembali",
+        "tags": ["Life Skills", "Resilience"],
+        "age": "15+",
+        "thumbnail": "/senara/assets/thumbnails/resilience.png",
+        "featured": true,
+        "series": "Life Skills Series",
+        "description": "Inspirasi tentang bagaimana bangkit dari kegagalan dan membangun resiliensi."
+      }
+    ];
+
+    let allStories = [];
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    // Load stories from hardcoded data
+    function loadStories() {
+      allStories = allStoriesData;
+      filterAndRender();
+    }
+
+    // Filter and render stories
+    function filterAndRender() {
+      let filtered = allStories;
+
+      // Apply search filter
+      if (currentSearch) {
+        filtered = filtered.filter(story =>
+          story.title.toLowerCase().includes(currentSearch.toLowerCase()) ||
+          story.tags.some(tag => tag.toLowerCase().includes(currentSearch.toLowerCase()))
+        );
+      }
+
+      // Apply category filter
+      if (currentFilter !== 'all') {
+        filtered = filtered.filter(story => story.tags.includes(currentFilter));
+      }
+
+      renderStories(filtered);
+    }
+
+    // Render story cards
+    function renderStories(stories) {
+      const container = document.getElementById('storiesContainer');
+      
+      if (stories.length === 0) {
+        container.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-amber-700">Tidak ada cerita yang sesuai dengan pencarian Anda.</p></div>';
+        return;
+      }
+
+      container.innerHTML = '';
+
+      stories.forEach(story => {
+        const card = document.createElement('div');
+        card.className = 'card-hover bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm';
+        
+        // Create emoji-based placeholder thumbnail
+        const emojiMap = {
+          'burnout': '💭',
+          'logic101': '💻',
+          'friendship': '🤝',
+          'resilience': '🌱'
+        };
+        const emoji = emojiMap[story.id] || '📖';
+        
+        card.innerHTML = `
+          <div class="thumbnail-placeholder h-48 w-full">
+            ${emoji}
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-900 mb-2">${story.title}</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              ${story.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+            </div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-sm font-semibold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">
+                ${story.age}
+              </span>
+            </div>
+            <a href="story.html?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center block">
+              ▶ Mainkan
+            </a>
+          </div>
+        `;
+        
+        container.appendChild(card);
+      });
+    }
+
+    // Setup event listeners
+    function setupEventListeners() {
+      // Search input
+      document.getElementById('searchInput').addEventListener('input', (e) => {
+        currentSearch = e.target.value;
+        filterAndRender();
+      });
+
+      // Filter buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          // Update active state
+          document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('bg-amber-100');
+            b.classList.add('bg-amber-50');
+          });
+          e.target.classList.remove('bg-amber-50');
+          e.target.classList.add('bg-amber-100');
+
+          // Update filter
+          currentFilter = e.target.dataset.filter;
+          filterAndRender();
+        });
+      });
+
+      // Mobile menu
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Load stories on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      loadStories();
+      setupEventListeners();
+    });
+  </script>
+</body>
+</html>

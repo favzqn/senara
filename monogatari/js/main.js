@@ -37,7 +37,7 @@ function getStoryFromURL() {
 function loadStoryScript(storyId) {
 	if (storyId) {
 		const script = document.createElement('script');
-		script.src = `./senara/stories/${storyId}.js`;
+		script.src = `./stories/${storyId}.js`;
 		script.onerror = function() {
 			console.error('Failed to load story script:', storyId);
 		};

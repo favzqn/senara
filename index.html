@@ -1,130 +1,523 @@
 <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senara — Platform Visual Novel Edukatif</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', 'Nunito', sans-serif;
+    }
+    
+    body {
+      background-color: #faf8f3;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #faf8f3 0%, #f5f0e8 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn-primary {
+      background-color: #8b7355;
+      color: white;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: #6d5844;
+      transform: scale(1.02);
+    }
+    
+    .btn-secondary {
+      background-color: transparent;
+      color: #8b7355;
+      border: 2px solid #8b7355;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #8b7355;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-amber-50">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-amber-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold text-amber-900">
+        <a href="index.html" class="hover:text-amber-700 transition">Senara</a>
+      </div>
+      <div class="hidden md:flex gap-8">
+        <a href="index.html" class="text-amber-900 hover:text-amber-700 transition font-medium">Beranda</a>
+        <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 transition font-medium">Koleksi</a>
+        <a href="#tentang" class="text-amber-900 hover:text-amber-700 transition font-medium">Tentang</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden text-amber-900 hover:text-amber-700 transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-amber-100">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Beranda</a>
+        <a href="koleksi.html" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Koleksi</a>
+        <a href="#tentang" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Tentang</a>
+      </div>
+    </div>
+  </nav>
 
-<html lang="en" itemscope itemtype="http://schema.org/WebPage"> <!--Change the lang property to your web"s language-->
+  <!-- Hero Section -->
+  <section class="hero-gradient min-h-screen flex items-center justify-center px-4 py-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl md:text-7xl font-bold text-amber-900 mb-6 leading-tight">
+        Senara
+      </h1>
+      <p class="text-xl md:text-2xl text-amber-800 mb-4 font-light">
+        Seni Narasi berdaya.
+      </p>
+      <p class="text-lg md:text-xl text-amber-700 mb-12 max-w-2xl mx-auto">
+        Platform visual novel edukatif untuk segala usia. Belajar melalui cerita yang menginspirasi.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="koleksi.html" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg">
+          Jelajahi Koleksi
+        </a>
+        <a href="#tentang" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg">
+          Tentang
+        </a>
+      </div>
+    </div>
+  </section>
 
-	<head prefix="og: http://ogp.me/ns#">
+  <!-- Featured Stories Section -->
+  <section class="py-20 px-4 bg-amber-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-4">
+        ⭐ Cerita Pilihan
+      </h2>
+      <p class="text-lg text-amber-800 text-center mb-12 max-w-2xl mx-auto">
+        Cerita-cerita terbaik yang paling banyak disukai oleh komunitas kami.
+      </p>
+      
+      <div id="featuredContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Featured stories will be loaded here -->
+      </div>
+    </div>
+  </section>
 
-		<title>Monogatari Visual Novel</title> <!--Up to 60-70 Characters. Optimal Format: Primary Keyword - Secondary Keyword | Brand Name-->
+  <!-- Learning Categories Section -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-16">
+        Apa yang Bisa Dipelajari
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Emotional Skills Card -->
+        <a href="kategori.html?cat=emotional-skills" class="card-hover bg-gradient-to-br from-rose-50 to-pink-50 p-8 rounded-2xl border border-rose-100 hover:no-underline block">
+          <div class="text-5xl mb-4">💭</div>
+          <h3 class="text-2xl font-bold text-rose-900 mb-3">Emotional Skills</h3>
+          <p class="text-rose-800">Pahami emosi, kelola stres, dan bangun kepercayaan diri melalui cerita yang relatable.</p>
+        </a>
 
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; script-src 'self' 'unsafe-eval'">
-		<meta name="description" content=""> <!--Page description. No longer than 155 characters.-->
-		<meta name="keywords" content="">
-		<meta name="author" content=""> <!--Name of the author.-->
+        <!-- Coding Card -->
+        <a href="kategori.html?cat=coding" class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-100 hover:no-underline block">
+          <div class="text-5xl mb-4">💻</div>
+          <h3 class="text-2xl font-bold text-blue-900 mb-3">Coding</h3>
+          <p class="text-blue-800">Pelajari logika pemrograman dan problem-solving dengan cara yang menyenangkan dan interaktif.</p>
+        </a>
 
-		<!--Facebook Meta Tags-->
-		<meta property="og:image" content="http://" /> <!--URL of Image to show-->
-		<meta property="og:description" content="" /> <!--Page Description-->
-		<meta property="og:site_name" content="" /> <!--The Name Here-->
-		<meta property="og:url" content="http://" /> <!--The Web main URL-->
-		<meta property="og:title" content="" /> <!--The Title Here-->
+        <!-- Social Skills Card -->
+        <a href="kategori.html?cat=social-skills" class="card-hover bg-gradient-to-br from-amber-50 to-yellow-50 p-8 rounded-2xl border border-amber-100 hover:no-underline block">
+          <div class="text-5xl mb-4">🤝</div>
+          <h3 class="text-2xl font-bold text-amber-900 mb-3">Social Skills</h3>
+          <p class="text-amber-800">Tingkatkan kemampuan komunikasi dan empati dalam berbagai situasi sosial.</p>
+        </a>
 
-		<!--Google Meta Tags-->
-		<meta itemprop="name" content=""> <!--The Name or Title Here-->
-		<meta itemprop="description" content=""> <!--Page Description-->
-		<meta itemprop="image" content="http://"> <!--URL of Image to show-->
+        <!-- Life Skills Card -->
+        <a href="kategori.html?cat=life-skills" class="card-hover bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-100 hover:no-underline block">
+          <div class="text-5xl mb-4">🌱</div>
+          <h3 class="text-2xl font-bold text-green-900 mb-3">Life Skills</h3>
+          <p class="text-green-800">Kembangkan keterampilan hidup seperti manajemen waktu, resiliensi, dan pengambilan keputusan.</p>
+        </a>
 
-		<!--Twitter Meta Tags - You"ll have to validate your website here: https://dev.twitter.com/docs/cards/validation/validator-->
-		<meta name="twitter:card" content="summary_large_image"> <!--Content Card Type-->
-		<meta name="twitter:domain" content=""> <!--Your web"s domain-->
-		<meta name="twitter:site" content="@"> <!--@publisher-->
-		<meta name="twitter:title" content=""> <!--Page Title-->
-		<meta name="twitter:description" content=""> <!--Page description less than 200 characters-->
-		<meta name="twitter:creator" content="@"> <!--@author-->
-		<meta name="twitter:image:src" content="http://"> <!--URL of Image to show-->
+        <!-- Language Card -->
+        <a href="kategori.html?cat=bahasa" class="card-hover bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-100 hover:no-underline block">
+          <div class="text-5xl mb-4">🌍</div>
+          <h3 class="text-2xl font-bold text-purple-900 mb-3">Bahasa</h3>
+          <p class="text-purple-800">Pelajari bahasa baru melalui narasi yang menarik dan konteks budaya yang kaya.</p>
+        </a>
 
-		<!--Android Meta Tags-->
-		<meta name="mobile-web-app-capable" content="yes">
-		<link rel="icon" sizes="192x192" href="assets/icons/icon_192x192.png"> <!--192 x 192 Icon-->
-		<link rel="icon" sizes="128x128" href="assets/icons/icon_128x128.png"> <!--128 x 128 Icon-->
+        <!-- Creativity Card -->
+        <a href="kategori.html?cat=kreativitas" class="card-hover bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border border-orange-100 hover:no-underline block">
+          <div class="text-5xl mb-4">🎨</div>
+          <h3 class="text-2xl font-bold text-orange-900 mb-3">Kreativitas</h3>
+          <p class="text-orange-800">Kembangkan imajinasi dan kemampuan berpikir kreatif melalui cerita interaktif.</p>
+        </a>
 
-		<!--Apple Meta Tags-->
-		<meta name="apple-mobile-web-app-title" content=""> <!--App Title or Name-->
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!--Styling for the iOS Status Bar-->
-		<link rel="apple-touch-icon" href="assets/icons/icon_60x60.png"> <!--60 x 60 Icon-->
-		<link rel="apple-touch-icon" sizes="76x76" href="assets/icons/icon_76x76.png"> <!--76 x 76 Icon-->
-		<link rel="apple-touch-icon" sizes="120x120" href="assets/icons/icon_120x120.png"> <!--120 x 120 Icon-->
-		<link rel="apple-touch-icon" sizes="152x152" href="assets/icons/icon_152x152.png"> <!--152 x 152 Icon-->
-		<link rel="apple-touch-icon" sizes="152x152" href="assets/icons/icon_167x167.png"> <!--167 x 167 Icon-->
-		<link rel="apple-touch-icon" sizes="152x152" href="assets/icons/icon_180x180.png"> <!--180 x 180 Icon-->
+        <!-- Critical Thinking Card -->
+        <a href="kategori.html?cat=critical-thinking" class="card-hover bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border border-indigo-100 hover:no-underline block">
+          <div class="text-5xl mb-4">🧩</div>
+          <h3 class="text-2xl font-bold text-indigo-900 mb-3">Critical Thinking</h3>
+          <p class="text-indigo-800">Latih kemampuan analisis dan pengambilan keputusan melalui pilihan yang bermakna.</p>
+        </a>
 
-		<!--Microsoft Tags-->
-		<meta name="msapplication-TileColor" content=""> <!--Color of the tile on Windows. In hexadecimal format-->
-		<meta name="application-name" content="" /> <!-- App Title -->
-		<meta name="msapplication-tooltip" content="" /> <!--Small text on hover-->
-		<meta name="msapplication-starturl" content="http://" /> <!-- URL to start in -->
-		<meta name="msapplication-square70x70logo" content="assets/icons/icon_70x70.png" /> <!--Image for Tile 70x70-->
-		<meta name="msapplication-square150x150logo" content="assets/icons/icon_150x150.png" /> <!--Image for Tile 150x150-->
-		<meta name="msapplication-wide310x150logo" content="assets/icons/icon_310x150.png" /> <!--Image for Tile 310x150-->
-		<meta name="msapplication-square310x310logo" content="assets/icons/icon_310x310.png" /> <!--Image for Tile 310x310-->
+        <!-- History & Culture Card -->
+        <a href="kategori.html?cat=sejarah-budaya" class="card-hover bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl border border-teal-100 hover:no-underline block">
+          <div class="text-5xl mb-4">📚</div>
+          <h3 class="text-2xl font-bold text-teal-900 mb-3">Sejarah & Budaya</h3>
+          <p class="text-teal-800">Jelajahi peristiwa sejarah dan keragaman budaya dari berbagai perspektif.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
-		<!--<link rel="publisher" href=""> Publisher"s Google+ URL-->
+  <!-- Why Visual Novels Section -->
+  <section id="tentang" class="py-20 px-4 bg-amber-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-12">
+        Kenapa Visual Novel?
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="text-3xl">📖</div>
+            <div>
+              <h3 class="text-xl font-bold text-amber-900 mb-2">Cerita yang Engaging</h3>
+              <p class="text-amber-800">Visual novel menggabungkan narasi kuat dengan visual yang menarik untuk pengalaman belajar yang immersive.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="text-3xl">🎮</div>
+            <div>
+              <h3 class="text-xl font-bold text-amber-900 mb-2">Interaktif & Menyenangkan</h3>
+              <p class="text-amber-800">Pilihan yang bermakna membuat setiap playthrough unik dan meningkatkan engagement pengguna.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="text-3xl">🧠</div>
+            <div>
+              <h3 class="text-xl font-bold text-amber-900 mb-2">Pembelajaran Mendalam</h3>
+              <p class="text-amber-800">Konsep kompleks dijelaskan melalui konteks cerita yang membuat pemahaman lebih lasting.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="text-3xl">❤️</div>
+            <div>
+              <h3 class="text-xl font-bold text-amber-900 mb-2">Emotional Connection</h3>
+              <p class="text-amber-800">Cerita yang relatable membangun koneksi emosional yang membuat pembelajaran lebih bermakna.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="text-3xl">🌍</div>
+            <div>
+              <h3 class="text-xl font-bold text-amber-900 mb-2">Perspektif Beragam</h3>
+              <p class="text-amber-800">Jelajahi berbagai perspektif dan budaya melalui cerita dari berbagai latar belakang.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="text-3xl">✨</div>
+            <div>
+              <h3 class="text-xl font-bold text-amber-900 mb-2">Accessible Learning</h3>
+              <p class="text-amber-800">Belajar dengan kecepatan sendiri, kapan saja, di mana saja, tanpa tekanan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<meta name="theme-color" content=""><!--Theme color for browsers in hexadecimal format.-->
+  <!-- Support & Sponsorship Section -->
+  <section class="py-20 px-4 bg-gradient-to-r from-amber-50 to-orange-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-4">
+        ❤️ Dukung Senara
+      </h2>
+      <p class="text-lg text-amber-800 text-center mb-16 max-w-2xl mx-auto">
+        Bantu kami terus membuat konten edukatif berkualitas untuk semua orang.
+      </p>
 
-		<link rel="shortcut icon" href="favicon.ico" /> <!--Favicon. Good tool for creating one: http://xiconeditor.com/ Create all sizes.-->
-		<!--<link rel="canonical" href=""> Canonical URL of your webpage-->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <!-- Ko-fi Donation -->
+        <div class="bg-white rounded-2xl p-8 border border-orange-100 shadow-sm">
+          <div class="text-5xl mb-4">☕</div>
+          <h3 class="text-2xl font-bold text-amber-900 mb-4">Donasi via Ko-fi</h3>
+          <p class="text-amber-800 mb-6">
+            Setiap donasi membantu kami membayar untuk:
+          </p>
+          <ul class="space-y-2 text-amber-700 mb-8">
+            <li>✓ Bayar ilustrator dan desainer karakter</li>
+            <li>✓ Bayar voice actor profesional</li>
+            <li>✓ Bayar penulis skenario</li>
+            <li>✓ Bayar server dan hosting</li>
+            <li>✓ Buat lebih banyak cerita edukatif</li>
+          </ul>
+          <a href="https://ko-fi.com/senara" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-orange-600 transition">
+            ☕ Beli Kopi untuk Kami
+          </a>
+        </div>
 
-		<link rel="manifest" href="manifest.json">
+        <!-- Sponsorship & Partners -->
+        <div class="bg-white rounded-2xl p-8 border border-orange-100 shadow-sm">
+          <div class="text-5xl mb-4">🤝</div>
+          <h3 class="text-2xl font-bold text-amber-900 mb-4">Sponsor & Partner</h3>
+          <p class="text-amber-800 mb-6">
+            Kami bangga didukung oleh:
+          </p>
+          <div class="space-y-4 mb-8">
+            <div class="bg-amber-50 p-4 rounded-lg border border-amber-200">
+              <p class="font-semibold text-amber-900">🎓 Diceritain.id</p>
+              <p class="text-sm text-amber-700">Partner dalam misi edukasi digital</p>
+            </div>
+          </div>
+          <a href="mailto:hello@senara.id?subject=Partnership%20Inquiry" class="inline-block w-full bg-amber-900 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-amber-800 transition">
+            💼 Jadilah Partner Kami
+          </a>
+        </div>
+      </div>
 
-		<!-- Third Party CSS Libraries -->
+      <!-- Impact Stats -->
+      <div class="bg-white rounded-2xl p-8 border border-orange-100">
+        <h3 class="text-2xl font-bold text-amber-900 text-center mb-8">Dampak Kami</h3>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="text-4xl font-bold text-orange-500 mb-2">8</p>
+            <p class="text-amber-800">Kategori Pembelajaran</p>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-orange-500 mb-2">4+</p>
+            <p class="text-amber-800">Cerita Edukatif</p>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-orange-500 mb-2">6</p>
+            <p class="text-amber-800">Peran Volunteer</p>
+          </div>
+          <div>
+            <p class="text-4xl font-bold text-orange-500 mb-2">∞</p>
+            <p class="text-amber-800">Potensi Belajar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Monogatari CSS Libraries -->
-		<link rel="stylesheet" href="./engine/core/monogatari.css">
-		<link rel="stylesheet" href="./style/main.css">
+  <!-- Volunteer Section -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-4">
+        Ingin Berkontribusi?
+      </h2>
+      <p class="text-xl text-amber-800 text-center mb-16 max-w-2xl mx-auto">
+        Kami mencari talenta berbakat untuk membantu membuat konten edukatif yang menginspirasi. Bergabunglah dengan tim Senara!
+      </p>
 
-		<!-- Third Party JavaScript Libraries -->
+      <!-- Roles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Character Designer -->
+        <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100">
+          <div class="text-4xl mb-3">🎨</div>
+          <h3 class="text-xl font-bold text-purple-900 mb-2">Character Designer</h3>
+          <p class="text-purple-800 text-sm">Ciptakan karakter visual yang menarik dan memorable untuk cerita kami.</p>
+        </div>
 
-		<!-- Monogatari JavaScript Libraries -->
-		<script src="./engine/debug/debug.js"></script>
-		<script src="./engine/core/monogatari.js"></script>
-		<script src="./js/options.js"></script>
-		<script src="./js/storage.js"></script>
-		<script src="./js/yang-tidak-terlihat.js"></script>
-		<script src="./js/main.js"></script>
+        <!-- Background Artist -->
+        <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl border border-blue-100">
+          <div class="text-4xl mb-3">🌄</div>
+          <h3 class="text-xl font-bold text-blue-900 mb-2">Background Artist</h3>
+          <p class="text-blue-800 text-sm">Desain latar belakang yang indah untuk setiap scene dalam visual novel.</p>
+        </div>
 
-	</head>
+        <!-- Voice Over Artist -->
+        <div class="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-2xl border border-red-100">
+          <div class="text-4xl mb-3">🎙️</div>
+          <h3 class="text-xl font-bold text-red-900 mb-2">Voice Over Artist</h3>
+          <p class="text-red-800 text-sm">Berikan suara pada karakter dan buat pengalaman lebih immersive.</p>
+        </div>
 
-	<body>
+        <!-- Script Writer -->
+        <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-100">
+          <div class="text-4xl mb-3">✍️</div>
+          <h3 class="text-xl font-bold text-green-900 mb-2">Script Writer</h3>
+          <p class="text-green-800 text-sm">Tulis cerita yang menarik, mendidik, dan menyentuh hati pembaca.</p>
+        </div>
 
-		<script>
-			// Redirect to Senara if no story parameter is provided
-			const params = new URLSearchParams(window.location.search);
-			if (!params.has('story')) {
-				window.location.href = './senara/index.html';
-			}
-		</script>
+        <!-- Programmer -->
+        <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-2xl border border-indigo-100">
+          <div class="text-4xl mb-3">💻</div>
+          <h3 class="text-xl font-bold text-indigo-900 mb-2">Programmer</h3>
+          <p class="text-indigo-800 text-sm">Kembangkan fitur dan integrasikan Monogatari.js untuk pengalaman bermain yang sempurna.</p>
+        </div>
 
-		<!-- Fallback when JavaScript is not available -->
-		<noscript>
-			<div class="middle text--center">
-				<h2>JavaScript Disabled or not Supported.</h2>
-				<small>To play this game, please enable JavaScript executing or use a different browser.</small>
-			</div>
-		</noscript>
+        <!-- Translator -->
+        <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-2xl border border-teal-100">
+          <div class="text-4xl mb-3">🌐</div>
+          <h3 class="text-xl font-bold text-teal-900 mb-2">Translator</h3>
+          <p class="text-teal-800 text-sm">Bantu kami menjangkau audiens global dengan menerjemahkan konten.</p>
+        </div>
+      </div>
 
-		<div id="monogatari">
-			<visual-novel>
-				<language-selection-screen></language-selection-screen>
-				<loading-screen></loading-screen>
-				<main-screen>
-					<main-menu></main-menu>
-				</main-screen>
-				<game-screen>
-					<dialog-log></dialog-log>
-					<text-box></text-box>
-					<quick-menu></quick-menu>
-				</game-screen>
-				<gallery-screen></gallery-screen>
-				<credits-screen></credits-screen>
-				<load-screen></load-screen>
-				<save-screen></save-screen>
-				<settings-screen></settings-screen>
-				<help-screen></help-screen>
-			</visual-novel>
-		</div>
-	</body>
+      <!-- CTA Button -->
+      <div class="text-center">
+        <a href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-amber-900 to-amber-800 text-white px-12 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition">
+          📝 Daftar Sebagai Volunteer
+        </a>
+        <p class="text-amber-700 text-sm mt-4">Isi form singkat kami dan kami akan menghubungi Anda segera!</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="bg-amber-900 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Senara</h3>
+          <p class="text-amber-100">Platform visual novel edukatif untuk segala usia.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Navigasi</h4>
+          <ul class="space-y-2 text-amber-100">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="koleksi.html" class="hover:text-white transition">Koleksi</a></li>
+            <li><a href="#tentang" class="hover:text-white transition">Tentang</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Kontak</h4>
+          <p class="text-amber-100">Email: hello@senara.id</p>
+          <p class="text-amber-100">Ikuti kami di media sosial</p>
+        </div>
+      </div>
+      <div class="border-t border-amber-800 pt-8 text-center text-amber-100">
+        <p>&copy; 2024 Senara. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hardcoded stories data
+    const allStoriesData = [
+      {
+        "id": "burnout",
+        "title": "Yang Tidak Terlihat",
+        "tags": ["Emotional Skills", "Self-Worth"],
+        "age": "16+",
+        "thumbnail": "/senara/assets/thumbnails/burnout.png",
+        "featured": true,
+        "series": "Emotional Skills Series",
+        "description": "Cerita tentang seorang remaja yang berjuang dengan burnout dan menemukan nilai dirinya kembali."
+      },
+      {
+        "id": "logic101",
+        "title": "Kopi & Algoritma",
+        "tags": ["Coding", "Problem Solving"],
+        "age": "14+",
+        "thumbnail": "/senara/assets/thumbnails/logic.png",
+        "featured": true,
+        "series": "Coding Series",
+        "description": "Petualangan seorang pemula dalam dunia pemrograman melalui cerita yang menyenangkan."
+      },
+      {
+        "id": "friendship",
+        "title": "Cerita Persahabatan",
+        "tags": ["Social Skills", "Empathy"],
+        "age": "12+",
+        "thumbnail": "/senara/assets/thumbnails/friendship.png",
+        "featured": false,
+        "series": "Social Skills Series",
+        "description": "Belajar tentang persahabatan sejati dan bagaimana mengatasi konflik dengan empati."
+      },
+      {
+        "id": "resilience",
+        "title": "Bangkit Kembali",
+        "tags": ["Life Skills", "Resilience"],
+        "age": "15+",
+        "thumbnail": "/senara/assets/thumbnails/resilience.png",
+        "featured": true,
+        "series": "Life Skills Series",
+        "description": "Inspirasi tentang bagaimana bangkit dari kegagalan dan membangun resiliensi."
+      }
+    ];
+
+    // Load featured stories
+    function loadFeaturedStories() {
+      const featured = allStoriesData.filter(story => story.featured);
+      const container = document.getElementById('featuredContainer');
+      
+      const emojiMap = {
+        'burnout': '💭',
+        'logic101': '💻',
+        'friendship': '🤝',
+        'resilience': '🌱'
+      };
+
+      featured.forEach(story => {
+        const emoji = emojiMap[story.id] || '📖';
+        const card = document.createElement('div');
+        card.className = 'card-hover bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm';
+        card.innerHTML = `
+          <div class="bg-gradient-to-br from-amber-100 to-amber-50 h-48 flex items-center justify-center text-6xl">
+            ${emoji}
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-yellow-500">⭐</span>
+              <span class="text-sm font-semibold text-amber-700">${story.series}</span>
+            </div>
+            <h3 class="text-xl font-bold text-amber-900 mb-2">${story.title}</h3>
+            <p class="text-amber-700 text-sm mb-4">${story.description}</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              ${story.tags.map(tag => `<span class="bg-amber-100 text-amber-900 px-2 py-1 rounded text-xs font-medium">${tag}</span>`).join('')}
+            </div>
+            <a href="story.html?id=${story.id}" class="block w-full bg-amber-900 text-white py-2 rounded-lg font-semibold text-center hover:bg-amber-800 transition">
+              ▶ Mainkan
+            </a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close menu when clicking on a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Load featured stories on page load
+    document.addEventListener('DOMContentLoaded', loadFeaturedStories);
+  </script>
+</body>
 </html>

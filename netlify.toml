@@ -1,14 +1,8 @@
 [build]
   command = ""
-  publish = "senara"
+  publish = "."
 
-# Redirect root to senara/index.html
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
-
-# SPA routing - all other requests go to index.html
+# SPA routing - preserve query parameters
 [[redirects]]
   from = "/*"
   to = "/index.html"
