@@ -108,60 +108,15 @@
     </div>
   </footer>
 
+  <script src="js/config.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/shared-utils.js"></script>
+  <script src="data/stories.js"></script>
   <script>
-    // Hardcoded stories data - no external JSON needed
-    const allStoriesData = [
-      {
-        "id": "burnout",
-        "title": "Yang Tidak Terlihat",
-        "tags": ["Emotional Skills", "Self-Worth"],
-        "age": "16+",
-        "thumbnail": "/senara/assets/thumbnails/burnout.png",
-        "featured": true,
-        "series": "Emotional Skills Series",
-        "description": "Cerita tentang seorang remaja yang berjuang dengan burnout dan menemukan nilai dirinya kembali."
-      },
-      {
-        "id": "logic101",
-        "title": "Kopi & Algoritma",
-        "tags": ["Coding", "Problem Solving"],
-        "age": "14+",
-        "thumbnail": "/senara/assets/thumbnails/logic.png",
-        "featured": true,
-        "series": "Coding Series",
-        "description": "Petualangan seorang pemula dalam dunia pemrograman melalui cerita yang menyenangkan."
-      },
-      {
-        "id": "friendship",
-        "title": "Cerita Persahabatan",
-        "tags": ["Social Skills", "Empathy"],
-        "age": "12+",
-        "thumbnail": "/senara/assets/thumbnails/friendship.png",
-        "featured": false,
-        "series": "Social Skills Series",
-        "description": "Belajar tentang persahabatan sejati dan bagaimana mengatasi konflik dengan empati."
-      },
-      {
-        "id": "resilience",
-        "title": "Bangkit Kembali",
-        "tags": ["Life Skills", "Resilience"],
-        "age": "15+",
-        "thumbnail": "/senara/assets/thumbnails/resilience.png",
-        "featured": true,
-        "series": "Life Skills Series",
-        "description": "Inspirasi tentang bagaimana bangkit dari kegagalan dan membangun resiliensi."
-      }
-    ];
-
-    // Get story ID from URL parameters
-    function getStoryId() {
-      const params = new URLSearchParams(window.location.search);
-      return params.get('id');
-    }
 
     // Load story data from hardcoded data
     function loadStory() {
-      const storyId = getStoryId();
+      const storyId = getUrlParam('id');
       
       if (!storyId) {
         document.getElementById('storyContent').innerHTML = `
@@ -194,13 +149,7 @@
 
     // Render story player
     function renderStory(story) {
-      const emojiMap = {
-        'burnout': '💭',
-        'logic101': '💻',
-        'friendship': '🤝',
-        'resilience': '🌱'
-      };
-      const emoji = emojiMap[story.id] || '📖';
+      const emoji = getStoryEmoji(story.id);
 
       const content = `
         <div class="text-center">
@@ -267,89 +216,15 @@
       // Add event listener to play button - redirect to Monogatari engine
       document.getElementById('playBtn').addEventListener('click', () => {
         // Redirect to Monogatari engine with story parameter
-        window.location.href = `./monogatari/index.html?story=${story.id}`;
+        window.location.href = CONFIG.paths.monogatari + `?story=${story.id}`;
       });
 
       // Setup social sharing
       setupSocialSharing(story);
     }
 
-    // Setup social sharing buttons
-    function setupSocialSharing(story) {
-      const pageUrl = window.location.href;
-      const pageTitle = `Baca "${story.title}" di Senara`;
-      const pageDescription = story.description;
-
-      // Twitter share
-      document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`;
-
-      // Facebook share
-      document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
-
-      // WhatsApp share
-      document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodeURIComponent(pageTitle + ' ' + pageUrl)}`;
-
-      // Copy link button
-      document.getElementById('shareCopy').addEventListener('click', () => {
-        navigator.clipboard.writeText(pageUrl).then(() => {
-          const btn = document.getElementById('shareCopy');
-          const originalText = btn.innerHTML;
-          btn.innerHTML = '✓ Disalin!';
-          setTimeout(() => {
-            btn.innerHTML = originalText;
-          }, 2000);
-        });
-      });
-    }
-
-    // Mobile menu toggle
-    function setupMobileMenu() {
-      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-      
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
-    }
-
-    // Initialize Monogatari.js (if available)
-    function initMonogatariPlayer(storyId) {
-      // Check if Monogatari is loaded
-      if (typeof Monogatari !== 'undefined') {
-        const container = document.getElementById('monogatari-container');
-        const storyContent = document.getElementById('storyContent');
-        
-        // Hide placeholder and show Monogatari container
-        storyContent.style.display = 'none';
-        container.style.display = 'block';
-        
-        // Load story script dynamically
-        const scriptPath = `stories/${storyId}.js`;
-        const script = document.createElement('script');
-        script.src = scriptPath;
-        script.onload = function() {
-          console.log('Story script loaded:', storyId);
-        };
-        script.onerror = function() {
-          console.error('Failed to load story script:', scriptPath);
-          storyContent.style.display = 'block';
-          container.style.display = 'none';
-        };
-        document.body.appendChild(script);
-      } else {
-        console.log('Monogatari.js not loaded. Showing placeholder.');
-      }
-    }
-
     // Load story on page load
     document.addEventListener('DOMContentLoaded', () => {
-      const storyId = getStoryId();
       loadStory();
       setupMobileMenu();
     });
