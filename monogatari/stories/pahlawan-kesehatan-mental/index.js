@@ -466,6 +466,38 @@ const mainStory = {
     "Chapter 1 : Siapa Pahlawan Kesehatan Mental?",
     "jump Scene-1",
   ],
+
+  "Loading-2": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene loading-2",
+    "Chapter 2 : Memahami Depresi",
+    "jump Scene-39",
+  ],
+
+  "Loading-3": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene loading-3",
+    "Chapter 3 : Strategi Pertolongan Mandiri",
+    "jump Scene-98",
+  ],
+
+  "Loading-4": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene loading-4",
+    "Chapter 4 : Bantuan Profesional",
+    "jump Scene-150",
+  ],
+
+  "Loading-5": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene loading-5",
+    "Chapter 5 : Literasi Kesehatan Mental dalam Aksi",
+    "jump Scene-197",
+  ],
 };
 
 // Merge all chapter scenes with main story
