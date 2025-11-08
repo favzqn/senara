@@ -2,7 +2,13 @@
   command = ""
   publish = "."
 
-# SPA routing - preserve query parameters
+# Exclude static assets and story files from SPA redirect
+[[redirects]]
+  from = "/monogatari/stories/*"
+  to = "/monogatari/stories/:splat"
+  status = 200
+
+# SPA routing - preserve query parameters (catch-all, must be last)
 [[redirects]]
   from = "/*"
   to = "/index.html"
