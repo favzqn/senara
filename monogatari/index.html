@@ -82,26 +82,35 @@
 		<script src="./engine/core/monogatari.js"></script>
 		<script src="./js/options.js"></script>
 		<script src="./js/storage.js"></script>
-		<script src="./js/yang-tidak-terlihat.js"></script>
 		<script src="./js/main.js"></script>
+
+		<!-- Story-specific modules (loaded in order) -->
+		<script src="./stories/pahlawan-kesehatan-mental/chapter-1.js"></script>
+		<script src="./stories/pahlawan-kesehatan-mental/chapter-2.js"></script>
+		<script src="./stories/pahlawan-kesehatan-mental/chapter-3.js"></script>
+		<script src="./stories/pahlawan-kesehatan-mental/chapter-4.js"></script>
+		<script src="./stories/pahlawan-kesehatan-mental/chapter-5.js"></script>
+		<script src="./stories/pahlawan-kesehatan-mental/index.js"></script>
 
 	</head>
 
 	<body>
 
 		<script>
-			// Only redirect to Senara if no story parameter AND not loading a story
-			const params = new URLSearchParams(window.location.search);
-			const storyId = params.get('story');
-			
-			// If no story parameter, redirect to Senara after a small delay
-			// to allow Netlify routing to complete
-			if (!storyId) {
-				setTimeout(() => {
-					window.location.href = './senara/index.html';
-				}, 100);
-			}
-		</script>
+		// Handle story parameter from Senara
+		const params = new URLSearchParams(window.location.search);
+		const storyId = params.get('story');
+		
+		// If no story parameter, redirect to Senara after a small delay
+		// to allow Netlify routing to complete
+		if (!storyId) {
+			setTimeout(() => {
+				window.location.href = '../index.html';
+			}, 100);
+		} else {
+			console.log(`✓ Loading story: ${storyId}`);
+		}
+	</script>
 
 		<!-- Fallback when JavaScript is not available -->
 		<noscript>
