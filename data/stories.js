@@ -45,6 +45,7 @@ const allStoriesData = [
       "Belajar teknik relaksasi (Box Breathing, Progressive Muscle Relaxation)"
     ],
     author: "Senara Team",
+    collaboration: "In partnership with diceritain.id",
     releaseDate: "2024-01-15",
     status: "published",
     rating: 4.8,
@@ -53,6 +54,34 @@ const allStoriesData = [
     hasChoices: true,
     hasAchievements: true
   },
+//   {
+//     id: "kesabaran-ramadhan",
+//     title: "Kesabaran di Bulan Ramadhan",
+//     description: "Pelajari pentingnya kesabaran dalam beribadah melalui cerita Fatima dan Pak Mamet.",
+//     longDescription: "Dalam visual novel pendek ini, ikuti perjalanan Fatima yang menghadapi tantangan puasa di hari yang panas. Bersama Pak Mamet, pelajari bagaimana kesabaran adalah bagian dari iman dan bagaimana ujian adalah kesempatan untuk mendapatkan pahala dari Allah.",
+//     tags: ["Islamic Values", "Patience", "Ramadan", "Moral Education"],
+//     age: "8+",
+//     series: "Islamic Values Series",
+//     featured: true,
+//     thumbnail: "/senara/assets/thumbnails/kesabaran-ramadhan.png",
+//     duration: 15,
+//     chapters: 1,
+//     difficulty: "Beginner",
+//     learningOutcomes: [
+//       "Memahami pentingnya kesabaran dalam beribadah",
+//       "Mengenali ujian sebagai bagian dari iman",
+//       "Belajar strategi menghadapi tantangan puasa",
+//       "Memahami konsep pahala dan niat"
+//     ],
+//     author: "Senara Team",
+//     releaseDate: "2024-11-08",
+//     status: "published",
+//     rating: 5.0,
+//     plays: 0,
+//     voiceActed: false,
+//     hasChoices: true,
+//     hasAchievements: false
+//   },
 ];
 
 /**

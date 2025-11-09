@@ -9,6 +9,10 @@ monogatari.action("notification").notifications({
 
 // Credits of the people involved in the creation of this awesome game
 monogatari.configuration("vredits", {
+  "Collaboration": {
+    "In Partnership With":
+      '<a href="https://diceritain.id" target="_blank" style="font-weight: bold; color: #ff6b9d;">diceritain.id</a>',
+  },
   Developers: {
     "Concept & Game Design":
       '<a href="https://github.com/git-ced" target="_blank"">Prince Neil Cedrick Castro</a>',
