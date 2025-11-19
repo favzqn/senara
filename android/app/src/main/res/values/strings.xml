@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">Senara</string>
-    <string name="title_activity_main">Senara</string>
-    <string name="package_name">com.id.senara</string>
-    <string name="custom_url_scheme">com.id.senara</string>
-</resources>
