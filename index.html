@@ -439,6 +439,11 @@
                 </p>
               </div>
             ` : ''}
+            ${story.scriptBy ? `
+              <div class="mb-4 text-xs text-amber-700">
+                <p class="font-semibold">Script by ${story.scriptBy}</p>
+              </div>
+            ` : ''}
             <a href="story.html?id=${story.id}" class="block w-full bg-amber-900 text-white py-2 rounded-lg font-semibold text-center hover:bg-amber-800 transition">
               ▶ Mainkan
             </a>
