@@ -57,33 +57,8 @@
   </style>
 </head>
 <body class="bg-amber-50">
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-amber-100">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-      <div class="text-2xl font-bold text-amber-900">
-        <a href="index.html" class="hover:text-amber-700 transition">Senara</a>
-      </div>
-      <div class="hidden md:flex gap-8">
-        <a href="index.html" class="text-amber-900 hover:text-amber-700 transition font-medium">Beranda</a>
-        <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 transition font-semibold">Koleksi</a>
-        <a href="index.html#tentang" class="text-amber-900 hover:text-amber-700 transition font-medium">Tentang</a>
-      </div>
-      <button id="mobileMenuBtn" class="md:hidden text-amber-900 hover:text-amber-700 transition">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-    
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-amber-100">
-      <div class="px-4 py-4 space-y-3">
-        <a href="index.html" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Beranda</a>
-        <a href="koleksi.html" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Koleksi</a>
-        <a href="index.html#tentang" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">Tentang</a>
-      </div>
-    </div>
-  </nav>
+  <!-- Navigation (will be injected by navbar.js) -->
+  <nav id="navbar-placeholder"></nav>
 
   <!-- Header -->
   <section class="bg-gradient-to-r from-amber-100 to-amber-50 py-16 px-4">
@@ -129,37 +104,14 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-amber-900 text-white py-12 px-4 mt-20">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <h3 class="text-2xl font-bold mb-4">Senara</h3>
-          <p class="text-amber-100">Platform visual novel edukatif untuk segala usia.</p>
-        </div>
-        <div>
-          <h4 class="font-bold mb-4">Navigasi</h4>
-          <ul class="space-y-2 text-amber-100">
-            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
-            <li><a href="koleksi.html" class="hover:text-white transition">Koleksi</a></li>
-            <li><a href="index.html#tentang" class="hover:text-white transition">Tentang</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-bold mb-4">Kontak</h4>
-          <!-- <p class="text-amber-100">Email: hello@senara.id</p> -->
-          <p class="text-amber-100">Ikuti kami di media sosial</p>
-        </div>
-      </div>
-      <div class="border-t border-amber-800 pt-8 text-center text-amber-100">
-        <p>&copy; 2024 Senara. Semua hak dilindungi.</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer (will be injected by footer.js) -->
+  <footer id="footer-placeholder"></footer>
 
   <script src="js/config.js"></script>
   <script src="js/constants.js"></script>
   <script src="js/shared-utils.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
   <script src="data/stories.js"></script>
   <script src="https://cdn.counter.dev/script.js" data-id="af8cab5a-f3b9-4717-8058-68e00f4f917c" data-utcoffset="7"></script>
   <script>
@@ -263,9 +215,10 @@
 
     // Load stories on page load
     document.addEventListener('DOMContentLoaded', () => {
+      initNavbar('collection');
+      initFooter();
       loadStories();
       setupEventListeners();
-      setupMobileMenu();
     });
   </script>
 </body>

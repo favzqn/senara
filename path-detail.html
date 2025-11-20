@@ -93,10 +93,10 @@
         Ini akan menghapus semua progress Anda di jalur pembelajaran ini. Tindakan ini tidak dapat dibatalkan.
       </p>
       <div class="flex gap-4">
-        <button id="cancelResetBtn" class="flex-1 px-4 py-2 border-2 border-amber-900 text-amber-900 rounded-lg font-semibold hover:bg-amber-50 transition">
+        <button id="cancelResetBtn" class="flex-1 px-4 py-2 border-2 border-amber-900 text-amber-900 rounded-lg font-semibold hover:bg-amber-50 transition" data-umami-event="Path reset cancel">
           Batal
         </button>
-        <button id="confirmResetBtn" class="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition">
+        <button id="confirmResetBtn" class="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition" data-umami-event="Path reset confirm">
           Reset
         </button>
       </div>
@@ -114,52 +114,24 @@
         Untuk pengalaman belajar yang optimal, kami merekomendasikan menyelesaikan <strong id="prereqStoryName"></strong> terlebih dahulu.
       </p>
       <div class="flex gap-4">
-        <button id="backBtn" class="flex-1 px-4 py-2 border-2 border-amber-900 text-amber-900 rounded-lg font-semibold hover:bg-amber-50 transition">
+        <button id="backBtn" class="flex-1 px-4 py-2 border-2 border-amber-900 text-amber-900 rounded-lg font-semibold hover:bg-amber-50 transition" data-umami-event="Path prereq back">
           Kembali
         </button>
-        <button id="continueAnywayBtn" class="flex-1 px-4 py-2 bg-amber-900 text-white rounded-lg font-semibold hover:bg-amber-800 transition">
+        <button id="continueAnywayBtn" class="flex-1 px-4 py-2 bg-amber-900 text-white rounded-lg font-semibold hover:bg-amber-800 transition" data-umami-event="Path prereq continue anyway">
           Lanjutkan
         </button>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-amber-900 text-white py-12 px-4 mt-20">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <h3 class="text-2xl font-bold mb-4">Senara</h3>
-          <p class="text-amber-100">Platform visual novel edukatif untuk segala usia.</p>
-        </div>
-        <div>
-          <h4 class="font-bold mb-4">Navigasi</h4>
-          <ul class="space-y-2 text-amber-100">
-            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
-            <li><a href="koleksi.html" class="hover:text-white transition">Koleksi</a></li>
-            <li><a href="learning-paths.html" class="hover:text-white transition">Learning Paths</a></li>
-            <li><a href="about.html" class="hover:text-white transition">Tentang</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-bold mb-4">Konten</h4>
-          <ul class="space-y-2 text-amber-100">
-            <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
-            <li><a href="contact.html" class="hover:text-white transition">Kontak</a></li>
-            <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-amber-800 pt-8 text-center text-amber-100">
-        <p>&copy; 2024 Senara. Semua hak dilindungi.</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer (will be injected by footer.js) -->
+  <footer id="footer-placeholder"></footer>
 
   <script src="js/config.js"></script>
   <script src="js/constants.js"></script>
   <script src="js/shared-utils.js"></script>
   <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
   <script src="data/stories.js"></script>
   <script src="data/learning-paths.js"></script>
   <script src="js/learning-paths-utils.js"></script>
@@ -245,7 +217,7 @@
               </div>
               <div class="text-right">
                 ${isCompleted ? `
-                  <a href="story.html?id=${story.storyId}&path=${pathId}" class="inline-block btn-primary px-4 py-2 rounded-lg font-semibold text-sm">
+                  <a href="story.html?id=${story.storyId}&path=${pathId}" class="inline-block btn-primary px-4 py-2 rounded-lg font-semibold text-sm" data-umami-event="Path story ulangi ${story.storyId}">
                     Ulangi
                   </a>
                 ` : isLocked ? `
@@ -253,7 +225,7 @@
                     Terkunci
                   </button>
                 ` : `
-                  <button class="inline-block btn-primary px-4 py-2 rounded-lg font-semibold text-sm story-start-btn" data-story-id="${story.storyId}">
+                  <button class="inline-block btn-primary px-4 py-2 rounded-lg font-semibold text-sm story-start-btn" data-story-id="${story.storyId}" data-umami-event="Path story mulai ${story.storyId}">
                     Mulai
                   </button>
                 `}
@@ -264,14 +236,14 @@
       }).join('');
 
       const resetButtonHTML = isLocalStorageAvailable() ? `
-        <button id="resetProgressBtn" class="text-amber-600 hover:text-amber-700 font-semibold text-sm underline">
+        <button id="resetProgressBtn" class="text-amber-600 hover:text-amber-700 font-semibold text-sm underline" data-umami-event="Path reset progress">
           Reset Progress
         </button>
       ` : '';
 
       const content = `
         <div class="mb-8">
-          <a href="learning-paths.html" class="text-amber-900 hover:text-amber-700 font-semibold mb-6 inline-block">
+          <a href="learning-paths.html" class="text-amber-900 hover:text-amber-700 font-semibold mb-6 inline-block" data-umami-event="Path back to list">
             ← Kembali ke Learning Paths
           </a>
         </div>
@@ -397,6 +369,7 @@
     // Load on page load
     document.addEventListener('DOMContentLoaded', () => {
       initNavbar('paths');
+      initFooter();
       renderPathDetail();
     });
   </script>

@@ -70,10 +70,10 @@
         Platform visual novel edukatif untuk segala usia. Belajar melalui cerita yang menginspirasi.
           </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="koleksi.html" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg">
+        <a href="koleksi.html" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg" data-umami-event="Home hero Jelajahi Koleksi">
           Jelajahi Koleksi
             </a>
-        <a href="#tentang" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg">
+        <a href="#tentang" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg" data-umami-event="Home hero Tentang">
           Tentang
             </a>
           </div>
@@ -231,7 +231,7 @@
               <li>• Nama di halaman apresiasi</li>
             </ul>
           </div>
-          <a href="https://ko-fi.com/senara_id" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-orange-600 transition">
+          <a href="https://ko-fi.com/senara_id" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-orange-600 transition" data-umami-event="Support Ko-fi CTA">
             ☕ Dukung dengan Donasi
           </a>
         </div>
@@ -366,7 +366,7 @@
 
       <!-- CTA Button -->
       <div class="text-center">
-        <a href="https://forms.gle/MBBZmvUkSYS6daQaA" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-amber-900 to-amber-800 text-white px-12 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition">
+        <a href="https://forms.gle/MBBZmvUkSYS6daQaA" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-amber-900 to-amber-800 text-white px-12 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition" data-umami-event="Volunteer join CTA">
           🚀 Bergabung sebagai Kontributor
         </a>
         <p class="text-amber-700 text-sm mt-4">Isi form singkat kami dan kami akan menghubungi Anda segera!</p>
@@ -374,38 +374,14 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-amber-900 text-white py-12 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <h3 class="text-2xl font-bold mb-4">Senara</h3>
-          <p class="text-amber-100">Platform visual novel edukatif untuk segala usia.</p>
-        </div>
-        <div>
-          <h4 class="font-bold mb-4">Navigasi</h4>
-          <ul class="space-y-2 text-amber-100">
-            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
-            <li><a href="koleksi.html" class="hover:text-white transition">Koleksi</a></li>
-            <li><a href="#tentang" class="hover:text-white transition">Tentang</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-bold mb-4">Kontak</h4>
-          <!-- <p class="text-amber-100">Email: hello@senara.id</p> -->
-          <p class="text-amber-100">Ikuti kami di media sosial</p>
-        </div>
-      </div>
-      <div class="border-t border-amber-800 pt-8 text-center text-amber-100">
-        <p>&copy; 2024 Senara. Semua hak dilindungi.</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer (will be injected by footer.js) -->
+  <footer id="footer-placeholder"></footer>
 
   <script src="js/config.js"></script>
   <script src="js/constants.js"></script>
   <script src="js/shared-utils.js"></script>
   <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
   <script src="data/stories.js"></script>
   <script src="https://cdn.counter.dev/script.js" data-id="af8cab5a-f3b9-4717-8058-68e00f4f917c" data-utcoffset="7"></script>
   <script>
@@ -445,7 +421,7 @@
                 <p class="font-semibold">Script by ${story.scriptBy}</p>
               </div>
             ` : ''}
-            <a href="story.html?id=${story.id}" class="block w-full bg-amber-900 text-white py-2 rounded-lg font-semibold text-center hover:bg-amber-800 transition">
+            <a href="story.html?id=${story.id}" class="block w-full bg-amber-900 text-white py-2 rounded-lg font-semibold text-center hover:bg-amber-800 transition" data-umami-event="Featured play ${story.id}">
               ▶ Mainkan
             </a>
           </div>
@@ -457,6 +433,7 @@
     // Load featured stories on page load
     document.addEventListener('DOMContentLoaded', () => {
       initNavbar('home');
+      initFooter();
       loadFeaturedStories();
     });
   </script>
