@@ -13,8 +13,8 @@ function getNavbarHTML(currentPage = '') {
     { href: 'index.html', label: 'Beranda', id: 'home' },
     { href: 'koleksi.html', label: 'Koleksi', id: 'collection' },
     { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths' },
-    { href: 'resources.html', label: 'Resources', id: 'resources' },
-    { href: 'about.html', label: 'Tentang', id: 'about' },
+    // { href: 'resources.html', label: 'Resources', id: 'resources' },
+    // { href: 'about.html', label: 'Tentang', id: 'about' },
   ];
 
   const desktopMenu = navItems
