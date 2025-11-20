@@ -288,3 +288,66 @@ function formatLearningOutcomes(outcomes) {
     outcomes.map(outcome => `<li>${outcome}</li>`).join('') +
     '</ul>';
 }
+
+/**
+ * Create a story card element
+ * @param {Object} story - Story object
+ * @param {Object} options - Rendering options
+ * @param {boolean} options.showDescription - Show full description (default: false)
+ * @returns {HTMLElement} Story card div element
+ */
+function createStoryCard(story, options = {}) {
+  const { showDescription = false } = options;
+  
+  const card = document.createElement('div');
+  const isComingSoon = story.status === 'coming-soon';
+  card.className = `card-hover bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm ${isComingSoon ? 'opacity-75' : ''}`;
+  
+  const emoji = getStoryEmoji(story.id);
+  const statusBadge = getStatusBadge(story.status);
+  
+  card.innerHTML = `
+    <div class="thumbnail-placeholder h-48 w-full relative">
+      ${emoji}
+      ${isComingSoon ? `<div class="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"><span class="text-white font-bold text-lg">${statusBadge}</span></div>` : ''}
+    </div>
+    <div class="p-6">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <h3 class="text-xl font-bold text-amber-900 flex-1">${story.title}</h3>
+        ${isComingSoon ? `<span class="text-xs font-semibold bg-indigo-100 text-indigo-900 px-2 py-1 rounded whitespace-nowrap">Segera</span>` : ''}
+      </div>
+      ${showDescription ? `<p class="text-amber-700 text-sm mb-3">${story.description}</p>` : ''}
+      <div class="flex flex-wrap gap-2 mb-3">
+        ${story.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+      </div>
+      <div class="flex items-center justify-between mb-3 text-xs text-amber-700">
+        <span>${story.difficulty}</span>
+        <span>⏱ ${story.duration} min</span>
+        <span class="bg-amber-50 px-2 py-1 rounded">${story.age}</span>
+      </div>
+      ${story.collaboration ? `
+        <div class="mb-3 p-2 bg-pink-50 border border-pink-200 rounded-lg">
+          <p class="text-xs font-semibold text-pink-700">
+            🤝 ${story.collaboration}
+          </p>
+        </div>
+      ` : ''}
+      ${story.scriptBy ? `
+        <div class="mb-3 text-xs text-amber-700">
+          <p class="font-semibold">Script by ${story.scriptBy}</p>
+        </div>
+      ` : ''}
+      ${isComingSoon ? `
+        <button class="play-btn w-full py-3 rounded-lg font-semibold text-center block opacity-50 cursor-not-allowed" disabled>
+          🔜 Segera Hadir
+        </button>
+      ` : `
+        <a href="story.html?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center block">
+          ▶ Mainkan
+        </a>
+      `}
+    </div>
+  `;
+  
+  return card;
+}
