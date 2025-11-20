@@ -6,6 +6,7 @@
   <title>Kategori — Senara</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="style/story-cards.css" rel="stylesheet">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
   <style>
     * {
@@ -14,45 +15,6 @@
     
     body {
       background-color: #faf8f3;
-    }
-    
-    .card-hover {
-      transition: all 0.3s ease;
-    }
-    
-    .card-hover:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
-    
-    .tag {
-      display: inline-block;
-      background-color: #e8dcc8;
-      color: #6d5844;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-    
-    .play-btn {
-      background-color: #8b7355;
-      color: white;
-      transition: all 0.3s ease;
-    }
-    
-    .play-btn:hover {
-      background-color: #6d5844;
-      transform: scale(1.05);
-    }
-    
-    .thumbnail-placeholder {
-      background: linear-gradient(135deg, #e8dcc8 0%, #d4c4b0 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      color: #8b7355;
     }
   </style>
 </head>
@@ -128,31 +90,7 @@
       container.innerHTML = '';
 
       stories.forEach(story => {
-        const card = document.createElement('div');
-        card.className = 'card-hover bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm';
-        const emoji = getStoryEmoji(story.id);
-        
-        card.innerHTML = `
-          <div class="thumbnail-placeholder h-48 w-full">
-            ${emoji}
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-amber-900 mb-2">${story.title}</h3>
-            <p class="text-amber-700 text-sm mb-4">${story.description}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              ${story.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-            </div>
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-sm font-semibold text-amber-700 bg-amber-50 px-3 py-1 rounded-full">
-                ${story.age}
-              </span>
-            </div>
-            <a href="story.html?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center block">
-              ▶ Mainkan
-            </a>
-          </div>
-        `;
-        
+        const card = createStoryCard(story, { showDescription: true });
         container.appendChild(card);
       });
     }
