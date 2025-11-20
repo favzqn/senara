@@ -301,7 +301,7 @@ function createStoryCard(story, options = {}) {
   
   const card = document.createElement('div');
   const isComingSoon = story.status === 'coming-soon';
-  card.className = `card-hover bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm ${isComingSoon ? 'opacity-75' : ''}`;
+  card.className = `card-hover bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm flex flex-col h-full ${isComingSoon ? 'opacity-75' : ''}`;
   
   const emoji = getStoryEmoji(story.id);
   const statusBadge = getStatusBadge(story.status);
@@ -311,7 +311,7 @@ function createStoryCard(story, options = {}) {
       ${emoji}
       ${isComingSoon ? `<div class="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"><span class="text-white font-bold text-lg">${statusBadge}</span></div>` : ''}
     </div>
-    <div class="p-6">
+    <div class="p-6 flex flex-col flex-1">
       <div class="flex items-start justify-between gap-2 mb-2">
         <h3 class="text-xl font-bold text-amber-900 flex-1">${story.title}</h3>
         ${isComingSoon ? `<span class="text-xs font-semibold bg-indigo-100 text-indigo-900 px-2 py-1 rounded whitespace-nowrap">Segera</span>` : ''}
@@ -320,32 +320,49 @@ function createStoryCard(story, options = {}) {
       <div class="flex flex-wrap gap-2 mb-3">
         ${story.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
       </div>
-      <div class="flex items-center justify-between mb-3 text-xs text-amber-700">
-        <span>${story.difficulty}</span>
-        <span>⏱ ${story.duration} min</span>
-        <span class="bg-amber-50 px-2 py-1 rounded">${story.age}</span>
+      <div class="mt-auto flex flex-col gap-3">
+        ${story.collaboration ? `
+          <div class="p-2 bg-pink-50 border border-pink-200 rounded-lg">
+            <p class="text-xs font-semibold text-pink-700">
+              🤝 ${story.collaboration}
+            </p>
+          </div>
+        ` : ''}
+        <div class="grid grid-cols-3 gap-2 text-xs">
+          <div class="p-2 rounded-xl bg-amber-50 border border-amber-100">
+            <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Level</p>
+            <p class="text-sm font-semibold text-amber-900">${story.difficulty}</p>
+          </div>
+          <div class="p-2 rounded-xl bg-amber-50 border border-amber-100">
+            <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Durasi</p>
+            <p class="text-sm font-semibold text-amber-900">⏱ ${story.duration} min</p>
+          </div>
+          <div class="p-2 rounded-xl bg-amber-50 border border-amber-100">
+            <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Usia</p>
+            <p class="text-sm font-semibold text-amber-900">${story.age}</p>
+          </div>
+        </div>
+        ${story.scriptBy ? `
+          <div class="flex items-center gap-3 bg-white/70 border border-amber-100 rounded-xl px-3 py-2 text-xs">
+            <div class="text-lg">✍️</div>
+            <div>
+              <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Script by</p>
+              <p class="text-sm font-semibold text-amber-900">${story.scriptBy}</p>
+            </div>
+          </div>
+        ` : ''}
+        <div class="pt-1">
+          ${isComingSoon ? `
+            <button class="play-btn w-full py-3 rounded-lg font-semibold text-center block opacity-50 cursor-not-allowed" disabled>
+              🔜 Segera Hadir
+            </button>
+          ` : `
+            <a href="story.html?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center block">
+              ▶ Mainkan
+            </a>
+          `}
+        </div>
       </div>
-      ${story.collaboration ? `
-        <div class="mb-3 p-2 bg-pink-50 border border-pink-200 rounded-lg">
-          <p class="text-xs font-semibold text-pink-700">
-            🤝 ${story.collaboration}
-          </p>
-        </div>
-      ` : ''}
-      ${story.scriptBy ? `
-        <div class="mb-3 text-xs text-amber-700">
-          <p class="font-semibold">Script by ${story.scriptBy}</p>
-        </div>
-      ` : ''}
-      ${isComingSoon ? `
-        <button class="play-btn w-full py-3 rounded-lg font-semibold text-center block opacity-50 cursor-not-allowed" disabled>
-          🔜 Segera Hadir
-        </button>
-      ` : `
-        <a href="story.html?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center block">
-          ▶ Mainkan
-        </a>
-      `}
     </div>
   `;
   
