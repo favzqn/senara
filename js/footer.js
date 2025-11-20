@@ -13,19 +13,19 @@ function getFooterHTML() {
           <div>
             <h4 class="font-bold mb-4">Navigasi</h4>
             <ul class="space-y-2 text-amber-100">
-              <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
-              <li><a href="koleksi.html" class="hover:text-white transition">Koleksi</a></li>
-              <li><a href="learning-paths.html" class="hover:text-white transition">Learning Paths</a></li>
-              <li><a href="about.html" class="hover:text-white transition">Tentang</a></li>
+              <li><a href="index.html" class="hover:text-white transition" data-umami-event="Footer Beranda">Beranda</a></li>
+              <li><a href="koleksi.html" class="hover:text-white transition" data-umami-event="Footer Koleksi">Koleksi</a></li>
+              <li><a href="learning-paths.html" class="hover:text-white transition" data-umami-event="Footer Learning Paths">Learning Paths</a></li>
+              <li><a href="about.html" class="hover:text-white transition" data-umami-event="Footer Tentang">Tentang</a></li>
             </ul>
           </div>
           <div>
             <h4 class="font-bold mb-4">Konten</h4>
             <ul class="space-y-2 text-amber-100">
-              <li><a href="resources.html" class="hover:text-white transition">Resources</a></li>
-              <li><a href="faq.html" class="hover:text-white transition">FAQ</a></li>
-              <li><a href="contact.html" class="hover:text-white transition">Kontak</a></li>
-              <li><a href="privacy.html" class="hover:text-white transition">Privacy</a></li>
+              <li><a href="resources.html" class="hover:text-white transition" data-umami-event="Footer Resources">Resources</a></li>
+              <li><a href="faq.html" class="hover:text-white transition" data-umami-event="Footer FAQ">FAQ</a></li>
+              <li><a href="contact.html" class="hover:text-white transition" data-umami-event="Footer Kontak">Kontak</a></li>
+              <li><a href="privacy.html" class="hover:text-white transition" data-umami-event="Footer Privacy">Privacy</a></li>
             </ul>
           </div>
         </div>

@@ -203,11 +203,11 @@
         ` : '';
 
         const buttonHTML = isAvailable ? `
-          <a href="path-detail.html?id=${path.id}" class="inline-block btn-primary px-6 py-2 rounded-lg font-semibold">
+          <a href="path-detail.html?id=${path.id}" class="inline-block btn-primary px-6 py-2 rounded-lg font-semibold" data-umami-event="Learning Paths view ${path.id}">
             Lihat Jalur Lengkap →
           </a>
         ` : `
-          <button class="btn-primary px-6 py-2 rounded-lg font-semibold opacity-50 cursor-not-allowed" disabled>
+          <button class="btn-primary px-6 py-2 rounded-lg font-semibold opacity-50 cursor-not-allowed" disabled data-umami-event="Learning Paths coming soon ${path.id}">
             Segera Hadir
           </button>
         `;

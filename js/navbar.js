@@ -10,9 +10,9 @@
  */
 function getNavbarHTML(currentPage = '') {
   const navItems = [
-    { href: 'index.html', label: 'Beranda', id: 'home' },
-    { href: 'koleksi.html', label: 'Koleksi', id: 'collection' },
-    { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths' },
+    { href: 'index.html', label: 'Beranda', id: 'home', event: 'Navbar Beranda' },
+    { href: 'koleksi.html', label: 'Koleksi', id: 'collection', event: 'Navbar Koleksi' },
+    { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
     // { href: 'resources.html', label: 'Resources', id: 'resources' },
     // { href: 'about.html', label: 'Tentang', id: 'about' },
   ];
@@ -20,13 +20,13 @@ function getNavbarHTML(currentPage = '') {
   const desktopMenu = navItems
     .map(item => {
       const isActive = currentPage === item.id ? 'text-amber-700' : 'text-amber-900 hover:text-amber-700';
-      return `<a href="${item.href}" class="${isActive} transition font-medium">${item.label}</a>`;
+      return `<a href="${item.href}" class="${isActive} transition font-medium" data-umami-event="${item.event}">${item.label}</a>`;
     })
     .join('');
 
   const mobileMenu = navItems
     .map(item => `
-      <a href="${item.href}" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2">
+      <a href="${item.href}" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2" data-umami-event="Mobile ${item.event}">
         ${item.label}
       </a>
     `)
@@ -36,12 +36,12 @@ function getNavbarHTML(currentPage = '') {
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-amber-100">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <div class="text-2xl font-bold text-amber-900">
-          <a href="index.html" class="hover:text-amber-700 transition">Senara</a>
+          <a href="index.html" class="hover:text-amber-700 transition" data-umami-event="Navbar Logo Home">Senara</a>
         </div>
         <div class="hidden md:flex gap-8">
           ${desktopMenu}
         </div>
-        <button id="mobileMenuBtn" class="md:hidden text-amber-900 hover:text-amber-700 transition">
+        <button id="mobileMenuBtn" class="md:hidden text-amber-900 hover:text-amber-700 transition" data-umami-event="Navbar mobile toggle">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
