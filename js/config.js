@@ -15,7 +15,7 @@ const CONFIG = {
 
   // API & External URLs
   urls: {
-    kofi: 'https://ko-fi.com/senara_id',
+    trakteer: 'https://trakteer.id/senara.id',
     volunteerForm: 'https://forms.gle/MBBZmvUkSYS6daQaA',
     contact: 'mailto:hello@senara.id?subject=Partnership%20Inquiry',
   },

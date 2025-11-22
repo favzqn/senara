@@ -29,6 +29,7 @@ const allStoriesData = [
     title: "Pahlawan Kesehatan Mental",
     description: "Temani Vani menghadapi tantangan emosional dan temukan kekuatan sejati dalam menjaga kesehatan mental.",
     longDescription: "Kesehatan mental bukan kelemahan—ini adalah kekuatan. Ikuti perjalanan Vani yang penuh tantangan emosional, dari kecemasan hingga depresi, sambil belajar mengenali tanda-tanda gangguan mental dan memahami kapan saatnya meminta bantuan. Melalui 5 chapter yang mendalam, Anda akan mengungkap mitos seputar kesehatan mental, mengurangi stigma, dan menguasai teknik relaksasi yang dapat langsung Anda praktikkan. Jadilah Pahlawan Kesehatan Mental—bukan hanya untuk diri sendiri, tetapi untuk orang-orang yang Anda cintai.",
+    category: "mental-health-wellbeing",
     tags: ["Mental Health", "Emotional Skills", "Self-Care"],
     age: "13+",
     series: "Mental Health Series",

@@ -4,188 +4,248 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Senara — Platform Visual Novel Edukatif</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="style/story-cards.css" rel="stylesheet">
+  <link href="style/home.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
-  <style>
-    * {
-      font-family: 'Inter', 'Nunito', sans-serif;
-    }
-    
-    body {
-      background-color: #faf8f3;
-    }
-    
-    .hero-gradient {
-      background: linear-gradient(135deg, #faf8f3 0%, #f5f0e8 100%);
-    }
-    
-    .btn-primary {
-      background-color: #8b7355;
-      color: white;
-      transition: all 0.3s ease;
-    }
-    
-    .btn-primary:hover {
-      background-color: #6d5844;
-      transform: scale(1.02);
-    }
-    
-    .btn-secondary {
-      background-color: transparent;
-      color: #8b7355;
-      border: 2px solid #8b7355;
-      transition: all 0.3s ease;
-    }
-    
-    .btn-secondary:hover {
-      background-color: #8b7355;
-      color: white;
-    }
-  </style>
 </head>
 <body class="bg-amber-50">
   <!-- Navigation (will be injected by navbar.js) -->
   <nav id="navbar-placeholder"></nav>
 
   <!-- Hero Section -->
-  <section class="hero-gradient min-h-screen flex items-center justify-center px-4 py-20">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-5xl md:text-7xl font-bold text-amber-900 mb-6 leading-tight">
-        Senara
-          </h1>
-      <p class="text-xl md:text-2xl text-amber-800 mb-4 font-light">
-        Seni Narasi berdaya.
-          </p>
-      <p class="text-lg md:text-xl text-amber-700 mb-12 max-w-2xl mx-auto">
-        Platform visual novel edukatif untuk segala usia. Belajar melalui cerita yang menginspirasi.
-          </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="koleksi.html" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg" data-umami-event="Home hero Jelajahi Koleksi">
-          Jelajahi Koleksi
+  <section class="hero-shell min-h-screen flex items-center justify-center px-4 py-6 md:py-12 relative">
+    <!-- Animated blobs -->
+    <div class="hero-blob hero-blob--one"></div>
+    <div class="hero-blob hero-blob--two"></div>
+
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: Content -->
+        <div class="space-y-8">
+          <!-- Headline & Subheading -->
+          <div class="space-y-4">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-amber-900 leading-tight">
+              Belajar Apapun Lewat Cerita Interaktif
+            </h1>
+            <p class="text-lg md:text-xl text-amber-700 font-light leading-relaxed">
+              Platform visual novel edukatif gratis yang mengubah cara kita belajar—melalui narasi yang menginspirasi dan pilihan yang membentuk perjalananmu.
+            </p>
+          </div>
+
+          <!-- Value Chips -->
+          <div class="flex flex-wrap gap-3">
+            <div class="value-chip">
+              <span>🎯</span>
+              <span>Pembelajaran Bermakna</span>
+            </div>
+            <div class="value-chip">
+              <span>💡</span>
+              <span>Interaktif & Menyenangkan</span>
+            </div>
+            <div class="value-chip">
+              <span>✨</span>
+              <span>Fleksibel & Personal</span>
+            </div>
+            <div class="value-chip">
+              <span>👶</span>
+              <span>Untuk Semua Usia</span>
+            </div>
+          </div>
+
+          <!-- CTA Cluster -->
+          <div class="flex flex-col sm:flex-row gap-3 pt-4">
+            <a href="koleksi.html" class="btn-primary px-8 py-4 rounded-lg font-semibold text-lg text-center transition-all hover:shadow-lg" data-umami-event="Home hero Mulai Cerita Demo">
+              🎮 Mulai Cerita
             </a>
-        <a href="#tentang" class="btn-secondary px-8 py-4 rounded-lg font-semibold text-lg" data-umami-event="Home hero Tentang">
-          Tentang
+            <a href="mailto:fauzan08fauzan@gmail.com?subject=Kolaborasi%20Senara" class="cta-ghost px-8 py-4 rounded-lg font-semibold text-lg text-center transition-all" data-umami-event="Home hero Ajukan Kolaborasi">
+              🤝 Ajukan Kolaborasi
             </a>
           </div>
         </div>
+
+        <!-- Right: Visual Mockups & Interactive Teaser -->
+        <div class="hidden lg:block">
+          <div class="hero-mockups">
+            <!-- Primary card (top-right) -->
+            <div class="hero-card hero-card--primary">
+              <div class="space-y-3">
+                <div class="h-3 bg-gradient-to-r from-amber-200 to-orange-200 rounded-full w-2/3"></div>
+                <div class="space-y-2">
+                  <div class="h-2 bg-amber-100 rounded-full"></div>
+                  <div class="h-2 bg-amber-100 rounded-full w-5/6"></div>
+                </div>
+                <div class="pt-4 space-y-2">
+                  <div class="h-2 bg-rose-100 rounded-full w-4/5"></div>
+                  <div class="h-2 bg-rose-100 rounded-full w-3/4"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary card (bottom-left) -->
+            <div class="hero-card hero-card--secondary">
+              <div class="space-y-3">
+                <div class="h-3 bg-gradient-to-r from-purple-200 to-pink-200 rounded-full w-3/4"></div>
+                <div class="space-y-2">
+                  <div class="h-2 bg-purple-100 rounded-full"></div>
+                  <div class="h-2 bg-purple-100 rounded-full w-5/6"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Demo Widget -->
+          <div class="hero-demo">
+            <p class="text-xs uppercase tracking-widest font-semibold text-amber-600 mb-3">Coba pilih jawaban:</p>
+            <div class="flex gap-2">
+              <button class="hero-demo-btn active" data-choice="1" data-umami-event="Hero demo choice 1">Pilihan A</button>
+              <button class="hero-demo-btn" data-choice="2" data-umami-event="Hero demo choice 2">Pilihan B</button>
+            </div>
+            <div class="mt-4 p-3 bg-amber-50 rounded-lg border border-amber-100 min-h-12">
+              <p class="text-sm text-amber-900" id="heroResponse">Klik pilihan untuk melihat perubahan:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
   </section>
 
   <!-- Featured Stories Section -->
-  <section class="py-20 px-4 bg-amber-50">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-4">
-        ⭐ Cerita Pilihan
-      </h2>
-      <p class="text-lg text-amber-800 text-center mb-12 max-w-2xl mx-auto">
-        Cerita-cerita terbaik yang paling banyak disukai oleh komunitas kami.
-      </p>
-      
-      <div id="featuredContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <section class="featured-section py-24 px-4">
+    <div class="max-w-6xl mx-auto relative z-10">
+      <!-- Header -->
+      <div class="mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+          ⭐ Cerita Pilihan
+        </h2>
+        <div class="featured-impact-callout">
+          <p>Dipilih oleh <strong>fasilitator</strong> dan komunitas <strong>pembaca</strong>. Cerita-ceritanya terbukti meningkatkan engagement dan retensi belajar.</p>
+        </div>
+      </div>
+
+      <!-- Featured Stories Scroll -->
+      <div class="featured-scroll" id="featuredContainer">
         <!-- Featured stories will be loaded here -->
       </div>
     </div>
   </section>
 
   <!-- Learning Categories Section -->
-  <section class="py-24 px-4 bg-white">
+  <section class="py-20 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-6">
+      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-4">
         Apa yang Bisa Dipelajari
       </h2>
-      <p class="text-lg text-amber-700 text-center mb-16 max-w-2xl mx-auto">
-        Delapan kategori pembelajaran yang dirancang untuk mengembangkan keterampilan hidup melalui cerita.
+      <p class="text-lg text-amber-700 text-center mb-12 max-w-3xl mx-auto">
+        Pilih kategori yang cocok dengan kebutuhanmu hari ini.
       </p>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Emotional Skills Card -->
-        <a href="kategori.html?cat=emotional-skills" class="card-hover bg-gradient-to-br from-rose-50 to-pink-50 p-8 rounded-2xl border border-rose-100 hover:no-underline block" data-umami-event="Home category Emotional Skills">
-          <div class="text-5xl mb-4">💭</div>
-          <h3 class="text-xl font-bold text-rose-900 mb-2">Emotional Skills</h3>
-          <p class="text-rose-800 text-sm">Kelola stres dan pahami dirimu.</p>
-        </a>
-
-        <!-- Coding Card -->
-        <a href="kategori.html?cat=coding" class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-100 hover:no-underline block" data-umami-event="Home category Coding">
-          <div class="text-5xl mb-4">💻</div>
-          <h3 class="text-xl font-bold text-blue-900 mb-2">Coding</h3>
-          <p class="text-blue-800 text-sm">Logika pemrograman dengan cara menyenangkan.</p>
-        </a>
-
-        <!-- Social Skills Card -->
-        <a href="kategori.html?cat=social-skills" class="card-hover bg-gradient-to-br from-amber-50 to-yellow-50 p-8 rounded-2xl border border-amber-100 hover:no-underline block" data-umami-event="Home category Social Skills">
-          <div class="text-5xl mb-4">🤝</div>
-          <h3 class="text-xl font-bold text-amber-900 mb-2">Social Skills</h3>
-          <p class="text-amber-800 text-sm">Komunikasi dan empati dalam interaksi.</p>
-        </a>
-
-        <!-- Life Skills Card -->
-        <a href="kategori.html?cat=life-skills" class="card-hover bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-100 hover:no-underline block" data-umami-event="Home category Life Skills">
-          <div class="text-5xl mb-4">🌱</div>
-          <h3 class="text-xl font-bold text-green-900 mb-2">Life Skills</h3>
-          <p class="text-green-800 text-sm">Manajemen waktu dan resiliensi.</p>
-        </a>
-
-        <!-- Language Card -->
-        <a href="kategori.html?cat=bahasa" class="card-hover bg-gradient-to-br from-purple-50 to-violet-50 p-8 rounded-2xl border border-purple-100 hover:no-underline block" data-umami-event="Home category Bahasa">
-          <div class="text-5xl mb-4">🌍</div>
-          <h3 class="text-xl font-bold text-purple-900 mb-2">Bahasa</h3>
-          <p class="text-purple-800 text-sm">Belajar bahasa melalui narasi menarik.</p>
-        </a>
-
-        <!-- Creativity Card -->
-        <a href="kategori.html?cat=kreativitas" class="card-hover bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl border border-orange-100 hover:no-underline block" data-umami-event="Home category Kreativitas">
-          <div class="text-5xl mb-4">🎨</div>
-          <h3 class="text-xl font-bold text-orange-900 mb-2">Kreativitas</h3>
-          <p class="text-orange-800 text-sm">Imajinasi dan berpikir kreatif.</p>
-        </a>
-
-        <!-- Critical Thinking Card -->
-        <a href="kategori.html?cat=critical-thinking" class="card-hover bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border border-indigo-100 hover:no-underline block" data-umami-event="Home category Critical Thinking">
-          <div class="text-5xl mb-4">🧩</div>
-          <h3 class="text-xl font-bold text-indigo-900 mb-2">Critical Thinking</h3>
-          <p class="text-indigo-800 text-sm">Analisis dan pengambilan keputusan.</p>
-        </a>
-
-        <!-- History & Culture Card -->
-        <a href="kategori.html?cat=sejarah-budaya" class="card-hover bg-gradient-to-br from-teal-50 to-cyan-50 p-8 rounded-2xl border border-teal-100 hover:no-underline block" data-umami-event="Home category Sejarah & Budaya">
-          <div class="text-5xl mb-4">📚</div>
-          <h3 class="text-xl font-bold text-teal-900 mb-2">Sejarah & Budaya</h3>
-          <p class="text-teal-800 text-sm">Perspektif sejarah dan keragaman budaya.</p>
-        </a>
+      <div class="category-carousel" id="categoryCarousel">
+        <!-- Categories will be loaded dynamically from categories.js -->
       </div>
     </div>
   </section>
 
   <!-- Why Visual Novels Section -->
-  <section id="tentang" class="py-24 px-4 bg-amber-50">
-    <div class="max-w-5xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-6">
+  <section id="tentang" class="why-vn-section py-24 px-4">
+    <div class="max-w-5xl mx-auto relative z-10">
+      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-4">
         Kenapa Visual Novel?
       </h2>
-      <p class="text-lg text-amber-700 text-center mb-16 max-w-2xl mx-auto">
+      <p class="text-lg text-amber-700 text-center mb-8 max-w-2xl mx-auto">
         Format yang terbukti meningkatkan engagement dan retensi pembelajaran hingga 70%.
       </p>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl p-8 border border-amber-100">
-          <div class="text-5xl mb-4">📖</div>
-          <h3 class="text-lg font-bold text-amber-900 mb-2">Narasi yang Engaging</h3>
-          <p class="text-amber-800 text-sm">Cerita yang relatable membuat pembelajaran bermakna dan mudah diingat.</p>
+
+      <!-- Comparison Toggle -->
+      <div class="comparison-toggle">
+        <button class="active" data-mode="vn" data-umami-event="Why VN toggle visual novel">Visual Novel</button>
+        <button data-mode="pdf" data-umami-event="Why VN toggle PDF">vs Modul PDF</button>
+      </div>
+
+      <!-- Benefit Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="benefit-card" data-benefit="1">
+          <div class="benefit-icon" data-icon-vn="📖" data-icon-pdf="📄">📖</div>
+          <div class="benefit-stat" data-stat-vn="70% lebih tinggi" data-stat-pdf="Standar industri">70% lebih tinggi</div>
+          <h3 data-title-vn="Narasi yang Engaging" data-title-pdf="Konten Terstruktur">Narasi yang Engaging</h3>
+          <p data-desc-vn="Cerita yang relatable membuat pembelajaran bermakna dan mudah diingat." data-desc-pdf="Format standar dengan struktur jelas, mudah diakses dan dibagikan.">Cerita yang relatable membuat pembelajaran bermakna dan mudah diingat.</p>
+          <div class="benefit-comparison" data-mode="vn">
+            <strong>Visual Novel:</strong> Karakter berkembang, dialog natural, emosi tersampaikan lewat visual & suara.
+          </div>
+          <div class="benefit-comparison" data-mode="pdf">
+            <strong>Modul PDF:</strong> Teks terstruktur, mudah dipindai, format standar industri.
+          </div>
         </div>
         
-        <div class="bg-white rounded-2xl p-8 border border-amber-100">
-          <div class="text-5xl mb-4">🎮</div>
-          <h3 class="text-lg font-bold text-amber-900 mb-2">Interaktif & Menyenangkan</h3>
-          <p class="text-amber-800 text-sm">Pilihan bermakna membuat setiap playthrough unik dan personal.</p>
+        <div class="benefit-card" data-benefit="2">
+          <div class="benefit-icon" data-icon-vn="🎮" data-icon-pdf="📋">🎮</div>
+          <div class="benefit-stat" data-stat-vn="3x engagement" data-stat-pdf="Engagement rendah">3x engagement</div>
+          <h3 data-title-vn="Interaktif & Menyenangkan" data-title-pdf="Format Pasif">Interaktif & Menyenangkan</h3>
+          <p data-desc-vn="Pilihan bermakna membuat setiap playthrough unik dan personal." data-desc-pdf="Konten linear yang konsisten, cocok untuk pembelajaran terstruktur.">Pilihan bermakna membuat setiap playthrough unik dan personal.</p>
+          <div class="benefit-comparison" data-mode="vn">
+            <strong>Visual Novel:</strong> Pilihan mempengaruhi jalan cerita, quiz terintegrasi, feedback real-time.
+          </div>
+          <div class="benefit-comparison" data-mode="pdf">
+            <strong>Modul PDF:</strong> Konten linear, interaksi minimal, feedback tertunda.
+          </div>
         </div>
         
-        <div class="bg-white rounded-2xl p-8 border border-amber-100">
-          <div class="text-5xl mb-4">❤️</div>
-          <h3 class="text-lg font-bold text-amber-900 mb-2">Koneksi Emosional</h3>
-          <p class="text-amber-800 text-sm">Pembelajaran yang menyentuh hati lebih efektif dan lasting.</p>
+        <div class="benefit-card" data-benefit="3">
+          <div class="benefit-icon" data-icon-vn="❤️" data-icon-pdf="💼">❤️</div>
+          <div class="benefit-stat" data-stat-vn="85% retensi" data-stat-pdf="45% retensi">85% retensi</div>
+          <h3 data-title-vn="Koneksi Emosional" data-title-pdf="Pembelajaran Formal">Koneksi Emosional</h3>
+          <p data-desc-vn="Pembelajaran yang menyentuh hati lebih efektif dan lasting." data-desc-pdf="Pendekatan berbasis konten, ideal untuk pelatihan profesional dan akademik.">Pembelajaran yang menyentuh hati lebih efektif dan lasting.</p>
+          <div class="benefit-comparison" data-mode="vn">
+            <strong>Visual Novel:</strong> Karakter relatable, cerita personal, resonansi emosional mendalam.
+          </div>
+          <div class="benefit-comparison" data-mode="pdf">
+            <strong>Modul PDF:</strong> Pendekatan formal, fokus pada konten, retensi lebih rendah.
+          </div>
         </div>
+      </div>
+
+      <!-- Guided Flow -->
+      <div class="guided-flow">
+        <h3 class="text-xl font-bold text-amber-900 text-center mb-6">Mengapa Senara Berbeda?</h3>
+        <div class="flow-steps">
+          <div class="flow-step">
+            <div class="flow-step-num">🎯</div>
+            <p class="font-semibold text-amber-900">Cerita Relevan</p>
+            <span class="text-sm text-amber-700">Dirancang untuk kehidupan nyata, bukan teori abstrak</span>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">🤝</div>
+            <p class="font-semibold text-amber-900">Komunitas Aktif</p>
+            <span class="text-sm text-amber-700">Berbagi pengalaman dengan banyak pembaca & fasilitator</span>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">✨</div>
+            <p class="font-semibold text-amber-900">Fleksibel & Personal</p>
+            <span class="text-sm text-amber-700">Belajar sesuai kecepatan & gaya belajarmu sendiri</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Slider -->
+      <div class="testimonial-slider">
+        <div class="testimonial-content" id="testimonialContent">
+          <p class="testimonial-quote">"Anak-anak saya jadi berani berdiskusi setelah belajar lewat VN. Mereka merasa cerita itu tentang mereka."</p>
+          <p class="testimonial-author">— Guru SD di Bandung</p>
+        </div>
+        <div class="testimonial-nav" id="testimonialNav">
+          <div class="testimonial-dot active" data-index="0"></div>
+          <div class="testimonial-dot" data-index="1"></div>
+          <div class="testimonial-dot" data-index="2"></div>
+        </div>
+      </div>
+
+      <!-- CTA Bar -->
+      <div class="cta-bar">
+        <a href="koleksi.html" class="cta-primary" data-umami-event="Why VN CTA play free">🎮 Mainkan Cerita Gratis</a>
+        <a href="mailto:fauzan08fauzan@gmail.com?subject=Minta%20Panduan%20Fasilitator&body=Halo%20Senara,%0D%0A%0D%0ASaya%20ingin%20menerima%20panduan%20fasilitator.%20Berikut%20detail%20singkat:%0D%0A-%20Nama:%0D%0A-%20Lembaga%20/%20Komunitas:%0D%0A-%20Kebutuhan:%0D%0A%0DTerima%20kasih!" class="cta-secondary" data-umami-event="Why VN CTA request guide">&#128231; Minta Panduan Fasilitator via Email</a>
       </div>
     </div>
   </section>
@@ -193,44 +253,92 @@
   <!-- Support & Sponsorship Section -->
   <section class="py-24 px-4 bg-gradient-to-r from-amber-50 to-orange-50">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-amber-900 text-center mb-6">
-        ❤️ Dukung Senara
-      </h2>
-      <p class="text-lg text-amber-700 text-center mb-16 max-w-2xl mx-auto">
-        Donasi Anda mendukung kreator berbakat dan membuat konten edukatif berkualitas.
-      </p>
+      <!-- Hero Intro -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+          ❤️ Jadilah Bagian dari Perubahan
+        </h2>
+        <p class="text-lg text-amber-700 mb-4 max-w-2xl mx-auto">
+          Dukunganmu menjaga cerita-cerita edukatif ini tetap hidup dan dapat diakses siapa saja.
+        </p>
+        <blockquote class="italic text-amber-800 text-lg border-l-4 border-orange-400 pl-4 py-2 max-w-2xl mx-auto">
+          "Dari satu donasi, tumbuh seribu peluang belajar."
+        </blockquote>
+      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-        <!-- Ko-fi Donation -->
-        <div class="bg-white rounded-2xl p-8 border border-orange-100 shadow-sm">
-          <div class="text-5xl mb-4">☕</div>
-          <h3 class="text-2xl font-bold text-amber-900 mb-4">Donasi via Ko-fi</h3>
-          <p class="text-amber-800 mb-6 font-medium">
-            Donasi Anda membayar untuk:
-          </p>
-          <ul class="space-y-2 text-amber-700 mb-8 text-sm">
-            <li>✓ Ilustrator & desainer karakter</li>
-            <li>✓ Voice actor profesional</li>
-            <li>✓ Penulis skenario berbakat</li>
-            <li>✓ Server & hosting platform</li>
-            <li>✓ Cerita edukatif baru</li>
-          </ul>
-          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-8">
-            <h4 class="font-semibold text-orange-700 mb-2">Bonus untuk Donatur</h4>
-            <ul class="space-y-1 text-amber-700 text-xs">
-              <li>• Update proyek setiap bulan</li>
-              <li>• Akses awal ke cerita baru</li>
-              <li>• Nama di halaman apresiasi</li>
-            </ul>
+      <!-- Micro-metrics Stats
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 text-center">
+        <div class="bg-white rounded-lg p-4 border border-orange-100">
+          <p class="text-2xl font-bold text-orange-500">7</p>
+          <p class="text-xs text-amber-700">Kreator Aktif</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-orange-100">
+          <p class="text-2xl font-bold text-orange-500">14</p>
+          <p class="text-xs text-amber-700">Volunteer</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-orange-100">
+          <p class="text-2xl font-bold text-orange-500">1.2K</p>
+          <p class="text-xs text-amber-700">Jam Produksi</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-orange-100">
+          <p class="text-2xl font-bold text-orange-500">2.3K+</p>
+          <p class="text-xs text-amber-700">Pembaca</p>
+        </div>
+      </div> -->
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 auto-rows-fr">
+        <!-- Trakteer Donation -->
+        <div class="bg-white rounded-2xl p-8 border border-orange-100 shadow-sm h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-5xl">🍰</div>
+            <div class="text-2xl">🇮🇩</div>
           </div>
-          <a href="https://ko-fi.com/senara_id" target="_blank" rel="noopener noreferrer" class="inline-block w-full bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-orange-600 transition" data-umami-event="Support Ko-fi CTA">
-            ☕ Dukung dengan Donasi
+          <h3 class="text-2xl font-bold text-amber-900 mb-4">Dukung via Trakteer</h3>
+          
+          <!-- Use-of-Funds Visual -->
+          <div class="mb-6 p-4 bg-amber-50 rounded-lg border border-amber-200">
+            <p class="text-xs font-semibold text-amber-700 mb-3">Alokasi Dana Donasi:</p>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2">
+                <div class="w-[45%] h-4 bg-gradient-to-r from-purple-400 to-purple-500 rounded"></div>
+                <span class="text-xs text-amber-800">45% Kreator (Ilustrator, Penulis)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-[25%] h-4 bg-gradient-to-r from-orange-400 to-orange-500 rounded"></div>
+                <span class="text-xs text-amber-800">25% Operasional</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-[20%] h-4 bg-gradient-to-r from-blue-400 to-blue-500 rounded"></div>
+                <span class="text-xs text-amber-800">20% Teknologi (Server, Dev)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-[10%] h-4 bg-gradient-to-r from-green-400 to-green-500 rounded"></div>
+                <span class="text-xs text-amber-800">10% Voice & Audio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amount selection handled on Trakteer -->
+
+            <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 mb-8">
+              <h4 class="font-semibold text-orange-700 mb-2">Bonus untuk Donatur</h4>
+              <ul class="space-y-1 text-amber-700 text-xs">
+                <li>• Update proyek setiap bulan</li>
+                <li>• Akses awal ke cerita baru</li>
+                <li>• Nama di halaman apresiasi</li>
+              </ul>
+            </div>
+          <a href="https://trakteer.id/senara.id" target="_blank" rel="noopener noreferrer" class="mt-auto inline-block w-full bg-orange-500 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-orange-600 transition" data-umami-event="Support Trakteer CTA">
+            🍰 Dukung via Trakteer
           </a>
         </div>
 
         <!-- Sponsorship & Partners -->
-        <div class="bg-white rounded-2xl p-8 border border-orange-100 shadow-sm">
-          <div class="text-5xl mb-4">🤝</div>
+        <div class="bg-white rounded-2xl p-8 border border-orange-100 shadow-sm h-full flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="text-5xl">🤝</div>
+            <div class="text-2xl">🏢</div>
+          </div>
           <h3 class="text-2xl font-bold text-amber-900 mb-4">Sponsor & Partner</h3>
           <p class="text-amber-800 mb-6">
             Kami bangga didukung oleh:
@@ -241,33 +349,94 @@
               <p class="text-sm text-amber-700">Partner dalam misi edukasi digital</p>
             </div>
           </div>
-          <!-- <a href="mailto:hello@senara.id?subject=Partnership%20Inquiry" class="inline-block w-full bg-amber-900 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-amber-800 transition">
-            💼 Jadilah Partner Kami
-          </a> -->
+
+          <!-- Partnership Matrix -->
+          <div class="mb-8">
+            <p class="text-xs font-semibold text-amber-700 mb-3">Format Kolaborasi:</p>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between p-2 bg-gray-50 rounded border border-gray-200">
+                <span class="text-sm text-amber-900">Workshop & Webinar</span>
+                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Fleksibel</span>
+              </div>
+              <div class="flex items-center justify-between p-2 bg-gray-50 rounded border border-gray-200">
+                <span class="text-sm text-amber-900">Content Series Branded</span>
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">Tahunan</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="mailto:fauzan08fauzan@gmail.com?subject=Partnership%20Inquiry" class="mt-auto inline-block w-full bg-amber-900 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-amber-800 transition" data-umami-event="Partnership inquiry CTA">
+            💼 Hubungi Kami untuk Kerjasama
+          </a>
         </div>
       </div>
 
-      <!-- Impact Stats -->
-      <div class="bg-white rounded-2xl p-8 border border-orange-100">
-        <h3 class="text-2xl font-bold text-amber-900 text-center mb-8">Dampak Kami</h3>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-          <div>
-            <p class="text-4xl font-bold text-orange-500 mb-2">8</p>
-            <p class="text-amber-800">Kategori Pembelajaran</p>
+      <!-- Donor Testimonial
+      <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-8 border-2 border-orange-200 mb-16 max-w-2xl mx-auto">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl">💬</div>
+          <div class="flex-1">
+            <p class="text-amber-900 font-semibold mb-2">"Kenapa saya donasi"</p>
+            <p class="italic text-amber-800 mb-3">
+              "Saya percaya pendidikan itu urgent. Senara membuat pembelajaran jadi personal dan bermakna."
+            </p>
+            <p class="text-sm font-semibold text-amber-900">— Ibu Alifa, Donatur</p>
+            <p class="text-xs text-amber-700">Bandung · Mahasiswi ITB</p>
           </div>
-          <div>
-            <p class="text-4xl font-bold text-orange-500 mb-2">4+</p>
-            <p class="text-amber-800">Cerita Edukatif</p>
+        </div> -->
+      </div>
+
+      <!-- Impact Stats
+      <div class="impact-metrics-wrapper">
+        <div>
+          <h3 class="text-2xl font-bold text-amber-900 mb-6 text-center md:text-left">Dampak Kami</h3>
+          <div class="impact-metrics-grid">
+            <div class="impact-metric">
+              <div class="metric-icon">📚</div>
+              <div>
+                <p class="metric-label">Cerita Dimainkan</p>
+                <p class="metric-value">18.4K</p>
+              </div>
+              <span class="metric-badge up">+32% YoY</span>
+            </div>
+            <div class="impact-metric">
+              <div class="metric-icon">🧑‍🏫</div>
+              <div>
+                <p class="metric-label">Fasilitator</p>
+                <p class="metric-value">420</p>
+              </div>
+              <span class="metric-badge up">+18 sekolah</span>
+            </div>
+            <div class="impact-metric">
+              <div class="metric-icon">⏱️</div>
+              <div>
+                <p class="metric-label">Jam Fasilitasi</p>
+                <p class="metric-value">1.2K</p>
+              </div>
+              <span class="metric-badge neutral">Stabil</span>
+            </div>
+            <div class="impact-metric">
+              <div class="metric-icon">🌍</div>
+              <div>
+                <p class="metric-label">Kota/Kab Tersentuh</p>
+                <p class="metric-value">27</p>
+              </div>
+              <span class="metric-badge up">+5 baru</span>
+            </div>
           </div>
-          <div>
-            <p class="text-4xl font-bold text-orange-500 mb-2">6</p>
-            <p class="text-amber-800">Peran Volunteer</p>
-          </div>
-          <div>
-            <p class="text-4xl font-bold text-orange-500 mb-2">∞</p>
-            <p class="text-amber-800">Potensi Belajar</p>
-          </div>
-        </div>
+        </div> -->
+
+        <!-- <div class="impact-story-card">
+          <div class="story-badge">Impact Story</div>
+          <h4>SDN 03 Tambora</h4>
+          <p class="text-amber-900 font-semibold">70 siswa belajar empati lewat cerita "Sahabat di Tengah Badai"</p>
+          <p class="text-amber-700 text-sm mb-4">"Anak-anak yang biasanya pasif mulai berani sharing perasaan setelah sesi VN. Ceritanya relatable banget." — Bu Niken, Guru BK</p>
+          <ul class="impact-details">
+            <li>📍 Jakarta Barat</li>
+            <li>🕒 4 sesi / 2 minggu</li>
+            <li>🤝 2 fasilitator volunteer</li>
+          </ul>
+        </div> -->
       </div>
     </div>
   </section>
@@ -279,44 +448,85 @@
         Ingin Berkontribusi?
       </h2>
       <p class="text-lg text-amber-700 text-center mb-16 max-w-2xl mx-auto">
-        Bergabunglah dengan tim kreatif kami. Komitmen fleksibel, dampak nyata.
+        Yuk ambil peran dalam menciptakan karya bermakna.
       </p>
 
-      <!-- Contribution Tracks -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <!-- Art Track -->
-        <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-100">
-          <div class="text-6xl mb-4">🎨</div>
-          <h3 class="text-2xl font-bold text-purple-900 mb-3">Track: Art</h3>
-          <p class="text-purple-800 mb-6 text-sm">Buat visual yang memukau untuk cerita kami.</p>
-          <div class="space-y-2 text-purple-800 text-sm mb-6">
-            <p><strong>Roles:</strong></p>
-            <p>• Character Designer</p>
-            <p>• Background Artist</p>
+      <!-- Contribution Tracks Accordion -->
+      <div class="contrib-accordion mb-16" id="contribAccordion">
+        <div class="contrib-item">
+          <button class="contrib-trigger" data-role="art">
+            <div>
+              <p class="text-lg font-bold text-amber-900">🎨 Track: Art</p>
+              <p class="text-xs text-amber-700">2-4 jam/minggu · 6 posisi tersedia</p>
+            </div>
+            <span class="contrib-chevron">+</span>
+          </button>
+          <div class="contrib-panel">
+            <p class="text-sm text-amber-800 mb-3">Buat elemen visual yang bikin cerita lebih hidup — dari karakter sampai background.</p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-xs font-semibold text-amber-700 mb-2">Peran:</p>
+                <ul class="text-sm text-amber-900 space-y-1">
+                  <li>• Character Designer</li>
+                  <li>• Background Artist</li>
+                  <li>• UI Illustration</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Story Track -->
-        <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl border border-green-100">
-          <div class="text-6xl mb-4">✍️</div>
-          <h3 class="text-2xl font-bold text-green-900 mb-3">Track: Story</h3>
-          <p class="text-green-800 mb-6 text-sm">Tulis cerita yang menginspirasi dan mendidik.</p>
-          <div class="space-y-2 text-green-800 text-sm mb-6">
-            <p><strong>Roles:</strong></p>
-            <p>• Script Writer</p>
-            <p>• Voice Over Artist</p>
+        <div class="contrib-item">
+          <button class="contrib-trigger" data-role="story">
+            <div>
+              <p class="text-lg font-bold text-amber-900">✍️ Track: Story</p>
+              <p class="text-xs text-amber-700">3-5 jam/minggu · 4 posisi tersedia</p>
+            </div>
+            <span class="contrib-chevron">+</span>
+          </button>
+          <div class="contrib-panel">
+            <p class="text-sm text-amber-800 mb-3">Riset, menulis, dan memberi suara pada karakter untuk cerita edukatif interaktif.</p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-xs font-semibold text-amber-700 mb-2">Peran:</p>
+                <ul class="text-sm text-amber-900 space-y-1">
+                  <li>• Script Writer</li>
+                  <li>• Narrative Designer</li>
+                  <li>• Voice Talent (ID)</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Tech Track -->
-        <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border border-indigo-100">
-          <div class="text-6xl mb-4">💻</div>
-          <h3 class="text-2xl font-bold text-indigo-900 mb-3">Track: Tech</h3>
-          <p class="text-indigo-800 mb-6 text-sm">Kembangkan platform dan fitur baru.</p>
-          <div class="space-y-2 text-indigo-800 text-sm mb-6">
-            <p><strong>Roles:</strong></p>
-            <p>• Programmer</p>
-            <p>• QA Tester</p>
+        <div class="contrib-item">
+          <button class="contrib-trigger" data-role="tech">
+            <div>
+              <p class="text-lg font-bold text-amber-900">💻 Track: Tech</p>
+              <p class="text-xs text-amber-700">4-6 jam/minggu · 3 posisi tersedia</p>
+            </div>
+            <span class="contrib-chevron">+</span>
+          </button>
+          <div class="contrib-panel">
+            <p class="text-sm text-amber-800 mb-3">Bangun fitur baru, optimalkan engine, dan jaga kualitas teknis rilis.</p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <p class="text-xs font-semibold text-amber-700 mb-2">Peran:</p>
+                <ul class="text-sm text-amber-900 space-y-1">
+                  <li>• Frontend Engineer</li>
+                  <li>• QA Tester</li>
+                  <li>• Tooling Support</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-xs font-semibold text-amber-700 mb-2">Syarat:</p>
+                <ul class="text-sm text-amber-900 space-y-1">
+                  <li>• Familiar dengan JS / Ren'Py</li>
+                  <li>• Pengalaman testing manual</li>
+                  <li>• Komitmen 3 sprint</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -329,7 +539,7 @@
             <div class="text-3xl">🎓</div>
             <div>
               <p class="font-semibold text-amber-900">Pengalaman Nyata</p>
-              <p class="text-sm text-amber-800">Bekerja pada proyek visual novel edukatif yang berdampak.</p>
+              <p class="text-sm text-amber-800">Terlibat langsung dalam proyek visual novel edukatif.</p>
             </div>
           </div>
           <div class="flex gap-4">
@@ -343,25 +553,39 @@
             <div class="text-3xl">📜</div>
             <div>
               <p class="font-semibold text-amber-900">Sertifikat & Rekomendasi</p>
-              <p class="text-sm text-amber-800">Surat rekomendasi untuk karir Anda.</p>
+              <p class="text-sm text-amber-800">Dapatkan pengakuan resmi untuk portofolio dan karirmu.</p>
             </div>
           </div>
           <div class="flex gap-4">
             <div class="text-3xl">🌐</div>
             <div>
               <p class="font-semibold text-amber-900">Networking</p>
-              <p class="text-sm text-amber-800">Terhubung dengan kreator dan profesional lainnya.</p>
+              <p class="text-sm text-amber-800">Terhubung dengan kreator dan tim kreatif dari berbagai bidang.</p>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Volunteer Testimonial
+      <div class="volunteer-testimonial mb-12">
+        <div class="text-4xl">🎤</div>
+        <div>
+          <p class="text-amber-900 font-semibold mb-1">"Jadi fasilitator VN bikin kelas BK jauh lebih hangat."</p>
+          <p class="text-amber-800 text-sm mb-2">"Anak-anak SMP yang biasanya cuek jadi antusias nunggu sesi berikutnya. Materi sulit pun bisa dibahas santai."</p>
+          <p class="text-xs text-amber-700">— Kak Lala · Fasilitator Empati · Bandung</p>
+        </div>
+      </div> -->
+
       <!-- CTA Button -->
-      <div class="text-center">
-        <a href="https://forms.gle/MBBZmvUkSYS6daQaA" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-amber-900 to-amber-800 text-white px-12 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition" data-umami-event="Volunteer join CTA">
-          🚀 Bergabung sebagai Kontributor
-        </a>
-        <p class="text-amber-700 text-sm mt-4">Isi form singkat kami dan kami akan menghubungi Anda segera!</p>
+      <div class="text-center space-y-4">
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+          <a href="https://forms.gle/MBBZmvUkSYS6daQaA" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-amber-900 to-amber-800 text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition" data-umami-event="Volunteer join CTA">
+            🚀 Bergabung sebagai Kontributor
+          </a>
+          <a href="mailto:hello@senara.id?subject=Tanya%20peran%20kontributor" class="inline-block border border-amber-300 text-amber-800 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-amber-50 transition" data-umami-event="Volunteer learn roles CTA">
+            📘 Pelajari peran lebih detail
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -375,29 +599,188 @@
   <script src="js/navbar.js"></script>
   <script src="js/footer.js"></script>
   <script src="data/stories.js"></script>
+  <script src="data/categories.js"></script>
   <!-- <script src="https://cdn.counter.dev/script.js" data-id="af8cab5a-f3b9-4717-8058-68e00f4f917c" data-utcoffset="7"></script> -->
   <script>
 
-    // Load featured stories
+    // Load and render categories on page load
+    function renderCategories() {
+      const container = document.getElementById('categoryCarousel');
+      container.innerHTML = '';
+      
+      allCategoriesData.forEach((category, index) => {
+        const link = document.createElement('a');
+        link.href = `kategori.html?cat=${category.slug}`;
+        link.className = 'category-chip hover:no-underline';
+        link.dataset.umamiEvent = `Home category ${category.title}`;
+        
+        link.innerHTML = `
+          <div class="chip-icon" style="background: ${category.color}">${category.icon}</div>
+          <span class="chip-label">${category.title}</span>
+        `;
+        
+        container.appendChild(link);
+      });
+    }
+
+    // Featured stories data with metadata
+    let featuredStoriesData = [];
+
+    // Create featured story card - compact with key metadata
+    function createFeaturedCard(story, isSpotlight = false) {
+      const emoji = getStoryEmoji(story.id);
+      const isComingSoon = story.status === 'coming-soon';
+      
+      const wrapper = document.createElement('div');
+      wrapper.className = 'featured-card-wrapper';
+      wrapper.dataset.storyId = story.id;
+      wrapper.dataset.filter = story.ageGroup || 'all';
+      
+      const card = document.createElement('div');
+      card.className = `featured-card-minimal ${isSpotlight ? 'is-spotlight' : ''}`;
+      
+      card.innerHTML = `
+        <div class="featured-thumbnail">${emoji}</div>
+        <div class="featured-card-minimal-content">
+          <h3 class="featured-card-minimal-title">${story.title}</h3>
+          ${story.description ? `<p class="featured-card-minimal-desc">${story.description}</p>` : ''}
+          
+          <div class="featured-card-minimal-meta">
+            <div class="featured-meta-item">
+              <span class="featured-meta-label">Level</span>
+              <span class="featured-meta-value">${story.difficulty || 'Beginner'}</span>
+            </div>
+            <div class="featured-meta-item">
+              <span class="featured-meta-label">Durasi</span>
+              <span class="featured-meta-value">⏱ ${story.duration || '30'} min</span>
+            </div>
+            <div class="featured-meta-item">
+              <span class="featured-meta-label">Usia</span>
+              <span class="featured-meta-value">${story.age || '10+'}</span>
+            </div>
+          </div>
+          
+          ${isComingSoon ? `
+            <button class="featured-play-btn is-disabled" disabled>
+              🔜 Segera Hadir
+            </button>
+          ` : `
+            <a href="story.html?id=${story.id}" class="featured-play-btn" data-umami-event="Featured play ${story.id}">
+              ▶ Mainkan
+            </a>
+          `}
+        </div>
+      `;
+      
+      wrapper.appendChild(card);
+      return wrapper;
+    }
+
+    // Load featured stories with filtering
     function loadFeaturedStories() {
       const featured = allStoriesData.filter(story => story.featured);
-      const container = document.getElementById('featuredContainer');
+      featuredStoriesData = featured;
+      
+      // Sort by creation date (newest first) and mark first as spotlight
+      const sorted = featured.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+      
+      renderFeaturedCards(sorted);
+    }
 
-      featured.forEach(story => {
-        const card = createStoryCard(story, { showDescription: true });
-        // Add series label to featured cards
-        const cardContent = card.querySelector('.p-6');
-        const titleDiv = cardContent.querySelector('div:first-child');
-        
-        const seriesLabel = document.createElement('div');
-        seriesLabel.className = 'flex items-center gap-2 mb-2';
-        seriesLabel.innerHTML = `
-          <span class="text-yellow-500">⭐</span>
-          <span class="text-sm font-semibold text-amber-700">${story.series}</span>
-        `;
-        cardContent.insertBefore(seriesLabel, titleDiv);
+    // Render featured cards
+    function renderFeaturedCards(stories) {
+      const container = document.getElementById('featuredContainer');
+      container.innerHTML = '';
+      
+      stories.forEach((story, index) => {
+        const isSpotlight = index === 0; // First card is spotlight
+        const card = createFeaturedCard(story, isSpotlight);
         container.appendChild(card);
       });
+    }
+
+    // Setup filter pills
+    function setupFeaturedFilters() {
+      const filterPills = document.querySelectorAll('.filter-pill');
+      
+      filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          // Update active state
+          filterPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          
+          const filterValue = pill.dataset.filter;
+          let filtered = featuredStoriesData;
+          
+          if (filterValue === 'newest') {
+            filtered = [...featuredStoriesData].sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+          } else if (filterValue === 'popular') {
+            filtered = [...featuredStoriesData].sort((a, b) => (b.plays || 0) - (a.plays || 0));
+          } else if (filterValue === 'kids') {
+            filtered = featuredStoriesData.filter(s => s.age && s.age.includes('5-8'));
+          } else if (filterValue === 'teen') {
+            filtered = featuredStoriesData.filter(s => s.age && s.age.includes('13+'));
+          }
+          
+          renderFeaturedCards(filtered);
+        });
+      });
+    }
+
+    // Interactive hero demo widget
+    function setupHeroDemo() {
+      const demoButtons = document.querySelectorAll('.hero-demo-btn');
+      const responseDiv = document.getElementById('heroResponse');
+      
+      const responses = {
+        1: '✨ Langkah berani! Mari lihat dampaknya…',
+        2: '🌟 Pilihan yang menarik! Kita lihat bagaimana ceritanya berubah…'
+      };
+
+      demoButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons
+          demoButtons.forEach(b => b.classList.remove('active'));
+          // Add active class to clicked button
+          btn.classList.add('active');
+          // Update response text
+          const choice = btn.dataset.choice;
+          responseDiv.textContent = responses[choice];
+          responseDiv.style.opacity = '0.7';
+          setTimeout(() => {
+            responseDiv.style.opacity = '1';
+          }, 100);
+        });
+      });
+    }
+
+    function setupContributionAccordion() {
+      const items = document.querySelectorAll('.contrib-item');
+      items.forEach(item => {
+        const trigger = item.querySelector('.contrib-trigger');
+        const panel = item.querySelector('.contrib-panel');
+
+        trigger.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          items.forEach(i => {
+            i.classList.remove('active');
+            const p = i.querySelector('.contrib-panel');
+            if (p) p.style.maxHeight = null;
+          });
+
+          if (!isActive) {
+            item.classList.add('active');
+            if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // Expand first item by default
+      if (items.length) {
+        items[0].classList.add('active');
+        const firstPanel = items[0].querySelector('.contrib-panel');
+        if (firstPanel) firstPanel.style.maxHeight = firstPanel.scrollHeight + 'px';
+      }
     }
 
     // Load featured stories on page load
@@ -405,6 +788,159 @@
       initNavbar('home');
       initFooter();
       loadFeaturedStories();
+      setupFeaturedFilters();
+      setupHeroDemo();
+      setupCategoryToggle();
+      setupComparisonToggle();
+      setupTestimonialSlider();
+      setupContributionAccordion();
+    });
+
+    function setupCategoryToggle() {
+      const grid = document.getElementById('learningCategoryGrid');
+      const toggleBtn = document.getElementById('categoryToggleBtn');
+
+      if (!grid || !toggleBtn) return;
+
+      toggleBtn.addEventListener('click', () => {
+        const isCollapsed = grid.classList.toggle('collapsed');
+        toggleBtn.dataset.state = isCollapsed ? 'collapsed' : 'expanded';
+        toggleBtn.textContent = isCollapsed ? 'Tampilkan lebih banyak' : 'Tampilkan lebih sedikit';
+      });
+    }
+
+    // Comparison toggle for Why VN section
+    function setupComparisonToggle() {
+      const toggleBtns = document.querySelectorAll('.comparison-toggle button');
+      const comparisons = document.querySelectorAll('.benefit-comparison');
+      const benefitCards = document.querySelectorAll('.benefit-card');
+
+      toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const mode = btn.dataset.mode;
+          
+          // Update active button
+          toggleBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          // Update comparison text visibility
+          comparisons.forEach(comp => {
+            if (comp.dataset.mode === mode) {
+              comp.classList.add('show');
+            } else {
+              comp.classList.remove('show');
+            }
+          });
+
+          // Update icons, stats, titles, and descriptions
+          benefitCards.forEach(card => {
+            const iconElements = card.querySelectorAll('[data-icon-vn]');
+            const statElement = card.querySelector('.benefit-stat');
+            const titleElement = card.querySelector('h3');
+            const descElement = card.querySelector('p[data-desc-vn]');
+
+            iconElements.forEach(el => {
+              const newIcon = el.dataset[`icon${mode === 'vn' ? 'Vn' : 'Pdf'}`];
+              el.textContent = newIcon;
+            });
+
+            if (statElement) {
+              const newStat = statElement.dataset[`stat${mode === 'vn' ? 'Vn' : 'Pdf'}`];
+              statElement.textContent = newStat;
+            }
+
+            if (titleElement) {
+              const newTitle = titleElement.dataset[`title${mode === 'vn' ? 'Vn' : 'Pdf'}`];
+              titleElement.textContent = newTitle;
+            }
+
+            if (descElement) {
+              const newDesc = descElement.dataset[`desc${mode === 'vn' ? 'Vn' : 'Pdf'}`];
+              descElement.textContent = newDesc;
+            }
+          });
+        });
+      });
+
+      // Show VN comparisons by default
+      comparisons.forEach(comp => {
+        if (comp.dataset.mode === 'vn') {
+          comp.classList.add('show');
+        }
+      });
+    }
+
+    // Testimonial carousel
+    const testimonials = [
+      {
+        quote: '"Anak-anak saya jadi berani berdiskusi setelah belajar lewat VN. Mereka merasa cerita itu tentang mereka."',
+        author: '— Guru SD di Bandung'
+      },
+      {
+        quote: '"Saya lebih fokus belajar coding karena VN membuat konsep jadi mudah dipahami."',
+        author: '— Siswa SMP di Jakarta'
+      },
+      {
+        quote: '"Sebagai fasilitator, VN membuat sesi lebih interaktif dan siswa lebih engaged."',
+        author: '— Mentor Komunitas Belajar'
+      }
+    ];
+
+    let currentTestimonialIndex = 0;
+
+    function setupTestimonialSlider() {
+      const dots = document.querySelectorAll('.testimonial-dot');
+      const content = document.getElementById('testimonialContent');
+
+      if (!dots.length || !content) return;
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const index = parseInt(dot.dataset.index);
+          currentTestimonialIndex = index;
+          updateTestimonial();
+        });
+      });
+
+      // Auto-rotate every 5 seconds
+      setInterval(() => {
+        currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+        updateTestimonial();
+      }, 5000);
+    }
+
+    function updateTestimonial() {
+      const content = document.getElementById('testimonialContent');
+      const dots = document.querySelectorAll('.testimonial-dot');
+      const testimonial = testimonials[currentTestimonialIndex];
+
+      if (content) {
+        content.innerHTML = `
+          <p class="testimonial-quote">${testimonial.quote}</p>
+          <p class="testimonial-author">${testimonial.author}</p>
+        `;
+      }
+
+      dots.forEach((dot, index) => {
+        if (index === currentTestimonialIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // Load featured stories on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbar('home');
+      initFooter();
+      renderCategories();
+      loadFeaturedStories();
+      setupFeaturedFilters();
+      setupHeroDemo();
+      setupCategoryToggle();
+      setupComparisonToggle();
+      setupTestimonialSlider();
     });
   </script>
 </body>

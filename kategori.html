@@ -6,6 +6,7 @@
   <title>Kategori — Senara</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="style/home.css" rel="stylesheet">
   <link href="style/story-cards.css" rel="stylesheet">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
   <style>
@@ -54,26 +55,27 @@
   <script src="js/navbar.js"></script>
   <script src="js/footer.js"></script>
   <script src="data/stories.js"></script>
+  <script src="data/categories.js"></script>
   <!-- <script src="https://cdn.counter.dev/script.js" data-id="af8cab5a-f3b9-4717-8058-68e00f4f917c" data-utcoffset="7"></script> -->
   <script>
 
     // Load stories by category
     function loadStoriesByCategory() {
       const categorySlug = getUrlParam('cat');
-      const categoryName = CONSTANTS.CATEGORY_SLUGS[categorySlug];
+      const category = getCategoryBySlug(categorySlug);
 
-      if (!categoryName) {
+      if (!category) {
         showError(document.getElementById('storiesContainer'), CONSTANTS.ERRORS.CATEGORY_NOT_FOUND);
         return;
       }
 
       // Update page title and description
-      document.getElementById('categoryTitle').textContent = categoryName;
-      document.getElementById('categoryDesc').textContent = `Jelajahi semua cerita dari kategori ${categoryName}.`;
-      document.title = `${categoryName} — Senara`;
+      document.getElementById('categoryTitle').textContent = category.title;
+      document.getElementById('categoryDesc').textContent = `Jelajahi semua cerita dari kategori ${category.title}.`;
+      document.title = `${category.title} — Senara`;
 
-      // Filter stories by category
-      const filtered = filterStoriesByCategory(allStoriesData, categoryName);
+      // Filter stories by category ID
+      const filtered = allStoriesData.filter(story => story.category === category.id);
 
       renderStories(filtered);
     }

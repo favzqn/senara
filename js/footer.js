@@ -1,36 +1,38 @@
 // Reusable Footer Component
 // Renders consistent footer across all pages
+// <div class="footer-column">
+//   <h4>Hubungi Kami</h4>
+//   <a href="mailto:hello@senara.id" data-umami-event="Footer email">hello@senara.id</a>
+//   <a href="https://wa.me/628123456789" target="_blank" rel="noopener" data-umami-event="Footer whatsapp">WhatsApp tim fasilitator</a>
+//   <a href="https://discord.gg" target="_blank" rel="noopener" data-umami-event="Footer discord">Discord komunitas</a>
+// </div>
 
 function getFooterHTML() {
   return `
-    <footer class="bg-amber-900 text-white py-12 px-4">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <h3 class="text-2xl font-bold mb-4">Senara</h3>
-            <p class="text-amber-100">Platform visual novel edukatif untuk segala usia.</p>
+    <footer class="senara-footer">
+      <div class="footer-main">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h3 class="text-2xl font-bold mb-3">Senara</h3>
+            <p>Belajar apapun lewat visual novel interaktif yang relevan untuk semua usia.</p>
           </div>
-          <div>
-            <h4 class="font-bold mb-4">Navigasi</h4>
-            <ul class="space-y-2 text-amber-100">
-              <li><a href="index.html" class="hover:text-white transition" data-umami-event="Footer Beranda">Beranda</a></li>
-              <li><a href="koleksi.html" class="hover:text-white transition" data-umami-event="Footer Koleksi">Koleksi</a></li>
-              <li><a href="learning-paths.html" class="hover:text-white transition" data-umami-event="Footer Learning Paths">Learning Paths</a></li>
-              <li><a href="about.html" class="hover:text-white transition" data-umami-event="Footer Tentang">Tentang</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 class="font-bold mb-4">Konten</h4>
-            <ul class="space-y-2 text-amber-100">
-              <li><a href="resources.html" class="hover:text-white transition" data-umami-event="Footer Resources">Resources</a></li>
-              <li><a href="faq.html" class="hover:text-white transition" data-umami-event="Footer FAQ">FAQ</a></li>
-              <li><a href="contact.html" class="hover:text-white transition" data-umami-event="Footer Kontak">Kontak</a></li>
-              <li><a href="privacy.html" class="hover:text-white transition" data-umami-event="Footer Privacy">Privacy</a></li>
-            </ul>
+
+          <div class="footer-column">
+            <h4>Navigasi</h4>
+            <a href="index.html" data-umami-event="Footer Beranda">Beranda</a>
+            <a href="koleksi.html" data-umami-event="Footer Koleksi">Koleksi</a>
+            <a href="learning-paths.html" data-umami-event="Footer Learning Paths">Learning Paths</a>
+            <a href="faq.html" data-umami-event="Footer FAQ">FAQ</a>
           </div>
         </div>
-        <div class="border-t border-amber-800 pt-8 text-center text-amber-100">
-          <p>&copy; 2024 Senara. Semua hak dilindungi.</p>
+
+        <div class="footer-lower">
+          <p>&copy; ${new Date().getFullYear()} Senara. Dibuat dengan ❤️ di Indonesia.</p>
+          <div class="footer-legal-links">
+            <a href="privacy.html" data-umami-event="Footer privacy">Privacy</a>
+            <a href="about.html" data-umami-event="Footer tentang">Tentang</a>
+            <a href="resources.html" data-umami-event="Footer resources">Resources</a>
+          </div>
         </div>
       </div>
     </footer>
@@ -38,11 +40,11 @@ function getFooterHTML() {
 }
 
 function initFooter() {
-  let footerContainer = document.querySelector('footer');
+  let footerContainer = document.querySelector("footer");
 
   if (!footerContainer) {
-    footerContainer = document.createElement('div');
-    footerContainer.id = 'footer-placeholder';
+    footerContainer = document.createElement("div");
+    footerContainer.id = "footer-placeholder";
     document.body.appendChild(footerContainer);
   }
 

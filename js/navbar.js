@@ -13,46 +13,38 @@ function getNavbarHTML(currentPage = '') {
     { href: 'index.html', label: 'Beranda', id: 'home', event: 'Navbar Beranda' },
     { href: 'koleksi.html', label: 'Koleksi', id: 'collection', event: 'Navbar Koleksi' },
     { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
-    // { href: 'resources.html', label: 'Resources', id: 'resources' },
-    // { href: 'about.html', label: 'Tentang', id: 'about' },
   ];
 
   const desktopMenu = navItems
     .map(item => {
-      const isActive = currentPage === item.id ? 'text-amber-700' : 'text-amber-900 hover:text-amber-700';
-      return `<a href="${item.href}" class="${isActive} transition font-medium" data-umami-event="${item.event}">${item.label}</a>`;
+      const isActive = currentPage === item.id ? 'is-active' : '';
+      return `<a href="${item.href}" class="nav-link ${isActive}" data-umami-event="${item.event}">${item.label}</a>`;
     })
     .join('');
 
   const mobileMenu = navItems
     .map(item => `
-      <a href="${item.href}" class="block text-amber-900 hover:text-amber-700 transition font-medium py-2" data-umami-event="Mobile ${item.event}">
+      <a href="${item.href}" class="nav-mobile-link" data-umami-event="Mobile ${item.event}">
         ${item.label}
       </a>
     `)
     .join('');
 
   return `
-    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-amber-100">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <div class="text-2xl font-bold text-amber-900">
-          <a href="index.html" class="hover:text-amber-700 transition" data-umami-event="Navbar Logo Home">Senara</a>
+    <nav class="senara-nav" id="senaraNav">
+      <div class="nav-inner">
+        <div class="nav-brand-block">
+          <a href="index.html" class="nav-logo" data-umami-event="Navbar Logo Home">Senara</a>
+          <p class="nav-tagline">Belajar apapun lewat visual novel interaktif</p>
         </div>
-        <div class="hidden md:flex gap-8">
+        <div class="nav-links">
           ${desktopMenu}
         </div>
-        <button id="mobileMenuBtn" class="md:hidden text-amber-900 hover:text-amber-700 transition" data-umami-event="Navbar mobile toggle">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
+        <button id="mobileMenuBtn" class="nav-mobile-toggle" aria-label="Menu" data-umami-event="Navbar mobile toggle">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-      </div>
-      
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-amber-100">
-        <div class="px-4 py-4 space-y-3">
-          ${mobileMenu}
-        </div>
       </div>
     </nav>
   `;
@@ -63,18 +55,44 @@ function getNavbarHTML(currentPage = '') {
  * @param {string} currentPage - Current page identifier
  */
 function initNavbar(currentPage = '') {
-  // Find navbar container or create one
-  let navContainer = document.querySelector('nav');
+  // Find navbar placeholder
+  let navPlaceholder = document.getElementById('navbar-placeholder');
   
-  if (!navContainer) {
-    // If no nav exists, create one at the top of body
-    navContainer = document.createElement('div');
-    navContainer.id = 'navbar-container';
-    document.body.insertBefore(navContainer, document.body.firstChild);
+  if (!navPlaceholder) {
+    // If no placeholder exists, create one at the top of body
+    navPlaceholder = document.createElement('div');
+    navPlaceholder.id = 'navbar-placeholder';
+    document.body.insertBefore(navPlaceholder, document.body.firstChild);
   }
   
   // Insert navbar HTML
-  navContainer.outerHTML = getNavbarHTML(currentPage);
+  navPlaceholder.innerHTML = getNavbarHTML(currentPage);
+  
+  // Create mobile menu overlay as direct child of body
+  let mobileMenu = document.getElementById('mobileMenu');
+  if (!mobileMenu) {
+    mobileMenu = document.createElement('div');
+    mobileMenu.id = 'mobileMenu';
+    mobileMenu.className = 'nav-mobile-menu';
+    
+    const navItems = [
+      { href: 'index.html', label: 'Beranda', id: 'home', event: 'Navbar Beranda' },
+      { href: 'koleksi.html', label: 'Koleksi', id: 'collection', event: 'Navbar Koleksi' },
+      { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
+    ];
+    
+    const mobileMenuHTML = navItems
+      .map(item => `<a href="${item.href}" class="nav-mobile-link" data-umami-event="Mobile ${item.event}">${item.label}</a>`)
+      .join('');
+    
+    mobileMenu.innerHTML = `
+      <div class="nav-mobile-content">
+        ${mobileMenuHTML}
+      </div>
+    `;
+    
+    document.body.appendChild(mobileMenu);
+  }
   
   // Setup mobile menu toggle
   setupMobileMenuToggle();
@@ -90,20 +108,20 @@ function setupMobileMenuToggle() {
   if (!mobileMenuBtn || !mobileMenu) return;
 
   mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('is-open');
+    mobileMenuBtn.classList.toggle('is-open');
   });
 
-  // Close menu when clicking on a link
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('is-open');
+      mobileMenuBtn.classList.remove('is-open');
     });
   });
 }
 
 // Auto-initialize on DOM ready if navbar element exists
 document.addEventListener('DOMContentLoaded', () => {
-  // Only auto-init if there's a nav element (for backward compatibility)
   if (document.querySelector('nav')) {
     setupMobileMenuToggle();
   }
