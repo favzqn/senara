@@ -27,6 +27,9 @@ function getFooterHTML() {
         </div>
 
         <div class="footer-lower">
+          <div class="footer-badge">
+            <span class="badge-text">🌱 Nonprofit • Gratis untuk semua</span>
+          </div>
           <p>&copy; ${new Date().getFullYear()} Senara. Dibuat dengan ❤️ di Indonesia.</p>
           <div class="footer-legal-links">
             <a href="privacy.html" data-umami-event="Footer privacy">Privacy</a>
