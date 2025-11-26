@@ -56,6 +56,71 @@ $_ready (() => {
 
 	monogatari.init ('#monogatari').then (() => {
 		// 3. Inside the init function:
+		
+		// Track story start
+		MonogatariAnalytics.trackStoryStart();
 
+		// Hook into Monogatari's action system to track events
+		setupAnalyticsHooks();
 	});
 });
+
+/**
+ * Setup hooks into Monogatari events for analytics tracking
+ */
+function setupAnalyticsHooks() {
+	// Track when scenes change
+	const originalDoAction = monogatari.doAction;
+	monogatari.doAction = function(action) {
+		// Track scene changes
+		if (typeof action === 'string' && action.includes('show scene')) {
+			const sceneMatch = action.match(/show scene\s+(\S+)/);
+			if (sceneMatch) {
+				MonogatariAnalytics.trackSceneChange(sceneMatch[1]);
+			}
+		}
+
+		// Track when story ends
+		if (action === 'end' || (typeof action === 'string' && action.includes('end'))) {
+			MonogatariAnalytics.trackStoryCompletion('story_end');
+		}
+
+		return originalDoAction.call(this, action);
+	};
+
+	// Track choices
+	monogatari.action('choice').register('default', (title, choices) => {
+		return new Promise((resolve) => {
+			const choiceElement = document.querySelector('[data-component="choice"]');
+			if (choiceElement) {
+				const buttons = choiceElement.querySelectorAll('button');
+				buttons.forEach((button) => {
+					button.addEventListener('click', () => {
+						const choiceText = button.textContent.trim();
+						MonogatariAnalytics.trackChoice(choiceText, button.dataset.choice || choiceText);
+						resolve();
+					});
+				});
+			}
+		});
+	});
+
+	// Monitor for save/load UI interactions
+	document.addEventListener('click', (e) => {
+		if (e.target.closest('[data-action="save"]')) {
+			const saveName = prompt('Enter save name:') || 'autosave';
+			MonogatariAnalytics.trackSave(saveName);
+		}
+		if (e.target.closest('[data-action="load"]')) {
+			MonogatariAnalytics.trackLoad('user_load');
+		}
+		if (e.target.closest('[data-action="restart"]')) {
+			MonogatariAnalytics.trackRestart();
+		}
+	});
+
+	// Track page unload (story abandonment)
+	window.addEventListener('beforeunload', () => {
+		MonogatariAnalytics.trackAbandon();
+	});
+}
