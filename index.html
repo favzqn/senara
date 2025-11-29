@@ -263,47 +263,67 @@ Tuntaskan cerita dan temukan wawasan baru. Kamu bisa melanjutkan ke cerita lain 
       <!-- Comparison Toggle -->
       <div class="comparison-toggle">
         <button class="active" data-mode="vn" data-umami-event="Why VN toggle visual novel">Visual Novel</button>
-        <button data-mode="pdf" data-umami-event="Why VN toggle PDF">vs Modul PDF</button>
+        <button data-mode="pdf" data-umami-event="Why VN toggle PDF">Modul PDF</button>
+        <button data-mode="socmed" data-umami-event="Why VN toggle socmed">Konten Sosmed</button>
+        <button data-mode="youtube" data-umami-event="Why VN toggle youtube">Video YouTube</button>
       </div>
 
       <!-- Benefit Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
         <div class="benefit-card" data-benefit="1">
-          <div class="benefit-icon" data-icon-vn="📖" data-icon-pdf="📄">📖</div>
-          <div class="benefit-stat" data-stat-vn="70% lebih tinggi" data-stat-pdf="Standar industri">70% lebih tinggi</div>
-          <h3 data-title-vn="Narasi yang Engaging" data-title-pdf="Konten Terstruktur">Narasi yang Engaging</h3>
-          <p data-desc-vn="Cerita yang relatable membuat pembelajaran bermakna dan mudah diingat." data-desc-pdf="Format standar dengan struktur jelas, mudah diakses dan dibagikan.">Cerita yang relatable membuat pembelajaran bermakna dan mudah diingat.</p>
+          <div class="benefit-icon" data-icon-vn="📖" data-icon-pdf="📄" data-icon-socmed="📱" data-icon-youtube="▶️">📖</div>
+          <div class="benefit-stat" data-stat-vn="70% lebih tinggi" data-stat-pdf="Standar industri" data-stat-socmed="15 detik perhatian" data-stat-youtube="Pasif, tapi visual">70% lebih tinggi</div>
+          <h3 data-title-vn="Narasi yang Engaging" data-title-pdf="Konten Terstruktur" data-title-socmed="Konten Bite-sized" data-title-youtube="Penjelasan Visual">Narasi yang Engaging</h3>
+          <p data-desc-vn="Cerita yang relatable membuat pembelajaran bermakna dan mudah diingat." data-desc-pdf="Format standar dengan struktur jelas, mudah diakses dan dibagikan." data-desc-socmed="Tips singkat yang mudah dicerna tapi cepat hilang dari feed." data-desc-youtube="Video menjelaskan konsep dengan visual, tapi jarang interaktif.">Cerita yang relatable membuat pembelajaran bermakna dan mudah diingat.</p>
           <div class="benefit-comparison" data-mode="vn">
             <strong>Visual Novel:</strong> Karakter berkembang, dialog natural, emosi tersampaikan lewat visual & suara.
           </div>
           <div class="benefit-comparison" data-mode="pdf">
             <strong>Modul PDF:</strong> Teks terstruktur, mudah dipindai, format standar industri.
           </div>
+          <div class="benefit-comparison" data-mode="socmed">
+            <strong>Konten Sosmed:</strong> Viral & engaging, tapi konteks terbatas, sulit untuk topik kompleks.
+          </div>
+          <div class="benefit-comparison" data-mode="youtube">
+            <strong>Video YouTube:</strong> Audiovisual menarik, tapi pembelajaran pasif, sulit diulang untuk skenario berbeda.
+          </div>
         </div>
         
         <div class="benefit-card" data-benefit="2">
-          <div class="benefit-icon" data-icon-vn="🎮" data-icon-pdf="📋">🎮</div>
-          <div class="benefit-stat" data-stat-vn="3x engagement" data-stat-pdf="Engagement rendah">3x engagement</div>
-          <h3 data-title-vn="Interaktif & Menyenangkan" data-title-pdf="Format Pasif">Interaktif & Menyenangkan</h3>
-          <p data-desc-vn="Pilihan bermakna membuat setiap playthrough unik dan personal." data-desc-pdf="Konten linear yang konsisten, cocok untuk pembelajaran terstruktur.">Pilihan bermakna membuat setiap playthrough unik dan personal.</p>
+          <div class="benefit-icon" data-icon-vn="🎮" data-icon-pdf="📋" data-icon-socmed="👍" data-icon-youtube="⏸️">🎮</div>
+          <div class="benefit-stat" data-stat-vn="3x engagement" data-stat-pdf="Engagement rendah" data-stat-socmed="Likes & comments" data-stat-youtube="Bisa di-pause">3x engagement</div>
+          <h3 data-title-vn="Interaktif & Menyenangkan" data-title-pdf="Format Pasif" data-title-socmed="Engagement Sosial" data-title-youtube="Kontrol Penonton">Interaktif & Menyenangkan</h3>
+          <p data-desc-vn="Pilihan bermakna membuat setiap playthrough unik dan personal." data-desc-pdf="Konten linear yang konsisten, cocok untuk pembelajaran terstruktur." data-desc-socmed="Interaksi terbatas pada likes, shares, dan comments." data-desc-youtube="Penonton bisa pause & rewind, tapi tidak bisa mempengaruhi alur cerita.">Pilihan bermakna membuat setiap playthrough unik dan personal.</p>
           <div class="benefit-comparison" data-mode="vn">
             <strong>Visual Novel:</strong> Pilihan mempengaruhi jalan cerita, quiz terintegrasi, feedback real-time.
           </div>
           <div class="benefit-comparison" data-mode="pdf">
             <strong>Modul PDF:</strong> Konten linear, interaksi minimal, feedback tertunda.
           </div>
+          <div class="benefit-comparison" data-mode="socmed">
+            <strong>Konten Sosmed:</strong> Interaksi hanya sebatas like, share, comment—tidak mengubah konten.
+          </div>
+          <div class="benefit-comparison" data-mode="youtube">
+            <strong>Video YouTube:</strong> Penonton pasif, bisa pause/rewind tapi tidak ada pilihan atau branching.
+          </div>
         </div>
         
         <div class="benefit-card" data-benefit="3">
-          <div class="benefit-icon" data-icon-vn="❤️" data-icon-pdf="💼">❤️</div>
-          <div class="benefit-stat" data-stat-vn="85% retensi" data-stat-pdf="45% retensi">85% retensi</div>
-          <h3 data-title-vn="Koneksi Emosional" data-title-pdf="Pembelajaran Formal">Koneksi Emosional</h3>
-          <p data-desc-vn="Pembelajaran yang menyentuh hati lebih efektif dan lasting." data-desc-pdf="Pendekatan berbasis konten, ideal untuk pelatihan profesional dan akademik.">Pembelajaran yang menyentuh hati lebih efektif dan lasting.</p>
+          <div class="benefit-icon" data-icon-vn="❤️" data-icon-pdf="💼" data-icon-socmed="⏰" data-icon-youtube="😮">❤️</div>
+          <div class="benefit-stat" data-stat-vn="85% retensi" data-stat-pdf="45% retensi" data-stat-socmed="Viral tapi lupa" data-stat-youtube="60% retensi">85% retensi</div>
+          <h3 data-title-vn="Koneksi Emosional" data-title-pdf="Pembelajaran Formal" data-title-socmed="Viral & Trending" data-title-youtube="Hiburan Edukatif">Koneksi Emosional</h3>
+          <p data-desc-vn="Pembelajaran yang menyentuh hati lebih efektif dan lasting." data-desc-pdf="Pendekatan berbasis konten, ideal untuk pelatihan profesional dan akademik." data-desc-socmed="Konten viral membuat buzz, tapi retensi jangka panjang rendah." data-desc-youtube="Kombinasi audio-visual menciptakan engagement, tapi sering hanya hiburan tanpa pembelajaran mendalam.">Pembelajaran yang menyentuh hati lebih efektif dan lasting.</p>
           <div class="benefit-comparison" data-mode="vn">
             <strong>Visual Novel:</strong> Karakter relatable, cerita personal, resonansi emosional mendalam.
           </div>
           <div class="benefit-comparison" data-mode="pdf">
             <strong>Modul PDF:</strong> Pendekatan formal, fokus pada konten, retensi lebih rendah.
+          </div>
+          <div class="benefit-comparison" data-mode="socmed">
+            <strong>Konten Sosmed:</strong> Mudah viral & shareable, tapi konteks hilang, retensi jangka panjang rendah.
+          </div>
+          <div class="benefit-comparison" data-mode="youtube">
+            <strong>Video YouTube:</strong> Kombinasi visual & audio engaging, tapi sering entertainment-focused, pembelajaran kurang mendalam.
           </div>
         </div>
       </div>
@@ -917,9 +937,21 @@ Tuntaskan cerita dan temukan wawasan baru. Kamu bisa melanjutkan ke cerita lain 
       const comparisons = document.querySelectorAll('.benefit-comparison');
       const benefitCards = document.querySelectorAll('.benefit-card');
 
+      // Helper to convert mode to data attribute suffix (vn -> Vn, pdf -> Pdf, socmed -> Socmed, youtube -> Youtube)
+      const getModeKey = (mode) => {
+        const map = {
+          'vn': 'Vn',
+          'pdf': 'Pdf',
+          'socmed': 'Socmed',
+          'youtube': 'Youtube'
+        };
+        return map[mode] || 'Vn';
+      };
+
       toggleBtns.forEach(btn => {
         btn.addEventListener('click', () => {
           const mode = btn.dataset.mode;
+          const modeKey = getModeKey(mode);
           
           // Update active button
           toggleBtns.forEach(b => b.classList.remove('active'));
@@ -936,29 +968,29 @@ Tuntaskan cerita dan temukan wawasan baru. Kamu bisa melanjutkan ke cerita lain 
 
           // Update icons, stats, titles, and descriptions
           benefitCards.forEach(card => {
-            const iconElements = card.querySelectorAll('[data-icon-vn]');
+            const iconElement = card.querySelector('.benefit-icon');
             const statElement = card.querySelector('.benefit-stat');
             const titleElement = card.querySelector('h3');
             const descElement = card.querySelector('p[data-desc-vn]');
 
-            iconElements.forEach(el => {
-              const newIcon = el.dataset[`icon${mode === 'vn' ? 'Vn' : 'Pdf'}`];
-              el.textContent = newIcon;
-            });
+            if (iconElement) {
+              const newIcon = iconElement.dataset[`icon${modeKey}`];
+              if (newIcon) iconElement.textContent = newIcon;
+            }
 
             if (statElement) {
-              const newStat = statElement.dataset[`stat${mode === 'vn' ? 'Vn' : 'Pdf'}`];
-              statElement.textContent = newStat;
+              const newStat = statElement.dataset[`stat${modeKey}`];
+              if (newStat) statElement.textContent = newStat;
             }
 
             if (titleElement) {
-              const newTitle = titleElement.dataset[`title${mode === 'vn' ? 'Vn' : 'Pdf'}`];
-              titleElement.textContent = newTitle;
+              const newTitle = titleElement.dataset[`title${modeKey}`];
+              if (newTitle) titleElement.textContent = newTitle;
             }
 
             if (descElement) {
-              const newDesc = descElement.dataset[`desc${mode === 'vn' ? 'Vn' : 'Pdf'}`];
-              descElement.textContent = newDesc;
+              const newDesc = descElement.dataset[`desc${modeKey}`];
+              if (newDesc) descElement.textContent = newDesc;
             }
           });
         });

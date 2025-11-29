@@ -310,6 +310,7 @@ function createStoryCard(story, options = {}) {
     <div class="thumbnail-placeholder h-48 w-full relative">
       ${emoji}
       ${isComingSoon ? `<div class="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"><span class="text-white font-bold text-lg">${statusBadge}</span></div>` : ''}
+      ${story.difficulty === 'Beginner' && !isComingSoon ? `<div class="absolute top-3 left-3 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">🌱 Mulai dari Sini</div>` : ''}
     </div>
     <div class="p-6 flex flex-col flex-1">
       <div class="flex items-start justify-between gap-2 mb-2">
