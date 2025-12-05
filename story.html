@@ -534,6 +534,19 @@
                 </div>
               </div>
 
+              <!-- Save Progress Tip (for long stories) -->
+              ${!isComingSoon && story.duration >= 20 ? `
+                <div class="save-tip-banner mb-4 sm:mb-6">
+                  <div class="flex items-start gap-3 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                    <span class="text-2xl flex-shrink-0">💾</span>
+                    <div>
+                      <p class="font-semibold text-amber-900 text-sm sm:text-base">💡 Kamu bisa simpan progress kapan saja!</p>
+                      <p class="text-amber-800 text-xs sm:text-sm mt-1">Klik <strong>☰ Menu</strong> di pojok kanan bawah → pilih <strong>"Save"</strong>. Untuk lanjutkan, pilih <strong>"Load"</strong>.</p>
+                    </div>
+                  </div>
+                </div>
+              ` : ''}
+
               <!-- Play Button -->
               ${isComingSoon ? `
                 <div class="relative">
