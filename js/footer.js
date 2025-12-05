@@ -21,8 +21,6 @@ function getFooterHTML() {
             <h4>Navigasi</h4>
             <a href="index.html" data-umami-event="Footer Beranda">Beranda</a>
             <a href="koleksi.html" data-umami-event="Footer Koleksi">Koleksi</a>
-            <a href="learning-paths.html" data-umami-event="Footer Learning Paths">Learning Paths</a>
-            <a href="faq.html" data-umami-event="Footer FAQ">FAQ</a>
           </div>
         </div>
 

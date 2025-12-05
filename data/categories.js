@@ -16,7 +16,7 @@ const allCategoriesData = [
   {
     id: 'mental-health-wellbeing',
     slug: 'mental-health-wellbeing',
-    title: 'Mental Health & Wellbeing',
+    title: 'Kesehatan Mental',
     description: 'Cerita untuk regulasi emosi, journaling reflektif, dan dukungan sebaya.',
     icon: '🧠',
     color: 'rgba(248, 223, 255, 0.25)',
@@ -25,7 +25,7 @@ const allCategoriesData = [
   {
     id: 'personal-growth-life-skills',
     slug: 'personal-growth-life-skills',
-    title: 'Personal Growth & Life Skills',
+    title: 'Pengembangan Diri',
     description: 'Latihan kebiasaan, manajemen waktu, dan membangun mindset berkembang.',
     icon: '🌱',
     color: 'rgba(219, 247, 220, 0.3)',
@@ -34,7 +34,7 @@ const allCategoriesData = [
   {
     id: 'health-fitness-lifestyle',
     slug: 'health-fitness-lifestyle',
-    title: 'Health, Fitness & Lifestyle',
+    title: 'Kesehatan & Gaya Hidup',
     description: 'Narasi seputar nutrisi mindful, olahraga ringan, dan ritual keseharian.',
     icon: '🏃‍♀️',
     color: 'rgba(187, 247, 208, 0.3)',
@@ -43,7 +43,7 @@ const allCategoriesData = [
   {
     id: 'career-tech-professional',
     slug: 'career-tech-professional',
-    title: 'Career, Tech & Professional Skills',
+    title: 'Karier & Teknologi',
     description: 'Simulasi karier digital, pemecahan masalah, dan komunikasi profesional.',
     icon: '💼',
     color: 'rgba(191, 219, 254, 0.25)',
@@ -52,7 +52,7 @@ const allCategoriesData = [
   {
     id: 'relationships',
     slug: 'relationships',
-    title: 'Relationships',
+    title: 'Hubungan & Relasi',
     description: 'Romansa sehat, dinamika keluarga, dan pertemanan yang suportif.',
     icon: '💞',
     color: 'rgba(254, 205, 211, 0.3)',
@@ -61,7 +61,7 @@ const allCategoriesData = [
   {
     id: 'youth-education',
     slug: 'youth-education',
-    title: 'Youth & Education',
+    title: 'Remaja & Pendidikan',
     description: 'Topik akademik ringan, study hacks, dan eksplorasi cita-cita remaja.',
     icon: '🎓',
     color: 'rgba(254, 240, 138, 0.3)',
@@ -70,7 +70,7 @@ const allCategoriesData = [
   {
     id: 'social-issues-humanity',
     slug: 'social-issues-humanity',
-    title: 'Social Issues & Humanity',
+    title: 'Isu Sosial & Kemanusiaan',
     description: 'Empati lintas budaya, aktivisme muda, dan kerja kemanusiaan.',
     icon: '🌍',
     color: 'rgba(191, 219, 254, 0.2)',
@@ -79,7 +79,7 @@ const allCategoriesData = [
   {
     id: 'money-financial-literacy',
     slug: 'money-financial-literacy',
-    title: 'Money & Financial Literacy',
+    title: 'Keuangan & Literasi',
     description: 'Keuangan harian, budgeting gamified, dan keputusan finansial awal.',
     icon: '💰',
     color: 'rgba(254, 226, 226, 0.3)',
@@ -88,7 +88,7 @@ const allCategoriesData = [
   {
     id: 'culture-history-folklore',
     slug: 'culture-history-folklore',
-    title: 'Culture, History & Folklore',
+    title: 'Budaya & Sejarah',
     description: 'Legenda lokal, tokoh sejarah, dan perjalanan lintas tradisi.',
     icon: '🏺',
     color: 'rgba(254, 215, 170, 0.25)',
@@ -97,7 +97,7 @@ const allCategoriesData = [
   {
     id: 'spirituality-self-reflection',
     slug: 'spirituality-self-reflection',
-    title: 'Spirituality & Self-Reflection',
+    title: 'Spiritualitas & Refleksi',
     description: 'Meditasi terpandu, filosofi praktis, dan ruang hening untuk jeda.',
     icon: '✨',
     color: 'rgba(221, 214, 254, 0.3)',
@@ -106,7 +106,7 @@ const allCategoriesData = [
   {
     id: 'digital-life-internet-safety',
     slug: 'digital-life-internet-safety',
-    title: 'Digital Life & Internet Safety',
+    title: 'Kehidupan Digital',
     description: 'Etika daring, jejak digital, dan kemampuan navigasi cyber wellness.',
     icon: '🔒',
     color: 'rgba(191, 219, 254, 0.25)',

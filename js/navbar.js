@@ -12,7 +12,9 @@ function getNavbarHTML(currentPage = '') {
   const navItems = [
     { href: 'index.html', label: 'Beranda', id: 'home', event: 'Navbar Beranda' },
     { href: 'koleksi.html', label: 'Koleksi', id: 'collection', event: 'Navbar Koleksi' },
-    { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
+    // { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
+    // { href: 'about.html', label: 'Tentang', id: 'about', event: 'Navbar Tentang' },
+    // { href: 'team.html', label: 'Tim', id: 'team', event: 'Navbar Tim' },
   ];
 
   const desktopMenu = navItems
@@ -79,6 +81,8 @@ function initNavbar(currentPage = '') {
       { href: 'index.html', label: 'Beranda', id: 'home', event: 'Navbar Beranda' },
       { href: 'koleksi.html', label: 'Koleksi', id: 'collection', event: 'Navbar Koleksi' },
       { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
+      { href: 'about.html', label: 'Tentang', id: 'about', event: 'Navbar Tentang' },
+      { href: 'team.html', label: 'Tim', id: 'team', event: 'Navbar Tim' },
     ];
     
     const mobileMenuHTML = navItems
