@@ -17,53 +17,710 @@
     
     body {
       background-color: #faf8f3;
+      min-height: 100vh;
+    }
+
+    /* Decorative background elements */
+    .page-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .page-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 115, 85, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .page-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(192, 133, 82, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* Header styling */
+    .page-header {
+      background: linear-gradient(135deg, #fffbf4 0%, #f9f2e6 55%, #f6eede 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b7355' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .page-header h1 {
+      background: linear-gradient(135deg, #8b7355 0%, #6d5844 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Scrollable sidebar */
+    .sidebar-container {
+      position: sticky;
+      top: 80px;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #d97706 #fef3c7;
+    }
+
+    .sidebar-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar-container::-webkit-scrollbar-track {
+      background: #fef3c7;
+      border-radius: 3px;
+    }
+
+    .sidebar-container::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #8b7355 0%, #6d5844 100%);
+      border-radius: 3px;
+    }
+
+    .sidebar-container::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #6d5844 0%, #5a4a38 100%);
+    }
+
+    /* Glassmorphism filter cards */
+    .filter-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(139, 115, 85, 0.12);
+      box-shadow: 0 4px 20px rgba(139, 115, 85, 0.06);
+      transition: all 0.3s ease;
+    }
+
+    .filter-card:hover {
+      box-shadow: 0 8px 30px rgba(139, 115, 85, 0.1);
+      border-color: rgba(139, 115, 85, 0.2);
+    }
+
+    .filter-card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      color: #8b7355;
+      margin-bottom: 0.75rem;
+      font-size: 0.875rem;
+    }
+
+    .filter-card-header span:first-child {
+      font-size: 1.1rem;
+    }
+
+    /* Category button styles */
+    .category-btn {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.1), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .category-btn:hover::before {
+      left: 100%;
+    }
+
+    .category-btn.active {
+      background: linear-gradient(135deg, #f5ede0 0%, #ebe3d5 100%);
+      border-color: #8b7355;
+      box-shadow: 0 2px 8px rgba(139, 115, 85, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+      transform: translateX(4px);
+    }
+
+    .category-btn:hover:not(.active) {
+      background: linear-gradient(135deg, #faf8f3 0%, #f5ede0 100%);
+      border-color: #c08552;
+      transform: translateX(2px);
+    }
+
+    .category-btn .category-count {
+      background: rgba(139, 115, 85, 0.1);
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .category-btn.active .category-count {
+      background: rgba(139, 115, 85, 0.15);
+    }
+
+    /* Checkbox styling */
+    .filter-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.625rem 0.75rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .filter-checkbox:hover {
+      background: linear-gradient(135deg, #faf8f3 0%, #f5ede0 100%);
+      border-color: rgba(139, 115, 85, 0.2);
+    }
+
+    .filter-checkbox input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #8b7355;
+      cursor: pointer;
+    }
+
+    .filter-checkbox input[type="checkbox"]:checked + span {
+      color: #6d5844;
+      font-weight: 500;
+    }
+
+    /* Difficulty indicators */
+    .difficulty-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
+    }
+
+    .difficulty-dot.beginner { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); }
+    .difficulty-dot.intermediate { background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%); }
+    .difficulty-dot.advanced { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); }
+
+    /* Results count badge */
+    .results-count {
+      background: linear-gradient(135deg, #f5ede0 0%, #ebe3d5 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .results-count::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(139, 115, 85, 0.15) 0%, transparent 70%);
+    }
+
+    .results-count-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #8b7355 0%, #6d5844 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Active filters pills */
+    .filter-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.625rem;
+      background: linear-gradient(135deg, #f5ede0 0%, #ebe3d5 100%);
+      border: 1px solid rgba(139, 115, 85, 0.25);
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #6d5844;
+      box-shadow: 0 1px 3px rgba(139, 115, 85, 0.1);
+    }
+
+    /* Mobile filter panel */
+    .filter-panel {
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+      overflow: hidden;
+    }
+
+    .filter-panel.collapsed {
+      max-height: 0;
+      opacity: 0;
+    }
+
+    .filter-panel.expanded {
+      max-height: 2000px;
+      opacity: 1;
+    }
+
+    @media (min-width: 1024px) {
+      .filter-panel {
+        max-height: none !important;
+        opacity: 1 !important;
+      }
+    }
+
+    /* Mobile filter toggle */
+    .filter-toggle-btn {
+      background: linear-gradient(135deg, #ffffff 0%, #faf8f3 100%);
+      border: 1px solid rgba(139, 115, 85, 0.2);
+      box-shadow: 0 4px 15px rgba(139, 115, 85, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .filter-toggle-btn:hover {
+      box-shadow: 0 6px 20px rgba(139, 115, 85, 0.12);
+      border-color: #c08552;
+    }
+
+    .filter-toggle-btn:active {
+      transform: scale(0.98);
+    }
+
+    .filter-badge {
+      background: linear-gradient(135deg, #8b7355 0%, #6d5844 100%);
+      box-shadow: 0 2px 8px rgba(139, 115, 85, 0.25);
+    }
+
+    /* Skeleton loading */
+    .skeleton {
+      background: linear-gradient(90deg, #f5ede0 25%, #ebe3d5 50%, #f5ede0 75%);
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s infinite;
+    }
+
+    @keyframes skeleton-loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .skeleton-card {
+      border-radius: 1.25rem;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(5px);
+      height: 480px;
+    }
+
+    /* Sort select styling */
+    .sort-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238b7355'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 1rem;
+      padding-right: 2.5rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(5px);
+      transition: all 0.2s ease;
+    }
+
+    .sort-select:hover {
+      border-color: #c08552;
+      box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
+    }
+
+    .sort-select:focus {
+      border-color: #8b7355;
+      box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.12);
+    }
+
+    /* Grid header */
+    .grid-header {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(139, 115, 85, 0.12);
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+    }
+
+    /* Keyboard shortcut hint */
+    .kbd {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 24px;
+      padding: 3px 8px;
+      font-size: 0.65rem;
+      font-family: 'SF Mono', Monaco, monospace;
+      font-weight: 500;
+      background: linear-gradient(180deg, #f5ede0 0%, #ebe3d5 100%);
+      border: 1px solid rgba(139, 115, 85, 0.3);
+      border-radius: 6px;
+      color: #6d5844;
+      box-shadow: 0 2px 0 rgba(139, 115, 85, 0.2), 0 3px 3px rgba(0,0,0,0.05);
+    }
+
+    /* Reset button */
+    .reset-btn {
+      background: linear-gradient(135deg, #8b7355 0%, #6d5844 100%);
+      border: none;
+      box-shadow: 0 4px 15px rgba(139, 115, 85, 0.2);
+      transition: all 0.3s ease;
+      color: white;
+    }
+
+    .reset-btn:hover {
+      background: linear-gradient(135deg, #6d5844 0%, #5a4a38 100%);
+      box-shadow: 0 6px 20px rgba(139, 115, 85, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .reset-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(139, 115, 85, 0.2);
+    }
+
+    /* Search input */
+    .search-input {
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid rgba(139, 115, 85, 0.1);
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+      transition: all 0.3s ease;
+    }
+
+    .search-input:hover {
+      border-color: rgba(139, 115, 85, 0.2);
+    }
+
+    .search-input:focus {
+      background: #ffffff;
+      border-color: #8b7355;
+      box-shadow: 0 0 0 4px rgba(139, 115, 85, 0.1), inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .search-input::placeholder {
+      color: #8b7355;
+      opacity: 0.5;
+    }
+
+    /* Empty state */
+    .empty-state {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 2px dashed rgba(139, 115, 85, 0.25);
+      border-radius: 1.5rem;
+    }
+
+    .empty-state-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #f5ede0 0%, #ebe3d5 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto 1rem;
+      box-shadow: 0 4px 15px rgba(139, 115, 85, 0.1);
+    }
+
+    /* Story cards enhancement */
+    .stories-grid .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(139, 115, 85, 0.1);
+    }
+
+    .stories-grid .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(139, 115, 85, 0.12);
+      border-color: rgba(139, 115, 85, 0.15);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .stories-grid > * {
+      animation: fadeInUp 0.4s ease forwards;
+    }
+
+    .stories-grid > *:nth-child(1) { animation-delay: 0.05s; }
+    .stories-grid > *:nth-child(2) { animation-delay: 0.1s; }
+    .stories-grid > *:nth-child(3) { animation-delay: 0.15s; }
+    .stories-grid > *:nth-child(4) { animation-delay: 0.2s; }
+    .stories-grid > *:nth-child(5) { animation-delay: 0.25s; }
+    .stories-grid > *:nth-child(6) { animation-delay: 0.3s; }
+
+    /* Subtle hover glow on interactive elements */
+    .glow-hover {
+      transition: all 0.3s ease;
+    }
+
+    .glow-hover:hover {
+      box-shadow: 0 0 20px rgba(139, 115, 85, 0.15);
+    }
+
+    /* Larger story cards */
+    .stories-grid .card-hover .thumbnail-placeholder {
+      height: 220px;
+    }
+
+    .stories-grid .card-hover .p-6 {
+      padding: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .stories-grid .card-hover .thumbnail-placeholder {
+        height: 240px;
+      }
     }
   </style>
 </head>
 <body class="bg-amber-50">
+  <!-- Decorative Background -->
+  <div class="page-bg"></div>
+
   <!-- Navigation (will be injected by navbar.js) -->
   <nav id="navbar-placeholder"></nav>
 
   <!-- Header -->
-  <section class="bg-gradient-to-r from-amber-100 to-amber-50 py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-      <h1 class="text-5xl md:text-6xl font-bold text-amber-900 mb-4">Koleksi Cerita</h1>
+  <section class="page-header py-16 px-4">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-4xl">📚</span>
+        <h1 class="text-4xl md:text-5xl font-bold">Koleksi Cerita</h1>
+      </div>
       <p class="text-lg text-amber-800 max-w-2xl">
-        Jelajahi koleksi visual novel edukatif kami. Pilih cerita yang sesuai dengan minat dan usia Anda.
+        Jelajahi berbagai cerita interaktif yang dirancang untuk membantumu belajar dengan cara yang menyenangkan
       </p>
-    </div>
-  </section>
-
-  <!-- Search & Filter -->
-  <section class="py-8 px-4 bg-white border-b border-amber-100">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row gap-4 items-center">
-        <div class="flex-1 w-full">
-          <input 
-            type="text" 
-            id="searchInput" 
-            placeholder="Cari cerita..." 
-            class="w-full px-4 py-3 rounded-lg border border-amber-200 bg-amber-50 text-amber-900 placeholder-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500"
-            data-umami-event="Collection search input"
-          >
-        </div>
-        <div class="flex gap-2 flex-wrap justify-center md:justify-end w-full md:w-auto">
-          <button class="filter-btn px-4 py-2 rounded-full bg-amber-100 text-amber-900 font-medium hover:bg-amber-200 transition" data-filter="all" data-umami-event="Collection filter Semua">Semua</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Emotional Skills" data-umami-event="Collection filter Emotional Skills">Emotional</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Coding" data-umami-event="Collection filter Coding">Coding</button>
-          <button class="filter-btn px-4 py-2 rounded-full bg-amber-50 text-amber-900 font-medium hover:bg-amber-100 transition" data-filter="Social Skills" data-umami-event="Collection filter Social Skills">Social</button>
-        </div>
+      <div class="flex flex-wrap gap-3 mt-6">
+        <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur rounded-full text-sm text-stone-700 border border-stone-200">
+          <span>✨</span> Cerita Interaktif
+        </span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur rounded-full text-sm text-stone-700 border border-stone-200">
+          <span>🎯</span> Quiz & Tantangan
+        </span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur rounded-full text-sm text-stone-700 border border-stone-200">
+          <span>🌟</span> Belajar Sambil Bermain
+        </span>
       </div>
     </div>
   </section>
 
-  <!-- Stories Grid -->
-  <section class="py-16 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div id="storiesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Stories will be loaded here by JavaScript -->
-        <div class="col-span-full text-center py-12">
-          <p class="text-amber-700">Loading stories...</p>
+  <!-- Main Content with Sidebar -->
+  <section class="py-12 px-4">
+    <div class="max-w-7xl mx-auto">
+      <!-- Mobile Filter Toggle -->
+      <button 
+        id="filterToggle" 
+        class="filter-toggle-btn lg:hidden w-full mb-6 px-5 py-4 rounded-2xl flex items-center justify-between"
+        data-umami-event="Collection mobile filter toggle"
+      >
+        <span class="font-semibold text-amber-900 flex items-center gap-3">
+          <span class="text-xl">🎛️</span> 
+          <span>Filter & Urutkan</span>
+        </span>
+        <span class="flex items-center gap-3">
+          <span id="activeFilterCount" class="hidden filter-badge px-2.5 py-1 text-white text-xs font-bold rounded-full">0</span>
+          <span id="filterToggleIcon" class="text-amber-600 transition-transform duration-300">▼</span>
+        </span>
+      </button>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1">
+          <div id="filterPanel" class="filter-panel expanded lg:expanded sidebar-container space-y-4 pr-2 pb-6">
+            <!-- Results Count -->
+            <div class="results-count rounded-2xl p-5 border border-stone-200 relative">
+              <p class="text-sm text-stone-600 mb-1">Ditemukan</p>
+              <p class="results-count-number" id="resultsCount">0</p>
+              <p class="text-sm text-stone-600">cerita</p>
+              <div id="activeFiltersDisplay" class="mt-3 flex flex-wrap gap-1.5 hidden"></div>
+            </div>
+
+            <!-- Search -->
+            <div class="filter-card rounded-2xl p-4">
+              <div class="filter-card-header">
+                <span>🔍</span>
+                <span>Cari Cerita</span>
+              </div>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="searchInput" 
+                  placeholder="Ketik judul atau topik..." 
+                  class="search-input w-full px-4 py-3 rounded-xl border-2 border-amber-100 text-amber-900 text-sm outline-none"
+                  data-umami-event="Collection search input"
+                >
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-amber-400 text-sm hidden lg:block">
+                  <span class="kbd">/</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="filter-card rounded-2xl p-4">
+              <div class="filter-card-header">
+                <span>📚</span>
+                <span>Kategori</span>
+              </div>
+              <div id="categoryFilters" class="space-y-1.5 max-h-72 overflow-y-auto pr-1">
+                <!-- Categories will be loaded dynamically -->
+                <div class="flex items-center justify-center py-4">
+                  <div class="w-5 h-5 border-2 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Difficulty Filter -->
+            <div class="filter-card rounded-2xl p-4">
+              <div class="filter-card-header">
+                <span>⭐</span>
+                <span>Tingkat Kesulitan</span>
+              </div>
+              <div class="space-y-1">
+                <label class="filter-checkbox text-sm">
+                  <input type="checkbox" class="difficulty-filter" value="Beginner">
+                  <span class="flex items-center gap-2">
+                    <span class="difficulty-dot beginner"></span>
+                    Pemula
+                  </span>
+                </label>
+                <label class="filter-checkbox text-sm">
+                  <input type="checkbox" class="difficulty-filter" value="Intermediate">
+                  <span class="flex items-center gap-2">
+                    <span class="difficulty-dot intermediate"></span>
+                    Menengah
+                  </span>
+                </label>
+                <label class="filter-checkbox text-sm">
+                  <input type="checkbox" class="difficulty-filter" value="Advanced">
+                  <span class="flex items-center gap-2">
+                    <span class="difficulty-dot advanced"></span>
+                    Lanjutan
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Duration Filter -->
+            <div class="filter-card rounded-2xl p-4">
+              <div class="filter-card-header">
+                <span>⏱️</span>
+                <span>Durasi</span>
+              </div>
+              <div class="space-y-1">
+                <label class="filter-checkbox text-sm">
+                  <input type="checkbox" class="duration-filter" value="short">
+                  <span>⚡ Singkat (&lt; 15 menit)</span>
+                </label>
+                <label class="filter-checkbox text-sm">
+                  <input type="checkbox" class="duration-filter" value="medium">
+                  <span>📖 Sedang (15-30 menit)</span>
+                </label>
+                <label class="filter-checkbox text-sm">
+                  <input type="checkbox" class="duration-filter" value="long">
+                  <span>📚 Panjang (&gt; 30 menit)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Status Filter -->
+            <div class="filter-card rounded-2xl p-4">
+              <div class="filter-card-header">
+                <span>📌</span>
+                <span>Status</span>
+              </div>
+              <div class="space-y-1">
+                <label class="filter-checkbox text-sm">
+                  <input type="checkbox" class="status-filter" value="published" checked>
+                  <span>✅ Tersedia</span>
+                </label>
+                <label class="filter-checkbox text-sm">
+                  <input type="checkbox" class="status-filter" value="coming-soon" checked>
+                  <span>🔜 Segera Hadir</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Clear Filters -->
+            <button id="clearFilters" class="reset-btn w-full px-4 py-3.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
+              <span>🔄</span> Reset Semua Filter
+            </button>
+
+            <!-- Keyboard Shortcuts Hint (Desktop only) -->
+            <div class="hidden lg:flex items-center justify-center gap-4 text-xs text-stone-500 pt-2">
+              <span class="flex items-center gap-1.5"><span class="kbd">/</span> Cari</span>
+              <span class="flex items-center gap-1.5"><span class="kbd">Esc</span> Reset</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Stories Grid -->
+        <div class="lg:col-span-3">
+          <!-- Sort & View Options -->
+          <div class="grid-header flex flex-wrap items-center justify-between gap-4 mb-6">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🎬</span>
+              <p class="text-sm text-stone-600">
+                Menampilkan <span id="resultsCountTop" class="font-bold text-stone-800">0</span> cerita
+              </p>
+            </div>
+            <div class="flex items-center gap-3">
+              <label class="text-sm text-stone-500 font-medium">Urutkan:</label>
+              <select 
+                id="sortSelect" 
+                class="sort-select px-4 py-2.5 rounded-xl border-2 border-stone-200 text-stone-700 text-sm cursor-pointer"
+                data-umami-event="Collection sort change"
+              >
+                <option value="default">Default</option>
+                <option value="newest">🆕 Terbaru</option>
+                <option value="oldest">📅 Terlama</option>
+                <option value="popular">🔥 Terpopuler</option>
+                <option value="rating">⭐ Rating Tertinggi</option>
+                <option value="duration-asc">⏱️ Durasi: Singkat → Panjang</option>
+                <option value="duration-desc">⏱️ Durasi: Panjang → Singkat</option>
+                <option value="title-asc">🔤 Judul: A → Z</option>
+                <option value="title-desc">🔤 Judul: Z → A</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="storiesContainer" class="stories-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Stories will be loaded here by JavaScript -->
+          </div>
         </div>
       </div>
     </div>
@@ -79,24 +736,351 @@
   <script src="js/navbar.js"></script>
   <script src="js/footer.js"></script>
   <script src="data/stories.js"></script>
-  <!-- <script src="https://cdn.counter.dev/script.js" data-id="af8cab5a-f3b9-4717-8058-68e00f4f917c" data-utcoffset="7"></script> -->
+  <script src="data/categories.js"></script>
   <script>
-
+    // Filter state
     let allStories = [];
-    let currentFilter = 'all';
+    let currentCategory = 'all';
     let currentSearch = '';
+    let selectedDifficulties = [];
+    let selectedDurations = [];
+    let selectedStatuses = ['published', 'coming-soon'];
+    let currentSort = 'default';
+    let isFilterPanelOpen = true;
 
-    // Load stories from hardcoded data
+    // Show loading skeleton
+    function showLoadingSkeleton() {
+      const container = document.getElementById('storiesContainer');
+      const skeletonHTML = Array(6).fill(0).map(() => `
+        <div class="skeleton-card bg-white border border-amber-100 h-96">
+          <div class="skeleton h-48 w-full"></div>
+          <div class="p-6 space-y-4">
+            <div class="skeleton h-6 w-3/4 rounded"></div>
+            <div class="skeleton h-4 w-full rounded"></div>
+            <div class="skeleton h-4 w-2/3 rounded"></div>
+            <div class="flex gap-2">
+              <div class="skeleton h-6 w-16 rounded-full"></div>
+              <div class="skeleton h-6 w-20 rounded-full"></div>
+            </div>
+            <div class="skeleton h-10 w-full rounded-lg mt-4"></div>
+          </div>
+        </div>
+      `).join('');
+      container.innerHTML = skeletonHTML;
+    }
+
+    // URL State Management
+    function getFiltersFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      
+      if (params.has('q')) currentSearch = params.get('q');
+      if (params.has('category')) currentCategory = params.get('category');
+      if (params.has('difficulty')) selectedDifficulties = params.get('difficulty').split(',').filter(Boolean);
+      if (params.has('duration')) selectedDurations = params.get('duration').split(',').filter(Boolean);
+      if (params.has('status')) selectedStatuses = params.get('status').split(',').filter(Boolean);
+      if (params.has('sort')) currentSort = params.get('sort');
+    }
+
+    function updateURL() {
+      const params = new URLSearchParams();
+      
+      if (currentSearch) params.set('q', currentSearch);
+      if (currentCategory !== 'all') params.set('category', currentCategory);
+      if (selectedDifficulties.length > 0) params.set('difficulty', selectedDifficulties.join(','));
+      if (selectedDurations.length > 0) params.set('duration', selectedDurations.join(','));
+      if (selectedStatuses.length > 0 && selectedStatuses.length < 2) params.set('status', selectedStatuses.join(','));
+      if (currentSort !== 'default') params.set('sort', currentSort);
+      
+      const newURL = params.toString() 
+        ? `${window.location.pathname}?${params.toString()}` 
+        : window.location.pathname;
+      
+      window.history.replaceState({}, '', newURL);
+    }
+
+    function restoreUIFromState() {
+      // Restore search
+      document.getElementById('searchInput').value = currentSearch;
+      
+      // Restore sort
+      document.getElementById('sortSelect').value = currentSort;
+      
+      // Restore difficulty checkboxes
+      document.querySelectorAll('.difficulty-filter').forEach(cb => {
+        cb.checked = selectedDifficulties.includes(cb.value);
+      });
+      
+      // Restore duration checkboxes
+      document.querySelectorAll('.duration-filter').forEach(cb => {
+        cb.checked = selectedDurations.includes(cb.value);
+      });
+      
+      // Restore status checkboxes
+      document.querySelectorAll('.status-filter').forEach(cb => {
+        cb.checked = selectedStatuses.includes(cb.value);
+      });
+    }
+
+    // Load categories from data/categories.js
+    function loadCategories() {
+      const container = document.getElementById('categoryFilters');
+      const categories = getAllCategories();
+      
+      // Build category buttons HTML
+      let html = `
+        <button 
+          class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/80 text-amber-900 font-medium text-sm border border-amber-200 flex items-center gap-2.5 active" 
+          data-category="all" 
+          data-umami-event="Collection filter Semua"
+        >
+          <span class="text-base">✨</span>
+          <span class="flex-1">Semua Cerita</span>
+          <span class="category-count text-amber-600" id="count-all"></span>
+        </button>
+      `;
+      
+      categories.forEach(cat => {
+        // Count stories in this category
+        html += `
+          <button 
+            class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/60 text-amber-900 font-medium text-sm border border-amber-100/80 flex items-center gap-2.5" 
+            data-category="${cat.id}" 
+            data-umami-event="Collection filter ${cat.title}"
+          >
+            <span class="text-base">${cat.icon}</span>
+            <span class="flex-1 truncate" title="${cat.title}">${cat.title}</span>
+            <span class="category-count text-amber-500" id="count-${cat.id}"></span>
+          </button>
+        `;
+      });
+      
+      container.innerHTML = html;
+      
+      // Add click handlers
+      container.querySelectorAll('.category-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update active state
+          container.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          // Update filter
+          currentCategory = btn.dataset.category;
+          filterAndRender();
+        });
+      });
+      
+      // Update counts
+      updateCategoryCounts();
+    }
+
+    // Update category counts
+    function updateCategoryCounts() {
+      const categories = getAllCategories();
+      
+      // Count all stories
+      const allCount = allStories.length;
+      const allCountEl = document.getElementById('count-all');
+      if (allCountEl) allCountEl.textContent = `(${allCount})`;
+      
+      // Count per category
+      categories.forEach(cat => {
+        const count = allStories.filter(story => 
+          story.category === cat.id || 
+          (story.tags && story.tags.some(tag => 
+            tag.toLowerCase().includes(cat.title.toLowerCase().split(' ')[0]) ||
+            cat.title.toLowerCase().includes(tag.toLowerCase())
+          ))
+        ).length;
+        
+        const countEl = document.getElementById(`count-${cat.id}`);
+        if (countEl) countEl.textContent = count > 0 ? `(${count})` : '';
+      });
+    }
+
+    // Load stories from data
     function loadStories() {
-      allStories = allStoriesData;
-      filterAndRender();
+      // Show skeleton while loading
+      showLoadingSkeleton();
+      
+      // Get filters from URL first
+      getFiltersFromURL();
+      
+      // Load all stories
+      allStories = [...allStoriesData];
+      
+      // Small delay to show skeleton (simulates loading)
+      setTimeout(() => {
+        loadCategories();
+        restoreUIFromState();
+        filterAndRender();
+      }, 300);
+    }
+
+    // Sort stories
+    function sortStories(stories, sortBy) {
+      const sorted = [...stories];
+      
+      switch (sortBy) {
+        case 'newest':
+          return sorted.sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate));
+        case 'oldest':
+          return sorted.sort((a, b) => new Date(a.releaseDate) - new Date(b.releaseDate));
+        case 'popular':
+          return sorted.sort((a, b) => (b.plays || 0) - (a.plays || 0));
+        case 'rating':
+          return sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+        case 'duration-asc':
+          return sorted.sort((a, b) => a.duration - b.duration);
+        case 'duration-desc':
+          return sorted.sort((a, b) => b.duration - a.duration);
+        case 'title-asc':
+          return sorted.sort((a, b) => a.title.localeCompare(b.title, 'id'));
+        case 'title-desc':
+          return sorted.sort((a, b) => b.title.localeCompare(a.title, 'id'));
+        default:
+          // Default: published first, then coming-soon
+          return sorted.sort((a, b) => {
+            if (a.status === 'published' && b.status !== 'published') return -1;
+            if (a.status !== 'published' && b.status === 'published') return 1;
+            return 0;
+          });
+      }
+    }
+
+    // Filter stories by category (supports both category field and tags)
+    function filterByCategory(stories, categoryId) {
+      if (categoryId === 'all') return stories;
+      
+      const category = getCategoryById(categoryId);
+      if (!category) return stories;
+      
+      return stories.filter(story => {
+        // Check direct category match
+        if (story.category === categoryId) return true;
+        
+        // Check tags for partial match
+        if (story.tags && story.tags.length > 0) {
+          const categoryWords = category.title.toLowerCase().split(/[\s&,]+/);
+          return story.tags.some(tag => {
+            const tagLower = tag.toLowerCase();
+            return categoryWords.some(word => 
+              word.length > 2 && (tagLower.includes(word) || word.includes(tagLower))
+            );
+          });
+        }
+        
+        return false;
+      });
     }
 
     // Filter and render stories
     function filterAndRender() {
-      let filtered = filterStoriesBySearch(allStories, currentSearch);
-      filtered = filterStoriesByCategory(filtered, currentFilter);
+      let filtered = [...allStories];
+      
+      // Apply search filter
+      if (currentSearch) {
+        const term = currentSearch.toLowerCase();
+        filtered = filtered.filter(story =>
+          story.title.toLowerCase().includes(term) ||
+          story.description.toLowerCase().includes(term) ||
+          (story.tags && story.tags.some(tag => tag.toLowerCase().includes(term))) ||
+          (story.scriptBy && story.scriptBy.toLowerCase().includes(term))
+        );
+      }
+      
+      // Apply category filter
+      filtered = filterByCategory(filtered, currentCategory);
+      
+      // Apply difficulty filter
+      if (selectedDifficulties.length > 0) {
+        filtered = filtered.filter(story => selectedDifficulties.includes(story.difficulty));
+      }
+      
+      // Apply duration filter
+      if (selectedDurations.length > 0) {
+        filtered = filtered.filter(story => {
+          const duration = parseInt(story.duration);
+          return selectedDurations.some(dur => {
+            if (dur === 'short') return duration < 15;
+            if (dur === 'medium') return duration >= 15 && duration <= 30;
+            if (dur === 'long') return duration > 30;
+            return false;
+          });
+        });
+      }
+      
+      // Apply status filter
+      if (selectedStatuses.length > 0 && selectedStatuses.length < 2) {
+        filtered = filtered.filter(story => selectedStatuses.includes(story.status));
+      }
+      
+      // Apply sorting
+      filtered = sortStories(filtered, currentSort);
+      
       renderStories(filtered);
+      updateResultsCount(filtered.length);
+      updateActiveFiltersDisplay();
+      updateActiveFilterCount();
+      updateURL();
+    }
+
+    // Update results count
+    function updateResultsCount(count) {
+      document.getElementById('resultsCount').textContent = count;
+      document.getElementById('resultsCountTop').textContent = count;
+    }
+
+    // Update active filter count for mobile badge
+    function updateActiveFilterCount() {
+      let count = 0;
+      if (currentSearch) count++;
+      if (currentCategory !== 'all') count++;
+      count += selectedDifficulties.length;
+      count += selectedDurations.length;
+      if (selectedStatuses.length > 0 && selectedStatuses.length < 2) count++;
+      if (currentSort !== 'default') count++;
+      
+      const badge = document.getElementById('activeFilterCount');
+      if (count > 0) {
+        badge.textContent = count;
+        badge.classList.remove('hidden');
+      } else {
+        badge.classList.add('hidden');
+      }
+    }
+
+    // Update active filters display
+    function updateActiveFiltersDisplay() {
+      const container = document.getElementById('activeFiltersDisplay');
+      const filters = [];
+      
+      if (currentSearch) {
+        filters.push(`🔍 "${currentSearch}"`);
+      }
+      if (currentCategory !== 'all') {
+        const cat = getCategoryById(currentCategory);
+        if (cat) filters.push(`${cat.icon} ${cat.title}`);
+      }
+      if (selectedDifficulties.length > 0) {
+        filters.push(`⭐ ${selectedDifficulties.join(', ')}`);
+      }
+      if (selectedDurations.length > 0) {
+        const durationLabels = {
+          'short': '< 15m',
+          'medium': '15-30m',
+          'long': '> 30m'
+        };
+        filters.push(`⏱️ ${selectedDurations.map(d => durationLabels[d]).join(', ')}`);
+      }
+      
+      if (filters.length > 0) {
+        container.innerHTML = filters.map(f => 
+          `<span class="filter-pill">${f}</span>`
+        ).join('');
+        container.classList.remove('hidden');
+      } else {
+        container.classList.add('hidden');
+      }
     }
 
     // Render story cards
@@ -104,7 +1088,18 @@
       const container = document.getElementById('storiesContainer');
       
       if (stories.length === 0) {
-        showError(container, CONSTANTS.ERRORS.NO_STORIES_FOUND);
+        container.innerHTML = `
+          <div class="col-span-full empty-state py-16 px-8">
+            <div class="empty-state-icon">🔍</div>
+            <h3 class="text-xl font-bold text-amber-900 mb-2 text-center">Tidak ada cerita ditemukan</h3>
+            <p class="text-amber-700 mb-6 text-center max-w-md mx-auto">Coba ubah filter atau kata kunci pencarian untuk menemukan cerita yang kamu cari</p>
+            <div class="flex justify-center">
+              <button onclick="document.getElementById('clearFilters').click()" class="reset-btn px-6 py-3 rounded-xl font-semibold text-sm flex items-center gap-2">
+                <span>🔄</span> Reset Semua Filter
+              </button>
+            </div>
+          </div>
+        `;
         return;
       }
 
@@ -118,32 +1113,127 @@
 
     // Setup event listeners
     function setupEventListeners() {
-      // Search input
-      document.getElementById('searchInput').addEventListener('input', (e) => {
-        currentSearch = e.target.value;
-        filterAndRender();
+      // Search input with debounce
+      const searchInput = document.getElementById('searchInput');
+      let searchTimeout;
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          currentSearch = e.target.value.trim();
+          filterAndRender();
+        }, 300);
       });
 
-      // Filter buttons
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          // Update active state
-          document.querySelectorAll('.filter-btn').forEach(b => {
-            b.classList.remove('bg-amber-100');
-            b.classList.add('bg-amber-50');
-          });
-          e.target.classList.remove('bg-amber-50');
-          e.target.classList.add('bg-amber-100');
-
-          // Update filter
-          currentFilter = e.target.dataset.filter;
+      // Difficulty filters
+      document.querySelectorAll('.difficulty-filter').forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+          if (e.target.checked) {
+            selectedDifficulties.push(e.target.value);
+          } else {
+            selectedDifficulties = selectedDifficulties.filter(d => d !== e.target.value);
+          }
           filterAndRender();
         });
       });
 
+      // Duration filters
+      document.querySelectorAll('.duration-filter').forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+          if (e.target.checked) {
+            selectedDurations.push(e.target.value);
+          } else {
+            selectedDurations = selectedDurations.filter(d => d !== e.target.value);
+          }
+          filterAndRender();
+        });
+      });
+
+      // Status filters
+      document.querySelectorAll('.status-filter').forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+          if (e.target.checked) {
+            selectedStatuses.push(e.target.value);
+          } else {
+            selectedStatuses = selectedStatuses.filter(s => s !== e.target.value);
+          }
+          filterAndRender();
+        });
+      });
+
+      // Clear filters button
+      document.getElementById('clearFilters').addEventListener('click', () => {
+        resetAllFilters();
+      });
+
+      // Sort select
+      document.getElementById('sortSelect').addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        filterAndRender();
+      });
+
+      // Mobile filter toggle
+      document.getElementById('filterToggle').addEventListener('click', () => {
+        const panel = document.getElementById('filterPanel');
+        const icon = document.getElementById('filterToggleIcon');
+        
+        isFilterPanelOpen = !isFilterPanelOpen;
+        
+        if (isFilterPanelOpen) {
+          panel.classList.remove('collapsed');
+          panel.classList.add('expanded');
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          panel.classList.remove('expanded');
+          panel.classList.add('collapsed');
+          icon.style.transform = 'rotate(-90deg)';
+        }
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        // Focus search on '/' key
+        if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+          e.preventDefault();
+          document.getElementById('searchInput').focus();
+        }
+        
+        // Reset filters on Escape
+        if (e.key === 'Escape') {
+          if (document.activeElement.tagName === 'INPUT') {
+            document.activeElement.blur();
+          } else {
+            resetAllFilters();
+          }
+        }
+      });
     }
 
-    // Load stories on page load
+    // Reset all filters
+    function resetAllFilters() {
+      // Reset state
+      currentSearch = '';
+      currentCategory = 'all';
+      selectedDifficulties = [];
+      selectedDurations = [];
+      selectedStatuses = ['published', 'coming-soon'];
+      currentSort = 'default';
+      
+      // Reset UI
+      document.getElementById('searchInput').value = '';
+      document.getElementById('sortSelect').value = 'default';
+      document.querySelectorAll('.difficulty-filter').forEach(cb => cb.checked = false);
+      document.querySelectorAll('.duration-filter').forEach(cb => cb.checked = false);
+      document.querySelectorAll('.status-filter').forEach(cb => cb.checked = true);
+      
+      // Reset category buttons
+      document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+      const allBtn = document.querySelector('[data-category="all"]');
+      if (allBtn) allBtn.classList.add('active');
+      
+      filterAndRender();
+    }
+
+    // Initialize on page load
     document.addEventListener('DOMContentLoaded', () => {
       initNavbar('collection');
       initFooter();
