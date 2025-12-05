@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story — Senara</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="style/home.css" rel="stylesheet">
   <link href="style/performance.css" rel="stylesheet">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
@@ -16,47 +16,347 @@
     
     body {
       background-color: #faf8f3;
+      min-height: 100vh;
     }
-    
-    .story-container {
-      background: linear-gradient(135deg, #faf8f3 0%, #f5f0e8 100%);
-      border-radius: 2rem;
-      border: 2px solid #e8dcc8;
+
+    /* Hero section with gradient overlay */
+    .story-hero {
+      position: relative;
+      min-height: auto;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      padding-top: 55px; /* Space for navbar */
     }
-    
-    .play-btn-large {
-      background-color: #8b7355;
+
+    @media (min-width: 768px) {
+      .story-hero {
+        min-height: 70vh;
+        padding-top: 50px;
+      }
+    }
+
+    .story-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, 
+        rgba(250, 248, 243, 0) 0%,
+        rgba(250, 248, 243, 0.3) 40%,
+        rgba(250, 248, 243, 0.9) 70%,
+        rgba(250, 248, 243, 1) 100%
+      );
+      z-index: 1;
+    }
+
+    .story-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center top;
+      filter: blur(0px);
+      transform: scale(1.02);
+    }
+
+    .story-hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    /* Floating emoji background */
+    .emoji-bg {
+      position: absolute;
+      font-size: 6rem;
+      opacity: 0.12;
+      z-index: 0;
+      filter: blur(2px);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @media (min-width: 768px) {
+      .emoji-bg {
+        font-size: 12rem;
+        opacity: 0.15;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    /* Play button */
+    .play-btn-hero {
+      background: linear-gradient(135deg, #8b7355 0%, #6d5844 100%);
       color: white;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 8px 30px rgba(139, 115, 85, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .play-btn-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .play-btn-hero:hover::before {
+      left: 100%;
+    }
+
+    .play-btn-hero:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(139, 115, 85, 0.4);
+    }
+
+    .play-btn-hero:active {
+      transform: translateY(-2px) scale(1);
+    }
+
+    /* Info cards */
+    .info-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(139, 115, 85, 0.1);
       transition: all 0.3s ease;
     }
+
+    .info-card h2 {
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 768px) {
+      .info-card h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .info-card:hover {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 10px 30px rgba(139, 115, 85, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Learning outcome items */
+    .outcome-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.625rem;
+      padding: 0.875rem;
+      background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(250,248,243,0.9) 100%);
+      border-radius: 0.75rem;
+      border: 1px solid rgba(139, 115, 85, 0.08);
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .outcome-item {
+        gap: 0.75rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    .outcome-item:hover {
+      background: white;
+      box-shadow: 0 4px 15px rgba(139, 115, 85, 0.08);
+      transform: translateX(4px);
+    }
+
+    .outcome-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #8b7355 0%, #6d5844 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: white;
+      font-size: 0.65rem;
+    }
+
+    @media (min-width: 768px) {
+      .outcome-check {
+        width: 24px;
+        height: 24px;
+        font-size: 0.75rem;
+      }
+    }
+
+    /* Feature badges */
+    .feature-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(139, 115, 85, 0.08);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #6d5844;
+      transition: all 0.2s ease;
+    }
+
+    .feature-badge:hover {
+      background: rgba(139, 115, 85, 0.12);
+    }
+
+    /* Stats grid */
+    .stat-item {
+      text-align: center;
+      padding: 0.875rem 0.5rem;
+      background: linear-gradient(135deg, #f5ede0 0%, #ebe3d5 100%);
+      border-radius: 0.75rem;
+      border: 1px solid rgba(139, 115, 85, 0.1);
+    }
+
+    @media (min-width: 768px) {
+      .stat-item {
+        padding: 1.25rem;
+        border-radius: 1rem;
+      }
+    }
+
+    .stat-value {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #8b7355;
+      line-height: 1;
+    }
+
+    @media (min-width: 768px) {
+      .stat-value {
+        font-size: 1.75rem;
+      }
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #8b7355;
+      margin-top: 0.25rem;
+      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .stat-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+      }
+    }
+
+    /* Share buttons */
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    @media (min-width: 768px) {
+      .share-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+      }
+    }
+
+    .share-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .share-btn.twitter { background: #1DA1F2; color: white; }
+    .share-btn.twitter:hover { box-shadow: 0 8px 20px rgba(29, 161, 242, 0.4); }
     
-    .play-btn-large:hover {
-      background-color: #6d5844;
-      transform: scale(1.05);
+    .share-btn.facebook { background: #4267B2; color: white; }
+    .share-btn.facebook:hover { box-shadow: 0 8px 20px rgba(66, 103, 178, 0.4); }
+    
+    .share-btn.whatsapp { background: #25D366; color: white; }
+    .share-btn.whatsapp:hover { box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); }
+    
+    .share-btn.copy { background: #8b7355; color: white; }
+    .share-btn.copy:hover { box-shadow: 0 8px 20px rgba(139, 115, 85, 0.4); }
+
+    /* Path context banner */
+    .path-banner {
+      background: linear-gradient(135deg, #f5ede0 0%, #ebe3d5 100%);
+      border-left: 4px solid #8b7355;
+    }
+
+    /* Collaboration badge */
+    .collab-badge {
+      background: linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(219, 39, 119, 0.1) 100%);
+      border: 1px solid rgba(236, 72, 153, 0.2);
+    }
+
+    /* Rating stars */
+    .star-filled { color: #f59e0b; }
+    .star-empty { color: #d1d5db; }
+
+    /* Difficulty badge colors */
+    .difficulty-beginner { background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); color: #166534; border-color: #86efac; }
+    .difficulty-intermediate { background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%); color: #854d0e; border-color: #fde047; }
+    .difficulty-advanced { background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); color: #991b1b; border-color: #fca5a5; }
+
+    /* Skeleton loading */
+    .skeleton {
+      background: linear-gradient(90deg, #f5ede0 25%, #ebe3d5 50%, #f5ede0 75%);
+      background-size: 200% 100%;
+      animation: skeleton-loading 1.5s infinite;
+      border-radius: 0.5rem;
+    }
+
+    @keyframes skeleton-loading {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* Coming soon overlay */
+    .coming-soon-overlay {
+      background: linear-gradient(135deg, rgba(139, 115, 85, 0.95) 0%, rgba(109, 88, 68, 0.95) 100%);
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
     }
   </style>
 </head>
-<body class="bg-amber-50">
+<body>
   <!-- Navigation (will be injected by navbar.js) -->
   <nav id="navbar-placeholder"></nav>
 
-  <!-- Story Player Container -->
-  <section class="min-h-screen flex items-center justify-center px-4 py-16">
-    <div class="max-w-4xl w-full">
-      <!-- Monogatari.js Player (will be initialized here) -->
-      <div id="monogatari-container" style="display: none;">
-        <!-- Monogatari.js will render here -->
-      </div>
-
-      <!-- Story Info & Placeholder (shown when Monogatari.js is not available) -->
-      <div id="storyContent" class="story-container p-8 md:p-12">
-        <!-- Story content will be loaded here -->
-        <div class="text-center py-12">
-          <p class="text-amber-700 mb-4">Loading story...</p>
-        </div>
+  <!-- Main Content -->
+  <main id="storyPage">
+    <!-- Loading State -->
+    <div id="loadingState" class="min-h-screen flex items-center justify-center">
+      <div class="text-center">
+        <div class="w-16 h-16 border-4 border-stone-200 border-t-stone-600 rounded-full animate-spin mx-auto mb-4"></div>
+        <p class="text-stone-600">Memuat cerita...</p>
       </div>
     </div>
-  </section>
+  </main>
 
   <!-- Footer (will be injected by footer.js) -->
   <footer id="footer-placeholder"></footer>
@@ -68,160 +368,354 @@
   <script src="js/navbar.js"></script>
   <script src="js/footer.js"></script>
   <script src="data/stories.js"></script>
+  <script src="data/categories.js"></script>
   <script src="data/learning-paths.js"></script>
   <script src="js/learning-paths-utils.js"></script>
-  <!-- <script src="https://cdn.counter.dev/script.js" data-id="af8cab5a-f3b9-4717-8058-68e00f4f917c" data-utcoffset="7"></script> -->
   <script>
-
-    // Load story data from hardcoded data
+    // Load story data
     function loadStory() {
       const storyId = getUrlParam('id');
       
       if (!storyId) {
-        document.getElementById('storyContent').innerHTML = `
-          <div class="text-center py-12">
-            <p class="text-red-600 mb-4">Story not found.</p>
-            <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 font-semibold">← Back to Collection</a>
-          </div>
-        `;
+        showError('Story not found');
         return;
       }
 
       try {
         const story = allStoriesData.find(s => s.id === storyId);
-
-        if (!story) {
-          throw new Error('Story not found');
-        }
-
+        if (!story) throw new Error('Story not found');
+        
+        // Update page title
+        document.title = `${story.title} — Senara`;
+        
         renderStory(story);
       } catch (error) {
         console.error('Error loading story:', error);
-        document.getElementById('storyContent').innerHTML = `
-          <div class="text-center py-12">
-            <p class="text-red-600 mb-4">Error loading story. Please try again.</p>
-            <a href="koleksi.html" class="text-amber-900 hover:text-amber-700 font-semibold">← Back to Collection</a>
-          </div>
-        `;
+        showError('Error loading story');
       }
     }
 
-    // Render story player
+    function showError(message) {
+      document.getElementById('storyPage').innerHTML = `
+        <div class="min-h-screen flex items-center justify-center px-4">
+          <div class="text-center max-w-md">
+            <div class="text-6xl mb-6">😕</div>
+            <h1 class="text-2xl font-bold text-stone-800 mb-4">${message}</h1>
+            <p class="text-stone-600 mb-8">Cerita yang kamu cari tidak ditemukan atau sudah tidak tersedia.</p>
+            <a href="koleksi.html" class="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 text-white rounded-xl font-semibold hover:bg-stone-700 transition">
+              ← Kembali ke Koleksi
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
     function renderStory(story) {
       const emoji = getStoryEmoji(story.id);
       const pathId = getUrlParam('path');
       const pathInfo = pathId ? getLearningPathById(pathId) : null;
       const pathStoryInfo = pathId ? getStoryInPath(pathId, story.id) : null;
+      const isComingSoon = story.status === 'coming-soon';
+      const category = story.category ? getCategoryById(story.category) : null;
 
-      let pathContextHTML = '';
+      // Generate rating stars
+      const rating = story.rating || 0;
+      const fullStars = Math.floor(rating);
+      const hasHalfStar = rating % 1 >= 0.5;
+      const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+      const starsHTML = '★'.repeat(fullStars) + (hasHalfStar ? '½' : '') + '☆'.repeat(emptyStars);
+
+      // Difficulty class
+      const difficultyClass = {
+        'Beginner': 'difficulty-beginner',
+        'Intermediate': 'difficulty-intermediate',
+        'Advanced': 'difficulty-advanced'
+      }[story.difficulty] || '';
+
+      // Path context
+      let pathBannerHTML = '';
       let backLink = 'koleksi.html';
-
       if (pathInfo && pathStoryInfo) {
         backLink = `path-detail.html?id=${pathId}`;
         const progress = getPathProgress(pathId);
-        pathContextHTML = `
-          <div class="mb-8 bg-amber-50 border-l-4 border-amber-900 p-4 rounded">
-            <p class="text-sm text-amber-700 mb-2">
-              <strong>📚 Part of Learning Path:</strong> ${pathInfo.title}
-            </p>
-            <p class="text-xs text-amber-600">
-              Chapter ${pathStoryInfo.order} of ${pathInfo.storyDetails.length} • Progress: ${progress.completed}/${progress.total}
-            </p>
+        pathBannerHTML = `
+          <div class="path-banner rounded-xl p-4 mb-6">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📚</span>
+              <div>
+                <p class="font-semibold text-stone-800">${pathInfo.title}</p>
+                <p class="text-sm text-stone-600">Chapter ${pathStoryInfo.order} of ${pathInfo.storyDetails.length} • Progress: ${progress.completed}/${progress.total}</p>
+              </div>
+            </div>
           </div>
         `;
       }
 
-      const content = `
-        <div class="text-center">
-          ${pathContextHTML}
-
-          <div class="text-8xl mb-6">${emoji}</div>
-          <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">${story.title}</h1>
-          
-          <div class="flex flex-wrap gap-2 justify-center mb-6">
-            ${story.tags.map(tag => `
-              <span class="bg-amber-100 text-amber-900 px-4 py-2 rounded-full font-semibold">
-                ${tag}
-              </span>
-            `).join('')}
-          </div>
-          
-          ${story.collaboration ? `
-            <div class="mb-6 inline-block bg-pink-50 border-2 border-pink-300 rounded-lg px-6 py-3">
-              <p class="text-pink-700 font-semibold text-lg">
-                🤝 ${story.collaboration}
-              </p>
-            </div>
-          ` : ''}
-          
-          <p class="text-amber-700 mb-8 text-lg">
-            Recommended age: ${story.age}
-          </p>
-          
-          <div class="bg-white rounded-xl p-8 mb-8 border border-amber-100">
-            <p class="text-amber-800 mb-6 text-lg leading-relaxed">
-              Siap untuk memulai petualangan? Klik tombol di bawah untuk memainkan visual novel ini.
-            </p>
-            <p class="text-amber-700 text-sm mb-6">
-              💡 Tip: Pilihan yang Anda buat akan mempengaruhi jalan cerita. Nikmati pengalaman unik Anda!
-            </p>
-          </div>
-          
-          <button id="playBtn" class="play-btn-large px-12 py-4 rounded-lg font-bold text-xl mb-6 w-full md:w-auto" data-umami-event="Story play button">
-            ▶ Mainkan Visual Novel
-          </button>
-          
-          <!-- Social Sharing -->
-          <div class="mt-8 pt-8 border-t border-amber-200">
-            <p class="text-amber-700 text-sm font-semibold mb-4">📢 Bagikan cerita ini:</p>
-            <div class="flex flex-wrap gap-3 justify-center">
-              <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" class="bg-blue-400 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-500 transition flex items-center gap-2" data-umami-event="Story share Twitter">
-                𝕏 Twitter
-              </a>
-              <a id="shareFacebook" href="#" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition flex items-center gap-2" data-umami-event="Story share Facebook">
-                f Facebook
-              </a>
-              <a id="shareWhatsApp" href="#" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-600 transition flex items-center gap-2" data-umami-event="Story share WhatsApp">
-                💬 WhatsApp
-              </a>
-              <button id="shareCopy" class="bg-amber-900 text-white px-4 py-2 rounded-lg font-semibold hover:bg-amber-800 transition flex items-center gap-2" data-umami-event="Story share Copy link">
-                🔗 Salin Link
-              </button>
-            </div>
-          </div>
-          
-          <div class="mt-12 pt-8 border-t border-amber-200">
-            <a href="${backLink}" class="text-amber-900 hover:text-amber-700 font-semibold" data-umami-event="Story back link">
-              ← Kembali ${pathId ? 'ke Path' : 'ke Koleksi'}
-            </a>
-          </div>
+      // Learning outcomes HTML
+      const outcomesHTML = story.learningOutcomes ? story.learningOutcomes.map((outcome, i) => `
+        <div class="outcome-item">
+          <div class="outcome-check">✓</div>
+          <span class="text-stone-700">${outcome}</span>
         </div>
+      `).join('') : '';
+
+      // Features HTML
+      const featuresHTML = `
+        ${story.voiceActed ? '<span class="feature-badge">🎙️ Voice Acted</span>' : ''}
+        ${story.hasChoices ? '<span class="feature-badge">🔀 Multiple Paths</span>' : ''}
+        ${story.hasAchievements ? '<span class="feature-badge">🏆 Achievements</span>' : ''}
       `;
 
-      document.getElementById('storyContent').innerHTML = content;
-      
-      // Add event listener to play button - redirect to Monogatari engine
-      document.getElementById('playBtn').addEventListener('click', () => {
-        // Store path info for completion tracking
-        if (pathId) {
-          sessionStorage.setItem('currentPathId', pathId);
-          sessionStorage.setItem('currentStoryId', story.id);
-        }
-        // Redirect to Monogatari engine with story parameter
-        window.location.href = CONFIG.paths.monogatari + `?story=${story.id}`;
-      });
+      const html = `
+        <!-- Hero Section -->
+        <section class="story-hero">
+          <!-- Background -->
+          <div class="story-hero-bg" style="background: linear-gradient(135deg, #e8dcc8 0%, #d4c4b0 100%);">
+            <div class="emoji-bg" style="top: 10%; left: 10%;">${emoji}</div>
+            <div class="emoji-bg" style="top: 30%; right: 5%; animation-delay: -2s;">${emoji}</div>
+          </div>
+
+          <!-- Content -->
+          <div class="story-hero-content pb-12 px-4">
+            <div class="max-w-4xl mx-auto">
+              ${pathBannerHTML}
+
+              <!-- Category & Difficulty -->
+              <div class="flex flex-wrap items-center gap-3 mb-4">
+                ${category ? `
+                  <span class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/80 backdrop-blur rounded-full text-sm font-medium text-stone-700">
+                    ${category.icon} ${category.title}
+                  </span>
+                ` : ''}
+                <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold border ${difficultyClass}">
+                  ${story.difficulty === 'Beginner' ? '🌱' : story.difficulty === 'Intermediate' ? '🌿' : '🌳'} ${story.difficulty}
+                </span>
+              </div>
+
+              <!-- Title -->
+              <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-stone-900 mb-3 sm:mb-4 leading-tight">
+                ${story.title}
+              </h1>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
+                ${story.tags.map(tag => `
+                  <span class="px-2 sm:px-3 py-0.5 sm:py-1 bg-white/70 backdrop-blur text-stone-700 rounded-full text-xs sm:text-sm font-medium border border-stone-200">
+                    ${tag}
+                  </span>
+                `).join('')}
+              </div>
+
+              <!-- Collaboration Badge -->
+              ${story.collaboration ? `
+                <div class="collab-badge inline-flex items-center gap-2 px-4 py-2 rounded-xl mb-6">
+                  <span class="text-xl">🤝</span>
+                  <span class="font-semibold text-pink-700">${story.collaboration}</span>
+                </div>
+              ` : ''}
+
+              <!-- Quick Stats -->
+              <div class="grid grid-cols-4 gap-2 sm:gap-3 mb-4 sm:mb-8">
+                <div class="stat-item">
+                  <div class="stat-value">⏱️ ${story.duration}</div>
+                  <div class="stat-label">Menit</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">📖 ${story.chapters}</div>
+                  <div class="stat-label">Chapter</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value">${story.age}</div>
+                  <div class="stat-label">Usia</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-value star-filled">${rating.toFixed(1)}</div>
+                  <div class="stat-label">Rating</div>
+                </div>
+              </div>
+
+              <!-- Play Button -->
+              ${isComingSoon ? `
+                <div class="relative">
+                  <button disabled class="play-btn-hero w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-xl opacity-60 cursor-not-allowed">
+                    🔜 Segera Hadir
+                  </button>
+                  <p class="mt-3 text-stone-600 text-sm">Cerita ini sedang dalam pengembangan</p>
+                </div>
+              ` : `
+                <button id="playBtn" class="play-btn-hero w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-xl" data-umami-event="Story play button">
+                  <span class="flex items-center justify-center gap-2 sm:gap-3">
+                    <span class="text-xl sm:text-2xl">▶</span>
+                    <span>Mainkan Sekarang</span>
+                  </span>
+                </button>
+              `}
+
+              <!-- Scroll indicator -->
+              <div class="scroll-indicator text-center mt-4 sm:mt-8 text-stone-400">
+                <span class="text-xl sm:text-2xl">↓</span>
+                <p class="text-xs sm:text-sm">Scroll untuk info lebih lanjut</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Details Section -->
+        <section class="py-10 sm:py-16 px-4 bg-gradient-to-b from-transparent to-stone-50/50">
+          <div class="max-w-4xl mx-auto">
+            <!-- Description Card -->
+            <div class="info-card rounded-xl sm:rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8">
+              <h2 class="text-2xl font-bold text-stone-800 mb-4 flex items-center gap-3">
+                <span>📖</span> Tentang Cerita Ini
+              </h2>
+              <p class="text-stone-700 text-lg leading-relaxed">
+                ${story.longDescription || story.description}
+              </p>
+              
+              <!-- Features -->
+              <div class="flex flex-wrap gap-2 mt-6 pt-6 border-t border-stone-100">
+                ${featuresHTML}
+              </div>
+            </div>
+
+            <!-- Learning Outcomes -->
+            ${story.learningOutcomes && story.learningOutcomes.length > 0 ? `
+              <div class="info-card rounded-xl sm:rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8">
+                <h2 class="text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3">
+                  <span>🎯</span> Yang Akan Kamu Pelajari
+                </h2>
+                <div class="grid gap-3">
+                  ${outcomesHTML}
+                </div>
+              </div>
+            ` : ''}
+
+            <!-- Credits -->
+            <div class="info-card rounded-xl sm:rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8">
+              <h2 class="text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3">
+                <span>✨</span> Credits
+              </h2>
+              <div class="grid sm:grid-cols-2 gap-4">
+                ${story.author ? `
+                  <div class="flex items-center gap-3 p-4 bg-stone-50 rounded-xl">
+                    <span class="text-2xl">👤</span>
+                    <div>
+                      <p class="text-xs text-stone-500 uppercase tracking-wide font-semibold">Author</p>
+                      <p class="font-semibold text-stone-800">${story.author}</p>
+                    </div>
+                  </div>
+                ` : ''}
+                ${story.scriptBy ? `
+                  <div class="flex items-center gap-3 p-4 bg-stone-50 rounded-xl">
+                    <span class="text-2xl">✍️</span>
+                    <div>
+                      <p class="text-xs text-stone-500 uppercase tracking-wide font-semibold">Script By</p>
+                      <p class="font-semibold text-stone-800">${story.scriptBy}</p>
+                    </div>
+                  </div>
+                ` : ''}
+                ${story.series ? `
+                  <div class="flex items-center gap-3 p-4 bg-stone-50 rounded-xl">
+                    <span class="text-2xl">📚</span>
+                    <div>
+                      <p class="text-xs text-stone-500 uppercase tracking-wide font-semibold">Series</p>
+                      <p class="font-semibold text-stone-800">${story.series}</p>
+                    </div>
+                  </div>
+                ` : ''}
+                ${story.releaseDate ? `
+                  <div class="flex items-center gap-3 p-4 bg-stone-50 rounded-xl">
+                    <span class="text-2xl">📅</span>
+                    <div>
+                      <p class="text-xs text-stone-500 uppercase tracking-wide font-semibold">Release Date</p>
+                      <p class="font-semibold text-stone-800">${formatDate(story.releaseDate)}</p>
+                    </div>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+
+            <!-- Share Section -->
+            <div class="info-card rounded-xl sm:rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8">
+              <h2 class="text-xl font-bold text-stone-800 mb-4 text-center">
+                Bagikan Cerita Ini
+              </h2>
+              <div class="flex justify-center gap-4">
+                <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" class="share-btn twitter" title="Share on Twitter" data-umami-event="Story share Twitter">
+                  𝕏
+                </a>
+                <a id="shareFacebook" href="#" target="_blank" rel="noopener noreferrer" class="share-btn facebook" title="Share on Facebook" data-umami-event="Story share Facebook">
+                  f
+                </a>
+                <a id="shareWhatsApp" href="#" target="_blank" rel="noopener noreferrer" class="share-btn whatsapp" title="Share on WhatsApp" data-umami-event="Story share WhatsApp">
+                  💬
+                </a>
+                <button id="shareCopy" class="share-btn copy" title="Copy Link" data-umami-event="Story share Copy link">
+                  🔗
+                </button>
+              </div>
+              <p id="copyFeedback" class="text-center text-sm text-green-600 mt-3 opacity-0 transition-opacity">Link berhasil disalin!</p>
+            </div>
+
+            <!-- Bottom CTA -->
+            ${!isComingSoon ? `
+              <div class="text-center py-6 sm:py-8">
+                <button id="playBtnBottom" class="play-btn-hero w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-xl mb-4 sm:mb-6" data-umami-event="Story play button bottom">
+                  <span class="flex items-center justify-center gap-2 sm:gap-3">
+                    <span class="text-xl sm:text-2xl">▶</span>
+                    <span>Mainkan Sekarang</span>
+                  </span>
+                </button>
+              </div>
+            ` : ''}
+
+            <!-- Back Link -->
+            <div class="text-center pt-8 border-t border-stone-200">
+              <a href="${backLink}" class="inline-flex items-center gap-2 text-stone-600 hover:text-stone-800 font-semibold transition" data-umami-event="Story back link">
+                ← Kembali ${pathId ? 'ke Learning Path' : 'ke Koleksi'}
+              </a>
+            </div>
+          </div>
+        </section>
+      `;
+
+      document.getElementById('storyPage').innerHTML = html;
+
+      // Setup event listeners
+      if (!isComingSoon) {
+        const playHandler = () => {
+          if (pathId) {
+            sessionStorage.setItem('currentPathId', pathId);
+            sessionStorage.setItem('currentStoryId', story.id);
+          }
+          window.location.href = CONFIG.paths.monogatari + `?story=${story.id}`;
+        };
+
+        document.getElementById('playBtn')?.addEventListener('click', playHandler);
+        document.getElementById('playBtnBottom')?.addEventListener('click', playHandler);
+      }
 
       // Setup social sharing
       setupSocialSharing(story);
+
+      // Custom copy feedback
+      document.getElementById('shareCopy')?.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          const feedback = document.getElementById('copyFeedback');
+          feedback.style.opacity = '1';
+          setTimeout(() => {
+            feedback.style.opacity = '0';
+          }, 2000);
+        });
+      });
     }
 
-    // Load story on page load
+    // Initialize
     document.addEventListener('DOMContentLoaded', () => {
       initNavbar('collection');
       initFooter();
       loadStory();
     });
   </script>
-
 </body>
 </html>

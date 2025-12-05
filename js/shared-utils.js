@@ -320,6 +320,7 @@ function createStoryCard(story, options = {}) {
       ${showDescription ? `<p class="text-amber-700 text-sm mb-3">${story.description}</p>` : ''}
       <div class="flex flex-wrap gap-2 mb-3">
         ${story.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+        ${story.category ? `<span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">📌 ${story.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</span>` : ''}
       </div>
       <div class="mt-auto flex flex-col gap-3">
         ${story.collaboration ? `
