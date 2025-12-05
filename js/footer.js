@@ -14,7 +14,7 @@ function getFooterHTML() {
         <div class="footer-grid">
           <div class="footer-brand">
             <h3 class="text-2xl font-bold mb-3">Senara</h3>
-            <p>Belajar apapun lewat visual novel interaktif yang relevan untuk semua usia.</p>
+            <p>Kami percaya cerita punya kekuatan untuk mengajarkan hal-hal penting dengan cara yang menyentuh hati.</p>
           </div>
 
           <div class="footer-column">

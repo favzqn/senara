@@ -37,7 +37,7 @@ function getNavbarHTML(currentPage = '') {
       <div class="nav-inner">
         <div class="nav-brand-block">
           <a href="index.html" class="nav-logo" data-umami-event="Navbar Logo Home">Senara</a>
-          <p class="nav-tagline">Belajar apapun lewat visual novel interaktif</p>
+          <p class="nav-tagline">Belajar lewat cerita yang menyentuh hati</p>
         </div>
         <div class="nav-links">
           ${desktopMenu}
