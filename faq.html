@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Senara</title>
+  <meta name="description" content="Pertanyaan yang sering ditanyakan tentang Senara. Temukan jawaban seputar penggunaan, privasi, dan cara mendukung platform.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="style/home.css" rel="stylesheet">
+  <link href="style/performance.css" rel="stylesheet">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
+  <style>
+    * {
+      font-family: 'Inter', 'Nunito', sans-serif;
+    }
+    
+    body {
+      background-color: #faf8f3;
+      min-height: 100vh;
+    }
+
+    /* Page background */
+    .page-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .page-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 115, 85, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .page-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(192, 133, 82, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* Header styling */
+    .faq-header {
+      background: linear-gradient(135deg, #fffbf4 0%, #f9f2e6 55%, #f6eede 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .faq-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b7355' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    /* FAQ Content */
+    .faq-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* FAQ Item */
+    .faq-item {
+      background: white;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: #fbbf24;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.1);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .faq-question h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin: 0;
+      padding-right: 1rem;
+    }
+
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: #d97706;
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item.is-open .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 1.5rem 1.25rem 1.5rem;
+      color: #92400e;
+      line-height: 1.7;
+    }
+
+    .faq-answer-inner p {
+      margin: 0;
+    }
+
+    .faq-answer-inner a {
+      color: #d97706;
+      text-decoration: underline;
+    }
+
+    .faq-answer-inner a:hover {
+      color: #b45309;
+    }
+
+    /* Category label */
+    .faq-category {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #92400e;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    .faq-category:first-of-type {
+      margin-top: 0;
+    }
+
+    /* Contact box */
+    .contact-box {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 2px solid #6ee7b7;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .contact-box h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-box p {
+      color: #047857;
+      margin-bottom: 1rem;
+    }
+
+    .contact-box a {
+      display: inline-block;
+      background: #059669;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .contact-box a:hover {
+      background: #047857;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .faq-content {
+        padding: 0 1rem;
+      }
+
+      .faq-question {
+        padding: 1rem 1.25rem;
+      }
+
+      .faq-answer-inner {
+        padding: 0 1.25rem 1rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background decoration -->
+  <div class="page-bg"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar-placeholder"></nav>
+
+  <!-- Header -->
+  <header class="faq-header py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+        Pertanyaan Umum
+      </h1>
+      <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+        Jawaban untuk pertanyaan yang sering ditanyakan tentang Senara.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-12 md:py-16 px-4">
+    <div class="faq-content">
+
+      <!-- General -->
+      <p class="faq-category">Umum</p>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Apa itu Senara?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Senara adalah platform cerita interaktif berbasis visual novel. Kamu bisa membaca cerita, membuat pilihan, dan setiap keputusan membentuk jalan ceritamu sendiri. Topik cerita kami mencakup kesehatan mental, literasi keuangan, dan berbagai life skills lainnya.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Untuk siapa platform ini dibuat?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Senara dibuat untuk siapa saja yang ingin belajar lewat cerita. Kami punya cerita untuk remaja (13+), dewasa muda, hingga umum. Guru dan fasilitator juga bisa menggunakan Senara sebagai bahan diskusi di kelas atau workshop.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Apakah Senara benar-benar gratis?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Ya, 100% gratis. Bukan freemium, bukan trial. Semua cerita bisa diakses tanpa bayar, sekarang dan selamanya. Senara adalah platform nonprofit yang dibangun oleh komunitas relawan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Apakah saya perlu membuat akun?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Tidak perlu. Kamu bisa langsung membaca cerita tanpa login atau registrasi. Progress ceritamu tersimpan otomatis di browser. Fitur akun mungkin akan hadir di masa depan untuk sinkronisasi antar perangkat.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <p class="faq-category">Konten</p>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Apakah Senara bisa menggantikan psikolog atau konselor?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Tidak. Senara bukan pengganti layanan kesehatan mental profesional. Cerita kami bertujuan untuk meningkatkan literasi dan kesadaran, bukan untuk mendiagnosis atau mengobati. Jika kamu membutuhkan bantuan profesional, silakan hubungi psikolog atau konselor terdekat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Siapa yang membuat cerita di Senara?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Cerita dibuat oleh tim relawan dari berbagai latar belakang: penulis, desainer, developer, dan ahli di bidang terkait. Setiap cerita melalui proses review untuk memastikan akurasi dan kualitas konten.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Apakah konten Senara aman untuk remaja?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Ya. Setiap cerita memiliki label usia yang jelas (misalnya 13+). Kami menghindari konten eksplisit dan selalu memberikan peringatan jika ada topik sensitif. Orang tua dan guru bisa melihat deskripsi cerita sebelum merekomendasikan ke anak atau siswa.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Usage -->
+      <p class="faq-category">Penggunaan</p>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Bagaimana guru bisa menggunakan Senara?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Guru bisa menggunakan cerita Senara sebagai bahan diskusi di kelas, tugas refleksi, atau ice breaker di awal sesi. Cukup pilih cerita yang sesuai dengan topik, lalu ajak siswa membaca bersama atau mandiri. Setelah selesai, diskusikan pilihan dan pelajaran dari cerita tersebut.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Bisa diakses di HP atau hanya di komputer?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Senara bisa diakses di semua perangkat: HP, tablet, atau komputer. Cukup buka browser dan kunjungi website kami. Tidak perlu download aplikasi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Privacy & Support -->
+      <p class="faq-category">Privasi & Dukungan</p>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Bagaimana privasi saya dilindungi?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Kami tidak mengumpulkan data pribadi. Tidak ada login, tidak ada tracking individual. Kami hanya menggunakan analytics anonim untuk memahami cerita mana yang paling diminati. Progress ceritamu tersimpan lokal di browsermu sendiri.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <h3>Bagaimana cara mendukung Senara?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Ada beberapa cara: (1) Bagikan Senara ke teman atau komunitas, (2) Donasi via <a href="https://trakteer.id/senara.id" target="_blank" rel="noopener">Trakteer</a> untuk mendukung operasional, atau (3) Bergabung sebagai kontributor jika kamu punya keahlian di bidang penulisan, desain, atau pengembangan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="contact-box">
+        <h3>Masih punya pertanyaan?</h3>
+        <p>Kami senang mendengar dari kamu.</p>
+        <a href="mailto:fauzan08fauzan@gmail.com" data-umami-event="FAQ contact email">Hubungi Kami</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-placeholder"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbar('faq');
+      initFooter();
+      setupFaqAccordion();
+    });
+
+    function setupFaqAccordion() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const answerInner = item.querySelector('.faq-answer-inner');
+        
+        question.addEventListener('click', () => {
+          const isOpen = item.classList.contains('is-open');
+          
+          // Close all other items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.classList.remove('is-open');
+              otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+              otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            }
+          });
+          
+          // Toggle current item
+          if (isOpen) {
+            item.classList.remove('is-open');
+            question.setAttribute('aria-expanded', 'false');
+            answer.style.maxHeight = null;
+          } else {
+            item.classList.add('is-open');
+            question.setAttribute('aria-expanded', 'true');
+            answer.style.maxHeight = answerInner.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // All items start closed
+    }
+  </script>
+</body>
+</html>

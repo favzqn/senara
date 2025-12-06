@@ -17,7 +17,7 @@ const CONFIG = {
   urls: {
     trakteer: 'https://trakteer.id/senara.id',
     volunteerForm: 'https://forms.gle/MBBZmvUkSYS6daQaA',
-    contact: 'mailto:hello@senara.id?subject=Partnership%20Inquiry',
+    contact: 'mailto:fauzan08fauzan@gmail.com?subject=Partnership%20Inquiry',
   },
 
   // Social sharing

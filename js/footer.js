@@ -2,7 +2,7 @@
 // Renders consistent footer across all pages
 // <div class="footer-column">
 //   <h4>Hubungi Kami</h4>
-//   <a href="mailto:hello@senara.id" data-umami-event="Footer email">hello@senara.id</a>
+//   <a href="mailto:fauzan08fauzan@gmail.com" data-umami-event="Footer email">fauzan08fauzan@gmail.com</a>
 //   <a href="https://wa.me/628123456789" target="_blank" rel="noopener" data-umami-event="Footer whatsapp">WhatsApp tim fasilitator</a>
 //   <a href="https://discord.gg" target="_blank" rel="noopener" data-umami-event="Footer discord">Discord komunitas</a>
 // </div>
@@ -21,6 +21,8 @@ function getFooterHTML() {
             <h4>Navigasi</h4>
             <a href="index.html" data-umami-event="Footer Beranda">Beranda</a>
             <a href="koleksi.html" data-umami-event="Footer Koleksi">Koleksi</a>
+            <a href="about.html" data-umami-event="Footer Tentang">Tentang</a>
+            <a href="faq.html" data-umami-event="Footer FAQ">FAQ</a>
           </div>
         </div>
 
