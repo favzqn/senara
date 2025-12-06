@@ -34,9 +34,9 @@ function getFooterHTML() {
           </div>
           <p>&copy; ${new Date().getFullYear()} Senara. Dibuat dengan ❤️ di Indonesia.</p>
           <div class="footer-legal-links">
+            <a href="keselamatan.html" data-umami-event="Footer keselamatan">Keselamatan</a>
             <a href="privacy.html" data-umami-event="Footer privacy">Privacy</a>
-            <a href="pendekatan.html" data-umami-event="Footer pendekatan">Pendekatan</a>
-            <a href="resources.html" data-umami-event="Footer resources">Resources</a>
+            <a href="donasi.html" data-umami-event="Footer donasi">Transparansi Donasi</a>
           </div>
         </div>
       </div>

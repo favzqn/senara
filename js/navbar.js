@@ -15,6 +15,7 @@ function getNavbarHTML(currentPage = '') {
     { href: 'about.html', label: 'Tentang', id: 'about', event: 'Navbar Tentang' },
     { href: 'pendekatan.html', label: 'Pendekatan', id: 'pendekatan', event: 'Navbar Pendekatan' },
     { href: 'faq.html', label: 'FAQ', id: 'faq', event: 'Navbar FAQ' },
+    { href: 'donasi.html', label: 'Donasi', id: 'donasi', event: 'Navbar Donasi' },
     // { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
     // { href: 'team.html', label: 'Tim', id: 'team', event: 'Navbar Tim' },
   ];
@@ -85,6 +86,7 @@ function initNavbar(currentPage = '') {
       { href: 'about.html', label: 'Tentang', id: 'about', event: 'Navbar Tentang' },
       { href: 'pendekatan.html', label: 'Pendekatan', id: 'pendekatan', event: 'Navbar Pendekatan' },
       { href: 'faq.html', label: 'FAQ', id: 'faq', event: 'Navbar FAQ' },
+      { href: 'donasi.html', label: 'Donasi', id: 'donasi', event: 'Navbar Donasi' },
       // { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
       // { href: 'team.html', label: 'Tim', id: 'team', event: 'Navbar Tim' },
     ];
