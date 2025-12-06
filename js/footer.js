@@ -38,6 +38,7 @@ function getFooterHTML() {
             <a href="keselamatan.html" data-umami-event="Footer Keselamatan">Keselamatan</a>
             <a href="kontak.html" data-umami-event="Footer Kontak">Hubungi Kami</a>
             <a href="contribute.html" data-umami-event="Footer Berkontribusi">Berkontribusi</a>
+            <a href="untuk-organisasi.html" data-umami-event="Footer Organisasi">Untuk Organisasi</a>
             <a href="donasi.html" data-umami-event="Footer Donasi">Dukung Senara</a>
           </div>
 
