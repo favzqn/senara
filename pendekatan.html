@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendekatan & Filosofi | Senara</title>
+  <meta name="description" content="Bagaimana Senara merancang cerita interaktif: prinsip pembelajaran, pedoman etika, dan proses kreatif di balik setiap cerita.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="style/home.css" rel="stylesheet">
+  <link href="style/performance.css" rel="stylesheet">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
+  <style>
+    * {
+      font-family: 'Inter', 'Nunito', sans-serif;
+    }
+    
+    body {
+      background-color: #faf8f3;
+      min-height: 100vh;
+    }
+
+    /* Page background */
+    .page-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .page-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 115, 85, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .page-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(192, 133, 82, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* Header styling */
+    .page-header {
+      background: linear-gradient(135deg, #fffbf4 0%, #f9f2e6 55%, #f6eede 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b7355' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    /* Content styling */
+    .page-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #78350f;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .content-section h2 .section-icon {
+      font-size: 1.25rem;
+    }
+
+    .content-section p {
+      color: #92400e;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .content-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section strong {
+      color: #78350f;
+    }
+
+    /* Principle cards */
+    .principle-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .principle-card {
+      background: white;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .principle-card:hover {
+      border-color: #fbbf24;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.12);
+    }
+
+    .principle-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .principle-card p {
+      font-size: 0.95rem;
+      color: #92400e;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Process steps */
+    .process-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .process-step {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .process-number {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+
+    .process-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin-bottom: 0.25rem;
+    }
+
+    .process-content p {
+      font-size: 0.9rem;
+      color: #92400e;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Ethics box */
+    .ethics-box {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-left: 4px solid #d97706;
+      border-radius: 0 12px 12px 0;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .ethics-box h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin-bottom: 0.75rem;
+    }
+
+    .ethics-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .ethics-list li {
+      color: #92400e;
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .ethics-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #059669;
+      font-weight: 600;
+    }
+
+    /* Research note */
+    .research-note {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .research-note p {
+      font-size: 0.9rem;
+      color: #166534;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .research-note strong {
+      color: #14532d;
+    }
+
+    /* Closing */
+    .closing-section {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .closing-section p {
+      color: #92400e;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .closing-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .page-content {
+        padding: 0 1rem;
+      }
+
+      .ethics-box {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .process-step {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background decoration -->
+  <div class="page-bg"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar-placeholder"></nav>
+
+  <!-- Header -->
+  <header class="page-header py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+        Pendekatan & Filosofi
+      </h1>
+      <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+        Bagaimana kami merancang cerita dan prinsip yang memandu setiap keputusan kreatif.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-12 md:py-16 px-4">
+    <div class="page-content">
+
+      <!-- Why Stories -->
+      <section class="content-section">
+        <h2><span class="section-icon">📖</span> Kenapa Cerita?</h2>
+        <p>
+          Manusia sudah bercerita sejak ribuan tahun lalu. Cerita adalah cara alami kita memahami dunia, berbagi pengalaman, dan menyampaikan nilai-nilai penting dari satu generasi ke generasi berikutnya.
+        </p>
+        <p>
+          Ketika kita membaca cerita, kita tidak hanya menerima informasi. Kita ikut merasakan apa yang dialami karakter, mempertimbangkan pilihan mereka, dan merefleksikan apa yang akan kita lakukan di situasi serupa.
+        </p>
+        <p>
+          <strong>Cerita interaktif menambah satu dimensi lagi:</strong> kamu tidak hanya mengikuti perjalanan karakter, tapi juga membuat keputusan yang membentuk jalan cerita. Ini menciptakan pengalaman yang lebih personal dan reflektif.
+        </p>
+
+        <div class="research-note">
+          <p>
+            <strong>Catatan:</strong> Kami tidak mengklaim bahwa cerita interaktif adalah metode terbaik untuk semua jenis pembelajaran. Setiap pendekatan punya kelebihan dan keterbatasan. Yang kami yakini adalah bahwa cerita bisa menjadi salah satu cara yang efektif untuk topik-topik yang melibatkan empati, refleksi diri, dan pengambilan keputusan.
+          </p>
+        </div>
+      </section>
+
+      <!-- Educational Principles -->
+      <section class="content-section">
+        <h2><span class="section-icon">🎯</span> Prinsip Pembelajaran</h2>
+        <p>
+          Setiap cerita di Senara dirancang dengan beberapa prinsip dasar:
+        </p>
+
+        <div class="principle-grid">
+          <div class="principle-card">
+            <h3>🪞 Refleksi, Bukan Instruksi</h3>
+            <p>Kami tidak memberitahu pembaca apa yang "benar" atau "salah". Cerita kami mengajak pembaca untuk merefleksikan pilihan dan konsekuensinya sendiri.</p>
+          </div>
+
+          <div class="principle-card">
+            <h3>🌍 Konteks yang Relevan</h3>
+            <p>Cerita berlatar situasi yang dekat dengan kehidupan sehari-hari pembaca Indonesia. Karakter menghadapi dilema yang nyata dan relatable.</p>
+          </div>
+
+          <div class="principle-card">
+            <h3>🔄 Belajar dari Konsekuensi</h3>
+            <p>Setiap pilihan punya konsekuensi. Pembaca bisa melihat dampak dari keputusan mereka tanpa harus mengalaminya di dunia nyata.</p>
+          </div>
+
+          <div class="principle-card">
+            <h3>💬 Ruang untuk Diskusi</h3>
+            <p>Cerita kami dirancang untuk memicu percakapan. Guru dan fasilitator bisa menggunakan cerita sebagai titik awal diskusi yang lebih dalam.</p>
+          </div>
+
+          <div class="principle-card">
+            <h3>🎭 Tidak Ada Ending "Sempurna"</h3>
+            <p>Kehidupan nyata jarang hitam-putih. Cerita kami menunjukkan bahwa setiap pilihan punya trade-off, dan tidak selalu ada jawaban yang "benar".</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Design Process -->
+      <section class="content-section">
+        <h2><span class="section-icon">✏️</span> Proses Pembuatan Cerita</h2>
+        <p>
+          Setiap cerita melalui beberapa tahap sebelum dipublikasikan:
+        </p>
+
+        <div class="process-list">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <div class="process-content">
+              <h3>Riset Topik</h3>
+              <p>Tim mempelajari topik dari berbagai sumber: literatur, wawancara dengan ahli, dan pengalaman nyata dari komunitas.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <div class="process-content">
+              <h3>Pengembangan Karakter & Skenario</h3>
+              <p>Karakter dibuat dengan latar belakang yang jelas. Skenario dirancang agar dilema terasa nyata dan pilihan tidak terlalu mudah ditebak.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <div class="process-content">
+              <h3>Penulisan & Branching</h3>
+              <p>Cerita ditulis dengan mempertimbangkan berbagai jalur. Setiap pilihan harus bermakna dan membawa konsekuensi yang masuk akal.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">4</div>
+            <div class="process-content">
+              <h3>Review Konten</h3>
+              <p>Cerita direview untuk akurasi informasi, sensitivitas budaya, dan potensi dampak negatif. Untuk topik sensitif, kami berkonsultasi dengan ahli terkait.</p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="process-number">5</div>
+            <div class="process-content">
+              <h3>Uji Coba & Iterasi</h3>
+              <p>Cerita diuji dengan pembaca awal untuk mendapatkan feedback. Revisi dilakukan berdasarkan masukan sebelum publikasi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ethical Guidelines -->
+      <section class="content-section">
+        <h2><span class="section-icon">⚖️</span> Pedoman Etika</h2>
+        <p>
+          Kami sadar bahwa cerita punya kekuatan untuk mempengaruhi cara orang berpikir. Karena itu, kami memegang beberapa pedoman etika:
+        </p>
+
+        <div class="ethics-box">
+          <h3>Komitmen Kami</h3>
+          <ul class="ethics-list">
+            <li>Tidak menyebarkan misinformasi atau menyederhanakan topik kompleks secara berlebihan</li>
+            <li>Memberikan peringatan untuk konten yang berpotensi triggering</li>
+            <li>Tidak menggantikan layanan profesional (psikolog, konselor, dll)</li>
+            <li>Menghormati keberagaman latar belakang dan pengalaman pembaca</li>
+            <li>Transparan tentang keterbatasan kami sebagai platform</li>
+            <li>Menerima kritik dan terus memperbaiki konten berdasarkan feedback</li>
+          </ul>
+        </div>
+
+        <p>
+          Untuk topik kesehatan mental, kami selalu menyertakan informasi tentang layanan bantuan profesional. Cerita kami bertujuan meningkatkan literasi dan kesadaran, bukan mendiagnosis atau memberikan terapi.
+        </p>
+      </section>
+
+      <!-- Why Interactive -->
+      <section class="content-section">
+        <h2><span class="section-icon">🎮</span> Kenapa Interaktif?</h2>
+        <p>
+          Format visual novel interaktif dipilih karena beberapa alasan:
+        </p>
+
+        <div class="principle-grid">
+          <div class="principle-card">
+            <h3>🧠 Keterlibatan Aktif</h3>
+            <p>Membuat pilihan memaksa pembaca untuk berpikir aktif, bukan hanya menerima informasi secara pasif.</p>
+          </div>
+
+          <div class="principle-card">
+            <h3>🔁 Eksplorasi Aman</h3>
+            <p>Pembaca bisa mencoba berbagai pilihan dan melihat konsekuensinya tanpa risiko nyata. Ini menciptakan ruang aman untuk bereksperimen.</p>
+          </div>
+
+          <div class="principle-card">
+            <h3>🎯 Personalisasi</h3>
+            <p>Setiap pembaca punya perjalanan yang sedikit berbeda. Ini membuat pengalaman terasa lebih personal dan relevan.</p>
+          </div>
+
+          <div class="principle-card">
+            <h3>💭 Refleksi Diri</h3>
+            <p>Ketika pembaca memilih, mereka secara tidak langsung bertanya pada diri sendiri: "Apa yang akan aku lakukan?" Ini memicu refleksi yang lebih dalam.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Limitations -->
+      <section class="content-section">
+        <h2><span class="section-icon">🔍</span> Keterbatasan</h2>
+        <p>
+          Kami percaya penting untuk jujur tentang apa yang bisa dan tidak bisa dilakukan oleh platform ini:
+        </p>
+        <p>
+          <strong>Senara bukan pengganti pendidikan formal.</strong> Cerita kami adalah pelengkap, bukan pengganti kurikulum atau materi pembelajaran terstruktur.
+        </p>
+        <p>
+          <strong>Senara bukan layanan kesehatan mental.</strong> Untuk masalah serius, pembaca harus mencari bantuan profesional.
+        </p>
+        <p>
+          <strong>Cerita kami tidak sempurna.</strong> Kami terus belajar dan memperbaiki. Jika ada konten yang kurang tepat atau berpotensi merugikan, kami sangat terbuka untuk menerima masukan.
+        </p>
+      </section>
+
+      <!-- Closing -->
+      <div class="closing-section">
+        <p>
+          Kami tidak mengklaim punya semua jawaban. Yang kami punya adalah keyakinan bahwa cerita bisa menjadi jembatan untuk memahami diri sendiri dan orang lain dengan lebih baik.
+        </p>
+        <p>
+          Terima kasih sudah membaca. Jika kamu punya pertanyaan atau masukan tentang pendekatan kami, jangan ragu untuk menghubungi kami.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-placeholder"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbar('pendekatan');
+      initFooter();
+    });
+  </script>
+</body>
+</html>
