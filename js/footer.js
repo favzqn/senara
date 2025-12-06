@@ -23,6 +23,8 @@ function getFooterHTML() {
             <a href="koleksi.html" data-umami-event="Footer Koleksi">Koleksi</a>
             <a href="about.html" data-umami-event="Footer Tentang">Tentang</a>
             <a href="faq.html" data-umami-event="Footer FAQ">FAQ</a>
+            <a href="contribute.html" data-umami-event="Footer Berkontribusi">Berkontribusi</a>
+            <a href="kontak.html" data-umami-event="Footer Kontak">Kontak</a>
           </div>
         </div>
 
