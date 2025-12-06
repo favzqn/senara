@@ -28,7 +28,7 @@ const allStoriesData = [
     id: "pahlawan-kesehatan-mental",
     title: "Pahlawan Kesehatan Mental",
     description: "Temani Vani menghadapi tantangan emosional dan temukan kekuatan sejati dalam menjaga kesehatan mental.",
-    longDescription: "Kesehatan mental bukan kelemahan—ini adalah kekuatan. Ikuti perjalanan Vani yang penuh tantangan emosional, dari kecemasan hingga depresi, sambil belajar mengenali tanda-tanda gangguan mental dan memahami kapan saatnya meminta bantuan. Melalui 5 chapter yang mendalam, Anda akan mengungkap mitos seputar kesehatan mental, mengurangi stigma, dan menguasai teknik relaksasi yang dapat langsung Anda praktikkan. Jadilah Pahlawan Kesehatan Mental—bukan hanya untuk diri sendiri, tetapi untuk orang-orang yang Anda cintai.",
+    longDescription: "Kesehatan mental bukan kelemahan. Ini adalah kekuatan. Ikuti perjalanan Vani yang penuh tantangan emosional, dari kecemasan hingga depresi, sambil belajar mengenali tanda-tanda gangguan mental dan memahami kapan saatnya meminta bantuan. Melalui 5 chapter yang mendalam, Anda akan mengungkap mitos seputar kesehatan mental, mengurangi stigma, dan menguasai teknik relaksasi yang dapat langsung Anda praktikkan. Jadilah Pahlawan Kesehatan Mental, bukan hanya untuk diri sendiri, tetapi untuk orang-orang yang Anda cintai.",
     category: "mental-health-wellbeing",
     tags: ["Mental Health", "Emotional Skills", "Self-Care"],
     age: "13+",
@@ -316,7 +316,7 @@ const allStoriesData = [
   {
     id: "panggung-cahaya-pesantren",
     title: "Panggung Cahaya Pesantren Digital",
-    description: "Pelajari tentang literasi media, cara mengenali dan melawan misinformasi, serta menghasilkan konten edukatif yang bertanggung jawab.",
+    description: "Pelajari tentang literasi media, cara mengenali dan melawan misinformasi, serta menghasilkan konten yang bertanggung jawab.",
     longDescription: "Pelajari tentang literasi media dan produksi konten yang bertanggung jawab. Anda akan memahami cara mengenali hoaks dan misinformasi, prinsip-prinsip fact-checking, dan bagaimana menghasilkan konten yang akurat dan menarik. Melalui workshop interaktif, Anda akan mengembangkan keterampilan komunikasi lintas komunitas dan tanggung jawab digital.",
     tags: ["Media Literacy", "Community", "Storytelling"],
     age: "13+",
@@ -328,7 +328,7 @@ const allStoriesData = [
     difficulty: "Beginner",
     learningOutcomes: [
       "Mengenali hoaks dan misinformasi",
-      "Menghasilkan konten edukatif",
+      "Menghasilkan konten bermakna",
       "Berkomunikasi lintas komunitas"
     ],
     author: "Senara Team",

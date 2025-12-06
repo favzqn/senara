@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Senara</title>
+  <meta name="description" content="Kenali lebih dalam tentang Senara: awal mula, misi nonprofit, dan visi kami untuk membuat pengalaman bermakna bisa diakses siapa saja.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="style/home.css" rel="stylesheet">
+  <link href="style/performance.css" rel="stylesheet">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
+  <style>
+    * {
+      font-family: 'Inter', 'Nunito', sans-serif;
+    }
+    
+    body {
+      background-color: #faf8f3;
+      min-height: 100vh;
+    }
+
+    /* Page background */
+    .page-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .page-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 115, 85, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .page-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(192, 133, 82, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* Header styling */
+    .about-header {
+      background: linear-gradient(135deg, #fffbf4 0%, #f9f2e6 55%, #f6eede 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b7355' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    /* Content styling */
+    .about-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .about-section {
+      margin-bottom: 4rem;
+    }
+
+    .about-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #78350f;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .about-section h2 .section-icon {
+      font-size: 1.25rem;
+    }
+
+    .about-section p {
+      color: #92400e;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-section strong {
+      color: #78350f;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-left: 4px solid #d97706;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .pull-quote p {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #78350f;
+      margin: 0;
+      font-style: italic;
+    }
+
+    /* Values grid */
+    .values-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .value-item {
+      background: white;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: all 0.2s ease;
+    }
+
+    .value-item:hover {
+      border-color: #fbbf24;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+    }
+
+    .value-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .value-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin-bottom: 0.25rem;
+    }
+
+    .value-content p {
+      font-size: 0.9rem;
+      color: #92400e;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Problem cards */
+    .problem-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .problem-item {
+      background: white;
+      border: 1px solid #fed7aa;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .problem-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #c2410c;
+      margin-bottom: 0.5rem;
+    }
+
+    .problem-item p {
+      font-size: 0.9rem;
+      color: #9a3412;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Mission box */
+    .mission-box {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 2px solid #6ee7b7;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .mission-box p.mission-statement {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 1.5rem;
+    }
+
+    .mission-points {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .mission-point {
+      background: white;
+      border-radius: 8px;
+      padding: 0.75rem 1.25rem;
+      font-size: 0.9rem;
+      color: #047857;
+      font-weight: 500;
+    }
+
+    /* Closing section */
+    .closing-section {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .closing-section p {
+      color: #92400e;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .closing-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .closing-emoji {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .about-content {
+        padding: 0 1rem;
+      }
+
+      .pull-quote {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .mission-points {
+        flex-direction: column;
+      }
+
+      .value-item {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background decoration -->
+  <div class="page-bg"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar-placeholder"></nav>
+
+  <!-- Header -->
+  <header class="about-header py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+        Cerita di Balik Senara
+      </h1>
+      <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+        Bagaimana sebuah ide sederhana tumbuh menjadi platform cerita interaktif.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-12 md:py-16 px-4">
+    <div class="about-content">
+
+      <!-- Origin Story -->
+      <section class="about-section">
+        <h2><span class="section-icon">🌱</span> Awal Mula</h2>
+        <p>
+          Senara dimulai dari sebuah frustrasi.
+        </p>
+        <p>
+          Kami sering menemukan materi yang isinya bagus, tapi penyampaiannya membuat orang kehilangan minat sebelum selesai membaca. Di sisi lain, orang rela menghabiskan waktu berjam-jam untuk cerita: novel, webtoon, drama.
+        </p>
+        <p>
+          Dari situ muncul pertanyaan: <strong>bagaimana kalau pelajaran hidup dikemas dalam cerita yang seru?</strong> Bukan ceramah, bukan modul, tapi pengalaman yang bisa dirasakan.
+        </p>
+        <p>
+          Cerita pertama kami dibuat sebagai eksperimen kecil. Ternyata, orang-orang merespons dengan cara yang tidak kami duga. Mereka berdiskusi, berbagi, dan bilang "ini relate banget."
+        </p>
+      </section>
+
+      <!-- Problem Statement -->
+      <section class="about-section">
+        <h2><span class="section-icon">🔍</span> Masalah yang Kami Coba Jawab</h2>
+        
+        <div class="problem-list">
+          <div class="problem-item">
+            <h3>Topik penting sering disampaikan dengan cara yang membosankan</h3>
+            <p>Kesehatan mental, literasi keuangan, berpikir kritis. Semuanya penting, tapi seringkali dikemas dalam format yang sulit dicerna.</p>
+          </div>
+          
+          <div class="problem-item">
+            <h3>Ada gap antara "tahu" dan "paham"</h3>
+            <p>Banyak orang tahu teorinya, tapi tidak bisa menerapkan karena tidak pernah "merasakan" situasinya. Cerita interaktif membantu menjembatani gap ini.</p>
+          </div>
+          
+          <div class="problem-item">
+            <h3>Konten berkualitas sering tidak gratis</h3>
+            <p>Kursus online, workshop, buku. Semuanya butuh biaya. Kami percaya akses ke pengalaman yang bermakna seharusnya tidak dibatasi kemampuan finansial.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission -->
+      <section class="about-section">
+        <h2><span class="section-icon">🎯</span> Misi Kami</h2>
+        
+        <div class="mission-box">
+          <p class="mission-statement">
+            Membuat pengalaman bermakna bisa diakses siapa saja, tanpa biaya, tanpa syarat.
+          </p>
+          <div class="mission-points">
+            <span class="mission-point">💚 Gratis selamanya</span>
+            <span class="mission-point">🤝 Nonprofit</span>
+            <span class="mission-point">👥 Berbasis komunitas</span>
+          </div>
+        </div>
+
+        <p>
+          Senara adalah platform nonprofit. Kami tidak menjual apapun. Semua cerita bisa diakses gratis, sekarang dan selamanya.
+        </p>
+        <p>
+          Bukan freemium, bukan trial. <strong>Gratis</strong>. Tidak ada investor yang menuntut profit, tidak ada target revenue yang harus dicapai. Cerita-cerita di Senara dibuat oleh relawan yang peduli.
+        </p>
+      </section>
+
+      <!-- Vision -->
+      <section class="about-section">
+        <h2><span class="section-icon">🔭</span> Visi Jangka Panjang</h2>
+        
+        <div class="pull-quote">
+          <p>Kami bermimpi Senara menjadi perpustakaan cerita bermakna terbesar di Indonesia.</p>
+        </div>
+
+        <p>
+          Tempat di mana guru bisa menemukan materi yang engaging. Orang tua bisa mengajarkan nilai-nilai penting lewat cerita. Siapa saja bisa belajar dari pengalaman karakter fiksi, sebelum menghadapi situasi serupa di dunia nyata.
+        </p>
+        <p>
+          Kami tahu ini butuh waktu. Tapi setiap cerita baru, setiap pembaca yang tersentuh, adalah langkah ke arah sana.
+        </p>
+      </section>
+
+      <!-- Values -->
+      <section class="about-section">
+        <h2><span class="section-icon">💎</span> Nilai-nilai Kami</h2>
+        
+        <div class="values-grid">
+          <div class="value-item">
+            <span class="value-icon">🌱</span>
+            <div class="value-content">
+              <h3>Tumbuh Bersama</h3>
+              <p>Kami belajar sambil jalan. Tidak sempurna, tapi terus berkembang.</p>
+            </div>
+          </div>
+          
+          <div class="value-item">
+            <span class="value-icon">🤝</span>
+            <div class="value-content">
+              <h3>Mengutamakan Dulu</h3>
+              <p>Senara ada karena kontributor. Setiap cerita adalah hasil kolaborasi.</p>
+            </div>
+          </div>
+          
+          <div class="value-item">
+            <span class="value-icon">🎯</span>
+            <div class="value-content">
+              <h3>Dampak, Bukan Viral</h3>
+              <p>Kami tidak mengejar angka. Kami mengejar perubahan yang bermakna.</p>
+            </div>
+          </div>
+          
+          <div class="value-item">
+            <span class="value-icon">💡</span>
+            <div class="value-content">
+              <h3>Sederhana</h3>
+              <p>Cerita yang baik adalah cerita yang bisa dipahami siapa saja.</p>
+            </div>
+          </div>
+          
+          <div class="value-item">
+            <span class="value-icon">❤️</span>
+            <div class="value-content">
+              <h3>Empati</h3>
+              <p>Kami menulis untuk manusia, bukan algoritma.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing -->
+      <div class="closing-section">
+        <div class="closing-emoji">🌿</div>
+        <p>
+          Senara masih sangat muda. Banyak yang belum sempurna, dan kami terus belajar.
+        </p>
+        <p>
+          Tapi kami percaya: <strong>cerita punya kekuatan untuk mengubah cara orang melihat dunia.</strong> Dan kami ingin terus membuat cerita yang bermakna.
+        </p>
+        <p>
+          Terima kasih sudah menjadi bagian dari perjalanan ini.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-placeholder"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbar('about');
+      initFooter();
+    });
+  </script>
+</body>
+</html>

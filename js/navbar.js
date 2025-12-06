@@ -12,8 +12,8 @@ function getNavbarHTML(currentPage = '') {
   const navItems = [
     { href: 'index.html', label: 'Beranda', id: 'home', event: 'Navbar Beranda' },
     { href: 'koleksi.html', label: 'Koleksi', id: 'collection', event: 'Navbar Koleksi' },
+    { href: 'about.html', label: 'Tentang', id: 'about', event: 'Navbar Tentang' },
     // { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
-    // { href: 'about.html', label: 'Tentang', id: 'about', event: 'Navbar Tentang' },
     // { href: 'team.html', label: 'Tim', id: 'team', event: 'Navbar Tim' },
   ];
 
@@ -80,8 +80,8 @@ function initNavbar(currentPage = '') {
     const navItems = [
       { href: 'index.html', label: 'Beranda', id: 'home', event: 'Navbar Beranda' },
       { href: 'koleksi.html', label: 'Koleksi', id: 'collection', event: 'Navbar Koleksi' },
+      { href: 'about.html', label: 'Tentang', id: 'about', event: 'Navbar Tentang' },
       // { href: 'learning-paths.html', label: 'Learning Paths', id: 'paths', event: 'Navbar Learning Paths' },
-      // { href: 'about.html', label: 'Tentang', id: 'about', event: 'Navbar Tentang' },
       // { href: 'team.html', label: 'Tim', id: 'team', event: 'Navbar Tim' },
     ];
     
