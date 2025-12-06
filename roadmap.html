@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta Jalan | Senara</title>
+  <meta name="description" content="Lihat apa yang sedang kami kerjakan dan rencana pengembangan Senara ke depan.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="style/home.css" rel="stylesheet">
+  <link href="style/performance.css" rel="stylesheet">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
+  <style>
+    * {
+      font-family: 'Inter', 'Nunito', sans-serif;
+    }
+    
+    body {
+      background-color: #faf8f3;
+      min-height: 100vh;
+    }
+
+    /* Page background */
+    .page-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .page-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 115, 85, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .page-bg::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(192, 133, 82, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    /* Header styling */
+    .page-header {
+      background: linear-gradient(135deg, #fffbf4 0%, #f9f2e6 55%, #f6eede 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b7355' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    /* Content styling */
+    .page-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #78350f;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .content-section p {
+      color: #92400e;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      color: #92400e;
+    }
+
+    /* Status badges */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .status-in-progress {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .status-planned {
+      background: #e0e7ff;
+      color: #3730a3;
+    }
+
+    .status-exploring {
+      background: #f3e8ff;
+      color: #7c3aed;
+    }
+
+    .status-done {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    /* Roadmap cards */
+    .roadmap-grid {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .roadmap-card {
+      background: white;
+      border: 1px solid #fde68a;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .roadmap-card:hover {
+      border-color: #fbbf24;
+      box-shadow: 0 4px 16px rgba(251, 191, 36, 0.12);
+    }
+
+    .roadmap-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .roadmap-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .roadmap-card p {
+      font-size: 0.95rem;
+      color: #92400e;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.6;
+    }
+
+    .roadmap-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: #a16207;
+    }
+
+    .roadmap-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    /* Feature cards */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .feature-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #92400e;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.5;
+    }
+
+    /* Completed section */
+    .completed-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .completed-item {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .completed-icon {
+      color: #16a34a;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .completed-content h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #166534;
+      margin-bottom: 0.25rem;
+    }
+
+    .completed-content p {
+      font-size: 0.85rem;
+      color: #15803d;
+      margin: 0;
+    }
+
+    /* Feedback section */
+    .feedback-section {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .feedback-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #78350f;
+      margin-bottom: 0.75rem;
+      justify-content: center;
+    }
+
+    .feedback-section p {
+      color: #92400e;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .feedback-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+      color: white;
+      padding: 0.875rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .feedback-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(120, 53, 15, 0.25);
+    }
+
+    /* Note box */
+    .note-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .note-box p {
+      font-size: 0.9rem;
+      color: #92400e;
+      margin: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .page-content {
+        padding: 0 1rem;
+      }
+
+      .roadmap-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background decoration -->
+  <div class="page-bg"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar-placeholder"></nav>
+
+  <!-- Header -->
+  <header class="page-header py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+        Peta Jalan
+      </h1>
+      <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+        Apa yang sedang kami kerjakan dan rencana ke depan.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-12 md:py-16 px-4">
+    <div class="page-content">
+
+      <p class="intro-text">
+        Senara terus berkembang. Halaman ini menunjukkan apa yang sedang kami kerjakan, apa yang direncanakan, dan apa yang sudah selesai. Semua bisa berubah berdasarkan feedback dari komunitas.
+      </p>
+
+      <!-- Stories in Progress -->
+      <section class="content-section">
+        <h2><span class="section-icon">📝</span> Cerita Sedang Dikerjakan</h2>
+        <p>
+          Cerita-cerita baru yang sedang dalam proses pembuatan:
+        </p>
+
+        <div class="roadmap-grid">
+          <div class="roadmap-card">
+            <div class="roadmap-header">
+              <h3>📱 Literasi Digital & Media Sosial</h3>
+              <span class="status-badge status-in-progress">🔨 Dalam Pengerjaan</span>
+            </div>
+            <p>Cerita tentang navigasi dunia digital: mengenali hoax, menjaga privasi online, dan membangun hubungan sehat di media sosial.</p>
+            <div class="roadmap-meta">
+              <span>📅 Target: Q1 2025</span>
+              <span>📚 3-4 chapter</span>
+            </div>
+          </div>
+
+          <div class="roadmap-card">
+            <div class="roadmap-header">
+              <h3>💰 Literasi Keuangan untuk Pemula</h3>
+              <span class="status-badge status-planned">📋 Direncanakan</span>
+            </div>
+            <p>Belajar mengelola uang, menabung, dan membuat keputusan finansial yang bijak lewat cerita karakter yang relatable.</p>
+            <div class="roadmap-meta">
+              <span>📅 Target: Q2 2025</span>
+              <span>📚 4-5 chapter</span>
+            </div>
+          </div>
+
+          <div class="roadmap-card">
+            <div class="roadmap-header">
+              <h3>🤝 Komunikasi & Resolusi Konflik</h3>
+              <span class="status-badge status-exploring">💭 Eksplorasi</span>
+            </div>
+            <p>Bagaimana berkomunikasi efektif, menyelesaikan konflik, dan membangun hubungan yang sehat dengan orang lain.</p>
+            <div class="roadmap-meta">
+              <span>📅 Target: 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <p>💡 Punya ide cerita? <a href="kontak.html" style="color: #d97706; text-decoration: underline;">Hubungi kami</a> atau <a href="contribute.html" style="color: #d97706; text-decoration: underline;">bergabung sebagai kontributor</a>.</p>
+        </div>
+      </section>
+
+      <!-- Platform Features -->
+      <section class="content-section">
+        <h2><span class="section-icon">⚙️</span> Fitur Platform</h2>
+        <p>
+          Pengembangan fitur untuk meningkatkan pengalaman pengguna:
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h4>👤 Sistem Akun</h4>
+            <p>Login untuk menyimpan progress dan sinkronisasi antar perangkat.</p>
+            <span class="status-badge status-exploring">💭 Eksplorasi</span>
+          </div>
+
+          <div class="feature-card">
+            <h4>📊 Statistik Belajar</h4>
+            <p>Lihat cerita yang sudah dibaca, waktu bermain, dan pencapaian.</p>
+            <span class="status-badge status-planned">📋 Direncanakan</span>
+          </div>
+
+          <div class="feature-card">
+            <h4>🏆 Gamification</h4>
+            <p>Badge, streak, dan reward untuk memotivasi pembaca.</p>
+            <span class="status-badge status-exploring">💭 Eksplorasi</span>
+          </div>
+
+          <div class="feature-card">
+            <h4>📱 Aplikasi Mobile</h4>
+            <p>Akses Senara lewat aplikasi Android/iOS.</p>
+            <span class="status-badge status-exploring">💭 Eksplorasi</span>
+          </div>
+
+          <div class="feature-card">
+            <h4>🌐 Multi-bahasa</h4>
+            <p>Terjemahan cerita ke bahasa Inggris.</p>
+            <span class="status-badge status-exploring">💭 Eksplorasi</span>
+          </div>
+
+          <div class="feature-card">
+            <h4>📥 Mode Offline</h4>
+            <p>Download cerita untuk dibaca tanpa internet.</p>
+            <span class="status-badge status-planned">📋 Direncanakan</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recently Completed -->
+      <section class="content-section">
+        <h2><span class="section-icon">✅</span> Baru Selesai</h2>
+        <p>
+          Apa yang sudah kami rilis belakangan ini:
+        </p>
+
+        <div class="completed-list">
+          <div class="completed-item">
+            <span class="completed-icon">✓</span>
+            <div class="completed-content">
+              <h4>Cerita: Pahlawan Kesehatan Mental</h4>
+              <p>5 chapter tentang literasi kesehatan mental, mengenali gejala, dan mengurangi stigma.</p>
+            </div>
+          </div>
+
+          <div class="completed-item">
+            <span class="completed-icon">✓</span>
+            <div class="completed-content">
+              <h4>Redesign Website</h4>
+              <p>Tampilan baru yang lebih bersih, navigasi yang lebih jelas, dan performa yang lebih baik.</p>
+            </div>
+          </div>
+
+          <div class="completed-item">
+            <span class="completed-icon">✓</span>
+            <div class="completed-content">
+              <h4>Halaman Koleksi dengan Filter</h4>
+              <p>Cari cerita berdasarkan kategori, durasi, dan tingkat kesulitan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feedback -->
+      <div class="feedback-section">
+        <h2>💬 Bantu Kami Prioritaskan</h2>
+        <p>
+          Roadmap ini dibentuk oleh feedback komunitas. Fitur atau cerita mana yang paling kamu butuhkan? Apa yang harus kami kerjakan lebih dulu?
+        </p>
+        <a href="mailto:fauzan08fauzan@gmail.com?subject=Feedback%20Roadmap%20Senara" class="feedback-btn" data-umami-event="Roadmap feedback CTA">
+          ✉️ Kirim Masukan
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-placeholder"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbar('roadmap');
+      initFooter();
+    });
+  </script>
+</body>
+</html>
