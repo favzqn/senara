@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aksesibilitas | Senara</title>
+  <meta name="description" content="Komitmen Senara terhadap aksesibilitas. Informasi tentang fitur aksesibilitas dan cara kami membuat platform inklusif.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="style/home.css" rel="stylesheet">
+  <link href="style/performance.css" rel="stylesheet">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
+  <style>
+    * {
+      font-family: 'Inter', 'Nunito', sans-serif;
+    }
+    
+    body {
+      background-color: #faf8f3;
+      min-height: 100vh;
+    }
+
+    .page-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .page-bg::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 115, 85, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #fffbf4 0%, #f9f2e6 55%, #f6eede 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b7355' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    .page-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .content-section {
+      margin-bottom: 3rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #78350f;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .content-section p {
+      color: #92400e;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      color: #92400e;
+    }
+
+    /* Feature cards */
+    .feature-grid {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .feature-card:hover {
+      border-color: #fbbf24;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 1.75rem;
+      flex-shrink: 0;
+    }
+
+    .feature-content h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-content p {
+      font-size: 0.95rem;
+      color: #92400e;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Status indicator */
+    .status-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+    }
+
+    .status-done {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status-partial {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .status-planned {
+      background: #e0e7ff;
+      color: #3730a3;
+    }
+
+    /* Commitment box */
+    .commitment-box {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 2px solid #6ee7b7;
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .commitment-box h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.5rem;
+    }
+
+    .commitment-box p {
+      color: #047857;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Tips section */
+    .tips-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .tips-box h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #78350f;
+      margin-bottom: 0.75rem;
+    }
+
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .tips-list li {
+      color: #92400e;
+      padding: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    .tips-list li::before {
+      content: '💡';
+      position: absolute;
+      left: 0;
+      font-size: 0.85rem;
+    }
+
+    /* Feedback section */
+    .feedback-section {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .feedback-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #78350f;
+      margin-bottom: 0.75rem;
+      justify-content: center;
+    }
+
+    .feedback-section p {
+      color: #92400e;
+      margin-bottom: 1.25rem;
+    }
+
+    .feedback-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .feedback-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(120, 53, 15, 0.25);
+    }
+
+    @media (max-width: 640px) {
+      .page-content {
+        padding: 0 1rem;
+      }
+
+      .feature-card {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-bg"></div>
+
+  <nav id="navbar-placeholder"></nav>
+
+  <header class="page-header py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+        Aksesibilitas
+      </h1>
+      <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+        Komitmen kami untuk membuat Senara bisa diakses oleh semua orang.
+      </p>
+    </div>
+  </header>
+
+  <main class="py-12 md:py-16 px-4">
+    <div class="page-content">
+
+      <div class="commitment-box">
+        <h3>🎯 Komitmen Kami</h3>
+        <p>
+          Kami percaya bahwa setiap orang berhak mengakses cerita dan pengalaman belajar yang bermakna. Senara terus berupaya meningkatkan aksesibilitas platform agar inklusif untuk semua pengguna, termasuk mereka dengan disabilitas.
+        </p>
+      </div>
+
+      <p class="intro-text">
+        Berikut adalah fitur aksesibilitas yang sudah tersedia dan yang sedang kami kembangkan.
+      </p>
+
+      <!-- Visual Accessibility -->
+      <section class="content-section">
+        <h2><span class="section-icon">👁️</span> Aksesibilitas Visual</h2>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔤</div>
+            <div class="feature-content">
+              <h3>Ukuran Font yang Cukup</h3>
+              <p>Teks di seluruh website menggunakan ukuran minimum 16px untuk memastikan keterbacaan. Pada perangkat mobile, ukuran font disesuaikan agar tetap nyaman dibaca.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-content">
+              <h3>Kontras Warna</h3>
+              <p>Kami menggunakan kombinasi warna dengan kontras yang cukup antara teks dan background. Warna utama (amber/coklat) dipilih untuk keterbacaan yang baik.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <div class="feature-content">
+              <h3>Zoom Browser</h3>
+              <p>Website mendukung zoom browser hingga 200% tanpa kehilangan fungsionalitas atau konten. Layout akan menyesuaikan secara responsif.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🌙</div>
+            <div class="feature-content">
+              <h3>Mode Gelap</h3>
+              <p>Mode tampilan gelap untuk mengurangi kelelahan mata saat membaca dalam kondisi cahaya rendah.</p>
+              <span class="status-tag status-planned">📋 Direncanakan</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Accessibility -->
+      <section class="content-section">
+        <h2><span class="section-icon">⌨️</span> Navigasi & Interaksi</h2>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🖱️</div>
+            <div class="feature-content">
+              <h3>Navigasi Keyboard</h3>
+              <p>Semua elemen interaktif (link, tombol, menu) dapat diakses menggunakan keyboard. Gunakan Tab untuk berpindah antar elemen dan Enter untuk mengaktifkan.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <div class="feature-content">
+              <h3>Focus Indicator</h3>
+              <p>Elemen yang sedang difokuskan ditandai dengan outline yang jelas, memudahkan pengguna keyboard untuk mengetahui posisi mereka.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <div class="feature-content">
+              <h3>Touch Target</h3>
+              <p>Tombol dan link memiliki area sentuh minimum 44x44 pixel untuk memudahkan pengguna dengan keterbatasan motorik.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">⏸️</div>
+            <div class="feature-content">
+              <h3>Kontrol Animasi</h3>
+              <p>Animasi di website minimal dan tidak mengganggu. Tidak ada animasi yang berkedip cepat yang bisa memicu kejang.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen Reader -->
+      <section class="content-section">
+        <h2><span class="section-icon">🔊</span> Screen Reader & Teknologi Bantu</h2>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <div class="feature-content">
+              <h3>Struktur Heading</h3>
+              <p>Halaman menggunakan hierarki heading (H1, H2, H3) yang terstruktur dengan baik untuk memudahkan navigasi dengan screen reader.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🏷️</div>
+            <div class="feature-content">
+              <h3>ARIA Labels</h3>
+              <p>Elemen interaktif dilengkapi dengan label ARIA untuk memberikan konteks kepada pengguna screen reader.</p>
+              <span class="status-tag status-partial">⚡ Sebagian</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🖼️</div>
+            <div class="feature-content">
+              <h3>Alt Text untuk Gambar</h3>
+              <p>Gambar penting dilengkapi dengan teks alternatif yang mendeskripsikan konten gambar.</p>
+              <span class="status-tag status-partial">⚡ Sebagian</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🗣️</div>
+            <div class="feature-content">
+              <h3>Kompatibilitas Screen Reader</h3>
+              <p>Website diuji dengan screen reader populer seperti NVDA dan VoiceOver untuk memastikan kompatibilitas.</p>
+              <span class="status-tag status-planned">📋 Direncanakan</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VN Player -->
+      <section class="content-section">
+        <h2><span class="section-icon">🎮</span> Aksesibilitas Visual Novel</h2>
+        <p>
+          Fitur aksesibilitas khusus untuk pengalaman membaca cerita interaktif:
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-content">
+              <h3>Kecepatan Teks</h3>
+              <p>Pengaturan kecepatan tampilan teks yang bisa disesuaikan, termasuk opsi untuk menampilkan teks secara instan.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔊</div>
+            <div class="feature-content">
+              <h3>Kontrol Audio</h3>
+              <p>Volume musik dan efek suara bisa diatur secara terpisah atau dimatikan sepenuhnya.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💾</div>
+            <div class="feature-content">
+              <h3>Save & Load</h3>
+              <p>Simpan progress kapan saja dan lanjutkan nanti. Tidak perlu menyelesaikan cerita dalam satu sesi.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📖</div>
+            <div class="feature-content">
+              <h3>Log Dialog</h3>
+              <p>Akses riwayat dialog untuk membaca ulang teks yang sudah lewat.</p>
+              <span class="status-tag status-done">✓ Tersedia</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tips -->
+      <div class="tips-box">
+        <h3>Tips Menggunakan Senara</h3>
+        <ul class="tips-list">
+          <li>Gunakan Ctrl/Cmd + untuk memperbesar tampilan jika teks terlalu kecil</li>
+          <li>Tekan Tab untuk berpindah antar tombol dan link</li>
+          <li>Di visual novel, klik atau tekan Enter/Space untuk melanjutkan dialog</li>
+          <li>Gunakan menu Settings di visual novel untuk mengatur kecepatan teks dan volume</li>
+        </ul>
+      </div>
+
+      <!-- Feedback -->
+      <div class="feedback-section">
+        <h2>Bantu Kami Meningkatkan Aksesibilitas</h2>
+        <p>
+          Jika kamu mengalami kesulitan mengakses Senara atau punya saran untuk meningkatkan aksesibilitas, kami sangat ingin mendengarnya.
+        </p>
+        <a href="mailto:fauzan08fauzan@gmail.com?subject=Feedback%20Aksesibilitas%20Senara" class="feedback-btn" data-umami-event="Accessibility feedback CTA">
+          ✉️ Kirim Feedback
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer id="footer-placeholder"></footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbar('aksesibilitas');
+      initFooter();
+    });
+  </script>
+</body>
+</html>
