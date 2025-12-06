@@ -60,6 +60,7 @@ function getFooterHTML() {
           <p class="footer-copyright">&copy; ${new Date().getFullYear()} Senara. Dibuat dengan ❤️ di Indonesia.</p>
           <div class="footer-legal">
             <a href="privacy.html" data-umami-event="Footer Privacy">Privasi</a>
+            <a href="terms.html" data-umami-event="Footer Terms">Syarat & Ketentuan</a>
           </div>
         </div>
       </div>
