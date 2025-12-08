@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aksesibilitas | Senara</title>
+  <title data-i18n="accessibility.title">Aksesibilitas</title>
   <meta name="description" content="Komitmen Senara terhadap aksesibilitas. Informasi tentang fitur aksesibilitas dan cara kami membuat platform inklusif.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -279,10 +279,10 @@
 
   <header class="page-header py-16 md:py-20 px-4">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4" data-i18n="accessibility.title">
         Aksesibilitas
       </h1>
-      <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+      <p class="text-lg text-amber-700 max-w-2xl mx-auto" data-i18n="accessibility.subtitle">
         Komitmen kami untuk membuat Senara bisa diakses oleh semua orang.
       </p>
     </div>
@@ -292,54 +292,54 @@
     <div class="page-content">
 
       <div class="commitment-box">
-        <h3>🎯 Komitmen Kami</h3>
-        <p>
+        <h3 data-i18n="accessibility.commitmentTitle">🎯 Komitmen Kami</h3>
+        <p data-i18n="accessibility.commitmentBody">
           Kami percaya bahwa setiap orang berhak mengakses cerita dan pengalaman belajar yang bermakna. Senara terus berupaya meningkatkan aksesibilitas platform agar inklusif untuk semua pengguna, termasuk mereka dengan disabilitas.
         </p>
       </div>
 
-      <p class="intro-text">
+      <p class="intro-text" data-i18n="accessibility.intro">
         Berikut adalah fitur aksesibilitas yang sudah tersedia dan yang sedang kami kembangkan.
       </p>
 
       <!-- Visual Accessibility -->
       <section class="content-section">
-        <h2><span class="section-icon">👁️</span> Aksesibilitas Visual</h2>
+        <h2><span class="section-icon">👁️</span> <span data-i18n="accessibility.sections.visual.title">Aksesibilitas Visual</span></h2>
 
         <div class="feature-grid">
           <div class="feature-card">
             <div class="feature-icon">🔤</div>
             <div class="feature-content">
-              <h3>Ukuran Font yang Cukup</h3>
-              <p>Teks di seluruh website menggunakan ukuran minimum 16px untuk memastikan keterbacaan. Pada perangkat mobile, ukuran font disesuaikan agar tetap nyaman dibaca.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.visual.features.fontSize.title">Ukuran Font yang Cukup</h3>
+              <p data-i18n="accessibility.sections.visual.features.fontSize.desc">Teks di seluruh website menggunakan ukuran minimum 16px untuk memastikan keterbacaan. Pada perangkat mobile, ukuran font disesuaikan agar tetap nyaman dibaca.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">🎨</div>
             <div class="feature-content">
-              <h3>Kontras Warna</h3>
-              <p>Kami menggunakan kombinasi warna dengan kontras yang cukup antara teks dan background. Warna utama (amber/coklat) dipilih untuk keterbacaan yang baik.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.visual.features.contrast.title">Kontras Warna</h3>
+              <p data-i18n="accessibility.sections.visual.features.contrast.desc">Kami menggunakan kombinasi warna dengan kontras yang cukup antara teks dan background. Warna utama (amber/coklat) dipilih untuk keterbacaan yang baik.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">🔍</div>
             <div class="feature-content">
-              <h3>Zoom Browser</h3>
-              <p>Website mendukung zoom browser hingga 200% tanpa kehilangan fungsionalitas atau konten. Layout akan menyesuaikan secara responsif.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.visual.features.zoom.title">Zoom Browser</h3>
+              <p data-i18n="accessibility.sections.visual.features.zoom.desc">Website mendukung zoom browser hingga 200% tanpa kehilangan fungsionalitas atau konten. Layout akan menyesuaikan secara responsif.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">🌙</div>
             <div class="feature-content">
-              <h3>Mode Gelap</h3>
-              <p>Mode tampilan gelap untuk mengurangi kelelahan mata saat membaca dalam kondisi cahaya rendah.</p>
-              <span class="status-tag status-planned">📋 Direncanakan</span>
+              <h3 data-i18n="accessibility.sections.visual.features.darkMode.title">Mode Gelap</h3>
+              <p data-i18n="accessibility.sections.visual.features.darkMode.desc">Mode tampilan gelap untuk mengurangi kelelahan mata saat membaca dalam kondisi cahaya rendah.</p>
+              <span class="status-tag status-planned" data-i18n="accessibility.statuses.planned">📋 Direncanakan</span>
             </div>
           </div>
         </div>
@@ -347,42 +347,42 @@
 
       <!-- Navigation Accessibility -->
       <section class="content-section">
-        <h2><span class="section-icon">⌨️</span> Navigasi & Interaksi</h2>
+        <h2><span class="section-icon">⌨️</span> <span data-i18n="accessibility.sections.navigation.title">Navigasi & Interaksi</span></h2>
 
         <div class="feature-grid">
           <div class="feature-card">
             <div class="feature-icon">🖱️</div>
             <div class="feature-content">
-              <h3>Navigasi Keyboard</h3>
-              <p>Semua elemen interaktif (link, tombol, menu) dapat diakses menggunakan keyboard. Gunakan Tab untuk berpindah antar elemen dan Enter untuk mengaktifkan.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.navigation.features.keyboard.title">Navigasi Keyboard</h3>
+              <p data-i18n="accessibility.sections.navigation.features.keyboard.desc">Semua elemen interaktif (link, tombol, menu) dapat diakses menggunakan keyboard. Gunakan Tab untuk berpindah antar elemen dan Enter untuk mengaktifkan.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">🎯</div>
             <div class="feature-content">
-              <h3>Focus Indicator</h3>
-              <p>Elemen yang sedang difokuskan ditandai dengan outline yang jelas, memudahkan pengguna keyboard untuk mengetahui posisi mereka.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.navigation.features.focus.title">Focus Indicator</h3>
+              <p data-i18n="accessibility.sections.navigation.features.focus.desc">Elemen yang sedang difokuskan ditandai dengan outline yang jelas, memudahkan pengguna keyboard untuk mengetahui posisi mereka.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">📱</div>
             <div class="feature-content">
-              <h3>Touch Target</h3>
-              <p>Tombol dan link memiliki area sentuh minimum 44x44 pixel untuk memudahkan pengguna dengan keterbatasan motorik.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.navigation.features.touch.title">Touch Target</h3>
+              <p data-i18n="accessibility.sections.navigation.features.touch.desc">Tombol dan link memiliki area sentuh minimum 44x44 pixel untuk memudahkan pengguna dengan keterbatasan motorik.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">⏸️</div>
             <div class="feature-content">
-              <h3>Kontrol Animasi</h3>
-              <p>Animasi di website minimal dan tidak mengganggu. Tidak ada animasi yang berkedip cepat yang bisa memicu kejang.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.navigation.features.animation.title">Kontrol Animasi</h3>
+              <p data-i18n="accessibility.sections.navigation.features.animation.desc">Animasi di website minimal dan tidak mengganggu. Tidak ada animasi yang berkedip cepat yang bisa memicu kejang.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
         </div>
@@ -390,42 +390,42 @@
 
       <!-- Screen Reader -->
       <section class="content-section">
-        <h2><span class="section-icon">🔊</span> Screen Reader & Teknologi Bantu</h2>
+        <h2><span class="section-icon">🔊</span> <span data-i18n="accessibility.sections.screenReader.title">Screen Reader & Teknologi Bantu</span></h2>
 
         <div class="feature-grid">
           <div class="feature-card">
             <div class="feature-icon">📝</div>
             <div class="feature-content">
-              <h3>Struktur Heading</h3>
-              <p>Halaman menggunakan hierarki heading (H1, H2, H3) yang terstruktur dengan baik untuk memudahkan navigasi dengan screen reader.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.screenReader.features.headings.title">Struktur Heading</h3>
+              <p data-i18n="accessibility.sections.screenReader.features.headings.desc">Halaman menggunakan hierarki heading (H1, H2, H3) yang terstruktur dengan baik untuk memudahkan navigasi dengan screen reader.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">🏷️</div>
             <div class="feature-content">
-              <h3>ARIA Labels</h3>
-              <p>Elemen interaktif dilengkapi dengan label ARIA untuk memberikan konteks kepada pengguna screen reader.</p>
-              <span class="status-tag status-partial">⚡ Sebagian</span>
+              <h3 data-i18n="accessibility.sections.screenReader.features.aria.title">ARIA Labels</h3>
+              <p data-i18n="accessibility.sections.screenReader.features.aria.desc">Elemen interaktif dilengkapi dengan label ARIA untuk memberikan konteks kepada pengguna screen reader.</p>
+              <span class="status-tag status-partial" data-i18n="accessibility.statuses.partial">⚡ Sebagian</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">🖼️</div>
             <div class="feature-content">
-              <h3>Alt Text untuk Gambar</h3>
-              <p>Gambar penting dilengkapi dengan teks alternatif yang mendeskripsikan konten gambar.</p>
-              <span class="status-tag status-partial">⚡ Sebagian</span>
+              <h3 data-i18n="accessibility.sections.screenReader.features.altText.title">Alt Text untuk Gambar</h3>
+              <p data-i18n="accessibility.sections.screenReader.features.altText.desc">Gambar penting dilengkapi dengan teks alternatif yang mendeskripsikan konten gambar.</p>
+              <span class="status-tag status-partial" data-i18n="accessibility.statuses.partial">⚡ Sebagian</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">🗣️</div>
             <div class="feature-content">
-              <h3>Kompatibilitas Screen Reader</h3>
-              <p>Website diuji dengan screen reader populer seperti NVDA dan VoiceOver untuk memastikan kompatibilitas.</p>
-              <span class="status-tag status-planned">📋 Direncanakan</span>
+              <h3 data-i18n="accessibility.sections.screenReader.features.compatibility.title">Kompatibilitas Screen Reader</h3>
+              <p data-i18n="accessibility.sections.screenReader.features.compatibility.desc">Website diuji dengan screen reader populer seperti NVDA dan VoiceOver untuk memastikan kompatibilitas.</p>
+              <span class="status-tag status-planned" data-i18n="accessibility.statuses.planned">📋 Direncanakan</span>
             </div>
           </div>
         </div>
@@ -433,8 +433,8 @@
 
       <!-- VN Player -->
       <section class="content-section">
-        <h2><span class="section-icon">🎮</span> Aksesibilitas Visual Novel</h2>
-        <p>
+        <h2><span class="section-icon">🎮</span> <span data-i18n="accessibility.sections.vn.title">Aksesibilitas Visual Novel</span></h2>
+        <p data-i18n="accessibility.sections.vn.intro">
           Fitur aksesibilitas khusus untuk pengalaman membaca cerita interaktif:
         </p>
 
@@ -442,36 +442,36 @@
           <div class="feature-card">
             <div class="feature-icon">⚡</div>
             <div class="feature-content">
-              <h3>Kecepatan Teks</h3>
-              <p>Pengaturan kecepatan tampilan teks yang bisa disesuaikan, termasuk opsi untuk menampilkan teks secara instan.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.vn.features.textSpeed.title">Kecepatan Teks</h3>
+              <p data-i18n="accessibility.sections.vn.features.textSpeed.desc">Pengaturan kecepatan tampilan teks yang bisa disesuaikan, termasuk opsi untuk menampilkan teks secara instan.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">🔊</div>
             <div class="feature-content">
-              <h3>Kontrol Audio</h3>
-              <p>Volume musik dan efek suara bisa diatur secara terpisah atau dimatikan sepenuhnya.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.vn.features.audio.title">Kontrol Audio</h3>
+              <p data-i18n="accessibility.sections.vn.features.audio.desc">Volume musik dan efek suara bisa diatur secara terpisah atau dimatikan sepenuhnya.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">💾</div>
             <div class="feature-content">
-              <h3>Save & Load</h3>
-              <p>Simpan progress kapan saja dan lanjutkan nanti. Tidak perlu menyelesaikan cerita dalam satu sesi.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.vn.features.saveLoad.title">Save & Load</h3>
+              <p data-i18n="accessibility.sections.vn.features.saveLoad.desc">Simpan progress kapan saja dan lanjutkan nanti. Tidak perlu menyelesaikan cerita dalam satu sesi.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
 
           <div class="feature-card">
             <div class="feature-icon">📖</div>
             <div class="feature-content">
-              <h3>Log Dialog</h3>
-              <p>Akses riwayat dialog untuk membaca ulang teks yang sudah lewat.</p>
-              <span class="status-tag status-done">✓ Tersedia</span>
+              <h3 data-i18n="accessibility.sections.vn.features.log.title">Log Dialog</h3>
+              <p data-i18n="accessibility.sections.vn.features.log.desc">Akses riwayat dialog untuk membaca ulang teks yang sudah lewat.</p>
+              <span class="status-tag status-done" data-i18n="accessibility.statuses.available">✓ Tersedia</span>
             </div>
           </div>
         </div>
@@ -479,22 +479,22 @@
 
       <!-- Tips -->
       <div class="tips-box">
-        <h3>Tips Menggunakan Senara</h3>
+        <h3 data-i18n="accessibility.tipsTitle">Tips Menggunakan Senara</h3>
         <ul class="tips-list">
-          <li>Gunakan Ctrl/Cmd + untuk memperbesar tampilan jika teks terlalu kecil</li>
-          <li>Tekan Tab untuk berpindah antar tombol dan link</li>
-          <li>Di visual novel, klik atau tekan Enter/Space untuk melanjutkan dialog</li>
-          <li>Gunakan menu Settings di visual novel untuk mengatur kecepatan teks dan volume</li>
+          <li data-i18n="accessibility.tips.0">Gunakan Ctrl/Cmd + untuk memperbesar tampilan jika teks terlalu kecil</li>
+          <li data-i18n="accessibility.tips.1">Tekan Tab untuk berpindah antar tombol dan link</li>
+          <li data-i18n="accessibility.tips.2">Di visual novel, klik atau tekan Enter/Space untuk melanjutkan dialog</li>
+          <li data-i18n="accessibility.tips.3">Gunakan menu Settings di visual novel untuk mengatur kecepatan teks dan volume</li>
         </ul>
       </div>
 
       <!-- Feedback -->
       <div class="feedback-section">
-        <h2>Bantu Kami Meningkatkan Aksesibilitas</h2>
-        <p>
+        <h2 data-i18n="accessibility.feedbackTitle">Bantu Kami Meningkatkan Aksesibilitas</h2>
+        <p data-i18n="accessibility.feedbackDesc">
           Jika kamu mengalami kesulitan mengakses Senara atau punya saran untuk meningkatkan aksesibilitas, kami sangat ingin mendengarnya.
         </p>
-        <a href="mailto:fauzan08fauzan@gmail.com?subject=Feedback%20Aksesibilitas%20Senara" class="feedback-btn" data-umami-event="Accessibility feedback CTA">
+        <a href="mailto:fauzan08fauzan@gmail.com?subject=Feedback%20Aksesibilitas%20Senara" class="feedback-btn" data-umami-event="Accessibility feedback CTA" data-i18n="accessibility.feedbackCta">
           ✉️ Kirim Feedback
         </a>
       </div>
@@ -504,6 +504,8 @@
 
   <footer id="footer-placeholder"></footer>
 
+  <script src="js/locales.js"></script>
+  <script src="js/i18n-simple.js"></script>
   <script src="js/config.js"></script>
   <script src="js/constants.js"></script>
   <script src="js/navbar.js"></script>

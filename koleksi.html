@@ -520,20 +520,20 @@
     <div class="max-w-7xl mx-auto relative z-10">
       <div class="flex items-center gap-3 mb-4">
         <span class="text-4xl">📚</span>
-        <h1 class="text-4xl md:text-5xl font-bold">Koleksi Cerita</h1>
+        <h1 class="text-4xl md:text-5xl font-bold" data-i18n="collection.title">Koleksi Cerita</h1>
       </div>
-      <p class="text-lg text-amber-800 max-w-2xl">
+      <p class="text-lg text-amber-800 max-w-2xl" data-i18n="collection.subtitle">
         Temukan cerita yang cocok untukmu. Setiap cerita dirancang untuk menemanimu belajar dengan cara yang terasa personal dan bermakna.
       </p>
       <div class="flex flex-wrap gap-3 mt-6">
         <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur rounded-full text-sm text-stone-700 border border-stone-200">
-          <span>✨</span> Cerita Interaktif
+          <span>✨</span> <span data-i18n="collection.badges.interactive">Cerita Interaktif</span>
         </span>
         <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur rounded-full text-sm text-stone-700 border border-stone-200">
-          <span>🎯</span> Quiz & Tantangan
+          <span>🎯</span> <span data-i18n="collection.badges.quiz">Quiz & Tantangan</span>
         </span>
         <span class="inline-flex items-center gap-2 px-4 py-2 bg-white/70 backdrop-blur rounded-full text-sm text-stone-700 border border-stone-200">
-          <span>🌟</span> Belajar Sambil Bermain
+          <span>🌟</span> <span data-i18n="collection.badges.playful">Belajar Sambil Bermain</span>
         </span>
       </div>
     </div>
@@ -550,7 +550,7 @@
       >
         <span class="font-semibold text-amber-900 flex items-center gap-3">
           <span class="text-xl">🎛️</span> 
-          <span>Filter & Urutkan</span>
+          <span data-i18n="collection.filterToggle">Filter & Urutkan</span>
         </span>
         <span class="flex items-center gap-3">
           <span id="activeFilterCount" class="hidden filter-badge px-2.5 py-1 text-white text-xs font-bold rounded-full">0</span>
@@ -564,9 +564,9 @@
           <div id="filterPanel" class="filter-panel expanded lg:expanded sidebar-container space-y-4 pr-2 pb-6">
             <!-- Results Count -->
             <div class="results-count rounded-2xl p-5 border border-stone-200 relative">
-              <p class="text-sm text-stone-600 mb-1">Ditemukan</p>
+              <p class="text-sm text-stone-600 mb-1" data-i18n="collection.found">Ditemukan</p>
               <p class="results-count-number" id="resultsCount">0</p>
-              <p class="text-sm text-stone-600">cerita</p>
+              <p class="text-sm text-stone-600" data-i18n="collection.storiesFound">cerita</p>
               <div id="activeFiltersDisplay" class="mt-3 flex flex-wrap gap-1.5 hidden"></div>
             </div>
 
@@ -574,13 +574,14 @@
             <div class="filter-card rounded-2xl p-4">
               <div class="filter-card-header">
                 <span>🔍</span>
-                <span>Cari Cerita</span>
+                <span data-i18n="collection.searchPlaceholder">Cari Cerita</span>
               </div>
               <div class="relative">
                 <input 
                   type="text" 
                   id="searchInput" 
                   placeholder="Ketik judul atau topik..." 
+                  data-i18n-placeholder="collection.searchInputPlaceholder"
                   class="search-input w-full px-4 py-3 rounded-xl border-2 border-amber-100 text-amber-900 text-sm outline-none"
                   data-umami-event="Collection search input"
                 >
@@ -594,7 +595,7 @@
             <div class="filter-card rounded-2xl p-4">
               <div class="filter-card-header">
                 <span>📚</span>
-                <span>Kategori</span>
+                <span data-i18n="collection.filterCategory">Kategori</span>
               </div>
               <div id="categoryFilters" class="space-y-1.5 max-h-72 overflow-y-auto pr-1">
                 <!-- Categories will be loaded dynamically -->
@@ -608,28 +609,28 @@
             <div class="filter-card rounded-2xl p-4">
               <div class="filter-card-header">
                 <span>⭐</span>
-                <span>Tingkat Kesulitan</span>
+                <span data-i18n="collection.filterDifficulty">Tingkat Kesulitan</span>
               </div>
               <div class="space-y-1">
                 <label class="filter-checkbox text-sm">
                   <input type="checkbox" class="difficulty-filter" value="Beginner">
                   <span class="flex items-center gap-2">
                     <span class="difficulty-dot beginner"></span>
-                    Pemula
+                    <span data-i18n="story.beginner">Pemula</span>
                   </span>
                 </label>
                 <label class="filter-checkbox text-sm">
                   <input type="checkbox" class="difficulty-filter" value="Intermediate">
                   <span class="flex items-center gap-2">
                     <span class="difficulty-dot intermediate"></span>
-                    Menengah
+                    <span data-i18n="story.intermediate">Menengah</span>
                   </span>
                 </label>
                 <label class="filter-checkbox text-sm">
                   <input type="checkbox" class="difficulty-filter" value="Advanced">
                   <span class="flex items-center gap-2">
                     <span class="difficulty-dot advanced"></span>
-                    Lanjutan
+                    <span data-i18n="story.advanced">Lanjutan</span>
                   </span>
                 </label>
               </div>
@@ -639,20 +640,20 @@
             <div class="filter-card rounded-2xl p-4">
               <div class="filter-card-header">
                 <span>⏱️</span>
-                <span>Durasi</span>
+                <span data-i18n="collection.filterDuration">Durasi</span>
               </div>
               <div class="space-y-1">
                 <label class="filter-checkbox text-sm">
                   <input type="checkbox" class="duration-filter" value="short">
-                  <span>⚡ Singkat (&lt; 15 menit)</span>
+                  <span data-i18n="collection.durationShort">⚡ Singkat (&lt; 15 menit)</span>
                 </label>
                 <label class="filter-checkbox text-sm">
                   <input type="checkbox" class="duration-filter" value="medium">
-                  <span>📖 Sedang (15-30 menit)</span>
+                  <span data-i18n="collection.durationMedium">📖 Sedang (15-30 menit)</span>
                 </label>
                 <label class="filter-checkbox text-sm">
                   <input type="checkbox" class="duration-filter" value="long">
-                  <span>📚 Panjang (&gt; 30 menit)</span>
+                  <span data-i18n="collection.durationLong">📚 Panjang (&gt; 30 menit)</span>
                 </label>
               </div>
             </div>
@@ -661,29 +662,29 @@
             <div class="filter-card rounded-2xl p-4">
               <div class="filter-card-header">
                 <span>📌</span>
-                <span>Status</span>
+                <span data-i18n="collection.statusTitle">Status</span>
               </div>
               <div class="space-y-1">
                 <label class="filter-checkbox text-sm">
                   <input type="checkbox" class="status-filter" value="published" checked>
-                  <span>✅ Tersedia</span>
+                  <span data-i18n="collection.statusAvailable">✅ Tersedia</span>
                 </label>
                 <label class="filter-checkbox text-sm">
                   <input type="checkbox" class="status-filter" value="coming-soon" checked>
-                  <span>🔜 Segera Hadir</span>
+                  <span data-i18n="collection.statusComingSoon">🔜 Segera Hadir</span>
                 </label>
               </div>
             </div>
 
             <!-- Clear Filters -->
             <button id="clearFilters" class="reset-btn w-full px-4 py-3.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2">
-              <span>🔄</span> Reset Semua Filter
+              <span>🔄</span> <span data-i18n="collection.resetAllFilters">Reset Semua Filter</span>
             </button>
 
             <!-- Keyboard Shortcuts Hint (Desktop only) -->
             <div class="hidden lg:flex items-center justify-center gap-4 text-xs text-stone-500 pt-2">
-              <span class="flex items-center gap-1.5"><span class="kbd">/</span> Cari</span>
-              <span class="flex items-center gap-1.5"><span class="kbd">Esc</span> Reset</span>
+              <span class="flex items-center gap-1.5"><span class="kbd">/</span> <span data-i18n="collection.keyboardSearch">Cari</span></span>
+              <span class="flex items-center gap-1.5"><span class="kbd">Esc</span> <span data-i18n="collection.keyboardReset">Reset</span></span>
             </div>
           </div>
         </aside>
@@ -695,25 +696,25 @@
             <div class="flex items-center gap-2">
               <span class="text-2xl">🎬</span>
               <p class="text-sm text-stone-600">
-                Menampilkan <span id="resultsCountTop" class="font-bold text-stone-800">0</span> cerita
+                <span data-i18n="collection.resultsPrefix">Menampilkan</span> <span id="resultsCountTop" class="font-bold text-stone-800">0</span> <span data-i18n="collection.storiesFound">cerita</span>
               </p>
             </div>
             <div class="flex items-center gap-3">
-              <label class="text-sm text-stone-500 font-medium">Urutkan:</label>
+              <label class="text-sm text-stone-500 font-medium" data-i18n="collection.sortLabel">Urutkan:</label>
               <select 
                 id="sortSelect" 
                 class="sort-select px-4 py-2.5 rounded-xl border-2 border-stone-200 text-stone-700 text-sm cursor-pointer"
                 data-umami-event="Collection sort change"
               >
-                <option value="default">Default</option>
-                <option value="newest">🆕 Terbaru</option>
-                <option value="oldest">📅 Terlama</option>
-                <option value="popular">🔥 Terpopuler</option>
-                <option value="rating">⭐ Rating Tertinggi</option>
-                <option value="duration-asc">⏱️ Durasi: Singkat → Panjang</option>
-                <option value="duration-desc">⏱️ Durasi: Panjang → Singkat</option>
-                <option value="title-asc">🔤 Judul: A → Z</option>
-                <option value="title-desc">🔤 Judul: Z → A</option>
+                <option value="default" data-i18n="collection.sortDefault">Default</option>
+                <option value="newest" data-i18n="collection.sortNewest">🆕 Terbaru</option>
+                <option value="oldest" data-i18n="collection.sortOldest">📅 Terlama</option>
+                <option value="popular" data-i18n="collection.sortPopular">🔥 Terpopuler</option>
+                <option value="rating" data-i18n="collection.sortRating">⭐ Rating Tertinggi</option>
+                <option value="duration-asc" data-i18n="collection.sortDurationAsc">⏱️ Durasi: Singkat → Panjang</option>
+                <option value="duration-desc" data-i18n="collection.sortDurationDesc">⏱️ Durasi: Panjang → Singkat</option>
+                <option value="title-asc" data-i18n="collection.sortTitleAsc">🔤 Judul: A → Z</option>
+                <option value="title-desc" data-i18n="collection.sortTitleDesc">🔤 Judul: Z → A</option>
               </select>
             </div>
           </div>
@@ -729,6 +730,8 @@
   <!-- Footer (will be injected by footer.js) -->
   <footer id="footer-placeholder"></footer>
 
+  <script src="js/locales.js"></script>
+  <script src="js/i18n-simple.js"></script>
   <script src="js/config.js"></script>
   <script src="js/constants.js"></script>
   <script src="js/shared-utils.js"></script>
@@ -1059,16 +1062,27 @@
       }
       if (currentCategory !== 'all') {
         const cat = getCategoryById(currentCategory);
-        if (cat) filters.push(`${cat.icon} ${cat.title}`);
+        if (cat) {
+          const catName = typeof I18n !== 'undefined' ? I18n.t(`categories.${cat.id}`) : cat.title;
+          filters.push(`${cat.icon} ${catName !== `categories.${cat.id}` ? catName : cat.title}`);
+        }
       }
       if (selectedDifficulties.length > 0) {
-        filters.push(`⭐ ${selectedDifficulties.join(', ')}`);
+        const diffLabels = selectedDifficulties.map(diff => {
+          const key = `story.${diff.toLowerCase()}`;
+          if (typeof I18n !== 'undefined') {
+            const translated = I18n.t(key);
+            if (translated && translated !== key) return translated;
+          }
+          return diff;
+        });
+        filters.push(`⭐ ${diffLabels.join(', ')}`);
       }
       if (selectedDurations.length > 0) {
         const durationLabels = {
-          'short': '< 15m',
-          'medium': '15-30m',
-          'long': '> 30m'
+          'short': typeof I18n !== 'undefined' ? I18n.t('collection.durationShort') : '⚡ Singkat (< 15 menit)',
+          'medium': typeof I18n !== 'undefined' ? I18n.t('collection.durationMedium') : '📖 Sedang (15-30 menit)',
+          'long': typeof I18n !== 'undefined' ? I18n.t('collection.durationLong') : '📚 Panjang (> 30 menit)'
         };
         filters.push(`⏱️ ${selectedDurations.map(d => durationLabels[d]).join(', ')}`);
       }
@@ -1088,14 +1102,17 @@
       const container = document.getElementById('storiesContainer');
       
       if (stories.length === 0) {
+        const emptyTitle = typeof I18n !== 'undefined' ? I18n.t('collection.emptyTitle') : 'Tidak ada cerita ditemukan';
+        const emptyDesc = typeof I18n !== 'undefined' ? I18n.t('collection.emptyDescription') : 'Coba ubah filter atau kata kunci pencarian untuk menemukan cerita yang kamu cari';
+        const emptyReset = typeof I18n !== 'undefined' ? I18n.t('collection.emptyReset') : 'Reset Semua Filter';
         container.innerHTML = `
           <div class="col-span-full empty-state py-16 px-8">
             <div class="empty-state-icon">🔍</div>
-            <h3 class="text-xl font-bold text-amber-900 mb-2 text-center">Tidak ada cerita ditemukan</h3>
-            <p class="text-amber-700 mb-6 text-center max-w-md mx-auto">Coba ubah filter atau kata kunci pencarian untuk menemukan cerita yang kamu cari</p>
+            <h3 class="text-xl font-bold text-amber-900 mb-2 text-center">${emptyTitle}</h3>
+            <p class="text-amber-700 mb-6 text-center max-w-md mx-auto">${emptyDesc}</p>
             <div class="flex justify-center">
               <button onclick="document.getElementById('clearFilters').click()" class="reset-btn px-6 py-3 rounded-xl font-semibold text-sm flex items-center gap-2">
-                <span>🔄</span> Reset Semua Filter
+                <span>🔄</span> ${emptyReset}
               </button>
             </div>
           </div>

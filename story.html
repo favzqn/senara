@@ -361,6 +361,8 @@
   <!-- Footer (will be injected by footer.js) -->
   <footer id="footer-placeholder"></footer>
 
+  <script src="js/locales.js"></script>
+  <script src="js/i18n-simple.js"></script>
   <script src="js/config.js"></script>
   <script src="js/constants.js"></script>
   <script src="js/shared-utils.js"></script>
@@ -372,6 +374,15 @@
   <script src="data/learning-paths.js"></script>
   <script src="js/learning-paths-utils.js"></script>
   <script>
+    // Translation helper
+    function t(key, fallback = '') {
+      if (typeof I18n !== 'undefined' && I18n.t) {
+        const result = I18n.t(key);
+        return result !== key ? result : fallback;
+      }
+      return fallback;
+    }
+
     // Load story data
     function loadStory() {
       const storyId = getUrlParam('id');
@@ -400,10 +411,10 @@
         <div class="min-h-screen flex items-center justify-center px-4">
           <div class="text-center max-w-md">
             <div class="text-6xl mb-6">😕</div>
-            <h1 class="text-2xl font-bold text-stone-800 mb-4">${message}</h1>
-            <p class="text-stone-600 mb-8">Cerita yang kamu cari tidak ditemukan atau sudah tidak tersedia.</p>
+            <h1 class="text-2xl font-bold text-stone-800 mb-4">${t('storyPage.errorTitle', message)}</h1>
+            <p class="text-stone-600 mb-8">${t('storyPage.errorDesc', 'Cerita yang kamu cari tidak ditemukan atau sudah tidak tersedia.')}</p>
             <a href="koleksi.html" class="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 text-white rounded-xl font-semibold hover:bg-stone-700 transition">
-              ← Kembali ke Koleksi
+              ${t('storyPage.backToCollection', '← Kembali ke Koleksi')}
             </a>
           </div>
         </div>
@@ -461,9 +472,9 @@
 
       // Features HTML
       const featuresHTML = `
-        ${story.voiceActed ? '<span class="feature-badge">🎙️ Voice Acted</span>' : ''}
-        ${story.hasChoices ? '<span class="feature-badge">🔀 Multiple Paths</span>' : ''}
-        ${story.hasAchievements ? '<span class="feature-badge">🏆 Achievements</span>' : ''}
+        ${story.voiceActed ? `<span class="feature-badge">${t('storyPage.features.voiceActed', '🎙️ Voice Acted')}</span>` : ''}
+        ${story.hasChoices ? `<span class="feature-badge">${t('storyPage.features.multiplePaths', '🔀 Multiple Paths')}</span>` : ''}
+        ${story.hasAchievements ? `<span class="feature-badge">${t('storyPage.features.achievements', '🏆 Achievements')}</span>` : ''}
       `;
 
       const html = `
@@ -518,19 +529,19 @@
               <div class="grid grid-cols-4 gap-2 sm:gap-3 mb-4 sm:mb-8">
                 <div class="stat-item">
                   <div class="stat-value">⏱️ ${story.duration}</div>
-                  <div class="stat-label">Menit</div>
+                  <div class="stat-label">${t('storyPage.stats.minutes', 'Menit')}</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-value">📖 ${story.chapters}</div>
-                  <div class="stat-label">Chapter</div>
+                  <div class="stat-label">${t('storyPage.stats.chapter', 'Chapter')}</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-value">${story.age}</div>
-                  <div class="stat-label">Usia</div>
+                  <div class="stat-label">${t('storyPage.stats.age', 'Usia')}</div>
                 </div>
                 <div class="stat-item">
                   <div class="stat-value star-filled">${rating.toFixed(1)}</div>
-                  <div class="stat-label">Rating</div>
+                  <div class="stat-label">${t('storyPage.stats.rating', 'Rating')}</div>
                 </div>
               </div>
 
@@ -540,8 +551,8 @@
                   <div class="flex items-start gap-3 p-4 bg-amber-50 border border-amber-200 rounded-xl">
                     <span class="text-2xl flex-shrink-0">💾</span>
                     <div>
-                      <p class="font-semibold text-amber-900 text-sm sm:text-base">💡 Kamu bisa simpan progress kapan saja!</p>
-                      <p class="text-amber-800 text-xs sm:text-sm mt-1">Klik <strong>☰ Menu</strong> di pojok kanan bawah → pilih <strong>"Save"</strong>. Untuk lanjutkan, pilih <strong>"Load"</strong>.</p>
+                      <p class="font-semibold text-amber-900 text-sm sm:text-base">${t('storyPage.saveTip.title', '💡 Kamu bisa simpan progress kapan saja!')}</p>
+                      <p class="text-amber-800 text-xs sm:text-sm mt-1">${t('storyPage.saveTip.desc', 'Klik <strong>☰ Menu</strong> di pojok kanan bawah → pilih <strong>"Save"</strong>. Untuk lanjutkan, pilih <strong>"Load"</strong>.')}</p>
                     </div>
                   </div>
                 </div>
@@ -551,15 +562,15 @@
               ${isComingSoon ? `
                 <div class="relative">
                   <button disabled class="play-btn-hero w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-xl opacity-60 cursor-not-allowed">
-                    🔜 Segera Hadir
+                    ${t('storyPage.comingSoon', '🔜 Segera Hadir')}
                   </button>
-                  <p class="mt-3 text-stone-600 text-sm">Cerita ini sedang dalam pengembangan</p>
+                  <p class="mt-3 text-stone-600 text-sm">${t('storyPage.comingSoonDesc', 'Cerita ini sedang dalam pengembangan')}</p>
                 </div>
               ` : `
                 <button id="playBtn" class="play-btn-hero w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-xl" data-umami-event="Story play button">
                   <span class="flex items-center justify-center gap-2 sm:gap-3">
                     <span class="text-xl sm:text-2xl">▶</span>
-                    <span>Mainkan Sekarang</span>
+                    <span>${t('storyPage.playNow', 'Mainkan Sekarang')}</span>
                   </span>
                 </button>
               `}
@@ -567,7 +578,7 @@
               <!-- Scroll indicator -->
               <div class="scroll-indicator text-center mt-4 sm:mt-8 text-stone-400">
                 <span class="text-xl sm:text-2xl">↓</span>
-                <p class="text-xs sm:text-sm">Scroll untuk info lebih lanjut</p>
+                <p class="text-xs sm:text-sm">${t('storyPage.scrollMore', 'Scroll untuk info lebih lanjut')}</p>
               </div>
             </div>
           </div>
@@ -579,7 +590,7 @@
             <!-- Description Card -->
             <div class="info-card rounded-xl sm:rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8">
               <h2 class="text-2xl font-bold text-stone-800 mb-4 flex items-center gap-3">
-                <span>📖</span> Tentang Cerita Ini
+                <span>📖</span> ${t('storyPage.aboutStory', 'Tentang Cerita Ini')}
               </h2>
               <p class="text-stone-700 text-lg leading-relaxed">
                 ${story.longDescription || story.description}
@@ -595,7 +606,7 @@
             ${story.learningOutcomes && story.learningOutcomes.length > 0 ? `
               <div class="info-card rounded-xl sm:rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8">
                 <h2 class="text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3">
-                  <span>🎯</span> Yang Akan Kamu Pelajari
+                  <span>🎯</span> ${t('storyPage.learningOutcomes', 'Yang Akan Kamu Pelajari')}
                 </h2>
                 <div class="grid gap-3">
                   ${outcomesHTML}
@@ -606,7 +617,7 @@
             <!-- Credits -->
             <div class="info-card rounded-xl sm:rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8">
               <h2 class="text-2xl font-bold text-stone-800 mb-6 flex items-center gap-3">
-                <span>✨</span> Credits
+                <span>✨</span> ${t('storyPage.credits', 'Credits')}
               </h2>
               <div class="grid sm:grid-cols-2 gap-4">
                 ${story.author ? `
@@ -651,7 +662,7 @@
             <!-- Share Section -->
             <div class="info-card rounded-xl sm:rounded-2xl p-5 sm:p-8 mb-6 sm:mb-8">
               <h2 class="text-xl font-bold text-stone-800 mb-4 text-center">
-                Bagikan Cerita Ini
+                ${t('storyPage.shareStory', 'Bagikan Cerita Ini')}
               </h2>
               <div class="flex justify-center gap-4">
                 <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" class="share-btn twitter" title="Share on Twitter" data-umami-event="Story share Twitter">
@@ -667,7 +678,7 @@
                   🔗
                 </button>
               </div>
-              <p id="copyFeedback" class="text-center text-sm text-green-600 mt-3 opacity-0 transition-opacity">Link berhasil disalin!</p>
+              <p id="copyFeedback" class="text-center text-sm text-green-600 mt-3 opacity-0 transition-opacity">${t('storyPage.linkCopied', 'Link berhasil disalin!')}</p>
             </div>
 
             <!-- Bottom CTA -->
@@ -676,7 +687,7 @@
                 <button id="playBtnBottom" class="play-btn-hero w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-xl sm:rounded-2xl font-bold text-base sm:text-xl mb-4 sm:mb-6" data-umami-event="Story play button bottom">
                   <span class="flex items-center justify-center gap-2 sm:gap-3">
                     <span class="text-xl sm:text-2xl">▶</span>
-                    <span>Mainkan Sekarang</span>
+                    <span>${t('storyPage.playNow', 'Mainkan Sekarang')}</span>
                   </span>
                 </button>
               </div>
@@ -685,7 +696,7 @@
             <!-- Back Link -->
             <div class="text-center pt-8 border-t border-stone-200">
               <a href="${backLink}" class="inline-flex items-center gap-2 text-stone-600 hover:text-stone-800 font-semibold transition" data-umami-event="Story back link">
-                ← Kembali ${pathId ? 'ke Learning Path' : 'ke Koleksi'}
+                ${pathId ? t('storyPage.backToPath', '← Kembali ke Learning Path') : t('storyPage.backToCollection', '← Kembali ke Koleksi')}
               </a>
             </div>
           </div>

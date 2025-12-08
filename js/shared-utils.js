@@ -306,21 +306,48 @@ function createStoryCard(story, options = {}) {
   const emoji = getStoryEmoji(story.id);
   const statusBadge = getStatusBadge(story.status);
   
+  // Get translated content if i18n is available
+  const storyTitle = (typeof t === 'function' && t(`stories.${story.id}.title`) !== `stories.${story.id}.title`) 
+    ? t(`stories.${story.id}.title`) 
+    : story.title;
+  const storyDesc = (typeof t === 'function' && t(`stories.${story.id}.description`) !== `stories.${story.id}.description`) 
+    ? t(`stories.${story.id}.description`) 
+    : story.description;
+  
+  // Translate labels
+  const comingSoonLabel = (typeof t === 'function') ? t('story.comingSoon') || 'Segera Hadir' : 'Segera Hadir';
+  const playLabel = (typeof t === 'function') ? (t('story.playNow') || 'Mainkan').replace(' →', '') : 'Mainkan';
+  const beginnerLabel = (typeof t === 'function') ? t('story.beginner') || 'Pemula' : 'Pemula';
+  const startHereLabel = (typeof I18n !== 'undefined' && I18n.getCurrentLanguage && I18n.getCurrentLanguage() === 'en') 
+    ? '🌱 Start Here' 
+    : '🌱 Mulai dari Sini';
+  
+  // Translate difficulty
+  const difficultyKey = (story.difficulty || 'Beginner').toLowerCase();
+  const difficultyLabel = (typeof t === 'function' && t(`story.${difficultyKey}`) !== `story.${difficultyKey}`) 
+    ? t(`story.${difficultyKey}`) 
+    : story.difficulty;
+  
+  // Translate category if available
+  const categoryLabel = story.category && typeof t === 'function' && t(`categories.${story.category}`) !== `categories.${story.category}`
+    ? t(`categories.${story.category}`)
+    : story.category ? story.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : '';
+  
   card.innerHTML = `
     <div class="thumbnail-placeholder h-48 w-full relative">
       ${emoji}
       ${isComingSoon ? `<div class="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"><span class="text-white font-bold text-lg">${statusBadge}</span></div>` : ''}
-      ${story.difficulty === 'Beginner' && !isComingSoon ? `<div class="absolute top-3 left-3 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">🌱 Mulai dari Sini</div>` : ''}
+      ${story.difficulty === 'Beginner' && !isComingSoon ? `<div class="absolute top-3 left-3 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">${startHereLabel}</div>` : ''}
     </div>
     <div class="p-6 flex flex-col flex-1">
       <div class="flex items-start justify-between gap-2 mb-2">
-        <h3 class="text-xl font-bold text-amber-900 flex-1">${story.title}</h3>
-        ${isComingSoon ? `<span class="text-xs font-semibold bg-indigo-100 text-indigo-900 px-2 py-1 rounded whitespace-nowrap">Segera</span>` : ''}
+        <h3 class="text-xl font-bold text-amber-900 flex-1">${storyTitle}</h3>
+        ${isComingSoon ? `<span class="text-xs font-semibold bg-indigo-100 text-indigo-900 px-2 py-1 rounded whitespace-nowrap">${comingSoonLabel}</span>` : ''}
       </div>
-      ${showDescription ? `<p class="text-amber-700 text-sm mb-3">${story.description}</p>` : ''}
+      ${showDescription ? `<p class="text-amber-700 text-sm mb-3">${storyDesc}</p>` : ''}
       <div class="flex flex-wrap gap-2 mb-3">
         ${story.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-        ${story.category ? `<span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">📌 ${story.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</span>` : ''}
+        ${story.category ? `<span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">📌 ${categoryLabel}</span>` : ''}
       </div>
       <div class="mt-auto flex flex-col gap-3">
         ${story.collaboration ? `
@@ -333,7 +360,7 @@ function createStoryCard(story, options = {}) {
         <div class="grid grid-cols-3 gap-2 text-xs">
           <div class="p-2 rounded-xl bg-amber-50 border border-amber-100">
             <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Level</p>
-            <p class="text-sm font-semibold text-amber-900">${story.difficulty}</p>
+            <p class="text-sm font-semibold text-amber-900">${difficultyLabel}</p>
           </div>
           <div class="p-2 rounded-xl bg-amber-50 border border-amber-100">
             <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Durasi</p>
@@ -356,11 +383,11 @@ function createStoryCard(story, options = {}) {
         <div class="pt-1">
           ${isComingSoon ? `
             <button class="play-btn w-full py-3 rounded-lg font-semibold text-center block opacity-50 cursor-not-allowed" disabled>
-              🔜 Segera Hadir
+              🔜 ${comingSoonLabel}
             </button>
           ` : `
             <a href="story.html?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center block">
-              ▶ Mainkan
+              ▶ ${playLabel}
             </a>
           `}
         </div>

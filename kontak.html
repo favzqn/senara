@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontak | Senara</title>
+  <title data-i18n="contact.title">Hubungi Kami</title>
   <meta name="description" content="Hubungi tim Senara untuk pertanyaan, masukan, atau peluang kolaborasi.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -237,10 +237,10 @@
   <!-- Header -->
   <header class="page-header py-16 md:py-20 px-4">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4" data-i18n="contact.title">
         Hubungi Kami
       </h1>
-      <p class="text-lg text-amber-700 max-w-2xl mx-auto">
+      <p class="text-lg text-amber-700 max-w-2xl mx-auto" data-i18n="contact.subtitle">
         Kami senang mendengar dari kamu.
       </p>
     </div>
@@ -250,7 +250,7 @@
   <main class="py-12 md:py-16 px-4">
     <div class="page-content">
 
-      <p class="intro-text">
+      <p class="intro-text" data-i18n="contact.intro">
         Punya pertanyaan, masukan, atau sekadar ingin menyapa? Jangan ragu untuk menghubungi kami. Setiap pesan dibaca dan kami akan berusaha membalas secepat mungkin.
       </p>
 
@@ -259,11 +259,11 @@
         <!-- General Contact -->
         <div class="contact-card">
           <div class="contact-icon">✉️</div>
-          <h2>Pertanyaan Umum</h2>
-          <p>
+          <h2 data-i18n="contact.generalTitle">Pertanyaan Umum</h2>
+          <p data-i18n="contact.generalDesc">
             Untuk pertanyaan, masukan, laporan bug, atau sekadar ngobrol tentang Senara.
           </p>
-          <a href="mailto:fauzan08fauzan@gmail.com" class="contact-link" data-umami-event="Kontak email umum">
+          <a href="mailto:fauzan08fauzan@gmail.com" class="contact-link" data-umami-event="Kontak email umum" data-i18n="contact.generalButton">
             Kirim Email
           </a>
         </div>
@@ -271,11 +271,11 @@
         <!-- Contribute & Partnership -->
         <div class="contact-card partnership-card">
           <div class="contact-icon">🤝</div>
-          <h2>Kontribusi & Kemitraan</h2>
-          <p>
+          <h2 data-i18n="contact.contribTitle">Kontribusi & Kemitraan</h2>
+          <p data-i18n="contact.contribDesc">
             Ingin berkontribusi sebagai relawan atau berkolaborasi sebagai organisasi? Kunjungi halaman khusus kami.
           </p>
-          <a href="contribute.html" class="contact-link partnership-link" data-umami-event="Kontak ke contribute">
+          <a href="contribute.html" class="contact-link partnership-link" data-umami-event="Kontak ke contribute" data-i18n="contact.contribButton">
             Lihat Peluang
           </a>
         </div>
@@ -283,17 +283,17 @@
       </div>
 
       <div class="response-note">
-        <p>⏱️ Kami biasanya membalas dalam 2-3 hari kerja. Untuk pertanyaan umum, cek juga halaman <a href="faq.html" style="color: #d97706; text-decoration: underline;">FAQ</a> kami.</p>
+        <p data-i18n-html="contact.responseNote">⏱️ Kami biasanya membalas dalam 2-3 hari kerja. Untuk pertanyaan umum, cek juga halaman <a href="faq.html" style="color: #d97706; text-decoration: underline;">FAQ</a> kami.</p>
       </div>
 
       <!-- Social Links -->
       <div class="social-section">
-        <h3>Ikuti Perkembangan Senara</h3>
+        <h3 data-i18n="contact.socialTitle">Ikuti Perkembangan Senara</h3>
         <div class="social-links">
-          <a href="https://trakteer.id/senara.id" target="_blank" rel="noopener" class="social-link" data-umami-event="Kontak Trakteer">
+          <a href="https://trakteer.id/senara.id" target="_blank" rel="noopener" class="social-link" data-umami-event="Kontak Trakteer" data-i18n="contact.socialLinks.trakteer">
             🍰 Trakteer
           </a>
-          <a href="https://instagram.com/idsenara" target="_blank" rel="noopener" class="social-link" data-umami-event="Kontak Instagram">
+          <a href="https://instagram.com/idsenara" target="_blank" rel="noopener" class="social-link" data-umami-event="Kontak Instagram" data-i18n="contact.socialLinks.instagram">
             📷 Instagram
           </a>
         </div>
@@ -305,6 +305,8 @@
   <!-- Footer -->
   <footer id="footer-placeholder"></footer>
 
+  <script src="js/locales.js"></script>
+  <script src="js/i18n-simple.js"></script>
   <script src="js/config.js"></script>
   <script src="js/constants.js"></script>
   <script src="js/navbar.js"></script>

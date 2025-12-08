@@ -139,3 +139,27 @@ function getCategoryBySlug(slug) {
 function getAllCategories() {
   return allCategoriesData;
 }
+
+/**
+ * Get category with translated title
+ * Uses i18n if available, otherwise returns original
+ * @param {Object} category - Category object
+ * @returns {Object} Category with translated title
+ */
+function getTranslatedCategory(category) {
+  if (typeof I18n !== 'undefined' && I18n.isReady && I18n.isReady()) {
+    const translatedTitle = I18n.t(`categories.${category.id}`);
+    if (translatedTitle !== `categories.${category.id}`) {
+      return { ...category, title: translatedTitle };
+    }
+  }
+  return category;
+}
+
+/**
+ * Get all categories with translations
+ * @returns {Array} All category objects with translated titles
+ */
+function getAllCategoriesTranslated() {
+  return allCategoriesData.map(getTranslatedCategory);
+}
