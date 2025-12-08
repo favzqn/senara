@@ -146,12 +146,6 @@ function initPerformanceOptimizations() {
 
   // Setup scene loading indicators
   setupSceneLoadingIndicator();
-
-  // Preload critical resources
-  preloadCriticalImages([
-    'assets/hero-bg.jpg',
-    'monogatari/assets/characters/main-character.png'
-  ]);
 }
 
 // Auto-initialize on DOM ready
