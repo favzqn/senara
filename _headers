@@ -3,22 +3,26 @@
 
 # HTML files - never cache aggressively (always revalidate)
 /*.html
-  Cache-Control: no-cache, max-age=0, must-revalidate
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
 
 /
-  Cache-Control: no-cache, max-age=0, must-revalidate
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
 
 # CSS files - cache with query string busting
 /style/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 # JS files - cache with query string busting  
 /js/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 # Data files - cache with query string busting
 /data/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 # Static assets - long cache with revalidation
 /assets/*
