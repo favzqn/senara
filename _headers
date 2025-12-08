@@ -1,0 +1,35 @@
+# Cache Control Headers for Senara
+# Works with Wasmer, Netlify, Cloudflare Pages, Vercel
+
+# HTML files - never cache aggressively (always revalidate)
+/*.html
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+# CSS files - cache with query string busting
+/style/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JS files - cache with query string busting  
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Data files - cache with query string busting
+/data/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static assets - long cache with revalidation
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/favicon.ico
+  Cache-Control: public, max-age=86400
+
+/manifest.json
+  Cache-Control: public, max-age=3600
+
+# Monogatari engine and stories - moderate cache
+/monogatari/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
