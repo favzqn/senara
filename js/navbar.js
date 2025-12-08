@@ -75,23 +75,32 @@ function getLanguageToggleHTML() {
   const isEnglish = currentLang === 'en';
   
   return `
-    <div class="nav-lang-toggle" title="Switch language">
-      <button 
-        class="lang-btn ${!isEnglish ? 'active' : ''}" 
-        data-lang="id"
-        data-umami-event="Navbar lang ID"
-        aria-label="Bahasa Indonesia"
-      >
-        ID
-      </button>
-      <button 
-        class="lang-btn ${isEnglish ? 'active' : ''}" 
-        data-lang="en"
-        data-umami-event="Navbar lang EN"
-        aria-label="English"
-      >
-        EN
-      </button>
+    <div class="lang-switcher" role="group" aria-label="Language selection">
+      <div class="lang-switcher-track">
+        <span class="lang-switcher-slider" data-active="${isEnglish ? 'en' : 'id'}"></span>
+        <button 
+          class="lang-btn ${!isEnglish ? 'is-active' : ''}" 
+          data-lang="id"
+          data-umami-event="Navbar lang ID"
+          aria-label="Bahasa Indonesia"
+          aria-pressed="${!isEnglish}"
+          type="button"
+        >
+          <span class="lang-flag">🇮🇩</span>
+          <span class="lang-code">ID</span>
+        </button>
+        <button 
+          class="lang-btn ${isEnglish ? 'is-active' : ''}" 
+          data-lang="en"
+          data-umami-event="Navbar lang EN"
+          aria-label="English"
+          aria-pressed="${isEnglish}"
+          type="button"
+        >
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-code">EN</span>
+        </button>
+      </div>
     </div>
   `;
 }
@@ -213,6 +222,19 @@ function setupLanguageToggle() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const lang = btn.dataset.lang;
+      
+      // Update slider position immediately for visual feedback
+      const sliders = document.querySelectorAll('.lang-switcher-slider');
+      sliders.forEach(slider => {
+        slider.dataset.active = lang;
+      });
+      
+      // Update button states
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        const isActive = b.dataset.lang === lang;
+        b.classList.toggle('is-active', isActive);
+        b.setAttribute('aria-pressed', isActive);
+      });
       
       if (typeof I18n !== 'undefined' && I18n.setLanguage) {
         I18n.setLanguage(lang, true);

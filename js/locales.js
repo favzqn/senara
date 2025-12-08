@@ -601,7 +601,7 @@ const LOCALES = {
         }
       ],
       testimonialQuote: "\"Cerita interaktif membuat peserta lebih terlibat dibanding presentasi biasa. Mereka jadi lebih terbuka untuk diskusi karena sudah 'mengalami' situasinya lewat cerita.\"",
-      testimonialCite: "— Fasilitator Workshop Kesehatan Mental",
+      testimonialCite: "Fasilitator Workshop Kesehatan Mental",
       ctaTitle: "Tertarik Menggunakan Senara?",
       ctaDesc: "Mulai sekarang atau hubungi kami untuk diskusi lebih lanjut tentang bagaimana Senara bisa mendukung program organisasi kamu.",
       ctaPrimary: "📚 Jelajahi Koleksi",
@@ -1171,8 +1171,8 @@ const LOCALES = {
       whyTitle: "Why Stories?",
       whyParagraphs: [
         "Humans have shared stories for thousands of years. They're how we make sense of the world, pass down experiences, and share values across generations.",
-        "When you read a story, you don't just receive information—you feel what the characters feel, weigh their choices, and reflect on what you'd do in their place.",
-        "<strong>Interactive stories add another dimension:</strong> you don't just follow a journey—you shape it. That makes the experience more personal and reflective."
+        "When you read a story, you don't just receive information. You feel what the characters feel, weigh their choices, and reflect on what you'd do in their place.",
+        "<strong>Interactive stories add another dimension:</strong> you don't just follow a journey, you shape it. That makes the experience more personal and reflective."
       ],
       researchNote: "<strong>Note:</strong> We don't claim interactive stories are the best method for all learning. Every approach has strengths and limits. We believe stories work well for topics involving empathy, reflection, and decision-making.",
       principlesTitle: "Learning Principles",
@@ -1182,7 +1182,7 @@ const LOCALES = {
         { title: "🌍 Relevant Context", body: "Stories mirror real situations in Indonesia. Characters face real dilemmas readers can relate to." },
         { title: "🔄 Learn Through Consequences", body: "Every choice has an impact. Readers can see outcomes without facing those risks in real life." },
         { title: "💬 Conversation Starter", body: "Our stories are built to spark discussion. Teachers and facilitators can use them as a launchpad for deeper conversation." },
-        { title: "🎭 No 'Perfect' Ending", body: "Real life isn't binary. Stories show that every decision has trade-offs—and there's rarely a single 'correct' path." }
+        { title: "🎭 No 'Perfect' Ending", body: "Real life isn't binary. Stories show that every decision has trade-offs, and there's rarely a single 'correct' path." }
       ],
       processTitle: "How We Build Stories",
       processIntro: "Each story goes through clear steps before publishing:",
@@ -1204,19 +1204,19 @@ const LOCALES = {
         "Be transparent about our limitations",
         "Stay open to criticism and keep improving based on feedback"
       ],
-      ethicsOutro: "For mental health topics, we always include info about professional support services. Our stories raise awareness—they don't diagnose or provide therapy.",
+      ethicsOutro: "For mental health topics, we always include info about professional support services. Our stories raise awareness, not diagnose or provide therapy.",
       interactiveTitle: "Why Interactive?",
       interactiveIntro: "We chose the visual-novel format for a reason:",
       interactivePoints: [
         { title: "🧠 Active Engagement", body: "Making choices forces readers to think actively, not just consume content." },
         { title: "🔁 Safe Exploration", body: "Readers can try multiple paths and see consequences without real-world risks." },
         { title: "🎯 Personalization", body: "Everyone's journey is slightly different, making it more personal and relevant." },
-        { title: "💭 Inner Reflection", body: "Each choice is an inner question: 'What would I do?'—which sparks deep reflection." }
+        { title: "💭 Inner Reflection", body: "Each choice is an inner question: 'What would I do?' This sparks deep reflection." }
       ],
       limitsTitle: "Limitations",
       limitsIntro: "We're honest about what Senara can and cannot do:",
       limitsBullets: [
-        "<strong>Senara isn't a replacement for formal education.</strong> Our stories complement structured learning—they don't replace it.",
+        "<strong>Senara isn't a replacement for formal education.</strong> Our stories complement structured learning, not replace it.",
         "<strong>Senara isn't a mental health service.</strong> Serious issues require professional support.",
         "<strong>Our stories aren't perfect.</strong> We learn as we go. If you spot something harmful or inaccurate, please tell us."
       ],
@@ -1245,7 +1245,7 @@ const LOCALES = {
             "Quizzes and interactive elements inside stories",
             "Supplementary information and resources for each topic"
           ],
-          outro: "Senara is a <strong>nonprofit</strong> platform. Everything is free—no subscriptions or in-app purchases."
+          outro: "Senara is a <strong>nonprofit</strong> platform. Everything is free, no subscriptions or in-app purchases."
         },
         usage: {
           title: "3. Permitted Use",
@@ -1308,11 +1308,11 @@ const LOCALES = {
     donation: {
       title: "Donation Transparency",
       subtitle: "You deserve to know exactly how your support is used.",
-      highlight: "100% of Senara stories are free for everyone. Donations keep the platform running—not to lock content behind a paywall.",
+      highlight: "100% of Senara stories are free for everyone. Donations keep the platform running, not to lock content behind a paywall.",
       whyTitle: "Why Nonprofit?",
       whyParagraphs: [
         "Senara started with a belief: meaningful experiences shouldn’t depend on someone’s financial situation.",
-        "We don’t have investors demanding profit or revenue targets to hit. That freedom lets us focus on what matters—creating stories that genuinely help people.",
+        "We don’t have investors demanding profit or revenue targets to hit. That freedom lets us focus on what matters: creating stories that genuinely help people.",
         "Being nonprofit also means we don’t have to sell user data or plaster the site with ads. Reading stays clean and focused."
       ],
       usageTitle: "How Do We Use Donations?",
@@ -1356,7 +1356,7 @@ const LOCALES = {
         }
       },
       gratitudeTitle: "🙏 Thank You",
-      gratitudeP1: "To everyone who supports Senara—through donations, sharing, or simply reading—thank you.",
+      gratitudeP1: "To everyone who supports Senara through donations, sharing, or simply reading: thank you.",
       gratitudeP2: "Every bit of support helps us keep creating meaningful stories for more people.",
       gratitudeCta: "🍰 Support via Trakteer"
     },
@@ -1473,7 +1473,7 @@ const LOCALES = {
       title: "Safety & Support",
       subtitle: "A guide to staying emotionally safe while exploring Senara.",
       disclaimerTitle: "⚠️ Important Reminder",
-      disclaimerBody: "<strong>Senara is not a substitute for professional mental health care.</strong> Our stories aim to raise literacy and awareness—not to diagnose, treat, or provide therapy. If you’re experiencing mental health challenges, please reach out to a professional.",
+      disclaimerBody: "<strong>Senara is not a substitute for professional mental health care.</strong> Our stories aim to raise literacy and awareness, not to diagnose, treat, or provide therapy. If you’re experiencing mental health challenges, please reach out to a professional.",
       whenHelpTitle: "When to Reach Out for Help",
       whenHelpIntro: "Reading sensitive topics can stir up strong feelings. That’s normal. Still, there are moments when talking to a trained professional is the best next step.",
       whenHelpListTitle: "Contact professional support right away if you:",
@@ -1485,7 +1485,7 @@ const LOCALES = {
         "Rely on alcohol or other substances to numb your feelings",
         "Feel that a story is too heavy and it affects your daily life"
       ],
-      whenHelpOutro: "Asking for help is a sign of strength—not weakness.",
+      whenHelpOutro: "Asking for help is a sign of strength, not weakness.",
       hotlinesTitle: "Support Services in Indonesia",
       hotlinesIntro: "Here are trusted organizations you can contact whenever you need support:",
       hotlines: {
@@ -1518,7 +1518,7 @@ const LOCALES = {
       safeTipsTitle: "Tips for Reading Sensitive Stories",
       safeTipsIntro: "Some Senara stories explore heavy topics. These tips can help you take care of your emotional wellbeing:",
       safeTips: [
-        "<strong>Pause whenever you need.</strong> If a story feels too intense, you don’t have to finish it. Take a break—or stop entirely.",
+        "<strong>Pause whenever you need.</strong> If a story feels too intense, you don’t have to finish it. Take a break, or stop entirely.",
         "<strong>Watch the content warnings.</strong> Sensitive stories include a warning at the beginning. Read it first before you continue.",
         "<strong>Set the right moment.</strong> Choose a comfortable time and place. Avoid reading when you’re exhausted or emotionally drained.",
         "<strong>Talk to someone.</strong> After a heavy story, sharing how you feel with a friend, family member, or trusted person can help.",
@@ -1566,7 +1566,7 @@ const LOCALES = {
           ],
           note: "All data is aggregate and anonymous. We can’t identify individual users from it.",
           whyTitle: "Why we use analytics",
-          whyBody: "To understand which stories resonate most, which pages need improvement, and how people discover Senara—so we can build better experiences."
+          whyBody: "To understand which stories resonate most, which pages need improvement, and how people discover Senara, so we can build better experiences."
         },
         cookies: {
           title: "3. Cookies & Local Storage",
@@ -1617,7 +1617,7 @@ const LOCALES = {
     partner: {
       title: "For Organizations & Communities",
       subtitle: "How schools, NGOs, and community groups can use Senara.",
-      intro: "Senara is designed for anyone—including organizations that want to deliver important messages through interactive stories. Here’s how different groups can leverage our platform.",
+      intro: "Senara is designed for anyone, including organizations that want to deliver important messages through interactive stories. Here’s how different groups can leverage our platform.",
       audienceTitle: "Who Can Use Senara?",
       audiences: {
         schools: {
@@ -1666,7 +1666,7 @@ const LOCALES = {
       useCases: [
         {
           title: "Read Together in Class/Workshop",
-          body: "Project the story and vote on choices together. Every branch becomes a discussion point—perfect for 30–60 minute sessions.",
+          body: "Project the story and vote on choices together. Every branch becomes a discussion point. Perfect for 30–60 minute sessions.",
           icon: "📱"
         },
         {
@@ -1691,7 +1691,7 @@ const LOCALES = {
         }
       ],
       stepsTitle: "How to Get Started",
-      stepsIntro: "No registration or special approval needed—just follow these steps:",
+      stepsIntro: "No registration or special approval needed. Just follow these steps:",
       steps: [
         { title: "Choose a Story", body: "Browse the collection and pick a story that fits your program’s topic." },
         { title: "Preview First", body: "Read it yourself to ensure it suits your audience." },
@@ -1701,7 +1701,7 @@ const LOCALES = {
       benefitsTitle: "Why Use Senara?",
       benefits: [
         { title: "100% Free", body: "No licensing fees or subscriptions", icon: "💰" },
-        { title: "Easy Access", body: "Runs in any browser—no app installs", icon: "📱" },
+        { title: "Easy Access", body: "Runs in any browser, no app installs", icon: "📱" },
         { title: "Engaging", body: "Interactive format keeps attention", icon: "🎯" },
         { title: "Discussion-Friendly", body: "Choices turn into meaningful conversation", icon: "💬" },
         { title: "Safe", body: "No logins, no data collection", icon: "🔒" },
@@ -1718,7 +1718,7 @@ const LOCALES = {
         }
       ],
       testimonialQuote: "\"Interactive stories make participants far more engaged than traditional presentations. They open up because they’ve already ‘experienced’ the situation.\"",
-      testimonialCite: "— Mental Health Workshop Facilitator",
+      testimonialCite: "Mental Health Workshop Facilitator",
       ctaTitle: "Ready to Use Senara?",
       ctaDesc: "Start today or reach out so we can discuss how Senara supports your programs.",
       ctaPrimary: "📚 Explore Collection",
