@@ -19,6 +19,10 @@ const CONSTANTS = {
   // Story emojis
   EMOJIS: {
     'pahlawan-kesehatan-mental': '🧠',
+    'dompet-kosong-mimpi-penuh': '💰',
+    'jika-maka-maka-jika-debug-hidupku': '💻',
+    'batik-cahaya-majapahit': '🎨',
+    'kode-angkasa-lestari': '🔐',
     logic101: '💻',
     friendship: '🤝',
     resilience: '🌱',

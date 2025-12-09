@@ -3,19 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Senara</title>
+  <title>Senara - Belajar Lewat Cerita</title>
+  <meta name="description" content="Platform visual novel edukatif Indonesia. Belajar tentang kesehatan mental, pengembangan diri, dan topik penting lainnya melalui cerita interaktif yang menarik.">
+  <meta name="keywords" content="visual novel, edukasi, kesehatan mental, cerita interaktif, pembelajaran, Indonesia">
+  <meta name="author" content="Senara Team">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://senara.id/">
+  <meta property="og:title" content="Senara - Belajar Lewat Cerita yang Hidup">
+  <meta property="og:description" content="Platform visual novel edukatif Indonesia. Belajar tentang kesehatan mental, pengembangan diri, dan topik penting lainnya melalui cerita interaktif.">
+  <meta property="og:image" content="https://senara.id/assets/og-image.png">
+  <meta property="og:locale" content="id_ID">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://senara.id/">
+  <meta name="twitter:title" content="Senara - Belajar Lewat Cerita yang Hidup">
+  <meta name="twitter:description" content="Platform visual novel edukatif Indonesia. Belajar tentang kesehatan mental, pengembangan diri, dan topik penting lainnya melalui cerita interaktif.">
+  <meta name="twitter:image" content="https://senara.id/assets/og-image.png">
+  
+  <!-- Preconnect to external resources for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="style/story-cards.css?v=1.0.1" rel="stylesheet">
-  <link href="style/home.css?v=1.0.1" rel="stylesheet">
-  <link href="style/performance.css?v=1.0.1" rel="stylesheet">
+  <link href="style/story-cards.css?v=1.0.2" rel="stylesheet">
+  <link href="style/home.css?v=1.0.2" rel="stylesheet">
+  <link href="style/performance.css?v=1.0.2" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
 </head>
 <body class="bg-amber-50">
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
+
   <!-- Navigation (will be injected by navbar.js) -->
   <nav id="navbar-placeholder"></nav>
 
   <!-- Hero Section -->
+  <main id="main-content">
   <section class="hero-shell min-h-auto flex items-center justify-center px-4 py-12 md:py-16 relative">
     <!-- Animated blobs -->
     <div class="hero-blob hero-blob--one"></div>
@@ -397,385 +423,21 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer (will be injected by footer.js) -->
   <footer id="footer-placeholder"></footer>
 
-  <script src="js/locales.js?v=1.0.1"></script>
-  <script src="js/i18n-simple.js?v=1.0.1"></script>
-  <script src="js/config.js?v=1.0.1"></script>
-  <script src="js/constants.js?v=1.0.1"></script>
-  <script src="js/shared-utils.js?v=1.0.1"></script>
-  <script src="js/performance-utils.js?v=1.0.1"></script>
-  <script src="js/navbar.js?v=1.0.1"></script>
-  <script src="js/footer.js?v=1.0.1"></script>
-  <script src="data/stories.js?v=1.0.1"></script>
-  <script src="data/categories.js?v=1.0.1"></script>
-  <!-- <script src="https://cdn.counter.dev/script.js" data-id="af8cab5a-f3b9-4717-8058-68e00f4f917c" data-utcoffset="7"></script> -->
-  <script>
-
-    // Load and render categories on page load
-    function renderCategories() {
-      const container = document.getElementById('categoryCarousel');
-      container.innerHTML = '';
-      
-      // Use translated categories if available
-      const categories = typeof getAllCategoriesTranslated === 'function' 
-        ? getAllCategoriesTranslated() 
-        : allCategoriesData;
-      
-      categories.forEach((category, index) => {
-        const link = document.createElement('a');
-        link.href = `koleksi.html?category=${category.id}`;
-        link.className = 'category-chip hover:no-underline';
-        link.dataset.umamiEvent = `Home category ${category.title}`;
-        
-        link.innerHTML = `
-          <div class="chip-icon" style="background: ${category.color}">${category.icon}</div>
-          <span class="chip-label">${category.title}</span>
-        `;
-        
-        container.appendChild(link);
-      });
-    }
-
-    // Featured stories data with metadata
-    let featuredStoriesData = [];
-
-    // Create featured story card - new modern design
-    function createFeaturedCard(story, index = 0) {
-      const emoji = getStoryEmoji(story.id);
-      const isComingSoon = story.status === 'coming-soon';
-      const isFirst = index === 0;
-      
-      // Get translated labels
-      const minutesLabel = t('story.minutes') || 'menit';
-      const playNowLabel = t('story.playNow') || 'Mainkan Sekarang →';
-      const comingSoonLabel = t('story.comingSoon') || 'Segera Hadir';
-      const editorsPickLabel = t('story.editorsPick') || "Editor's Pick";
-      
-      // Translate difficulty
-      const difficultyKey = (story.difficulty || 'Beginner').toLowerCase();
-      const difficultyLabel = t(`story.${difficultyKey}`) || story.difficulty || 'Beginner';
-      
-      // Get translated story title and description
-      const storyTitle = t(`stories.${story.id}.title`) || story.title;
-      const storyDesc = t(`stories.${story.id}.description`) || story.description;
-      
-      const card = document.createElement('a');
-      card.href = isComingSoon ? '#' : `story.html?id=${story.id}`;
-      card.className = `featured-card-v2 ${isFirst ? 'featured-card-hero' : ''}`;
-      card.dataset.storyId = story.id;
-      if (!isComingSoon) {
-        card.dataset.umamiEvent = `Featured play ${story.id}`;
-      }
-      
-      card.innerHTML = `
-        <div class="featured-card-visual">
-          <span class="featured-card-emoji">${emoji}</span>
-          ${isFirst ? `<span class="featured-card-badge">⭐ ${editorsPickLabel}</span>` : ''}
-          ${isComingSoon ? `<span class="featured-card-badge featured-card-badge-soon">${comingSoonLabel}</span>` : ''}
-        </div>
-        <div class="featured-card-body">
-          <div class="featured-card-tags">
-            <span class="featured-tag">${difficultyLabel}</span>
-            <span class="featured-tag-dot">•</span>
-            <span class="featured-tag">${story.duration || '30'} ${minutesLabel}</span>
-          </div>
-          <h3 class="featured-card-name">${storyTitle}</h3>
-          ${storyDesc ? `<p class="featured-card-desc">${storyDesc}</p>` : ''}
-          <div class="featured-card-footer">
-            <span class="featured-card-cta">
-              ${isComingSoon ? comingSoonLabel : playNowLabel}
-            </span>
-          </div>
-        </div>
-      `;
-      
-      if (isComingSoon) {
-        card.style.pointerEvents = 'none';
-        card.style.opacity = '0.7';
-      }
-      
-      return card;
-    }
-
-    // Load featured stories with filtering
-    function loadFeaturedStories() {
-      const featured = allStoriesData.filter(story => story.featured);
-      featuredStoriesData = featured;
-      
-      // Sort by creation date (newest first) and mark first as spotlight
-      const sorted = featured.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
-      
-      renderFeaturedCards(sorted);
-    }
-
-    // Render featured cards
-    function renderFeaturedCards(stories) {
-      const container = document.getElementById('featuredContainer');
-      container.innerHTML = '';
-      
-      // Limit to 4 stories for clean grid
-      const displayStories = stories.slice(0, 4);
-      
-      displayStories.forEach((story, index) => {
-        const card = createFeaturedCard(story, index);
-        container.appendChild(card);
-      });
-    }
-
-    // Setup filter pills
-    function setupFeaturedFilters() {
-      const filterPills = document.querySelectorAll('.filter-pill');
-      
-      filterPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          // Update active state
-          filterPills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-          
-          const filterValue = pill.dataset.filter;
-          let filtered = featuredStoriesData;
-          
-          if (filterValue === 'newest') {
-            filtered = [...featuredStoriesData].sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
-          } else if (filterValue === 'popular') {
-            filtered = [...featuredStoriesData].sort((a, b) => (b.plays || 0) - (a.plays || 0));
-          } else if (filterValue === 'kids') {
-            filtered = featuredStoriesData.filter(s => s.age && s.age.includes('5-8'));
-          } else if (filterValue === 'teen') {
-            filtered = featuredStoriesData.filter(s => s.age && s.age.includes('13+'));
-          }
-          
-          renderFeaturedCards(filtered);
-        });
-      });
-    }
-
-
-    function setupContributionAccordion() {
-      const items = document.querySelectorAll('.contrib-item');
-      items.forEach(item => {
-        const trigger = item.querySelector('.contrib-trigger');
-        const panel = item.querySelector('.contrib-panel');
-
-        trigger.addEventListener('click', () => {
-          const isActive = item.classList.contains('active');
-          items.forEach(i => {
-            i.classList.remove('active');
-            const p = i.querySelector('.contrib-panel');
-            if (p) p.style.maxHeight = null;
-          });
-
-          if (!isActive) {
-            item.classList.add('active');
-            if (panel) panel.style.maxHeight = panel.scrollHeight + 'px';
-          }
-        });
-      });
-
-      // Expand first item by default
-      if (items.length) {
-        items[0].classList.add('active');
-        const firstPanel = items[0].querySelector('.contrib-panel');
-        if (firstPanel) firstPanel.style.maxHeight = firstPanel.scrollHeight + 'px';
-      }
-    }
-
-    // Load featured stories on page load
-    document.addEventListener('DOMContentLoaded', () => {
-      initNavbar('home');
-      initFooter();
-      loadFeaturedStories();
-      setupFeaturedFilters();
-      renderCategories();
-      setupCategoryToggle();
-      setupComparisonToggle();
-      setupTestimonialSlider();
-      setupContributionAccordion();
-    });
-
-    function setupCategoryToggle() {
-      const grid = document.getElementById('learningCategoryGrid');
-      const toggleBtn = document.getElementById('categoryToggleBtn');
-
-      if (!grid || !toggleBtn) return;
-
-      toggleBtn.addEventListener('click', () => {
-        const isCollapsed = grid.classList.toggle('collapsed');
-        toggleBtn.dataset.state = isCollapsed ? 'collapsed' : 'expanded';
-        toggleBtn.textContent = isCollapsed ? 'Tampilkan lebih banyak' : 'Tampilkan lebih sedikit';
-      });
-    }
-
-    // Comparison toggle for Why VN section
-    function setupComparisonToggle() {
-      const toggleBtns = document.querySelectorAll('.comparison-toggle button');
-      const comparisons = document.querySelectorAll('.benefit-comparison');
-      const benefitCards = document.querySelectorAll('.benefit-card');
-
-      // Mode key mapping for translation keys
-      const getModeKey = (mode) => {
-        const map = { 'vn': 'VN', 'pdf': 'PDF', 'socmed': 'Socmed', 'youtube': 'Youtube' };
-        return map[mode] || 'VN';
-      };
-
-      // Icon mapping (not translated)
-      const icons = {
-        1: { vn: '📖', pdf: '📄', socmed: '📱', youtube: '▶️' },
-        2: { vn: '🎮', pdf: '📋', socmed: '👍', youtube: '⏸️' },
-        3: { vn: '❤️', pdf: '💼', socmed: '⏰', youtube: '😮' }
-      };
-
-      // Update card content based on mode using translations
-      const updateCards = (mode) => {
-        const modeKey = getModeKey(mode);
-        
-        benefitCards.forEach(card => {
-          const cardNum = card.dataset.benefit;
-          const iconElement = card.querySelector('.benefit-icon');
-          const statElement = card.querySelector('.benefit-stat');
-          const titleElement = card.querySelector('h3');
-          const descElement = card.querySelector('p');
-
-          if (iconElement && icons[cardNum]) {
-            iconElement.textContent = icons[cardNum][mode];
-          }
-
-          if (statElement) {
-            statElement.textContent = t(`whyVN.stat${cardNum}${modeKey}`);
-          }
-
-          if (titleElement) {
-            titleElement.textContent = t(`whyVN.title${cardNum}${modeKey}`);
-          }
-
-          if (descElement) {
-            descElement.textContent = t(`whyVN.desc${cardNum}${modeKey}`);
-          }
-        });
-      };
-
-      toggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const mode = btn.dataset.mode;
-          
-          // Update active button
-          toggleBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          
-          // Update comparison text visibility
-          comparisons.forEach(comp => {
-            if (comp.dataset.mode === mode) {
-              comp.classList.add('show');
-            } else {
-              comp.classList.remove('show');
-            }
-          });
-
-          // Update card content with translations
-          updateCards(mode);
-        });
-      });
-
-      // Show VN comparisons by default and update cards with translations
-      comparisons.forEach(comp => {
-        if (comp.dataset.mode === 'vn') {
-          comp.classList.add('show');
-        }
-      });
-      
-      // Initial update with translations
-      updateCards('vn');
-    }
-
-    // Testimonial carousel - feedback from early users
-    function getTestimonials() {
-      return [
-        {
-          quote: `"${t('testimonials.teacher.quote')}"`,
-          author: t('testimonials.teacher.author'),
-          role: t('testimonials.teacher.role'),
-          avatar: '👩‍🏫'
-        },
-        {
-          quote: `"${t('testimonials.reader.quote')}"`,
-          author: t('testimonials.reader.author'),
-          role: t('testimonials.reader.role'),
-          avatar: '👦'
-        },
-        {
-          quote: `"${t('testimonials.facilitator.quote')}"`,
-          author: t('testimonials.facilitator.author'),
-          role: t('testimonials.facilitator.role'),
-          avatar: '👩‍💼'
-        }
-      ];
-    }
-    
-    let testimonials = [];
-
-    let currentTestimonialIndex = 0;
-
-    function setupTestimonialSlider() {
-      // Initialize testimonials with translations
-      testimonials = getTestimonials();
-      
-      const dots = document.querySelectorAll('.testimonial-dot');
-      const content = document.getElementById('testimonialContent');
-
-      if (!dots.length || !content) return;
-      
-      // Initial render
-      updateTestimonial();
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          const index = parseInt(dot.dataset.index);
-          currentTestimonialIndex = index;
-          updateTestimonial();
-        });
-      });
-
-      // Auto-rotate every 5 seconds
-      setInterval(() => {
-        currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-        updateTestimonial();
-      }, 5000);
-    }
-
-    function updateTestimonial() {
-      const content = document.getElementById('testimonialContent');
-      const dots = document.querySelectorAll('.testimonial-dot');
-      const testimonial = testimonials[currentTestimonialIndex];
-
-      if (content) {
-        content.innerHTML = `
-          <div class="testimonial-avatar">${testimonial.avatar}</div>
-          <p class="testimonial-quote">${testimonial.quote}</p>
-          <p class="testimonial-author">${testimonial.author}</p>
-          <p class="testimonial-role">${testimonial.role}</p>
-        `;
-      }
-
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentTestimonialIndex);
-      });
-    }
-
-    // Load featured stories on page load
-    document.addEventListener('DOMContentLoaded', () => {
-      initNavbar('home');
-      initFooter();
-      renderCategories();
-      loadFeaturedStories();
-      setupFeaturedFilters();
-      setupCategoryToggle();
-      setupComparisonToggle();
-      setupTestimonialSlider();
-      setupContributionAccordion();
-    });
-  </script>
+  <script src="js/locales.js?v=1.0.2"></script>
+  <script src="js/i18n-simple.js?v=1.0.2"></script>
+  <script src="js/config.js?v=1.0.2"></script>
+  <script src="js/constants.js?v=1.0.2"></script>
+  <script src="js/shared-utils.js?v=1.0.2"></script>
+  <script src="js/performance-utils.js?v=1.0.2"></script>
+  <script src="js/navbar.js?v=1.0.2"></script>
+  <script src="js/footer.js?v=1.0.2"></script>
+  <script src="data/stories.js?v=1.0.2"></script>
+  <script src="data/categories.js?v=1.0.2"></script>
+  <script src="js/home-page.js?v=1.0.2"></script>
 </body>
 </html>
