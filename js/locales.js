@@ -847,8 +847,8 @@ const LOCALES = {
         title: "Pahlawan Kesehatan Mental",
         description: "Temani Vani menghadapi tantangan emosional dan temukan kekuatan sejati dalam menjaga kesehatan mental."
       },
-      "jika-maka-maka-jika-debug-hidupku": {
-        title: "Jika Maka, Maka Jika ~Debug Hidupku",
+      "koding-gak-sesulit-itu-kok": {
+        title: "Koding Gak Sesulit Itu, Kok",
         description: "Pelajari dasar-dasar pemrograman: if-else, looping, variabel, dan debugging melalui cerita yang relatable."
       },
       "batik-cahaya-majapahit": {
@@ -946,6 +946,10 @@ const LOCALES = {
       bioCTO: "6+ tahun di tech companies across Australia, Singapore, US, dan Jepang. Membangun produk yang digunakan ratusan ribu users.",
       bioCOO: "Mengelola talent development untuk 50K+ karyawan di holding BUMN. Lulusan terbaik fakultas. Background L&D dan corporate learning.",
       viewLinkedIn: "Lihat LinkedIn →",
+      creativeTitle: "Desainer & Penulis Cerita",
+      roleDesigner: "Designer & Story Writer",
+      bioPrim: "Kreator visual dengan 4+ tahun pengalaman di branding, social media, dan multimedia. Juru bahasa isyarat Indonesia (BISINDO) bersertifikat. Pernah mengelola akun sosmed dengan engagement tinggi dan memproduksi podcast. Aktif di komunitas Tuli melalui Fantasi Tuli dan GKI Pondok Indah.",
+      jobPrim: "Silang.id · Freelance Graphic Designer & Illustrator · BISINDO Interpreter",
       valuesTitle: "Nilai yang Kami Pegang",
       val1Title: "Gratis untuk Semua",
       val1Desc: "Tidak ada paywall, tidak ada konten eksklusif",
@@ -1932,6 +1936,10 @@ const LOCALES = {
       bioCTO: "6+ years in tech companies across Australia, Singapore, the US, and Japan. Built products used by hundreds of thousands of users.",
       bioCOO: "Led talent development for 50K+ employees at a state-owned enterprise holding company. Psychology background in L&D and corporate learning.",
       viewLinkedIn: "View LinkedIn →",
+      creativeTitle: "Designers & Story Writers",
+      roleDesigner: "Designer & Story Writer",
+      bioPrim: "Visual creator with 4+ years in branding, social media, and multimedia. Certified Indonesian Sign Language (BISINDO) interpreter. Managed high-engagement social accounts and produced podcasts. Active in Deaf community through Fantasi Tuli theater and GKI Pondok Indah.",
+      jobPrim: "Silang.id · Freelance Graphic Designer & Illustrator · BISINDO Interpreter",
       valuesTitle: "Our Values",
       val1Title: "Free for Everyone",
       val1Desc: "No paywalls, no exclusive content",
