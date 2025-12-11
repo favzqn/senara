@@ -819,17 +819,13 @@ const LOCALES = {
     },
     // Categories
     categories: {
-      "mental-health-wellbeing": "Kesehatan Mental",
-      "personal-growth-life-skills": "Pengembangan Diri",
-      "health-fitness-lifestyle": "Kesehatan & Gaya Hidup",
-      "career-tech-professional": "Karier & Teknologi",
-      "relationships": "Hubungan & Relasi",
-      "youth-education": "Remaja & Pendidikan",
-      "social-issues-humanity": "Isu Sosial & Kemanusiaan",
-      "money-financial-literacy": "Keuangan & Literasi",
-      "culture-history-folklore": "Budaya & Sejarah",
-      "spirituality-self-reflection": "Spiritualitas & Refleksi",
-      "digital-life-internet-safety": "Kehidupan Digital"
+      "mind-emotions": "Pikiran & Emosi",
+      "self-awareness-identity": "Kesadaran Diri & Identitas",
+      "relationships-social": "Hubungan & Dinamika Sosial",
+      "digital-life-online": "Kehidupan Digital & Identitas Online",
+      "college-work-adulthood": "Kuliah, Kerja & Dewasa Muda",
+      "social-issues": "Isu Sosial",
+      "money-young-adult-life": "Uang & Kehidupan Dewasa Muda"
     },
     // Story card labels
     story: {
@@ -2041,17 +2037,13 @@ const LOCALES = {
     },
     // Categories
     categories: {
-      "mental-health-wellbeing": "Mental Health",
-      "personal-growth-life-skills": "Personal Growth",
-      "health-fitness-lifestyle": "Health & Lifestyle",
-      "career-tech-professional": "Career & Technology",
-      "relationships": "Relationships",
-      "youth-education": "Youth & Education",
-      "social-issues-humanity": "Social Issues & Humanity",
-      "money-financial-literacy": "Finance & Literacy",
-      "culture-history-folklore": "Culture & History",
-      "spirituality-self-reflection": "Spirituality & Reflection",
-      "digital-life-internet-safety": "Digital Life"
+      "mind-emotions": "Mind & Emotions",
+      "self-awareness-identity": "Self-Awareness & Identity",
+      "relationships-social": "Relationships & Social Dynamics",
+      "digital-life-online": "Digital Life & Online Identity",
+      "college-work-adulthood": "College, Work & Early Adulthood",
+      "social-issues": "Social Issues",
+      "money-young-adult-life": "Money & Young Adult Life"
     },
     // Story card labels
     story: {
