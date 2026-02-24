@@ -83,17 +83,11 @@ function showError(message) {
 function renderStory(story) {
   const emoji = getStoryEmoji(story.id);
   const pathId = getUrlParam('path');
-  const pathInfo = pathId ? getLearningPathById(pathId) : null;
-  const pathStoryInfo = pathId ? getStoryInPath(pathId, story.id) : null;
   const isComingSoon = story.status === 'coming-soon';
   const category = story.category ? getCategoryById(story.category) : null;
-
-  // Generate rating stars
   const rating = story.rating || 0;
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 >= 0.5;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-  const starsHTML = '★'.repeat(fullStars) + (hasHalfStar ? '½' : '') + '☆'.repeat(emptyStars);
+  const backLink = pathId ? `path-detail.html?id=${pathId}` : 'koleksi.html';
+  const pathBannerHTML = pathId ? `<div class="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-700"><strong>📚 Learning Path:</strong> Bagian dari jalur pembelajaran</div>` : '';
 
   // Difficulty class
   const difficultyClass = {
@@ -101,25 +95,6 @@ function renderStory(story) {
     'Intermediate': 'difficulty-intermediate',
     'Advanced': 'difficulty-advanced'
   }[story.difficulty] || '';
-
-  // Path context
-  let pathBannerHTML = '';
-  let backLink = 'koleksi.html';
-  if (pathInfo && pathStoryInfo) {
-    backLink = `path-detail.html?id=${pathId}`;
-    const progress = getPathProgress(pathId);
-    pathBannerHTML = `
-      <div class="path-banner rounded-xl p-4 mb-6">
-        <div class="flex items-center gap-3">
-          <span class="text-2xl">📚</span>
-          <div>
-            <p class="font-semibold text-stone-800">${pathInfo.title}</p>
-            <p class="text-sm text-stone-600">Chapter ${pathStoryInfo.order} of ${pathInfo.storyDetails.length} • Progress: ${progress.completed}/${progress.total}</p>
-          </div>
-        </div>
-      </div>
-    `;
-  }
 
   // Learning outcomes HTML
   const outcomesHTML = story.learningOutcomes ? story.learningOutcomes.map((outcome, i) => `

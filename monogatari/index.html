@@ -8,7 +8,7 @@
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; script-src 'self' 'unsafe-eval'">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cloud.umami.is">
 		<meta name="description" content=""> <!--Page description. No longer than 155 characters.-->
 		<meta name="keywords" content="">
 		<meta name="author" content=""> <!--Name of the author.-->
@@ -86,16 +86,12 @@
 		<script src="./js/storage.js"></script>
 		<script src="./js/analytics.js"></script>
 		<script src="./js/quiz-analytics.js"></script>
+		
+		<!-- Story loader - must load BEFORE main.js -->
+		<script src="./js/story-loader.js"></script>
+		
+		<!-- Main initialization - waits for story to load -->
 		<script src="./js/main.js"></script>
-
-		<!-- Story-specific modules (loaded in order) -->
-		<script src="./stories/pahlawan-kesehatan-mental/chapter-1.js"></script>
-		<script src="./stories/pahlawan-kesehatan-mental/chapter-2.js"></script>
-		<script src="./stories/pahlawan-kesehatan-mental/chapter-3.js"></script>
-		<script src="./stories/pahlawan-kesehatan-mental/chapter-4.js"></script>
-		<script src="./stories/pahlawan-kesehatan-mental/chapter-5.js"></script>
-		<script src="./stories/pahlawan-kesehatan-mental/index.js"></script>
-		<!-- <script src="./stories/kesabaran-ramadhan/kesabaran-ramadhan.js"></script> -->
 
 	</head>
 

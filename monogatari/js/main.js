@@ -26,33 +26,16 @@
 const { $_ready, $_ } = Monogatari;
 
 // 1. Outside the $_ready function:
+// Story loading is handled by story-loader.js
 
-// Get story ID from URL parameter (from Senara platform)
-function getStoryFromURL() {
-	const params = new URLSearchParams(window.location.search);
-	return params.get('story');
-}
-
-// Load story script dynamically
-function loadStoryScript(storyId) {
-	if (storyId) {
-		const script = document.createElement('script');
-		script.src = `./stories/${storyId}.js`;
-		script.onerror = function() {
-			console.error('Failed to load story script:', storyId);
-		};
-		document.head.appendChild(script);
-	}
-}
-
-// Load story if coming from Senara
-const storyId = getStoryFromURL();
-if (storyId) {
-	loadStoryScript(storyId);
-}
-
-$_ready (() => {
+$_ready (async () => {
 	// 2. Inside the $_ready function:
+	
+	// Wait for story scripts to load before initializing
+	if (window.storyLoadPromise) {
+		await window.storyLoadPromise;
+		console.log('Story scripts loaded, initializing Monogatari...');
+	}
 
 	monogatari.init ('#monogatari').then (() => {
 		// 3. Inside the init function:

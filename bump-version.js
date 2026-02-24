@@ -36,6 +36,7 @@ const HTML_FILES = [
   'story.html',
   'terms.html',
   'tim.html',
+  'tv.html',
   'untuk-organisasi.html',
 ];
 
