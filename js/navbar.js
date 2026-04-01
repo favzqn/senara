@@ -35,6 +35,12 @@ function getNavItems() {
       event: 'Navbar Koleksi' 
     },
     { 
+      href: 'tv.html', 
+      label: getText('nav.tv', 'Senara TV'), 
+      id: 'tv', 
+      event: 'Navbar TV' 
+    },
+    { 
       href: 'about.html', 
       label: getText('nav.about', 'Tentang'), 
       id: 'about', 
@@ -271,3 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenuToggle();
   }
 });
+
+// Register platform service worker for offline support + faster repeat visits
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').catch(() => {});
+  });
+}

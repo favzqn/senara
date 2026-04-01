@@ -102,7 +102,9 @@ const I18n = (function() {
     document.documentElement.lang = currentLanguage;
     isInitialized = true;
     
-    console.log(`i18n: Language set to "${currentLanguage}"`);
+    if (typeof CONFIG !== 'undefined' && CONFIG.features?.enableDebug) {
+      console.log(`i18n: Language set to "${currentLanguage}"`);
+    }
   }
   
   /**
