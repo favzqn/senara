@@ -220,7 +220,16 @@
     RESULT = getResult();
 
     bg.src = BASE + '1.jpg';
+    screen.setAttribute('tabindex', '0');
+    screen.setAttribute('role', 'button');
+    screen.setAttribute('aria-label', 'Story demo — click or press Enter to advance');
     screen.addEventListener('click', onClick);
+    screen.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        onClick();
+      }
+    });
 
     var demoEl = document.getElementById('vnDemo');
     if ('IntersectionObserver' in window && demoEl) {

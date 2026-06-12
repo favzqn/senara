@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://senara.id/faq.html">
   <meta property="og:title" content="FAQ | Senara">
   <meta property="og:description" content="Frequently asked questions about Senara. Find answers about usage, privacy, and how to support the platform.">
-  <meta property="og:image" content="https://senara.id/assets/og-image.png">
+  <meta property="og:image" content="https://senara.id/assets/og-image.svg">
   <meta property="og:locale" content="id_ID">
   <meta property="og:site_name" content="Senara">
 
@@ -22,7 +22,7 @@
   <meta name="twitter:url" content="https://senara.id/faq.html">
   <meta name="twitter:title" content="FAQ | Senara">
   <meta name="twitter:description" content="Frequently asked questions about Senara. Find answers about usage, privacy, and how to support the platform.">
-  <meta name="twitter:image" content="https://senara.id/assets/og-image.png">
+  <meta name="twitter:image" content="https://senara.id/assets/og-image.svg">
   <meta name="twitter:image:alt" content="Senara - Learn Through Stories">
 
   <link href="style/tailwind.min.css?v=1.0.5" rel="stylesheet">
@@ -33,216 +33,10 @@
   <link href="style/home.css?v=1.0.5" rel="stylesheet">
   <link href="style/performance.css?v=1.0.5" rel="stylesheet">
   <link href="style/dark-mode.css?v=1.0.5" rel="stylesheet">
+  <link href="style/pages.css?v=1.0.5" rel="stylesheet">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
-  <style>
-    * {
-      font-family: 'Atkinson Hyperlegible', 'Crimson Pro', sans-serif;
-    }
-    
-    body {
-      background-color: #EEF2FF;
-      min-height: 100vh;
-    }
-
-    /* Page background */
-    .page-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      pointer-events: none;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .page-bg::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(79, 70, 229, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .page-bg::after {
-      content: '';
-      position: absolute;
-      bottom: -30%;
-      left: -10%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(249, 115, 22, 0.06) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    /* Header styling */
-    .faq-header {
-      background: linear-gradient(135deg, #fffbf4 0%, #E0E7FF 55%, #C7D2FE 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .faq-header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234F46E5' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      opacity: 0.5;
-    }
-
-    /* FAQ Content */
-    .faq-content {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    /* FAQ Item */
-    .faq-item {
-      background: white;
-      border: 1px solid #E0E7FF;
-      border-radius: 12px;
-      margin-bottom: 1rem;
-      overflow: hidden;
-      transition: all 0.2s ease;
-    }
-
-    .faq-item:hover {
-      border-color: #fbbf24;
-      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.1);
-    }
-
-    .faq-question {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-    }
-
-    .faq-question h3 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #1E1B4B;
-      margin: 0;
-      padding-right: 1rem;
-    }
-
-    .faq-icon {
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-      color: #F97316;
-      transition: transform 0.2s ease;
-    }
-
-    .faq-item.is-open .faq-icon {
-      transform: rotate(180deg);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-
-    .faq-answer-inner {
-      padding: 0 1.5rem 1.25rem 1.5rem;
-      color: #4338CA;
-      line-height: 1.7;
-    }
-
-    .faq-answer-inner p {
-      margin: 0;
-    }
-
-    .faq-answer-inner a {
-      color: #F97316;
-      text-decoration: underline;
-    }
-
-    .faq-answer-inner a:hover {
-      color: #b45309;
-    }
-
-    /* Category label */
-    .faq-category {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #4338CA;
-      margin-bottom: 1rem;
-      margin-top: 2rem;
-    }
-
-    .faq-category:first-of-type {
-      margin-top: 0;
-    }
-
-    /* Contact box */
-    .contact-box {
-      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-      border: 2px solid #6ee7b7;
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    .contact-box h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: #065f46;
-      margin-bottom: 0.5rem;
-    }
-
-    .contact-box p {
-      color: #047857;
-      margin-bottom: 1rem;
-    }
-
-    .contact-box a {
-      display: inline-block;
-      background: #059669;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s ease;
-    }
-
-    .contact-box a:hover {
-      background: #047857;
-    }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      .faq-content {
-        padding: 0 1rem;
-      }
-
-      .faq-question {
-        padding: 1rem 1.25rem;
-      }
-
-      .faq-answer-inner {
-        padding: 0 1.25rem 1rem 1.25rem;
-      }
-    }
-  </style>
 </head>
-<body>
+<body data-page="faq">
   <!-- Background decoration -->
   <div class="page-bg"></div>
 

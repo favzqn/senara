@@ -14,7 +14,7 @@ const senaraTVChannels = [
     emoji: '💡',
     focus: 'Self-growth & psychology',
     channelUrl: 'https://www.youtube.com/@satupersen',
-    avatar: 'https://yt3.googleusercontent.com/ytc/AIdro_kN2hGFwHNpRJgFjmz8MkaeS2Fq3wZ3o3k3o3k3o3k=s176-c-k-c0x00ffffff-no-rj',
+    avatar: '',
     maxVideos: 8,
     tagline: 'Jadi 1% lebih baik setiap hari'
   },
@@ -28,7 +28,7 @@ const senaraTVChannels = [
     emoji: '🤔',
     focus: 'Science & curiosity',
     channelUrl: 'https://www.youtube.com/@kokbisa',
-    avatar: 'https://yt3.googleusercontent.com/ytc/AIdro_kN2hGFwHNpRJgFjmz8MkaeS2Fq3wZ3o3k3o3k3o3k=s176-c-k-c0x00ffffff-no-rj',
+    avatar: '',
     maxVideos: 8,
     tagline: 'Kenapa ya? Kok bisa?'
   },
@@ -42,7 +42,7 @@ const senaraTVChannels = [
     emoji: '📐',
     focus: 'Math & visual learning',
     channelUrl: 'https://www.youtube.com/@3blue1brown',
-    avatar: 'https://yt3.googleusercontent.com/ytc/AIdro_kN2hGFwHNpRJgFjmz8MkaeS2Fq3wZ3o3k3o3k3o3k=s176-c-k-c0x00ffffff-no-rj',
+    avatar: '',
     maxVideos: 6,
     tagline: 'Mathematics with visual intuition'
   },
@@ -56,7 +56,7 @@ const senaraTVChannels = [
     emoji: '🐦',
     focus: 'Science explained simply',
     channelUrl: 'https://www.youtube.com/@kurzgesagt',
-    avatar: 'https://yt3.googleusercontent.com/ytc/AIdro_kN2hGFwHNpRJgFjmz8MkaeS2Fq3wZ3o3k3o3k3o3k=s176-c-k-c0x00ffffff-no-rj',
+    avatar: '',
     maxVideos: 6,
     tagline: 'In a nutshell'
   },
@@ -84,7 +84,7 @@ const senaraTVChannels = [
     emoji: '📚',
     focus: 'Education & learning',
     channelUrl: 'https://www.youtube.com/@crashcourse',
-    avatar: 'https://yt3.googleusercontent.com/ytc/AIdro_kN2hGFwHNpRJgFjmz8MkaeS2Fq3wZ3o3k3o3k3o3k=s176-c-k-c0x00ffffff-no-rj',
+    avatar: '',
     maxVideos: 6,
     tagline: 'Learn anything!'
   },
@@ -98,7 +98,7 @@ const senaraTVChannels = [
     emoji: '🎓',
     focus: 'Animated educational lessons',
     channelUrl: 'https://www.youtube.com/@TEDEd',
-    avatar: 'https://yt3.googleusercontent.com/ytc/AIdro_kN2hGFwHNpRJgFjmz8MkaeS2Fq3wZ3o3k3o3k3o3k=s176-c-k-c0x00ffffff-no-rj',
+    avatar: '',
     maxVideos: 6,
     tagline: 'Lessons worth sharing'
   },
