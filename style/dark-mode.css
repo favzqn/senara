@@ -1,0 +1,111 @@
+/**
+ * Design System Utility Classes — Refined Clay
+ * Softer, more professional approach
+ */
+
+/* Cards */
+.clay-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.clay-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Buttons */
+.clay-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  background: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+.clay-btn:hover {
+  background: #4338CA;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(79, 70, 229, 0.3);
+}
+
+.clay-btn-cta { background: #F97316; box-shadow: 0 2px 4px rgba(249, 115, 22, 0.2); }
+.clay-btn-cta:hover { background: #EA580C; box-shadow: 0 4px 8px rgba(249, 115, 22, 0.3); }
+
+.clay-btn-outline {
+  background: transparent;
+  color: #4F46E5;
+  border: 1.5px solid #C7D2FE;
+  box-shadow: none;
+}
+
+.clay-btn-outline:hover {
+  background: #EEF2FF;
+  border-color: #4F46E5;
+}
+
+/* Inputs */
+.clay-input {
+  padding: 0.6rem 1rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  background: white;
+  font-size: 0.9rem;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.clay-input:focus {
+  outline: none;
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.clay-input::placeholder { color: #94A3B8; }
+
+/* Badges */
+.clay-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  background: #EEF2FF;
+  color: #4F46E5;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Tags */
+.clay-tag {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  background: #F1F5F9;
+  color: #475569;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Color tokens */
+.text-primary { color: #4F46E5; }
+.text-secondary { color: #6366F1; }
+.text-accent { color: #F97316; }
+.text-body { color: #475569; }
+.text-heading { color: #0F172A; }
+.bg-surface { background-color: #F8FAFC; }
+.bg-elevated { background-color: #ffffff; }

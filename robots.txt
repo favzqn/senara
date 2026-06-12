@@ -1,2 +1,6 @@
 User-agent: *
-Disallow: /assets
+Allow: /
+Disallow: /monogatari/stories/
+Disallow: /monogatari/assets/
+
+Sitemap: https://senara.id/sitemap.xml

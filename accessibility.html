@@ -1,22 +1,39 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-i18n="accessibility.title">Aksesibilitas</title>
   <meta name="description" content="Komitmen Senara terhadap aksesibilitas. Informasi tentang fitur aksesibilitas dan cara kami membuat platform inklusif.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://senara.id/accessibility.html">
+  <meta property="og:title" content="Accessibility | Senara">
+  <meta property="og:description" content="Senara's commitment to accessibility and how we make our platform inclusive for everyone.">
+  <meta property="og:image" content="https://senara.id/assets/og-image.png">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://senara.id/accessibility.html">
+  <meta name="twitter:title" content="Accessibility | Senara">
+  <meta name="twitter:description" content="Senara's commitment to accessibility and how we make our platform inclusive for everyone.">
+  <meta name="twitter:image" content="https://senara.id/assets/og-image.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="style/home.css?v=1.0.4" rel="stylesheet">
   <link href="style/performance.css?v=1.0.4" rel="stylesheet">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
   <style>
     * {
-      font-family: 'Inter', 'Nunito', sans-serif;
+      font-family: 'Atkinson Hyperlegible', 'Crimson Pro', sans-serif;
     }
     
     body {
-      background-color: #faf8f3;
+      background-color: #EEF2FF;
       min-height: 100vh;
     }
 
@@ -38,12 +55,12 @@
       right: -20%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(139, 115, 85, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(79, 70, 229, 0.08) 0%, transparent 70%);
       border-radius: 50%;
     }
 
     .page-header {
-      background: linear-gradient(135deg, #fffbf4 0%, #f9f2e6 55%, #f6eede 100%);
+      background: linear-gradient(135deg, #fffbf4 0%, #E0E7FF 55%, #C7D2FE 100%);
       position: relative;
       overflow: hidden;
     }
@@ -55,7 +72,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b7355' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234F46E5' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       opacity: 0.5;
     }
 
@@ -71,7 +88,7 @@
     .content-section h2 {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #78350f;
+      color: #1E1B4B;
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
@@ -79,7 +96,7 @@
     }
 
     .content-section p {
-      color: #92400e;
+      color: #4338CA;
       line-height: 1.8;
       margin-bottom: 1rem;
     }
@@ -89,7 +106,7 @@
       text-align: center;
       max-width: 640px;
       margin: 0 auto 3rem;
-      color: #92400e;
+      color: #4338CA;
     }
 
     /* Feature cards */
@@ -101,7 +118,7 @@
 
     .feature-card {
       background: white;
-      border: 1px solid #fde68a;
+      border: 1px solid #E0E7FF;
       border-radius: 12px;
       padding: 1.5rem;
       display: flex;
@@ -122,13 +139,13 @@
     .feature-content h3 {
       font-size: 1.1rem;
       font-weight: 600;
-      color: #78350f;
+      color: #1E1B4B;
       margin-bottom: 0.5rem;
     }
 
     .feature-content p {
       font-size: 0.95rem;
-      color: #92400e;
+      color: #4338CA;
       margin: 0;
       line-height: 1.6;
     }
@@ -151,8 +168,8 @@
     }
 
     .status-partial {
-      background: #fef3c7;
-      color: #92400e;
+      background: #EEF2FF;
+      color: #4338CA;
     }
 
     .status-planned {
@@ -185,7 +202,7 @@
     /* Tips section */
     .tips-box {
       background: #fffbeb;
-      border: 1px solid #fde68a;
+      border: 1px solid #E0E7FF;
       border-radius: 12px;
       padding: 1.5rem;
       margin-top: 1.5rem;
@@ -194,7 +211,7 @@
     .tips-box h3 {
       font-size: 1rem;
       font-weight: 600;
-      color: #78350f;
+      color: #1E1B4B;
       margin-bottom: 0.75rem;
     }
 
@@ -205,7 +222,7 @@
     }
 
     .tips-list li {
-      color: #92400e;
+      color: #4338CA;
       padding: 0.4rem 0;
       padding-left: 1.5rem;
       position: relative;
@@ -222,7 +239,7 @@
 
     /* Feedback section */
     .feedback-section {
-      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
       border-radius: 16px;
       padding: 2rem;
       text-align: center;
@@ -232,13 +249,13 @@
     .feedback-section h2 {
       font-size: 1.35rem;
       font-weight: 700;
-      color: #78350f;
+      color: #1E1B4B;
       margin-bottom: 0.75rem;
       justify-content: center;
     }
 
     .feedback-section p {
-      color: #92400e;
+      color: #4338CA;
       margin-bottom: 1.25rem;
     }
 
@@ -246,7 +263,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+      background: linear-gradient(135deg, #1E1B4B 0%, #4338CA 100%);
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
@@ -257,7 +274,7 @@
 
     .feedback-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(120, 53, 15, 0.25);
+      box-shadow: 0 4px 12px rgba(30, 27, 75, 0.25);
     }
 
     @media (max-width: 640px) {

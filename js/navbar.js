@@ -4,6 +4,17 @@
  * Supports i18n language switching
  */
 
+// getText fallback — shared-utils.js may not be loaded on all pages
+if (typeof getText !== 'function') {
+  function getText(key, fallback) {
+    if (typeof I18n !== 'undefined' && I18n.isReady && I18n.isReady()) {
+      var translated = I18n.t(key);
+      return translated !== key ? translated : fallback;
+    }
+    return fallback;
+  }
+}
+
 /**
  * Get navigation items with translations
  * @returns {Array} Navigation items
@@ -24,13 +35,13 @@ function getNavItems() {
   return [
     { 
       href: 'index.html', 
-      label: getText('nav.home', 'Beranda'), 
+      label: getText('nav.home', 'Home'), 
       id: 'home', 
       event: 'Navbar Beranda' 
     },
     { 
-      href: 'koleksi.html', 
-      label: getText('nav.collection', 'Koleksi'), 
+      href: 'collection.html', 
+      label: getText('nav.collection', 'Stories'), 
       id: 'collection', 
       event: 'Navbar Koleksi' 
     },
@@ -42,15 +53,9 @@ function getNavItems() {
     },
     { 
       href: 'about.html', 
-      label: getText('nav.about', 'Tentang'), 
+      label: getText('nav.about', 'About'), 
       id: 'about', 
-      event: 'Navbar Tentang' 
-    },
-    { 
-      href: 'pendekatan.html', 
-      label: getText('nav.approach', 'Pendekatan'), 
-      id: 'pendekatan', 
-      event: 'Navbar Pendekatan' 
+      event: 'Navbar About' 
     },
     { 
       href: 'faq.html', 
@@ -59,8 +64,8 @@ function getNavItems() {
       event: 'Navbar FAQ' 
     },
     { 
-      href: 'donasi.html', 
-      label: getText('nav.donate', 'Donasi'), 
+      href: 'donate.html',
+      label: getText('nav.donate', 'Donate'), 
       id: 'donasi', 
       event: 'Navbar Donasi' 
     },
@@ -80,6 +85,9 @@ function getLanguageToggleHTML() {
   const currentLang = I18n.getCurrentLanguage();
   const isEnglish = currentLang === 'en';
   
+  const flagID = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect width="16" height="6" fill="#FF0000"/><rect y="6" width="16" height="6" fill="#FFFFFF"/></svg>`;
+  const flagEN = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect width="16" height="12" fill="#B22234"/><rect y="1" width="16" height="1" fill="white"/><rect y="3" width="16" height="1" fill="white"/><rect y="5" width="16" height="1" fill="white"/><rect y="7" width="16" height="1" fill="white"/><rect y="9" width="16" height="1" fill="white"/><rect y="11" width="16" height="1" fill="white"/><rect width="7" height="6" fill="#3C3B6E"/></svg>`;
+
   return `
     <div class="lang-switcher" role="group" aria-label="Language selection">
       <div class="lang-switcher-track">
@@ -92,7 +100,7 @@ function getLanguageToggleHTML() {
           aria-pressed="${!isEnglish}"
           type="button"
         >
-          <span class="lang-flag">🇮🇩</span>
+          <span class="lang-flag">${flagID}</span>
           <span class="lang-code">ID</span>
         </button>
         <button 
@@ -103,7 +111,7 @@ function getLanguageToggleHTML() {
           aria-pressed="${isEnglish}"
           type="button"
         >
-          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-flag">${flagEN}</span>
           <span class="lang-code">EN</span>
         </button>
       </div>
@@ -120,7 +128,7 @@ function getNavbarHTML(currentPage = '') {
   const navItems = getNavItems();
   const useI18n = typeof I18n !== 'undefined' && I18n.isReady && I18n.isReady();
   
-  let tagline = 'Belajar lewat cerita';
+  let tagline = getText('nav.tagline', 'Learning through stories');
   if (useI18n) {
     const translated = I18n.t('nav.tagline');
     if (translated !== 'nav.tagline') {

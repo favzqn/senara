@@ -1,0 +1,498 @@
+/**
+ * Senara TV — Styles
+ */
+
+.tv-container { max-width: 90rem; margin: 0 auto; padding: 0 1rem; }
+
+/* ── Topbar ─────────────────────────────────────────────────────────────── */
+
+.tv-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(248, 250, 252, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #E2E8F0;
+  padding: 0.75rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.tv-age-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background: #F1F5F9;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.tv-age-tab {
+  padding: 0.4rem 0.85rem;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tv-age-tab:hover { background: rgba(255,255,255,0.5); }
+.tv-age-tab.active { background: white; color: #4F46E5; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+
+.tv-categories { display: flex; gap: 0.4rem; overflow-x: auto; scrollbar-width: none; }
+.tv-categories::-webkit-scrollbar { display: none; }
+
+.tv-cat {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid #E2E8F0;
+  background: white;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tv-cat:hover { border-color: #CBD5E1; color: #334155; }
+.tv-cat.active { background: #4F46E5; color: white; border-color: #4F46E5; }
+
+.tv-search-wrap { position: relative; margin-left: auto; }
+
+.tv-search {
+  padding: 0.45rem 2rem 0.45rem 0.9rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  background: white;
+  color: #334155;
+  width: 200px;
+  transition: all 0.2s ease;
+}
+
+.tv-search:focus { outline: none; border-color: #4F46E5; width: 260px; }
+.tv-search::placeholder { color: #94A3B8; }
+
+.tv-search-clear {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #6366F1;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* ── Loading Spinner ────────────────────────────────────────────────────── */
+
+.tv-hero { padding: 2rem 0; min-height: 200px; }
+.tv-hero.is-loading { display: flex; align-items: center; justify-content: center; min-height: 320px; }
+.tv-grid.is-loading { min-height: 200px; display: flex; align-items: center; justify-content: center; }
+
+.tv-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #E2E8F0;
+  border-top-color: #4F46E5;
+  border-radius: 50%;
+  animation: tv-spin 0.7s linear infinite;
+}
+
+@keyframes tv-spin { to { transform: rotate(360deg); } }
+
+/* ── Hero ───────────────────────────────────────────────────────────────── */
+
+.tv-hero-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.tv-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+
+.tv-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.2) 50%, rgba(15,23,42,0.1) 100%);
+}
+
+.tv-hero-content { position: relative; z-index: 1; padding: 2rem; width: 100%; }
+
+.tv-hero-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #F97316;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.tv-hero-title {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.5rem;
+}
+
+.tv-hero-desc { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin: 0 0 1rem; max-width: 500px; }
+
+.tv-hero-channel { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+.tv-hero-channel-name { font-weight: 600; color: white; margin: 0; font-size: 0.9rem; }
+.tv-hero-channel-focus { color: rgba(255,255,255,0.6); margin: 0; font-size: 0.8rem; }
+
+.tv-hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+.tv-hero-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background: #F97316;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.3);
+}
+
+.tv-hero-play-btn:hover { background: #EA580C; transform: translateY(-1px); }
+
+.tv-hero-visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.tv-hero-visit-btn:hover { background: rgba(255,255,255,0.25); }
+
+/* ── Channel Rows ───────────────────────────────────────────────────────── */
+
+.tv-channels { padding: 1.5rem 0; }
+.channel-row { margin-bottom: 2rem; }
+
+.channel-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding: 0 0.25rem;
+}
+
+.channel-row-identity { display: flex; align-items: center; gap: 0.75rem; }
+
+.channel-row-name {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.channel-row-handle { font-size: 0.8rem; color: #6366F1; margin: 0; }
+
+.channel-row-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4F46E5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.channel-row-link:hover { color: #F97316; }
+
+.channel-row-track { position: relative; }
+
+.channel-row-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0.5rem 0;
+}
+
+.channel-row-scroll::-webkit-scrollbar { display: none; }
+
+.channel-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #64748B;
+  font-weight: 600;
+  min-width: 200px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.channel-fallback:hover { border-color: #C7D2FE; color: #4F46E5; }
+.channel-fallback-icon { color: #6366F1; }
+.channel-fallback-icon svg { width: 2rem; height: 2rem; }
+
+.row-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 1px solid #E2E8F0;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  color: #4F46E5;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.row-arrow:hover { background: #F8FAFC; box-shadow: 0 4px 8px rgba(0,0,0,0.08); }
+.row-arrow-prev { left: -0.5rem; }
+.row-arrow-next { right: -0.5rem; }
+
+/* ── Video Cards ────────────────────────────────────────────────────────── */
+
+.yt-card {
+  flex: 0 0 auto;
+  width: 280px;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.yt-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+
+.yt-thumb { position: relative; aspect-ratio: 16/9; overflow: hidden; background: #F1F5F9; }
+.yt-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.yt-duration {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(15,23,42,0.85);
+  color: white;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.yt-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.yt-card:hover .yt-thumb-overlay { background: rgba(0,0,0,0.25); }
+
+.yt-thumb-play {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4F46E5;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s ease;
+}
+
+.yt-card:hover .yt-thumb-play { opacity: 1; transform: scale(1); }
+
+.yt-card-body { padding: 0.85rem; }
+
+.yt-cat-tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  background: #EEF2FF;
+  color: #4F46E5;
+}
+
+.yt-title {
+  font-family: 'Crimson Pro', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.yt-meta { display: flex; align-items: center; gap: 0.5rem; }
+.yt-meta-text { font-size: 0.78rem; color: #6366F1; }
+
+/* ── Avatars ────────────────────────────────────────────────────────────── */
+
+.avatar-sm, .avatar-lg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar-sm { width: 1.5rem; height: 1.5rem; }
+.avatar-lg { width: 2.5rem; height: 2.5rem; }
+.avatar-sm img, .avatar-lg img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── Latest Grid ────────────────────────────────────────────────────────── */
+
+.tv-latest { padding: 2rem 0; }
+
+.tv-latest-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.tv-latest-title {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.tv-video-count { font-size: 0.85rem; color: #6366F1; font-weight: 600; }
+
+.tv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Modal ──────────────────────────────────────────────────────────────── */
+
+.tv-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,23,42,0.8);
+  backdrop-filter: blur(8px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tv-modal.is-open { opacity: 1; pointer-events: auto; }
+
+.tv-modal-inner {
+  position: relative;
+  width: min(960px, 95vw);
+  background: #0F172A;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.tv-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.tv-close:hover { background: rgba(255,255,255,0.3); }
+
+.tv-modal-video { aspect-ratio: 16/9; background: black; }
+.tv-modal-info { padding: 1.25rem; }
+
+.tv-modal-title {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.25rem;
+}
+
+.tv-modal-channel { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin: 0; }
+
+/* ── Empty States ───────────────────────────────────────────────────────── */
+
+.tv-empty { text-align: center; padding: 3rem 1rem; color: #6366F1; }
+.tv-empty svg { display: block; margin: 0 auto 0.75rem; opacity: 0.5; }
+.tv-empty p { font-size: 0.95rem; margin: 0; }
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .tv-topbar { flex-direction: column; align-items: flex-start; }
+  .tv-search-wrap { width: 100%; }
+  .tv-search { width: 100%; }
+  .tv-search:focus { width: 100%; }
+  .yt-card { width: 240px; }
+  .tv-hero-title { font-size: 1.3rem; }
+  .tv-hero-content { padding: 1.25rem; }
+}

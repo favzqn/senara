@@ -23,26 +23,24 @@ const VERSION_FILE = path.join(ROOT_DIR, 'version.json');
 const HTML_FILES = [
   'index.html',
   'about.html',
-  'aksesibilitas.html',
-  'contribute.html',
-  'donasi.html',
+  'accessibility.html',
+  'donate.html',
   'faq.html',
-  'keselamatan.html',
-  'koleksi.html',
-  'kontak.html',
-  'pendekatan.html',
+  'safety.html',
+  'collection.html',
+  'contact.html',
   'privacy.html',
   'roadmap.html',
   'story.html',
   'terms.html',
-  'tim.html',
   'tv.html',
-  'untuk-organisasi.html',
+  'for-organizations.html',
 ];
 
 // Asset patterns to version
 const ASSET_PATTERNS = [
   /href="(style\/[^"]+\.css)(\?v=[^"]*)?"/g,
+  /href="(\.\.\/style\/[^"]+\.css)(\?v=[^"]*)?"/g,
   /src="(js\/[^"]+\.js)(\?v=[^"]*)?"/g,
   /src="(data\/[^"]+\.js)(\?v=[^"]*)?"/g,
 ];

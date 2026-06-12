@@ -60,8 +60,15 @@ async function loadStoryScripts(storyId) {
   
   if (!config) {
     console.error(`Story not found: ${storyId}`);
-    // Fall back to default story
-    return loadStoryScripts(DEFAULT_STORY);
+    document.body.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:Inter,sans-serif;text-align:center;padding:2rem;">
+        <div>
+          <h1 style="font-size:2rem;margin-bottom:1rem;">Cerita tidak ditemukan</h1>
+          <p style="color:#666;margin-bottom:2rem;">Cerita "${storyId}" tidak ada atau belum tersedia.</p>
+          <a href="../collection.html" style="display:inline-block;padding:0.75rem 2rem;background:#b45309;color:white;border-radius:0.5rem;text-decoration:none;font-weight:600;">Kembali ke Koleksi</a>
+        </div>
+      </div>`;
+    return Promise.reject(new Error(`Story not found: ${storyId}`));
   }
 
   // Update page title

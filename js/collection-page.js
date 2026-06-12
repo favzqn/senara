@@ -1,6 +1,6 @@
 /**
  * Collection Page JavaScript
- * Handles story filtering, sorting, and rendering for koleksi.html
+ * Handles story filtering, sorting, and rendering for collection.html
  */
 
 // ============================================================================
@@ -28,7 +28,7 @@ function showLoadingSkeleton() {
   if (!container) return;
   
   const skeletonHTML = Array(6).fill(0).map(() => `
-    <div class="skeleton-card bg-white border border-amber-100 h-96">
+    <div class="skeleton-card bg-white border border-[#E2E8F0] rounded-2xl h-96 overflow-hidden">
       <div class="skeleton h-48 w-full"></div>
       <div class="p-6 space-y-4">
         <div class="skeleton h-6 w-3/4 rounded"></div>
@@ -127,26 +127,24 @@ function loadCategories() {
   // Build category buttons HTML
   let html = `
     <button 
-      class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/80 text-amber-900 font-medium text-sm border border-amber-200 flex items-center gap-2.5 active" 
+      class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/80 text-[#0F172A] font-medium text-sm border border-[#E2E8F0] flex items-center gap-2.5 active" 
       data-category="all" 
-      data-umami-event="Collection filter Semua"
+      data-umami-event="Collection filter All"
     >
-      <span class="text-base">✨</span>
-      <span class="flex-1">Semua Cerita</span>
-      <span class="category-count text-amber-600" id="count-all"></span>
+      <span class="flex-1">${getText('collection.allStories', 'All Stories')}</span>
+      <span class="category-count text-[#6366F1]" id="count-all"></span>
     </button>
   `;
   
   categories.forEach(cat => {
     html += `
       <button 
-        class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/60 text-amber-900 font-medium text-sm border border-amber-100/80 flex items-center gap-2.5" 
+        class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/60 text-[#0F172A] font-medium text-sm border border-[#E2E8F0]/80 flex items-center gap-2.5" 
         data-category="${cat.id}" 
         data-umami-event="Collection filter ${cat.title}"
       >
-        <span class="text-base">${cat.icon}</span>
         <span class="flex-1 truncate" title="${cat.title}">${cat.title}</span>
-        <span class="category-count text-amber-500" id="count-${cat.id}"></span>
+        <span class="category-count text-[#94A3B8]" id="count-${cat.id}"></span>
       </button>
     `;
   });
@@ -389,13 +387,13 @@ function updateActiveFiltersDisplay() {
   const filters = [];
   
   if (currentSearch) {
-    filters.push(`🔍 "${currentSearch}"`);
+    filters.push(`"${currentSearch}"`);
   }
   if (currentCategory !== 'all') {
     const cat = getCategoryById(currentCategory);
     if (cat) {
       const catName = typeof I18n !== 'undefined' ? I18n.t(`categories.${cat.id}`) : cat.title;
-      filters.push(`${cat.icon} ${catName !== `categories.${cat.id}` ? catName : cat.title}`);
+      filters.push(catName !== `categories.${cat.id}` ? catName : cat.title);
     }
   }
   if (selectedDifficulties.length > 0) {
@@ -407,15 +405,15 @@ function updateActiveFiltersDisplay() {
       }
       return diff;
     });
-    filters.push(`⭐ ${diffLabels.join(', ')}`);
+    filters.push(diffLabels.join(', '));
   }
   if (selectedDurations.length > 0) {
     const durationLabels = {
-      'short': typeof I18n !== 'undefined' ? I18n.t('collection.durationShort') : '⚡ Singkat (< 15 menit)',
-      'medium': typeof I18n !== 'undefined' ? I18n.t('collection.durationMedium') : '📖 Sedang (15-30 menit)',
-      'long': typeof I18n !== 'undefined' ? I18n.t('collection.durationLong') : '📚 Panjang (> 30 menit)'
+      'short': typeof I18n !== 'undefined' ? I18n.t('collection.durationShort') : getText('collection.durationShort', 'Short (< 15 min)'),
+      'medium': typeof I18n !== 'undefined' ? I18n.t('collection.durationMedium') : getText('collection.durationMedium', 'Medium (15-30 min)'),
+      'long': typeof I18n !== 'undefined' ? I18n.t('collection.durationLong') : getText('collection.durationLong', 'Long (> 30 min)')
     };
-    filters.push(`⏱️ ${selectedDurations.map(d => durationLabels[d]).join(', ')}`);
+    filters.push(selectedDurations.map(d => durationLabels[d]).join(', '));
   }
   
   if (filters.length > 0) {
@@ -437,17 +435,17 @@ function renderStories(stories) {
   if (!container) return;
   
   if (stories.length === 0) {
-    const emptyTitle = typeof I18n !== 'undefined' ? I18n.t('collection.emptyTitle') : 'Tidak ada cerita ditemukan';
-    const emptyDesc = typeof I18n !== 'undefined' ? I18n.t('collection.emptyDescription') : 'Coba ubah filter atau kata kunci pencarian untuk menemukan cerita yang kamu cari';
-    const emptyReset = typeof I18n !== 'undefined' ? I18n.t('collection.emptyReset') : 'Reset Semua Filter';
+    const emptyTitle = typeof I18n !== 'undefined' ? I18n.t('collection.emptyTitle') : getText('collection.emptyTitle', 'No stories found');
+    const emptyDesc = typeof I18n !== 'undefined' ? I18n.t('collection.emptyDescription') : getText('collection.emptyDescription', 'Try changing your filters or search keywords to find what you\'re looking for.');
+    const emptyReset = typeof I18n !== 'undefined' ? I18n.t('collection.emptyReset') : getText('collection.emptyReset', 'Reset All Filters');
     container.innerHTML = `
       <div class="col-span-full empty-state py-16 px-8">
-        <div class="empty-state-icon">🔍</div>
-        <h3 class="text-xl font-bold text-amber-900 mb-2 text-center">${emptyTitle}</h3>
-        <p class="text-amber-700 mb-6 text-center max-w-md mx-auto">${emptyDesc}</p>
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="mx-auto mb-4 text-[#94A3B8]"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <h3 class="text-xl font-bold text-[#0F172A] mb-2 text-center">${emptyTitle}</h3>
+        <p class="text-[#64748B] mb-6 text-center max-w-md mx-auto">${emptyDesc}</p>
         <div class="flex justify-center">
           <button onclick="document.getElementById('clearFilters').click()" class="reset-btn px-6 py-3 rounded-xl font-semibold text-sm flex items-center gap-2">
-            <span>🔄</span> ${emptyReset}
+            ${emptyReset}
           </button>
         </div>
       </div>

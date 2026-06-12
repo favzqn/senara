@@ -5,7 +5,8 @@ const CACHE_NAME = 'senara-v1.0.4';
 const PRECACHE = [
   '/',
   '/index.html',
-  '/koleksi.html',
+  '/collection.html',
+  '/tv.html',
   '/about.html',
   '/faq.html',
   '/js/config.js',
@@ -19,6 +20,7 @@ const PRECACHE = [
   '/js/locales/en.js',
   '/data/stories.js',
   '/data/categories.js',
+  '/data/tv-channels.js',
   '/manifest.json',
 ];
 

@@ -1,22 +1,40 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="about.title">Cerita di Balik Senara</title>
-  <meta name="description" content="Kenali lebih dalam tentang Senara: awal mula, misi nonprofit, dan visi kami untuk membuat pengalaman bermakna bisa diakses siapa saja.">
+  <title data-i18n="about.title">About Senara</title>
+  <meta name="description" content="Kenali lebih dalam tentang Senara: misi, pendekatan, tim, dan bagaimana kamu bisa terlibat.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://senara.id/about.html">
+  <meta property="og:title" content="About Senara | Senara">
+  <meta property="og:description" content="Learn about Senara's mission, approach, team, and how to get involved.">
+  <meta property="og:image" content="https://senara.id/assets/og-image.png">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://senara.id/about.html">
+  <meta name="twitter:title" content="About Senara | Senara">
+  <meta name="twitter:description" content="Learn about Senara's mission, approach, team, and how to get involved.">
+  <meta name="twitter:image" content="https://senara.id/assets/og-image.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="style/home.css?v=1.0.4" rel="stylesheet">
-  <link href="style/performance.css?v=1.0.4" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style/home.css?v=1.0.5" rel="stylesheet">
+  <link href="style/performance.css?v=1.0.5" rel="stylesheet">
+  <link href="style/dark-mode.css?v=1.0.5" rel="stylesheet">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
   <style>
     * {
-      font-family: 'Inter', 'Nunito', sans-serif;
+      font-family: 'Atkinson Hyperlegible', 'Crimson Pro', sans-serif;
     }
     
     body {
-      background-color: #faf8f3;
+      background-color: #F8FAFC;
       min-height: 100vh;
     }
 
@@ -39,7 +57,7 @@
       right: -20%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(139, 115, 85, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(79, 70, 229, 0.08) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -50,13 +68,13 @@
       left: -10%;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(192, 133, 82, 0.06) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(249, 115, 22, 0.06) 0%, transparent 70%);
       border-radius: 50%;
     }
 
     /* Header styling */
     .about-header {
-      background: linear-gradient(135deg, #fffbf4 0%, #f9f2e6 55%, #f6eede 100%);
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 55%, #C7D2FE 100%);
       position: relative;
       overflow: hidden;
     }
@@ -68,7 +86,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b7355' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234F46E5' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       opacity: 0.5;
     }
 
@@ -85,7 +103,7 @@
     .about-section h2 {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #78350f;
+      color: #1E1B4B;
       margin-bottom: 1.25rem;
       display: flex;
       align-items: center;
@@ -93,11 +111,13 @@
     }
 
     .about-section h2 .section-icon {
-      font-size: 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      color: #4F46E5;
     }
 
     .about-section p {
-      color: #92400e;
+      color: #4338CA;
       line-height: 1.8;
       margin-bottom: 1rem;
     }
@@ -107,13 +127,13 @@
     }
 
     .about-section strong {
-      color: #78350f;
+      color: #1E1B4B;
     }
 
     /* Pull quote */
     .pull-quote {
-      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-      border-left: 4px solid #d97706;
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border-left: 4px solid #F97316;
       padding: 1.5rem 2rem;
       margin: 2rem 0;
       border-radius: 0 12px 12px 0;
@@ -122,7 +142,7 @@
     .pull-quote p {
       font-size: 1.125rem;
       font-weight: 500;
-      color: #78350f;
+      color: #1E1B4B;
       margin: 0;
       font-style: italic;
     }
@@ -136,7 +156,7 @@
 
     .value-item {
       background: white;
-      border: 1px solid #fde68a;
+      border: 1px solid #E0E7FF;
       border-radius: 12px;
       padding: 1.25rem 1.5rem;
       display: flex;
@@ -146,25 +166,26 @@
     }
 
     .value-item:hover {
-      border-color: #fbbf24;
-      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+      border-color: #C7D2FE;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
     }
 
     .value-icon {
-      font-size: 1.5rem;
       flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
     }
 
     .value-content h3 {
       font-size: 1rem;
       font-weight: 600;
-      color: #78350f;
+      color: #1E1B4B;
       margin-bottom: 0.25rem;
     }
 
     .value-content p {
       font-size: 0.9rem;
-      color: #92400e;
+      color: #4338CA;
       margin: 0;
       line-height: 1.5;
     }
@@ -179,7 +200,7 @@
 
     .problem-item {
       background: white;
-      border: 1px solid #fed7aa;
+      border: 1px solid #E0E7FF;
       border-radius: 12px;
       padding: 1.25rem 1.5rem;
     }
@@ -187,7 +208,7 @@
     .problem-item h3 {
       font-size: 1rem;
       font-weight: 600;
-      color: #c2410c;
+      color: #EA580C;
       margin-bottom: 0.5rem;
     }
 
@@ -233,7 +254,7 @@
 
     /* Closing section */
     .closing-section {
-      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      background: linear-gradient(135deg, #F5F3FF 0%, #EEF2FF 100%);
       border-radius: 16px;
       padding: 2.5rem;
       text-align: center;
@@ -241,7 +262,7 @@
     }
 
     .closing-section p {
-      color: #92400e;
+      color: #4338CA;
       line-height: 1.8;
       margin-bottom: 1rem;
     }
@@ -251,9 +272,1019 @@
     }
 
     .closing-emoji {
-      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* === APPROACH PAGE STYLES === */
+    .content-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .content-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1E1B4B;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .content-section h2 .section-icon {
+      display: inline-flex;
+      align-items: center;
+      color: #4F46E5;
+    }
+
+    .content-section p {
+      color: #4338CA;
+      line-height: 1.8;
       margin-bottom: 1rem;
     }
+
+    .content-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section strong {
+      color: #1E1B4B;
+    }
+
+    /* Principle cards */
+    .principle-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .principle-card {
+      background: white;
+      border: 1px solid #E0E7FF;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .principle-card:hover {
+      border-color: #C7D2FE;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
+    }
+
+    .principle-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .principle-card p {
+      font-size: 0.95rem;
+      color: #4338CA;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Process steps */
+    .process-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .process-step {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .process-number {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+
+    .process-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.25rem;
+    }
+
+    .process-content p {
+      font-size: 0.9rem;
+      color: #4338CA;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Ethics box */
+    .ethics-box {
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border-left: 4px solid #F97316;
+      border-radius: 0 12px 12px 0;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .ethics-box h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.75rem;
+    }
+
+    .ethics-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .ethics-list li {
+      color: #4338CA;
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .ethics-list li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: #059669;
+      font-weight: 600;
+    }
+
+    /* Research note */
+    .research-note {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .research-note p {
+      font-size: 0.9rem;
+      color: #166534;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .research-note strong {
+      color: #14532d;
+    }
+
+    /* === TEAM PAGE STYLES === */
+    .intro-section {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      color: #4338CA;
+    }
+
+    .mission-box-team {
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .mission-box-team h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1E1B4B;
+      margin-bottom: 1rem;
+      justify-content: center;
+    }
+
+    .mission-box-team p {
+      color: #4338CA;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin: 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Team grid */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .team-card {
+      background: white;
+      border: 2px solid #E0E7FF;
+      border-radius: 16px;
+      padding: 1.75rem;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .team-card:hover {
+            border-color: #C7D2FE;
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .team-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1rem;
+    }
+
+    .team-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #1E1B4B;
+      margin-bottom: 0.25rem;
+    }
+
+    .team-role {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #F97316;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .team-card p {
+      font-size: 0.95rem;
+      color: #4338CA;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .team-job {
+      font-size: 0.85rem;
+      color: #1E1B4B;
+      font-weight: 500;
+      margin-bottom: 0.5rem !important;
+      opacity: 0.8;
+    }
+
+    .team-linkedin {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #0077b5;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .team-linkedin:hover {
+      color: #005582;
+      text-decoration: underline;
+    }
+
+    /* Story box */
+    .story-box {
+      background: white;
+      border-left: 4px solid #4F46E5;
+      border-radius: 0 12px 12px 0;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .story-box p {
+      color: #1E1B4B;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 1rem;
+    }
+
+    .story-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-box strong {
+      color: #4338CA;
+    }
+
+    .story-box em {
+      font-style: italic;
+      color: #4F46E5;
+    }
+
+    /* Advisor section */
+    .advisor-grid-new {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .advisor-card-new {
+      background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
+      border: 1px solid #E0E7FF;
+      border-radius: 16px;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .advisor-card-new:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
+    }
+
+    .advisor-icon-new {
+      margin-bottom: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .advisor-card-new h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.375rem;
+    }
+
+    .advisor-card-new p {
+      font-size: 0.8rem;
+      color: #4338CA;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .advisor-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .advisor-grid-new {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Contributors section */
+    .contributors-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .contributors-box h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.75rem;
+    }
+
+    .contributors-box p {
+      font-size: 0.95rem;
+      color: #4338CA;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .contributor-roles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .contributor-role {
+      background: #EEF2FF;
+      color: #4338CA;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 0.8rem;
+      border-radius: 100px;
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 2px solid #6ee7b7;
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #065f46;
+      margin-bottom: 0.75rem;
+      justify-content: center;
+    }
+
+    .cta-section p {
+      color: #047857;
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: white;
+      padding: 0.875rem 1.75rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(5, 150, 105, 0.3);
+    }
+
+    /* Values (team page) */
+    .values-grid-team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .value-card {
+      background: white;
+      border: 1px solid #E0E7FF;
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .value-card .value-icon {
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .value-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.25rem;
+    }
+
+    .value-card p {
+      font-size: 0.85rem;
+      color: #4338CA;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* === ROADMAP PAGE STYLES === */
+    .page-content-roadmap {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      color: #4338CA;
+    }
+
+    /* Status badges */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .status-in-progress {
+      background: #EEF2FF;
+      color: #4338CA;
+    }
+
+    .status-planned {
+      background: #e0e7ff;
+      color: #3730a3;
+    }
+
+    .status-exploring {
+      background: #f3e8ff;
+      color: #7c3aed;
+    }
+
+    .status-done {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    /* Roadmap cards */
+    .roadmap-grid {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .roadmap-card {
+      background: white;
+      border: 1px solid #E0E7FF;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .roadmap-card:hover {
+      border-color: #C7D2FE;
+      box-shadow: 0 4px 16px rgba(79, 70, 229, 0.12);
+    }
+
+    .roadmap-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .roadmap-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .roadmap-card p {
+      font-size: 0.95rem;
+      color: #4338CA;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.6;
+    }
+
+    .roadmap-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: #6366F1;
+    }
+
+    .roadmap-meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    /* Feature cards */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .feature-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #4338CA;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.5;
+    }
+
+    /* Completed section */
+    .completed-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .completed-item {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .completed-icon {
+      color: #16a34a;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .completed-content h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #166534;
+      margin-bottom: 0.25rem;
+    }
+
+    .completed-content p {
+      font-size: 0.85rem;
+      color: #15803d;
+      margin: 0;
+    }
+
+    /* Feedback section */
+    .feedback-section {
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .feedback-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1E1B4B;
+      margin-bottom: 0.75rem;
+      justify-content: center;
+    }
+
+    .feedback-section p {
+      color: #4338CA;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .feedback-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #1E1B4B 0%, #4338CA 100%);
+      color: white;
+      padding: 0.875rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .feedback-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(30, 27, 75, 0.25);
+    }
+
+    /* Note box */
+    .note-box {
+      background: #F8FAFC;
+      border: 1px solid #E0E7FF;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .note-box p {
+      font-size: 0.9rem;
+      color: #4338CA;
+      margin: 0;
+    }
+
+    /* === CONTRIBUTE PAGE STYLES === */
+    /* Role cards */
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .role-card {
+      background: white;
+      border: 1px solid #E0E7FF;
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: all 0.2s ease;
+    }
+
+    .role-card:hover {
+      border-color: #C7D2FE;
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .role-icon {
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .role-card h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.5rem;
+    }
+
+    .role-card p {
+      font-size: 0.95rem;
+      color: #4338CA;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .role-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .role-tag {
+      background: #EEF2FF;
+      color: #4338CA;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.625rem;
+      border-radius: 100px;
+    }
+
+    /* Process steps (contribute) */
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .step-number {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1E1B4B;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-content p {
+      font-size: 0.9rem;
+      color: #4338CA;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Benefits */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .benefit-item {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .benefit-icon {
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .benefit-item h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #065f46;
+      margin-bottom: 0.25rem;
+    }
+
+    .benefit-item p {
+      font-size: 0.85rem;
+      color: #047857;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* CTA section (contribute) */
+    .cta-contribute {
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta-contribute h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1E1B4B;
+      margin-bottom: 0.75rem;
+      justify-content: center;
+    }
+
+    .cta-contribute p {
+      color: #4338CA;
+      margin-bottom: 1.5rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .cta-btn-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .cta-btn-primary {
+      background: linear-gradient(135deg, #1E1B4B 0%, #4338CA 100%);
+      color: white;
+    }
+
+    .cta-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(30, 27, 75, 0.25);
+    }
+
+    .cta-btn-secondary {
+      background: white;
+      color: #1E1B4B;
+      border: 2px solid #1E1B4B;
+    }
+
+    .cta-btn-secondary:hover {
+      background: #1E1B4B;
+      color: white;
+    }
+
+    /* Partnership section */
+    .partnership-section {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 2px solid #86efac;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .partnership-section h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #166534;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .partnership-section p {
+      color: #15803d;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .partnership-section a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #16a34a;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .partnership-section a:hover {
+      background: #15803d;
+      transform: translateY(-1px);
+    }
+
+    /* Section nav tabs */
+    .section-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 250, 252, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(79, 70, 229, 0.1);
+      padding: 0 1rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .section-nav::-webkit-scrollbar { display: none; }
+    .section-nav-inner {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+    }
+    .section-tab {
+      padding: 0.85rem 1.25rem;
+      border: none;
+      background: transparent;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #4338CA;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .section-tab:hover { color: #4F46E5; }
+    .section-tab.active { color: #4F46E5; border-bottom-color: #F97316; }
+    .about-section-content { display: none; }
+    .about-section-content.active { display: block; }
+    .dark .section-nav { background: rgba(15, 23, 42, 0.95); border-bottom-color: rgba(79, 70, 229, 0.2); }
+    .dark .section-tab { color: #a89888; }
+    .dark .section-tab:hover { color: #c4a882; }
+    .dark .section-tab.active { color: #c4a882; border-bottom-color: #c4a882; }
 
     /* Responsive */
     @media (max-width: 640px) {
@@ -273,10 +1304,55 @@
         flex-direction: column;
         text-align: center;
       }
+
+      .ethics-box {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .process-step {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .mission-box-team {
+        padding: 1.5rem;
+      }
+
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .advisor-card-new {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .roadmap-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .role-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-contribute {
+        padding: 2rem 1.5rem;
+      }
+
+      .feedback-section {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipToContent">Skip to main content</a>
+
   <!-- Background decoration -->
   <div class="page-bg"></div>
 
@@ -286,179 +1362,942 @@
   <!-- Header -->
   <header class="about-header py-16 md:py-20 px-4">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4" data-i18n="about.title">
-        Cerita di Balik Senara
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" data-i18n="about.title">
+        About Senara
       </h1>
-      <p class="text-lg text-amber-700 max-w-2xl mx-auto" data-i18n="about.subtitle">
-        Bagaimana sebuah ide sederhana tumbuh menjadi platform cerita interaktif.
+      <p class="text-lg text-[#64748B] max-w-2xl mx-auto" data-i18n="about.subtitle">
+        Everything you need to know about our mission, approach, team, and how to get involved.
       </p>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="py-12 md:py-16 px-4">
-    <div class="about-content">
-
-      <!-- Origin Story -->
-      <section class="about-section">
-        <h2><span class="section-icon">🌱</span> <span data-i18n="about.originTitle">Awal Mula</span></h2>
-        <p data-i18n="about.originP1">
-          Senara dimulai dari sebuah frustrasi.
-        </p>
-        <p data-i18n="about.originP2">
-          Kami sering menemukan materi yang isinya bagus, tapi penyampaiannya membuat orang kehilangan minat sebelum selesai membaca. Di sisi lain, orang rela menghabiskan waktu berjam-jam untuk cerita: novel, webtoon, drama.
-        </p>
-        <p data-i18n-html="about.originP3">
-          Dari situ muncul pertanyaan: <strong>bagaimana kalau pelajaran hidup dikemas dalam cerita yang seru?</strong> Bukan ceramah, bukan modul, tapi pengalaman yang bisa dirasakan.
-        </p>
-        <p data-i18n="about.originP4">
-          Cerita pertama kami dibuat sebagai eksperimen kecil. Ternyata, orang-orang merespons dengan cara yang tidak kami duga. Mereka berdiskusi, berbagi, dan bilang "ini relate banget."
-        </p>
-      </section>
-
-      <!-- Problem Statement -->
-      <section class="about-section">
-        <h2><span class="section-icon">🔍</span> <span data-i18n="about.problemTitle">Masalah yang Kami Coba Jawab</span></h2>
-        
-        <div class="problem-list">
-          <div class="problem-item">
-            <h3 data-i18n="about.prob1Title">Topik penting sering disampaikan dengan cara yang membosankan</h3>
-            <p data-i18n="about.prob1Desc">Kesehatan mental, literasi keuangan, berpikir kritis. Semuanya penting, tapi seringkali dikemas dalam format yang sulit dicerna.</p>
-          </div>
-          
-          <div class="problem-item">
-            <h3 data-i18n="about.prob2Title">Ada gap antara "tahu" dan "paham"</h3>
-            <p data-i18n="about.prob2Desc">Banyak orang tahu teorinya, tapi tidak bisa menerapkan karena tidak pernah "merasakan" situasinya. Cerita interaktif membantu menjembatani gap ini.</p>
-          </div>
-          
-          <div class="problem-item">
-            <h3 data-i18n="about.prob3Title">Konten berkualitas sering tidak gratis</h3>
-            <p data-i18n="about.prob3Desc">Kursus online, workshop, buku. Semuanya butuh biaya. Kami percaya akses ke pengalaman yang bermakna seharusnya tidak dibatasi kemampuan finansial.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Mission -->
-      <section class="about-section">
-        <h2><span class="section-icon">🎯</span> <span data-i18n="about.missionTitle">Misi Kami</span></h2>
-        
-        <div class="mission-box">
-          <p class="mission-statement" data-i18n="about.missionStatement">
-            Membuat pengalaman bermakna bisa diakses siapa saja, tanpa biaya, tanpa syarat.
-          </p>
-          <div class="mission-points">
-            <span class="mission-point" data-i18n="about.missionPoint1">💚 Gratis selamanya</span>
-            <span class="mission-point" data-i18n="about.missionPoint2">🤝 Nonprofit</span>
-            <span class="mission-point" data-i18n="about.missionPoint3">👥 Berbasis komunitas</span>
-          </div>
-        </div>
-
-        <p data-i18n="about.missionP1">
-          Senara adalah platform nonprofit. Kami tidak menjual apapun. Semua cerita bisa diakses gratis, sekarang dan selamanya.
-        </p>
-        <p data-i18n-html="about.missionP2">
-          Bukan freemium, bukan trial. <strong>Gratis</strong>. Tidak ada investor yang menuntut profit, tidak ada target revenue yang harus dicapai. Cerita-cerita di Senara dibuat oleh relawan yang peduli.
-        </p>
-      </section>
-
-      <!-- Vision -->
-      <section class="about-section">
-        <h2><span class="section-icon">🔭</span> <span data-i18n="about.visionTitle">Visi Jangka Panjang</span></h2>
-        
-        <div class="pull-quote">
-          <p data-i18n="about.visionQuote">Kami bermimpi Senara menjadi perpustakaan cerita bermakna terbesar di Indonesia.</p>
-        </div>
-
-        <p data-i18n="about.visionP1">
-          Tempat di mana guru bisa menemukan materi yang engaging. Orang tua bisa mengajarkan nilai-nilai penting lewat cerita. Siapa saja bisa belajar dari pengalaman karakter fiksi, sebelum menghadapi situasi serupa di dunia nyata.
-        </p>
-        <p data-i18n="about.visionP2">
-          Kami tahu ini butuh waktu. Tapi setiap cerita baru, setiap pembaca yang tersentuh, adalah langkah ke arah sana.
-        </p>
-      </section>
-
-      <!-- Values -->
-      <section class="about-section">
-        <h2><span class="section-icon">💎</span> <span data-i18n="about.valuesTitle">Nilai-nilai Kami</span></h2>
-        
-        <div class="values-grid">
-          <div class="value-item">
-            <span class="value-icon">🌱</span>
-            <div class="value-content">
-              <h3 data-i18n="about.val1Title">Tumbuh Bersama</h3>
-              <p data-i18n="about.val1Desc">Kami belajar sambil jalan. Tidak sempurna, tapi terus berkembang.</p>
-            </div>
-          </div>
-          
-          <div class="value-item">
-            <span class="value-icon">🤝</span>
-            <div class="value-content">
-              <h3 data-i18n="about.val2Title">Mengutamakan Komunitas</h3>
-              <p data-i18n="about.val2Desc">Senara ada karena kontributor. Setiap cerita adalah hasil kolaborasi.</p>
-            </div>
-          </div>
-          
-          <div class="value-item">
-            <span class="value-icon">🎯</span>
-            <div class="value-content">
-              <h3 data-i18n="about.val3Title">Dampak, Bukan Viral</h3>
-              <p data-i18n="about.val3Desc">Kami tidak mengejar angka. Kami mengejar perubahan yang bermakna.</p>
-            </div>
-          </div>
-          
-          <div class="value-item">
-            <span class="value-icon">💡</span>
-            <div class="value-content">
-              <h3 data-i18n="about.val4Title">Sederhana</h3>
-              <p data-i18n="about.val4Desc">Cerita yang baik adalah cerita yang bisa dipahami siapa saja.</p>
-            </div>
-          </div>
-          
-          <div class="value-item">
-            <span class="value-icon">❤️</span>
-            <div class="value-content">
-              <h3 data-i18n="about.val5Title">Empati</h3>
-              <p data-i18n="about.val5Desc">Kami menulis untuk manusia, bukan algoritma.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Closing -->
-      <div class="closing-section">
-        <div class="closing-emoji">🌿</div>
-        <p data-i18n="about.closingP1">
-          Senara masih sangat muda. Banyak yang belum sempurna, dan kami terus belajar.
-        </p>
-        <p data-i18n-html="about.closingP2">
-          Tapi kami percaya: <strong>cerita punya kekuatan untuk mengubah cara orang melihat dunia.</strong> Dan kami ingin terus membuat cerita yang bermakna.
-        </p>
-        <p data-i18n="about.closingP3">
-          Terima kasih sudah menjadi bagian dari perjalanan ini.
-        </p>
-        <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-          <a href="tim.html" style="color: #d97706; font-weight: 500;" data-umami-event="About Tim Link" data-i18n="about.closingLinks.team">👥 Kenali Tim Kami</a>
-          <a href="pendekatan.html" style="color: #d97706; font-weight: 500;" data-umami-event="About Pendekatan Link" data-i18n="about.closingLinks.approach">📖 Pendekatan Kami</a>
-          <a href="roadmap.html" style="color: #d97706; font-weight: 500;" data-umami-event="About Roadmap Link" data-i18n="about.closingLinks.roadmap">🗺️ Peta Jalan</a>
-        </div>
-      </div>
-
+  <!-- Section Navigation -->
+  <nav class="section-nav" id="section-nav">
+    <div class="section-nav-inner">
+      <button class="section-tab active" data-tab="story" data-i18n="about.tabs.story">Our Story</button>
+      <button class="section-tab" data-tab="approach" data-i18n="about.tabs.approach">Approach</button>
+      <button class="section-tab" data-tab="team" data-i18n="about.tabs.team">Team</button>
+      <button class="section-tab" data-tab="roadmap" data-i18n="about.tabs.roadmap">Roadmap</button>
+      <button class="section-tab" data-tab="contribute" data-i18n="about.tabs.contribute">Contribute</button>
     </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content" class="py-12 md:py-16 px-4">
+
+    <!-- ==================== OUR STORY TAB ==================== -->
+    <div class="about-section-content active" id="tab-story">
+      <div class="about-content">
+
+        <!-- Origin Story -->
+        <section class="about-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><path d="M12 12V8M12 16h.01"/></svg></span> <span data-i18n="about.originTitle">Awal Mula</span></h2>
+          <p data-i18n="about.originP1">
+            Senara dimulai dari sebuah frustrasi.
+          </p>
+          <p data-i18n="about.originP2">
+            Kami sering menemukan materi yang isinya bagus, tapi penyampaiannya membuat orang kehilangan minat sebelum selesai membaca. Di sisi lain, orang rela menghabiskan waktu berjam-jam untuk cerita: novel, webtoon, drama.
+          </p>
+          <p data-i18n-html="about.originP3">
+            Dari situ muncul pertanyaan: <strong>bagaimana kalau pelajaran hidup dikemas dalam cerita yang seru?</strong> Bukan ceramah, bukan modul, tapi pengalaman yang bisa dirasakan.
+          </p>
+          <p data-i18n="about.originP4">
+            Cerita pertama kami dibuat sebagai eksperimen kecil. Ternyata, orang-orang merespons dengan cara yang tidak kami duga. Mereka berdiskusi, berbagi, dan bilang "ini relate banget."
+          </p>
+        </section>
+
+        <!-- Problem Statement -->
+        <section class="about-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span> <span data-i18n="about.problemTitle">Masalah yang Kami Coba Jawab</span></h2>
+          
+          <div class="problem-list">
+            <div class="problem-item">
+              <h3 data-i18n="about.prob1Title">Topik penting sering disampaikan dengan cara yang membosankan</h3>
+              <p data-i18n="about.prob1Desc">Kesehatan mental, literasi keuangan, berpikir kritis. Semuanya penting, tapi seringkali dikemas dalam format yang sulit dicerna.</p>
+            </div>
+            
+            <div class="problem-item">
+              <h3 data-i18n="about.prob2Title">Ada gap antara "tahu" dan "paham"</h3>
+              <p data-i18n="about.prob2Desc">Banyak orang tahu teorinya, tapi tidak bisa menerapkan karena tidak pernah "merasakan" situasinya. Cerita interaktif membantu menjembatani gap ini.</p>
+            </div>
+            
+            <div class="problem-item">
+              <h3 data-i18n="about.prob3Title">Konten berkualitas sering tidak gratis</h3>
+              <p data-i18n="about.prob3Desc">Kursus online, workshop, buku. Semuanya butuh biaya. Kami percaya akses ke pengalaman yang bermakna seharusnya tidak dibatasi kemampuan finansial.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mission -->
+        <section class="about-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span> <span data-i18n="about.missionTitle">Misi Kami</span></h2>
+          
+          <div class="mission-box">
+            <p class="mission-statement" data-i18n="about.missionStatement">
+              Membuat pengalaman bermakna bisa diakses siapa saja, tanpa biaya, tanpa syarat.
+            </p>
+            <div class="mission-points">
+              <span class="mission-point" data-i18n="about.missionPoint1">Free forever</span>
+              <span class="mission-point" data-i18n="about.missionPoint2">Nonprofit</span>
+              <span class="mission-point" data-i18n="about.missionPoint3">Community-driven</span>
+            </div>
+          </div>
+
+          <p data-i18n="about.missionP1">
+            Senara adalah platform nonprofit. Kami tidak menjual apapun. Semua cerita bisa diakses gratis, sekarang dan selamanya.
+          </p>
+          <p data-i18n-html="about.missionP2">
+            Bukan freemium, bukan trial. <strong>Gratis</strong>. Tidak ada investor yang menuntut profit, tidak ada target revenue yang harus dicapai. Cerita-cerita di Senara dibuat oleh relawan yang peduli.
+          </p>
+        </section>
+
+        <!-- Vision -->
+        <section class="about-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span> <span data-i18n="about.visionTitle">Visi Jangka Panjang</span></h2>
+          
+          <div class="pull-quote">
+            <p data-i18n="about.visionQuote">Kami bermimpi Senara menjadi perpustakaan cerita bermakna terbesar di Indonesia.</p>
+          </div>
+
+          <p data-i18n="about.visionP1">
+            Tempat di mana guru bisa menemukan materi yang engaging. Orang tua bisa mengajarkan nilai-nilai penting lewat cerita. Siapa saja bisa belajar dari pengalaman karakter fiksi, sebelum menghadapi situasi serupa di dunia nyata.
+          </p>
+          <p data-i18n="about.visionP2">
+            Kami tahu ini butuh waktu. Tapi setiap cerita baru, setiap pembaca yang tersentuh, adalah langkah ke arah sana.
+          </p>
+        </section>
+
+        <!-- Values -->
+        <section class="about-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <span data-i18n="about.valuesTitle">Nilai-nilai Kami</span></h2>
+          
+          <div class="values-grid">
+            <div class="value-item">
+              <span class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><path d="M12 12V8"/></svg></span>
+              <div class="value-content">
+                <h3 data-i18n="about.val1Title">Tumbuh Bersama</h3>
+                <p data-i18n="about.val1Desc">Kami belajar sambil jalan. Tidak sempurna, tapi terus berkembang.</p>
+              </div>
+            </div>
+            
+            <div class="value-item">
+              <span class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+              <div class="value-content">
+                <h3 data-i18n="about.val2Title">Mengutamakan Komunitas</h3>
+                <p data-i18n="about.val2Desc">Senara ada karena kontributor. Setiap cerita adalah hasil kolaborasi.</p>
+              </div>
+            </div>
+            
+            <div class="value-item">
+              <span class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+              <div class="value-content">
+                <h3 data-i18n="about.val3Title">Dampak, Bukan Viral</h3>
+                <p data-i18n="about.val3Desc">Kami tidak mengejar angka. Kami mengejar perubahan yang bermakna.</p>
+              </div>
+            </div>
+            
+            <div class="value-item">
+              <span class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></span>
+              <div class="value-content">
+                <h3 data-i18n="about.val4Title">Sederhana</h3>
+                <p data-i18n="about.val4Desc">Cerita yang baik adalah cerita yang bisa dipahami siapa saja.</p>
+              </div>
+            </div>
+            
+            <div class="value-item">
+              <span class="value-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
+              <div class="value-content">
+                <h3 data-i18n="about.val5Title">Empati</h3>
+                <p data-i18n="about.val5Desc">Kami menulis untuk manusia, bukan algoritma.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Closing -->
+        <div class="closing-section">
+          <div class="closing-emoji"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><path d="M12 12V8"/></svg></div>
+          <p data-i18n="about.closingP1">
+            Senara masih sangat muda. Banyak yang belum sempurna, dan kami terus belajar.
+          </p>
+          <p data-i18n-html="about.closingP2">
+            Tapi kami percaya: <strong>cerita punya kekuatan untuk mengubah cara orang melihat dunia.</strong> Dan kami ingin terus membuat cerita yang bermakna.
+          </p>
+          <p data-i18n="about.closingP3">
+            Terima kasih sudah menjadi bagian dari perjalanan ini.
+          </p>
+          <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+            <a href="?tab=team" style="color: #F97316; font-weight: 500;" data-umami-event="About Tim Link" data-i18n="about.closingLinks.team">Meet Our Team</a>
+            <a href="?tab=approach" style="color: #F97316; font-weight: 500;" data-umami-event="About Pendekatan Link" data-i18n="about.closingLinks.approach">Our Approach</a>
+            <a href="?tab=roadmap" style="color: #F97316; font-weight: 500;" data-umami-event="About Roadmap Link" data-i18n="about.closingLinks.roadmap">Roadmap</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== APPROACH TAB ==================== -->
+    <div class="about-section-content" id="tab-approach">
+      <div class="about-content">
+
+        <!-- Why Stories -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> <span data-i18n="pendekatan.whyTitle">Kenapa Cerita?</span></h2>
+          <p data-i18n="pendekatan.whyParagraphs.0"></p>
+          <p data-i18n="pendekatan.whyParagraphs.1"></p>
+          <p data-i18n-html="pendekatan.whyParagraphs.2"></p>
+
+          <div class="research-note">
+            <p data-i18n-html="pendekatan.researchNote"></p>
+          </div>
+        </section>
+
+        <!-- Educational Principles -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span> <span data-i18n="pendekatan.principlesTitle">Prinsip Pembelajaran</span></h2>
+          <p data-i18n="pendekatan.principlesIntro"></p>
+
+          <div class="principle-grid">
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.principles.0.title">Reflection, Not Instruction</h3>
+              <p data-i18n="pendekatan.principles.0.body"></p>
+            </div>
+
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.principles.1.title">Relevant Context</h3>
+              <p data-i18n="pendekatan.principles.1.body"></p>
+            </div>
+
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.principles.2.title">Learn from Consequences</h3>
+              <p data-i18n="pendekatan.principles.2.body"></p>
+            </div>
+
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.principles.3.title">Room for Discussion</h3>
+              <p data-i18n="pendekatan.principles.3.body"></p>
+            </div>
+
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.principles.4.title">No "Perfect" Ending</h3>
+              <p data-i18n="pendekatan.principles.4.body"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Story Design Process -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></span> <span data-i18n="pendekatan.processTitle">Proses Pembuatan Cerita</span></h2>
+          <p data-i18n="pendekatan.processIntro"></p>
+
+          <div class="process-list">
+            <div class="process-step">
+              <div class="process-number">1</div>
+              <div class="process-content">
+                <h3 data-i18n="pendekatan.processSteps.0.title">Riset Topik</h3>
+                <p data-i18n="pendekatan.processSteps.0.body"></p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-number">2</div>
+              <div class="process-content">
+                <h3 data-i18n="pendekatan.processSteps.1.title">Pengembangan Karakter & Skenario</h3>
+                <p data-i18n="pendekatan.processSteps.1.body"></p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-number">3</div>
+              <div class="process-content">
+                <h3 data-i18n="pendekatan.processSteps.2.title">Penulisan & Branching</h3>
+                <p data-i18n="pendekatan.processSteps.2.body"></p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-number">4</div>
+              <div class="process-content">
+                <h3 data-i18n="pendekatan.processSteps.3.title">Review Konten</h3>
+                <p data-i18n="pendekatan.processSteps.3.body"></p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-number">5</div>
+              <div class="process-content">
+                <h3 data-i18n="pendekatan.processSteps.4.title">Uji Coba & Iterasi</h3>
+                <p data-i18n="pendekatan.processSteps.4.body"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Ethical Guidelines -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364"/></svg></span> <span data-i18n="pendekatan.ethicsTitle">Pedoman Etika</span></h2>
+          <p data-i18n="pendekatan.ethicsIntro"></p>
+
+          <div class="ethics-box">
+            <h3 data-i18n="pendekatan.ethicsCommitmentTitle">Komitmen Kami</h3>
+            <ul class="ethics-list">
+              <li data-i18n="pendekatan.ethicsList.0"></li>
+              <li data-i18n="pendekatan.ethicsList.1"></li>
+              <li data-i18n="pendekatan.ethicsList.2"></li>
+              <li data-i18n="pendekatan.ethicsList.3"></li>
+              <li data-i18n="pendekatan.ethicsList.4"></li>
+              <li data-i18n="pendekatan.ethicsList.5"></li>
+            </ul>
+          </div>
+
+          <p data-i18n="pendekatan.ethicsOutro"></p>
+        </section>
+
+        <!-- Why Interactive -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg></span> <span data-i18n="pendekatan.interactiveTitle">Kenapa Interaktif?</span></h2>
+          <p data-i18n="pendekatan.interactiveIntro"></p>
+
+          <div class="principle-grid">
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.interactivePoints.0.title">Active Engagement</h3>
+              <p data-i18n="pendekatan.interactivePoints.0.body"></p>
+            </div>
+
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.interactivePoints.1.title">Safe Exploration</h3>
+              <p data-i18n="pendekatan.interactivePoints.1.body"></p>
+            </div>
+
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.interactivePoints.2.title">Personalization</h3>
+              <p data-i18n="pendekatan.interactivePoints.2.body"></p>
+            </div>
+
+            <div class="principle-card">
+              <h3 data-i18n="pendekatan.interactivePoints.3.title">Self-Reflection</h3>
+              <p data-i18n="pendekatan.interactivePoints.3.body"></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Limitations -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span> <span data-i18n="pendekatan.limitsTitle">Keterbatasan</span></h2>
+          <p data-i18n="pendekatan.limitsIntro"></p>
+          <p data-i18n-html="pendekatan.limitsBullets.0"></p>
+          <p data-i18n-html="pendekatan.limitsBullets.1"></p>
+          <p data-i18n-html="pendekatan.limitsBullets.2"></p>
+        </section>
+
+        <!-- Closing -->
+        <div class="closing-section">
+          <p data-i18n="pendekatan.closingParagraphs.0"></p>
+          <p data-i18n="pendekatan.closingParagraphs.1"></p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== TEAM TAB ==================== -->
+    <div class="about-section-content" id="tab-team">
+      <div class="about-content" style="max-width: 900px;">
+
+        <!-- Intro -->
+        <div class="intro-section">
+          <p data-i18n="team.intro">
+            Senara dibangun oleh tim kecil yang percaya bahwa cerita punya kekuatan untuk mengajarkan hal-hal penting dengan cara yang menyentuh hati. Kami bukan perusahaan besar, hanya sekelompok orang yang peduli.
+          </p>
+        </div>
+
+        <!-- Why We Built Senara -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span> <span data-i18n="team.whyTitle">Kenapa Kami Membangun Senara?</span></h2>
+          <div class="story-box">
+            <p data-i18n="team.whyP1">
+              Kami melihat banyak orang di sekitar kami yang kesulitan memahami topik-topik penting dalam hidup—kesehatan mental, literasi digital, keuangan, dan soft skills—tapi tidak tahu harus mulai dari mana. Informasi yang ada seringkali terasa menggurui, membosankan, atau tidak relevan.
+            </p>
+            <p data-i18n-html="team.whyP2">
+              Kami percaya ada cara yang lebih baik: <strong>lewat cerita</strong>. Cerita yang membuat kita merasa "itu aku banget", yang membuat kita berpikir tanpa merasa diceramahi, dan yang bisa diakses siapa saja tanpa harus bayar.
+            </p>
+            <p data-i18n-html="team.whyP3">
+              Senara lahir dari keyakinan sederhana: <em>setiap orang berhak belajar tentang hal-hal penting dalam hidup, dengan cara yang manusiawi dan gratis.</em>
+            </p>
+          </div>
+        </section>
+
+        <!-- Core Team -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span> <span data-i18n="team.coreTitle">Tim Inti</span></h2>
+
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar" style="font-size:1.5rem;font-weight:700;color:white;">HT</div>
+              <h3>Hanun Thalia</h3>
+              <div class="team-role" data-i18n="team.roleCEO">CEO & Co-Founder</div>
+              <p class="team-job">OJK · Ex-Nestlé · Cambridge SupTech Lab · Psikologi UI</p>
+              <p data-i18n="team.bioCEO">Berpengalaman di regulator keuangan dan FMCG multinasional. Co-founder Diceritain (30K+ users). Background psikologi dan product management.</p>
+              <a href="https://linkedin.com/in/hnthalia" target="_blank" rel="noopener" class="team-linkedin" data-i18n="team.viewLinkedIn">Lihat LinkedIn →</a>
+            </div>
+
+            <div class="team-card">
+              <div class="team-avatar" style="font-size:1.5rem;font-weight:700;color:white;">FF</div>
+              <h3>Fauzan Fathurrahman</h3>
+              <div class="team-role" data-i18n="team.roleCTO">CTO & Co-Founder</div>
+              <p class="team-job">FrankieOne (Australia) · Ex-YC Startups · AWS Certified</p>
+              <p data-i18n="team.bioCTO">6+ tahun di tech companies across Australia, Singapore, US, dan Jepang. Membangun produk yang digunakan ratusan ribu users.</p>
+              <a href="https://linkedin.com/in/fauzan-fathurrahman" target="_blank" rel="noopener" class="team-linkedin" data-i18n="team.viewLinkedIn">Lihat LinkedIn →</a>
+            </div>
+
+            <div class="team-card">
+              <div class="team-avatar" style="font-size:1.5rem;font-weight:700;color:white;">ZA</div>
+              <h3>Zakaria Anshari</h3>
+              <div class="team-role" data-i18n="team.roleCOO">COO & Co-Founder</div>
+              <p class="team-job">InJourney Group · Ex-BUMN School of Excellence · Psikologi UNPAD</p>
+              <p data-i18n="team.bioCOO">Mengelola talent development untuk 50K+ karyawan di holding BUMN. Lulusan terbaik fakultas. Background L&D dan corporate learning.</p>
+              <a href="https://linkedin.com/in/zaka27" target="_blank" rel="noopener" class="team-linkedin" data-i18n="team.viewLinkedIn">Lihat LinkedIn →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Creative Team -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></span> <span data-i18n="team.creativeTitle">Desainer &amp; Penulis Cerita</span></h2>
+
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar" style="font-size:1.5rem;font-weight:700;color:white;">PP</div>
+              <h3>Primaridiana Pradiptasari</h3>
+              <div class="team-role" data-i18n="team.roleDesigner">Designer &amp; Story Writer</div>
+              <p class="team-job" data-i18n="team.jobPrim">Silang.id · Freelance Graphic Designer &amp; Illustrator · BISINDO Interpreter</p>
+              <p data-i18n="team.bioPrim">Kreator visual dengan 4+ tahun pengalaman di branding, social media, dan multimedia. Juru bahasa isyarat Indonesia (BISINDO) bersertifikat. Pernah mengelola akun sosmed dengan engagement tinggi dan memproduksi podcast. Aktif di komunitas Tuli melalui Fantasi Tuli dan GKI Pondok Indah.</p>
+              <a href="https://www.linkedin.com/in/primapradipta/" target="_blank" rel="noopener" class="team-linkedin" data-i18n="team.viewLinkedIn">Lihat LinkedIn →</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Values -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></span> <span data-i18n="team.valuesTitle">Nilai yang Kami Pegang</span></h2>
+
+          <div class="values-grid-team">
+            <div class="value-card">
+              <div class="value-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h4 data-i18n="team.val1Title">Gratis untuk Semua</h4>
+              <p data-i18n="team.val1Desc">Tidak ada paywall, tidak ada konten eksklusif</p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+              <h4 data-i18n="team.val2Title">Privasi Utama</h4>
+              <p data-i18n="team.val2Desc">Tidak mengumpulkan data pribadi</p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+              <h4 data-i18n="team.val3Title">Empati dalam Cerita</h4>
+              <p data-i18n="team.val3Desc">Topik sensitif ditangani dengan hati-hati</p>
+            </div>
+
+            <div class="value-card">
+              <div class="value-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M12 22c4-4 8-7.5 8-12a8 8 0 10-16 0c0 4.5 4 8 8 12z"/><path d="M12 12V8"/></svg></div>
+              <h4 data-i18n="team.val4Title">Nonprofit</h4>
+              <p data-i18n="team.val4Desc">Tidak ada investor, tidak ada tekanan profit</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Advisors -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span> <span data-i18n="team.advisorTitle">Pendukung & Penasihat</span></h2>
+          <p data-i18n="team.advisorIntro">
+            Kami berterima kasih kepada para profesional yang memberikan masukan dan dukungan:
+          </p>
+
+          <div class="advisor-grid-new">
+            <div class="advisor-card-new">
+              <div class="advisor-icon-new"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+              <h4 data-i18n="team.adv1Title">Subject Matter Experts</h4>
+              <p data-i18n="team.adv1Desc">Review akurasi materi dari berbagai bidang</p>
+            </div>
+
+            <div class="advisor-card-new">
+              <div class="advisor-icon-new"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+              <h4 data-i18n="team.adv2Title">Guru & Edukator</h4>
+              <p data-i18n="team.adv2Desc">Feedback dari perspektif pendidik</p>
+            </div>
+
+            <div class="advisor-card-new">
+              <div class="advisor-icon-new"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><line x1="6" y1="11" x2="10" y2="11"/><line x1="8" y1="9" x2="8" y2="13"/><line x1="15" y1="12" x2="15.01" y2="12"/><line x1="18" y1="10" x2="18.01" y2="10"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg></div>
+              <h4 data-i18n="team.adv3Title">Beta Readers</h4>
+              <p data-i18n="team.adv3Desc">Pengujian cerita sebelum rilis</p>
+            </div>
+
+            <div class="advisor-card-new">
+              <div class="advisor-icon-new"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+              <h4 data-i18n="team.adv4Title">Community Feedback</h4>
+              <p data-i18n="team.adv4Desc">Masukan dari pembaca dan pengguna</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contributors -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span> <span data-i18n="team.contribTitle">Kontributor</span></h2>
+          <p data-i18n="team.contribIntro">
+            Senara tidak akan ada tanpa bantuan para kontributor yang meluangkan waktu dan keahlian mereka:
+          </p>
+
+          <div class="contributors-box">
+            <h3 data-i18n="team.contribBoxTitle">Terima kasih kepada semua yang sudah berkontribusi!</h3>
+            <p data-i18n="team.contribBoxDesc">Penulis, ilustrator, editor, penguji, dan semua yang membantu mewujudkan cerita-cerita ini.</p>
+            <div class="contributor-roles">
+              <span class="contributor-role" data-i18n="team.roles.writer">Writers</span>
+              <span class="contributor-role" data-i18n="team.roles.illustrator">Illustrators</span>
+              <span class="contributor-role" data-i18n="team.roles.editor">Editors</span>
+              <span class="contributor-role" data-i18n="team.roles.tester">Testers</span>
+              <span class="contributor-role" data-i18n="team.roles.translator">Translators</span>
+              <span class="contributor-role" data-i18n="team.roles.outreach">Outreach</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-section">
+          <h2 data-i18n="team.ctaTitle">Ingin Bergabung?</h2>
+          <p data-i18n="team.ctaDesc">
+            Kami selalu mencari orang-orang yang ingin berkontribusi, baik sebagai penulis, ilustrator, editor, atau dalam peran lainnya.
+          </p>
+          <a href="?tab=contribute" class="cta-btn" data-umami-event="Team page contribute CTA">
+            <span data-i18n="team.ctaButton">See How to Contribute</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== ROADMAP TAB ==================== -->
+    <div class="about-section-content" id="tab-roadmap">
+      <div class="page-content-roadmap">
+
+        <p class="intro-text" data-i18n="roadmap.intro">
+          Senara terus berkembang. Halaman ini menunjukkan apa yang sedang kami kerjakan, apa yang direncanakan, dan apa yang sudah selesai. Semua bisa berubah berdasarkan feedback dari komunitas.
+        </p>
+
+        <!-- Stories in Progress -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span> <span data-i18n="roadmap.storiesTitle">Cerita Sedang Dikerjakan</span></h2>
+          <p data-i18n="roadmap.storiesIntro">
+            Cerita-cerita baru yang sedang dalam proses pembuatan:
+          </p>
+
+          <div class="roadmap-grid">
+            <div class="roadmap-card">
+              <div class="roadmap-header">
+                <h3 data-i18n="roadmap.stories.digital.title">Digital Literacy & Social Media</h3>
+                <span class="status-badge status-in-progress" data-i18n="roadmap.statuses.inProgress">In Progress</span>
+              </div>
+              <p data-i18n="roadmap.stories.digital.desc">Cerita tentang navigasi dunia digital: mengenali hoax, menjaga privasi online, dan membangun hubungan sehat di media sosial.</p>
+              <div class="roadmap-meta">
+                <span data-i18n="roadmap.stories.digital.target">Target: Q1 2025</span>
+                <span data-i18n="roadmap.stories.digital.chapters">3-4 chapters</span>
+              </div>
+            </div>
+
+            <div class="roadmap-card">
+              <div class="roadmap-header">
+                <h3 data-i18n="roadmap.stories.finance.title">Financial Literacy for Beginners</h3>
+                <span class="status-badge status-planned" data-i18n="roadmap.statuses.planned">Planned</span>
+              </div>
+              <p data-i18n="roadmap.stories.finance.desc">Belajar mengelola uang, menabung, dan membuat keputusan finansial yang bijak lewat cerita karakter yang relatable.</p>
+              <div class="roadmap-meta">
+                <span data-i18n="roadmap.stories.finance.target">Target: Q2 2025</span>
+                <span data-i18n="roadmap.stories.finance.chapters">4-5 chapters</span>
+              </div>
+            </div>
+
+            <div class="roadmap-card">
+              <div class="roadmap-header">
+                <h3 data-i18n="roadmap.stories.communication.title">Communication & Conflict Resolution</h3>
+                <span class="status-badge status-exploring" data-i18n="roadmap.statuses.exploring">Exploring</span>
+              </div>
+              <p data-i18n="roadmap.stories.communication.desc">Bagaimana berkomunikasi efektif, menyelesaikan konflik, dan membangun hubungan yang sehat dengan orang lain.</p>
+              <div class="roadmap-meta">
+                <span data-i18n="roadmap.stories.communication.target">Target: 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p data-i18n-html="roadmap.storiesNote">Have a story idea? <a href="contact.html" style="color: #F97316; text-decoration: underline;">Contact us</a> or <a href="?tab=contribute" style="color: #F97316; text-decoration: underline;">join as a contributor</a>.</p>
+          </div>
+        </section>
+
+        <!-- Platform Features -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.32 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span> <span data-i18n="roadmap.featuresTitle">Fitur Platform</span></h2>
+          <p data-i18n="roadmap.featuresIntro">
+            Pengembangan fitur untuk meningkatkan pengalaman pengguna:
+          </p>
+
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h4 data-i18n="roadmap.features.account.title">Account System</h4>
+              <p data-i18n="roadmap.features.account.desc">Login untuk menyimpan progress dan sinkronisasi antar perangkat.</p>
+              <span class="status-badge status-exploring" data-i18n="roadmap.statuses.exploring">Exploring</span>
+            </div>
+
+            <div class="feature-card">
+              <h4 data-i18n="roadmap.features.stats.title">Learning Statistics</h4>
+              <p data-i18n="roadmap.features.stats.desc">Lihat cerita yang sudah dibaca, waktu bermain, dan pencapaian.</p>
+              <span class="status-badge status-planned" data-i18n="roadmap.statuses.planned">Planned</span>
+            </div>
+
+            <div class="feature-card">
+              <h4 data-i18n="roadmap.features.gamification.title">Gamification</h4>
+              <p data-i18n="roadmap.features.gamification.desc">Badge, streak, dan reward untuk memotivasi pembaca.</p>
+              <span class="status-badge status-exploring" data-i18n="roadmap.statuses.exploring">Exploring</span>
+            </div>
+
+            <div class="feature-card">
+              <h4 data-i18n="roadmap.features.mobile.title">Mobile App</h4>
+              <p data-i18n="roadmap.features.mobile.desc">Akses Senara lewat aplikasi Android/iOS.</p>
+              <span class="status-badge status-exploring" data-i18n="roadmap.statuses.exploring">Exploring</span>
+            </div>
+
+            <div class="feature-card">
+              <h4 data-i18n="roadmap.features.multilang.title">Multi-language</h4>
+              <p data-i18n="roadmap.features.multilang.desc">Terjemahan cerita ke bahasa Inggris.</p>
+              <span class="status-badge status-exploring" data-i18n="roadmap.statuses.exploring">Exploring</span>
+            </div>
+
+            <div class="feature-card">
+              <h4 data-i18n="roadmap.features.offline.title">Offline Mode</h4>
+              <p data-i18n="roadmap.features.offline.desc">Download cerita untuk dibaca tanpa internet.</p>
+              <span class="status-badge status-planned" data-i18n="roadmap.statuses.planned">Planned</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Recently Completed -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span> <span data-i18n="roadmap.completedTitle">Baru Selesai</span></h2>
+          <p data-i18n="roadmap.completedIntro">
+            Apa yang sudah kami rilis belakangan ini:
+          </p>
+
+          <div class="completed-list">
+            <div class="completed-item">
+              <span class="completed-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div class="completed-content">
+                <h4 data-i18n="roadmap.completed.story.title">Cerita: Pahlawan Kesehatan Mental</h4>
+                <p data-i18n="roadmap.completed.story.desc">5 chapter tentang literasi kesehatan mental, mengenali gejala, dan mengurangi stigma.</p>
+              </div>
+            </div>
+
+            <div class="completed-item">
+              <span class="completed-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div class="completed-content">
+                <h4 data-i18n="roadmap.completed.redesign.title">Redesign Website</h4>
+                <p data-i18n="roadmap.completed.redesign.desc">Tampilan baru yang lebih bersih, navigasi yang lebih jelas, dan performa yang lebih baik.</p>
+              </div>
+            </div>
+
+            <div class="completed-item">
+              <span class="completed-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div class="completed-content">
+                <h4 data-i18n="roadmap.completed.collection.title">Halaman Koleksi dengan Filter</h4>
+                <p data-i18n="roadmap.completed.collection.desc">Cari cerita berdasarkan kategori, durasi, dan tingkat kesulitan.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Feedback -->
+        <div class="feedback-section">
+          <h2 data-i18n="roadmap.feedbackTitle">Help Us Prioritize</h2>
+          <p data-i18n="roadmap.feedbackDesc">
+            Roadmap ini dibentuk oleh feedback komunitas. Fitur atau cerita mana yang paling kamu butuhkan? Apa yang harus kami kerjakan lebih dulu?
+          </p>
+          <a href="mailto:fauzan08fauzan@gmail.com?subject=Feedback%20Roadmap%20Senara" class="feedback-btn" data-umami-event="Roadmap feedback CTA">
+            <span data-i18n="roadmap.feedbackCta">Send Feedback</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ==================== CONTRIBUTE TAB ==================== -->
+    <div class="about-section-content" id="tab-contribute">
+      <div class="page-content-roadmap">
+
+        <p class="intro-text" data-i18n="contribute.intro">
+          Senara dibangun oleh komunitas relawan yang percaya bahwa cerita bisa mengubah cara orang belajar. Kami selalu mencari orang-orang yang ingin berbagi keahlian dan waktu mereka untuk membuat sesuatu yang bermakna.
+        </p>
+
+        <!-- Roles Section -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span> <span data-i18n="contribute.rolesTitle">Peran yang Dibutuhkan</span></h2>
+          <p data-i18n="contribute.rolesIntro">
+            Setiap cerita di Senara adalah hasil kolaborasi berbagai keahlian. Berikut peran-peran yang selalu kami cari:
+          </p>
+
+          <div class="role-grid">
+            <div class="role-card">
+              <div class="role-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg></div>
+              <h3 data-i18n="contribute.roles.writer.title">Penulis Cerita</h3>
+              <p data-i18n="contribute.roles.writer.desc">Menulis naskah cerita interaktif dengan dialog, pilihan, dan berbagai jalur cerita. Kamu akan bekerja sama dengan tim untuk memastikan cerita engaging dan bermakna.</p>
+              <div class="role-tags">
+                <span class="role-tag">Kreatif</span>
+                <span class="role-tag">Storytelling</span>
+                <span class="role-tag">Bahasa Indonesia</span>
+              </div>
+            </div>
+
+            <div class="role-card">
+              <div class="role-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
+              <h3 data-i18n="contribute.roles.artist.title">Ilustrator & Desainer</h3>
+              <p data-i18n="contribute.roles.artist.desc">Membuat karakter, background, dan aset visual untuk cerita. Gaya visual bisa beragam, dari anime-style hingga ilustrasi sederhana.</p>
+              <div class="role-tags">
+                <span class="role-tag">Digital Art</span>
+                <span class="role-tag">Character Design</span>
+                <span class="role-tag">Background</span>
+              </div>
+            </div>
+
+            <div class="role-card">
+              <div class="role-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <h3 data-i18n="contribute.roles.editor.title">Editor & Reviewer</h3>
+              <p data-i18n="contribute.roles.editor.desc">Mereview naskah untuk kejelasan, akurasi informasi, dan sensitivitas konten. Membantu memastikan cerita berkualitas sebelum dipublikasikan.</p>
+              <div class="role-tags">
+                <span class="role-tag">Detail-oriented</span>
+                <span class="role-tag">Proofreading</span>
+                <span class="role-tag">Feedback</span>
+              </div>
+            </div>
+
+            <div class="role-card">
+              <div class="role-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+              <h3 data-i18n="contribute.roles.educator.title">Konsultan Edukator</h3>
+              <p data-i18n="contribute.roles.educator.desc">Membantu memvalidasi konten dari sisi substansi. Misalnya, psikolog untuk cerita kesehatan mental, atau ahli keuangan untuk cerita literasi finansial.</p>
+              <div class="role-tags">
+                <span class="role-tag">Subject Expert</span>
+                <span class="role-tag">Fact-checking</span>
+                <span class="role-tag">Advisory</span>
+              </div>
+            </div>
+
+            <div class="role-card">
+              <div class="role-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+              <h3 data-i18n="contribute.roles.developer.title">Developer</h3>
+              <p data-i18n="contribute.roles.developer.desc">Membantu pengembangan platform, fitur baru, atau integrasi teknis. Familiar dengan JavaScript dan web development.</p>
+              <div class="role-tags">
+                <span class="role-tag">JavaScript</span>
+                <span class="role-tag">Web Dev</span>
+                <span class="role-tag">Open Source</span>
+              </div>
+            </div>
+
+            <div class="role-card">
+              <div class="role-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M22 17H2a3 3 0 003-3V9a7 7 0 0114 0v5a3 3 0 003 3zm-8.27 4a2 2 0 01-3.46 0"/></svg></div>
+              <h3 data-i18n="contribute.roles.outreach.title">Community & Outreach</h3>
+              <p data-i18n="contribute.roles.outreach.desc">Membantu menyebarkan Senara ke komunitas yang tepat, mengelola media sosial, atau menjalin kerjasama dengan organisasi lain.</p>
+              <div class="role-tags">
+                <span class="role-tag">Communication</span>
+                <span class="role-tag">Social Media</span>
+                <span class="role-tag">Networking</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="note-box">
+            <p data-i18n-html="contribute.noExpNote"><strong>No experience?</strong> No problem. We welcome beginners who want to learn. What matters is the spirit and commitment to contribute.</p>
+          </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></svg></span> <span data-i18n="contribute.processTitle">Bagaimana Kolaborasi Berjalan</span></h2>
+          <p data-i18n="contribute.processIntro">
+            Proses kontribusi di Senara dirancang agar fleksibel dan tidak memberatkan:
+          </p>
+
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3 data-i18n="contribute.steps.intro.title">Kenalan Dulu</h3>
+                <p data-i18n="contribute.steps.intro.desc">Hubungi kami via email atau form. Ceritakan sedikit tentang dirimu, keahlian, dan minatmu. Tidak perlu CV formal.</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3 data-i18n="contribute.steps.matching.title">Diskusi & Matching</h3>
+                <p data-i18n="contribute.steps.matching.desc">Kami akan ngobrol untuk memahami ketersediaan dan preferensimu. Lalu kami carikan proyek atau tim yang cocok.</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3 data-i18n="contribute.steps.start.title">Mulai Berkontribusi</h3>
+                <p data-i18n="contribute.steps.start.desc">Kamu akan bergabung dengan tim kecil untuk mengerjakan satu cerita. Komunikasi via grup chat, dengan timeline yang fleksibel.</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3 data-i18n="contribute.steps.publish.title">Review & Publikasi</h3>
+                <p data-i18n="contribute.steps.publish.desc">Setelah cerita selesai, tim akan mereview bersama. Setelah siap, cerita dipublikasikan dengan kredit untuk semua kontributor.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- What You Get -->
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg></span> <span data-i18n="contribute.benefitsTitle">Apa yang Kamu Dapatkan</span></h2>
+          <p data-i18n="contribute.benefitsIntro">
+            Senara adalah platform nonprofit, jadi kami tidak bisa menawarkan bayaran. Tapi ada hal lain yang bisa kamu dapatkan:
+          </p>
+
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+              <h4 data-i18n="contribute.benefits.certificate.title">Sertifikat</h4>
+              <p data-i18n="contribute.benefits.certificate.desc">Sertifikat kontribusi untuk portofolio</p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+              <h4 data-i18n="contribute.benefits.community.title">Komunitas</h4>
+              <p data-i18n="contribute.benefits.community.desc">Jaringan dengan kreator dan edukator lain</p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+              <h4 data-i18n="contribute.benefits.experience.title">Pengalaman</h4>
+              <p data-i18n="contribute.benefits.experience.desc">Belajar proses pembuatan cerita interaktif</p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div>
+              <h4 data-i18n="contribute.benefits.credit.title">Kredit</h4>
+              <p data-i18n="contribute.benefits.credit.desc">Namamu tercantum di setiap cerita yang kamu bantu buat</p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+              <h4 data-i18n="contribute.benefits.mentoring.title">Mentoring</h4>
+              <p data-i18n="contribute.benefits.mentoring.desc">Bimbingan dari kontributor yang lebih berpengalaman</p>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+              <h4 data-i18n="contribute.benefits.impact.title">Dampak</h4>
+              <p data-i18n="contribute.benefits.impact.desc">Karyamu membantu orang belajar hal-hal penting</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-contribute">
+          <h2 data-i18n="contribute.ctaTitle">Tertarik Bergabung?</h2>
+          <p data-i18n="contribute.ctaDesc">
+            Kami senang mendengar dari kamu. Ceritakan sedikit tentang dirimu dan bagaimana kamu ingin berkontribusi.
+          </p>
+          <div class="cta-buttons">
+            <a href="https://forms.gle/MBBZmvUkSYS6daQaA" target="_blank" rel="noopener" class="cta-btn-main cta-btn-primary" data-umami-event="Contribute form CTA">
+              <span data-i18n="contribute.ctaForm">Fill Contributor Form</span>
+            </a>
+            <a href="mailto:fauzan08fauzan@gmail.com?subject=Ingin%20Berkontribusi%20di%20Senara" class="cta-btn-main cta-btn-secondary" data-umami-event="Contribute email CTA">
+              <span data-i18n="contribute.ctaEmail">Send Email</span>
+            </a>
+          </div>
+          <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+            <a href="?tab=team" style="color: #059669;" data-umami-event="Contribute Tim Link"><span data-i18n="contribute.ctaTeamLink">Kenali tim di balik Senara →</span></a>
+          </p>
+        </div>
+
+        <!-- Partnership -->
+        <div id="partnership" class="partnership-section">
+          <h3 data-i18n="contribute.partnerTitle">For Organizations & Partnerships</h3>
+          <p data-i18n="contribute.partnerDesc">
+            Apakah kamu mewakili sekolah, komunitas, atau organisasi yang ingin berkolaborasi dengan Senara? Kami terbuka untuk berbagai bentuk kerjasama, mulai dari pembuatan cerita khusus hingga program bersama.
+          </p>
+          <a href="mailto:fauzan08fauzan@gmail.com?subject=Kemitraan%20dengan%20Senara" data-umami-event="Partnership email CTA">
+            <span data-i18n="contribute.partnerCta">Hubungi untuk Kemitraan</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
   </main>
 
   <!-- Footer -->
   <footer id="footer-placeholder"></footer>
 
-  <script src="js/locales.js?v=1.0.4"></script>
-  <script src="js/i18n-simple.js?v=1.0.4"></script>
-  <script src="js/config.js?v=1.0.4"></script>
-  <script src="js/constants.js?v=1.0.4"></script>
-  <script src="js/navbar.js?v=1.0.4"></script>
-  <script src="js/footer.js?v=1.0.4"></script>
+  <script src="js/locales.js?v=1.0.5"></script>
+  <script src="js/i18n-simple.js?v=1.0.5"></script>
+  <script src="js/config.js?v=1.0.5"></script>
+  <script src="js/constants.js?v=1.0.5"></script>
+  <script src="js/shared-utils.js?v=1.0.5"></script>
+  <script src="js/performance-utils.js?v=1.0.5"></script>
+  <script src="js/navbar.js?v=1.0.5"></script>
+  <script src="js/footer.js?v=1.0.5"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initNavbar('about');
       initFooter();
+
+      var tabs = document.querySelectorAll('.section-tab');
+      var sections = document.querySelectorAll('.about-section-content');
+      var validTabs = ['story', 'approach', 'team', 'roadmap', 'contribute'];
+
+      function activateTab(tabName) {
+        if (validTabs.indexOf(tabName) === -1) tabName = 'story';
+        tabs.forEach(function(t) {
+          t.classList.toggle('active', t.getAttribute('data-tab') === tabName);
+        });
+        sections.forEach(function(s) {
+          s.classList.toggle('active', s.id === 'tab-' + tabName);
+        });
+      }
+
+      var params = new URLSearchParams(window.location.search);
+      var initialTab = params.get('tab');
+      activateTab(initialTab || 'story');
+
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          var tabName = this.getAttribute('data-tab');
+          activateTab(tabName);
+          var url = new URL(window.location);
+          url.searchParams.set('tab', tabName);
+          history.pushState({ tab: tabName }, '', url);
+        });
+      });
+
+      window.addEventListener('popstate', function(e) {
+        var tabName = (e.state && e.state.tab) || new URLSearchParams(window.location.search).get('tab') || 'story';
+        activateTab(tabName);
+      });
+
+      document.querySelectorAll('a[href^="?tab="]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var tabName = new URLSearchParams(this.getAttribute('href')).get('tab');
+          activateTab(tabName);
+          var url = new URL(window.location);
+          url.searchParams.set('tab', tabName);
+          history.pushState({ tab: tabName }, '', url);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
     });
   </script>
 </body>

@@ -37,7 +37,7 @@ const CONFIG = {
   // Feature flags
   features: {
     preloadAssets: true,
-    enableAnalytics: false,
+    enableAnalytics: true,
     enableDebug: false,
   },
 

@@ -16,8 +16,8 @@
   gap: 1rem;
   background: white;
   padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -35,8 +35,8 @@
 .loading-spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid #f0f0f0;
-  border-top: 4px solid #8b7355;
+  border: 3px solid #F1F5F9;
+  border-top: 3px solid #4F46E5;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -51,7 +51,7 @@
 }
 
 .loading-text {
-  color: #8b7355;
+  color: #4F46E5;
   font-weight: 600;
   font-size: 1rem;
   margin: 0;
@@ -76,7 +76,7 @@
 
 /* Skeleton Loading - Shared across pages */
 .skeleton {
-  background: linear-gradient(90deg, #f5ede0 25%, #ebe3d5 50%, #f5ede0 75%);
+  background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
   border-radius: 0.5rem;

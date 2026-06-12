@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senara TV | Senara</title>
+  <meta name="description" content="Curated educational YouTube videos on mental health, science, self-growth, and more. Watch and learn with Senara TV.">
+  <meta name="keywords" content="educational videos, YouTube, mental health, science, self-growth, Senara TV">
+  <meta name="author" content="Senara Team">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://senara.id/tv.html">
+  <meta property="og:title" content="Senara TV | Senara">
+  <meta property="og:description" content="Curated educational YouTube videos on mental health, science, self-growth, and more.">
+  <meta property="og:image" content="https://senara.id/assets/og-image.png">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://senara.id/tv.html">
+  <meta name="twitter:title" content="Senara TV | Senara">
+  <meta name="twitter:description" content="Curated educational YouTube videos on mental health, science, self-growth, and more.">
+  <meta name="twitter:image" content="https://senara.id/assets/og-image.png">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="style/home.css?v=1.0.5" rel="stylesheet">
+  <link href="style/tv.css?v=1.0.5" rel="stylesheet">
+  <link href="style/performance.css?v=1.0.5" rel="stylesheet">
+  <link href="style/dark-mode.css?v=1.0.5" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
+</head>
+<body class="bg-gray-50">
+  <a href="#main-content" class="skip-link" data-i18n="common.skipToContent">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav id="navbar-placeholder"></nav>
+
+  <main id="main-content">
+    <!-- Topbar: Age tabs + Category chips + Search -->
+    <div id="tvContainer" class="tv-container" data-active-age="all">
+      <!-- Sticky topbar -->
+      <div class="tv-topbar">
+        <!-- Age tabs -->
+        <div class="tv-age-tabs" role="tablist">
+          <button class="tv-age-tab active" data-age="all" role="tab" aria-selected="true" data-umami-event="TV age all">All</button>
+          <button class="tv-age-tab" data-age="kids" role="tab" aria-selected="false" data-umami-event="TV age kids">Kids</button>
+          <button class="tv-age-tab" data-age="teen" role="tab" aria-selected="false" data-umami-event="TV age teen">Teens</button>
+          <button class="tv-age-tab" data-age="young-adult" role="tab" aria-selected="false" data-umami-event="TV age young-adult">Young Adults</button>
+        </div>
+
+        <!-- Category chips -->
+        <div class="tv-categories">
+          <button class="tv-cat active" data-cat="all" data-umami-event="TV cat all">All</button>
+          <button class="tv-cat" data-cat="mind-emotions" data-umami-event="TV cat mind">Mind</button>
+          <button class="tv-cat" data-cat="science-curiosity" data-umami-event="TV cat science">Science</button>
+          <button class="tv-cat" data-cat="self-growth" data-umami-event="TV cat growth">Growth</button>
+          <button class="tv-cat" data-cat="stories" data-umami-event="TV cat stories">Stories</button>
+        </div>
+
+        <!-- Search -->
+        <div class="tv-search-wrap">
+          <input type="search" id="tvSearch" placeholder="Search videos..." class="tv-search" data-umami-event="TV search">
+          <button id="tvSearchClear" class="tv-search-clear" hidden>✕</button>
+        </div>
+      </div>
+
+      <!-- Hero section -->
+      <section id="tvHero" class="tv-hero is-loading">
+        <!-- Rendered by video-library.js -->
+      </section>
+
+      <!-- Channel rows -->
+      <section id="channelRows" class="tv-channels">
+        <!-- Rendered by video-library.js -->
+      </section>
+
+      <!-- Latest / Filtered videos -->
+      <section id="latestSection" class="tv-latest">
+        <div class="tv-latest-header">
+          <h2 id="latestTitle" class="tv-latest-title">Latest Videos</h2>
+          <span id="videoCount" class="tv-video-count"></span>
+        </div>
+        <div id="latestVideos" class="tv-grid is-loading">
+          <!-- Rendered by video-library.js -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="tv-modal" role="dialog" aria-modal="true" aria-label="Video player">
+      <div class="tv-modal-inner">
+        <button class="tv-close" aria-label="Close" data-umami-event="TV modal close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <div class="tv-modal-video">
+          <iframe width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="tv-modal-info">
+          <h3 class="tv-modal-title"></h3>
+          <p class="tv-modal-channel"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer-placeholder"></footer>
+
+  <script src="js/locales.js?v=1.0.5"></script>
+  <script src="js/i18n-simple.js?v=1.0.5"></script>
+  <script src="js/config.js?v=1.0.5"></script>
+  <script src="js/constants.js?v=1.0.5"></script>
+  <script src="js/shared-utils.js?v=1.0.5"></script>
+  <script src="js/performance-utils.js?v=1.0.5"></script>
+  <script src="js/navbar.js?v=1.0.5"></script>
+  <script src="js/footer.js?v=1.0.5"></script>
+  <script src="data/tv-channels.js?v=1.0.5"></script>
+  <script src="js/video-library.js?v=1.0.5"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initNavbar('tv');
+      initFooter();
+      initVideoLibrary();
+    });
+  </script>
+</body>
+</html>

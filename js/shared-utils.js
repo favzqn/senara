@@ -4,6 +4,43 @@
  */
 
 /**
+ * Get translated text with fallback
+ * Use this for user-facing strings that need i18n support
+ * @param {string} key - Translation key (e.g., 'tv.ageAll')
+ * @param {string} fallback - English fallback text
+ * @returns {string} Translated text or fallback
+ */
+function getText(key, fallback) {
+  if (typeof I18n !== 'undefined' && I18n.isReady && I18n.isReady()) {
+    const translated = I18n.t(key);
+    return translated !== key ? translated : fallback;
+  }
+  return fallback;
+}
+
+/**
+ * Translation function — global alias for I18n.t with fallback
+ * Used by home-page.js and other page scripts
+ * Handles both interpolation (params object) and fallback (string) cases
+ * @param {string} key - Translation key
+ * @param {string|Object} fallbackOrParams - Fallback text (string) or interpolation params (object)
+ * @returns {string} Translated text, fallback, or key
+ */
+function t(key, fallbackOrParams) {
+  if (typeof I18n !== 'undefined' && I18n.t) {
+    // If second arg is an object, it's interpolation params
+    if (fallbackOrParams && typeof fallbackOrParams === 'object') {
+      return I18n.t(key, fallbackOrParams);
+    }
+    // Otherwise it's a fallback string
+    const result = I18n.t(key);
+    if (result !== key) return result;
+    return (typeof fallbackOrParams === 'string') ? fallbackOrParams : key;
+  }
+  return (typeof fallbackOrParams === 'string') ? fallbackOrParams : key;
+}
+
+/**
  * Get URL parameter value
  * @param {string} param - Parameter name
  * @returns {string|null} Parameter value or null
@@ -54,7 +91,7 @@ function setupMobileMenu(btnSelector = '#mobileMenuBtn', menuSelector = '#mobile
  * @param {string} pageUrl - Current page URL
  */
 function setupSocialSharing(story, pageUrl = window.location.href) {
-  const pageTitle = `Baca "${story.title}" di Senara`;
+  const pageTitle = getText('share.readStory', `Read "${story.title}" on Senara`);
   const pageDescription = story.description;
 
   // Twitter share
@@ -152,7 +189,7 @@ function logError(context, error) {
  */
 function showLoading(element, message = CONSTANTS.LOADING_STATES.LOADING) {
   if (element) {
-    element.innerHTML = `<div class="col-span-full text-center py-12"><p class="text-amber-700">${message}</p></div>`;
+    element.innerHTML = `<div class="col-span-full text-center py-12"><p class="text-[#64748B]">${message}</p></div>`;
   }
 }
 
@@ -259,9 +296,9 @@ function getDifficultyColor(difficulty) {
  */
 function getStatusBadge(status) {
   const badges = {
-    'published': '✓ Published',
-    'draft': '📝 Draft',
-    'coming-soon': '🔜 Coming Soon',
+    'published': 'Published',
+    'draft': 'Draft',
+    'coming-soon': 'Coming Soon',
   };
   return badges[status] || status;
 }
@@ -301,10 +338,16 @@ function createStoryCard(story, options = {}) {
   
   const card = document.createElement('div');
   const isComingSoon = story.status === 'coming-soon';
-  card.className = `card-hover bg-white rounded-2xl overflow-hidden border border-amber-100 shadow-sm flex flex-col h-full ${isComingSoon ? 'opacity-75' : ''}`;
+  card.className = `card-hover bg-white rounded-2xl overflow-hidden border border-[#E2E8F0] shadow-sm flex flex-col h-full ${isComingSoon ? 'opacity-75' : ''}`;
   
-  const emoji = getStoryEmoji(story.id);
   const statusBadge = getStatusBadge(story.status);
+  
+  const playSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21"/></svg>';
+  const clockSvg = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
+  const penSvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>';
+  const categorySvg = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>';
+  const comingSoonSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
+  const startHereSvg = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>';
   
   // Get translated content if i18n is available
   const storyTitle = (typeof t === 'function' && t(`stories.${story.id}.title`) !== `stories.${story.id}.title`) 
@@ -314,80 +357,74 @@ function createStoryCard(story, options = {}) {
     ? t(`stories.${story.id}.description`) 
     : story.description;
   
-  // Translate labels
-  const comingSoonLabel = (typeof t === 'function') ? t('story.comingSoon') || 'Segera Hadir' : 'Segera Hadir';
-  const playLabel = (typeof t === 'function') ? (t('story.playNow') || 'Mainkan').replace(' →', '') : 'Mainkan';
-  const beginnerLabel = (typeof t === 'function') ? t('story.beginner') || 'Pemula' : 'Pemula';
-  const startHereLabel = (typeof I18n !== 'undefined' && I18n.getCurrentLanguage && I18n.getCurrentLanguage() === 'en') 
-    ? '🌱 Start Here' 
-    : '🌱 Mulai dari Sini';
+  const storyInitial = storyTitle.charAt(0).toUpperCase();
   
-  // Translate difficulty
+  const comingSoonLabel = (typeof t === 'function') ? t('story.comingSoon') || getText('story.comingSoon', 'Coming Soon') : getText('story.comingSoon', 'Coming Soon');
+  const playLabel = (typeof t === 'function') ? (t('story.playNow') || getText('story.play', 'Play')).replace(' →', '') : getText('story.play', 'Play');
+  const startHereLabel = getText('story.startHere', 'Start Here');
+  
   const difficultyKey = (story.difficulty || 'Beginner').toLowerCase();
   const difficultyLabel = (typeof t === 'function' && t(`story.${difficultyKey}`) !== `story.${difficultyKey}`) 
     ? t(`story.${difficultyKey}`) 
     : story.difficulty;
   
-  // Translate category if available
   const categoryLabel = story.category && typeof t === 'function' && t(`categories.${story.category}`) !== `categories.${story.category}`
     ? t(`categories.${story.category}`)
     : story.category ? story.category.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : '';
   
   card.innerHTML = `
     <div class="thumbnail-placeholder h-48 w-full relative">
-      ${emoji}
-      ${isComingSoon ? `<div class="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"><span class="text-white font-bold text-lg">${statusBadge}</span></div>` : ''}
-      ${story.difficulty === 'Beginner' && !isComingSoon ? `<div class="absolute top-3 left-3 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">${startHereLabel}</div>` : ''}
+      <span class="text-4xl font-bold text-[#4F46E5] opacity-30" style="font-family: 'Crimson Pro', serif;">${storyInitial}</span>
+      ${isComingSoon ? `<div class="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm"><span class="text-white font-bold text-lg">${comingSoonLabel}</span></div>` : ''}
+      ${story.difficulty === 'Beginner' && !isComingSoon ? `<div class="absolute top-3 left-3 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold inline-flex items-center gap-1">${startHereSvg} ${startHereLabel}</div>` : ''}
     </div>
     <div class="p-6 flex flex-col flex-1">
       <div class="flex items-start justify-between gap-2 mb-2">
-        <h3 class="text-xl font-bold text-amber-900 flex-1">${storyTitle}</h3>
+        <h3 class="text-xl font-bold text-[#0F172A] flex-1">${storyTitle}</h3>
         ${isComingSoon ? `<span class="text-xs font-semibold bg-indigo-100 text-indigo-900 px-2 py-1 rounded whitespace-nowrap">${comingSoonLabel}</span>` : ''}
       </div>
-      ${showDescription ? `<p class="text-amber-700 text-sm mb-3">${storyDesc}</p>` : ''}
+      ${showDescription ? `<p class="text-[#64748B] text-sm mb-3">${storyDesc}</p>` : ''}
       <div class="flex flex-wrap gap-2 mb-3">
         ${story.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-        ${story.category ? `<span class="inline-block px-2 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">📌 ${categoryLabel}</span>` : ''}
+        ${story.category ? `<span class="inline-flex items-center gap-1 px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">${categorySvg} ${categoryLabel}</span>` : ''}
       </div>
       <div class="mt-auto flex flex-col gap-3">
         ${story.collaboration ? `
           <div class="p-2 bg-pink-50 border border-pink-200 rounded-lg">
-            <p class="text-xs font-semibold text-pink-700">
-              🤝 ${story.collaboration}
-            </p>
+            <p class="text-xs font-semibold text-pink-700">${story.collaboration}</p>
           </div>
         ` : ''}
         <div class="grid grid-cols-3 gap-2 text-xs">
-          <div class="p-2 rounded-xl bg-amber-50 border border-amber-100">
-            <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Level</p>
-            <p class="text-sm font-semibold text-amber-900">${difficultyLabel}</p>
+          <div class="p-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+            <p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">Level</p>
+            <p class="text-sm font-semibold text-[#0F172A]">${difficultyLabel}</p>
           </div>
-          <div class="p-2 rounded-xl bg-amber-50 border border-amber-100">
-            <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Durasi</p>
-            <p class="text-sm font-semibold text-amber-900">⏱ ${story.duration} min</p>
+          <div class="p-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+            <p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">${getText('story.duration', 'Duration')}</p>
+            <p class="text-sm font-semibold text-[#0F172A] inline-flex items-center gap-1">${clockSvg} ${story.duration} min</p>
           </div>
-          <div class="p-2 rounded-xl bg-amber-50 border border-amber-100">
-            <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Usia</p>
-            <p class="text-sm font-semibold text-amber-900">${story.age}</p>
+          <div class="p-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+            <p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">${getText('story.age', 'Age')}</p>
+            <p class="text-sm font-semibold text-[#0F172A]">${story.age}</p>
           </div>
         </div>
         ${story.scriptBy ? `
-          <div class="flex items-center gap-3 bg-white/70 border border-amber-100 rounded-xl px-3 py-2 text-xs">
-            <div class="text-lg">✍️</div>
+          <div class="flex items-center gap-3 bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs">
+            <div class="text-[#6366F1]">${penSvg}</div>
             <div>
-              <p class="text-[0.65rem] uppercase tracking-wide text-amber-500">Script by</p>
-              <p class="text-sm font-semibold text-amber-900">${story.scriptBy}</p>
+              <p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">Script by</p>
+              <p class="text-sm font-semibold text-[#0F172A]">${story.scriptBy}</p>
             </div>
           </div>
         ` : ''}
         <div class="pt-1">
           ${isComingSoon ? `
-            <button class="play-btn w-full py-3 rounded-lg font-semibold text-center block opacity-50 cursor-not-allowed" disabled>
-              🔜 ${comingSoonLabel}
+            <button class="play-btn w-full py-3 rounded-lg font-semibold text-center opacity-50 cursor-not-allowed" disabled>
+              ${comingSoonSvg} ${comingSoonLabel}
             </button>
           ` : `
-            <a href="story.html?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center block">
-              ▶ ${playLabel}
+            <a href="story.html?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center">
+              ${playSvg} ${playLabel}
             </a>
           `}
         </div>

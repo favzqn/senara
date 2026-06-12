@@ -53,16 +53,16 @@ const CONSTANTS = {
   // Error messages
   ERRORS: {
     STORY_NOT_FOUND: 'Story not found.',
-    CATEGORY_NOT_FOUND: 'Kategori tidak ditemukan.',
-    NO_STORIES_FOUND: 'Tidak ada cerita yang sesuai dengan pencarian Anda.',
-    NO_STORIES_IN_CATEGORY: 'Belum ada cerita di kategori ini.',
+    CATEGORY_NOT_FOUND: 'Category not found.',
+    NO_STORIES_FOUND: 'No stories match your search.',
+    NO_STORIES_IN_CATEGORY: 'No stories in this category yet.',
     SCRIPT_LOAD_FAILED: 'Failed to load story script:',
-    INVALID_INPUT: 'Boleh masukkan namamu?',
+    INVALID_INPUT: 'Please enter your name.',
   },
 
   // Success messages
   SUCCESS: {
-    LINK_COPIED: '✓ Disalin!',
+    LINK_COPIED: '✓ Copied!',
   },
 
   // Loading states
@@ -85,7 +85,7 @@ const CONSTANTS = {
 
   // Default values
   DEFAULTS: {
-    PLAYER_NAME: 'Pahlawan Kesehatan Mental',
+    PLAYER_NAME: 'Mental Health Hero',
     FEATURED_STORIES_LIMIT: 3,
   },
 };

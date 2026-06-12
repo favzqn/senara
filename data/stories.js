@@ -26,9 +26,9 @@
 const allStoriesData = [
   {
     id: "pahlawan-kesehatan-mental",
-    title: "Pahlawan Kesehatan Mental",
-    description: "Temani Vani menghadapi tantangan emosional dan temukan kekuatan sejati dalam menjaga kesehatan mental.",
-    longDescription: "Kesehatan mental bukan kelemahan. Ini adalah kekuatan. Ikuti perjalanan Vani yang penuh tantangan emosional, dari kecemasan hingga depresi, sambil belajar mengenali tanda-tanda gangguan mental dan memahami kapan saatnya meminta bantuan. Melalui 5 chapter yang mendalam, Anda akan mengungkap mitos seputar kesehatan mental, mengurangi stigma, dan menguasai teknik relaksasi yang dapat langsung Anda praktikkan. Jadilah Pahlawan Kesehatan Mental, bukan hanya untuk diri sendiri, tetapi untuk orang-orang yang Anda cintai.",
+    title: "Mental Health Hero",
+    description: "Join Vani as she faces emotional challenges and discovers the true strength in maintaining mental health.",
+    longDescription: "Mental health is not a weakness. It is a strength. Follow Vani's journey through emotional challenges, from anxiety to depression, while learning to recognize signs of mental disorders and understanding when to seek help. Through 5 in-depth chapters, you'll uncover myths surrounding mental health, reduce stigma, and master relaxation techniques you can practice right away. Be a Mental Health Hero, not just for yourself, but for the people you love.",
     category: "mind-emotions",
     tags: ["Mental Health", "Emotional Skills", "Self-Care"],
     age: "13+",
@@ -39,11 +39,11 @@ const allStoriesData = [
     chapters: 5,
     difficulty: "Intermediate",
     learningOutcomes: [
-      "Memahami konsep literasi kesehatan mental",
-      "Mengenali gejala gangguan mental",
-      "Mengurangi stigma terhadap kesehatan mental",
-      "Mengetahui kapan mencari bantuan profesional",
-      "Belajar teknik relaksasi (Box Breathing, Progressive Muscle Relaxation)"
+      "Understand mental health literacy concepts",
+      "Recognize symptoms of mental disorders",
+      "Reduce stigma towards mental health",
+      "Know when to seek professional help",
+      "Learn relaxation techniques (Box Breathing, Progressive Muscle Relaxation)"
     ],
     author: "Senara Team",
     scriptBy: "Diceritain Team",
@@ -58,11 +58,11 @@ const allStoriesData = [
   },
   {
     id: "teman-baru-di-kelas-8b",
-    title: "Teman Baru di Kelas 8B",
-    description: "Ikuti perjalanan Alya, siswi Tuli yang bergabung di kelas baru, dan Rafi yang belajar menjadi teman yang baik melalui BISINDO.",
-    longDescription: "Cerita hangat tentang inklusi dan bahasa isyarat. Alya adalah siswi Tuli yang baru pindah ke Kelas 8B. Melalui perjalanan Rafi yang belajar BISINDO dan teman-teman sekelas yang mulai memahami cara berkomunikasi dengan Alya, kamu akan belajar tentang empati, inklusi, dan dasar-dasar Bahasa Isyarat Indonesia (BISINDO). Sebuah cerita tentang persahabatan yang melampaui batas bahasa.",
+    title: "New Friend in Class 8B",
+    description: "Follow Alya, a Deaf student joining a new class, and Rafi who learns to be a good friend through BISINDO.",
+    longDescription: "A warm story about inclusion and sign language. Alya is a Deaf student who just transferred to Class 8B. Through Rafi's journey learning BISINDO and classmates who begin to understand how to communicate with Alya, you'll learn about empathy, inclusion, and the basics of Indonesian Sign Language (BISINDO). A story about friendship that transcends language barriers.",
     category: "relationships-social",
-    tags: ["Inklusi", "BISINDO", "Bahasa Isyarat", "Empati", "Persahabatan"],
+    tags: ["Inclusion", "BISINDO", "Sign Language", "Empathy", "Friendship"],
     age: "10+",
     series: "Inklusi Series",
     featured: true,
@@ -71,11 +71,11 @@ const allStoriesData = [
     chapters: 8,
     difficulty: "Beginner",
     learningOutcomes: [
-      "Memahami cara berkomunikasi dengan teman Tuli",
-      "Mengenal dasar-dasar BISINDO (Bahasa Isyarat Indonesia)",
-      "Membangun empati dan inklusi di lingkungan sekolah",
-      "Menghargai keberagaman cara berkomunikasi",
-      "Belajar menjadi ally yang baik untuk teman dengan disabilitas"
+      "Understand how to communicate with Deaf friends",
+      "Learn the basics of BISINDO (Indonesian Sign Language)",
+      "Build empathy and inclusion in school environments",
+      "Appreciate diverse ways of communicating",
+      "Learn to be a good ally for friends with disabilities"
     ],
     author: "Senara Team",
     releaseDate: "2024-12-10",

@@ -8,7 +8,7 @@
  * @param {string} message - Optional loading message
  * @returns {HTMLElement} Loading indicator element
  */
-function createLoadingIndicator(message = 'Memuat...') {
+function createLoadingIndicator(message = getText('common.loading', 'Loading...')) {
   const loader = document.createElement('div');
   loader.className = 'senara-loading-indicator';
   loader.innerHTML = `
@@ -23,7 +23,7 @@ function createLoadingIndicator(message = 'Memuat...') {
  * @param {string} message - Loading message
  * @returns {HTMLElement} Loader element
  */
-function showLoadingIndicator(message = 'Memuat...') {
+function showLoadingIndicator(message = getText('common.loading', 'Loading...')) {
   const loader = createLoadingIndicator(message);
   document.body.appendChild(loader);
   return loader;
@@ -99,7 +99,7 @@ function setupSceneLoadingIndicator() {
     const originalShowScene = Monogatari.prototype.showScene;
     if (originalShowScene) {
       Monogatari.prototype.showScene = function(sceneName) {
-        const loader = showLoadingIndicator('Memuat adegan...');
+        const loader = showLoadingIndicator(getText('common.loadingScene', 'Loading scene...'));
         
         // Use requestAnimationFrame to ensure smooth transition
         requestAnimationFrame(() => {

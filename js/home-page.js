@@ -154,7 +154,7 @@ function renderCategories() {
   
   categories.forEach((category) => {
     const link = document.createElement('a');
-    link.href = `koleksi.html?category=${category.id}`;
+    link.href = `collection.html?category=${category.id}`;
     link.className = 'category-chip hover:no-underline';
     link.dataset.umamiEvent = `Home category ${category.title}`;
     
@@ -179,7 +179,7 @@ function setupCategoryToggle() {
   toggleBtn.addEventListener('click', () => {
     const isCollapsed = grid.classList.toggle('collapsed');
     toggleBtn.dataset.state = isCollapsed ? 'collapsed' : 'expanded';
-    toggleBtn.textContent = isCollapsed ? 'Tampilkan lebih banyak' : 'Tampilkan lebih sedikit';
+    toggleBtn.textContent = isCollapsed ? getText('category.showMore', 'Show more') : getText('category.showLess', 'Show less');
   });
 }
 

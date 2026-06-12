@@ -1,11 +1,15 @@
 {
-	"short_name": "Monogatari",
-	"name": "Monogatari Visual Novel",
-	"background_color": "#F7F7F7",
-	"theme_color": "#F7F7F7",
-	"orientation": "landscape",
-	"display": "fullscreen",
-	"start_url": "index.html",
+	"short_name": "Senara",
+	"name": "Senara - Learn Through Stories",
+	"description": "Nonprofit Indonesian educational platform for learning through interactive visual novel stories.",
+	"background_color": "#faf8f3",
+	"theme_color": "#8b7355",
+	"orientation": "any",
+	"display": "standalone",
+	"start_url": "/index.html",
+	"scope": "/",
+	"categories": ["education", "books"],
+	"lang": "id",
 	"icons": [
 		{
 			"src": "assets/icons/icon_48x48.png",

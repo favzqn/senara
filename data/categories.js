@@ -17,7 +17,7 @@ const allCategoriesData = [
     id: 'mind-emotions',
     slug: 'mind-emotions',
     title: 'Mind & Emotions',
-    description: 'Mengelola insecure, anxiety, overthinking, dan loneliness melalui cerita relatable.',
+    description: 'Managing insecurity, anxiety, overthinking, and loneliness through relatable stories.',
     icon: '🧠',
     color: 'rgba(248, 223, 255, 0.25)',
     borderColor: 'rgba(147, 51, 234, 0.2)',
@@ -26,7 +26,7 @@ const allCategoriesData = [
     id: 'self-awareness-identity',
     slug: 'self-awareness-identity',
     title: 'Self-Awareness & Identity',
-    description: 'Memahami boundaries, self-worth, dan authenticity dalam perjalanan diri.',
+    description: 'Understanding boundaries, self-worth, and authenticity in your personal journey.',
     icon: '🌱',
     color: 'rgba(219, 247, 220, 0.3)',
     borderColor: 'rgba(21, 128, 61, 0.2)',
@@ -35,7 +35,7 @@ const allCategoriesData = [
     id: 'relationships-social',
     slug: 'relationships-social',
     title: 'Relationships & Social Dynamics',
-    description: 'Navigasi friendships, toxic people, dating, dan conflict resolution.',
+    description: 'Navigating friendships, toxic people, dating, and conflict resolution.',
     icon: '🩷',
     color: 'rgba(254, 205, 211, 0.3)',
     borderColor: 'rgba(219, 39, 119, 0.2)',
@@ -44,7 +44,7 @@ const allCategoriesData = [
     id: 'digital-life-online',
     slug: 'digital-life-online',
     title: 'Digital Life & Online Identity',
-    description: 'Hadapi cyberbullying, filter anxiety, viral pressure, dan online drama.',
+    description: 'Facing cyberbullying, filter anxiety, viral pressure, and online drama.',
     icon: '📱',
     color: 'rgba(191, 219, 254, 0.25)',
     borderColor: 'rgba(29, 78, 216, 0.2)',
@@ -53,7 +53,7 @@ const allCategoriesData = [
     id: 'college-work-adulthood',
     slug: 'college-work-adulthood',
     title: 'College, Work & Early Adulthood',
-    description: 'Menghadapi first job, burnout, academic pressure, dan transisi kehidupan.',
+    description: 'Dealing with first job, burnout, academic pressure, and life transitions.',
     icon: '💼',
     color: 'rgba(254, 240, 138, 0.3)',
     borderColor: 'rgba(161, 98, 7, 0.2)',
@@ -62,7 +62,7 @@ const allCategoriesData = [
     id: 'social-issues',
     slug: 'social-issues',
     title: 'Social Issues',
-    description: 'Memahami privilege, bullying, inequality, dan societal expectations.',
+    description: 'Understanding privilege, bullying, inequality, and societal expectations.',
     icon: '🌍',
     color: 'rgba(191, 219, 254, 0.2)',
     borderColor: 'rgba(15, 118, 110, 0.2)',
@@ -71,7 +71,7 @@ const allCategoriesData = [
     id: 'money-young-adult-life',
     slug: 'money-young-adult-life',
     title: 'Money & Young Adult Life',
-    description: 'Kelola gaji pertama, impulsive buying, dan tekanan overwork-for-money.',
+    description: 'Managing your first salary, impulsive buying, and the pressure to overwork for money.',
     icon: '💸',
     color: 'rgba(254, 226, 226, 0.3)',
     borderColor: 'rgba(180, 83, 9, 0.2)',
@@ -113,9 +113,15 @@ function getAllCategories() {
 function getTranslatedCategory(category) {
   if (typeof I18n !== 'undefined' && I18n.isReady && I18n.isReady()) {
     const translatedTitle = I18n.t(`categories.${category.id}`);
+    const translatedDesc = I18n.t(`categories.${category.id}-desc`);
+    const result = { ...category };
     if (translatedTitle !== `categories.${category.id}`) {
-      return { ...category, title: translatedTitle };
+      result.title = translatedTitle;
     }
+    if (translatedDesc !== `categories.${category.id}-desc`) {
+      result.description = translatedDesc;
+    }
+    return result;
   }
   return category;
 }

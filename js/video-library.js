@@ -24,10 +24,10 @@ const AGE_ACCENT = {
 };
 
 const AGE_LABEL = {
-  all:           'Semua',
-  kids:          'Anak-anak',
-  teen:          'Remaja',
-  'young-adult': 'Dewasa Muda',
+  all:           'All',
+  kids:          'Kids',
+  teen:          'Teens',
+  'young-adult': 'Young Adults',
 };
 
 // ── Cache Helpers ─────────────────────────────────────────────────────────────
@@ -193,7 +193,7 @@ class SenaraVideoLibrary {
       channelId,
       published: new Date(Date.now() - i * 86400000 * 4),
       thumbnail: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
-      description: 'Video edukatif pilihan dari Senara TV',
+      description: getText('tv.curatedVideo', 'Curated educational video from Senara TV'),
       duration: v.duration,
       url: `https://www.youtube.com/watch?v=${v.id}`,
       mock: false  // real IDs — safe to embed
@@ -312,12 +312,14 @@ class SenaraVideoLibrary {
     const titleEl = modal.querySelector('.tv-modal-title');
     const chanEl  = modal.querySelector('.tv-modal-channel');
 
-    const origin = (window.location.origin?.startsWith('file') || window.location.origin === 'null')
-      ? 'https://senara.id'
-      : window.location.origin;
+    const isFileProtocol = !window.location.origin || window.location.origin === 'null' || window.location.protocol === 'file:';
 
-    const params = new URLSearchParams({ rel: '0', modestbranding: '1', playsinline: '1', autoplay: '1', origin });
-    iframe.src    = `https://www.youtube-nocookie.com/embed/${videoId}?${params}`;
+    if (isFileProtocol) {
+      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank', 'noopener');
+      return;
+    }
+
+    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&autoplay=1`;
     titleEl.textContent = video.title;
     chanEl.textContent  = video.channelName || '';
 
@@ -348,7 +350,7 @@ function renderHeroSection(library, age = 'all') {
   const { video, channel, config } = library.getHeroVideo(age);
 
   if (!video || !channel) {
-    el.innerHTML = `<div class="tv-empty"><span class="tv-empty-icon">📺</span><p>Video sedang disiapkan...</p></div>`;
+    el.innerHTML = `<div class="tv-empty">${TV_ICONS.empty}<p>${getText('tv.preparing', 'Videos are being prepared...')}</p></div>`;
     el.classList.remove('is-loading');
     return;
   }
@@ -358,7 +360,7 @@ function renderHeroSection(library, age = 'all') {
       <div class="tv-hero-bg" style="background-image:url('${video.thumbnail}')"></div>
       <div class="tv-hero-overlay"></div>
       <div class="tv-hero-content">
-        <span class="tv-hero-badge">${config.badge || '✨ Pilihan Tim'}</span>
+        <span class="tv-hero-badge">${config.badge || getText('tv.editorsPick', "Editor's Pick")}</span>
         <h2 class="tv-hero-title">${config.title || video.title}</h2>
         <p class="tv-hero-desc">${config.description || video.description || ''}</p>
         <div class="tv-hero-channel">
@@ -374,10 +376,10 @@ function renderHeroSection(library, age = 'all') {
             type="button"
             data-video-id="${video.id}"
             data-channel-id="${video.channelId}"
-            aria-label="Putar ${video.title}"
-          >▶ ${config.ctaLabel || 'Tonton Sekarang'}</button>
+            aria-label="${getText('tv.play', 'Play')} ${video.title}"
+          >${TV_ICONS.play} ${config.ctaLabel || getText('tv.watchNow', 'Watch Now')}</button>
           <a href="${channel.channelUrl}" target="_blank" rel="noopener noreferrer" class="tv-hero-visit-btn">
-            Kunjungi Channel
+            ${getText('tv.visitChannel', 'Visit Channel')} ${TV_ICONS.externalLink}
           </a>
         </div>
       </div>
@@ -416,8 +418,8 @@ function renderChannelRows(library, age = 'all') {
            rel="noopener noreferrer"
            class="channel-fallback"
          >
-           <span class="channel-fallback-icon">${channel.emoji || '📺'}</span>
-           <span>Tonton di YouTube →</span>
+           <span class="channel-fallback-icon">${TV_ICONS.playCircle}</span>
+           <span>${getText('tv.watchYouTube', 'Watch on YouTube')}</span>
          </a>`;
 
     const rowId = `scroll-${channel.id.slice(-8)}`;
@@ -426,20 +428,20 @@ function renderChannelRows(library, age = 'all') {
       <div class="channel-row">
         <div class="channel-row-header">
           <div class="channel-row-identity">
-            <span class="channel-row-emoji">${channel.emoji || '▶'}</span>
+            ${createAvatar(channel, 'sm')}
             <div>
               <h3 class="channel-row-name">${channel.name}</h3>
               <p class="channel-row-handle">${channel.handle}</p>
             </div>
           </div>
           <a href="${channel.channelUrl}" target="_blank" rel="noopener noreferrer" class="channel-row-link">
-            Lihat di YouTube →
+            ${getText('tv.watchYouTube', 'Watch on YouTube')} ${TV_ICONS.externalLink}
           </a>
         </div>
         <div class="channel-row-track">
-          <button class="row-arrow row-arrow-prev" aria-label="Scroll kiri" data-target="${rowId}">‹</button>
+          <button class="row-arrow row-arrow-prev" aria-label="${getText('tv.scrollLeft', 'Scroll left')}" data-target="${rowId}">${TV_ICONS.arrowLeft}</button>
           <div class="channel-row-scroll" id="${rowId}">${cards}</div>
-          <button class="row-arrow row-arrow-next" aria-label="Scroll kanan" data-target="${rowId}">›</button>
+          <button class="row-arrow row-arrow-next" aria-label="${getText('tv.scrollRight', 'Scroll right')}" data-target="${rowId}">${TV_ICONS.arrowRight}</button>
         </div>
       </div>
     `;
@@ -467,19 +469,19 @@ function renderLatestVideos(library, { age = 'all', category = 'all', query = ''
 
   if (titleEl) {
     if (query.trim()) {
-      titleEl.textContent = `🔍 Hasil untuk "${query.trim()}"`;
+      titleEl.textContent = `${getText('tv.resultsFor', 'Results for')} "${query.trim()}"`;
     } else if (category !== 'all') {
       const labels = {
-        'mind-emotions':    '🧠 Emosi & Mental',
-        'science-curiosity':'🔬 Sains',
-        'self-growth':      '💡 Self Growth',
-        'stories':          '🎙️ Cerita',
+        'mind-emotions':    'Emotions & Mental',
+        'science-curiosity':'Science',
+        'self-growth':      'Self Growth',
+        'stories':          'Stories',
       };
       titleEl.textContent = labels[category] || category;
     } else {
       titleEl.textContent = age !== 'all'
-        ? `🆕 Video Terbaru — ${AGE_LABEL[age]}`
-        : '🆕 Video Terbaru';
+        ? `${getText('tv.latestVideos', 'Latest Videos')} — ${AGE_LABEL[age]}`
+        : `${getText('tv.latestVideos', 'Latest Videos')}`;
     }
   }
 
@@ -488,8 +490,8 @@ function renderLatestVideos(library, { age = 'all', category = 'all', query = ''
   if (!videos.length) {
     container.innerHTML = `
       <div class="tv-empty">
-        <span class="tv-empty-icon">🔍</span>
-        <p>Tidak ada video yang cocok. Coba ubah filter atau kata kunci.</p>
+        ${TV_ICONS.search}
+        <p>${getText('tv.noMatch', 'No matching videos. Try changing your filters or keywords.')}</p>
       </div>
     `;
     container.classList.remove('is-loading');
@@ -665,6 +667,17 @@ function setupModalControls(library) {
 
 // ── Shared Helpers ─────────────────────────────────────────────────────────────
 
+const TV_ICONS = {
+  play: '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21"/></svg>',
+  playCircle: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16" fill="currentColor"/></svg>',
+  externalLink: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>',
+  search: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+  empty: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>',
+  error: '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+  arrowLeft: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>',
+  arrowRight: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>',
+};
+
 function hexToRgba(hex, alpha) {
   const h = (hex || '#000000').replace('#', '');
   const r = parseInt(h.slice(0, 2), 16) || 0;
@@ -685,18 +698,18 @@ function createVideoCard(video, channelLookup) {
       data-channel-id="${video.channelId}"
       role="button"
       tabindex="0"
-      aria-label="Tonton: ${video.title}"
+      aria-label="${getText('tv.watch', 'Watch')}: ${video.title}"
     >
       <div class="yt-thumb">
         <img src="${video.thumbnail}" alt="" loading="lazy">
         <span class="yt-duration">${video.duration || '—'}</span>
         <div class="yt-thumb-overlay">
-          <div class="yt-thumb-play">▶</div>
+          <div class="yt-thumb-play">${TV_ICONS.playCircle}</div>
         </div>
       </div>
       <div class="yt-card-body">
         <span class="yt-cat-tag" style="background:${tagBg};color:${accent}">
-          ${channel?.emoji || '▶'} ${channel?.focus || ''}
+          ${channel?.focus || ''}
         </span>
         <h3 class="yt-title">${video.title}</h3>
         <div class="yt-meta">
@@ -713,18 +726,19 @@ function createAvatar(channel = {}, size = 'sm') {
   if (channel.avatar) {
     return `<span class="${cls}"><img src="${channel.avatar}" alt="${channel.name || ''}" loading="lazy"></span>`;
   }
-  return `<span class="${cls}">${channel.emoji || '▶'}</span>`;
+  const initial = (channel.name || '?')[0].toUpperCase();
+  return `<span class="${cls}" style="background:${channel.accent || '#6366f1'};color:white;font-weight:700;font-size:${size === 'lg' ? '1rem' : '0.7rem'}">${initial}</span>`;
 }
 
 function formatRelativeDate(date) {
   if (!(date instanceof Date) || isNaN(date)) return '';
   const d = Math.floor((Date.now() - date) / 86400000);
-  if (d === 0) return 'Hari ini';
-  if (d === 1) return 'Kemarin';
-  if (d < 7)   return `${d} hari lalu`;
-  if (d < 30)  return `${Math.floor(d / 7)} minggu lalu`;
-  if (d < 365) return `${Math.floor(d / 30)} bulan lalu`;
-  return `${Math.floor(d / 365)} tahun lalu`;
+  if (d === 0) return getText('tv.today', 'Today');
+  if (d === 1) return getText('tv.yesterday', 'Yesterday');
+  if (d < 7)   return `${d} ${getText('tv.daysAgo', 'days ago')}`;
+  if (d < 30)  return `${Math.floor(d / 7)} ${getText('tv.weeksAgo', 'weeks ago')}`;
+  if (d < 365) return `${Math.floor(d / 30)} ${getText('tv.monthsAgo', 'months ago')}`;
+  return `${Math.floor(d / 365)} ${getText('tv.yearsAgo', 'years ago')}`;
 }
 
 function attachVideoHandlers(scope, library) {
@@ -742,6 +756,14 @@ function attachVideoHandlers(scope, library) {
 async function initVideoLibrary() {
   const library = new SenaraVideoLibrary();
 
+  // Show spinners in loading containers
+  ['tvHero', 'latestVideos'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.classList.contains('is-loading')) {
+      el.innerHTML = '<div class="tv-spinner"></div>';
+    }
+  });
+
   try {
     await library.loadAllVideos();
 
@@ -757,10 +779,10 @@ async function initVideoLibrary() {
     const containers = ['tvHero', 'channelRows', 'latestVideos'];
     const msg = `
       <div class="tv-empty">
-        <span class="tv-empty-icon">📡</span>
-        <p>Gagal memuat video. Periksa koneksi internet dan coba muat ulang halaman.</p>
+        ${TV_ICONS.error}
+        <p>${getText('tv.loadError', 'Failed to load videos. Check your internet connection and reload the page.')}</p>
         <button onclick="location.reload()" style="margin-top:1rem;padding:.5rem 1.25rem;border-radius:8px;border:none;background:#6366f1;color:#fff;cursor:pointer;font-size:.9rem">
-          Muat Ulang
+          ${getText('tv.reload', 'Reload')}
         </button>
       </div>`;
     containers.forEach(id => {
