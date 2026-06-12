@@ -8,9 +8,9 @@
 (function () {
   var lang;
   try { lang = localStorage.getItem('senara_language'); } catch (e) {}
-  if (lang !== 'id' && lang !== 'en') {
+  if (lang !== 'id' && lang !== 'en' && lang !== 'ja') {
     var bl = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    lang = bl.startsWith('id') ? 'id' : 'en';
+    lang = bl.startsWith('id') ? 'id' : bl.startsWith('ja') ? 'ja' : 'en';
   }
   // Extract the version query string from this script's own src so split
   // files share the same cache-bust token automatically.

@@ -202,6 +202,7 @@ const LOCALES = { en: {
           desc: "Subscriptions for collaboration, design, and development tools."
         }
       },
+      methodsTitle: "Ways to Support",
       usageNote: "💡 We don’t have an office or full-time staff. Everything is remote and volunteer-based, which keeps operational costs low.",
       principlesTitle: "Our Principles",
       principles: {
@@ -741,6 +742,8 @@ const LOCALES = { en: {
     },
     common: {
       loading: "Loading...",
+      loadingScene: "Loading scene...",
+      skipToContent: "Skip to main content",
       error: "An error occurred",
       minutes: "minutes",
       stories: "stories"
@@ -836,62 +839,14 @@ const LOCALES = { en: {
         team: "👥 Meet Our Team",
         approach: "📖 Our Approach",
         roadmap: "🗺️ Roadmap"
-      }
-    },
-    team: {
-      title: "Senara Team",
-      subtitle: "The people behind the stories you read.",
-      intro: "Senara is built by a small team who believes stories can teach important lessons in heartfelt ways. We're not a big company, just people who care.",
-      whyTitle: "Why Did We Build Senara?",
-      whyP1: "We saw people struggling to grasp essential topics like mental health, digital literacy, finance, and soft skills, not knowing where to start. Existing content often felt preachy, boring, or irrelevant.",
-      whyP2: "We believe there's a better way: <strong>through stories</strong>. Stories that make you say “this is so me,” that invite reflection without lectures, and that are accessible at no cost.",
-      whyP3: "Senara was born from a simple belief: <em>everyone deserves to learn important life lessons in a human, free way.</em>",
-      coreTitle: "Core Team",
-      roleCEO: "CEO & Co-Founder",
-      roleCTO: "CTO & Co-Founder",
-      roleCOO: "COO & Co-Founder",
-      bioCEO: "Experience at financial regulators and multinational FMCG companies. Co-founded Diceritain (30K+ users). Psychology and product management background.",
-      bioCTO: "6+ years in tech companies across Australia, Singapore, the US, and Japan. Built products used by hundreds of thousands of users.",
-      bioCOO: "Led talent development for 50K+ employees at a state-owned enterprise holding company. Psychology background in L&D and corporate learning.",
-      viewLinkedIn: "View LinkedIn →",
-      creativeTitle: "Designers & Story Writers",
-      roleDesigner: "Designer & Story Writer",
-      bioPrim: "Visual creator with 4+ years in branding, social media, and multimedia. Certified Indonesian Sign Language (BISINDO) interpreter. Managed high-engagement social accounts and produced podcasts. Active in Deaf community through Fantasi Tuli theater and GKI Pondok Indah.",
-      jobPrim: "Silang.id · Freelance Graphic Designer & Illustrator · BISINDO Interpreter",
-      valuesTitle: "Our Values",
-      val1Title: "Free for Everyone",
-      val1Desc: "No paywalls, no exclusive content",
-      val2Title: "Privacy First",
-      val2Desc: "We don't collect personal data",
-      val3Title: "Empathy in Every Story",
-      val3Desc: "Sensitive topics handled with care",
-      val4Title: "Nonprofit",
-      val4Desc: "No investors, no profit pressure",
-      advisorTitle: "Supporters & Advisors",
-      advisorIntro: "We're grateful to the professionals who give feedback and support:",
-      adv1Title: "Subject Matter Experts",
-      adv1Desc: "Review accuracy across disciplines",
-      adv2Title: "Teachers & Educators",
-      adv2Desc: "Feedback from an educator's perspective",
-      adv3Title: "Beta Readers",
-      adv3Desc: "Test every story before release",
-      adv4Title: "Community Feedback",
-      adv4Desc: "Input from readers and users",
-      contribTitle: "Contributors",
-      contribIntro: "Senara wouldn't exist without contributors who donate their time and expertise:",
-      contribBoxTitle: "Thank you to everyone who's contributed!",
-      contribBoxDesc: "Writers, illustrators, editors, testers, and everyone who helped bring these stories to life.",
-      roles: {
-        writer: "✍️ Writers",
-        illustrator: "🎨 Illustrators",
-        editor: "📝 Editors",
-        tester: "🧪 Testers",
-        translator: "🌐 Translators",
-        outreach: "📣 Outreach"
       },
-      ctaTitle: "Want to Join?",
-      ctaDesc: "We're always looking for people to contribute as writers, illustrators, editors, and beyond.",
-      ctaButton: "✨ See How to Contribute"
+      tabs: {
+        story: "Our Story",
+        approach: "Approach",
+        team: "Team",
+        roadmap: "Roadmap",
+        contribute: "Contribute"
+      }
     },
     // Why VN comparison
     whyVN: {
@@ -995,11 +950,6 @@ const LOCALES = { en: {
       showMore: "Show more",
       showLess: "Show less"
     },
-    common: {
-      loading: "Loading...",
-      loadingScene: "Loading scene...",
-      skipToContent: "Skip to main content"
-    },
     tv: {
       ageAll: "All",
       ageKids: "Kids",
@@ -1033,7 +983,15 @@ const LOCALES = { en: {
         title: "Mental Health Hero",
         description: "Join Vani as she faces emotional challenges and discovers the true strength in maintaining mental health."
       },
+      "teman-baru-di-kelas-8b": {
+        title: "New Friend in Class 8B",
+        description: "Follow Alya, a Deaf student joining a new class, and Rafi who learns to be a good friend through BISINDO."
+      },
       "jika-maka-maka-jika-debug-hidupku": {
+        title: "If Then, Then If ~Debug My Life",
+        description: "Learn programming basics: if-else, loops, variables, and debugging through relatable stories."
+      },
+      "koding-gak-sesulit-itu-kok": {
         title: "If Then, Then If ~Debug My Life",
         description: "Learn programming basics: if-else, loops, variables, and debugging through relatable stories."
       },

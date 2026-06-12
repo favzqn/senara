@@ -4,7 +4,7 @@
  */
 
 const I18n = (function() {
-  const SUPPORTED_LANGUAGES = ['id', 'en'];
+  const SUPPORTED_LANGUAGES = ['id', 'en', 'ja'];
   const DEFAULT_LANGUAGE = 'id';
   const STORAGE_KEY = 'senara_language';
   

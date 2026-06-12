@@ -83,37 +83,37 @@ function getLanguageToggleHTML() {
   }
   
   const currentLang = I18n.getCurrentLanguage();
-  const isEnglish = currentLang === 'en';
   
   const flagID = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect width="16" height="6" fill="#FF0000"/><rect y="6" width="16" height="6" fill="#FFFFFF"/></svg>`;
   const flagEN = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect width="16" height="12" fill="#B22234"/><rect y="1" width="16" height="1" fill="white"/><rect y="3" width="16" height="1" fill="white"/><rect y="5" width="16" height="1" fill="white"/><rect y="7" width="16" height="1" fill="white"/><rect y="9" width="16" height="1" fill="white"/><rect y="11" width="16" height="1" fill="white"/><rect width="7" height="6" fill="#3C3B6E"/></svg>`;
+  const flagJA = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect width="16" height="12" fill="#FFFFFF"/><circle cx="8" cy="6" r="4" fill="#BC002D"/></svg>`;
+
+  const langs = [
+    { code: 'id', flag: flagID, label: 'ID', aria: 'Bahasa Indonesia' },
+    { code: 'en', flag: flagEN, label: 'EN', aria: 'English' },
+    { code: 'ja', flag: flagJA, label: 'JA', aria: '日本語' },
+  ];
+
+  const activeIndex = langs.findIndex(l => l.code === currentLang);
+  const sliderPercent = (activeIndex >= 0 ? activeIndex : 0) * (100 / langs.length);
 
   return `
     <div class="lang-switcher" role="group" aria-label="Language selection">
-      <div class="lang-switcher-track">
-        <span class="lang-switcher-slider" data-active="${isEnglish ? 'en' : 'id'}"></span>
-        <button 
-          class="lang-btn ${!isEnglish ? 'is-active' : ''}" 
-          data-lang="id"
-          data-umami-event="Navbar lang ID"
-          aria-label="Bahasa Indonesia"
-          aria-pressed="${!isEnglish}"
-          type="button"
-        >
-          <span class="lang-flag">${flagID}</span>
-          <span class="lang-code">ID</span>
-        </button>
-        <button 
-          class="lang-btn ${isEnglish ? 'is-active' : ''}" 
-          data-lang="en"
-          data-umami-event="Navbar lang EN"
-          aria-label="English"
-          aria-pressed="${isEnglish}"
-          type="button"
-        >
-          <span class="lang-flag">${flagEN}</span>
-          <span class="lang-code">EN</span>
-        </button>
+      <div class="lang-switcher-track" style="--slider-width: ${100/langs.length}%; --slider-offset: ${sliderPercent}%;">
+        <span class="lang-switcher-slider" style="width: var(--slider-width); transform: translateX(var(--slider-offset));"></span>
+        ${langs.map(l => `
+          <button 
+            class="lang-btn ${currentLang === l.code ? 'is-active' : ''}" 
+            data-lang="${l.code}"
+            data-umami-event="Navbar lang ${l.label}"
+            aria-label="${l.aria}"
+            aria-pressed="${currentLang === l.code}"
+            type="button"
+          >
+            <span class="lang-flag">${l.flag}</span>
+            <span class="lang-code">${l.label}</span>
+          </button>
+        `).join('')}
       </div>
     </div>
   `;

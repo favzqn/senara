@@ -202,6 +202,7 @@ const LOCALES = { id: {
           desc: "Langganan tools untuk kolaborasi, desain, dan pengembangan platform."
         }
       },
+      methodsTitle: "Cara Mendukung",
       usageNote: "💡 Kami tidak memiliki kantor fisik atau karyawan tetap. Semua tim bekerja secara remote dan volunteer-based, sehingga biaya operasional bisa ditekan seminimal mungkin.",
       principlesTitle: "Prinsip Kami",
       principles: {
@@ -753,6 +754,8 @@ const LOCALES = { id: {
     },
     common: {
       loading: "Memuat...",
+      loadingScene: "Memuat adegan...",
+      skipToContent: "Langsung ke konten utama",
       error: "Terjadi kesalahan",
       minutes: "menit",
       stories: "cerita"
@@ -906,11 +909,6 @@ const LOCALES = { id: {
       showMore: "Tampilkan lebih banyak",
       showLess: "Tampilkan lebih sedikit"
     },
-    common: {
-      loading: "Memuat...",
-      loadingScene: "Memuat adegan...",
-      skipToContent: "Langsung ke konten utama"
-    },
     tv: {
       ageAll: "Semua",
       ageKids: "Anak-anak",
@@ -944,7 +942,15 @@ const LOCALES = { id: {
         title: "Pahlawan Kesehatan Mental",
         description: "Temani Vani menghadapi tantangan emosional dan temukan kekuatan sejati dalam menjaga kesehatan mental."
       },
+      "teman-baru-di-kelas-8b": {
+        title: "Teman Baru di Kelas 8B",
+        description: "Ikuti Alya, siswa Tuli yang masuk kelas baru, dan Rafi yang belajar menjadi teman yang baik lewat BISINDO."
+      },
       "koding-gak-sesulit-itu-kok": {
+        title: "Koding Gak Sesulit Itu, Kok",
+        description: "Pelajari dasar-dasar pemrograman: if-else, looping, variabel, dan debugging melalui cerita yang relatable."
+      },
+      "jika-maka-maka-jika-debug-hidupku": {
         title: "Koding Gak Sesulit Itu, Kok",
         description: "Pelajari dasar-dasar pemrograman: if-else, looping, variabel, dan debugging melalui cerita yang relatable."
       },
@@ -1025,62 +1031,14 @@ const LOCALES = { id: {
         team: "👥 Kenali Tim Kami",
         approach: "📖 Pendekatan Kami",
         roadmap: "🗺️ Peta Jalan"
-      }
-    },
-    team: {
-      title: "Tim Senara",
-      subtitle: "Orang-orang di balik cerita yang kamu baca.",
-      intro: "Senara dibangun oleh tim kecil yang percaya bahwa cerita punya kekuatan untuk mengajarkan hal-hal penting dengan cara yang menyentuh hati. Kami bukan perusahaan besar, hanya sekelompok orang yang peduli.",
-      whyTitle: "Kenapa Kami Membangun Senara?",
-      whyP1: "Kami melihat banyak orang di sekitar kami yang kesulitan memahami topik-topik penting dalam hidup: kesehatan mental, literasi digital, keuangan, dan soft skills. Tapi mereka tidak tahu harus mulai dari mana. Informasi yang ada seringkali terasa menggurui, membosankan, atau tidak relevan.",
-      whyP2: "Kami percaya ada cara yang lebih baik: <strong>lewat cerita</strong>. Cerita yang membuat kita merasa \"itu aku banget\", yang membuat kita berpikir tanpa merasa diceramahi, dan yang bisa diakses siapa saja tanpa harus bayar.",
-      whyP3: "Senara lahir dari keyakinan sederhana: <em>setiap orang berhak belajar tentang hal-hal penting dalam hidup, dengan cara yang manusiawi dan gratis.</em>",
-      coreTitle: "Tim Inti",
-      roleCEO: "CEO & Co-Founder",
-      roleCTO: "CTO & Co-Founder",
-      roleCOO: "COO & Co-Founder",
-      bioCEO: "Berpengalaman di regulator keuangan dan FMCG multinasional. Co-founder Diceritain (30K+ users). Background psikologi dan product management.",
-      bioCTO: "6+ tahun di tech companies across Australia, Singapore, US, dan Jepang. Membangun produk yang digunakan ratusan ribu users.",
-      bioCOO: "Mengelola talent development untuk 50K+ karyawan di holding BUMN. Lulusan terbaik fakultas. Background L&D dan corporate learning.",
-      viewLinkedIn: "Lihat LinkedIn →",
-      creativeTitle: "Desainer & Penulis Cerita",
-      roleDesigner: "Designer & Story Writer",
-      bioPrim: "Kreator visual dengan 4+ tahun pengalaman di branding, social media, dan multimedia. Juru bahasa isyarat Indonesia (BISINDO) bersertifikat. Pernah mengelola akun sosmed dengan engagement tinggi dan memproduksi podcast. Aktif di komunitas Tuli melalui Fantasi Tuli dan GKI Pondok Indah.",
-      jobPrim: "Silang.id · Freelance Graphic Designer & Illustrator · BISINDO Interpreter",
-      valuesTitle: "Nilai yang Kami Pegang",
-      val1Title: "Gratis untuk Semua",
-      val1Desc: "Tidak ada paywall, tidak ada konten eksklusif",
-      val2Title: "Privasi Utama",
-      val2Desc: "Tidak mengumpulkan data pribadi",
-      val3Title: "Empati dalam Cerita",
-      val3Desc: "Topik sensitif ditangani dengan hati-hati",
-      val4Title: "Nonprofit",
-      val4Desc: "Tidak ada investor, tidak ada tekanan profit",
-      advisorTitle: "Pendukung & Penasihat",
-      advisorIntro: "Kami berterima kasih kepada para profesional yang memberikan masukan dan dukungan:",
-      adv1Title: "Subject Matter Experts",
-      adv1Desc: "Review akurasi materi dari berbagai bidang",
-      adv2Title: "Guru & Edukator",
-      adv2Desc: "Feedback dari perspektif pendidik",
-      adv3Title: "Beta Readers",
-      adv3Desc: "Pengujian cerita sebelum rilis",
-      adv4Title: "Community Feedback",
-      adv4Desc: "Masukan dari pembaca dan pengguna",
-      contribTitle: "Kontributor",
-      contribIntro: "Senara tidak akan ada tanpa bantuan para kontributor yang meluangkan waktu dan keahlian mereka:",
-      contribBoxTitle: "Terima kasih kepada semua yang sudah berkontribusi!",
-      contribBoxDesc: "Penulis, ilustrator, editor, penguji, dan semua yang membantu mewujudkan cerita-cerita ini.",
-      roles: {
-        writer: "✍️ Penulis",
-        illustrator: "🎨 Ilustrator",
-        editor: "📝 Editor",
-        tester: "🧪 Penguji",
-        translator: "🌐 Penerjemah",
-        outreach: "📣 Outreach"
       },
-      ctaTitle: "Ingin Bergabung?",
-      ctaDesc: "Kami selalu mencari orang-orang yang ingin berkontribusi, baik sebagai penulis, ilustrator, editor, atau dalam peran lainnya.",
-      ctaButton: "✨ Lihat Cara Berkontribusi"
+      tabs: {
+        story: "Cerita Kami",
+        approach: "Pendekatan",
+        team: "Tim",
+        roadmap: "Peta Jalan",
+        contribute: "Berkontribusi"
+      }
     },
     roadmap: {
       title: "Peta Jalan",
