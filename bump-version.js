@@ -30,7 +30,6 @@ const HTML_FILES = [
   'collection.html',
   'contact.html',
   'privacy.html',
-  'roadmap.html',
   'story.html',
   'terms.html',
   'tv.html',

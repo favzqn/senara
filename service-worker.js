@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'senara-v1.0.4';
+const CACHE_NAME = 'senara-v1.0.5';
 
 const PRECACHE = [
   '/',
@@ -9,6 +9,14 @@ const PRECACHE = [
   '/tv.html',
   '/about.html',
   '/faq.html',
+  '/story.html',
+  '/contact.html',
+  '/donate.html',
+  '/safety.html',
+  '/privacy.html',
+  '/terms.html',
+  '/accessibility.html',
+  '/for-organizations.html',
   '/js/config.js',
   '/js/constants.js',
   '/js/shared-utils.js',
@@ -18,9 +26,18 @@ const PRECACHE = [
   '/js/locales.js',
   '/js/locales/id.js',
   '/js/locales/en.js',
+  '/js/performance-utils.js',
+  '/js/vn-demo.js',
   '/data/stories.js',
   '/data/categories.js',
   '/data/tv-channels.js',
+  '/style/home.css',
+  '/style/collection.css',
+  '/style/story-cards.css',
+  '/style/story.css',
+  '/style/tv.css',
+  '/style/performance.css',
+  '/style/dark-mode.css',
   '/manifest.json',
 ];
 

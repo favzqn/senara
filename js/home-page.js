@@ -16,7 +16,6 @@ let featuredStoriesData = [];
  * @returns {HTMLElement} Card element
  */
 function createFeaturedCard(story, index = 0) {
-  const emoji = getStoryEmoji(story.id);
   const isComingSoon = story.status === 'coming-soon';
   const isFirst = index === 0;
   
@@ -33,6 +32,7 @@ function createFeaturedCard(story, index = 0) {
   // Get translated story title and description
   const storyTitle = t(`stories.${story.id}.title`) || story.title;
   const storyDesc = t(`stories.${story.id}.description`) || story.description;
+  const storyInitial = storyTitle.charAt(0).toUpperCase();
   
   const card = document.createElement('a');
   card.href = isComingSoon ? '#' : `story.html?id=${story.id}`;
@@ -42,10 +42,12 @@ function createFeaturedCard(story, index = 0) {
     card.dataset.umamiEvent = `Featured play ${story.id}`;
   }
   
+  const starSvg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline;vertical-align:-2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
+
   card.innerHTML = `
     <div class="featured-card-visual">
-      <span class="featured-card-emoji">${emoji}</span>
-      ${isFirst ? `<span class="featured-card-badge">⭐ ${editorsPickLabel}</span>` : ''}
+      <span class="featured-card-emoji" style="font-family:'Crimson Pro',serif;font-weight:700;color:#4F46E5;opacity:0.5;font-size:3rem;">${storyInitial}</span>
+      ${isFirst ? `<span class="featured-card-badge">${starSvg} ${editorsPickLabel}</span>` : ''}
       ${isComingSoon ? `<span class="featured-card-badge featured-card-badge-soon">${comingSoonLabel}</span>` : ''}
     </div>
     <div class="featured-card-body">
@@ -203,11 +205,27 @@ function setupComparisonToggle() {
     return map[mode] || 'VN';
   };
 
-  // Icon mapping (not translated)
+  // Icon SVGs
+  const svgIcon = (path, size = 20) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${path}</svg>`;
   const icons = {
-    1: { vn: '📖', pdf: '📄', socmed: '📱', youtube: '▶️' },
-    2: { vn: '🎮', pdf: '📋', socmed: '👍', youtube: '⏸️' },
-    3: { vn: '❤️', pdf: '💼', socmed: '⏰', youtube: '😮' }
+    1: {
+      vn: svgIcon('<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>'),
+      pdf: svgIcon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>'),
+      socmed: svgIcon('<rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>'),
+      youtube: svgIcon('<polygon points="5 3 19 12 5 21 5 3"/>')
+    },
+    2: {
+      vn: svgIcon('<line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>'),
+      pdf: svgIcon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>'),
+      socmed: svgIcon('<path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/><path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>'),
+      youtube: svgIcon('<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>')
+    },
+    3: {
+      vn: svgIcon('<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>'),
+      pdf: svgIcon('<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>'),
+      socmed: svgIcon('<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'),
+      youtube: svgIcon('<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>')
+    }
   };
 
   // Update card content based on mode using translations
@@ -222,7 +240,7 @@ function setupComparisonToggle() {
       const descElement = card.querySelector('p');
 
       if (iconElement && icons[cardNum]) {
-        iconElement.textContent = icons[cardNum][mode];
+        iconElement.innerHTML = icons[cardNum][mode];
       }
 
       if (statElement) {
@@ -289,19 +307,19 @@ function getTestimonials() {
       quote: `"${t('testimonials.teacher.quote')}"`,
       author: t('testimonials.teacher.author'),
       role: t('testimonials.teacher.role'),
-      avatar: '👩‍🏫'
+      avatar: 'T'
     },
     {
       quote: `"${t('testimonials.reader.quote')}"`,
       author: t('testimonials.reader.author'),
       role: t('testimonials.reader.role'),
-      avatar: '👦'
+      avatar: 'R'
     },
     {
       quote: `"${t('testimonials.facilitator.quote')}"`,
       author: t('testimonials.facilitator.author'),
       role: t('testimonials.facilitator.role'),
-      avatar: '👩‍💼'
+      avatar: 'F'
     }
   ];
 }
@@ -346,7 +364,7 @@ function updateTestimonial() {
 
   if (content && testimonial) {
     content.innerHTML = `
-      <div class="testimonial-avatar">${testimonial.avatar}</div>
+      <div class="testimonial-avatar" style="font-family:'Crimson Pro',serif;font-weight:700;color:#4F46E5;font-size:1.5rem;width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;background:#EEF2FF;border-radius:9999px;">${testimonial.avatar}</div>
       <p class="testimonial-quote">${testimonial.quote}</p>
       <p class="testimonial-author">${testimonial.author}</p>
       <p class="testimonial-role">${testimonial.role}</p>

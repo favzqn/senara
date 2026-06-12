@@ -62,7 +62,7 @@ const CONSTANTS = {
 
   // Success messages
   SUCCESS: {
-    LINK_COPIED: '✓ Copied!',
+    LINK_COPIED: 'Copied!',
   },
 
   // Loading states

@@ -24,8 +24,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="style/home.css?v=1.0.4" rel="stylesheet">
-  <link href="style/performance.css?v=1.0.4" rel="stylesheet">
+  <link href="style/home.css?v=1.0.5" rel="stylesheet">
+  <link href="style/performance.css?v=1.0.5" rel="stylesheet">
+  <link href="style/dark-mode.css?v=1.0.5" rel="stylesheet">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
   <style>
     * {
@@ -210,20 +211,22 @@
 <body>
   <div class="page-bg"></div>
 
+  <a href="#main-content" class="skip-link" data-i18n="common.skipToContent">Skip to main content</a>
+
   <nav id="navbar-placeholder"></nav>
 
   <header class="page-header py-16 md:py-20 px-4">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4" data-i18n="privacy.title">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" data-i18n="privacy.title">
         Kebijakan Privasi
       </h1>
-      <p class="text-lg text-amber-700 max-w-2xl mx-auto" data-i18n="privacy.subtitle">
+      <p class="text-lg text-[#64748B] max-w-2xl mx-auto" data-i18n="privacy.subtitle">
         Bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi kamu.
       </p>
     </div>
   </header>
 
-  <main class="py-12 md:py-16 px-4">
+  <main id="main-content" class="py-12 md:py-16 px-4">
     <div class="page-content">
 
       <div class="update-info">
@@ -375,12 +378,14 @@
 
   <footer id="footer-placeholder"></footer>
 
-  <script src="js/locales.js?v=1.0.4"></script>
-  <script src="js/i18n-simple.js?v=1.0.4"></script>
-  <script src="js/config.js?v=1.0.4"></script>
-  <script src="js/constants.js?v=1.0.4"></script>
-  <script src="js/navbar.js?v=1.0.4"></script>
-  <script src="js/footer.js?v=1.0.4"></script>
+  <script src="js/locales.js?v=1.0.5"></script>
+  <script src="js/i18n-simple.js?v=1.0.5"></script>
+  <script src="js/config.js?v=1.0.5"></script>
+  <script src="js/constants.js?v=1.0.5"></script>
+  <script src="js/shared-utils.js?v=1.0.5"></script>
+  <script src="js/performance-utils.js?v=1.0.5"></script>
+  <script src="js/navbar.js?v=1.0.5"></script>
+  <script src="js/footer.js?v=1.0.5"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initNavbar('privacy');
