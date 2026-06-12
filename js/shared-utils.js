@@ -19,28 +19,6 @@ function getText(key, fallback) {
 }
 
 /**
- * Translation function — global alias for I18n.t with fallback
- * Used by home-page.js and other page scripts
- * Handles both interpolation (params object) and fallback (string) cases
- * @param {string} key - Translation key
- * @param {string|Object} fallbackOrParams - Fallback text (string) or interpolation params (object)
- * @returns {string} Translated text, fallback, or key
- */
-function t(key, fallbackOrParams) {
-  if (typeof I18n !== 'undefined' && I18n.t) {
-    // If second arg is an object, it's interpolation params
-    if (fallbackOrParams && typeof fallbackOrParams === 'object') {
-      return I18n.t(key, fallbackOrParams);
-    }
-    // Otherwise it's a fallback string
-    const result = I18n.t(key);
-    if (result !== key) return result;
-    return (typeof fallbackOrParams === 'string') ? fallbackOrParams : key;
-  }
-  return (typeof fallbackOrParams === 'string') ? fallbackOrParams : key;
-}
-
-/**
  * Get URL parameter value
  * @param {string} param - Parameter name
  * @returns {string|null} Parameter value or null
@@ -48,15 +26,6 @@ function t(key, fallbackOrParams) {
 function getUrlParam(param) {
   const params = new URLSearchParams(window.location.search);
   return params.get(param);
-}
-
-/**
- * Get emoji for story
- * @param {string} storyId - Story ID
- * @returns {string} Emoji character
- */
-function getStoryEmoji(storyId) {
-  return CONSTANTS.EMOJIS[storyId] || CONSTANTS.EMOJIS.default;
 }
 
 /**

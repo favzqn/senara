@@ -17,16 +17,23 @@ const PRECACHE = [
   '/terms.html',
   '/accessibility.html',
   '/for-organizations.html',
+  '/offline.html',
   '/js/config.js',
   '/js/constants.js',
   '/js/shared-utils.js',
   '/js/i18n-simple.js',
-  '/js/navbar.js',
-  '/js/footer.js',
   '/js/locales.js',
   '/js/locales/id.js',
   '/js/locales/en.js',
+  '/js/locales/ja.js',
+  '/js/navbar.js',
+  '/js/footer.js',
+  '/js/dark-mode.js',
   '/js/performance-utils.js',
+  '/js/home-page.js',
+  '/js/collection-page.js',
+  '/js/story-page.js',
+  '/js/video-library.js',
   '/js/vn-demo.js',
   '/data/stories.js',
   '/data/categories.js',
@@ -37,6 +44,7 @@ const PRECACHE = [
   '/style/story-cards.css',
   '/style/story.css',
   '/style/tv.css',
+  '/style/about.css',
   '/style/performance.css',
   '/style/dark-mode.css',
   '/manifest.json',
@@ -58,7 +66,6 @@ self.addEventListener('activate', event => {
   self.clients.claim();
 });
 
-// Cache-first for same-origin assets; network-first for everything else.
 self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
@@ -74,6 +81,11 @@ self.addEventListener('fetch', event => {
         const clone = response.clone();
         caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
         return response;
+      }).catch(() => {
+        if (request.mode === 'navigate') {
+          return caches.match('/offline.html');
+        }
+        return new Response('Offline', { status: 503 });
       });
     })
   );

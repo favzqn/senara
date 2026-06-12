@@ -4,24 +4,6 @@
  */
 
 // ============================================================================
-// Translation Helper
-// ============================================================================
-
-/**
- * Translation helper with fallback
- * @param {string} key - Translation key
- * @param {string} fallback - Fallback text
- * @returns {string} Translated text or fallback
- */
-function t(key, fallback = '') {
-  if (typeof I18n !== 'undefined' && I18n.t) {
-    const result = I18n.t(key);
-    return result !== key ? result : fallback;
-  }
-  return fallback;
-}
-
-// ============================================================================
 // Meta Tags
 // ============================================================================
 

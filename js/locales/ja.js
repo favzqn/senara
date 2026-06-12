@@ -729,6 +729,8 @@ const LOCALES = { ja: {
     },
     common: {
       loading: "読み込み中...",
+      loadingScene: "シーンを読み込み中...",
+      skipToContent: "メインコンテンツへスキップ",
       error: "エラーが発生しました",
       minutes: "分",
       stories: "物語"
@@ -823,6 +825,13 @@ const LOCALES = { ja: {
         team: "👥 チームに会う",
         approach: "📖 アプローチ",
         roadmap: "🗺️ ロードマップ"
+      },
+      tabs: {
+        story: "私たちの物語",
+        approach: "アプローチ",
+        team: "チーム",
+        roadmap: "ロードマップ",
+        contribute: "参加する"
       }
     },
     team: {
@@ -975,11 +984,6 @@ const LOCALES = { ja: {
       showMore: "もっと見る",
       showLess: "閉じる"
     },
-    common: {
-      loading: "読み込み中...",
-      loadingScene: "シーンを読み込み中...",
-      skipToContent: "メインコンテンツへスキップ"
-    },
     tv: {
       ageAll: "すべて",
       ageKids: "こども",
@@ -1012,41 +1016,13 @@ const LOCALES = { ja: {
         title: "Mental Health Hero",
         description: "Vaniと一緒に感情的な課題に立ち向かい、メンタルヘルスを守ることの本当の強さを発見しよう。"
       },
+      "teman-baru-di-kelas-8b": {
+        title: "8Bクラスの新しい友達",
+        description: "新しい環境で友達を作ることは、想像以上に勇気が必要なこと。"
+      },
       "jika-maka-maka-jika-debug-hidupku": {
         title: "If Then, Then If ~Debug My Life",
         description: "プログラミングの基礎を学ぼう：if-else、ループ、変数、デバッグを身近な物語を通じて。"
-      },
-      "batik-cahaya-majapahit": {
-        title: "The Secret of Majapahit's Batik Light",
-        description: "マジャパヒットのバティック遺産と、現代技術を通じた伝統の保存方法を学ぼう。"
-      },
-      "operasi-hati-sehat": {
-        title: "Healthy Heart Operation at Angkasa High",
-        description: "学業のプレッシャーや競争に対するメンタルヘルス戦略とコーピングスキルを学ぼう。"
-      },
-      "misi-nol-sampah": {
-        title: "Zero Waste Mission at Beringharjo Market",
-        description: "循環経済、コミュニティ交渉、社会的取り組みからの環境影響の測定について学ぼう。"
-      },
-      "kode-angkasa-lestari": {
-        title: "The Secret Code of Angkasa Lestari",
-        description: "サイバーセキュリティの基礎、テクノロジー倫理、技術的なジレンマへの責任ある意思決定を学ぼう。"
-      },
-      "festival-rasa-maluku": {
-        title: "Festival of Flavors from Maluku",
-        description: "インドネシアの食文化の多様性、コミュニティ対話の促進、インクルーシブイベントの企画を学ぼう。"
-      },
-      "jejak-nadi-kota-hujan": {
-        title: "Pulse Trails of the Rain City",
-        description: "気候適応型都市計画、環境データ分析、都市設計へのコミュニティ参加について学ぼう。"
-      },
-      "startup-satwa-penjaga-hutan": {
-        title: "Wildlife Startup: Forest Guardians",
-        description: "環境保全、先住民族コミュニティとの協力、インパクトのあるビジネスモデルの設計を学ぼう。"
-      },
-      "panggung-cahaya-pesantren": {
-        title: "Digital Pesantren's Stage of Light",
-        description: "メディアリテラシー、誤情報の認識と対策、責任あるコンテンツ制作を学ぼう。"
       },
       "digital-literacy-navigator": {
         title: "Digital Literacy Navigator",

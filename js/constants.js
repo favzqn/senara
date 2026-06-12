@@ -4,31 +4,6 @@
  */
 
 const CONSTANTS = {
-  // Story categories
-  CATEGORIES: {
-    EMOTIONAL_SKILLS: 'Emotional Skills',
-    CODING: 'Coding',
-    SOCIAL_SKILLS: 'Social Skills',
-    LIFE_SKILLS: 'Life Skills',
-    BAHASA: 'Bahasa',
-    KREATIVITAS: 'Kreativitas',
-    CRITICAL_THINKING: 'Critical Thinking',
-    SEJARAH_BUDAYA: 'Sejarah & Budaya',
-  },
-
-  // Story emojis
-  EMOJIS: {
-    'pahlawan-kesehatan-mental': '🧠',
-    'dompet-kosong-mimpi-penuh': '💰',
-    'jika-maka-maka-jika-debug-hidupku': '💻',
-    'batik-cahaya-majapahit': '🎨',
-    'kode-angkasa-lestari': '🔐',
-    logic101: '💻',
-    friendship: '🤝',
-    resilience: '🌱',
-    default: '📖',
-  },
-
   // Difficulty levels
   DIFFICULTIES: {
     BEGINNER: 'Beginner',
@@ -45,9 +20,9 @@ const CONSTANTS = {
 
   // Age ratings
   AGE_RATINGS: {
-    TEEN: '16+',
-    YOUNG_ADULT: '18+',
-    ALL_AGES: 'All Ages',
+    TEEN: '13+',
+    YOUNG_ADULT: '16+',
+    ALL_AGES: '10+',
   },
 
   // Error messages
@@ -71,18 +46,6 @@ const CONSTANTS = {
     EMPTY: 'No stories available',
   },
 
-  // Category slug mapping
-  CATEGORY_SLUGS: {
-    'emotional-skills': 'Emotional Skills',
-    'coding': 'Coding',
-    'social-skills': 'Social Skills',
-    'life-skills': 'Life Skills',
-    'bahasa': 'Bahasa',
-    'kreativitas': 'Kreativitas',
-    'critical-thinking': 'Critical Thinking',
-    'sejarah-budaya': 'Sejarah & Budaya',
-  },
-
   // Default values
   DEFAULTS: {
     PLAYER_NAME: 'Mental Health Hero',
@@ -92,11 +55,8 @@ const CONSTANTS = {
 
 // Freeze constants to prevent accidental mutations
 Object.freeze(CONSTANTS);
-Object.freeze(CONSTANTS.CATEGORIES);
-Object.freeze(CONSTANTS.EMOJIS);
 Object.freeze(CONSTANTS.AGE_RATINGS);
 Object.freeze(CONSTANTS.ERRORS);
 Object.freeze(CONSTANTS.SUCCESS);
 Object.freeze(CONSTANTS.LOADING_STATES);
-Object.freeze(CONSTANTS.CATEGORY_SLUGS);
 Object.freeze(CONSTANTS.DEFAULTS);

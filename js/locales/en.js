@@ -991,42 +991,6 @@ const LOCALES = { en: {
         title: "If Then, Then If ~Debug My Life",
         description: "Learn programming basics: if-else, loops, variables, and debugging through relatable stories."
       },
-      "koding-gak-sesulit-itu-kok": {
-        title: "If Then, Then If ~Debug My Life",
-        description: "Learn programming basics: if-else, loops, variables, and debugging through relatable stories."
-      },
-      "batik-cahaya-majapahit": {
-        title: "The Secret of Majapahit's Batik Light",
-        description: "Learn about Majapahit batik heritage and how to preserve local traditions through modern technology."
-      },
-      "operasi-hati-sehat": {
-        title: "Healthy Heart Operation at Angkasa High",
-        description: "Learn mental health strategies and coping skills for academic pressure and competition."
-      },
-      "misi-nol-sampah": {
-        title: "Zero Waste Mission at Beringharjo Market",
-        description: "Learn about circular economy, community negotiation, and measuring environmental impact from social initiatives."
-      },
-      "kode-angkasa-lestari": {
-        title: "The Secret Code of Angkasa Lestari",
-        description: "Learn cybersecurity basics, tech ethics, and responsible decision-making when facing technology dilemmas."
-      },
-      "festival-rasa-maluku": {
-        title: "Festival of Flavors from Maluku",
-        description: "Learn about Indonesia's culinary diversity, facilitating community dialogue, and designing inclusive events."
-      },
-      "jejak-nadi-kota-hujan": {
-        title: "Pulse Trails of the Rain City",
-        description: "Learn about climate-adaptive urban planning, environmental data analysis, and community involvement in city design."
-      },
-      "startup-satwa-penjaga-hutan": {
-        title: "Wildlife Startup: Forest Guardians",
-        description: "Learn about environmental conservation, collaboration with indigenous communities, and designing impactful business models."
-      },
-      "panggung-cahaya-pesantren": {
-        title: "Digital Pesantren's Stage of Light",
-        description: "Learn about media literacy, recognizing and fighting misinformation, and creating responsible content."
-      },
       "digital-literacy-navigator": {
         title: "Digital Literacy Navigator",
         description: "Join Raka as he learns to navigate social media safely, spot fake news, protect his privacy, and deal with cyberbullying."

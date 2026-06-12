@@ -946,45 +946,9 @@ const LOCALES = { id: {
         title: "Teman Baru di Kelas 8B",
         description: "Ikuti Alya, siswa Tuli yang masuk kelas baru, dan Rafi yang belajar menjadi teman yang baik lewat BISINDO."
       },
-      "koding-gak-sesulit-itu-kok": {
-        title: "Koding Gak Sesulit Itu, Kok",
-        description: "Pelajari dasar-dasar pemrograman: if-else, looping, variabel, dan debugging melalui cerita yang relatable."
-      },
       "jika-maka-maka-jika-debug-hidupku": {
         title: "Koding Gak Sesulit Itu, Kok",
         description: "Pelajari dasar-dasar pemrograman: if-else, looping, variabel, dan debugging melalui cerita yang relatable."
-      },
-      "batik-cahaya-majapahit": {
-        title: "Rahasia Batik Cahaya Majapahit",
-        description: "Pelajari tentang warisan budaya batik Majapahit dan cara melestarikan tradisi lokal melalui teknologi modern."
-      },
-      "operasi-hati-sehat": {
-        title: "Operasi Hati Sehat di SMA Angkasa",
-        description: "Pelajari strategi kesehatan mental dan coping untuk menghadapi tekanan akademik dan kompetisi."
-      },
-      "misi-nol-sampah": {
-        title: "Misi Nol Sampah Pasar Beringharjo",
-        description: "Pelajari tentang ekonomi sirkular, negosiasi komunitas, dan cara mengukur dampak lingkungan dari inisiatif sosial."
-      },
-      "kode-angkasa-lestari": {
-        title: "Kode Rahasia Angkasa Lestari",
-        description: "Pelajari dasar keamanan siber, etika teknologi, dan cara membuat keputusan yang bertanggung jawab dalam menghadapi dilema teknologi."
-      },
-      "festival-rasa-maluku": {
-        title: "Festival Rasa dari Maluku",
-        description: "Pelajari tentang keberagaman kuliner Indonesia, cara memfasilitasi dialog komunitas, dan merancang event yang inklusif."
-      },
-      "jejak-nadi-kota-hujan": {
-        title: "Jejak Nadi Kota Hujan",
-        description: "Pelajari tentang urban planning adaptif iklim, analisis data lingkungan, dan cara melibatkan komunitas dalam desain kota."
-      },
-      "startup-satwa-penjaga-hutan": {
-        title: "Startup Satwa Penjaga Hutan",
-        description: "Pelajari tentang konservasi lingkungan, kolaborasi dengan komunitas adat, dan merancang model bisnis yang berdampak sosial."
-      },
-      "panggung-cahaya-pesantren": {
-        title: "Panggung Cahaya Pesantren Digital",
-        description: "Pelajari tentang literasi media, cara mengenali dan melawan misinformasi, serta menghasilkan konten yang bertanggung jawab."
       },
       "digital-literacy-navigator": {
         title: "Digital Literacy Navigator",

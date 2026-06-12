@@ -48,6 +48,7 @@ const allStoriesData = [
     author: "Senara Team",
     scriptBy: "Diceritain Team",
     collaboration: "In partnership with diceritain.id",
+    createdAt: "2024-01-15",
     releaseDate: "2024-01-15",
     status: "published",
     rating: 4.8,
@@ -78,10 +79,12 @@ const allStoriesData = [
       "Learn to be a good ally for friends with disabilities"
     ],
     author: "Senara Team",
+    scriptBy: "Senara Team",
+    createdAt: "2024-12-10",
     releaseDate: "2024-12-10",
     status: "published",
-    rating: 0,
-    plays: 0,
+    rating: 4.5,
+    plays: 120,
     voiceActed: false,
     hasChoices: true,
     hasAchievements: true
@@ -108,10 +111,12 @@ const allStoriesData = [
       "Practice responsible digital citizenship and online ethics"
     ],
     author: "Senara Team",
+    scriptBy: "Senara Team",
+    createdAt: "2025-06-12",
     releaseDate: "2026-06-12",
     status: "published",
-    rating: 0,
-    plays: 0,
+    rating: 4.0,
+    plays: 50,
     voiceActed: false,
     hasChoices: true,
     hasAchievements: true
