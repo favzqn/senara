@@ -1027,6 +1027,18 @@ const LOCALES = { ja: {
       "digital-literacy-navigator": {
         title: "Digital Literacy Navigator",
         description: "SNSを安全にナビゲートし、偽情報を見分け、プライバシーを守り、サイバーいじめに対処する方法をRakaと一緒に学ぼう。"
+      },
+      "dompet-kosong-mimpi-penuh": {
+        title: "空の財布、満ちた夢",
+        description: "Sariと一緒にお金の管理、予算の作り方、そして自分の経済的未来をコントロールする方法を学ぼう。"
+      },
+      "komunikasi-resolusi-konflik": {
+        title: "コミュニケーションと紛争解決",
+        description: "友人との衝突を乗り越え、アクティブリスニングを学び、平和なコミュニケーションの力を発見するDimasの物語。"
+      },
+      "misi-nol-sampah": {
+        title: "ゼロ・ウェイスト・ミッション",
+        description: "学校でゼロウェイスト運動を始めたNayaと一緒に、5Rフレームワークを学び、他の人にも行動を促そう。"
       }
     },
     roadmap: {

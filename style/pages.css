@@ -90,7 +90,7 @@ body {
 .intro-text {
   color: #4338CA;
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.7;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -127,7 +127,7 @@ body {
 
 .content-section p {
   color: #4338CA;
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
@@ -419,7 +419,13 @@ body {
   border-radius: 8px;
   font-weight: 500;
   text-decoration: none;
+  cursor: pointer;
   transition: background 0.2s ease;
+}
+
+.contact-box a:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .contact-box a:hover {
@@ -533,8 +539,14 @@ body {
   font-weight: 600;
   font-size: 1.1rem;
   text-decoration: none;
+  cursor: pointer;
   margin-top: 1.5rem;
   transition: all 0.2s ease;
+}
+
+.donate-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .donate-btn:hover {
@@ -637,7 +649,13 @@ body {
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.contact-link:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .contact-link:hover {
@@ -709,7 +727,13 @@ body {
   color: #1E1B4B;
   text-decoration: none;
   font-size: 0.9rem;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.social-link:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .social-link:hover {
@@ -788,6 +812,12 @@ body {
   border-radius: 8px;
   font-size: 1rem;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.hotline-number:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .hotline-number:hover {
@@ -853,6 +883,12 @@ body {
   border-radius: 8px;
   font-size: 1rem;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.resource-item a:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .resource-item a:hover {
@@ -1131,7 +1167,13 @@ body {
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.feedback-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .feedback-btn:hover {
@@ -1258,8 +1300,8 @@ body {
 }
 
 .step-number {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
   border-radius: 50%;
   display: flex;
@@ -1312,7 +1354,7 @@ body {
 }
 
 .benefit-item p {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #047857;
   margin: 0;
   line-height: 1.4;
@@ -1356,7 +1398,7 @@ body {
 }
 
 .story-item-info p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #4338CA;
   margin: 0;
 }
@@ -1369,7 +1411,13 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.story-item a:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .story-item a:hover {
@@ -1415,7 +1463,13 @@ body {
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.cta-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .cta-btn-primary {
@@ -1428,10 +1482,20 @@ body {
   box-shadow: 0 6px 20px rgba(30, 27, 75, 0.25);
 }
 
+.cta-btn-primary:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
+}
+
 .cta-btn-secondary {
   background: white;
   color: #1E1B4B;
   border: 2px solid #1E1B4B;
+}
+
+.cta-btn-secondary:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .cta-btn-secondary:hover {

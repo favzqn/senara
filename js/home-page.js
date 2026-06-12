@@ -78,6 +78,11 @@ function createFeaturedCard(story, index = 0) {
  * Load featured stories from data
  */
 function loadFeaturedStories() {
+  const container = document.getElementById('featuredContainer');
+  if (container) {
+    container.innerHTML = '<div class="skeleton-card" style="height:300px;"></div>'.repeat(3);
+  }
+
   const featured = allStoriesData.filter(story => story.featured);
   featuredStoriesData = featured;
   

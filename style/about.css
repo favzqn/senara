@@ -87,7 +87,7 @@ body {
 
 .about-section p {
   color: #4338CA;
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
@@ -232,7 +232,7 @@ body {
 
 .closing-section p {
   color: #4338CA;
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
@@ -270,7 +270,7 @@ body {
 
 .content-section p {
   color: #4338CA;
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
@@ -338,8 +338,8 @@ body {
 }
 
 .process-number {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
   border-radius: 50%;
   display: flex;
@@ -454,7 +454,7 @@ body {
 .mission-box-team p {
   color: #4338CA;
   font-size: 1.05rem;
-  line-height: 1.8;
+  line-height: 1.7;
   margin: 0;
   max-width: 600px;
   margin-left: auto;
@@ -534,7 +534,13 @@ body {
   color: #0077b5;
   text-decoration: none;
   font-weight: 500;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.team-linkedin:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .team-linkedin:hover {
@@ -554,7 +560,7 @@ body {
 .story-box p {
   color: #1E1B4B;
   font-size: 1.05rem;
-  line-height: 1.9;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
@@ -608,7 +614,7 @@ body {
 }
 
 .advisor-card-new p {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: #4338CA;
   margin: 0;
   line-height: 1.4;
@@ -703,12 +709,18 @@ body {
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .cta-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(5, 150, 105, 0.3);
+}
+
+.cta-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 /* Values (team page) */
@@ -955,12 +967,18 @@ body {
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .feedback-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(30, 27, 75, 0.25);
+}
+
+.feedback-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 /* Note box */
@@ -1046,8 +1064,8 @@ body {
 }
 
 .step-number {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
   border-radius: 50%;
   display: flex;
@@ -1102,7 +1120,7 @@ body {
 }
 
 .benefit-item p {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #047857;
   margin: 0;
   line-height: 1.4;
@@ -1148,7 +1166,13 @@ body {
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.cta-btn-main:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .cta-btn-primary {
@@ -1161,10 +1185,20 @@ body {
   box-shadow: 0 6px 20px rgba(30, 27, 75, 0.25);
 }
 
+.cta-btn-primary:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
+}
+
 .cta-btn-secondary {
   background: white;
   color: #1E1B4B;
   border: 2px solid #1E1B4B;
+}
+
+.cta-btn-secondary:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .cta-btn-secondary:hover {
@@ -1207,7 +1241,13 @@ body {
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.partnership-section a:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .partnership-section a:hover {

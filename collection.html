@@ -130,6 +130,7 @@
                   data-i18n-placeholder="collection.searchInputPlaceholder"
                   class="search-input w-full px-4 py-3 rounded-xl text-sm outline-none"
                   data-umami-event="Collection search input"
+                  aria-label="Search stories"
                 >
                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8] text-sm hidden lg:block">
                   <span class="kbd">/</span>
@@ -245,7 +246,7 @@
               </p>
             </div>
             <div class="flex items-center gap-3">
-              <label class="text-sm text-[#94A3B8] font-medium" data-i18n="collection.sortLabel">Sort:</label>
+              <label class="text-sm text-[#94A3B8] font-medium" for="sortSelect" data-i18n="collection.sortLabel">Sort:</label>
               <select
                 id="sortSelect"
                 class="sort-select px-4 py-2.5 rounded-xl text-sm cursor-pointer"

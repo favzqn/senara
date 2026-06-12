@@ -35,7 +35,7 @@
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.8rem;
-  color: #64748B;
+  color: #475569;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -53,7 +53,7 @@
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.78rem;
-  color: #64748B;
+  color: #475569;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
@@ -172,6 +172,11 @@
   box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.3);
 }
 
+.tv-hero-play-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
+}
+
 .tv-hero-play-btn:hover { background: #EA580C; transform: translateY(-1px); }
 
 .tv-hero-visit-btn {
@@ -186,8 +191,14 @@
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
+  cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(4px);
+}
+
+.tv-hero-visit-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .tv-hero-visit-btn:hover { background: rgba(255,255,255,0.25); }
@@ -254,7 +265,7 @@
   border: 1px solid #E2E8F0;
   border-radius: 16px;
   text-decoration: none;
-  color: #64748B;
+  color: #475569;
   font-weight: 600;
   min-width: 200px;
   cursor: pointer;
@@ -363,7 +374,7 @@
 
 .yt-title {
   font-family: 'Crimson Pro', serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #0F172A;
   margin: 0 0 0.5rem;
@@ -375,7 +386,7 @@
 }
 
 .yt-meta { display: flex; align-items: center; gap: 0.5rem; }
-.yt-meta-text { font-size: 0.78rem; color: #6366F1; }
+.yt-meta-text { font-size: 0.8rem; color: #6366F1; }
 
 /* ── Avatars ────────────────────────────────────────────────────────────── */
 
@@ -426,7 +437,7 @@
   inset: 0;
   background: rgba(15,23,42,0.8);
   backdrop-filter: blur(8px);
-  z-index: 200;
+  z-index: 50;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -450,8 +461,8 @@
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: 50%;
   border: none;
   background: rgba(255,255,255,0.15);
@@ -535,8 +546,14 @@
   font-size: 0.95rem;
   border-radius: 10px;
   text-decoration: none;
+  cursor: pointer;
   transition: background 0.2s ease, transform 0.15s ease;
   width: fit-content;
+}
+
+.tv-preview-yt-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .tv-preview-yt-btn:hover {

@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0 0 12px 12px;
   font-weight: 700;
   text-decoration: none;
-  z-index: 9999;
+  z-index: 50;
   transition: top 0.2s ease;
 }
 
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 .senara-nav {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 40;
   background: rgba(248, 250, 252, 0.85);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid #E2E8F0;
@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 99;
+  z-index: 30;
 }
 
 .nav-mobile-menu.is-open {
@@ -207,7 +207,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  z-index: 101;
+  z-index: 31;
   overflow-y: auto;
   padding-top: 5rem;
 }
@@ -358,8 +358,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
+  cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .btn-primary:hover {
@@ -375,7 +381,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   padding: 0.75rem 1.5rem;
   font-weight: 600;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .btn-secondary:hover {
@@ -470,7 +482,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .featured-subtitle {
   font-size: 1rem;
-  color: #64748B;
+  color: #475569;
   margin: 0;
   max-width: 400px;
 }
@@ -571,7 +583,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .featured-card-name {
   font-family: 'Crimson Pro', serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #0F172A;
   margin: 0;
@@ -579,14 +591,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .featured-card-desc {
-  font-size: 0.8rem;
-  color: #64748B;
+  font-size: 0.95rem;
+  color: #475569;
   margin: 0;
   line-height: 1.4;
 }
 
 .featured-card-cta {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #4F46E5;
   transition: color 0.2s ease;
@@ -669,10 +681,16 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   border: 1px solid #E2E8F0;
   background: white;
+  cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   min-width: fit-content;
+}
+
+.category-chip:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .category-chip:hover {
@@ -777,8 +795,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .how-it-works-desc {
-  color: #64748B;
-  font-size: 0.95rem;
+  color: #475569;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
 }
@@ -824,7 +842,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.85rem;
-  color: #64748B;
+  color: #475569;
   background: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -886,7 +904,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .benefit-card p {
-  color: #64748B;
+  color: #475569;
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 0.75rem;
@@ -961,7 +979,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   color: #334155;
   margin-bottom: 1rem;
-  line-height: 1.8;
+  line-height: 1.7;
 }
 
 .testimonial-avatar {
@@ -986,20 +1004,38 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonial-role {
   font-size: 0.8rem;
-  color: #94A3B8;
+  color: #64748B;
   margin: 0;
 }
 
 .testimonial-dot {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.testimonial-dot::after {
+  content: '';
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
   background: #CBD5E1;
-  cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.testimonial-dot.active {
+.testimonial-dot:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
+}
+
+.testimonial-dot.active::after {
   background: #4F46E5;
   width: 1.5rem;
   border-radius: 999px;
@@ -1015,8 +1051,14 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   padding: 0.85rem 1.5rem;
   font-weight: 600;
+  cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.3);
+}
+
+.cta-bar .cta-primary:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .cta-bar .cta-primary:hover {
@@ -1032,7 +1074,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   padding: 0.85rem 1.5rem;
   font-weight: 600;
+  cursor: pointer;
   transition: all 0.2s ease;
+}
+
+.cta-bar .cta-secondary:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
 }
 
 .cta-bar .cta-secondary:hover {
@@ -1198,8 +1246,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 10px;
   background: #1E293B;
   color: #94A3B8;
@@ -1316,7 +1364,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.3s ease;
 }
 
 .vn-overlay {
@@ -1384,7 +1432,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #E8E8F0;
   font-family: 'Atkinson Hyperlegible', sans-serif;
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.7;
   margin: 0;
   padding: 1.2rem 1.5rem 1.5rem;
   min-height: 1.8em;
@@ -1426,7 +1474,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0;
   opacity: 0;
   transform: translateY(10px);
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
   backdrop-filter: blur(12px);
@@ -1651,3 +1699,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 640px) {
   .cta-bar { grid-template-columns: 1fr; }
 }
+
+/* ===========================
+ * Loading Skeleton Min-Heights
+ * =========================== */
+#featuredContainer { min-height: 300px; }
+#categoryCarousel { min-height: 60px; }
+#testimonialContent { min-height: 120px; }

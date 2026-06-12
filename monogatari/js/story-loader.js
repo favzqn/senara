@@ -33,6 +33,27 @@ const STORY_CONFIG = {
     ],
     title: 'Digital Literacy Navigator | Senara'
   },
+  'dompet-kosong-mimpi-penuh': {
+    scripts: [
+      './stories/dompet-kosong-mimpi-penuh/chapter-1.js',
+      './stories/dompet-kosong-mimpi-penuh/index.js',
+    ],
+    title: 'Empty Wallet, Full Dreams | Senara'
+  },
+  'komunikasi-resolusi-konflik': {
+    scripts: [
+      './stories/komunikasi-resolusi-konflik/chapter-1.js',
+      './stories/komunikasi-resolusi-konflik/index.js',
+    ],
+    title: 'Communication & Conflict Resolution | Senara'
+  },
+  'misi-nol-sampah': {
+    scripts: [
+      './stories/misi-nol-sampah/chapter-1.js',
+      './stories/misi-nol-sampah/index.js',
+    ],
+    title: 'Zero Waste Mission | Senara'
+  },
 };
 
 // Default story if none specified

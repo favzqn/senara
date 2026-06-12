@@ -994,6 +994,18 @@ const LOCALES = { en: {
       "digital-literacy-navigator": {
         title: "Digital Literacy Navigator",
         description: "Join Raka as he learns to navigate social media safely, spot fake news, protect his privacy, and deal with cyberbullying."
+      },
+      "dompet-kosong-mimpi-penuh": {
+        title: "Empty Wallet, Full Dreams",
+        description: "Follow Sari as she learns to manage money, build a budget, and take control of her financial future."
+      },
+      "komunikasi-resolusi-konflik": {
+        title: "Communication & Conflict Resolution",
+        description: "Follow Dimas as he navigates friendship conflicts, learns active listening, and discovers the power of peaceful communication."
+      },
+      "misi-nol-sampah": {
+        title: "Zero Waste Mission",
+        description: "Follow Naya as she starts a zero-waste initiative at her school, learning the 5R framework and inspiring others to take action."
       }
     },
     roadmap: {

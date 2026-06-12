@@ -953,6 +953,18 @@ const LOCALES = { id: {
       "digital-literacy-navigator": {
         title: "Digital Literacy Navigator",
         description: "Ikuti Raka belajar menjelajahi media sosial dengan aman, mengenali berita palsu, menjaga privasi, dan menghadapi cyberbullying."
+      },
+      "dompet-kosong-mimpi-penuh": {
+        title: "Dompet Kosong, Mimpi Penuh",
+        description: "Ikuti Sari belajar mengelola uang, membuat anggaran, dan mengambil kendali atas masa depan finansialnya."
+      },
+      "komunikasi-resolusi-konflik": {
+        title: "Komunikasi & Resolusi Konflik",
+        description: "Ikuti Dimas menghadapi konflik pertemanan, belajar active listening, dan menemukan kekuatan komunikasi yang damai."
+      },
+      "misi-nol-sampah": {
+        title: "Misi Nol Sampah",
+        description: "Ikuti Naya memulai inisiatif zero waste di sekolahnya, mempelajari kerangka 5R, dan menginspirasi orang lain untuk bertindak."
       }
     },
     about: {
