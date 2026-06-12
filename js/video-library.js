@@ -315,9 +315,45 @@ class SenaraVideoLibrary {
     const isFileProtocol = !window.location.origin || window.location.origin === 'null' || window.location.protocol === 'file:';
 
     if (isFileProtocol) {
-      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank', 'noopener');
+      const previewContainer = modal.querySelector('.tv-modal-inner') || modal;
+      const existingPreview = previewContainer.querySelector('.tv-preview-card');
+      if (existingPreview) existingPreview.remove();
+
+      const previewCard = document.createElement('div');
+      previewCard.className = 'tv-preview-card';
+      previewCard.innerHTML = `
+        <div class="tv-preview-thumb">
+          <img src="${video.thumbnail || `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}" alt="${video.title}">
+        </div>
+        <div class="tv-preview-info">
+          <h3 class="tv-preview-title">${video.title}</h3>
+          <p class="tv-preview-channel">${video.channelName || ''}</p>
+          <a
+            href="https://www.youtube.com/watch?v=${videoId}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tv-preview-yt-btn"
+          >${TV_ICONS.playCircle} ${getText('tv.watchOnYouTube', 'Watch on YouTube')}</a>
+        </div>
+      `;
+
+      const modalVideo = modal.querySelector('.tv-modal-video');
+      if (modalVideo) modalVideo.style.display = 'none';
+      previewContainer.insertBefore(previewCard, modal.querySelector('.tv-modal-info'));
+      titleEl.textContent = video.title;
+      chanEl.textContent = video.channelName || '';
+
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      this._modal = modal;
+      setTimeout(() => modal.querySelector('.tv-close')?.focus(), 50);
       return;
     }
+
+    const existingPreview = modal.querySelector('.tv-preview-card');
+    if (existingPreview) existingPreview.remove();
+    const modalVideo = modal.querySelector('.tv-modal-video');
+    if (modalVideo) modalVideo.style.display = '';
 
     iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&autoplay=1`;
     titleEl.textContent = video.title;
@@ -334,7 +370,12 @@ class SenaraVideoLibrary {
   closeModal() {
     if (this._modal) {
       this._modal.classList.remove('is-open');
-      this._modal.querySelector('iframe').src = '';
+      const iframe = this._modal.querySelector('iframe');
+      if (iframe) { iframe.src = ''; }
+      const modalVideo = this._modal.querySelector('.tv-modal-video');
+      if (modalVideo) modalVideo.style.display = '';
+      const preview = this._modal.querySelector('.tv-preview-card');
+      if (preview) preview.remove();
       document.body.style.overflow = '';
       this._modal = null;
     }

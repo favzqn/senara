@@ -479,6 +479,76 @@
 
 .tv-modal-channel { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin: 0; }
 
+.tv-preview-card {
+  display: flex;
+  flex-direction: column;
+  background: #0F172A;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.tv-preview-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #000;
+}
+
+.tv-preview-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tv-preview-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tv-preview-title {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.tv-preview-channel {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+}
+
+.tv-preview-yt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: #FF0000;
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+  width: fit-content;
+}
+
+.tv-preview-yt-btn:hover {
+  background: #CC0000;
+  transform: translateY(-1px);
+}
+
+.tv-preview-yt-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ── Empty States ───────────────────────────────────────────────────────── */
 
 .tv-empty { text-align: center; padding: 3rem 1rem; color: #6366F1; }

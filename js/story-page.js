@@ -22,6 +22,41 @@ function t(key, fallback = '') {
 }
 
 // ============================================================================
+// Meta Tags
+// ============================================================================
+
+/**
+ * Update OG and Twitter meta tags for social sharing
+ * @param {Object} story - Story data object
+ */
+function updateMetaTags(story) {
+  document.title = `${story.title} | Senara`;
+
+  const setMeta = (attr, key, value) => {
+    if (!value) return;
+    let el = document.querySelector(`meta[${attr}="${key}"]`);
+    if (!el) {
+      el = document.createElement('meta');
+      el.setAttribute(attr, key);
+      document.head.appendChild(el);
+    }
+    el.setAttribute('content', value);
+  };
+
+  const desc = story.description || '';
+  const url = window.location.href;
+
+  setMeta('property', 'og:title', story.title);
+  setMeta('property', 'og:description', desc);
+  setMeta('property', 'og:url', url);
+  if (story.thumbnail) setMeta('property', 'og:image', story.thumbnail);
+
+  setMeta('name', 'twitter:title', story.title);
+  setMeta('name', 'twitter:description', desc);
+  setMeta('name', 'description', desc);
+}
+
+// ============================================================================
 // Story Loading
 // ============================================================================
 
@@ -81,6 +116,7 @@ function showError(message) {
  * @param {Object} story - Story data object
  */
 function renderStory(story) {
+  updateMetaTags(story);
   const pathId = getUrlParam('path');
   const isComingSoon = story.status === 'coming-soon';
   const category = story.category ? getCategoryById(story.category) : null;

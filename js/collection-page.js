@@ -556,6 +556,13 @@ function setupEventListeners() {
     });
   }
 
+  // Handle browser back/forward with URL params
+  window.addEventListener('popstate', () => {
+    getFiltersFromURL();
+    restoreUIFromState();
+    filterAndRender();
+  });
+
   // Keyboard shortcuts
   document.addEventListener('keydown', (e) => {
     // Focus search on '/' key
@@ -573,6 +580,13 @@ function setupEventListeners() {
         resetAllFilters();
       }
     }
+  });
+
+  // Handle browser back/forward with URL params
+  window.addEventListener('popstate', () => {
+    getFiltersFromURL();
+    restoreUIFromState();
+    filterAndRender();
   });
 }
 
