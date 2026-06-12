@@ -1026,6 +1026,10 @@ const LOCALES = { en: {
       "panggung-cahaya-pesantren": {
         title: "Digital Pesantren's Stage of Light",
         description: "Learn about media literacy, recognizing and fighting misinformation, and creating responsible content."
+      },
+      "digital-literacy-navigator": {
+        title: "Digital Literacy Navigator",
+        description: "Join Raka as he learns to navigate social media safely, spot fake news, protect his privacy, and deal with cyberbullying."
       }
     },
     roadmap: {

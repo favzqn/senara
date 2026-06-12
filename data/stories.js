@@ -85,6 +85,36 @@ const allStoriesData = [
     voiceActed: false,
     hasChoices: true,
     hasAchievements: true
+  },
+  {
+    id: "digital-literacy-navigator",
+    title: "Digital Literacy Navigator",
+    description: "Join Raka as he learns to navigate social media safely, spot fake news, protect his privacy, and deal with cyberbullying.",
+    longDescription: "Social media is everywhere, but how well do you really know it? Follow Raka, a regular high school student, as he discovers the hidden dangers of the digital world — from viral misinformation and privacy risks to cyberbullying. Through interactive choices and real-world scenarios, you'll learn to think critically, protect yourself online, and become a responsible digital citizen. A must-read for anyone who spends time on social media.",
+    category: "digital-life-online",
+    tags: ["Digital Literacy", "Social Media", "Fake News", "Privacy", "Cyberbullying"],
+    age: "13+",
+    series: "Digital Literacy Series",
+    featured: true,
+    thumbnail: "/senara/assets/thumbnails/digital-literacy-navigator.png",
+    duration: 20,
+    chapters: 1,
+    difficulty: "Beginner",
+    learningOutcomes: [
+      "Recognize misinformation and fake news on social media",
+      "Understand the importance of privacy settings and 2FA",
+      "Learn how to deal with cyberbullying as a bystander and victim",
+      "Develop critical thinking skills for evaluating digital content",
+      "Practice responsible digital citizenship and online ethics"
+    ],
+    author: "Senara Team",
+    releaseDate: "2026-06-12",
+    status: "published",
+    rating: 0,
+    plays: 0,
+    voiceActed: false,
+    hasChoices: true,
+    hasAchievements: true
   }
 ];
 

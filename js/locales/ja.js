@@ -1047,6 +1047,10 @@ const LOCALES = { ja: {
       "panggung-cahaya-pesantren": {
         title: "Digital Pesantren's Stage of Light",
         description: "メディアリテラシー、誤情報の認識と対策、責任あるコンテンツ制作を学ぼう。"
+      },
+      "digital-literacy-navigator": {
+        title: "Digital Literacy Navigator",
+        description: "SNSを安全にナビゲートし、偽情報を見分け、プライバシーを守り、サイバーいじめに対処する方法をRakaと一緒に学ぼう。"
       }
     },
     roadmap: {

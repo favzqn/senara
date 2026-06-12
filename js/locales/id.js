@@ -985,6 +985,10 @@ const LOCALES = { id: {
       "panggung-cahaya-pesantren": {
         title: "Panggung Cahaya Pesantren Digital",
         description: "Pelajari tentang literasi media, cara mengenali dan melawan misinformasi, serta menghasilkan konten yang bertanggung jawab."
+      },
+      "digital-literacy-navigator": {
+        title: "Digital Literacy Navigator",
+        description: "Ikuti Raka belajar menjelajahi media sosial dengan aman, mengenali berita palsu, menjaga privasi, dan menghadapi cyberbullying."
       }
     },
     about: {

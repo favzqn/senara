@@ -152,6 +152,7 @@ function getNavbarHTML(currentPage = '') {
     .join('');
 
   const langToggle = getLanguageToggleHTML();
+  const darkToggle = typeof getDarkModeToggleHTML === 'function' ? getDarkModeToggleHTML() : '';
 
   return `
     <nav class="senara-nav" id="senaraNav">
@@ -163,6 +164,7 @@ function getNavbarHTML(currentPage = '') {
         <div class="nav-links">
           ${desktopMenu}
           ${langToggle}
+          ${darkToggle}
         </div>
         <button id="mobileMenuBtn" class="nav-mobile-toggle" aria-label="Menu" data-umami-event="Navbar mobile toggle">
           <span></span>
@@ -192,6 +194,11 @@ function initNavbar(currentPage = '') {
   // Insert navbar HTML
   navPlaceholder.innerHTML = getNavbarHTML(currentPage);
   
+  // Update dark mode toggle icons after navbar render
+  if (typeof updateToggleIcons === 'function') {
+    updateToggleIcons();
+  }
+  
   // Create mobile menu overlay as direct child of body
   let mobileMenu = document.getElementById('mobileMenu');
   if (!mobileMenu) {
@@ -207,16 +214,24 @@ function initNavbar(currentPage = '') {
       .map(item => `<a href="${item.href}" class="nav-mobile-link" data-umami-event="Mobile ${item.event}">${item.label}</a>`)
       .join('');
     
+    const darkToggleMobile = typeof getDarkModeToggleHTML === 'function' ? getDarkModeToggleHTML() : '';
+
     mobileMenu.innerHTML = `
       <div class="nav-mobile-content">
         ${mobileMenuHTML}
         <div class="nav-mobile-lang">
           ${langToggle}
+          ${darkToggleMobile}
         </div>
       </div>
     `;
     
     document.body.appendChild(mobileMenu);
+    
+    // Update dark mode toggle icons in mobile menu
+    if (typeof updateToggleIcons === 'function') {
+      updateToggleIcons();
+    }
   }
   
   // Setup mobile menu toggle

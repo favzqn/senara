@@ -26,6 +26,13 @@ const STORY_CONFIG = {
     ],
     title: 'Teman Baru di Kelas 8B | Senara'
   },
+  'digital-literacy-navigator': {
+    scripts: [
+      './stories/digital-literacy-navigator/chapter-1.js',
+      './stories/digital-literacy-navigator/index.js',
+    ],
+    title: 'Digital Literacy Navigator | Senara'
+  },
 };
 
 // Default story if none specified
