@@ -1,0 +1,29 @@
+{
+  "name": "senara",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bump-version.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -i style/tailwind-input.css -o style/tailwind.min.css --minify",
+    "watch:css": "tailwindcss -i style/tailwind-input.css -o style/tailwind.min.css --watch",
+    "bump": "node bump-version.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favzqn/senara.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/favzqn/senara/issues"
+  },
+  "homepage": "https://github.com/favzqn/senara#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

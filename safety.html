@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -21,7 +21,7 @@
   <meta name="twitter:description" content="Safety guidelines and emotional support resources when using Senara. Includes Indonesian mental health hotlines.">
   <meta name="twitter:image" content="https://senara.id/assets/og-image.png">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="style/tailwind.min.css?v=1.0.5" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="style/home.css?v=1.0.5" rel="stylesheet">
@@ -348,7 +348,7 @@
     }
 
     .warning-list li::before {
-      content: '•';
+      content: '�';
       position: absolute;
       left: 0;
       color: #f59e0b;
@@ -426,7 +426,7 @@
 
       <!-- Disclaimer -->
       <div class="disclaimer-box">
-        <h3 data-i18n="safety.disclaimerTitle">⚠️ Penting untuk Diketahui</h3>
+        <h3 data-i18n="safety.disclaimerTitle">?? Penting untuk Diketahui</h3>
         <p data-i18n-html="safety.disclaimerBody">
           <strong>Senara bukan pengganti layanan kesehatan mental profesional.</strong> Cerita kami bertujuan untuk meningkatkan literasi dan kesadaran, bukan untuk mendiagnosis, mengobati, atau memberikan terapi. Jika kamu mengalami masalah kesehatan mental, silakan hubungi profesional.
         </p>
@@ -434,12 +434,12 @@
 
       <!-- Emergency Disclaimer -->
       <div class="emergency-disclaimer">
-        <p>🚨 If you are in immediate danger, please contact your local emergency services (911, 112, 999, etc.).</p>
+        <p>?? If you are in immediate danger, please contact your local emergency services (911, 112, 999, etc.).</p>
       </div>
 
       <!-- When to Seek Help -->
       <section class="content-section">
-        <h2><span class="section-icon">🆘</span> <span data-i18n="safety.whenHelpTitle">Kapan Harus Mencari Bantuan</span></h2>
+        <h2><span class="section-icon">??</span> <span data-i18n="safety.whenHelpTitle">Kapan Harus Mencari Bantuan</span></h2>
         <p data-i18n="safety.whenHelpIntro">
           Membaca cerita tentang topik sensitif kadang bisa memicu perasaan yang kuat. Ini normal. Tapi ada saat-saat di mana kamu perlu berbicara dengan seseorang yang terlatih.
         </p>
@@ -463,54 +463,54 @@
 
       <!-- Hotlines -->
       <section class="content-section">
-        <h2><span class="section-icon">📞</span> <span data-i18n="safety.hotlinesTitle">Layanan Bantuan Indonesia</span></h2>
+        <h2><span class="section-icon">??</span> <span data-i18n="safety.hotlinesTitle">Layanan Bantuan Indonesia</span></h2>
         <p data-i18n="safety.hotlinesIntro">
           Berikut adalah layanan yang bisa kamu hubungi jika membutuhkan bantuan:
         </p>
 
         <div class="hotline-grid">
           <div class="hotline-card">
-            <div class="hotline-icon">🆘</div>
+            <div class="hotline-icon">??</div>
             <div class="hotline-content">
               <h3 data-i18n="safety.hotlines.sejiwa.title">Sejiwa (Kemenkes RI)</h3>
               <p data-i18n="safety.hotlines.sejiwa.desc">Layanan konseling kesehatan jiwa dari Kementerian Kesehatan. Gratis, 24 jam.</p>
-              <a href="tel:119" class="hotline-number" data-i18n="safety.hotlines.sejiwa.contact">📞 119 ext. 8</a>
+              <a href="tel:119" class="hotline-number" data-i18n="safety.hotlines.sejiwa.contact">?? 119 ext. 8</a>
             </div>
           </div>
 
           <div class="hotline-card">
-            <div class="hotline-icon">💙</div>
+            <div class="hotline-icon">??</div>
             <div class="hotline-content">
               <h3 data-i18n="safety.hotlines.itl.title">Into The Light Indonesia</h3>
               <p data-i18n="safety.hotlines.itl.desc">Komunitas pencegahan bunuh diri. Menyediakan informasi dan dukungan.</p>
-              <a href="https://www.intothelightid.org" target="_blank" rel="noopener" class="hotline-number" data-i18n="safety.hotlines.itl.contact">🌐 intothelightid.org</a>
+              <a href="https://www.intothelightid.org" target="_blank" rel="noopener" class="hotline-number" data-i18n="safety.hotlines.itl.contact">?? intothelightid.org</a>
             </div>
           </div>
 
           <div class="hotline-card">
-            <div class="hotline-icon">🤝</div>
+            <div class="hotline-icon">??</div>
             <div class="hotline-content">
               <h3 data-i18n="safety.hotlines.pulih.title">Yayasan Pulih</h3>
               <p data-i18n="safety.hotlines.pulih.desc">Layanan konseling untuk trauma dan kesehatan mental.</p>
-              <a href="tel:021-788-42580" class="hotline-number" data-i18n="safety.hotlines.pulih.contact">📞 (021) 788-42580</a>
+              <a href="tel:021-788-42580" class="hotline-number" data-i18n="safety.hotlines.pulih.contact">?? (021) 788-42580</a>
             </div>
           </div>
 
           <div class="hotline-card">
-            <div class="hotline-icon">👧</div>
+            <div class="hotline-icon">??</div>
             <div class="hotline-content">
               <h3 data-i18n="safety.hotlines.tepsa.title">Telepon Pelayanan Sosial Anak (TePSA)</h3>
               <p data-i18n="safety.hotlines.tepsa.desc">Untuk anak dan remaja yang membutuhkan bantuan. Gratis, 24 jam.</p>
-              <a href="tel:1500-771" class="hotline-number" data-i18n="safety.hotlines.tepsa.contact">📞 1500-771</a>
+              <a href="tel:1500-771" class="hotline-number" data-i18n="safety.hotlines.tepsa.contact">?? 1500-771</a>
             </div>
           </div>
 
           <div class="hotline-card">
-            <div class="hotline-icon">👩</div>
+            <div class="hotline-icon">??</div>
             <div class="hotline-content">
               <h3 data-i18n="safety.hotlines.komnas.title">Komnas Perempuan</h3>
               <p data-i18n="safety.hotlines.komnas.desc">Untuk perempuan yang mengalami kekerasan atau membutuhkan dukungan.</p>
-              <a href="tel:021-3903963" class="hotline-number" data-i18n="safety.hotlines.komnas.contact">📞 (021) 390-3963</a>
+              <a href="tel:021-3903963" class="hotline-number" data-i18n="safety.hotlines.komnas.contact">?? (021) 390-3963</a>
             </div>
           </div>
         </div>
@@ -519,10 +519,10 @@
       <!-- International Resources -->
       <section class="content-section">
         <div class="resource-group">
-          <h3>🌍 International Resources</h3>
+          <h3>?? International Resources</h3>
           <div class="resource-list">
             <div class="resource-item">
-              <div class="resource-icon">🌐</div>
+              <div class="resource-icon">??</div>
               <div>
                 <h4>Befrienders Worldwide</h4>
                 <p>Emotional support in 30+ countries</p>
@@ -530,7 +530,7 @@
               </div>
             </div>
             <div class="resource-item">
-              <div class="resource-icon">📱</div>
+              <div class="resource-icon">??</div>
               <div>
                 <h4>Crisis Text Line</h4>
                 <p>Text HOME to 741741 (US/CA/UK)</p>
@@ -538,7 +538,7 @@
               </div>
             </div>
             <div class="resource-item">
-              <div class="resource-icon">📞</div>
+              <div class="resource-icon">??</div>
               <div>
                 <h4>International Association for Suicide Prevention</h4>
                 <p>Directory of crisis centers worldwide</p>
@@ -546,7 +546,7 @@
               </div>
             </div>
             <div class="resource-item">
-              <div class="resource-icon">💬</div>
+              <div class="resource-icon">??</div>
               <div>
                 <h4>7 Cups</h4>
                 <p>Free online chat with trained listeners</p>
@@ -559,44 +559,44 @@
 
       <!-- Safe Reading Tips -->
       <section class="content-section">
-        <h2><span class="section-icon">📖</span> <span data-i18n="safety.safeTipsTitle">Tips Membaca Cerita Sensitif</span></h2>
+        <h2><span class="section-icon">??</span> <span data-i18n="safety.safeTipsTitle">Tips Membaca Cerita Sensitif</span></h2>
         <p data-i18n="safety.safeTipsIntro">
           Beberapa cerita di Senara membahas topik yang mungkin berat bagi sebagian orang. Berikut tips untuk menjaga kesejahteraan emosionalmu:
         </p>
 
         <ul class="tips-list">
           <li>
-            <span class="tip-icon">⏸️</span>
+            <span class="tip-icon">??</span>
             <div class="tip-content" data-i18n-html="safety.safeTips.0">
               <strong>Boleh berhenti kapan saja.</strong> Jika cerita terasa terlalu berat, tidak ada kewajiban untuk menyelesaikannya. Kamu bisa pause, istirahat, atau berhenti sama sekali.
             </div>
           </li>
           <li>
-            <span class="tip-icon">👀</span>
+            <span class="tip-icon">??</span>
             <div class="tip-content" data-i18n-html="safety.safeTips.1">
               <strong>Perhatikan content warning.</strong> Setiap cerita dengan topik sensitif memiliki peringatan di awal. Baca peringatan ini sebelum melanjutkan.
             </div>
           </li>
           <li>
-            <span class="tip-icon">🧘</span>
+            <span class="tip-icon">??</span>
             <div class="tip-content" data-i18n-html="safety.safeTips.2">
               <strong>Siapkan diri sebelum membaca.</strong> Pilih waktu dan tempat yang nyaman. Hindari membaca saat sedang sangat lelah atau emosional.
             </div>
           </li>
           <li>
-            <span class="tip-icon">💬</span>
+            <span class="tip-icon">??</span>
             <div class="tip-content" data-i18n-html="safety.safeTips.3">
               <strong>Bicara dengan seseorang.</strong> Setelah membaca cerita yang berat, berbagi perasaanmu dengan teman, keluarga, atau orang yang kamu percaya bisa membantu.
             </div>
           </li>
           <li>
-            <span class="tip-icon">🌿</span>
+            <span class="tip-icon">??</span>
             <div class="tip-content" data-i18n-html="safety.safeTips.4">
               <strong>Lakukan grounding.</strong> Jika merasa overwhelmed, coba teknik grounding: tarik napas dalam, perhatikan 5 hal yang bisa kamu lihat, 4 yang bisa disentuh, 3 yang bisa didengar.
             </div>
           </li>
           <li>
-            <span class="tip-icon">📝</span>
+            <span class="tip-icon">??</span>
             <div class="tip-content" data-i18n-html="safety.safeTips.5">
               <strong>Refleksi dengan menulis.</strong> Journaling setelah membaca bisa membantu memproses perasaan dan pikiran yang muncul.
             </div>
@@ -606,25 +606,25 @@
 
       <!-- For Parents & Educators -->
       <section class="content-section">
-        <h2><span class="section-icon">👨‍👩‍👧</span> <span data-i18n="safety.parentsTitle">Untuk Orang Tua & Pendidik</span></h2>
+        <h2><span class="section-icon">????????</span> <span data-i18n="safety.parentsTitle">Untuk Orang Tua & Pendidik</span></h2>
         <p data-i18n="safety.parentsIntro">
           Jika kamu adalah orang tua atau pendidik yang ingin menggunakan Senara untuk anak atau siswa:
         </p>
         <ul class="tips-list">
           <li>
-            <span class="tip-icon">🔍</span>
+            <span class="tip-icon">??</span>
             <div class="tip-content" data-i18n-html="safety.parentsTips.0">
               <strong>Preview cerita terlebih dahulu.</strong> Baca cerita sendiri sebelum merekomendasikan ke anak atau siswa untuk memastikan kesesuaian.
             </div>
           </li>
           <li>
-            <span class="tip-icon">🗣️</span>
+            <span class="tip-icon">???</span>
             <div class="tip-content" data-i18n-html="safety.parentsTips.1">
               <strong>Dampingi dan diskusikan.</strong> Untuk topik sensitif, sebaiknya dampingi anak saat membaca dan diskusikan bersama setelahnya.
             </div>
           </li>
           <li>
-            <span class="tip-icon">🏷️</span>
+            <span class="tip-icon">???</span>
             <div class="tip-content" data-i18n-html="safety.parentsTips.2">
               <strong>Perhatikan label usia.</strong> Setiap cerita memiliki rekomendasi usia (misalnya 13+). Gunakan ini sebagai panduan.
             </div>
@@ -634,7 +634,7 @@
 
       <!-- Support -->
       <div class="support-section">
-        <h2>💚 <span data-i18n="safety.supportTitle">Kamu Tidak Sendirian</span></h2>
+        <h2>?? <span data-i18n="safety.supportTitle">Kamu Tidak Sendirian</span></h2>
         <p data-i18n="safety.supportBody1">
           Apapun yang sedang kamu alami, ada orang-orang yang peduli dan siap membantu. Jangan ragu untuk menjangkau.
         </p>

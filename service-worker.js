@@ -32,6 +32,7 @@ const PRECACHE = [
   '/data/categories.js',
   '/data/tv-channels.js',
   '/style/home.css',
+  '/style/tailwind.min.css',
   '/style/collection.css',
   '/style/story-cards.css',
   '/style/story.css',
