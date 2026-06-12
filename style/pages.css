@@ -108,6 +108,9 @@ body {
 /* --- Section Icon --- */
 .section-icon {
   font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
 }
 
 /* --- Content Section --- */
@@ -452,6 +455,9 @@ body {
 .cost-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cost-content h3 {
@@ -486,6 +492,9 @@ body {
 .principle-icon {
   font-size: 2rem;
   margin-bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .principle-card h3 {
@@ -626,6 +635,9 @@ body {
 .contact-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-card h2 {
@@ -785,6 +797,9 @@ body {
 .hotline-icon {
   font-size: 1.75rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hotline-content h3 {
@@ -856,6 +871,9 @@ body {
 .resource-icon {
   font-size: 1.75rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .resource-item h4 {
@@ -935,6 +953,9 @@ body {
 .tip-icon {
   font-size: 1.25rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tip-content {
@@ -1034,6 +1055,9 @@ body {
 .feature-icon {
   font-size: 1.75rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-content h3 {
@@ -1206,6 +1230,9 @@ body {
 .audience-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .audience-card h3 {
@@ -1268,6 +1295,9 @@ body {
 .usecase-icon {
   font-size: 2rem;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .usecase-content h3 {
@@ -1344,6 +1374,9 @@ body {
 .benefit-icon {
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefit-item h4 {
