@@ -1105,8 +1105,8 @@ body {
 /* Role cards */
 .role-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
   margin-top: 1.5rem;
 }
 
@@ -1114,7 +1114,7 @@ body {
   background: white;
   border: 1px solid #E0E7FF;
   border-radius: 16px;
-  padding: 1.75rem;
+  padding: 1.25rem;
   transition: all 0.2s ease;
 }
 
@@ -1125,24 +1125,45 @@ body {
 }
 
 .role-icon {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
+.role-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
 .role-card h3 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #1E1B4B;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .role-card p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: #4338CA;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .role-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .role-tags {
@@ -1159,29 +1180,38 @@ body {
   border-radius: 100px;
 }
 
-/* Process steps (contribute) */
+/* Process steps (contribute) — horizontal */
 .process-steps {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
 .step-number {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
+  font-size: 0.9rem;
   color: white;
   flex-shrink: 0;
 }
 
 .step-content h3 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #1E1B4B;
   margin-bottom: 0.25rem;
@@ -1194,11 +1224,11 @@ body {
   line-height: 1.5;
 }
 
-/* Benefits */
+/* Benefits — compact 3x2 */
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
   margin-top: 1.5rem;
 }
 
@@ -1228,6 +1258,24 @@ body {
   color: #047857;
   margin: 0;
   line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* CTA section (contribute) */

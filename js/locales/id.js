@@ -126,7 +126,7 @@ const LOCALES = { id: {
       principlesIntro: "Setiap cerita di Senara dirancang dengan beberapa prinsip dasar:",
       principles: [
         { title: "🪞 Refleksi, Bukan Instruksi", body: "Kami tidak memberitahu pembaca apa yang 'benar' atau 'salah'. Cerita kami mengajak pembaca untuk merefleksikan pilihan dan konsekuensinya sendiri." },
-        { title: "🌍 Konteks yang Relevan", body: "Cerita berlatar situasi yang dekat dengan kehidupan sehari-hari pembaca Indonesia. Karakter menghadapi dilema yang nyata dan relatable." },
+        { title: "Konteks yang Relevan", body: "Cerita menggambarkan situasi nyata yang bisa dirasakan pembaca. Karakter menghadapi dilema nyata — dari kesehatan mental hingga keputusan keuangan — dalam konteks yang terasa dekat." },
         { title: "🔄 Belajar dari Konsekuensi", body: "Setiap pilihan punya konsekuensi. Pembaca bisa melihat dampak dari keputusan mereka tanpa harus mengalaminya di dunia nyata." },
         { title: "💬 Ruang untuk Diskusi", body: "Cerita kami dirancang untuk memicu percakapan. Guru dan fasilitator bisa menggunakan cerita sebagai titik awal diskusi yang lebih dalam." },
         { title: "🎭 Tidak Ada Ending 'Sempurna'", body: "Kehidupan nyata jarang hitam-putih. Cerita kami menunjukkan bahwa setiap pilihan punya trade-off, dan tidak selalu ada jawaban yang 'benar'." }

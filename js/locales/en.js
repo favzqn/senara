@@ -46,7 +46,7 @@ const LOCALES = { en: {
       principlesIntro: "Every Senara story follows a few key principles:",
       principles: [
         { title: "🪞 Reflection Over Instruction", body: "We don't tell readers what's 'right' or 'wrong'. Stories invite them to reflect on their own choices." },
-        { title: "🌍 Relevant Context", body: "Stories mirror real situations in Indonesia. Characters face real dilemmas readers can relate to." },
+        { title: "Relevant Context", body: "Stories mirror real situations readers can relate to. Characters face real dilemmas — from mental health struggles to financial decisions — in contexts that feel familiar." },
         { title: "🔄 Learn Through Consequences", body: "Every choice has an impact. Readers can see outcomes without facing those risks in real life." },
         { title: "💬 Conversation Starter", body: "Our stories are built to spark discussion. Teachers and facilitators can use them as a launchpad for deeper conversation." },
         { title: "🎭 No 'Perfect' Ending", body: "Real life isn't binary. Stories show that every decision has trade-offs, and there's rarely a single 'correct' path." }
