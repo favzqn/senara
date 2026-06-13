@@ -548,6 +548,34 @@ body {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Cost percentage bar */
+.cost-bar {
+  width: 100%;
+  height: 6px;
+  background: #E0E7FF;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+.cost-bar-fill {
+  height: 100%;
+  width: var(--cost-pct, 0%);
+  background: linear-gradient(90deg, #4F46E5, #818CF8);
+  border-radius: 3px;
+  transition: width 0.8s ease;
+}
+
+.cost-bar-label {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #4F46E5;
 }
 
 .cost-icon {
@@ -570,6 +598,58 @@ body {
   color: #4338CA;
   margin: 0;
   line-height: 1.5;
+}
+
+/* Donate bento: Why + Principles side by side */
+.donate-bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 0;
+}
+
+.donate-bento .content-section {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .donate-bento {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Compact principles (checklist style) */
+.principles-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.principle-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.principle-row svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.principle-row h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1E1B4B;
+  margin: 0;
+}
+
+.principle-row p {
+  font-size: 0.8rem;
+  color: #4338CA;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .principle-grid {
