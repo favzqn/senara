@@ -1016,11 +1016,11 @@
           });
         }, { threshold: 0.15 });
 
-        document.querySelectorAll('.about-section').forEach(function(section) {
+        document.querySelectorAll('.about-section, .content-section').forEach(function(section) {
           revealObserver.observe(section);
         });
       } else {
-        document.querySelectorAll('.about-section').forEach(function(s) {
+        document.querySelectorAll('.about-section, .content-section').forEach(function(s) {
           s.classList.add('reveal-visible');
         });
       }

@@ -313,7 +313,33 @@ body {
 
 /* === APPROACH PAGE STYLES === */
 .content-section {
-  margin-bottom: 3.5rem;
+  margin-bottom: 0;
+  padding: 3rem 0;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.content-section.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-section:nth-child(even) {
+  background: #F8FAFC;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .content-section h2 {
@@ -346,11 +372,25 @@ body {
   color: #1E1B4B;
 }
 
-/* Principle cards */
+/* Principle cards — bento grid */
 .principle-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 1.5rem;
+}
+
+.principle-card:first-child {
+  grid-column: span 2;
+}
+
+@media (max-width: 640px) {
+  .principle-grid {
+    grid-template-columns: 1fr;
+  }
+  .principle-card:first-child {
+    grid-column: span 1;
+  }
 }
 
 .principle-card {
