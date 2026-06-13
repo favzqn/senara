@@ -861,6 +861,63 @@
       background: linear-gradient(135deg, #1E293B 0%, #1a1f3a 55%, #1E1B3A 100%) !important;
     }
 
+    .page-header h1 {
+      background: linear-gradient(135deg, #818CF8 0%, #A78BFA 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+
+    /* ── Collection page specifics ─────────────────────────────── */
+    .thumbnail-placeholder {
+      background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%) !important;
+    }
+
+    .results-count {
+      background: #0F172A !important;
+      border-color: #334155 !important;
+    }
+
+    .results-count-number {
+      color: #818CF8 !important;
+    }
+
+    .category-btn {
+      background: #1E293B !important;
+      border-color: #334155 !important;
+      color: #CBD5E1 !important;
+    }
+
+    .category-btn:hover:not(.active) {
+      background: #334155 !important;
+      border-color: #475569 !important;
+    }
+
+    .category-btn .category-count {
+      background: #334155 !important;
+      color: #94A3B8 !important;
+    }
+
+    .filter-checkbox {
+      color: #CBD5E1 !important;
+    }
+
+    .difficulty-dot.beginner { background: #4ADE80; }
+    .difficulty-dot.intermediate { background: #FACC15; }
+    .difficulty-dot.advanced { background: #F87171; }
+
+    .stories-grid .card-hover .tag {
+      background: rgba(79, 70, 229, 0.2) !important;
+      color: #A5B4FC !important;
+    }
+
+    .empty-state {
+      background: #1E293B !important;
+      border-color: #334155 !important;
+    }
+
+    .empty-state h3 { color: #F1F5F9 !important; }
+    .empty-state p { color: #94A3B8 !important; }
+
     .about-header {
       background: linear-gradient(135deg, #1E293B 0%, #1a1f3a 55%, #1E1B3A 100%) !important;
     }
@@ -1958,9 +2015,66 @@ html.dark {
     background: linear-gradient(135deg, #1E293B 0%, #1a1f3a 55%, #1E1B3A 100%) !important;
   }
 
+  .page-header h1 {
+    background: linear-gradient(135deg, #818CF8 0%, #A78BFA 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
   .about-header {
     background: linear-gradient(135deg, #1E293B 0%, #1a1f3a 55%, #1E1B3A 100%) !important;
   }
+
+  /* ── Collection page specifics ─────────────────────────────── */
+  .thumbnail-placeholder {
+    background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%) !important;
+  }
+
+  .results-count {
+    background: #0F172A !important;
+    border-color: #334155 !important;
+  }
+
+  .results-count-number {
+    color: #818CF8 !important;
+  }
+
+  .category-btn {
+    background: #1E293B !important;
+    border-color: #334155 !important;
+    color: #CBD5E1 !important;
+  }
+
+  .category-btn:hover:not(.active) {
+    background: #334155 !important;
+    border-color: #475569 !important;
+  }
+
+  .category-btn .category-count {
+    background: #334155 !important;
+    color: #94A3B8 !important;
+  }
+
+  .filter-checkbox {
+    color: #CBD5E1 !important;
+  }
+
+  .difficulty-dot.beginner { background: #4ADE80; }
+  .difficulty-dot.intermediate { background: #FACC15; }
+  .difficulty-dot.advanced { background: #F87171; }
+
+  .stories-grid .card-hover .tag {
+    background: rgba(79, 70, 229, 0.2) !important;
+    color: #A5B4FC !important;
+  }
+
+  .empty-state {
+    background: #1E293B !important;
+    border-color: #334155 !important;
+  }
+
+  .empty-state h3 { color: #F1F5F9 !important; }
+  .empty-state p { color: #94A3B8 !important; }
 
   /* ── About page specifics ──────────────────────────────────── */
   .about-section h2 {
