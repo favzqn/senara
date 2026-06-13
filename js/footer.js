@@ -69,7 +69,6 @@ function getFooterHTML() {
             <a href="collection.html" data-umami-event="Footer Collection">${t.storyCollection}</a>
             <a href="about.html" data-umami-event="Footer About">${t.aboutUs}</a>
             <a href="about.html?tab=team" data-umami-event="Footer Team">${t.team}</a>
-            <a href="about.html?tab=roadmap" data-umami-event="Footer Roadmap">${t.roadmap}</a>
           </div>
 
           <!-- Support Column -->

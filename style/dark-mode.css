@@ -1222,15 +1222,20 @@
 
     /* ── Benefit items ───────────────────────────────────────── */
     .benefit-item {
-      background: linear-gradient(135deg, #064E3B 0%, #065F46 100%);
+      background: #1E293B;
+      border: 1px solid #334155;
     }
 
     .benefit-item h4 {
-      color: #A7F3D0;
+      color: #F1F5F9;
     }
 
     .benefit-item p {
-      color: #6EE7B7;
+      color: #CBD5E1;
+    }
+
+    .benefit-icon svg {
+      stroke: #818CF8;
     }
 
     /* ── Highlight box ───────────────────────────────────────── */
