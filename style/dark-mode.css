@@ -935,6 +935,14 @@
       color: #F1F5F9;
     }
 
+    .about-section:nth-child(even) {
+      background: #1E293B;
+    }
+
+    .content-section:nth-child(even) {
+      background: #1E293B;
+    }
+
     .pull-quote {
       background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
       border-left-color: #FB923C;
@@ -2391,6 +2399,14 @@ html.dark {
 
   .about-section strong {
     color: #F1F5F9;
+  }
+
+  .about-section:nth-child(even) {
+    background: #1E293B;
+  }
+
+  .content-section:nth-child(even) {
+    background: #1E293B;
   }
 
   .pull-quote {
