@@ -197,12 +197,7 @@
 .hotline-card-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 0.75rem;
-}
-
-.hotline-card-top svg {
-  color: #94A3B8;
 }
 
 .hotline-badge {
@@ -429,7 +424,6 @@
   html:not(.light) .hotline-card h3 { color: #F1F5F9; }
   html:not(.light) .hotline-card p { color: #94A3B8; }
   html:not(.light) .hotline-number { color: #818CF8; }
-  html:not(.light) .hotline-card-top svg { color: #64748B; }
 
   html:not(.light) .tip-card {
     background: #1E293B;
@@ -487,7 +481,6 @@ html.dark .hotline-card:hover { border-color: #4338CA; }
 html.dark .hotline-card h3 { color: #F1F5F9; }
 html.dark .hotline-card p { color: #94A3B8; }
 html.dark .hotline-number { color: #818CF8; }
-html.dark .hotline-card-top svg { color: #64748B; }
 
 html.dark .tip-card { background: #1E293B; border-color: #334155; }
 html.dark .tip-num { background: rgba(79,70,229,0.2); color: #A5B4FC; }
