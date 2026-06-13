@@ -133,20 +133,22 @@
     .bg-gray-50 { background-color: #0F172A !important; }
     .bg-amber-50 { background-color: #1E293B !important; }
     .bg-amber-100 { background-color: #334155 !important; }
-
-    /* ── Utility text ─────────────────────────────────────────── */
-    .text-\[\#0F172A\] { color: #F1F5F9 !important; }
-    .text-\[\#64748B\] { color: #94A3B8 !important; }
-    .text-\[\#94A3B8\] { color: #64748B !important; }
-    .text-\[\#334155\] { color: #CBD5E1 !important; }
-    .text-amber-900 { color: #F1F5F9 !important; }
-    .text-amber-700 { color: #CBD5E1 !important; }
-    .text-amber-800 { color: #E2E8F0 !important; }
+    .bg-\[\#EEF2FF\] { background-color: #1E293B !important; }
+    .bg-red-50 { background-color: #1E293B !important; }
+    .bg-violet-50 { background-color: #1E293B !important; }
+    .bg-green-50 { background-color: #1E293B !important; }
+    .bg-blue-50 { background-color: #1E293B !important; }
+    .bg-pink-50 { background-color: #1E293B !important; }
+    .bg-yellow-50 { background-color: #1E293B !important; }
 
     /* ── Utility borders ──────────────────────────────────────── */
     .border-\[\#E2E8F0\] { border-color: #334155 !important; }
+    .border-\[\#C7D2FE\] { border-color: #334155 !important; }
     .border-amber-100 { border-color: #1E293B !important; }
     .border-amber-200 { border-color: #334155 !important; }
+    .border-red-200 { border-color: #334155 !important; }
+    .border-green-200 { border-color: #334155 !important; }
+    .border-pink-200 { border-color: #334155 !important; }
 
     /* ── Color tokens ─────────────────────────────────────────── */
     .text-primary { color: #818CF8 !important; }
@@ -1211,6 +1213,13 @@ html.dark {
   .bg-gray-50 { background-color: #0F172A !important; }
   .bg-amber-50 { background-color: #1E293B !important; }
   .bg-amber-100 { background-color: #334155 !important; }
+  .bg-\[\#EEF2FF\] { background-color: #1E293B !important; }
+  .bg-red-50 { background-color: #1E293B !important; }
+  .bg-violet-50 { background-color: #1E293B !important; }
+  .bg-green-50 { background-color: #1E293B !important; }
+  .bg-blue-50 { background-color: #1E293B !important; }
+  .bg-pink-50 { background-color: #1E293B !important; }
+  .bg-yellow-50 { background-color: #1E293B !important; }
 
   /* ── Utility text ─────────────────────────────────────────── */
   .text-\[\#0F172A\] { color: #F1F5F9 !important; }
@@ -1223,8 +1232,12 @@ html.dark {
 
   /* ── Utility borders ──────────────────────────────────────── */
   .border-\[\#E2E8F0\] { border-color: #334155 !important; }
+  .border-\[\#C7D2FE\] { border-color: #334155 !important; }
   .border-amber-100 { border-color: #1E293B !important; }
   .border-amber-200 { border-color: #334155 !important; }
+  .border-red-200 { border-color: #334155 !important; }
+  .border-green-200 { border-color: #334155 !important; }
+  .border-pink-200 { border-color: #334155 !important; }
 
   /* ── Color tokens ─────────────────────────────────────────── */
   .text-primary { color: #818CF8 !important; }
