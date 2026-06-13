@@ -325,7 +325,7 @@ body {
   transform: translateY(0);
 }
 
-.content-section:nth-child(even) {
+[data-page="about"] .content-section:nth-child(even) {
   background: #F8FAFC;
   margin-left: -2rem;
   margin-right: -2rem;
