@@ -700,37 +700,40 @@ body {
   }
 }
 
-/* Principles list */
-.principles-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-  display: flex;
-  flex-direction: column;
+/* Principles — compact 2x2 card grid */
+.principles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
+  margin-top: 1rem;
 }
 
-.principles-list li {
-  padding-left: 1.25rem;
-  position: relative;
+.principle-card-compact {
+  background: white;
+  border: 1px solid #E0E7FF;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid #4F46E5;
+}
+
+.principle-card-compact h3 {
   font-size: 0.9rem;
-  color: #4338CA;
-  line-height: 1.5;
-}
-
-.principles-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #4F46E5;
-}
-
-.principles-list li strong {
+  font-weight: 700;
   color: #1E1B4B;
+  margin: 0 0 0.25rem;
+}
+
+.principle-card-compact p {
+  font-size: 0.8rem;
+  color: #4338CA;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .principle-grid {
