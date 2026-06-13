@@ -7,8 +7,6 @@
   <title data-i18n="donation.title">Donation Transparency</title>
   <meta name="description" content="How donations are used at Senara. Full transparency on operational costs and fund usage.">
   <meta name="theme-color" content="#4F46E5">
-
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://senara.id/donate.html">
   <meta property="og:title" content="Support Senara | Senara">
@@ -16,17 +14,13 @@
   <meta property="og:image" content="https://senara.id/assets/og-image.svg">
   <meta property="og:locale" content="id_ID">
   <meta property="og:site_name" content="Senara">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://senara.id/donate.html">
   <meta name="twitter:title" content="Support Senara | Senara">
   <meta name="twitter:description" content="Support Senara's mission to create free educational interactive stories for everyone.">
   <meta name="twitter:image" content="https://senara.id/assets/og-image.svg">
   <meta name="twitter:image:alt" content="Senara - Learn Through Stories">
-
   <link href="style/tailwind.min.css?v=1.0.5" rel="stylesheet">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -37,123 +31,71 @@
   <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
 </head>
 <body data-page="donate">
-  <!-- Background decoration -->
   <div class="page-bg"></div>
-
   <a href="#main-content" class="skip-link" data-i18n="common.skipToContent">Skip to main content</a>
-
-  <!-- Navigation -->
   <nav id="navbar-placeholder"></nav>
 
-  <!-- Header -->
   <header class="page-header py-16 md:py-20 px-4">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" data-i18n="donation.title">
-        Donation Transparency
-      </h1>
-      <p class="text-lg text-[#64748B] max-w-2xl mx-auto" data-i18n="donation.subtitle">
-        We believe you deserve to know how your donations are used.
-      </p>
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" data-i18n="donation.title">Donation Transparency</h1>
+      <p class="text-lg text-[#64748B] max-w-2xl mx-auto" data-i18n="donation.subtitle">We believe you deserve to know how your donations are used.</p>
     </div>
   </header>
 
-  <!-- Main Content -->
   <main id="main-content" class="py-12 md:py-16 px-4">
     <div class="page-content">
+
+      <!-- CTA — above the fold -->
+      <div class="donate-cta-card">
+        <div class="donate-cta-left">
+          <h2 data-i18n="donation.methodsTitle">Ways to Support</h2>
+          <p class="donate-cta-desc">Senara is 100% free and community-built. Every contribution keeps stories free for everyone.</p>
+        </div>
+        <div class="donate-cta-actions">
+          <a href="https://trakteer.id/senara.id" target="_blank" rel="noopener" class="donate-cta-btn primary" data-umami-event="Donate Trakteer">Donate via Trakteer</a>
+          <a href="https://ko-fi.com/senara" target="_blank" rel="noopener" class="donate-cta-btn" data-umami-event="Donate Ko-fi">Ko-fi</a>
+          <a href="https://github.com/sponsors/senara-id" target="_blank" rel="noopener" class="donate-cta-btn" data-umami-event="Donate GitHub Sponsors">GitHub Sponsors</a>
+        </div>
+      </div>
 
       <!-- Highlight -->
       <div class="highlight-box">
         <p data-i18n-html="donation.highlight"><strong>100% of Senara stories are free for everyone.</strong> Donations help us keep operating, not to create exclusive content.</p>
       </div>
 
-      <!-- Donate Methods — ABOVE THE FOLD -->
-      <section class="content-section">
-        <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span> <span data-i18n="donation.methodsTitle">Ways to Support</span></h2>
-
-        <div class="donate-methods">
-          <div class="donate-method">
-            <div class="donate-method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-            <div>
-              <h3>Trakteer</h3>
-              <p>Indonesian crowdfunding platform.</p>
-              <a href="https://trakteer.id/senara.id" target="_blank" rel="noopener" class="donate-btn" data-umami-event="Donate Trakteer">Support on Trakteer</a>
-            </div>
-          </div>
-
-          <div class="donate-method">
-            <div class="donate-method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-            <div>
-              <h3>Ko-fi</h3>
-              <p>One-time or monthly. No fees.</p>
-              <a href="https://ko-fi.com/senara" target="_blank" rel="noopener" class="donate-btn" data-umami-event="Donate Ko-fi">Support on Ko-fi</a>
-            </div>
-          </div>
-
-          <div class="donate-method">
-            <div class="donate-method-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div>
-            <div>
-              <h3>GitHub Sponsors</h3>
-              <p>One-time or recurring.</p>
-              <a href="https://github.com/sponsors/senara-id" target="_blank" rel="noopener" class="donate-btn" data-umami-event="Donate GitHub Sponsors">Sponsor on GitHub</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- How Donations Are Used -->
       <section class="content-section">
-        <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span> <span data-i18n="donation.usageTitle">How Are Donations Used?</span></h2>
-        <p data-i18n="donation.usageIntro">
-          Every contribution is used to keep Senara running and growing. Here's a breakdown of our operational costs:
-        </p>
+        <h2 data-i18n="donation.usageTitle">How Are Donations Used?</h2>
+        <p data-i18n="donation.usageIntro">Every contribution is used to keep Senara running and growing.</p>
 
-        <div class="cost-grid">
-          <div class="cost-item">
-            <div class="cost-bar" style="--cost-pct: 50%;">
-              <div class="cost-bar-fill"></div>
-              <span class="cost-bar-label">~50%</span>
+        <div class="cost-bars">
+          <div class="cost-bar-row">
+            <div class="cost-bar-header">
+              <span class="cost-bar-name" data-i18n="donation.costs.art.title">Illustrations & Visual Assets</span>
+              <span class="cost-bar-pct">50%</span>
             </div>
-            <div class="cost-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 011.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
-            <div class="cost-content">
-              <h3 data-i18n="donation.costs.art.title">Illustrations & Visual Assets</h3>
-              <p data-i18n="donation.costs.art.desc">Paying illustrators for characters, backgrounds, and visual assets.</p>
-            </div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="width:50%"></div></div>
           </div>
-
-          <div class="cost-item">
-            <div class="cost-bar" style="--cost-pct: 25%;">
-              <div class="cost-bar-fill"></div>
-              <span class="cost-bar-label">~25%</span>
+          <div class="cost-bar-row">
+            <div class="cost-bar-header">
+              <span class="cost-bar-name" data-i18n="donation.costs.hosting.title">Hosting & Domain</span>
+              <span class="cost-bar-pct">25%</span>
             </div>
-            <div class="cost-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
-            <div class="cost-content">
-              <h3 data-i18n="donation.costs.hosting.title">Hosting & Domain</h3>
-              <p data-i18n="donation.costs.hosting.desc">Server and domain costs to keep the website online.</p>
-            </div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="width:25%"></div></div>
           </div>
-
-          <div class="cost-item">
-            <div class="cost-bar" style="--cost-pct: 15%;">
-              <div class="cost-bar-fill"></div>
-              <span class="cost-bar-label">~15%</span>
+          <div class="cost-bar-row">
+            <div class="cost-bar-header">
+              <span class="cost-bar-name" data-i18n="donation.costs.honor.title">Contributor Honorariums</span>
+              <span class="cost-bar-pct">15%</span>
             </div>
-            <div class="cost-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.32 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
-            <div class="cost-content">
-              <h3 data-i18n="donation.costs.honor.title">Contributor Honorariums</h3>
-              <p data-i18n="donation.costs.honor.desc">Small appreciation for contributors who dedicate their time.</p>
-            </div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="width:15%"></div></div>
           </div>
-
-          <div class="cost-item">
-            <div class="cost-bar" style="--cost-pct: 10%;">
-              <div class="cost-bar-fill"></div>
-              <span class="cost-bar-label">~10%</span>
+          <div class="cost-bar-row">
+            <div class="cost-bar-header">
+              <span class="cost-bar-name" data-i18n="donation.costs.tools.title">Tools & Software</span>
+              <span class="cost-bar-pct">10%</span>
             </div>
-            <div class="cost-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
-            <div class="cost-content">
-              <h3 data-i18n="donation.costs.tools.title">Tools & Software</h3>
-              <p data-i18n="donation.costs.tools.desc">Subscriptions for collaboration and development tools.</p>
-            </div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="width:10%"></div></div>
           </div>
         </div>
 
@@ -162,72 +104,36 @@
         </div>
       </section>
 
-      <!-- Why Nonprofit + Principles: bento grid -->
-      <div class="donate-bento">
-        <section class="content-section donate-bento-why">
-          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span> <span data-i18n="donation.whyTitle">Why Nonprofit?</span></h2>
-          <p data-i18n="donation.whyParagraphs.0">
-            Senara was founded on one belief: access to meaningful experiences should not be limited by financial ability.
-          </p>
-          <p data-i18n="donation.whyParagraphs.1">
-            We have no investors demanding profit. No revenue targets to hit. This frees us to focus on one thing: creating stories that truly make a difference.
-          </p>
-          <p data-i18n="donation.whyParagraphs.2">
-            The nonprofit model also means we don't need to sell user data or show intrusive ads. The reading experience stays clean and focused.
-          </p>
+      <!-- Why + Principles side by side -->
+      <div class="donate-two-col">
+        <section class="content-section">
+          <h2 data-i18n="donation.whyTitle">Why Nonprofit?</h2>
+          <p data-i18n="donation.whyParagraphs.0">Senara was founded on one belief: access to meaningful experiences should not be limited by financial ability.</p>
+          <p data-i18n="donation.whyParagraphs.1">We have no investors demanding profit. No revenue targets to hit. This frees us to focus on one thing: creating stories that truly make a difference.</p>
+          <p data-i18n="donation.whyParagraphs.2">The nonprofit model also means we don't need to sell user data or show intrusive ads. The reading experience stays clean and focused.</p>
         </section>
 
-        <section class="content-section donate-bento-principles">
-          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span> <span data-i18n="donation.principlesTitle">Our Principles</span></h2>
-
-          <div class="principles-compact">
-            <div class="principle-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div>
-                <h3 data-i18n="donation.principles.noExclusive.title">No Exclusive Content</h3>
-                <p data-i18n="donation.principles.noExclusive.desc">All content is free for everyone.</p>
-              </div>
-            </div>
-            <div class="principle-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div>
-                <h3 data-i18n="donation.principles.noPaywall.title">No Paywall</h3>
-                <p data-i18n="donation.principles.noPaywall.desc">No features locked behind payments.</p>
-              </div>
-            </div>
-            <div class="principle-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div>
-                <h3 data-i18n="donation.principles.voluntary.title">Voluntary Donations</h3>
-                <p data-i18n="donation.principles.voluntary.desc">No pressure. Just enjoy the stories.</p>
-              </div>
-            </div>
-            <div class="principle-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <div>
-                <h3 data-i18n="donation.principles.transparent.title">Transparent</h3>
-                <p data-i18n="donation.principles.transparent.desc">Open about how funds are used.</p>
-              </div>
-            </div>
-          </div>
+        <section class="content-section">
+          <h2 data-i18n="donation.principlesTitle">Our Principles</h2>
+          <ul class="principles-list">
+            <li><strong data-i18n="donation.principles.noExclusive.title">No Exclusive Content</strong> — <span data-i18n="donation.principles.noExclusive.desc">All content is free for everyone.</span></li>
+            <li><strong data-i18n="donation.principles.noPaywall.title">No Paywall</strong> — <span data-i18n="donation.principles.noPaywall.desc">No features locked behind payments.</span></li>
+            <li><strong data-i18n="donation.principles.voluntary.title">Voluntary Donations</strong> — <span data-i18n="donation.principles.voluntary.desc">No pressure. Just enjoy the stories.</span></li>
+            <li><strong data-i18n="donation.principles.transparent.title">Transparent</strong> — <span data-i18n="donation.principles.transparent.desc">Open about how funds are used.</span></li>
+          </ul>
         </section>
       </div>
 
       <!-- Gratitude -->
       <div class="gratitude-section">
         <h2 data-i18n="donation.gratitudeTitle">Thank You</h2>
-        <p data-i18n="donation.gratitudeP1">
-          To everyone who has supported Senara — whether through donations, sharing with friends, or simply reading our stories: thank you.
-        </p>
-        <p data-i18n="donation.gratitudeP2">
-          Every bit of support, no matter how small, helps us continue creating meaningful stories for more people.
-        </p>
+        <p data-i18n="donation.gratitudeP1">To everyone who has supported Senara — whether through donations, sharing with friends, or simply reading our stories: thank you.</p>
+        <p data-i18n="donation.gratitudeP2">Every bit of support, no matter how small, helps us continue creating meaningful stories for more people.</p>
       </div>
 
     </div>
   </main>
 
-  <!-- Footer -->
   <footer id="footer-placeholder"></footer>
 
   <script src="js/locales.js?v=1.0.5"></script>
@@ -240,26 +146,9 @@
   <script src="js/navbar.js?v=1.0.5"></script>
   <script src="js/footer.js?v=1.0.5"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', function() {
       initNavbar('donasi');
       initFooter();
-
-      // Scroll reveal
-      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        var els = document.querySelectorAll('.content-section, .highlight-box, .gratitude-section, .donate-bento');
-        els.forEach(function(el) { el.classList.add('reveal'); });
-
-        var observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('reveal-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1 });
-
-        els.forEach(function(el) { observer.observe(el); });
-      }
     });
   </script>
 </body>
