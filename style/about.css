@@ -66,25 +66,7 @@ body {
 }
 
 .about-section {
-  margin-bottom: 3rem;
-}
-
-.about-two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.about-two-col .about-section {
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .about-two-col {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
+  margin-bottom: 4rem;
 }
 
 .about-section h2 {
@@ -121,13 +103,13 @@ body {
 .pull-quote {
   background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
   border-left: 4px solid #F97316;
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
   border-radius: 0 12px 12px 0;
 }
 
 .pull-quote p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #1E1B4B;
   margin: 0;
@@ -211,30 +193,30 @@ body {
   background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
   border: 2px solid #6ee7b7;
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 
 .mission-box p.mission-statement {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #065f46;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .mission-points {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .mission-point {
   background: white;
   border-radius: 8px;
-  padding: 0.5rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
   color: #047857;
   font-weight: 500;
 }
