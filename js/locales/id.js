@@ -990,7 +990,7 @@ const LOCALES = { id: {
       missionP1: "Senara adalah platform nonprofit. Kami tidak menjual apapun. Semua cerita bisa diakses gratis, sekarang dan selamanya.",
       missionP2: "Bukan freemium, bukan trial. <strong>Gratis</strong>. Tidak ada investor yang menuntut profit, tidak ada target revenue yang harus dicapai. Cerita-cerita di Senara dibuat oleh relawan yang peduli.",
       visionTitle: "Visi Jangka Panjang",
-      visionQuote: "Kami bermimpi Senara menjadi perpustakaan cerita bermakna terbesar di Indonesia.",
+      visionQuote: "Kami bermimpi Senara menjadi perpustakaan cerita bermakna terbesar di dunia.",
       visionP1: "Tempat di mana guru bisa menemukan materi yang engaging. Orang tua bisa mengajarkan nilai-nilai penting lewat cerita. Siapa saja bisa belajar dari pengalaman karakter fiksi, sebelum menghadapi situasi serupa di dunia nyata.",
       visionP2: "Kami tahu ini butuh waktu. Tapi setiap cerita baru, setiap pembaca yang tersentuh, adalah langkah ke arah sana.",
       valuesTitle: "Nilai-nilai Kami",

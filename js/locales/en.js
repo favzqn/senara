@@ -818,7 +818,7 @@ const LOCALES = { en: {
       missionP1: "Senara is a nonprofit platform. We don't sell anything. Every story is free, now and forever.",
       missionP2: "No freemium, no trials. <strong>Completely free.</strong> No investors demanding profit, no revenue targets. Every story is created by caring volunteers.",
       visionTitle: "Long-Term Vision",
-      visionQuote: "We dream of Senara becoming the largest library of meaningful stories in Indonesia.",
+      visionQuote: "We dream of Senara becoming the largest library of meaningful stories in the world.",
       visionP1: "A place where teachers find engaging material. Parents teach values through stories. Anyone can learn from fictional characters before facing similar situations in real life.",
       visionP2: "We know it takes time. But every new story and every reader we touch is a step toward that future.",
       valuesTitle: "Our Values",
