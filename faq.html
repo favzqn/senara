@@ -48,12 +48,18 @@
   <!-- Header -->
   <header class="faq-header py-16 md:py-20 px-4">
     <div class="max-w-4xl mx-auto text-center relative z-10">
-      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" data-i18n="faq.title">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" style="font-family: 'Crimson Pro', serif;" data-i18n="faq.title">
         Pertanyaan Umum
       </h1>
-      <p class="text-lg text-[#64748B] max-w-2xl mx-auto" data-i18n="faq.subtitle">
+      <p class="text-lg text-[#64748B] max-w-2xl mx-auto mb-8" data-i18n="faq.subtitle">
         Jawaban untuk pertanyaan yang sering ditanyakan tentang Senara.
       </p>
+      <!-- Search -->
+      <div class="faq-search-wrap">
+        <svg class="faq-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="faqSearch" class="faq-search" placeholder="Search questions..." data-i18n-placeholder="faq.searchPlaceholder" aria-label="Search frequently asked questions">
+        <span class="faq-search-kbd"><span class="kbd">/</span></span>
+      </div>
     </div>
   </header>
 
@@ -61,15 +67,28 @@
   <main id="main-content" class="py-12 md:py-16 px-4">
     <div class="faq-content">
 
-      <!-- General -->
-      <p class="faq-category" data-i18n="faq.categories.general">Umum</p>
+      <!-- Category filters -->
+      <div class="faq-cat-filters" id="faqCatFilters">
+        <button class="faq-cat-btn active" data-cat="all" data-umami-event="FAQ cat all">All</button>
+        <button class="faq-cat-btn" data-cat="general" data-umami-event="FAQ cat general" data-i18n="faq.categories.general">Umum</button>
+        <button class="faq-cat-btn" data-cat="content" data-umami-event="FAQ cat content" data-i18n="faq.categories.content">Konten</button>
+        <button class="faq-cat-btn" data-cat="usage" data-umami-event="FAQ cat usage" data-i18n="faq.categories.usage">Penggunaan</button>
+        <button class="faq-cat-btn" data-cat="privacy" data-umami-event="FAQ cat privacy" data-i18n="faq.categories.privacy">Privasi & Dukungan</button>
+      </div>
 
-      <div class="faq-item">
+      <!-- No results message -->
+      <div class="faq-no-results hidden" id="faqNoResults">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        <p data-i18n="faq.noResults">No matching questions found. Try a different search term.</p>
+      </div>
+
+      <!-- General -->
+      <p class="faq-category" data-cat="general" data-i18n="faq.categories.general">Umum</p>
+
+      <div class="faq-item" data-cat="general">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.whatIs.q">Apa itu Senara?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -78,12 +97,10 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="general">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.forWhom.q">Untuk siapa platform ini dibuat?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -92,12 +109,10 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="general">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.isFree.q">Apakah Senara benar-benar gratis?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -106,12 +121,10 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="general">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.needAccount.q">Apakah saya perlu membuat akun?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -121,14 +134,12 @@
       </div>
 
       <!-- Content -->
-      <p class="faq-category" data-i18n="faq.categories.content">Konten</p>
+      <p class="faq-category" data-cat="content" data-i18n="faq.categories.content">Konten</p>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="content">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.replacePro.q">Apakah Senara bisa menggantikan psikolog atau konselor?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -137,12 +148,10 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="content">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.whoMakes.q">Siapa yang membuat cerita di Senara?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -151,12 +160,10 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="content">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.safeForTeens.q">Apakah konten Senara aman untuk remaja?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -166,14 +173,12 @@
       </div>
 
       <!-- Usage -->
-      <p class="faq-category" data-i18n="faq.categories.usage">Penggunaan</p>
+      <p class="faq-category" data-cat="usage" data-i18n="faq.categories.usage">Penggunaan</p>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="usage">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.forTeachers.q">Bagaimana guru bisa menggunakan Senara?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -182,12 +187,10 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="usage">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.devices.q">Bisa diakses di HP atau hanya di komputer?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -197,14 +200,12 @@
       </div>
 
       <!-- Privacy & Support -->
-      <p class="faq-category" data-i18n="faq.categories.privacy">Privasi & Dukungan</p>
+      <p class="faq-category" data-cat="privacy" data-i18n="faq.categories.privacy">Privasi & Dukungan</p>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="privacy">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.privacy.q">Bagaimana privasi saya dilindungi?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -213,12 +214,10 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" data-cat="privacy">
         <button class="faq-question" aria-expanded="false">
           <h3 data-i18n="faq.questions.support.q">Bagaimana cara mendukung Senara?</h3>
-          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 9l6 6 6-6"/>
-          </svg>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
@@ -229,6 +228,7 @@
 
       <!-- Contact -->
       <div class="contact-box">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="1.5" style="margin-bottom:0.75rem;"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
         <h3 data-i18n="faq.contactTitle">Masih punya pertanyaan?</h3>
         <p data-i18n="faq.contactDesc">Kami senang mendengar dari kamu.</p>
         <a href="mailto:fauzan08fauzan@gmail.com" data-umami-event="FAQ contact email"><span data-i18n="faq.contactCta">Hubungi Kami</span></a>
@@ -254,6 +254,8 @@
       initNavbar('faq');
       initFooter();
       setupFaqAccordion();
+      setupFaqSearch();
+      setupFaqCategories();
     });
 
     function setupFaqAccordion() {
@@ -267,7 +269,6 @@
         question.addEventListener('click', () => {
           const isOpen = item.classList.contains('is-open');
           
-          // Close all other items
           faqItems.forEach(otherItem => {
             if (otherItem !== item) {
               otherItem.classList.remove('is-open');
@@ -276,7 +277,6 @@
             }
           });
           
-          // Toggle current item
           if (isOpen) {
             item.classList.remove('is-open');
             question.setAttribute('aria-expanded', 'false');
@@ -288,8 +288,72 @@
           }
         });
       });
+    }
 
-      // All items start closed
+    function setupFaqSearch() {
+      const input = document.getElementById('faqSearch');
+      if (!input) return;
+
+      // Keyboard shortcut: / to focus search
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== input) {
+          e.preventDefault();
+          input.focus();
+        }
+        if (e.key === 'Escape' && document.activeElement === input) {
+          input.value = '';
+          input.blur();
+          filterFaq();
+        }
+      });
+
+      input.addEventListener('input', () => filterFaq());
+    }
+
+    function setupFaqCategories() {
+      const btns = document.querySelectorAll('.faq-cat-btn');
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          filterFaq();
+        });
+      });
+    }
+
+    function filterFaq() {
+      const query = (document.getElementById('faqSearch')?.value || '').toLowerCase().trim();
+      const activeCat = document.querySelector('.faq-cat-btn.active')?.dataset.cat || 'all';
+      const items = document.querySelectorAll('.faq-item');
+      const categories = document.querySelectorAll('.faq-category');
+      const noResults = document.getElementById('faqNoResults');
+      let visibleCount = 0;
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        const cat = item.dataset.cat;
+        const matchSearch = !query || text.includes(query);
+        const matchCat = activeCat === 'all' || cat === activeCat;
+        const visible = matchSearch && matchCat;
+        item.classList.toggle('hidden', !visible);
+        if (visible) visibleCount++;
+      });
+
+      // Show/hide category headers based on whether they have visible items
+      categories.forEach(catEl => {
+        const cat = catEl.dataset.cat;
+        if (activeCat !== 'all' && cat !== activeCat) {
+          catEl.classList.add('hidden');
+        } else {
+          // Check if any visible items belong to this category
+          const hasVisible = [...items].some(i => i.dataset.cat === cat && !i.classList.contains('hidden'));
+          catEl.classList.toggle('hidden', !hasVisible);
+        }
+      });
+
+      if (noResults) {
+        noResults.classList.toggle('hidden', visibleCount > 0);
+      }
     }
   </script>
 </body>
