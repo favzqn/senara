@@ -1330,6 +1330,55 @@
       color: #818CF8;
     }
 
+    /* ── Feature cards (roadmap) ─────────────────────────────── */
+    .feature-card {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .feature-card h4 {
+      color: #F1F5F9;
+    }
+
+    .feature-card p {
+      color: #CBD5E1;
+    }
+
+    .feature-card .status-badge {
+      background: rgba(79, 70, 229, 0.2);
+      color: #A5B4FC;
+    }
+
+    /* ── CTA buttons ─────────────────────────────────────────── */
+    .cta-btn-secondary {
+      background: #1E293B;
+      color: #818CF8;
+      border-color: #818CF8;
+    }
+
+    .cta-btn-secondary:hover {
+      background: rgba(79, 70, 229, 0.15);
+    }
+
+    .cta-btn-main {
+      background: #818CF8;
+      color: white;
+    }
+
+    .cta-btn-main:hover {
+      background: #6366F1;
+    }
+
+    /* ── Status badges ───────────────────────────────────────── */
+    .status-badge {
+      background: rgba(79, 70, 229, 0.2);
+      color: #A5B4FC;
+    }
+
+    .status-exploring { background: rgba(79, 70, 229, 0.2); color: #A5B4FC; }
+    .status-planned { background: rgba(251, 191, 36, 0.2); color: #FCD34D; }
+    .status-in-progress { background: rgba(16, 185, 129, 0.2); color: #6EE7B7; }
+
     /* ── Story page ────────────────────────────────────────────── */
     .story-hero::before {
       background: linear-gradient(180deg,
@@ -2738,6 +2787,55 @@ html.dark {
   .partnership-section a {
     color: #818CF8;
   }
+
+  /* ── Feature cards (roadmap) ─────────────────────────────── */
+  .feature-card {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .feature-card h4 {
+    color: #F1F5F9;
+  }
+
+  .feature-card p {
+    color: #CBD5E1;
+  }
+
+  .feature-card .status-badge {
+    background: rgba(79, 70, 229, 0.2);
+    color: #A5B4FC;
+  }
+
+  /* ── CTA buttons ─────────────────────────────────────────── */
+  .cta-btn-secondary {
+    background: #1E293B;
+    color: #818CF8;
+    border-color: #818CF8;
+  }
+
+  .cta-btn-secondary:hover {
+    background: rgba(79, 70, 229, 0.15);
+  }
+
+  .cta-btn-main {
+    background: #818CF8;
+    color: white;
+  }
+
+  .cta-btn-main:hover {
+    background: #6366F1;
+  }
+
+  /* ── Status badges ───────────────────────────────────────── */
+  .status-badge {
+    background: rgba(79, 70, 229, 0.2);
+    color: #A5B4FC;
+  }
+
+  .status-exploring { background: rgba(79, 70, 229, 0.2); color: #A5B4FC; }
+  .status-planned { background: rgba(251, 191, 36, 0.2); color: #FCD34D; }
+  .status-in-progress { background: rgba(16, 185, 129, 0.2); color: #6EE7B7; }
 
   /* ── Story page ────────────────────────────────────────────── */
   .story-hero::before {
