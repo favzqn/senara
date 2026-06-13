@@ -1310,6 +1310,112 @@
       color: #F1F5F9;
     }
 
+    /* ── FAQ page ─────────────────────────────────────────────── */
+    .faq-header {
+      background: linear-gradient(135deg, #1E293B 0%, #1a1f3a 55%, #1E1B3A 100%) !important;
+    }
+
+    .faq-search {
+      background: #1E293B !important;
+      border-color: #334155 !important;
+      color: #F1F5F9 !important;
+    }
+
+    .faq-search:focus {
+      border-color: #818CF8 !important;
+      box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15) !important;
+    }
+
+    .faq-search::placeholder { color: #64748B !important; }
+    .faq-search-icon { color: #64748B !important; }
+
+    .faq-cat-btn {
+      background: #1E293B !important;
+      border-color: #334155 !important;
+      color: #94A3B8 !important;
+    }
+
+    .faq-cat-btn:hover {
+      border-color: #475569 !important;
+      color: #CBD5E1 !important;
+    }
+
+    .faq-cat-btn.active {
+      background: #4F46E5 !important;
+      color: white !important;
+      border-color: #4F46E5 !important;
+    }
+
+    .faq-item {
+      background: #1E293B !important;
+      border-color: #334155 !important;
+    }
+
+    .faq-item:hover {
+      border-color: #4338CA !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .faq-question h3 {
+      color: #F1F5F9 !important;
+    }
+
+    .faq-icon {
+      color: #818CF8 !important;
+    }
+
+    .faq-answer-inner {
+      color: #CBD5E1 !important;
+    }
+
+    .faq-answer-inner a {
+      color: #FB923C !important;
+    }
+
+    .faq-answer-inner a:hover {
+      color: #F97316 !important;
+    }
+
+    .faq-category {
+      color: #818CF8 !important;
+    }
+
+    .faq-no-results {
+      color: #94A3B8 !important;
+    }
+
+    .faq-no-results svg {
+      stroke: #64748B !important;
+    }
+
+    .contact-box {
+      background: #1E293B !important;
+      border-color: #334155 !important;
+    }
+
+    .contact-box h3 {
+      color: #F1F5F9 !important;
+    }
+
+    .contact-box p {
+      color: #CBD5E1 !important;
+    }
+
+    .contact-box a {
+      background: #818CF8 !important;
+      color: white !important;
+    }
+
+    .contact-box a:hover {
+      background: #6366F1 !important;
+    }
+
+    .kbd {
+      background: #334155 !important;
+      border-color: #475569 !important;
+      color: #A5B4FC !important;
+    }
+
     /* ── Note box ────────────────────────────────────────────── */
     .note-box {
       background: #0F172A;
@@ -2785,6 +2891,112 @@ html.dark {
 
   .highlight-box strong {
     color: #F1F5F9;
+  }
+
+  /* ── FAQ page ─────────────────────────────────────────────── */
+  .faq-header {
+    background: linear-gradient(135deg, #1E293B 0%, #1a1f3a 55%, #1E1B3A 100%) !important;
+  }
+
+  .faq-search {
+    background: #1E293B !important;
+    border-color: #334155 !important;
+    color: #F1F5F9 !important;
+  }
+
+  .faq-search:focus {
+    border-color: #818CF8 !important;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15) !important;
+  }
+
+  .faq-search::placeholder { color: #64748B !important; }
+  .faq-search-icon { color: #64748B !important; }
+
+  .faq-cat-btn {
+    background: #1E293B !important;
+    border-color: #334155 !important;
+    color: #94A3B8 !important;
+  }
+
+  .faq-cat-btn:hover {
+    border-color: #475569 !important;
+    color: #CBD5E1 !important;
+  }
+
+  .faq-cat-btn.active {
+    background: #4F46E5 !important;
+    color: white !important;
+    border-color: #4F46E5 !important;
+  }
+
+  .faq-item {
+    background: #1E293B !important;
+    border-color: #334155 !important;
+  }
+
+  .faq-item:hover {
+    border-color: #4338CA !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .faq-question h3 {
+    color: #F1F5F9 !important;
+  }
+
+  .faq-icon {
+    color: #818CF8 !important;
+  }
+
+  .faq-answer-inner {
+    color: #CBD5E1 !important;
+  }
+
+  .faq-answer-inner a {
+    color: #FB923C !important;
+  }
+
+  .faq-answer-inner a:hover {
+    color: #F97316 !important;
+  }
+
+  .faq-category {
+    color: #818CF8 !important;
+  }
+
+  .faq-no-results {
+    color: #94A3B8 !important;
+  }
+
+  .faq-no-results svg {
+    stroke: #64748B !important;
+  }
+
+  .contact-box {
+    background: #1E293B !important;
+    border-color: #334155 !important;
+  }
+
+  .contact-box h3 {
+    color: #F1F5F9 !important;
+  }
+
+  .contact-box p {
+    color: #CBD5E1 !important;
+  }
+
+  .contact-box a {
+    background: #818CF8 !important;
+    color: white !important;
+  }
+
+  .contact-box a:hover {
+    background: #6366F1 !important;
+  }
+
+  .kbd {
+    background: #334155 !important;
+    border-color: #475569 !important;
+    color: #A5B4FC !important;
   }
 
   /* ── Note box ────────────────────────────────────────────── */
