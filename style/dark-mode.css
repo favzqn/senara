@@ -1075,6 +1075,261 @@
       color: #CBD5E1;
     }
 
+    /* ── Content sections (about/approach) ───────────────────── */
+    .content-section h2 {
+      color: #F1F5F9;
+    }
+
+    .content-section p {
+      color: #CBD5E1;
+    }
+
+    .content-section strong {
+      color: #F1F5F9;
+    }
+
+    /* ── Principle cards ─────────────────────────────────────── */
+    .principle-card {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .principle-card:hover {
+      border-color: #4338CA;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .principle-card h3 {
+      color: #F1F5F9;
+    }
+
+    .principle-card p {
+      color: #CBD5E1;
+    }
+
+    .principle-card-compact {
+      background: #1E293B;
+      border-color: #334155;
+      border-left-color: #818CF8;
+    }
+
+    .principle-card-compact h3 {
+      color: #F1F5F9;
+    }
+
+    .principle-card-compact p {
+      color: #CBD5E1;
+    }
+
+    /* ── Process steps ───────────────────────────────────────── */
+    .process-step {
+      color: #CBD5E1;
+    }
+
+    .process-number {
+      background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+    }
+
+    .step-number {
+      background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+    }
+
+    .process-content h3,
+    .step-content h3 {
+      color: #F1F5F9;
+    }
+
+    .process-content p,
+    .step-content p {
+      color: #CBD5E1;
+    }
+
+    /* ── Ethics box ──────────────────────────────────────────── */
+    .ethics-box {
+      background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+      border-left-color: #FB923C;
+    }
+
+    .ethics-box h3 {
+      color: #F1F5F9;
+    }
+
+    .ethics-list li {
+      color: #CBD5E1;
+    }
+
+    .ethics-list li::before {
+      color: #4ADE80;
+    }
+
+    /* ── Research note ───────────────────────────────────────── */
+    .research-note {
+      background: #064E3B;
+      border-color: #10B981;
+    }
+
+    .research-note p {
+      color: #A7F3D0;
+    }
+
+    .research-note strong {
+      color: #6EE7B7;
+    }
+
+    /* ── Role cards (contribute tab) ─────────────────────────── */
+    .role-card {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .role-card:hover {
+      border-color: #4338CA;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .role-card h3 {
+      color: #F1F5F9;
+    }
+
+    .role-card p {
+      color: #CBD5E1;
+    }
+
+    .role-tag {
+      background: rgba(79, 70, 229, 0.2);
+      color: #A5B4FC;
+    }
+
+    /* ── Benefit items ───────────────────────────────────────── */
+    .benefit-item {
+      background: linear-gradient(135deg, #064E3B 0%, #065F46 100%);
+    }
+
+    .benefit-item h4 {
+      color: #A7F3D0;
+    }
+
+    .benefit-item p {
+      color: #6EE7B7;
+    }
+
+    /* ── Highlight box ───────────────────────────────────────── */
+    .highlight-box {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .highlight-box p {
+      color: #CBD5E1;
+    }
+
+    .highlight-box strong {
+      color: #F1F5F9;
+    }
+
+    /* ── Note box ────────────────────────────────────────────── */
+    .note-box {
+      background: #0F172A;
+      border-color: #334155;
+    }
+
+    .note-box p {
+      color: #CBD5E1;
+    }
+
+    /* ── Section tabs ────────────────────────────────────────── */
+    .section-tab {
+      color: #94A3B8;
+      border-bottom-color: transparent;
+    }
+
+    .section-tab:hover {
+      color: #CBD5E1;
+    }
+
+    .section-tab.active {
+      color: #818CF8;
+      border-bottom-color: #818CF8;
+    }
+
+    /* ── Section nav ─────────────────────────────────────────── */
+    .section-nav {
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom-color: #334155;
+    }
+
+    /* ── Team link ───────────────────────────────────────────── */
+    .team-linkedin {
+      color: #818CF8;
+    }
+
+    .team-linkedin:hover {
+      color: #A5B4FC;
+    }
+
+    /* ── CTA contribute ──────────────────────────────────────── */
+    .cta-contribute {
+      background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+    }
+
+    .cta-contribute h2 {
+      color: #F1F5F9;
+    }
+
+    .cta-contribute p {
+      color: #CBD5E1;
+    }
+
+    .cta-btn-main {
+      background: #818CF8;
+      color: white;
+    }
+
+    .cta-btn-main:hover {
+      background: #6366F1;
+    }
+
+    /* ── Feedback section ────────────────────────────────────── */
+    .feedback-section {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .feedback-section h2 {
+      color: #F1F5F9;
+    }
+
+    .feedback-section p {
+      color: #CBD5E1;
+    }
+
+    .feedback-btn {
+      background: #818CF8;
+      color: white;
+    }
+
+    .feedback-btn:hover {
+      background: #6366F1;
+    }
+
+    /* ── Partnership section ─────────────────────────────────── */
+    .partnership-section {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .partnership-section h3 {
+      color: #F1F5F9;
+    }
+
+    .partnership-section p {
+      color: #CBD5E1;
+    }
+
+    .partnership-section a {
+      color: #818CF8;
+    }
+
     /* ── Story page ────────────────────────────────────────────── */
     .story-hero::before {
       background: linear-gradient(180deg,
@@ -2227,6 +2482,261 @@ html.dark {
 
   .intro-text {
     color: #CBD5E1;
+  }
+
+  /* ── Content sections (about/approach) ───────────────────── */
+  .content-section h2 {
+    color: #F1F5F9;
+  }
+
+  .content-section p {
+    color: #CBD5E1;
+  }
+
+  .content-section strong {
+    color: #F1F5F9;
+  }
+
+  /* ── Principle cards ─────────────────────────────────────── */
+  .principle-card {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .principle-card:hover {
+    border-color: #4338CA;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .principle-card h3 {
+    color: #F1F5F9;
+  }
+
+  .principle-card p {
+    color: #CBD5E1;
+  }
+
+  .principle-card-compact {
+    background: #1E293B;
+    border-color: #334155;
+    border-left-color: #818CF8;
+  }
+
+  .principle-card-compact h3 {
+    color: #F1F5F9;
+  }
+
+  .principle-card-compact p {
+    color: #CBD5E1;
+  }
+
+  /* ── Process steps ───────────────────────────────────────── */
+  .process-step {
+    color: #CBD5E1;
+  }
+
+  .process-number {
+    background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+  }
+
+  .step-number {
+    background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+  }
+
+  .process-content h3,
+  .step-content h3 {
+    color: #F1F5F9;
+  }
+
+  .process-content p,
+  .step-content p {
+    color: #CBD5E1;
+  }
+
+  /* ── Ethics box ──────────────────────────────────────────── */
+  .ethics-box {
+    background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+    border-left-color: #FB923C;
+  }
+
+  .ethics-box h3 {
+    color: #F1F5F9;
+  }
+
+  .ethics-list li {
+    color: #CBD5E1;
+  }
+
+  .ethics-list li::before {
+    color: #4ADE80;
+  }
+
+  /* ── Research note ───────────────────────────────────────── */
+  .research-note {
+    background: #064E3B;
+    border-color: #10B981;
+  }
+
+  .research-note p {
+    color: #A7F3D0;
+  }
+
+  .research-note strong {
+    color: #6EE7B7;
+  }
+
+  /* ── Role cards (contribute tab) ─────────────────────────── */
+  .role-card {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .role-card:hover {
+    border-color: #4338CA;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .role-card h3 {
+    color: #F1F5F9;
+  }
+
+  .role-card p {
+    color: #CBD5E1;
+  }
+
+  .role-tag {
+    background: rgba(79, 70, 229, 0.2);
+    color: #A5B4FC;
+  }
+
+  /* ── Benefit items ───────────────────────────────────────── */
+  .benefit-item {
+    background: linear-gradient(135deg, #064E3B 0%, #065F46 100%);
+  }
+
+  .benefit-item h4 {
+    color: #A7F3D0;
+  }
+
+  .benefit-item p {
+    color: #6EE7B7;
+  }
+
+  /* ── Highlight box ───────────────────────────────────────── */
+  .highlight-box {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .highlight-box p {
+    color: #CBD5E1;
+  }
+
+  .highlight-box strong {
+    color: #F1F5F9;
+  }
+
+  /* ── Note box ────────────────────────────────────────────── */
+  .note-box {
+    background: #0F172A;
+    border-color: #334155;
+  }
+
+  .note-box p {
+    color: #CBD5E1;
+  }
+
+  /* ── Section tabs ────────────────────────────────────────── */
+  .section-tab {
+    color: #94A3B8;
+    border-bottom-color: transparent;
+  }
+
+  .section-tab:hover {
+    color: #CBD5E1;
+  }
+
+  .section-tab.active {
+    color: #818CF8;
+    border-bottom-color: #818CF8;
+  }
+
+  /* ── Section nav ─────────────────────────────────────────── */
+  .section-nav {
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom-color: #334155;
+  }
+
+  /* ── Team link ───────────────────────────────────────────── */
+  .team-linkedin {
+    color: #818CF8;
+  }
+
+  .team-linkedin:hover {
+    color: #A5B4FC;
+  }
+
+  /* ── CTA contribute ──────────────────────────────────────── */
+  .cta-contribute {
+    background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+  }
+
+  .cta-contribute h2 {
+    color: #F1F5F9;
+  }
+
+  .cta-contribute p {
+    color: #CBD5E1;
+  }
+
+  .cta-btn-main {
+    background: #818CF8;
+    color: white;
+  }
+
+  .cta-btn-main:hover {
+    background: #6366F1;
+  }
+
+  /* ── Feedback section ────────────────────────────────────── */
+  .feedback-section {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .feedback-section h2 {
+    color: #F1F5F9;
+  }
+
+  .feedback-section p {
+    color: #CBD5E1;
+  }
+
+  .feedback-btn {
+    background: #818CF8;
+    color: white;
+  }
+
+  .feedback-btn:hover {
+    background: #6366F1;
+  }
+
+  /* ── Partnership section ─────────────────────────────────── */
+  .partnership-section {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .partnership-section h3 {
+    color: #F1F5F9;
+  }
+
+  .partnership-section p {
+    color: #CBD5E1;
+  }
+
+  .partnership-section a {
+    color: #818CF8;
   }
 
   /* ── Story page ────────────────────────────────────────────── */
