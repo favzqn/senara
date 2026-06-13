@@ -1220,11 +1220,46 @@
       color: #A5B4FC;
     }
 
-    /* ── Benefit items ───────────────────────────────────────── */
-    .benefit-item {
-      background: #1E293B;
-      border: 1px solid #334155;
-    }
+  /* ── Benefit items ───────────────────────────────────────── */
+  .benefit-item {
+    background: #1E293B;
+    border: 1px solid #334155;
+  }
+
+  .benefit-item h4 {
+    color: #F1F5F9;
+  }
+
+  .benefit-item p {
+    color: #CBD5E1;
+  }
+
+  .benefit-icon svg {
+    stroke: #818CF8 !important;
+  }
+
+  /* ── Partnership section ─────────────────────────────────── */
+  .partnership-section {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .partnership-section h3 {
+    color: #F1F5F9;
+  }
+
+  .partnership-section p {
+    color: #CBD5E1;
+  }
+
+  .partnership-section a {
+    background: #818CF8;
+    color: white;
+  }
+
+  .partnership-section a:hover {
+    background: #6366F1;
+  }
 
     .benefit-item h4 {
       color: #F1F5F9;
@@ -1235,7 +1270,30 @@
     }
 
     .benefit-icon svg {
-      stroke: #818CF8;
+      stroke: #818CF8 !important;
+    }
+
+    /* ── Partnership section ─────────────────────────────────── */
+    .partnership-section {
+      background: #1E293B;
+      border-color: #334155;
+    }
+
+    .partnership-section h3 {
+      color: #F1F5F9;
+    }
+
+    .partnership-section p {
+      color: #CBD5E1;
+    }
+
+    .partnership-section a {
+      background: #818CF8;
+      color: white;
+    }
+
+    .partnership-section a:hover {
+      background: #6366F1;
     }
 
     /* ── Highlight box ───────────────────────────────────────── */
