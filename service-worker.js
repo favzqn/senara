@@ -48,6 +48,7 @@ const PRECACHE = [
   '/style/performance.css',
   '/style/dark-mode.css',
   '/style/pages.css',
+  '/style/safety.css',
   '/manifest.json',
 ];
 
