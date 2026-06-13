@@ -95,12 +95,11 @@ function getLanguageToggleHTML() {
   ];
 
   const activeIndex = langs.findIndex(l => l.code === currentLang);
-  const sliderPercent = (activeIndex >= 0 ? activeIndex : 0) * (100 / langs.length);
 
   return `
     <div class="lang-switcher" role="group" aria-label="Language selection">
-      <div class="lang-switcher-track" style="--slider-width: ${100/langs.length}%; --slider-offset: ${sliderPercent}%;">
-        <span class="lang-switcher-slider" style="width: var(--slider-width); transform: translateX(var(--slider-offset));"></span>
+      <div class="lang-switcher-track">
+        <span class="lang-switcher-slider" data-active="${currentLang}"></span>
         ${langs.map(l => `
           <button 
             class="lang-btn ${currentLang === l.code ? 'is-active' : ''}" 
