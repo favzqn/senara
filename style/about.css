@@ -66,7 +66,33 @@ body {
 }
 
 .about-section {
-  margin-bottom: 4rem;
+  margin-bottom: 0;
+  padding: 3rem 0;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.about-section.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section:nth-child(even) {
+  background: #F8FAFC;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .about-section h2 {
@@ -116,11 +142,49 @@ body {
   font-style: italic;
 }
 
-/* Values grid */
+/* Values bento grid */
 .values-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 1.5rem;
+}
+
+.value-item:first-child {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.value-item:first-child .value-content h3 {
+  font-size: 1.25rem;
+}
+
+.value-item:first-child .value-content p {
+  font-size: 1rem;
+}
+
+.value-item:first-child .value-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .value-item:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .value-item:first-child {
+    grid-column: span 1;
+  }
 }
 
 .value-item {

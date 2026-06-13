@@ -1004,6 +1004,26 @@
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       });
+
+      // Scroll-triggered reveal for story sections
+      if ('IntersectionObserver' in window) {
+        var revealObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('reveal-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.about-section').forEach(function(section) {
+          revealObserver.observe(section);
+        });
+      } else {
+        document.querySelectorAll('.about-section').forEach(function(s) {
+          s.classList.add('reveal-visible');
+        });
+      }
     });
   </script>
 </body>
