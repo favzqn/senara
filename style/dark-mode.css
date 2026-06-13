@@ -1131,7 +1131,13 @@
 
     /* ── Process steps ───────────────────────────────────────── */
     .process-step {
+      background: #1E293B;
+      border-color: #334155;
       color: #CBD5E1;
+    }
+
+    .process-step:hover {
+      border-color: #4338CA;
     }
 
     .process-number {
@@ -1150,6 +1156,12 @@
     .process-content p,
     .step-content p {
       color: #CBD5E1;
+    }
+
+    /* ── Process steps (contribute tab horizontal) ──────────── */
+    .process-steps .process-step {
+      background: #1E293B;
+      border-color: #334155;
     }
 
     /* ── Ethics box ──────────────────────────────────────────── */
@@ -2597,7 +2609,13 @@ html.dark {
 
   /* ── Process steps ───────────────────────────────────────── */
   .process-step {
+    background: #1E293B;
+    border-color: #334155;
     color: #CBD5E1;
+  }
+
+  .process-step:hover {
+    border-color: #4338CA;
   }
 
   .process-number {
@@ -2616,6 +2634,11 @@ html.dark {
   .process-content p,
   .step-content p {
     color: #CBD5E1;
+  }
+
+  .process-steps .process-step {
+    background: #1E293B;
+    border-color: #334155;
   }
 
   /* ── Ethics box ──────────────────────────────────────────── */
