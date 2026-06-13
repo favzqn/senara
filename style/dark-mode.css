@@ -141,6 +141,14 @@
     .bg-pink-50 { background-color: #1E293B !important; }
     .bg-yellow-50 { background-color: #1E293B !important; }
 
+    /* ── Gradient overrides ──────────────────────────────────── */
+    .from-\[\#EEF2FF\] { --tw-gradient-from: #1E293B !important; }
+    .to-\[\#F8FAFC\] { --tw-gradient-to: #0F172A !important; }
+    .to-white { --tw-gradient-to: #0F172A !important; }
+    .from-\[\#E0E7FF\] { --tw-gradient-from: #1E293B !important; }
+    .from-\[\#F5F3FF\] { --tw-gradient-from: #1a1f3a !important; }
+    .to-\[\#FAF5FF\] { --tw-gradient-to: #1E1B3A !important; }
+
     /* ── Utility borders ──────────────────────────────────────── */
     .border-\[\#E2E8F0\] { border-color: #334155 !important; }
     .border-\[\#C7D2FE\] { border-color: #334155 !important; }
@@ -1220,6 +1228,14 @@ html.dark {
   .bg-blue-50 { background-color: #1E293B !important; }
   .bg-pink-50 { background-color: #1E293B !important; }
   .bg-yellow-50 { background-color: #1E293B !important; }
+
+  /* ── Gradient overrides ──────────────────────────────────── */
+  .from-\[\#EEF2FF\] { --tw-gradient-from: #1E293B !important; }
+  .to-\[\#F8FAFC\] { --tw-gradient-to: #0F172A !important; }
+  .to-white { --tw-gradient-to: #0F172A !important; }
+  .from-\[\#E0E7FF\] { --tw-gradient-from: #1E293B !important; }
+  .from-\[\#F5F3FF\] { --tw-gradient-from: #1a1f3a !important; }
+  .to-\[\#FAF5FF\] { --tw-gradient-to: #1E1B3A !important; }
 
   /* ── Utility text ─────────────────────────────────────────── */
   .text-\[\#0F172A\] { color: #F1F5F9 !important; }
