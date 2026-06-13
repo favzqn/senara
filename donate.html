@@ -245,7 +245,10 @@
       initFooter();
 
       // Scroll reveal
-      if ('IntersectionObserver' in window) {
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var els = document.querySelectorAll('.content-section, .highlight-box, .gratitude-section, .donate-bento');
+        els.forEach(function(el) { el.classList.add('reveal'); });
+
         var observer = new IntersectionObserver(function(entries) {
           entries.forEach(function(entry) {
             if (entry.isIntersecting) {
@@ -253,14 +256,9 @@
               observer.unobserve(entry.target);
             }
           });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.content-section, .highlight-box, .gratitude-section, .donate-bento').forEach(function(el) {
-          el.style.opacity = '0';
-          el.style.transform = 'translateY(24px)';
-          el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-          observer.observe(el);
-        });
+        els.forEach(function(el) { observer.observe(el); });
       }
     });
   </script>
