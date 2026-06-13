@@ -1240,25 +1240,25 @@
 
   /* ── Partnership section ─────────────────────────────────── */
   .partnership-section {
-    background: #1E293B;
-    border-color: #334155;
+    background: #1E293B !important;
+    border-color: #334155 !important;
   }
 
   .partnership-section h3 {
-    color: #F1F5F9;
+    color: #F1F5F9 !important;
   }
 
   .partnership-section p {
-    color: #CBD5E1;
+    color: #CBD5E1 !important;
   }
 
   .partnership-section a {
-    background: #818CF8;
-    color: white;
+    background: #818CF8 !important;
+    color: white !important;
   }
 
   .partnership-section a:hover {
-    background: #6366F1;
+    background: #6366F1 !important;
   }
 
     .benefit-item h4 {
@@ -1275,25 +1275,25 @@
 
     /* ── Partnership section ─────────────────────────────────── */
     .partnership-section {
-      background: #1E293B;
-      border-color: #334155;
+      background: #1E293B !important;
+      border-color: #334155 !important;
     }
 
     .partnership-section h3 {
-      color: #F1F5F9;
+      color: #F1F5F9 !important;
     }
 
     .partnership-section p {
-      color: #CBD5E1;
+      color: #CBD5E1 !important;
     }
 
     .partnership-section a {
-      background: #818CF8;
-      color: white;
+      background: #818CF8 !important;
+      color: white !important;
     }
 
     .partnership-section a:hover {
-      background: #6366F1;
+      background: #6366F1 !important;
     }
 
     /* ── Highlight box ───────────────────────────────────────── */
