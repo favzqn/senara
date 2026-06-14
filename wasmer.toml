@@ -1,0 +1,14 @@
+[package]
+name = "senara"
+version = "2.0.0"
+description = "Free interactive stories that teach life skills"
+license = "ISC"
+repository = "https://github.com/favzqn/senara"
+
+[commands]
+build = "npm run build"
+start = "npx serve dist -l 8080"
+
+[[fs]]
+guest = "/"
+host = "dist"

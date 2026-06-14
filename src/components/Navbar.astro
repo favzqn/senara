@@ -1,0 +1,112 @@
+---
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = '' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Home', id: 'home', event: 'Navbar Beranda' },
+  { href: '/collection', label: 'Stories', id: 'collection', event: 'Navbar Koleksi' },
+  { href: '/tv', label: 'Senara TV', id: 'tv', event: 'Navbar TV' },
+  { href: '/about', label: 'About', id: 'about', event: 'Navbar About' },
+  { href: '/faq', label: 'FAQ', id: 'faq', event: 'Navbar FAQ' },
+  { href: '/donate', label: 'Donate', id: 'donasi', event: 'Navbar Donasi' },
+];
+
+const flagID = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect width="16" height="6" fill="#FF0000"/><rect y="6" width="16" height="6" fill="#FFFFFF"/></svg>`;
+const flagEN = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect width="16" height="12" fill="#B22234"/><rect y="1" width="16" height="1" fill="white"/><rect y="3" width="16" height="1" fill="white"/><rect y="5" width="16" height="1" fill="white"/><rect y="7" width="16" height="1" fill="white"/><rect y="9" width="16" height="1" fill="white"/><rect y="11" width="16" height="1" fill="white"/><rect width="7" height="6" fill="#3C3B6E"/></svg>`;
+const flagJA = `<svg width="16" height="12" viewBox="0 0 16 12" fill="none"><rect width="16" height="12" fill="#FFFFFF"/><circle cx="8" cy="6" r="4" fill="#BC002D"/></svg>`;
+
+const langs = [
+  { code: 'id', flag: flagID, label: 'ID', aria: 'Bahasa Indonesia' },
+  { code: 'en', flag: flagEN, label: 'EN', aria: 'English' },
+  { code: 'ja', flag: flagJA, label: 'JA', aria: '\u65E5\u672C\u8A9E' },
+];
+---
+
+<nav class="senara-nav" id="senaraNav">
+  <div class="nav-inner">
+    <div class="nav-brand-block">
+      <a href="/" class="nav-logo" data-umami-event="Navbar Logo Home">Senara</a>
+      <p class="nav-tagline" data-i18n="nav.tagline">Learning through stories</p>
+    </div>
+    <div class="nav-links">
+      {navItems.map(item => (
+        <a
+          href={item.href}
+          class={`nav-link ${currentPage === item.id ? 'is-active' : ''}`}
+          data-umami-event={item.event}
+          data-i18n={`nav.${item.id === 'donasi' ? 'donate' : item.id}`}
+        >
+          {item.label}
+        </a>
+      ))}
+      <div class="lang-switcher" role="group" aria-label="Language selection">
+        <div class="lang-switcher-track">
+          <span class="lang-switcher-slider" data-active="id"></span>
+          {langs.map(l => (
+            <button
+              class={`lang-btn ${l.code === 'id' ? 'is-active' : ''}`}
+              data-lang={l.code}
+              data-umami-event={`Navbar lang ${l.label}`}
+              aria-label={l.aria}
+              aria-pressed={l.code === 'id'}
+              type="button"
+            >
+              <span class="lang-flag" set:html={l.flag}></span>
+              <span class="lang-code">{l.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <button
+        class="dark-mode-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:transparent;border-radius:8px;cursor:pointer;color:inherit;transition:background 0.2s ease;padding:0;margin-left:0.5rem;"
+      ></button>
+    </div>
+    <button id="mobileMenuBtn" class="nav-mobile-toggle" aria-label="Menu" data-umami-event="Navbar mobile toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobileMenu" class="nav-mobile-menu">
+  <div class="nav-mobile-content">
+    {navItems.map(item => (
+      <a href={item.href} class="nav-mobile-link" data-umami-event={`Mobile ${item.event}`} data-i18n={`nav.${item.id === 'donasi' ? 'donate' : item.id}`}>
+        {item.label}
+      </a>
+    ))}
+    <div class="nav-mobile-lang">
+      <div class="lang-switcher" role="group" aria-label="Language selection">
+        <div class="lang-switcher-track">
+          <span class="lang-switcher-slider" data-active="id"></span>
+          {langs.map(l => (
+            <button
+              class={`lang-btn ${l.code === 'id' ? 'is-active' : ''}`}
+              data-lang={l.code}
+              data-umami-event={`Navbar lang ${l.label}`}
+              aria-label={l.aria}
+              aria-pressed={l.code === 'id'}
+              type="button"
+            >
+              <span class="lang-flag" set:html={l.flag}></span>
+              <span class="lang-code">{l.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <button
+        class="dark-mode-toggle"
+        type="button"
+        aria-label="Toggle dark mode"
+        style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:transparent;border-radius:8px;cursor:pointer;color:inherit;transition:background 0.2s ease;padding:0;margin-left:0.5rem;"
+      ></button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+  ogImage?: string;
+  schema?: string;
+}
+
+const {
+  title,
+  description,
+  canonical = 'https://senara.id/',
+  ogType = 'website',
+  ogImage = 'https://senara.id/assets/og-image.svg',
+  schema,
+} = Astro.props;
+---
+
+<meta charset="UTF-8">
+<link rel="canonical" href={canonical}>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta name="author" content="Senara Team">
+<meta name="theme-color" content="#4F46E5">
+
+<meta property="og:type" content={ogType}>
+<meta property="og:url" content={canonical}>
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:image" content={ogImage}>
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Senara">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content={canonical}>
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={ogImage}>
+<meta name="twitter:image:alt" content="Senara - Learn Through Stories">
+
+{schema && (
+  <script type="application/ld+json" set:html={schema} />
+)}

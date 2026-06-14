@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { senaraTVChannels } from '../data/tv-channels';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+let videosData: Record<string, any[]> = {};
+try {
+  const raw = readFileSync(resolve('./src/data/tv-videos.json'), 'utf-8');
+  const parsed = JSON.parse(raw);
+  videosData = parsed.channels || {};
+} catch {}
+---
+
+<BaseLayout
+  title="Senara TV | Senara"
+  description="Curated educational YouTube videos on mental health, science, self-growth, and more. Watch and learn with Senara TV."
+  canonical="https://senara.id/tv"
+  pageName="tv"
+  bodyDataPage="tv"
+  bodyClass="bg-[#0F172A]"
+  schema={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Senara TV",
+    "description": "Curated educational YouTube videos on mental health, science, self-growth, and more. Watch and learn with Senara TV.",
+    "url": "https://senara.id/tv",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Senara",
+      "url": "https://senara.id"
+    }
+  })}
+>
+  <link rel="stylesheet" href="/style/tv.css" slot="styles">
+
+  <script id="tvData" type="application/json" set:html={JSON.stringify({ channels: videosData })} />
+
+    <div id="tvContainer" class="tv-container" data-active-age="all" data-kids-mode="off">
+    <div class="tv-topbar">
+      <div class="tv-age-tabs" role="tablist">
+        <button class="tv-age-tab active" data-age="all" role="tab" aria-selected="true" data-umami-event="TV age all">All</button>
+        <button class="tv-age-tab" data-age="kids" role="tab" aria-selected="false" data-umami-event="TV age kids">Kids</button>
+        <button class="tv-age-tab" data-age="teen" role="tab" aria-selected="false" data-umami-event="TV age teen">Teens</button>
+        <button class="tv-age-tab" data-age="young-adult" role="tab" aria-selected="false" data-umami-event="TV age young-adult">Young Adults</button>
+      </div>
+
+      <button id="kidsModeToggle" class="tv-kids-toggle" type="button" data-umami-event="TV kids mode">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Kids Mode
+      </button>
+
+      <div class="tv-categories">
+        <button class="tv-cat active" data-cat="all" data-umami-event="TV cat all">All</button>
+        <button class="tv-cat" data-cat="mind-emotions" data-umami-event="TV cat mind">Mind</button>
+        <button class="tv-cat" data-cat="science-curiosity" data-umami-event="TV cat science">Science</button>
+        <button class="tv-cat" data-cat="self-growth" data-umami-event="TV cat growth">Growth</button>
+        <button class="tv-cat" data-cat="stories" data-umami-event="TV cat stories">Stories</button>
+      </div>
+
+      <div class="tv-search-wrap">
+        <span class="tv-search-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+        <input type="search" id="tvSearch" placeholder="Search videos..." class="tv-search" data-umami-event="TV search" aria-label="Search videos">
+        <button id="tvSearchClear" class="tv-search-clear" hidden aria-label="Clear search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <section id="tvHero" class="tv-hero is-loading">
+    </section>
+
+    <section id="continueSection" class="tv-continue" style="display:none">
+      <div class="tv-continue-header">
+        <h2 class="tv-continue-title">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Continue Watching
+        </h2>
+        <button id="kidsModeExit" class="tv-kids-exit" type="button" style="display:none" data-umami-event="TV exit kids">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 019.9-1"/></svg>
+          Exit Kids Mode
+        </button>
+      </div>
+      <div id="continueWatching" class="nf-row-scroll nf-continue-scroll"></div>
+    </section>
+
+    <section id="channelRows" class="tv-channels">
+    </section>
+
+    <section id="latestSection" class="tv-latest">
+      <div class="tv-latest-header">
+        <h2 id="latestTitle" class="tv-latest-title">Latest Videos</h2>
+        <span id="videoCount" class="tv-video-count"></span>
+      </div>
+      <div id="latestVideos" class="nf-grid is-loading">
+      </div>
+    </section>
+  </div>
+
+  <div id="videoModal" class="nf-modal" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="nf-modal-inner">
+      <button class="nf-close" aria-label="Close" data-umami-event="TV modal close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="nf-modal-video">
+        <iframe width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="nf-modal-info">
+        <h3 class="nf-modal-title"></h3>
+        <p class="nf-modal-channel"></p>
+      </div>
+    </div>
+  </div>
+
+  <Fragment slot="scripts">
+    <script>
+      import { initVideoLibrary } from '../scripts/video-library';
+      document.addEventListener('DOMContentLoaded', () => {
+        initVideoLibrary();
+      });
+    </script>
+  </Fragment>
+</BaseLayout>

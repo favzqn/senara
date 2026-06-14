@@ -1,0 +1,165 @@
+---
+import SEO from '../components/SEO.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: string;
+  ogImage?: string;
+  schema?: string;
+  pageName?: string;
+  bodyClass?: string;
+  bodyDataPage?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogType,
+  ogImage,
+  schema,
+  pageName = '',
+  bodyClass = 'bg-[#F8FAFC]',
+  bodyDataPage,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <SEO
+    title={title}
+    description={description}
+    canonical={canonical}
+    ogType={ogType}
+    ogImage={ogImage}
+    schema={schema}
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style/tailwind.min.css">
+  <link rel="stylesheet" href="/style/home.css">
+  <link rel="stylesheet" href="/style/performance.css">
+  <link rel="stylesheet" href="/style/dark-mode.css">
+  <link rel="stylesheet" href="/style/pages.css">
+
+  <link rel="manifest" href="/manifest.json">
+
+  <slot name="styles" />
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      var stored = localStorage.getItem('senara_dark_mode');
+      if (stored === 'dark') {
+        root.classList.add('dark');
+        root.classList.remove('light');
+      } else if (stored === 'light') {
+        root.classList.add('light');
+        root.classList.remove('dark');
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        root.classList.add('dark');
+        root.classList.remove('light');
+      } else {
+        root.classList.add('light');
+        root.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="d358dae2-966c-46d3-bf10-c43ae1e20415"></script>
+</head>
+<body class={bodyClass} data-page={bodyDataPage}>
+  <a href="#main-content" class="skip-link" data-i18n="common.skipToContent">Skip to main content</a>
+
+  <Navbar currentPage={pageName} />
+
+  <main id="main-content">
+    <slot />
+  </main>
+
+  <Footer />
+
+  <script>
+    import { translatePage, getCurrentLanguage, setLanguage, type Language } from '../scripts/i18n';
+    import { initDarkMode, updateToggleIcons } from '../scripts/dark-mode';
+    import '../scripts/performance-utils';
+
+    function syncLangSwitcher(lang: Language, animate = false): void {
+      document.querySelectorAll<HTMLElement>('.lang-switcher-slider').forEach(slider => {
+        if (!animate) {
+          slider.style.transition = 'none';
+          void slider.offsetHeight;
+        }
+        slider.dataset.active = lang;
+        if (!animate) {
+          void slider.offsetHeight;
+          slider.style.transition = '';
+        }
+      });
+      document.querySelectorAll<HTMLElement>('.lang-btn').forEach(btn => {
+        const isActive = btn.dataset.lang === lang;
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentLang = getCurrentLanguage();
+      syncLangSwitcher(currentLang, false);
+      translatePage();
+      initDarkMode();
+
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('is-open');
+          mobileMenuBtn.classList.toggle('is-open');
+        });
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('is-open');
+            mobileMenuBtn.classList.remove('is-open');
+          });
+        });
+      }
+
+      document.querySelectorAll<HTMLElement>('.lang-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const lang = btn.dataset.lang as Language;
+          syncLangSwitcher(lang, true);
+          setLanguage(lang);
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        const btn = (e.target as HTMLElement).closest('.dark-mode-toggle');
+        if (!btn) return;
+        const root = document.documentElement;
+        const dark = root.classList.contains('dark');
+        if (dark) {
+          root.classList.remove('dark');
+          root.classList.add('light');
+          localStorage.setItem('senara_dark_mode', 'light');
+        } else {
+          root.classList.add('dark');
+          root.classList.remove('light');
+          localStorage.setItem('senara_dark_mode', 'dark');
+        }
+        updateToggleIcons();
+      });
+    });
+  </script>
+
+  <slot name="scripts" />
+</body>
+</html>

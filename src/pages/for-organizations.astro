@@ -1,0 +1,274 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Untuk Organisasi | Senara"
+  description="Bagaimana sekolah, NGO, dan komunitas bisa menggunakan Senara untuk program edukasi dan workshop."
+  canonical="https://senara.id/for-organizations"
+  pageName="for-organizations"
+  bodyDataPage="org"
+  schema={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Untuk Organisasi | Senara",
+    "description": "Bagaimana sekolah, NGO, dan komunitas bisa menggunakan Senara untuk program edukasi dan workshop.",
+    "url": "https://senara.id/for-organizations",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Senara",
+      "url": "https://senara.id/"
+    }
+  })}
+>
+  <div class="page-bg"></div>
+
+  <header class="page-header py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" data-i18n="partner.title">
+        Untuk Organisasi & Komunitas
+      </h1>
+      <p class="text-lg text-[#64748B] max-w-2xl mx-auto" data-i18n="partner.subtitle">
+        Bagaimana sekolah, NGO, dan komunitas bisa menggunakan Senara.
+      </p>
+    </div>
+  </header>
+
+  <main id="main-content" class="py-12 md:py-16 px-4">
+    <div class="page-content">
+
+      <p class="intro-text" data-i18n="partner.intro">
+        Senara dirancang untuk bisa digunakan oleh siapa saja, termasuk organisasi yang ingin menyampaikan pesan penting lewat cerita interaktif. Berikut panduan bagaimana berbagai jenis organisasi bisa memanfaatkan platform kami.
+      </p>
+
+      <section class="content-section">
+        <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22V12h6v10"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01"/></svg></span> <span data-i18n="partner.audienceTitle">Siapa yang Bisa Menggunakan?</span></h2>
+
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <h3 data-i18n="partner.audiences.schools.title">Sekolah & Universitas</h3>
+            <p data-i18n="partner.audiences.schools.body">Guru BK, dosen, atau unit kemahasiswaan yang ingin menyampaikan materi life skills dengan cara yang lebih engaging.</p>
+            <div class="audience-examples">
+              <h4 data-i18n="partner.audiences.schools.examplesTitle">Contoh Penggunaan</h4>
+              <ul>
+                <li data-i18n="partner.audiences.schools.examples.0">• Materi orientasi mahasiswa baru</li>
+                <li data-i18n="partner.audiences.schools.examples.1">• Sesi konseling kelompok</li>
+                <li data-i18n="partner.audiences.schools.examples.2">• Tugas refleksi mata kuliah</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <h3 data-i18n="partner.audiences.ngo.title">NGO & Yayasan</h3>
+            <p data-i18n="partner.audiences.ngo.body">Organisasi yang fokus pada edukasi masyarakat, kesehatan mental, atau pemberdayaan komunitas.</p>
+            <div class="audience-examples">
+              <h4 data-i18n="partner.audiences.ngo.examplesTitle">Contoh Penggunaan</h4>
+              <ul>
+                <li data-i18n="partner.audiences.ngo.examples.0">• Program literasi kesehatan mental</li>
+                <li data-i18n="partner.audiences.ngo.examples.1">• Kampanye anti-stigma</li>
+                <li data-i18n="partner.audiences.ngo.examples.2">• Materi pelatihan relawan</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22V12h6v10"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01"/></svg></div>
+            <h3 data-i18n="partner.audiences.community.title">Komunitas & Kelompok</h3>
+            <p data-i18n="partner.audiences.community.body">Komunitas online/offline, kelompok pemuda, atau organisasi keagamaan yang ingin membahas topik penting.</p>
+            <div class="audience-examples">
+              <h4 data-i18n="partner.audiences.community.examplesTitle">Contoh Penggunaan</h4>
+              <ul>
+                <li data-i18n="partner.audiences.community.examples.0">• Ice breaker di pertemuan rutin</li>
+                <li data-i18n="partner.audiences.community.examples.1">• Diskusi kelompok tematik</li>
+                <li data-i18n="partner.audiences.community.examples.2">• Program KKN atau pengabdian</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="audience-card">
+            <div class="audience-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <h3 data-i18n="partner.audiences.company.title">Perusahaan & HR</h3>
+            <p data-i18n="partner.audiences.company.body">Tim HR atau L&D yang ingin menyampaikan materi wellbeing atau soft skills dengan pendekatan berbeda.</p>
+            <div class="audience-examples">
+              <h4 data-i18n="partner.audiences.company.examplesTitle">Contoh Penggunaan</h4>
+              <ul>
+                <li data-i18n="partner.audiences.company.examples.0">• Program employee wellbeing</li>
+                <li data-i18n="partner.audiences.company.examples.1">• Onboarding karyawan baru</li>
+                <li data-i18n="partner.audiences.company.examples.2">• Workshop soft skills</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg></span> <span data-i18n="partner.useCasesTitle">Cara Penggunaan</span></h2>
+        <p data-i18n="partner.useCasesIntro">
+          Berikut beberapa skenario bagaimana organisasi bisa mengintegrasikan Senara:
+        </p>
+
+        <div class="usecase-grid">
+          <div class="usecase-card">
+            <div class="usecase-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+            <div class="usecase-content">
+              <h3 data-i18n="partner.useCases.0.title">Baca Bersama di Kelas/Workshop</h3>
+              <p data-i18n="partner.useCases.0.body">Tampilkan cerita di layar proyektor dan ajak peserta memilih bersama. Setiap pilihan menjadi bahan diskusi. Cocok untuk sesi 30-60 menit.</p>
+            </div>
+          </div>
+
+          <div class="usecase-card">
+            <div class="usecase-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="usecase-content">
+              <h3 data-i18n="partner.useCases.1.title">Tugas Mandiri + Refleksi</h3>
+              <p data-i18n="partner.useCases.1.body">Minta peserta membaca cerita secara mandiri, lalu tulis refleksi tentang pilihan yang mereka buat dan alasannya. Bagus untuk penugasan mingguan.</p>
+            </div>
+          </div>
+
+          <div class="usecase-card">
+            <div class="usecase-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+            <div class="usecase-content">
+              <h3 data-i18n="partner.useCases.2.title">Pre-Workshop Primer</h3>
+              <p data-i18n="partner.useCases.2.body">Kirim link cerita sebelum workshop sebagai "pemanasan". Peserta datang dengan konteks yang sama dan siap untuk diskusi lebih dalam.</p>
+            </div>
+          </div>
+
+          <div class="usecase-card">
+            <div class="usecase-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
+            <div class="usecase-content">
+              <h3 data-i18n="partner.useCases.3.title">Perbandingan Jalur Cerita</h3>
+              <p data-i18n="partner.useCases.3.body">Bagi peserta jadi kelompok, masing-masing pilih jalur berbeda. Lalu bandingkan ending dan diskusikan kenapa hasilnya berbeda.</p>
+            </div>
+          </div>
+
+          <div class="usecase-card">
+            <div class="usecase-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div>
+            <div class="usecase-content">
+              <h3 data-i18n="partner.useCases.4.title">Assessment Informal</h3>
+              <p data-i18n="partner.useCases.4.body">Gunakan quiz dalam cerita sebagai pre/post assessment untuk mengukur pemahaman peserta tentang topik tertentu.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span> <span data-i18n="partner.stepsTitle">Cara Memulai</span></h2>
+        <p data-i18n="partner.stepsIntro">
+          Tidak perlu registrasi atau izin khusus. Cukup ikuti langkah berikut:
+        </p>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 data-i18n="partner.steps.0.title">Pilih Cerita</h3>
+            <p data-i18n="partner.steps.0.body">Jelajahi koleksi dan pilih cerita yang sesuai dengan topik program kamu.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 data-i18n="partner.steps.1.title">Preview Dulu</h3>
+            <p data-i18n="partner.steps.1.body">Baca cerita sendiri untuk memastikan kesesuaian dengan audiens.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 data-i18n="partner.steps.2.title">Siapkan Diskusi</h3>
+            <p data-i18n="partner.steps.2.body">Buat pertanyaan diskusi berdasarkan pilihan-pilihan dalam cerita.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3 data-i18n="partner.steps.3.title">Jalankan Sesi</h3>
+            <p data-i18n="partner.steps.3.body">Bagikan link atau tampilkan di layar. Fasilitasi diskusi setelahnya.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></span> <span data-i18n="partner.benefitsTitle">Kenapa Menggunakan Senara?</span></h2>
+
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg></div>
+            <h4 data-i18n="partner.benefits.0.title">100% Gratis</h4>
+            <p data-i18n="partner.benefits.0.body">Tidak ada biaya lisensi atau langganan</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <h4 data-i18n="partner.benefits.1.title">Akses Mudah</h4>
+            <p data-i18n="partner.benefits.1.body">Cukup browser, tidak perlu install aplikasi</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <h4 data-i18n="partner.benefits.2.title">Engaging</h4>
+            <p data-i18n="partner.benefits.2.body">Format interaktif yang menarik perhatian</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+            <h4 data-i18n="partner.benefits.3.title">Pemicu Diskusi</h4>
+            <p data-i18n="partner.benefits.3.body">Pilihan dalam cerita jadi bahan obrolan</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <h4 data-i18n="partner.benefits.4.title">Aman</h4>
+            <p data-i18n="partner.benefits.4.body">Tidak perlu login, tidak ada data yang dikumpulkan</p>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+            <h4 data-i18n="partner.benefits.5.title">Konteks Lokal</h4>
+            <p data-i18n="partner.benefits.5.body">Cerita dengan latar dan karakter Indonesia</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> <span data-i18n="partner.storiesTitle">Cerita yang Cocok untuk Organisasi</span></h2>
+        <p data-i18n="partner.storiesIntro">
+          Berikut beberapa cerita yang sering digunakan oleh organisasi:
+        </p>
+
+        <div class="stories-preview">
+          <h3 data-i18n="partner.storiesListTitle">Rekomendasi Cerita</h3>
+          <div class="story-list">
+            <div class="story-item">
+              <div class="story-item-info">
+                <h4 data-i18n="partner.storyItems.0.title">Pahlawan Kesehatan Mental</h4>
+                <p data-i18n="partner.storyItems.0.desc">Literasi kesehatan mental, mengenali gejala, mengurangi stigma</p>
+              </div>
+              <a href="/story?id=pahlawan-kesehatan-mental" data-umami-event="Org page story PKM" data-i18n="partner.storyItems.0.cta">Lihat Cerita</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="testimonial-box">
+        <blockquote data-i18n="partner.testimonialQuote">
+          "Cerita interaktif membuat peserta lebih terlibat dibanding presentasi biasa. Mereka jadi lebih terbuka untuk diskusi karena sudah 'mengalami' situasinya lewat cerita."
+        </blockquote>
+        <cite data-i18n="partner.testimonialCite">— Fasilitator Workshop Kesehatan Mental</cite>
+      </div>
+
+      <div class="cta-section">
+        <h2 data-i18n="partner.ctaTitle">Tertarik Menggunakan Senara?</h2>
+        <p data-i18n="partner.ctaDesc">
+          Mulai sekarang atau hubungi kami untuk diskusi lebih lanjut tentang bagaimana Senara bisa mendukung program organisasi kamu.
+        </p>
+        <div class="cta-buttons">
+          <a href="/collection" class="cta-btn cta-btn-primary" data-umami-event="Org page explore CTA">
+            <span data-i18n="partner.ctaPrimary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Jelajahi Koleksi</span>
+          </a>
+          <a href="mailto:fauzan08fauzan@gmail.com?subject=Penggunaan%20Senara%20untuk%20Organisasi" class="cta-btn cta-btn-secondary" data-umami-event="Org page contact CTA">
+            <span data-i18n="partner.ctaSecondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Hubungi Kami</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</BaseLayout>

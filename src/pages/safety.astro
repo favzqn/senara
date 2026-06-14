@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Safety & Support | Senara"
+  description="Safety guidelines and emotional support resources when using Senara. Includes mental health hotlines."
+  canonical="https://senara.id/safety"
+  pageName="safety"
+  bodyDataPage="safety"
+  schema={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Safety & Support | Senara",
+    "description": "Safety guidelines and emotional support resources when using Senara. Includes mental health hotlines.",
+    "url": "https://senara.id/safety",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Senara",
+      "url": "https://senara.id/"
+    }
+  })}
+>
+  <link rel="stylesheet" href="/style/safety.css" slot="styles">
+
+  <div class="page-bg"></div>
+
+  <header class="safety-hero">
+    <div class="max-w-4xl mx-auto text-center relative z-10 px-4">
+      <div class="safety-hero-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Your wellbeing matters
+      </div>
+      <h1 data-i18n="safety.title">Safety & Support</h1>
+      <p data-i18n="safety.subtitle">Guidelines for emotional wellbeing when using Senara.</p>
+    </div>
+  </header>
+
+  <main id="main-content" class="safety-main">
+    <div class="safety-container">
+
+      <div class="safety-callout safety-callout--amber">
+        <div class="safety-callout-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div>
+          <h3 data-i18n="safety.disclaimerTitle">Important to Know</h3>
+          <p data-i18n-html="safety.disclaimerBody"><strong>Senara is not a replacement for professional mental health services.</strong> Our stories aim to increase literacy and awareness, not to diagnose, treat, or provide therapy.</p>
+        </div>
+      </div>
+
+      <div class="safety-callout safety-callout--red">
+        <div class="safety-callout-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <p>If you are in immediate danger, please contact your local emergency services (<strong>911, 112, 999</strong>, etc.).</p>
+        </div>
+      </div>
+
+      <section class="safety-section">
+        <div class="safety-section-header">
+          <h2 data-i18n="safety.hotlinesTitle">Indonesian Support Lines</h2>
+          <p data-i18n="safety.hotlinesIntro">Free, confidential support available 24/7.</p>
+        </div>
+        <div class="hotline-grid">
+          <a href="tel:119" class="hotline-card" data-umami-event="Safety Sejiwa">
+            <div class="hotline-card-top">
+              <span class="hotline-badge">24/7 Free</span>
+            </div>
+            <h3 data-i18n="safety.hotlines.sejiwa.title">Sejiwa</h3>
+            <p data-i18n="safety.hotlines.sejiwa.desc">Ministry of Health mental health counseling.</p>
+            <span class="hotline-number">119 ext. 8</span>
+          </a>
+          <a href="https://www.intothelightid.org" target="_blank" rel="noopener" class="hotline-card" data-umami-event="Safety ITL">
+            <div class="hotline-card-top">
+              <span class="hotline-badge">Website</span>
+            </div>
+            <h3 data-i18n="safety.hotlines.itl.title">Into The Light</h3>
+            <p data-i18n="safety.hotlines.itl.desc">Suicide prevention community.</p>
+            <span class="hotline-number">intothelightid.org</span>
+          </a>
+          <a href="tel:021-788-42580" class="hotline-card" data-umami-event="Safety Pulih">
+            <div class="hotline-card-top">
+              <span class="hotline-badge">Counseling</span>
+            </div>
+            <h3 data-i18n="safety.hotlines.pulih.title">Yayasan Pulih</h3>
+            <p data-i18n="safety.hotlines.pulih.desc">Trauma and mental health counseling.</p>
+            <span class="hotline-number">(021) 788-42580</span>
+          </a>
+          <a href="tel:1500-771" class="hotline-card" data-umami-event="Safety TePSA">
+            <div class="hotline-card-top">
+              <span class="hotline-badge hotline-badge--blue">Children</span>
+            </div>
+            <h3 data-i18n="safety.hotlines.tepsa.title">TePSA</h3>
+            <p data-i18n="safety.hotlines.tepsa.desc">Child & adolescent social services.</p>
+            <span class="hotline-number">1500-771</span>
+          </a>
+          <a href="tel:021-3903963" class="hotline-card" data-umami-event="Safety Komnas">
+            <div class="hotline-card-top">
+              <span class="hotline-badge hotline-badge--purple">Women</span>
+            </div>
+            <h3 data-i18n="safety.hotlines.komnas.title">Komnas Perempuan</h3>
+            <p data-i18n="safety.hotlines.komnas.desc">Support for women experiencing violence.</p>
+            <span class="hotline-number">(021) 390-3963</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="safety-section">
+        <div class="safety-section-header">
+          <h2 data-i18n="safety.whenHelpTitle">When to Seek Help</h2>
+          <p data-i18n="safety.whenHelpIntro">Reading stories about sensitive topics can trigger strong feelings. This is normal. But there are times when you need professional support.</p>
+        </div>
+        <div class="safety-callout safety-callout--red">
+          <div>
+            <h3 data-i18n="safety.whenHelpListTitle">Seek help immediately if you:</h3>
+            <ul class="safety-list safety-list--red">
+              <li data-i18n="safety.whenHelpList.0">Have thoughts of hurting yourself or others</li>
+              <li data-i18n="safety.whenHelpList.1">Feel extremely overwhelmed and can't cope alone</li>
+              <li data-i18n="safety.whenHelpList.2">Experience drastic changes in sleep, eating, or daily activities</li>
+              <li data-i18n="safety.whenHelpList.3">Feel isolated with no one to talk to</li>
+              <li data-i18n="safety.whenHelpList.4">Use alcohol or other substances to cope</li>
+              <li data-i18n="safety.whenHelpList.5">Feel the story you read is too heavy and affects your daily life</li>
+            </ul>
+          </div>
+        </div>
+        <p class="safety-reassure" data-i18n="safety.whenHelpOutro">There is nothing wrong with asking for help. It's a sign of strength, not weakness.</p>
+      </section>
+
+      <section class="safety-section">
+        <div class="safety-section-header">
+          <h2 data-i18n="safety.safeTipsTitle">Tips for Reading Sensitive Stories</h2>
+          <p data-i18n="safety.safeTipsIntro">Some stories cover topics that may be heavy for some people. Here are tips to protect your emotional wellbeing:</p>
+        </div>
+        <div class="tips-grid">
+          <div class="tip-card">
+            <span class="tip-num">1</span>
+            <div data-i18n-html="safety.safeTips.0"><strong>Stop anytime.</strong> If a story feels too heavy, pause, take a break, or stop entirely.</div>
+          </div>
+          <div class="tip-card">
+            <span class="tip-num">2</span>
+            <div data-i18n-html="safety.safeTips.1"><strong>Read content warnings.</strong> Each story with sensitive topics has a warning at the beginning.</div>
+          </div>
+          <div class="tip-card">
+            <span class="tip-num">3</span>
+            <div data-i18n-html="safety.safeTips.2"><strong>Prepare yourself.</strong> Choose a comfortable time and place. Avoid reading when very tired.</div>
+          </div>
+          <div class="tip-card">
+            <span class="tip-num">4</span>
+            <div data-i18n-html="safety.safeTips.3"><strong>Talk to someone.</strong> Share your feelings with a friend, family member, or someone you trust.</div>
+          </div>
+          <div class="tip-card">
+            <span class="tip-num">5</span>
+            <div data-i18n-html="safety.safeTips.4"><strong>Try grounding.</strong> Breathe deeply. Notice 5 things you see, 4 you touch, 3 you hear.</div>
+          </div>
+          <div class="tip-card">
+            <span class="tip-num">6</span>
+            <div data-i18n-html="safety.safeTips.5"><strong>Reflect by writing.</strong> Journaling after reading can help process feelings and thoughts.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="safety-section">
+        <div class="safety-section-header">
+          <h2 data-i18n="safety.parentsTitle">For Parents & Educators</h2>
+          <p data-i18n="safety.parentsIntro">If you want to use Senara for children or students:</p>
+        </div>
+        <div class="tips-grid tips-grid--3">
+          <div class="tip-card">
+            <span class="tip-num">1</span>
+            <div data-i18n-html="safety.parentsTips.0"><strong>Preview stories first.</strong> Read the story yourself before recommending it.</div>
+          </div>
+          <div class="tip-card">
+            <span class="tip-num">2</span>
+            <div data-i18n-html="safety.parentsTips.1"><strong>Supervise and discuss.</strong> Accompany the child and discuss together afterward.</div>
+          </div>
+          <div class="tip-card">
+            <span class="tip-num">3</span>
+            <div data-i18n-html="safety.parentsTips.2"><strong>Check age labels.</strong> Each story has an age recommendation (e.g., 13+).</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="safety-section">
+        <div class="safety-section-header">
+          <h2>International Resources</h2>
+          <p>Global crisis support services:</p>
+        </div>
+        <div class="resource-grid">
+          <a href="https://www.befrienders.org" target="_blank" rel="noopener" class="resource-card">
+            <h4>Befrienders Worldwide</h4>
+            <p>Emotional support in 30+ countries</p>
+            <span>befrienders.org</span>
+          </a>
+          <a href="https://www.crisistextline.org" target="_blank" rel="noopener" class="resource-card">
+            <h4>Crisis Text Line</h4>
+            <p>Text HOME to 741741 (US/CA/UK)</p>
+            <span>crisistextline.org</span>
+          </a>
+          <a href="https://www.iasp.info/resources/Crisis_Centres/" target="_blank" rel="noopener" class="resource-card">
+            <h4>IASP</h4>
+            <p>Crisis centers directory worldwide</p>
+            <span>iasp.info</span>
+          </a>
+          <a href="https://www.7cups.com" target="_blank" rel="noopener" class="resource-card">
+            <h4>7 Cups</h4>
+            <p>Free chat with trained listeners</p>
+            <span>7cups.com</span>
+          </a>
+        </div>
+      </section>
+
+      <div class="safety-cta">
+        <h2 data-i18n="safety.supportTitle">You're Not Alone</h2>
+        <p data-i18n="safety.supportBody1">Whatever you're going through, there are people who care and are ready to help.</p>
+        <p data-i18n-html="safety.supportBody2">Found harmful content on Senara? Please <a href="/contact">contact us</a>.</p>
+      </div>
+
+    </div>
+  </main>
+</BaseLayout>

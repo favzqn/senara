@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Donation Transparency"
+  description="How donations are used at Senara. Full transparency on operational costs and fund usage."
+  canonical="https://senara.id/donate"
+  pageName="donate"
+  bodyDataPage="donate"
+  schema={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Donation Transparency | Senara",
+    "description": "How donations are used at Senara. Full transparency on operational costs and fund usage.",
+    "url": "https://senara.id/donate",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Senara",
+      "url": "https://senara.id/"
+    }
+  })}
+>
+  <div class="page-bg"></div>
+
+  <header class="page-header py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" data-i18n="donation.title">Donation Transparency</h1>
+      <p class="text-lg text-[#64748B] max-w-2xl mx-auto" data-i18n="donation.subtitle">We believe you deserve to know how your donations are used.</p>
+    </div>
+  </header>
+
+  <main id="main-content" class="py-12 md:py-16 px-4">
+    <div class="page-content">
+
+      <div class="donate-cta-card">
+        <div class="donate-cta-left">
+          <h2 data-i18n="donation.methodsTitle">Ways to Support</h2>
+          <p class="donate-cta-desc">Senara is 100% free and community-built. Every contribution keeps stories free for everyone.</p>
+        </div>
+        <div class="donate-cta-actions">
+          <a href="https://trakteer.id/senara.id" target="_blank" rel="noopener" class="donate-cta-btn primary" data-umami-event="Donate Trakteer">Donate via Trakteer</a>
+          <a href="https://ko-fi.com/senara" target="_blank" rel="noopener" class="donate-cta-btn" data-umami-event="Donate Ko-fi">Ko-fi</a>
+          <a href="https://github.com/sponsors/senara-id" target="_blank" rel="noopener" class="donate-cta-btn" data-umami-event="Donate GitHub Sponsors">GitHub Sponsors</a>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p data-i18n-html="donation.highlight"><strong>100% of Senara stories are free for everyone.</strong> Donations help us keep operating, not to create exclusive content.</p>
+      </div>
+
+      <section class="content-section">
+        <h2 data-i18n="donation.usageTitle">How Are Donations Used?</h2>
+        <p data-i18n="donation.usageIntro">Every contribution is used to keep Senara running and growing.</p>
+
+        <div class="cost-bars">
+          <div class="cost-bar-row">
+            <div class="cost-bar-header">
+              <span class="cost-bar-name" data-i18n="donation.costs.art.title">Illustrations & Visual Assets</span>
+              <span class="cost-bar-pct">50%</span>
+            </div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="width:50%"></div></div>
+          </div>
+          <div class="cost-bar-row">
+            <div class="cost-bar-header">
+              <span class="cost-bar-name" data-i18n="donation.costs.hosting.title">Hosting & Domain</span>
+              <span class="cost-bar-pct">25%</span>
+            </div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="width:25%"></div></div>
+          </div>
+          <div class="cost-bar-row">
+            <div class="cost-bar-header">
+              <span class="cost-bar-name" data-i18n="donation.costs.honor.title">Contributor Honorariums</span>
+              <span class="cost-bar-pct">15%</span>
+            </div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="width:15%"></div></div>
+          </div>
+          <div class="cost-bar-row">
+            <div class="cost-bar-header">
+              <span class="cost-bar-name" data-i18n="donation.costs.tools.title">Tools & Software</span>
+              <span class="cost-bar-pct">10%</span>
+            </div>
+            <div class="cost-bar-track"><div class="cost-bar-fill" style="width:10%"></div></div>
+          </div>
+        </div>
+
+        <div class="note-box">
+          <p data-i18n="donation.usageNote">We have no physical office or permanent employees. The entire team works remotely and volunteer-based, keeping operational costs as low as possible.</p>
+        </div>
+      </section>
+
+      <div class="donate-two-col">
+        <section class="content-section">
+          <h2 data-i18n="donation.whyTitle">Why Nonprofit?</h2>
+          <p data-i18n="donation.whyParagraphs.0">Senara was founded on one belief: access to meaningful experiences should not be limited by financial ability.</p>
+          <p data-i18n="donation.whyParagraphs.1">We have no investors demanding profit. No revenue targets to hit. This frees us to focus on one thing: creating stories that truly make a difference.</p>
+          <p data-i18n="donation.whyParagraphs.2">The nonprofit model also means we don't need to sell user data or show intrusive ads. The reading experience stays clean and focused.</p>
+        </section>
+
+        <section class="content-section">
+          <h2 data-i18n="donation.principlesTitle">Our Principles</h2>
+          <div class="principles-grid">
+            <div class="principle-card-compact">
+              <h3 data-i18n="donation.principles.noExclusive.title">No Exclusive Content</h3>
+              <p data-i18n="donation.principles.noExclusive.desc">All content is free for everyone.</p>
+            </div>
+            <div class="principle-card-compact">
+              <h3 data-i18n="donation.principles.noPaywall.title">No Paywall</h3>
+              <p data-i18n="donation.principles.noPaywall.desc">No features locked behind payments.</p>
+            </div>
+            <div class="principle-card-compact">
+              <h3 data-i18n="donation.principles.voluntary.title">Voluntary Support</h3>
+              <p data-i18n="donation.principles.voluntary.desc">No pressure. Just enjoy the stories.</p>
+            </div>
+            <div class="principle-card-compact">
+              <h3 data-i18n="donation.principles.transparent.title">Full Transparency</h3>
+              <p data-i18n="donation.principles.transparent.desc">Open about how funds are used.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="gratitude-section">
+        <h2 data-i18n="donation.gratitudeTitle">Thank You</h2>
+        <p data-i18n="donation.gratitudeP1">To everyone who has supported Senara — whether through donations, sharing with friends, or simply reading our stories: thank you.</p>
+        <p data-i18n="donation.gratitudeP2">Every bit of support, no matter how small, helps us continue creating meaningful stories for more people.</p>
+      </div>
+
+    </div>
+  </main>
+</BaseLayout>

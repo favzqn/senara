@@ -1,0 +1,375 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="FAQ | Senara"
+  description="Pertanyaan yang sering ditanyakan tentang Senara. Temukan jawaban seputar penggunaan, privasi, dan cara mendukung platform."
+  canonical="https://senara.id/faq"
+  pageName="faq"
+  bodyDataPage="faq"
+  schema={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "FAQ | Senara",
+    "description": "Pertanyaan yang sering ditanyakan tentang Senara. Temukan jawaban seputar penggunaan, privasi, dan cara mendukung platform.",
+    "url": "https://senara.id/faq",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Senara",
+      "url": "https://senara.id/"
+    },
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Apa itu Senara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Senara adalah platform cerita interaktif berbasis visual novel. Kamu bisa membaca cerita, membuat pilihan, dan setiap keputusan membentuk jalan ceritamu sendiri. Topik cerita kami mencakup kesehatan mental, literasi keuangan, dan berbagai life skills lainnya."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Untuk siapa platform ini dibuat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Senara dibuat untuk siapa saja yang ingin belajar lewat cerita. Kami punya cerita untuk remaja (13+), dewasa muda, hingga umum. Guru dan fasilitator juga bisa menggunakan Senara sebagai bahan diskusi di kelas atau workshop."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah Senara benar-benar gratis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ya, 100% gratis. Bukan freemium, bukan trial. Semua cerita bisa diakses tanpa bayar, sekarang dan selamanya. Senara adalah platform nonprofit yang dibangun oleh komunitas relawan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah saya perlu membuat akun?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tidak perlu. Kamu bisa langsung membaca cerita tanpa login atau registrasi. Progress ceritamu tersimpan otomatis di browser. Fitur akun mungkin akan hadir di masa depan untuk sinkronisasi antar perangkat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah Senara bisa menggantikan psikolog atau konselor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tidak. Senara bukan pengganti layanan kesehatan mental profesional. Cerita kami bertujuan untuk meningkatkan literasi dan kesadaran, bukan untuk mendiagnosis atau mengobati. Jika kamu membutuhkan bantuan profesional, silakan hubungi psikolog atau konselor terdekat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Siapa yang membuat cerita di Senara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cerita dibuat oleh tim relawan dari berbagai latar belakang: penulis, desainer, developer, dan ahli di bidang terkait. Setiap cerita melalui proses review untuk memastikan akurasi dan kualitas konten."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah konten Senara aman untuk remaja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ya. Setiap cerita memiliki label usia yang jelas (misalnya 13+). Kami menghindari konten eksplisit dan selalu memberikan peringatan jika ada topik sensitif. Orang tua dan guru bisa melihat deskripsi cerita sebelum merekomendasikan ke anak atau siswa."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bagaimana guru bisa menggunakan Senara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Guru bisa menggunakan cerita Senara sebagai bahan diskusi di kelas, tugas refleksi, atau ice breaker di awal sesi. Cukup pilih cerita yang sesuai dengan topik, lalu ajak siswa membaca bersama atau mandiri. Setelah selesai, diskusikan pilihan dan pelajaran dari cerita tersebut."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bisa diakses di HP atau hanya di komputer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Senara bisa diakses di semua perangkat: HP, tablet, atau komputer. Cukup buka browser dan kunjungi website kami. Tidak perlu download aplikasi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bagaimana privasi saya dilindungi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Kami tidak mengumpulkan data pribadi. Tidak ada login, tidak ada tracking individual. Kami hanya menggunakan analytics anonim untuk memahami cerita mana yang paling diminati. Progress ceritamu tersimpan lokal di browsermu sendiri."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bagaimana cara mendukung Senara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ada beberapa cara: (1) Bagikan Senara ke teman atau komunitas, (2) Donasi via Trakteer untuk mendukung operasional, atau (3) Bergabung sebagai kontributor jika kamu punya keahlian di bidang penulisan, desain, atau pengembangan."
+        }
+      }
+    ]
+  })}
+>
+  <div class="page-bg"></div>
+
+  <header class="faq-header py-16 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h1 class="text-4xl md:text-5xl font-bold text-[#0F172A] mb-4" style="font-family: 'Crimson Pro', serif;" data-i18n="faq.title">
+        Pertanyaan Umum
+      </h1>
+      <p class="text-lg text-[#64748B] max-w-2xl mx-auto mb-8" data-i18n="faq.subtitle">
+        Jawaban untuk pertanyaan yang sering ditanyakan tentang Senara.
+      </p>
+      <div class="faq-search-wrap">
+        <svg class="faq-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="faqSearch" class="faq-search" placeholder="Search questions..." data-i18n-placeholder="faq.searchPlaceholder" aria-label="Search frequently asked questions">
+        <span class="faq-search-kbd"><span class="kbd">/</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="py-12 md:py-16 px-4">
+    <div class="faq-content">
+
+      <div class="faq-cat-filters" id="faqCatFilters">
+        <button class="faq-cat-btn active" data-cat="all" data-umami-event="FAQ cat all">All</button>
+        <button class="faq-cat-btn" data-cat="general" data-umami-event="FAQ cat general" data-i18n="faq.categories.general">Umum</button>
+        <button class="faq-cat-btn" data-cat="content" data-umami-event="FAQ cat content" data-i18n="faq.categories.content">Konten</button>
+        <button class="faq-cat-btn" data-cat="usage" data-umami-event="FAQ cat usage" data-i18n="faq.categories.usage">Penggunaan</button>
+        <button class="faq-cat-btn" data-cat="privacy" data-umami-event="FAQ cat privacy" data-i18n="faq.categories.privacy">Privasi & Dukungan</button>
+      </div>
+
+      <div class="faq-no-results hidden" id="faqNoResults">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        <p data-i18n="faq.noResults">No matching questions found. Try a different search term.</p>
+      </div>
+
+      <p class="faq-category" data-cat="general" data-i18n="faq.categories.general">Umum</p>
+
+      <div class="faq-item" data-cat="general">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.whatIs.q">Apa itu Senara?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.whatIs.a">Senara adalah platform cerita interaktif berbasis visual novel. Kamu bisa membaca cerita, membuat pilihan, dan setiap keputusan membentuk jalan ceritamu sendiri. Topik cerita kami mencakup kesehatan mental, literasi keuangan, dan berbagai life skills lainnya.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="general">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.forWhom.q">Untuk siapa platform ini dibuat?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.forWhom.a">Senara dibuat untuk siapa saja yang ingin belajar lewat cerita. Kami punya cerita untuk remaja (13+), dewasa muda, hingga umum. Guru dan fasilitator juga bisa menggunakan Senara sebagai bahan diskusi di kelas atau workshop.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="general">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.isFree.q">Apakah Senara benar-benar gratis?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.isFree.a">Ya, 100% gratis. Bukan freemium, bukan trial. Semua cerita bisa diakses tanpa bayar, sekarang dan selamanya. Senara adalah platform nonprofit yang dibangun oleh komunitas relawan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="general">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.needAccount.q">Apakah saya perlu membuat akun?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.needAccount.a">Tidak perlu. Kamu bisa langsung membaca cerita tanpa login atau registrasi. Progress ceritamu tersimpan otomatis di browser. Fitur akun mungkin akan hadir di masa depan untuk sinkronisasi antar perangkat.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="faq-category" data-cat="content" data-i18n="faq.categories.content">Konten</p>
+
+      <div class="faq-item" data-cat="content">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.replacePro.q">Apakah Senara bisa menggantikan psikolog atau konselor?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.replacePro.a">Tidak. Senara bukan pengganti layanan kesehatan mental profesional. Cerita kami bertujuan untuk meningkatkan literasi dan kesadaran, bukan untuk mendiagnosis atau mengobati. Jika kamu membutuhkan bantuan profesional, silakan hubungi psikolog atau konselor terdekat.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="content">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.whoMakes.q">Siapa yang membuat cerita di Senara?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.whoMakes.a">Cerita dibuat oleh tim relawan dari berbagai latar belakang: penulis, desainer, developer, dan ahli di bidang terkait. Setiap cerita melalui proses review untuk memastikan akurasi dan kualitas konten.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="content">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.safeForTeens.q">Apakah konten Senara aman untuk remaja?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.safeForTeens.a">Ya. Setiap cerita memiliki label usia yang jelas (misalnya 13+). Kami menghindari konten eksplisit dan selalu memberikan peringatan jika ada topik sensitif. Orang tua dan guru bisa melihat deskripsi cerita sebelum merekomendasikan ke anak atau siswa.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="faq-category" data-cat="usage" data-i18n="faq.categories.usage">Penggunaan</p>
+
+      <div class="faq-item" data-cat="usage">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.forTeachers.q">Bagaimana guru bisa menggunakan Senara?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.forTeachers.a">Guru bisa menggunakan cerita Senara sebagai bahan diskusi di kelas, tugas refleksi, atau ice breaker di awal sesi. Cukup pilih cerita yang sesuai dengan topik, lalu ajak siswa membaca bersama atau mandiri. Setelah selesai, diskusikan pilihan dan pelajaran dari cerita tersebut.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="usage">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.devices.q">Bisa diakses di HP atau hanya di komputer?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.devices.a">Senara bisa diakses di semua perangkat: HP, tablet, atau komputer. Cukup buka browser dan kunjungi website kami. Tidak perlu download aplikasi.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="faq-category" data-cat="privacy" data-i18n="faq.categories.privacy">Privasi & Dukungan</p>
+
+      <div class="faq-item" data-cat="privacy">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.privacy.q">Bagaimana privasi saya dilindungi?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n="faq.questions.privacy.a">Kami tidak mengumpulkan data pribadi. Tidak ada login, tidak ada tracking individual. Kami hanya menggunakan analytics anonim untuk memahami cerita mana yang paling diminati. Progress ceritamu tersimpan lokal di browsermu sendiri.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" data-cat="privacy">
+        <button class="faq-question" aria-expanded="false">
+          <h3 data-i18n="faq.questions.support.q">Bagaimana cara mendukung Senara?</h3>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p data-i18n-html="faq.questions.support.a">Ada beberapa cara: (1) Bagikan Senara ke teman atau komunitas, (2) Donasi via <a href="https://trakteer.id/senara.id" target="_blank" rel="noopener">Trakteer</a> untuk mendukung operasional, atau (3) Bergabung sebagai kontributor jika kamu punya keahlian di bidang penulisan, desain, atau pengembangan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-box">
+        <h3 data-i18n="faq.contactTitle">Masih punya pertanyaan?</h3>
+        <p data-i18n="faq.contactDesc">Kami senang mendengar dari kamu.</p>
+        <a href="mailto:fauzan08fauzan@gmail.com" data-umami-event="FAQ contact email"><span data-i18n="faq.contactCta">Hubungi Kami</span></a>
+      </div>
+
+    </div>
+  </main>
+
+  <Fragment slot="scripts">
+    <script>
+      function setupFaqAccordion() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach((item) => {
+          const question = item.querySelector('.faq-question')!;
+          const answer = item.querySelector('.faq-answer') as HTMLElement;
+          const answerInner = item.querySelector('.faq-answer-inner') as HTMLElement;
+          question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('is-open');
+            faqItems.forEach((otherItem) => {
+              if (otherItem !== item) {
+                otherItem.classList.remove('is-open');
+                otherItem.querySelector('.faq-question')!.setAttribute('aria-expanded', 'false');
+                (otherItem.querySelector('.faq-answer') as HTMLElement).style.maxHeight = '';
+              }
+            });
+            if (isOpen) {
+              item.classList.remove('is-open');
+              question.setAttribute('aria-expanded', 'false');
+              answer.style.maxHeight = '';
+            } else {
+              item.classList.add('is-open');
+              question.setAttribute('aria-expanded', 'true');
+              answer.style.maxHeight = answerInner.scrollHeight + 'px';
+            }
+          });
+        });
+      }
+
+      function filterFaq() {
+        const query = ((document.getElementById('faqSearch') as HTMLInputElement)?.value || '').toLowerCase().trim();
+        const activeCat = (document.querySelector('.faq-cat-btn.active') as HTMLElement)?.dataset.cat || 'all';
+        const items = document.querySelectorAll('.faq-item');
+        const categories = document.querySelectorAll('.faq-category');
+        const noResults = document.getElementById('faqNoResults');
+        let visibleCount = 0;
+        items.forEach((item) => {
+          const text = (item as HTMLElement).textContent!.toLowerCase();
+          const cat = (item as HTMLElement).dataset.cat;
+          const matchSearch = !query || text.includes(query);
+          const matchCat = activeCat === 'all' || cat === activeCat;
+          const visible = matchSearch && matchCat;
+          item.classList.toggle('hidden', !visible);
+          if (visible) visibleCount++;
+        });
+        categories.forEach((catEl) => {
+          const cat = (catEl as HTMLElement).dataset.cat;
+          if (activeCat !== 'all' && cat !== activeCat) {
+            catEl.classList.add('hidden');
+          } else {
+            const hasVisible = [...items].some((i) => (i as HTMLElement).dataset.cat === cat && !i.classList.contains('hidden'));
+            catEl.classList.toggle('hidden', !hasVisible);
+          }
+        });
+        if (noResults) noResults.classList.toggle('hidden', visibleCount > 0);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        setupFaqAccordion();
+        const input = document.getElementById('faqSearch') as HTMLInputElement | null;
+        if (input) {
+          document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement !== input) { e.preventDefault(); input.focus(); }
+            if (e.key === 'Escape' && document.activeElement === input) { input.value = ''; input.blur(); filterFaq(); }
+          });
+          input.addEventListener('input', () => filterFaq());
+        }
+        document.querySelectorAll('.faq-cat-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            document.querySelectorAll('.faq-cat-btn').forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterFaq();
+          });
+        });
+      });
+    </script>
+  </Fragment>
+</BaseLayout>

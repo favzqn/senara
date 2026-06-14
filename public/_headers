@@ -1,0 +1,99 @@
+# Cache Control Headers for Senara
+# Works with Wasmer, Netlify, Cloudflare Pages, Vercel
+
+# HTML pages - never cache aggressively (always revalidate)
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/collection/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/tv/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/about/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/faq/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/story/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/contact/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/donate/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/safety/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/privacy/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/terms/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/accessibility/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/for-organizations/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+/offline/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# CSS files - cache with revalidation
+/style/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# JS files - cache with revalidation
+/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Data files - cache with revalidation
+/data/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Static assets - moderate cache
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/favicon.ico
+  Cache-Control: public, max-age=86400
+
+/manifest.json
+  Cache-Control: public, max-age=3600
+
+# Monogatari engine and stories - moderate cache
+/monogatari/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400

@@ -19,6 +19,12 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+.astro/
+
+# AI config
+.claude/
+.kilo/
+*.tsbuildinfo
 
 # Environment
 .env

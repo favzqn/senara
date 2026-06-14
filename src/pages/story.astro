@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Story | Senara"
+  description="Mainkan cerita interaktif edukatif di Senara. Belajar sambil bermain dengan visual novel yang menarik dan bermakna."
+  canonical="https://senara.id/story"
+  pageName="story"
+  bodyDataPage="story"
+  ogType="article"
+>
+  <link rel="stylesheet" href="/style/story.css" slot="styles">
+
+  <div id="storyPage">
+    <div id="loadingState" class="min-h-screen flex items-center justify-center">
+      <div class="text-center">
+        <div class="w-16 h-16 border-4 border-stone-200 border-t-stone-600 rounded-full animate-spin mx-auto mb-4"></div>
+        <p class="text-stone-600">Memuat cerita...</p>
+      </div>
+    </div>
+  </div>
+
+  <Fragment slot="scripts">
+    <script>
+      import { initStoryPage } from '../scripts/story-page';
+      document.addEventListener('DOMContentLoaded', initStoryPage);
+    </script>
+  </Fragment>
+</BaseLayout>
