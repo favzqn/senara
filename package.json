@@ -7,6 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
+    "start": "node server.js",
+    "build": "node bump-version.js",
     "build:css": "tailwindcss -i style/tailwind-input.css -o style/tailwind.min.css --minify",
     "watch:css": "tailwindcss -i style/tailwind-input.css -o style/tailwind.min.css --watch",
     "bump": "node bump-version.js"
