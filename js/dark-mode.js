@@ -13,6 +13,12 @@
   } else if (stored === 'light') {
     root.classList.add('light');
     root.classList.remove('dark');
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    root.classList.add('dark');
+    root.classList.remove('light');
+  } else {
+    root.classList.add('light');
+    root.classList.remove('dark');
   }
 })();
 
