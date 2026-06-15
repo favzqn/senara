@@ -102,7 +102,15 @@ function renderStory(story: Story): void {
   const category = story.category ? getCategoryById(story.category) : undefined;
   const rating: number = story.rating || 0;
   const backLink: string = pathId ? `/path-detail?id=${pathId}` : '/collection';
-  const storyInitial: string = story.title.charAt(0).toUpperCase();
+  const storyTitle: string = t(`stories.${story.id}.title`) !== `stories.${story.id}.title` ? t(`stories.${story.id}.title`) : story.title;
+  const storyDesc: string = t(`stories.${story.id}.description`) !== `stories.${story.id}.description` ? t(`stories.${story.id}.description`) : story.description;
+  const storyLongDesc: string = story.longDescription || storyDesc;
+  const storyInitial: string = storyTitle.charAt(0).toUpperCase();
+
+  const categoryTitle: string = category
+    ? (t(`categories.${category.id}`) !== `categories.${category.id}` ? t(`categories.${category.id}`) : category.title)
+    : '';
+  const difficultyLabel: string = t(`story.${story.difficulty.toLowerCase()}`) !== `story.${story.difficulty.toLowerCase()}` ? t(`story.${story.difficulty.toLowerCase()}`) : story.difficulty;
 
   const pathBannerHTML: string = pathId ? `
     <div class="story-path-banner mb-4">
@@ -143,16 +151,16 @@ function renderStory(story: Story): void {
           <div class="flex flex-wrap items-center gap-3 mb-4">
             ${category ? `
               <span class="story-category-badge">
-                ${category.icon} ${category.title}
+                ${category.icon} ${categoryTitle}
               </span>
             ` : ''}
             <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold border ${difficultyClass}">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c0 0 8-4 8-12C20 5.6 16.4 2 12 2 7.6 2 4 5.6 4 10c0 8 8 12 8 12z"/></svg> ${story.difficulty}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c0 0 8-4 8-12C20 5.6 16.4 2 12 2 7.6 2 4 5.6 4 10c0 8 8 12 8 12z"/></svg> ${difficultyLabel}
             </span>
           </div>
 
           <h1 class="story-title">
-            ${story.title}
+            ${storyTitle}
           </h1>
 
           <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
@@ -229,7 +237,7 @@ function renderStory(story: Story): void {
             ${ICONS.book} ${t('storyPage.aboutStory', 'About This Story')}
           </h2>
           <p class="story-description">
-            ${story.longDescription || story.description}
+            ${storyLongDesc}
           </p>
           <div class="flex flex-wrap gap-2 mt-6 pt-6 border-t story-divider">
             ${featuresHTML}
@@ -256,7 +264,7 @@ function renderStory(story: Story): void {
               <div class="story-credit-item">
                 <span class="story-credit-icon">${ICONS.user}</span>
                 <div>
-                  <p class="story-credit-label">Author</p>
+                  <p class="story-credit-label">${t('storyPage.creditsAuthor', 'Author')}</p>
                   <p class="story-credit-value">${story.author}</p>
                 </div>
               </div>
@@ -265,7 +273,7 @@ function renderStory(story: Story): void {
               <div class="story-credit-item">
                 <span class="story-credit-icon">${ICONS.pen}</span>
                 <div>
-                  <p class="story-credit-label">Script By</p>
+                  <p class="story-credit-label">${t('storyPage.creditsScriptBy', 'Script By')}</p>
                   <p class="story-credit-value">${story.scriptBy}</p>
                 </div>
               </div>
@@ -274,7 +282,7 @@ function renderStory(story: Story): void {
               <div class="story-credit-item">
                 <span class="story-credit-icon">${ICONS.book}</span>
                 <div>
-                  <p class="story-credit-label">Series</p>
+                  <p class="story-credit-label">${t('storyPage.creditsSeries', 'Series')}</p>
                   <p class="story-credit-value">${story.series}</p>
                 </div>
               </div>
@@ -283,7 +291,7 @@ function renderStory(story: Story): void {
               <div class="story-credit-item">
                 <span class="story-credit-icon">${ICONS.calendar}</span>
                 <div>
-                  <p class="story-credit-label">Release Date</p>
+                  <p class="story-credit-label">${t('storyPage.creditsReleaseDate', 'Release Date')}</p>
                   <p class="story-credit-value">${formatDate(story.releaseDate)}</p>
                 </div>
               </div>

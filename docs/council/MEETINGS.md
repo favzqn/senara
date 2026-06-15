@@ -125,6 +125,52 @@ Phase 3: 🟡 (SEO complete)
 
 ---
 
+## Meeting #7 — Analytics Review (Focused)
+
+**Date:** 2026-06-15 19:50 WIB  
+**Type:** Focused (CEO, Data Analyst, CMO, CTO)  
+**Topic:** Umami analytics data review
+
+### Data (All Time: Nov 2025 — Jun 2026)
+
+| Metric | Value |
+|--------|-------|
+| Visitors | 385 |
+| Visits | 473 |
+| Views | 2,999 |
+| Bounce rate | 52% |
+| Visit duration | 3m 51s |
+
+### Key Findings
+
+1. **Data is all-time (pre + post migration)** — old `.html` URLs traffic was from pre-Astro era, not broken links.
+2. **Local dev paths** (`/Users/aaa/...`) are developer testing sessions, not real traffic.
+3. **3m 51s average visit** — strong engagement, stories are working.
+4. **46% from search/AI** (Google 20%, ChatGPT 17%, Bing 9%) — SEO is driving traffic.
+5. **Indonesia 69%, US 19%** — primary audience correct, US could be diaspora/researchers.
+6. **Chrome 77%, iOS 11%** — mobile-first is correct approach.
+
+### Actions
+
+| # | Task | Owner | Status |
+|---|------|-------|--------|
+| 1 | Add `.html` redirects (safety net for old bookmarks) | CTO | ✅ DONE |
+| 2 | Filter Umami to post-migration period for accurate data | Data Analyst | Pending |
+| 3 | Update council docs | CEO | ✅ DONE |
+
+### Redirects Added
+
+- `koleksi.html` → `/collection`
+- `story.html` → `/story`
+- `index.html` → `/`
+- `tim.html` → `/about`
+- `about.html` → `/about`
+- `faq.html` → `/faq`
+- `safety.html` → `/safety`
+- `contact.html` → `/contact`
+
+---
+
 ## Meeting #5 — Phase 3 Kickoff (Focused)
 
 **Date:** 2026-06-15 19:40 WIB  

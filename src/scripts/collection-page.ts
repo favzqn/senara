@@ -106,13 +106,14 @@ function loadCategories(): void {
   `;
 
   categories.forEach((cat: Category) => {
+    const catTitle = t(`categories.${cat.id}`) !== `categories.${cat.id}` ? t(`categories.${cat.id}`) : cat.title;
     html += `
       <button 
         class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/60 text-[#0F172A] font-medium text-sm border border-[#E2E8F0]/80 flex items-center gap-2.5" 
         data-category="${cat.id}" 
-        data-umami-event="Collection filter ${cat.title}"
+        data-umami-event="Collection filter ${catTitle}"
       >
-        <span class="flex-1 truncate" title="${cat.title}">${cat.title}</span>
+        <span class="flex-1 truncate" title="${catTitle}">${catTitle}</span>
         <span class="category-count text-[#94A3B8]" id="count-${cat.id}"></span>
       </button>
     `;

@@ -98,26 +98,34 @@ export function createStoryCard(story: StoryBasic, options: { showDescription?: 
       </div>
       ${showDescription ? `<p class="text-[#64748B] text-sm mb-3">${storyDesc}</p>` : ''}
       <div class="flex flex-wrap gap-2 mb-3">
-        ${story.tags.map((tag) => `<span class="tag">${tag}</span>`).join('')}
+        ${story.tags.map((tag) => {
+          const tagKey = `tags.${tag.toLowerCase().replace(/[\s&]+/g, '-')}`;
+          const tagLabel = t(tagKey) !== tagKey ? t(tagKey) : tag;
+          return `<span class="tag">${tagLabel}</span>`;
+        }).join('')}
         ${story.category ? `<span class="inline-flex items-center gap-1 px-2 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">${categorySvg} ${categoryLabel}</span>` : ''}
       </div>
       <div class="mt-auto flex flex-col gap-3">
-        ${story.collaboration ? `<div class="p-2 bg-pink-50 border border-pink-200 rounded-lg"><p class="text-xs font-semibold text-pink-700">${story.collaboration}</p></div>` : ''}
+        ${story.collaboration ? (() => {
+          const collabKey = `stories.${story.id}.collaboration`;
+          const collabLabel = t(collabKey) !== collabKey ? t(collabKey) : story.collaboration;
+          return `<div class="p-2 bg-pink-50 border border-pink-200 rounded-lg"><p class="text-xs font-semibold text-pink-700">${collabLabel}</p></div>`;
+        })() : ''}
         <div class="grid grid-cols-3 gap-2 text-xs">
           <div class="p-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
-            <p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">Level</p>
+            <p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">${getText('story.level', 'Level')}</p>
             <p class="text-sm font-semibold text-[#0F172A]">${difficultyLabel}</p>
           </div>
           <div class="p-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
             <p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">${getText('story.duration', 'Duration')}</p>
-            <p class="text-sm font-semibold text-[#0F172A] inline-flex items-center gap-1">${clockSvg} ${story.duration} min</p>
+            <p class="text-sm font-semibold text-[#0F172A] inline-flex items-center gap-1">${clockSvg} ${story.duration} ${getText('story.min', 'min')}</p>
           </div>
           <div class="p-2 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
             <p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">${getText('story.age', 'Age')}</p>
             <p class="text-sm font-semibold text-[#0F172A]">${story.age}</p>
           </div>
         </div>
-        ${story.scriptBy ? `<div class="flex items-center gap-3 bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs"><div class="text-[#6366F1]">${penSvg}</div><div><p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">Script by</p><p class="text-sm font-semibold text-[#0F172A]">${story.scriptBy}</p></div></div>` : ''}
+        ${story.scriptBy ? `<div class="flex items-center gap-3 bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs"><div class="text-[#6366F1]">${penSvg}</div><div><p class="text-[0.65rem] uppercase tracking-wide text-[#94A3B8]">${getText('story.scriptBy', 'Script by')}</p><p class="text-sm font-semibold text-[#0F172A]">${story.scriptBy}</p></div></div>` : ''}
         <div class="pt-1">
           ${isComingSoon
             ? `<button class="play-btn w-full py-3 rounded-lg font-semibold text-center opacity-50 cursor-not-allowed" disabled>${comingSoonSvg} ${comingSoonLabel}</button>`
