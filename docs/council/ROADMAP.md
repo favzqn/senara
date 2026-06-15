@@ -29,7 +29,7 @@
 - [x] Complete Zero Waste Mission Chapter 2 (Zero Waste at Home)
 - [ ] Complete Digital Literacy Navigator Chapter 3-5
 - [ ] Complete Empty Wallet, Full Dreams Chapter 2-5
-- [ ] Add progress tracking (localStorage-based chapter completion)
+- [x] Add progress tracking (localStorage-based chapter completion)
 - [ ] Add "What's New" section to landing page
 - [ ] Update privacy policy date
 - [ ] Switch contact email to hello@senara.id
@@ -39,7 +39,9 @@
 
 **Goal:** Drive user acquisition and establish impact metrics.
 
-- [ ] Add JSON-LD Article schema to story pages
+- [x] Add JSON-LD Article schema to story pages
+- [x] Add robots.txt
+- [ ] Verify Umami analytics is capturing data
 - [ ] Social sharing for story completions
 - [ ] Impact dashboard (stories completed, time spent, learning outcomes)
 - [ ] Partner outreach to schools and organizations

@@ -82,6 +82,36 @@ Meeting log for the Senara Board of Directors.
 
 ---
 
+## Meeting #5 — Phase 3 Kickoff (Focused)
+
+**Date:** 2026-06-15 19:40 WIB  
+**Type:** Focused (CEO, CMO, CTO, CPO, Data Analyst)  
+**Topic:** Phase 3 Growth — SEO and discoverability
+
+### Decisions
+
+1. **Phase 3 focus: SEO** — Content is ready, platform is stable, now we need Google to find us
+2. **Skip features** — No new product work until users tell us what's missing
+3. **Track Umami** — Verify analytics is capturing data before adding more tracking
+
+### Actions
+
+| # | Task | Owner | Status |
+|---|------|-------|--------|
+| 1 | Add JSON-LD Article schema to story pages | CTO | ✅ DONE |
+| 2 | Add robots.txt | CTO | ✅ DONE |
+| 3 | Verify Umami analytics | Data Analyst | Pending (manual check) |
+| 4 | Update ROADMAP.md | CEO | ✅ DONE |
+
+### Technical Details
+
+- JSON-LD Article schema injected dynamically in `story-page.ts` via `updateMetaTags()`
+- Schema includes: headline, description, datePublished, author, publisher, keywords, learningOutcomes
+- `robots.txt` created at `public/robots.txt` with sitemap reference
+- Build passes clean
+
+---
+
 ## Meeting #4 — Next Content (Focused)
 
 **Date:** 2026-06-15 19:24 WIB  

@@ -30,6 +30,30 @@ function updateMetaTags(story: Story): void {
   setMeta('name', 'twitter:title', story.title);
   setMeta('name', 'twitter:description', desc);
   setMeta('name', 'description', desc);
+
+  const existing = document.querySelector('script[type="application/ld+json"]');
+  if (existing) existing.remove();
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: story.title,
+    description: story.description,
+    url: `https://senara.id/story?id=${story.id}`,
+    datePublished: story.releaseDate,
+    dateModified: story.releaseDate,
+    author: { '@type': 'Organization', name: story.author || 'Senara Team' },
+    publisher: { '@type': 'Organization', name: 'Senara', url: 'https://senara.id' },
+    image: story.thumbnail ? `https://senara.id/${story.thumbnail}` : undefined,
+    articleSection: story.category,
+    keywords: story.tags?.join(', '),
+    about: story.learningOutcomes?.map(outcome => ({ '@type': 'Thing', name: outcome })),
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
 }
 
 const ICONS = {
