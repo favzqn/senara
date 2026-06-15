@@ -107,11 +107,11 @@ Meeting log for the Senara Board of Directors.
 
 | # | Task | Owner | Status |
 |---|------|-------|--------|
-| 1 | Write Chapter 2 script (18 scenes) | Editor-in-Chief | Ready |
-| 2 | Review for educational accuracy | CCO | Blocked on #1 |
-| 3 | Technical integration | CTO | Blocked on #1 |
-| 4 | Status change to published | CPO | Blocked on #3 |
-| 5 | Update ROADMAP.md | CEO | Blocked on #3 |
+| 1 | Write Chapter 2 script (18 scenes) | Editor-in-Chief | ✅ DONE |
+| 2 | Review for educational accuracy | CCO | ✅ DONE |
+| 3 | Technical integration | CTO | ✅ DONE |
+| 4 | Status change to published | CPO | ✅ DONE |
+| 5 | Update ROADMAP.md | CEO | ✅ DONE |
 
 ---
 

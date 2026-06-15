@@ -23,7 +23,7 @@
 
 **Goal:** Complete the two most-promoted stories to full chapter count.
 
-- [ ] Complete Digital Literacy Navigator Chapter 2 (planned: 18 scenes)
+- [x] Complete Digital Literacy Navigator Chapter 2 (18 scenes: algorithms, echo chambers, digital footprints, addiction, healthy habits)
 - [ ] Complete Digital Literacy Navigator Chapter 3-5
 - [ ] Complete Empty Wallet, Full Dreams Chapter 2-5
 - [ ] Add progress tracking (localStorage-based chapter completion)

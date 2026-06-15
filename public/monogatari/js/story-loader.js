@@ -36,6 +36,7 @@ const STORY_CONFIG = {
   'digital-literacy-navigator': {
     scripts: [
       './stories/digital-literacy-navigator/chapter-1.js',
+      './stories/digital-literacy-navigator/chapter-2.js',
       './stories/digital-literacy-navigator/index.js',
     ],
     title: 'Digital Literacy Navigator | Senara'

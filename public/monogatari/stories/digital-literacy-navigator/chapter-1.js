@@ -421,6 +421,7 @@ const Chapter1 = {
     "r Di era digital, literasi itu bukan cuma soal bisa baca dan nulis. Tapi juga soal bisa berpikir kritis, melindungi diri sendiri, dan menghormati orang lain di dunia maya.",
     "r Jadi, mulai sekarang, jadilah Digital Literacy Navigator yang bijak. Nggak cuma buat diri sendiri, tapi juga buat orang-orang di sekitarmu.",
     "r Sampai ketemu di chapter selanjutnya, {{player.name}}! Stay safe online!",
+    "jump Loading-2",
   ],
 };
 

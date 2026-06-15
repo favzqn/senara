@@ -35,6 +35,7 @@ monogatari.assets("scenes", {
   "scene-20": "20.jpg",
   "scene-21": "21.jpg",
   "scene-sit-right": "sit-right.jpg",
+  "loading-2": "loading-2.jpg",
 });
 
 monogatari.characters({
@@ -75,10 +76,19 @@ const mainStory = {
     "Chapter 1 : Social Media Survival",
     "jump Scene-1",
   ],
+
+  "Loading-2": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene loading-2",
+    "Chapter 2 : The Deep End of Social Media",
+    "jump Scene-23",
+  ],
 };
 
 const completeStory = Object.assign({},
   typeof window.Chapter1 !== 'undefined' ? window.Chapter1 : {},
+  typeof window.Chapter2 !== 'undefined' ? window.Chapter2 : {},
   mainStory
 );
 
