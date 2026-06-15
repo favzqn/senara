@@ -81,6 +81,40 @@ Meeting log for the Senara Board of Directors.
 
 ---
 
+## Meeting #3 — Phase 2 Kickoff (Focused)
+
+**Date:** 2026-06-15 18:08 WIB  
+**Type:** Focused (CEO, CCO, Editor-in-Chief, CPO, CTO)  
+**Topic:** Phase 2 kickoff — Digital Literacy Navigator Chapter 2
+
+### Decisions
+
+1. **Write Chapter 2 script freely** — Don't limit to existing scene backgrounds. Placeholder with existing assets, swap later.
+2. **Ship as complete experience** — Chapter 1 ending → Loading-2 → Chapter 2. No broken jumps.
+3. **Quality over speed** — Story quality is Senara's differentiator.
+4. **Change status to published** when Chapter 2 is integrated and tested.
+
+### Technical Steps (when script is ready)
+
+1. Create `chapter-2.js` in `public/monogatari/stories/digital-literacy-navigator/`
+2. Add `Loading-2` back to `index.js` and `chapter-1.js`
+3. Update `story-loader.js` to include `chapter-2.js`
+4. Update `stories.ts` chapters count from 1 to 2
+5. Change story status from `coming-soon` to `published`
+6. Build and test
+
+### Actions
+
+| # | Task | Owner | Status |
+|---|------|-------|--------|
+| 1 | Write Chapter 2 script (18 scenes) | Editor-in-Chief | Ready |
+| 2 | Review for educational accuracy | CCO | Blocked on #1 |
+| 3 | Technical integration | CTO | Blocked on #1 |
+| 4 | Status change to published | CPO | Blocked on #3 |
+| 5 | Update ROADMAP.md | CEO | Blocked on #3 |
+
+---
+
 ## Meeting #1 — Initial Board Formation
 
 **Date:** 2026-06-15  
