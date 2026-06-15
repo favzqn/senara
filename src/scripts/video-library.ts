@@ -614,7 +614,7 @@ function renderContinueWatching(library: SenaraVideoLibrary): void {
 
   const history = getWatchHistory().slice(0, 5);
   if (history.length === 0) {
-    section.style.display = 'none';
+    section.classList.add('hidden');
     return;
   }
 
@@ -625,11 +625,11 @@ function renderContinueWatching(library: SenaraVideoLibrary): void {
   }
 
   if (videos.length === 0) {
-    section.style.display = 'none';
+    section.classList.add('hidden');
     return;
   }
 
-  section.style.display = '';
+  section.classList.remove('hidden');
   container.innerHTML = videos.map(v => {
     const card = createNetflixVideoCard(v, library.channelLookup);
     return card.replace('</article>', '<span class="nf-continue-badge">Continue</span></article>');
@@ -773,12 +773,12 @@ function setupKidsMode(state: FilterState, triggerUpdate: () => void): void {
       });
       kidsBtn.innerHTML = `${TV_ICONS.unlock} ${getText('tv.exitKidsMode', 'Exit Kids Mode')}`;
       kidsBtn.classList.add('kids-mode-active');
-      if (exitBtn) exitBtn.style.display = '';
+      if (exitBtn) exitBtn.classList.remove('hidden');
     } else {
       ageTabs.forEach(t => { t.style.display = ''; });
       kidsBtn.innerHTML = `${TV_ICONS.lock} ${getText('tv.kidsMode', 'Kids Mode')}`;
       kidsBtn.classList.remove('kids-mode-active');
-      if (exitBtn) exitBtn.style.display = 'none';
+      if (exitBtn) exitBtn.classList.add('hidden');
     }
     triggerUpdate();
   };

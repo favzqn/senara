@@ -1,7 +1,16 @@
 {
-  "fetchedAt": "2026-06-14T12:07:34.784Z",
+  "fetchedAt": "2026-06-15T10:46:46.285Z",
   "channels": {
     "UC_eifcIIjgN8Q_8m34nWo3Q": [
+      {
+        "id": "fytYGnQGnWk",
+        "title": "Alasan Lo Gampang Capek Padahal Gak Ngapa-Ngapain",
+        "published": "2026-06-14T12:30:01+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/fytYGnQGnWk/hqdefault.jpg",
+        "description": "Kenapa ya kita sering kecapekan padahal gak ngapa-ngapain? Apakah Gen Z makin kesini makin jompo?\n\nWell, tonton video ini sampai habis buat dapat kese",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=fytYGnQGnWk"
+      },
       {
         "id": "jbYtVo8ozn8",
         "title": "SEMUANYA TURUN! Emas, IHSG, Saham US, BTC, sampai Obligasi…",
@@ -64,15 +73,6 @@
         "description": "Kasus dugaan korupsi pengadaan laptop Chromebook kembali menjadi sorotan publik. Proyek ini melibatkan anggaran negara yang sangat besar untuk sektor ",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=x180iuk_8ms"
-      },
-      {
-        "id": "MKUL1-2C7y4",
-        "title": "Virus \"Aneh\" Ini Bikin Panik WHO & Seluruh Dunia...",
-        "published": "2026-05-14T12:00:39+00:00",
-        "thumbnail": "https://i2.ytimg.com/vi/MKUL1-2C7y4/hqdefault.jpg",
-        "description": "Organisasi Kesehatan Dunia (WHO) memberikan peringatan serius mengenai penyebaran Hantavirus di beberapa wilayah. Virus ini menular ke manusia melalui",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=MKUL1-2C7y4"
       }
     ],
     "UCu0yQD7NFMyLu_-TmKa4Hqg": [
@@ -293,7 +293,7 @@
       },
       {
         "id": "1ASc6piVKhQ",
-        "title": "Electric circuits (part 2) | Physics | Khan Academy",
+        "title": "Series and parallel circuits | Physics | Khan Academy",
         "published": "2026-06-11T12:56:43+00:00",
         "thumbnail": "https://i2.ytimg.com/vi/1ASc6piVKhQ/hqdefault.jpg",
         "description": "Courses on Khan Academy are always 100% free. Start practicing—and saving your progress—now. https://www.khanacademy.org/science/ap-physics-2\n\nCircuit",
@@ -302,7 +302,7 @@
       },
       {
         "id": "Nbb5Lw14wvo",
-        "title": "Electric circuits (part 1) | Physics | Khan Academy",
+        "title": "Intro to electric circuits | Physics | Khan Academy",
         "published": "2026-06-09T13:11:36+00:00",
         "thumbnail": "https://i3.ytimg.com/vi/Nbb5Lw14wvo/hqdefault.jpg",
         "description": "Courses on Khan Academy are always 100% free. Start practicing—and saving your progress—now. https://www.khanacademy.org/science/ap-physics-2\n\nElectri",

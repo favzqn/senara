@@ -4,6 +4,8 @@ Strategic council for the Senara nonprofit interactive story platform.
 
 ## Members
 
+### Executive
+
 | Role | Focus | Responsibility |
 |------|-------|----------------|
 | **CEO** | Strategy & Vision | Prioritization, partnerships, fundraising, long-term direction |
@@ -12,6 +14,16 @@ Strategic council for the Senara nonprofit interactive story platform.
 | **CMO** | Growth | Marketing, SEO, social media, user acquisition, brand |
 | **CFO** | Sustainability | Funding, grants, impact metrics, financial planning |
 | **CCO** | Content | Story development, educational quality, curriculum alignment |
+
+### Operations
+
+| Role | Focus | Responsibility |
+|------|-------|----------------|
+| **Editor-in-Chief** | Narrative | Story scripts, dialogue quality, narrative consistency, educational accuracy |
+| **Designer** | Visual | Scene backgrounds, thumbnails, UI assets, visual identity |
+| **QA Lead** | Quality | Bug reports, regression testing, cross-browser/device checks |
+| **Community Manager** | Users | User feedback, school outreach, social media engagement |
+| **Data Analyst** | Insights | Analytics, user behavior, impact metrics, grant reporting data |
 
 ## Meeting Cadence
 

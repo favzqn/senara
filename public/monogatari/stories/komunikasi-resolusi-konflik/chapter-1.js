@@ -405,14 +405,6 @@ const Chapter1 = {
     "d Mulai dari hal kecil: dengerin temanmu dengan lebih baik hari ini. Coba gunakan \"I feel\" statement di situasi sulit.",
     "d Dan yang paling penting: jangan takut sama konflik. Konflik yang ditangani dengan baik bikin kita tumbuh.",
     "d Sampai ketemu di chapter selanjutnya! Semangat belajar komunikasinya!",
-    "jump Loading-2",
-  ],
-
-  "Loading-2": [
-    "play sound typewriter",
-    "show scene loading-2",
-    "Chapter 2 : Empathy in Action",
-    "jump Scene-19",
   ],
 };
 

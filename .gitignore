@@ -26,6 +26,9 @@ build/
 .kilo/
 *.tsbuildinfo
 
+# Dev tooling
+hooks/
+
 # Environment
 .env
 .env.local

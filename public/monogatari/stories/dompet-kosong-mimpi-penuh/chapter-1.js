@@ -354,14 +354,6 @@ const Chapter1 = {
     "s Mulai dari langkah kecil. Catat pengeluaranmu hari ini. Coba terapkan 50/30/20. Dan yang paling penting: mulai nabung, sekecil apapun.",
     "s Seperti kata pepatah: \"Sedikit-sedikit, lama-lama jadi bukit.\" Dan itu benar banget soal keuangan.",
     "s Sampai ketemu di chapter selanjutnya, {{player.name}}! Semangat ngatur uangnya!",
-    "jump Loading-2",
-  ],
-
-  "Loading-2": [
-    "play sound typewriter",
-    "show scene loading-2",
-    "Chapter 2 : Investasi untuk Pemula",
-    "jump Scene-21",
   ],
 };
 
