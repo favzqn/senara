@@ -28,6 +28,7 @@ monogatari.assets("scenes", {
   "scene-18": "18.jpg",
   "scene-19": "19.jpg",
   "scene-sit-right": "sit-right.jpg",
+  "loading-2": "loading-2.jpg",
 });
 
 monogatari.characters({
@@ -68,10 +69,19 @@ const mainStory = {
     "Chapter 1 : The Budget Awakening",
     "jump Scene-1",
   ],
+
+  "Loading-2": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene loading-2",
+    "Chapter 2 : Investasi untuk Pemula",
+    "jump Scene-21",
+  ],
 };
 
 const completeStory = Object.assign({},
   typeof window.Chapter1 !== 'undefined' ? window.Chapter1 : {},
+  typeof window.Chapter2 !== 'undefined' ? window.Chapter2 : {},
   mainStory
 );
 

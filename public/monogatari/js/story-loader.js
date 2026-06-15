@@ -44,6 +44,7 @@ const STORY_CONFIG = {
   'dompet-kosong-mimpi-penuh': {
     scripts: [
       './stories/dompet-kosong-mimpi-penuh/chapter-1.js',
+      './stories/dompet-kosong-mimpi-penuh/chapter-2.js',
       './stories/dompet-kosong-mimpi-penuh/index.js',
     ],
     title: 'Empty Wallet, Full Dreams | Senara'

@@ -97,9 +97,9 @@ Meeting log for the Senara Board of Directors.
 
 | # | Task | Owner | Status |
 |---|------|-------|--------|
-| 1 | Write Empty Wallet Chapter 2 script | Editor-in-Chief | Ready |
-| 2 | Technical integration | CTO | Blocked on #1 |
-| 3 | Update council docs | CEO | Blocked on #2 |
+| 1 | Write Empty Wallet Chapter 2 script | Editor-in-Chief | ✅ DONE |
+| 2 | Technical integration | CTO | ✅ DONE |
+| 3 | Update council docs | CEO | ✅ DONE |
 
 ---
 

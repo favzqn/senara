@@ -58,7 +58,7 @@ function createFeaturedCard(story: Story, index: number = 0): HTMLAnchorElement 
   card.innerHTML = `
     <div class="featured-card-visual" style="background:${gradient}">
       <span class="featured-card-initial" style="color:${accentColor}">${storyInitial}</span>
-      ${isFirst ? `<span class="featured-card-badge">${starSvg} ${editorsPickLabel}</span>` : ''}
+      ${isFirst && !isComingSoon ? `<span class="featured-card-badge">${starSvg} ${editorsPickLabel}</span>` : ''}
       ${isComingSoon ? `<span class="featured-card-badge featured-card-badge-soon">${comingSoonLabel}</span>` : ''}
       ${story.rating ? `<span class="featured-card-rating">${starSvg} ${story.rating}</span>` : ''}
     </div>
@@ -98,9 +98,12 @@ function loadFeaturedStories(): void {
   const featured: Story[] = allStoriesData.filter((story: Story) => story.featured);
   featuredStoriesData = featured;
 
-  const sorted: Story[] = featured.sort(
-    (a: Story, b: Story) => new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime()
-  );
+  const sorted: Story[] = featured.sort((a: Story, b: Story) => {
+    const aSoon = a.status === 'coming-soon' ? 1 : 0;
+    const bSoon = b.status === 'coming-soon' ? 1 : 0;
+    if (aSoon !== bSoon) return aSoon - bSoon;
+    return new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime();
+  });
 
   renderFeaturedCards(sorted);
 }
@@ -131,9 +134,12 @@ function setupFeaturedFilters(): void {
       let filtered: Story[] = featuredStoriesData;
 
       if (filterValue === 'newest') {
-        filtered = [...featuredStoriesData].sort(
-          (a: Story, b: Story) => new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime()
-        );
+        filtered = [...featuredStoriesData].sort((a: Story, b: Story) => {
+          const aSoon = a.status === 'coming-soon' ? 1 : 0;
+          const bSoon = b.status === 'coming-soon' ? 1 : 0;
+          if (aSoon !== bSoon) return aSoon - bSoon;
+          return new Date(b.createdAt || 0).getTime() - new Date(a.createdAt || 0).getTime();
+        });
       } else if (filterValue === 'popular') {
         filtered = [...featuredStoriesData].sort(
           (a: Story, b: Story) => (b.plays || 0) - (a.plays || 0)
