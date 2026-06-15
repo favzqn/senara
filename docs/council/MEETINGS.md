@@ -125,6 +125,34 @@ Phase 3: 🟡 (SEO complete)
 
 ---
 
+## Meeting #8 — What's Next (Focused)
+
+**Date:** 2026-06-15 19:58 WIB  
+**Type:** Focused (CEO, CTO, CPO)  
+**Topic:** Next steps after full session
+
+### Summary
+
+Code work complete for today. Platform is stable, SEO configured, all stories published. Next steps are human tasks.
+
+### Priority Order
+
+| # | Task | Owner | Type | When |
+|---|------|-------|------|------|
+| 1 | Deploy to Wasmer Edge | CEO | Manual | Now |
+| 2 | Filter Umami to post-migration for accurate baseline | Data Analyst | Manual | This week |
+| 3 | Share on social media — 6 stories published | CMO | Manual | This week |
+| 4 | Contact schools for classroom use | CEO | Manual | Next week |
+| 5 | Prepare grant application (Kemendikbud/Google.org) | CFO | Manual | Next month |
+| 6 | Write more chapters (Ch3+ for 4 new stories) | Editor-in-Chief | Code | When ready |
+| 7 | CI/CD + tests (GitHub Actions, Vitest) | CTO | Code | When traffic > 1K/mo |
+
+### Decision
+
+No more code work until user feedback or content needs drive it. Marketing and outreach are the bottleneck.
+
+---
+
 ## Meeting #7 — Analytics Review (Focused)
 
 **Date:** 2026-06-15 19:50 WIB  
