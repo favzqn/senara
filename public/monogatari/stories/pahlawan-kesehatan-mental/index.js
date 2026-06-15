@@ -1,37 +1,3 @@
-// Define the notifications used in the game
-monogatari.action("notification").notifications({
-  Welcome: {
-    title: "Welcome, thank you for playing Little Things.",
-    body: "This is a visual novel adaptation of Le Petit Prince made by Prince Neil Cedrick Castro",
-    icon: "",
-  },
-});
-
-// Credits of the people involved in the creation of this awesome game
-monogatari.configuration("vredits", {
-  "Collaboration": {
-    "In Partnership With":
-      '<a href="https://diceritain.id" target="_blank" style="font-weight: bold; color: #ff6b9d;">diceritain.id</a>',
-  },
-  Developers: {
-    "Concept & Game Design":
-      '<a href="https://github.com/git-ced" target="_blank"">Prince Neil Cedrick Castro</a>',
-    "Scenario Writer":
-      '<a href="https://github.com/git-ced" target="_blank"">Prince Neil Cedrick Castro</a>',
-    Programmer:
-      '<a href="https://github.com/git-ced" target="_blank"">Prince Neil Cedrick Castro</a>',
-  },
-  Assets: {
-    Music:
-      '<a href="https://open.spotify.com/album/0PAGr5a6MG58awBS9QREij" target="_blank">Chaos;Child OST - FAR DAYS</a>',
-    Scenes:
-      '<a href="https://www.youtube.com/channel/UCxoDMG0tvaYO5Xobvtqw5nw" target="_blank">Smile and Learn - English</a>',
-  },
-  "A Visual Novel Adaptation": {
-    "Original Source": "Le Petit Prince",
-  },
-});
-
 // Define the backgrounds for each scene.
 monogatari.assets("scenes", {
   intro: "intro.jpg",
@@ -198,9 +164,6 @@ monogatari.characters({
   },
 });
 
-// Define the messages used in the game.
-monogatari.action("message").messages({});
-
 // Define the music used in the game.
 monogatari.assets("music", {
   main: "vn.mp3",
@@ -209,234 +172,17 @@ monogatari.assets("music", {
   "music-2": "music-2.mp3",
 });
 
-// Define the canvas objects used in the game
-monogatari.action("canvas").objects({});
-
-// Define the images that will be available on your game's image gallery
-monogatari.assets("gallery", {});
-
 // Define the voice files used in the game.
 monogatari.assets("voices", {
-  85: "85.mp3",
-  86: "86.mp3",
-  87: "87.mp3",
-  88: "88.mp3",
-  89: "89.mp3",
-  90: "90.mp3",
-  91: "91.mp3",
-  92: "92.mp3",
-  93: "93.mp3",
-  94: "94.mp3",
-  95: "95.mp3",
-  96: "96.mp3",
-  97: "97.mp3",
-  98: "98.mp3",
-  99: "99.mp3",
-  100: "100.mp3",
-  101: "101.mp3",
-  102: "102.mp3",
-  103: "103.mp3",
-  104: "104.mp3",
-  105: "105.mp3",
-  106: "106.mp3",
-  107: "107.mp3",
-  108: "108.mp3",
-  109: "109.mp3",
-  110: "110.mp3",
-  111: "111.mp3",
-  112: "112.mp3",
-  113: "113.mp3",
-  114: "114.mp3",
-  115: "115.mp3",
-  116: "116.mp3",
-  117: "117.mp3",
-  118: "118.mp3",
-  119: "119.mp3",
-  120: "120.mp3",
-  121: "121.mp3",
-  122: "122.mp3",
-  123: "123.mp3",
-  124: "124.mp3",
-  125: "125.mp3",
-  126: "126.mp3",
-  127: "127.mp3",
-  128: "128.mp3",
-  129: "129.mp3",
-  130: "130.mp3",
-  131: "131.mp3",
-  132: "132.mp3",
-  133: "133.mp3",
-  "chap2-1": "chap2-1.mp3",
-  "chap2-2": "chap2-2.mp3",
-  "chap2-3": "chap2-3.mp3",
-  "chap2-4": "chap2-4.mp3",
-  "chap2-5": "chap2-5.mp3",
-  "chap2-6": "chap2-6.mp3",
-  "chap2-7": "chap2-7.mp3",
-  "chap2-8": "chap2-8.mp3",
-  "chap2-9": "chap2-9.mp3",
-  "chap2-10": "chap2-10.mp3",
-  "chap2-11": "chap2-11.mp3",
-  "chap2-12": "chap2-12.mp3",
-  "chap2-13": "chap2-13.mp3",
-  "chap2-14": "chap2-14.mp3",
-  "chap2-15": "chap2-15.mp3",
-  "chap2-16": "chap2-16.mp3",
-  "chap2-17": "chap2-17.mp3",
-  "chap2-18": "chap2-18.mp3",
-  "chap2-19": "chap2-19.mp3",
-  "chap2-20": "chap2-20.mp3",
-  "chap2-21": "chap2-21.mp3",
-  "chap2-22": "chap2-22.mp3",
-  "chap2-23": "chap2-23.mp3",
-  "chap2-24": "chap2-24.mp3",
-  "chap2-25": "chap2-25.mp3",
-  "chap2-26": "chap2-26.mp3",
-  "chap2-27": "chap2-27.mp3",
-  "chap2-28": "chap2-28.mp3",
-  "chap2-29": "chap2-29.mp3",
-  "chap2-30": "chap2-30.mp3",
-  "chap2-31": "chap2-31.mp3",
-  "chap2-32": "chap2-32.mp3",
-  "chap2-33": "chap2-33.mp3",
-  "chap2-34": "chap2-34.mp3",
-  "chap2-35": "chap2-35.mp3",
-  "chap2-36": "chap2-36.mp3",
-  "chap2-37": "chap2-37.mp3",
-  "chap2-38": "chap2-38.mp3",
-  "chap2-39": "chap2-39.mp3",
-  "chap2-40": "chap2-40.mp3",
-  "chap2-41": "chap2-41.mp3",
-  "chap2-42": "chap2-42.mp3",
-  "chap2-43": "chap2-43.mp3",
-  "chap2-44": "chap2-44.mp3",
-  "chap2-45": "chap2-45.mp3",
-  "chap2-46": "chap2-46.mp3",
-  "chap2-47": "chap2-47.mp3",
-  "chap2-48": "chap2-48.mp3",
-  "chap2-49": "chap2-49.mp3",
-  "chap2-50": "chap2-50.mp3",
-  "chap2-51": "chap2-51.mp3",
-  "chap2-52": "chap2-52.mp3",
-  "chap2-53": "chap2-53.mp3",
-  "chap2-54": "chap2-54.mp3",
-  "chap2-55": "chap2-55.mp3",
-  "chap2-56": "chap2-56.mp3",
-  "chap2-57": "chap2-57.mp3",
-  "chap2-58": "chap2-58.mp3",
-  "chap2-59": "chap2-59.mp3",
-  "chap2-60": "chap2-60.mp3",
-  "chap2-61": "chap2-61.mp3",
-  "chap2-62": "chap2-62.mp3",
-  "chap2-63": "chap2-63.mp3",
-  "chap2-64": "chap2-64.mp3",
-  "chap2-65": "chap2-65.mp3",
-  "chap2-66": "chap2-66.mp3",
-  "chap2-67": "chap2-67.mp3",
-  "chap2-68": "chap2-68.mp3",
-  "chap2-69": "chap2-69.mp3",
-  "chap2-70": "chap2-70.mp3",
-  "chap2-71": "chap2-71.mp3",
-  "chap2-72": "chap2-72.mp3",
-  "chap2-73": "chap2-73.mp3",
-  "chap2-74": "chap2-74.mp3",
-  "chap2-75": "chap2-75.mp3",
-  "chap2-76": "chap2-76.mp3",
-  "chap3-1": "chap3-1.mp3",
-  "chap3-2": "chap3-2.mp3",
-  "chap3-3": "chap3-3.mp3",
-  "chap3-4": "chap3-4.mp3",
-  "chap3-5": "chap3-5.mp3",
-  "chap3-6": "chap3-6.mp3",
-  "chap3-7": "chap3-7.mp3",
-  "chap3-8": "chap3-8.mp3",
-  "chap3-9": "chap3-9.mp3",
-  "chap3-10": "chap3-10.mp3",
-  "chap3-11": "chap3-11.mp3",
-  "chap3-12": "chap3-12.mp3",
-  "chap3-13": "chap3-13.mp3",
-  "chap3-14": "chap3-14.mp3",
-  "chap3-15": "chap3-15.mp3",
-  "chap3-16": "chap3-16.mp3",
-  "chap3-17": "chap3-17.mp3",
-  "chap3-18": "chap3-18.mp3",
-  "chap3-19": "chap3-19.mp3",
-  "chap3-20": "chap3-20.mp3",
-  "chap3-21": "chap3-21.mp3",
-  "chap3-22": "chap3-22.mp3",
-  "chap3-23": "chap3-23.mp3",
-  "chap3-24": "chap3-24.mp3",
-  "chap3-25": "chap3-25.mp3",
-  "chap3-26": "chap3-26.mp3",
-  "chap3-27": "chap3-27.mp3",
-  "chap3-28": "chap3-28.mp3",
-  "chap3-29": "chap3-29.mp3",
-  "chap3-30": "chap3-30.mp3",
-  "chap3-31": "chap3-31.mp3",
-  "chap3-32": "chap3-32.mp3",
-  "chap3-33": "chap3-33.mp3",
-  "chap3-34": "chap3-34.mp3",
-  "chap3-35": "chap3-35.mp3",
-  "chap3-36": "chap3-36.mp3",
-  "chap3-37": "chap3-37.mp3",
-  "chap3-38": "chap3-38.mp3",
-  "chap3-39": "chap3-39.mp3",
-  "chap3-40": "chap3-40.mp3",
-  "chap3-41": "chap3-41.mp3",
-  "chap3-42": "chap3-42.mp3",
-  "chap3-43": "chap3-43.mp3",
-  "chap3-44": "chap3-44.mp3",
-  "chap3-45": "chap3-45.mp3",
-  "chap3-46": "chap3-46.mp3",
-  "chap3-47": "chap3-47.mp3",
-  "chap3-48": "chap3-48.mp3",
-  "chap3-49": "chap3-49.mp3",
-  "chap3-50": "chap3-50.mp3",
-  "chap3-51": "chap3-51.mp3",
-  "chap3-52": "chap3-52.mp3",
-  "chap3-53": "chap3-53.mp3",
-  "chap3-54": "chap3-54.mp3",
-  "chap3-55": "chap3-55.mp3",
-  "chap3-56": "chap3-56.mp3",
-  "chap3-57": "chap3-57.mp3",
-  "chap3-58": "chap3-58.mp3",
-  "chap3-59": "chap3-59.mp3",
-  "chap3-60": "chap3-60.mp3",
-  "chap3-61": "chap3-61.mp3",
-  "chap3-62": "chap3-62.mp3",
-  "chap3-63": "chap3-63.mp3",
-  "chap3-64": "chap3-64.mp3",
-  "chap3-65": "chap3-65.mp3",
-  "chap3-66": "chap3-66.mp3",
-  "chap3-67": "chap3-67.mp3",
-  "chap3-68": "chap3-68.mp3",
-  "chap3-69": "chap3-69.mp3",
-  "chap3-70": "chap3-70.mp3",
-  "chap3-71": "chap3-71.mp3",
-  "chap3-72": "chap3-72.mp3",
-  "chap3-73": "chap3-73.mp3",
-  "chap3-74": "chap3-74.mp3",
-  "chap3-75": "chap3-75.mp3",
-  "chap3-76": "chap3-76.mp3",
-  "chap3-77": "chap3-77.mp3",
-  "chap3-78": "chap3-78.mp3",
-  "chap3-79": "chap3-79.mp3",
-  "chap3-80": "chap3-80.mp3",
-  "chap3-81": "chap3-81.mp3",
-  "chap3-82": "chap3-82.mp3",
-  "chap3-83": "chap3-83.mp3",
-  "chap3-84": "chap3-84.mp3",
-  "chap3-85": "chap3-85.mp3",
-  "chap3-86": "chap3-86.mp3",
-  "chap3-87": "chap3-87.mp3",
-  "chap3-88": "chap3-88.mp3",
-  "chap3-89": "chap3-89.mp3",
-  "chap3-90": "chap3-90.mp3",
-  "chap3-91": "chap3-91.mp3",
-  "chap3-92": "chap3-92.mp3",
-  "chap3-93": "chap3-93.mp3",
-  "chap3-94": "chap3-94.mp3",
-  "chap3-95": "chap3-95.mp3",
+  ...Object.fromEntries(
+    Array.from({length: 49}, (_, i) => [String(85 + i), `${85 + i}.mp3`])
+  ),
+  ...Object.fromEntries(
+    Array.from({length: 76}, (_, i) => [`chap2-${i + 1}`, `chap2-${i + 1}.mp3`])
+  ),
+  ...Object.fromEntries(
+    Array.from({length: 95}, (_, i) => [`chap3-${i + 1}`, `chap3-${i + 1}.mp3`])
+  ),
 });
 
 // Define the sounds used in the game.
@@ -445,12 +191,6 @@ monogatari.assets("sounds", {
   clap: "clap.mp3",
   wrong: "wrong.mp3",
 });
-
-// Define the videos used in the game.
-monogatari.assets("videos", {});
-
-// Define the images used in the game.
-monogatari.assets("images", {});
 
 // Define main story scenes
 const mainStory = {

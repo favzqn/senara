@@ -1,127 +1,114 @@
-monogatari.action("notification").notifications({
-  Welcome: {
-    title: "Teman Baru di Kelas 8B",
-    body: "Ikuti kisah Alya dan Rafi belajar tentang persahabatan, inklusi, dan BISINDO.",
-    icon: "",
-  },
-});
-
-monogatari.configuration("vredits", {
-  Developers: {
-    "Concept & Game Design": "Senara Team",
-    "Scenario Writer": "Senara Team",
-    Programmer: "Senara Team",
-  },
-  Assets: {
-    Characters: "Senara Team",
-  },
-});
-
 monogatari.assets("scenes", {
-  "kelas-pagi": "kelas-pagi.jpg",
-  "kelas-siang": "kelas-siang.jpg",
-  "lorsekolah": "lorsekolah.jpg",
-  "kantin": "kantin.jpg",
-  "perpustakaan": "perpustakaan.jpg",
-  "rumah-rafi": "rumah-rafi.jpg",
-  "panggung": "panggung.jpg",
-  "panggung-lampu": "panggung-lampu.jpg",
-  "hitam": "hitam.jpg",
+  "kelas-pagi": "sit-right.jpg",
+  "kelas-siang": "sit-chapter-5.jpg",
+  "lorsekolah": "sit-chapter-5-2.jpg",
+  "kantin": "sit-chapter-5-3.jpg",
+  "perpustakaan": "consultation.jpg",
+  "rumah-rafi": "beautiful-mind.jpg",
+  "panggung": "badge-center.jpg",
+  "panggung-lampu": "badge-main.jpg",
+  "hitam": "intro.jpg",
 });
 
 monogatari.characters({
   alya: {
     name: "Alya",
     color: "#7c3aed",
-    default: "Alya_Normal_Default.PNG",
-    directory: "Alya/",
-    expressions: {
+    directory: "Alya",
+    sprites: {
+      default: "Alya_Normal_Default.PNG",
       smile: "Alya_Smile.PNG",
       surprised: "Alya_Surprised.PNG",
       sad: "Alya_Sad_Hesitant.PNG",
       thankful: "Alya_Terima Kasih_Selamat.PNG",
     },
+    default_expression: "default",
   },
   rafi: {
     name: "Rafi",
     color: "#2563eb",
-    default: "Rafi_Normal_Default.PNG",
-    directory: "Rafi/",
-    expressions: {
+    directory: "Rafi",
+    sprites: {
+      default: "Rafi_Normal_Default.PNG",
       smile: "Rafi_Smile.PNG",
       surprised: "Rafi_Surprised.PNG",
       sad: "Rafi_Sad_Hesitant.PNG",
     },
+    default_expression: "default",
   },
   arum: {
     name: "Arum",
     color: "#db2777",
-    default: "Arum_Normal_Default.PNG",
-    directory: "Arum/",
-    expressions: {
+    directory: "Arum",
+    sprites: {
+      default: "Arum_Normal_Default.PNG",
       smile: "Arum_Smile.PNG",
       surprised: "Arum_Surprised.PNG",
       sad: "Arum_Sad_Hesitant.PNG",
     },
+    default_expression: "default",
   },
   poppy: {
     name: "Poppy",
     color: "#f59e0b",
-    default: "Poppy_Normal_Default.PNG",
-    directory: "Poppy/",
-    expressions: {
+    directory: "Poppy",
+    sprites: {
+      default: "Poppy_Normal_Default.PNG",
       smile: "Poppy_Smile.PNG",
       surprised: "Poppy_Surprised.PNG",
       sad: "Poppy_Sad_Hesitant.PNG",
     },
+    default_expression: "default",
   },
   eki: {
     name: "Eki",
     color: "#059669",
-    default: "Eki_Normal_Default.PNG",
-    directory: "Eki/",
-    expressions: {
+    directory: "Eki",
+    sprites: {
+      default: "Eki_Normal_Default.PNG",
       smile: "Eki_Smile.PNG",
       surprised: "Eki_Surprised.PNG",
       sad: "Eki_Sad_Hesitant.PNG",
     },
+    default_expression: "default",
   },
   hasna: {
     name: "Bu Hasna",
     color: "#6366f1",
-    default: "Bu Hasna_Normal_Default.PNG",
-    directory: "Bu Hasna/",
-    expressions: {
+    directory: "Bu Hasna",
+    sprites: {
+      default: "Bu Hasna_Normal_Default.PNG",
       smile: "Bu Hasna_Smile.PNG",
       surprised: "Bu Hasna_Surprised.PNG",
       sad: "Bu Hasna_Sad_Hesitant.PNG",
     },
+    default_expression: "default",
   },
   mama: {
     name: "Mama Alya",
     color: "#ec4899",
-    default: "Mama Alya_Normal_Default.PNG",
-    directory: "Mama Alya/",
-    expressions: {
+    directory: "Mama Alya",
+    sprites: {
+      default: "Mama Alya_Normal_Default.PNG",
       smile: "Mama Alya_Smile.PNG",
       surprised: "Mama Alya_Surprised.PNG",
       sad: "Mama Alya_Sad_Hesitant.PNG",
     },
+    default_expression: "default",
   },
   papa: {
     name: "Papa Alya",
     color: "#64748b",
-    default: "Papa Alya_Normal_Default.PNG",
-    directory: "Papa Alya/",
-    expressions: {
+    directory: "Papa Alya",
+    sprites: {
+      default: "Papa Alya_Normal_Default.PNG",
       smile: "Papa Alya_Smile.PNG",
       surprised: "Papa Alya_Surprised.PNG",
       sad: "Papa Alya_Sad_Hesitant.PNG",
     },
+    default_expression: "default",
   },
 });
-
-monogatari.action("message").messages({});
 
 monogatari.assets("music", {
   main: "vn.mp3",
@@ -130,10 +117,6 @@ monogatari.assets("music", {
   "music-2": "music-2.mp3",
 });
 
-monogatari.action("canvas").objects({});
-monogatari.assets("gallery", {});
-monogatari.assets("voices", {});
-
 monogatari.assets("sounds", {
   typewriter: "typewriter.mp3",
   clap: "clap.mp3",
@@ -141,9 +124,6 @@ monogatari.assets("sounds", {
   bell: "bell.mp3",
   knock: "knock.mp3",
 });
-
-monogatari.assets("videos", {});
-monogatari.assets("images", {});
 
 const mainStory = {
   Start: [
@@ -214,7 +194,7 @@ const mainStory = {
     "stop sound typewriter",
     "play sound typewriter",
     "show scene kelas-pagi",
-    "Bab 8 : Epilog — Hari-Hari Baru",
+    "Bab 8 : Epilog - Hari-Hari Baru",
     "jump Scene-58",
   ],
 };

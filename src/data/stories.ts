@@ -117,7 +117,7 @@ export const allStoriesData: Story[] = [
     scriptBy: "Senara Team",
     createdAt: "2025-06-12",
     releaseDate: "2026-06-12",
-    status: "published",
+    status: "coming-soon",
     rating: 4.0,
     plays: 50,
     voiceActed: false,
@@ -149,7 +149,7 @@ export const allStoriesData: Story[] = [
     scriptBy: "Senara Team",
     createdAt: "2026-06-13",
     releaseDate: "2026-06-13",
-    status: "published",
+    status: "coming-soon",
     rating: 4.0,
     plays: 0,
     voiceActed: false,
@@ -181,7 +181,7 @@ export const allStoriesData: Story[] = [
     scriptBy: "Senara Team",
     createdAt: "2026-06-13",
     releaseDate: "2026-06-13",
-    status: "published",
+    status: "coming-soon",
     rating: 4.0,
     plays: 0,
     voiceActed: false,
@@ -213,7 +213,7 @@ export const allStoriesData: Story[] = [
     scriptBy: "Senara Team",
     createdAt: "2026-06-13",
     releaseDate: "2026-06-13",
-    status: "published",
+    status: "coming-soon",
     rating: 4.0,
     plays: 0,
     voiceActed: false,
@@ -222,26 +222,4 @@ export const allStoriesData: Story[] = [
   }
 ];
 
-export function getStoryById(id: string): Story | undefined {
-  return allStoriesData.find(story => story.id === id);
-}
 
-export function getFeaturedStories(): Story[] {
-  return allStoriesData.filter(story => story.featured);
-}
-
-export function getStoriesByStatus(status: Story['status']): Story[] {
-  return allStoriesData.filter(story => story.status === status);
-}
-
-export function getStoriesByDifficulty(difficulty: Story['difficulty']): Story[] {
-  return allStoriesData.filter(story => story.difficulty === difficulty);
-}
-
-export function getStoriesSortedByRating(): Story[] {
-  return [...allStoriesData].sort((a, b) => b.rating - a.rating);
-}
-
-export function getStoriesSortedByPopularity(): Story[] {
-  return [...allStoriesData].sort((a, b) => b.plays - a.plays);
-}

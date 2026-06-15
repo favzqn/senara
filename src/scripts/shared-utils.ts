@@ -1,6 +1,5 @@
 import { t } from './i18n';
 import { CONFIG } from './config';
-import { CONSTANTS } from './constants';
 
 export function getText(key: string, fallback: string): string {
   const translated = t(key);
@@ -20,16 +19,6 @@ export function setupSocialSharing(story: { title: string; description: string }
   if (facebookBtn) facebookBtn.href = CONFIG.social.facebook(pageUrl);
   const whatsappBtn = document.getElementById('shareWhatsApp') as HTMLAnchorElement | null;
   if (whatsappBtn) whatsappBtn.href = CONFIG.social.whatsapp(pageTitle + ' ' + pageUrl);
-  const copyBtn = document.getElementById('shareCopy');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(pageUrl).then(() => {
-        const originalText = copyBtn.innerHTML;
-        copyBtn.innerHTML = CONSTANTS.SUCCESS.LINK_COPIED;
-        setTimeout(() => { copyBtn.innerHTML = originalText; }, CONFIG.ui.copyLinkTimeout);
-      });
-    });
-  }
 }
 
 interface StoryBasic {
@@ -57,35 +46,6 @@ interface StoryBasic {
   voiceActed?: boolean;
   hasChoices?: boolean;
   hasAchievements?: boolean;
-}
-
-export function filterStoriesBySearch(stories: StoryBasic[], searchTerm: string): StoryBasic[] {
-  if (!searchTerm) return stories;
-  const term = searchTerm.toLowerCase();
-  return stories.filter(
-    (story) =>
-      story.title.toLowerCase().includes(term) ||
-      story.tags.some((tag) => tag.toLowerCase().includes(term))
-  );
-}
-
-export function debounce<T extends (...args: unknown[]) => void>(func: T, wait = 300): T {
-  let timeout: ReturnType<typeof setTimeout>;
-  return ((...args: unknown[]) => {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  }) as unknown as T;
-}
-
-export function formatDuration(minutes: number): string {
-  if (minutes < 60) return `${minutes} min`;
-  const hours = Math.floor(minutes / 60);
-  const mins = minutes % 60;
-  return mins > 0 ? `${hours}h ${mins}m` : `${hours}h`;
 }
 
 export function formatDate(dateString: string): string {

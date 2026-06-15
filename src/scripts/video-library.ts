@@ -2,18 +2,11 @@ import { getText } from './shared-utils';
 import { getCurrentLanguage, type Language } from './i18n';
 import { senaraTVChannels, senaraTVHero, type TVChannel, type TVHero } from '../data/tv-channels';
 
-const AGE_ACCENT: Record<string, string> = {
-  all:           '#0f172a',
-  kids:          '#ec4899',
-  teen:          '#6366f1',
-  'young-adult': '#f97316',
-};
-
-const AGE_LABEL: Record<string, string> = {
-  all:           'All',
-  kids:          'Kids',
-  teen:          'Teens',
-  'young-adult': 'Young Adults',
+const AGE_STYLES: Record<string, { accent: string; label: string }> = {
+  all:           { accent: '#0f172a', label: 'All' },
+  kids:          { accent: '#ec4899', label: 'Kids' },
+  teen:          { accent: '#6366f1', label: 'Teens' },
+  'young-adult': { accent: '#f97316', label: 'Young Adults' },
 };
 
 interface Video {
@@ -32,7 +25,6 @@ interface Video {
   accent?: string;
   focus?: string;
   channelUrl?: string;
-  avatar?: string;
   tagline?: string;
 }
 
@@ -78,14 +70,6 @@ const TV_ICONS: Record<string, string> = {
   unlock: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 019.9-1"/></svg>',
 };
 
-function hexToRgba(hex: string, alpha: number): string {
-  const h = (hex || '#000000').replace('#', '');
-  const r = parseInt(h.slice(0, 2), 16) || 0;
-  const g = parseInt(h.slice(2, 4), 16) || 0;
-  const b = parseInt(h.slice(4, 6), 16) || 0;
-  return `rgba(${r},${g},${b},${alpha})`;
-}
-
 function formatRelativeDate(dateStr: string): string {
   const date = new Date(dateStr);
   if (isNaN(date.getTime())) return '';
@@ -100,9 +84,6 @@ function formatRelativeDate(dateStr: string): string {
 
 function createAvatar(channel: Partial<TVChannel> = {}, size: 'sm' | 'lg' = 'sm'): string {
   const cls = size === 'lg' ? 'avatar-lg' : 'avatar-sm';
-  if (channel.avatar) {
-    return `<span class="${cls}"><img src="${channel.avatar}" alt="${channel.name || ''}" loading="lazy"></span>`;
-  }
   const initial = (channel.name || '?')[0].toUpperCase();
   return `<span class="${cls}" style="background:${channel.accent || '#6366f1'};color:white;font-weight:700;font-size:${size === 'lg' ? '1rem' : '0.7rem'}">${initial}</span>`;
 }
@@ -259,7 +240,6 @@ class SenaraVideoLibrary {
           accent: channel.accent,
           focus: channel.focus,
           channelUrl: channel.channelUrl,
-          avatar: channel.avatar,
           tagline: channel.tagline,
         });
       }
@@ -517,7 +497,7 @@ function renderHeroSection(library: SenaraVideoLibrary, age: string = 'all'): vo
             data-video-id="${video.id}"
             data-channel-id="${video.channelId}"
             aria-label="${getText('tv.play', 'Play')} ${video.title}"
-          >${TV_ICONS.play} ${config.ctaLabel || getText('tv.watchNow', 'Watch Now')}</button>
+          >${TV_ICONS.play} ${getText('tv.watchNow', 'Watch Now')}</button>
           <button
             class="nf-hero-info"
             type="button"
@@ -604,7 +584,7 @@ function renderLatestVideos(library: SenaraVideoLibrary, { age = 'all', category
       titleEl.textContent = labels[category] || category;
     } else {
       titleEl.textContent = age !== 'all'
-        ? `${getText('tv.latestVideos', 'Latest Videos')} — ${AGE_LABEL[age]}`
+        ? `${getText('tv.latestVideos', 'Latest Videos')} — ${AGE_STYLES[age]?.label || age}`
         : `${getText('tv.latestVideos', 'Latest Videos')}`;
     }
   }
@@ -676,7 +656,7 @@ function applyAgeTheme(age: string): void {
   const container = document.getElementById('tvContainer');
   if (container) container.dataset.activeAge = age;
 
-  const accent = AGE_ACCENT[age] || AGE_ACCENT.all;
+  const accent = AGE_STYLES[age]?.accent || AGE_STYLES.all.accent;
   document.documentElement.style.setProperty('--age-accent', accent);
 }
 
@@ -849,6 +829,4 @@ export function initVideoLibrary(): void {
   setupTopbar(library);
   setupModalControls(library);
   renderContinueWatching(library);
-
-  (window as any).senaraVideoLibrary = library;
 }

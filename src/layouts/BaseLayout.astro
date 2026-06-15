@@ -90,7 +90,6 @@ const {
   <script>
     import { translatePage, getCurrentLanguage, setLanguage, type Language } from '../scripts/i18n';
     import { initDarkMode, updateToggleIcons } from '../scripts/dark-mode';
-    import '../scripts/performance-utils';
 
     function syncLangSwitcher(lang: Language, animate = false): void {
       document.querySelectorAll<HTMLElement>('.lang-switcher-slider').forEach(slider => {

@@ -1,8 +1,8 @@
-import { t, translatePage } from './i18n';
+import { t } from './i18n';
 import { getText } from './shared-utils';
 import { allStoriesData } from '../data/stories';
 import type { Story } from '../data/stories';
-import { allCategoriesData, getTranslatedCategory } from '../data/categories';
+import { allCategoriesData } from '../data/categories';
 import type { Category } from '../data/categories';
 
 interface Testimonial {
@@ -14,24 +14,14 @@ interface Testimonial {
 
 let featuredStoriesData: Story[] = [];
 
-const CATEGORY_GRADIENTS: Record<string, string> = {
-  'mind-emotions': 'linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 50%, #C4B5FD 100%)',
-  'self-awareness-identity': 'linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 50%, #6EE7B7 100%)',
-  'relationships-social': 'linear-gradient(135deg, #FCE7F3 0%, #FBCFE8 50%, #F9A8D4 100%)',
-  'digital-life-online': 'linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 50%, #93C5FD 100%)',
-  'college-work-adulthood': 'linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #FCD34D 100%)',
-  'social-issues': 'linear-gradient(135deg, #CCFBF1 0%, #99F6E4 50%, #5EEAD4 100%)',
-  'money-young-adult-life': 'linear-gradient(135deg, #FEE2E2 0%, #FECACA 50%, #FCA5A5 100%)',
-};
-
-const CATEGORY_COLORS: Record<string, string> = {
-  'mind-emotions': '#7C3AED',
-  'self-awareness-identity': '#059669',
-  'relationships-social': '#DB2777',
-  'digital-life-online': '#2563EB',
-  'college-work-adulthood': '#D97706',
-  'social-issues': '#0D9488',
-  'money-young-adult-life': '#DC2626',
+const CATEGORY_STYLES: Record<string, { gradient: string; color: string }> = {
+  'mind-emotions': { gradient: 'linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 50%, #C4B5FD 100%)', color: '#7C3AED' },
+  'self-awareness-identity': { gradient: 'linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 50%, #6EE7B7 100%)', color: '#059669' },
+  'relationships-social': { gradient: 'linear-gradient(135deg, #FCE7F3 0%, #FBCFE8 50%, #F9A8D4 100%)', color: '#DB2777' },
+  'digital-life-online': { gradient: 'linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 50%, #93C5FD 100%)', color: '#2563EB' },
+  'college-work-adulthood': { gradient: 'linear-gradient(135deg, #FEF3C7 0%, #FDE68A 50%, #FCD34D 100%)', color: '#D97706' },
+  'social-issues': { gradient: 'linear-gradient(135deg, #CCFBF1 0%, #99F6E4 50%, #5EEAD4 100%)', color: '#0D9488' },
+  'money-young-adult-life': { gradient: 'linear-gradient(135deg, #FEE2E2 0%, #FECACA 50%, #FCA5A5 100%)', color: '#DC2626' },
 };
 
 function createFeaturedCard(story: Story, index: number = 0): HTMLAnchorElement {
@@ -50,8 +40,9 @@ function createFeaturedCard(story: Story, index: number = 0): HTMLAnchorElement 
   const storyDesc: string = t(`stories.${story.id}.description`) || story.description;
   const storyInitial: string = storyTitle.charAt(0).toUpperCase();
 
-  const gradient: string = CATEGORY_GRADIENTS[story.category] || 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)';
-  const accentColor: string = CATEGORY_COLORS[story.category] || '#4F46E5';
+  const categoryStyle = CATEGORY_STYLES[story.category];
+  const gradient: string = categoryStyle?.gradient || 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)';
+  const accentColor: string = categoryStyle?.color || '#4F46E5';
 
   const card: HTMLAnchorElement = document.createElement('a');
   card.href = isComingSoon ? '#' : `/story?id=${story.id}`;
@@ -164,9 +155,15 @@ function renderCategories(): void {
 
   container.innerHTML = '';
 
-  const categories: Category[] = typeof getTranslatedCategory === 'function'
-    ? allCategoriesData.map((cat: Category) => getTranslatedCategory(cat))
-    : allCategoriesData;
+  const categories: Category[] = allCategoriesData.map((cat: Category) => {
+    const title = t(`categories.${cat.id}`);
+    const desc = t(`categories.${cat.id}-desc`);
+    return {
+      ...cat,
+      title: title !== `categories.${cat.id}` ? title : cat.title,
+      description: desc !== `categories.${cat.id}-desc` ? desc : cat.description,
+    };
+  });
 
   categories.forEach((category: Category) => {
     const link: HTMLAnchorElement = document.createElement('a');

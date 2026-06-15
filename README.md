@@ -11,27 +11,27 @@ Senara is a nonprofit, open-source platform for learning through interactive vis
 
 ## Stories
 
-| Story | Topic | Difficulty | Duration |
-|-------|-------|------------|----------|
-| [Mental Health Hero](https://senara.id/story.html?id=pahlawan-kesehatan-mental) | Mental health literacy | Beginner | 25 min |
-| [New Friend in Class 8B](https://senara.id/story.html?id=teman-baru-di-kelas-8b) | Social skills | Beginner | 20 min |
-| [Digital Literacy Navigator](https://senara.id/story.html?id=digital-literacy-navigator) | Online safety | Beginner | 20 min |
-| [Empty Wallet, Full Dreams](https://senara.id/story.html?id=dompet-kosong-mimpi-penuh) | Financial literacy | Beginner | 25 min |
-| [Communication & Conflict](https://senara.id/story.html?id=komunikasi-resolusi-konflik) | Conflict resolution | Beginner | 20 min |
-| [Zero Waste Mission](https://senara.id/story.html?id=misi-nol-sampah) | Environmental awareness | Beginner | 20 min |
+| Story | Topic | Chapters | Status |
+|-------|-------|----------|--------|
+| [Mental Health Hero](https://senara.id/story?id=pahlawan-kesehatan-mental) | Mental health literacy | 5 | Published (voice acted) |
+| [New Friend in Class 8B](https://senara.id/story?id=teman-baru-di-kelas-8b) | Social skills / BISINDO | 8 | Published |
+| [Digital Literacy Navigator](https://senara.id/story?id=digital-literacy-navigator) | Online safety | 1 | Coming soon |
+| [Empty Wallet, Full Dreams](https://senara.id/story?id=dompet-kosong-mimpi-penuh) | Financial literacy | 1 | Coming soon |
+| [Communication & Conflict](https://senara.id/story?id=komunikasi-resolusi-konflik) | Conflict resolution | 1 | Coming soon |
+| [Zero Waste Mission](https://senara.id/story?id=misi-nol-sampah) | Environmental awareness | 1 | Coming soon |
 
 ## Pages
 
 | Page | Description |
 |------|-------------|
 | [Home](https://senara.id/) | Landing page with interactive VN demo |
-| [Collection](https://senara.id/collection.html) | Story browser with filters, search, sort |
-| [About](https://senara.id/about.html) | Our story, approach, team, contribute |
-| [TV](https://senara.id/tv.html) | Curated educational YouTube channels |
-| [FAQ](https://senara.id/faq.html) | Frequently asked questions |
-| [Safety](https://senara.id/safety.html) | Mental health resources & hotlines |
-| [Donate](https://senara.id/donate.html) | Donation transparency |
-| [Contact](https://senara.id/contact.html) | Get in touch |
+| [Collection](https://senara.id/collection) | Story browser with filters, search, sort |
+| [About](https://senara.id/about) | Our story, approach, team, contribute |
+| [TV](https://senara.id/tv) | Curated educational YouTube channels |
+| [FAQ](https://senara.id/faq) | Frequently asked questions |
+| [Safety](https://senara.id/safety) | Mental health resources & hotlines |
+| [Donate](https://senara.id/donate) | Donation transparency |
+| [Contact](https://senara.id/contact) | Get in touch |
 
 ## Languages
 
@@ -41,11 +41,12 @@ Senara is a nonprofit, open-source platform for learning through interactive vis
 
 ## Tech Stack
 
-- **HTML/CSS/JS** — No framework, no build system
+- **Astro 6** — Static site generator with TypeScript
 - **Tailwind CSS 3** — Built to 22KB (from CDN ~300KB)
 - **Monogatari** — Visual novel engine for story playback
 - **Service Worker** — Offline support + caching
 - **JSON-LD** — Structured data for SEO
+- **Umami** — Privacy-focused analytics
 
 ## Quick Start
 
@@ -54,85 +55,44 @@ Senara is a nonprofit, open-source platform for learning through interactive vis
 git clone https://github.com/favzqn/senara.git
 cd senara
 
-# Install Tailwind
+# Install
 npm install
+
+# Dev server
+npm run dev
 
 # Build CSS
 npm run build:css
 
-# Watch mode
-npm run watch:css
-
-# Open in browser
-start index.html
+# Full build
+npm run build
 ```
 
 ## Project Structure
 
 ```
 senara/
-├── index.html              # Landing page
-├── collection.html         # Story browser
-├── story.html              # VN player
-├── about.html              # About (story/approach/team/contribute)
-├── tv.html                 # Video library
-├── faq.html                # FAQ
-├── safety.html             # Safety & support
-├── contact.html            # Contact
-├── donate.html             # Donation transparency
-├── privacy.html            # Privacy policy
-├── terms.html              # Terms of service
-├── accessibility.html      # Accessibility statement
-├── for-organizations.html  # Partnership info
-├── offline.html            # Offline fallback
+├── src/
+│   ├── pages/              # 14 Astro pages
+│   ├── components/         # Navbar, Footer, SEO
+│   ├── scripts/            # Client-side TypeScript
+│   ├── styles/             # CSS (10 files)
+│   ├── data/               # Story/category/channel data
+│   ├── i18n/               # Translations (id, en, ja)
+│   └── layouts/            # BaseLayout.astro
 │
-├── js/
-│   ├── i18n-simple.js      # Internationalization (id/en/ja)
-│   ├── locales.js          # Locale loader
-│   ├── locales/            # Translation files
-│   ├── navbar.js           # Navbar component
-│   ├── footer.js           # Footer component
-│   ├── dark-mode.js        # Dark mode toggle
-│   ├── shared-utils.js     # Shared functions
-│   ├── performance-utils.js # Lazy loading
-│   ├── home-page.js        # Landing page logic
-│   ├── collection-page.js  # Collection filters/sort
-│   ├── story-page.js       # Story detail page
-│   ├── video-library.js    # TV page logic
-│   └── vn-demo.js          # Lightweight VN demo
+├── public/
+│   ├── monogatari/         # VN engine + stories
+│   ├── style/              # Built Tailwind CSS
+│   ├── assets/             # Thumbnails, icons, images
+│   ├── manifest.json       # PWA manifest
+│   └── service-worker.js   # Service worker
 │
-├── style/
-│   ├── tailwind.min.css    # Built Tailwind (22KB)
-│   ├── home.css            # Base styles + nav + footer
-│   ├── pages.css           # Shared page components
-│   ├── collection.css      # Collection page
-│   ├── story-cards.css     # Story cards
-│   ├── story.css           # VN player
-│   ├── tv.css              # TV page
-│   ├── about.css           # About page
-│   ├── safety.css          # Safety page
-│   ├── dark-mode.css       # Dark mode overrides
-│   └── performance.css     # Loading states
-│
-├── data/
-│   ├── stories.js          # Story metadata
-│   ├── categories.js       # Category definitions
-│   └── tv-channels.js      # YouTube channel data
-│
-├── monogatari/
-│   ├── stories/            # VN story scripts
-│   ├── js/story-loader.js  # Story loader
-│   └── assets/scenes/      # Scene backgrounds
-│
-├── assets/
-│   ├── og-image.svg        # Open Graph image
-│   ├── thumbnails/         # Story thumbnails
-│   └── icons/              # PWA icons
-│
-├── manifest.json           # PWA manifest
-├── service-worker.js       # Service worker
+├── docs/council/           # Board of Directors docs
 ├── tailwind.config.js      # Tailwind config
-└── package.json            # npm scripts
+├── astro.config.mjs        # Astro config
+├── AGENTS.md               # AI agent instructions
+└── package.json
 ```
 
 ## Design System

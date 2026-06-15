@@ -8,7 +8,6 @@ export interface TVChannel {
   emoji: string;
   focus: string;
   channelUrl: string;
-  avatar: string;
   maxVideos: number;
   tagline: string;
   lang: 'id' | 'en' | 'ja';
@@ -19,7 +18,6 @@ export interface TVHero {
   title: string;
   description: string;
   badge: string;
-  ctaLabel: string;
 }
 
 export const senaraTVChannels: TVChannel[] = [
@@ -33,7 +31,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F4A1}',
     focus: 'Self-growth & psychology',
     channelUrl: 'https://www.youtube.com/@satupersen',
-    avatar: '',
     maxVideos: 8,
     tagline: 'Jadi 1% lebih baik setiap hari',
     lang: 'id',
@@ -48,7 +45,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F914}',
     focus: 'Science & curiosity',
     channelUrl: 'https://www.youtube.com/@kokbisa',
-    avatar: '',
     maxVideos: 8,
     tagline: 'Kenapa ya? Kok bisa?',
     lang: 'id',
@@ -63,7 +59,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F4D0}',
     focus: 'Math & visual learning',
     channelUrl: 'https://www.youtube.com/@3blue1brown',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Mathematics with visual intuition',
     lang: 'en',
@@ -78,7 +73,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F426}',
     focus: 'Science explained simply',
     channelUrl: 'https://www.youtube.com/@kurzgesagt',
-    avatar: '',
     maxVideos: 6,
     tagline: 'In a nutshell',
     lang: 'en',
@@ -93,7 +87,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F9E0}',
     focus: 'Psychology & critical thinking',
     channelUrl: 'https://www.youtube.com/@theramintrees',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Understanding manipulation and belief',
     lang: 'en',
@@ -108,7 +101,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F4DA}',
     focus: 'Education & learning',
     channelUrl: 'https://www.youtube.com/@crashcourse',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Learn anything!',
     lang: 'en',
@@ -123,7 +115,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F393}',
     focus: 'Animated educational lessons',
     channelUrl: 'https://www.youtube.com/@TEDEd',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Lessons worth sharing',
     lang: 'en',
@@ -138,7 +129,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F3EB}',
     focus: 'Emotional intelligence',
     channelUrl: 'https://www.youtube.com/@theschooloflifetv',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Self-knowledge and emotional wisdom',
     lang: 'en',
@@ -153,7 +143,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F9E9}',
     focus: 'Letters & reading for kids',
     channelUrl: 'https://www.youtube.com/@alphablocks',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Learn to read with Alphablocks',
     lang: 'en',
@@ -168,7 +157,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F3B5}',
     focus: 'Nursery rhymes & kids songs',
     channelUrl: 'https://www.youtube.com/@SuperSimpleTV',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Songs and stories for kids',
     lang: 'en',
@@ -183,7 +171,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F43E}',
     focus: 'Animals & nature for kids',
     channelUrl: 'https://www.youtube.com/@AnimalWondersMontana',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Meet amazing animals up close',
     lang: 'en',
@@ -198,7 +185,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F3A8}',
     focus: 'Drawing & art tutorials',
     channelUrl: 'https://www.youtube.com/@artforkidshub',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Learn to draw with fun tutorials',
     lang: 'en',
@@ -213,7 +199,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F30D}',
     focus: 'Earth science & nature',
     channelUrl: 'https://www.youtube.com/@MinuteEarth',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Science and stories about our planet',
     lang: 'en',
@@ -228,7 +213,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F4D6}',
     focus: 'Stories & read-alouds for kids',
     channelUrl: 'https://www.youtube.com/@ScholasticAfterSchool',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Stories come to life',
     lang: 'en',
@@ -243,7 +227,6 @@ export const senaraTVChannels: TVChannel[] = [
     emoji: '\u{1F52C}',
     focus: 'Science experiments & exploration',
     channelUrl: 'https://www.youtube.com/@SmarterEveryDay',
-    avatar: '',
     maxVideos: 6,
     tagline: 'Explore the world with science',
     lang: 'en',
@@ -255,28 +238,24 @@ export const senaraTVHero: Record<string, TVHero> = {
     channelId: 'UC_eifcIIjgN8Q_8m34nWo3Q',
     title: 'Satu Persen',
     description: 'Featured educational content for personal growth',
-    badge: "Editor's Pick",
-    ctaLabel: 'Watch Now'
+    badge: "Editor's Pick"
   },
   kids: {
     channelId: 'UCLsooMJoIpl_7ux2jvdPB-Q',
     title: 'Super Simple Songs',
     description: 'Fun nursery rhymes and animated songs for young learners',
-    badge: 'For Kids',
-    ctaLabel: 'Watch Now'
+    badge: 'For Kids'
   },
   teen: {
     channelId: 'UCsXVk37bltHxD1rDPwtNM8Q',
     title: 'Kurzgesagt',
     description: 'Science and philosophy explained beautifully',
-    badge: 'Science',
-    ctaLabel: 'Watch Now'
+    badge: 'Science'
   },
   'young-adult': {
     channelId: 'UC_eifcIIjgN8Q_8m34nWo3Q',
     title: 'Satu Persen',
     description: 'Self-improvement and psychology for young adults',
-    badge: 'Self Growth',
-    ctaLabel: 'Watch Now'
+    badge: 'Self Growth'
   }
 };

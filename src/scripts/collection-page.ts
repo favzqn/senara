@@ -1,5 +1,5 @@
 import { t } from './i18n';
-import { getText, debounce, filterStoriesBySearch, createStoryCard } from './shared-utils';
+import { getText, createStoryCard } from './shared-utils';
 import { allStoriesData } from '../data/stories';
 import type { Story } from '../data/stories';
 import { allCategoriesData, getCategoryById, type Category } from '../data/categories';
@@ -473,12 +473,6 @@ function setupEventListeners(): void {
         resetAllFilters();
       }
     }
-  });
-
-  window.addEventListener('popstate', () => {
-    getFiltersFromURL();
-    restoreUIFromState();
-    filterAndRender();
   });
 }
 

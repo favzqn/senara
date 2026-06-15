@@ -1,26 +1,3 @@
-monogatari.action("notification").notifications({
-  Welcome: {
-    title: "Welcome to Communication & Conflict Resolution!",
-    body: "Learn effective communication with Dimas.",
-    icon: "",
-  },
-});
-
-monogatari.configuration("vredits", {
-  "Collaboration": {
-    "In Partnership With":
-      '<a href="https://diceritain.id" target="_blank" style="font-weight: bold; color: #ff6b9d;">diceritain.id</a>',
-  },
-  Developers: {
-    "Concept & Game Design": "Senara Team",
-    "Scenario Writer": "Senara Team",
-    Programmer: "Senara Team",
-  },
-  Assets: {
-    Scenes: "Senara Team",
-  },
-});
-
 monogatari.assets("scenes", {
   intro: "intro.jpg",
   "loading-1": "loading-1.jpg",
@@ -54,7 +31,6 @@ monogatari.assets("scenes", {
   "scene-16": "16.jpg",
   "scene-17": "17.jpg",
   "scene-sit-right": "sit-right.jpg",
-  "loading-2": "loading-2.jpg",
 });
 
 monogatari.characters({
@@ -64,18 +40,12 @@ monogatari.characters({
   },
 });
 
-monogatari.action("message").messages({});
-
 monogatari.assets("music", {
   main: "vn.mp3",
   intro: "intro.mp3",
   "chapter-1": "chapter-1.mp3",
   "music-2": "music-2.mp3",
 });
-
-monogatari.action("canvas").objects({});
-
-monogatari.assets("gallery", {});
 
 monogatari.assets("voices", {});
 
@@ -84,10 +54,6 @@ monogatari.assets("sounds", {
   clap: "clap.mp3",
   wrong: "wrong.mp3",
 });
-
-monogatari.assets("videos", {});
-
-monogatari.assets("images", {});
 
 const mainStory = {
   Start: [
@@ -104,14 +70,6 @@ const mainStory = {
     "show scene loading-1",
     "Chapter 1 : The Art of Listening",
     "jump Scene-1",
-  ],
-
-  "Loading-2": [
-    "stop sound typewriter",
-    "play sound typewriter",
-    "show scene loading-2",
-    "Chapter 2 : Empathy in Action",
-    "jump Scene-19",
   ],
 };
 

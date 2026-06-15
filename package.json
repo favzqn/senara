@@ -14,7 +14,8 @@
     "build:css": "tailwindcss -i style/tailwind-input.css -o public/style/tailwind.min.css --minify",
     "watch:css": "tailwindcss -i style/tailwind-input.css -o public/style/tailwind.min.css --watch",
     "preview": "astro preview",
-    "serve": "npx serve dist -l 8080"
+    "serve": "npx serve dist -l 8080",
+    "bump": "node bump-version.js"
   },
   "repository": {
     "type": "git",

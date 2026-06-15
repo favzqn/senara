@@ -22,6 +22,13 @@ const STORY_CONFIG = {
   'teman-baru-di-kelas-8b': {
     scripts: [
       './stories/teman-baru-di-kelas-8b/chapter-1.js',
+      './stories/teman-baru-di-kelas-8b/chapter-2.js',
+      './stories/teman-baru-di-kelas-8b/chapter-3.js',
+      './stories/teman-baru-di-kelas-8b/chapter-4.js',
+      './stories/teman-baru-di-kelas-8b/chapter-5.js',
+      './stories/teman-baru-di-kelas-8b/chapter-6.js',
+      './stories/teman-baru-di-kelas-8b/chapter-7.js',
+      './stories/teman-baru-di-kelas-8b/chapter-8.js',
       './stories/teman-baru-di-kelas-8b/index.js',
     ],
     title: 'Teman Baru di Kelas 8B | Senara'
@@ -119,9 +126,6 @@ async function loadStoryScripts(storyId) {
 
 // Get story ID and load scripts
 const currentStoryId = getStoryIdFromURL();
-
-// Store story ID globally for analytics
-window.currentStoryId = currentStoryId;
 
 // Load the story and expose promise globally
 window.storyLoadPromise = loadStoryScripts(currentStoryId);

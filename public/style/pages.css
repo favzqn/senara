@@ -1803,3 +1803,8 @@ body {
     text-align: center;
   }
 }
+
+.link-accent {
+  color: #F97316;
+  font-weight: 500;
+}
