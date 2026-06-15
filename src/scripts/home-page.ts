@@ -30,7 +30,7 @@ function createFeaturedCard(story: Story, index: number = 0): HTMLAnchorElement 
 
   const minutesLabel: string = t('story.minutes') || 'menit';
   const playNowLabel: string = t('story.playNow') || 'Mainkan Sekarang →';
-  const comingSoonLabel: string = t('story.comingSoon') || 'Segera Hadir';
+  const comingSoonLabel: string = t('story.comingSoon') || 'In Development';
   const editorsPickLabel: string = t('story.editorsPick') || "Editor's Pick";
 
   const difficultyKey: string = (story.difficulty || 'Beginner').toLowerCase();
@@ -54,6 +54,7 @@ function createFeaturedCard(story: Story, index: number = 0): HTMLAnchorElement 
 
   const starSvg: string = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>';
   const arrowSvg: string = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+  const lockSvg: string = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>';
 
   card.innerHTML = `
     <div class="featured-card-visual" style="background:${gradient}">
@@ -72,7 +73,7 @@ function createFeaturedCard(story: Story, index: number = 0): HTMLAnchorElement 
       ${storyDesc ? `<p class="featured-card-desc">${storyDesc}</p>` : ''}
       <div class="featured-card-footer">
         <span class="featured-card-cta">
-          ${isComingSoon ? comingSoonLabel : playNowLabel} ${isComingSoon ? '' : arrowSvg}
+          ${isComingSoon ? lockSvg + ' ' + comingSoonLabel : playNowLabel} ${isComingSoon ? '' : arrowSvg}
         </span>
         <span class="featured-card-meta">
           ${story.chapters ? `${story.chapters} ch` : ''}
@@ -82,8 +83,9 @@ function createFeaturedCard(story: Story, index: number = 0): HTMLAnchorElement 
   `;
 
   if (isComingSoon) {
-    card.style.pointerEvents = 'none';
-    card.style.opacity = '0.7';
+    card.style.opacity = '0.85';
+    card.style.cursor = 'default';
+    card.addEventListener('click', (e: Event) => e.preventDefault());
   }
 
   return card;
@@ -114,7 +116,7 @@ function renderFeaturedCards(stories: Story[]): void {
 
   container.innerHTML = '';
 
-  const displayStories: Story[] = stories.slice(0, 4);
+  const displayStories: Story[] = stories.slice(0, 5);
 
   displayStories.forEach((story: Story, index: number) => {
     const card: HTMLAnchorElement = createFeaturedCard(story, index);

@@ -365,6 +365,7 @@ const Chapter1 = {
     "n Itu perubahan paling besar yang aku lihat: perubahan pola pikir.",
     "n Kamu nggak harus bikin gerakan besar. Mulai dari diri sendiri. Mulai dari hari ini. Mulai dari langkah kecil.",
     "n Sampai jumpa di chapter selanjutnya, {{player.name}}! Jadilah pahlawan lingkunganmu sendiri!",
+    "jump Loading-2",
   ],
 };
 

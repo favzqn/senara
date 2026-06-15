@@ -698,7 +698,7 @@
     "whatTagline": "Bukan sekadar membaca. Bukan hanya menonton.",
     "whatTaglineDesc": "Pengalaman terbaik hadir saat kamu ikut terlibat dalam ceritanya.",
     "howLabel": "Cara Kerja",
-    "howTitle": "Tiga langkah. Nol gesekan.",
+    "howTitle": "Tiga langkah. Tanpa ribet.",
     "howSubtitle": "Tiga langkah mudah untuk mulai belajar lewat cerita.",
     "step1Label": "Langkah 1",
     "step1Title": "Pilih cerita",
@@ -714,7 +714,7 @@
     "featuredSubtitle": "Cerita interaktif yang dipilih komunitas. Setiap pilihan membentuk jalanmu sendiri.",
     "seeAll": "Lihat Semua",
     "playNow": "Mainkan Sekarang →",
-    "comingSoon": "Segera Hadir",
+    "comingSoon": "Dalam Pengembangan",
     "topicsLabel": "Topik",
     "categoriesTitle": "Cerita tentang hal-hal yang benar-benar penting.",
     "categoriesSubtitle": "Pilih kategori yang sesuai dengan minatmu.",
@@ -936,7 +936,7 @@
   },
   "story": {
     "playNow": "Mainkan Sekarang →",
-    "comingSoon": "Segera Hadir",
+    "comingSoon": "Dalam Pengembangan",
     "editorsPick": "Editor's Pick",
     "minutes": "menit",
     "beginner": "Pemula",
@@ -1318,9 +1318,9 @@
     "linkCopied": "Link berhasil disalin!",
     "pathProgress": "Chapter {order} of {total} • Progress: {completed}/{progressTotal}",
     "features": {
-      "voiceActed": "🎙️ Voice Acted",
-      "multiplePaths": "🔀 Multiple Paths",
-      "achievements": "🏆 Achievements"
+      "voiceActed": "Voice Acted",
+      "multiplePaths": "Multiple Paths",
+      "achievements": "Achievements"
     }
   },
   "team": {

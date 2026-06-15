@@ -67,8 +67,9 @@ Meeting log for the Senara Board of Directors.
 | A11y | 6 | 7 |
 | Tests | 0 | 1 |
 | SEO | — | +1 |
+| Content | 5 | 8 |
 
-**New Average:** 6.6/10
+**Content milestone: 6/6 stories published, 22 total chapters**
 
 ### Attendees
 

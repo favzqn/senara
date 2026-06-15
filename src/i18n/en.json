@@ -714,7 +714,7 @@
     "featuredSubtitle": "Interactive stories curated by the community. Every choice shapes your own path.",
     "seeAll": "See All",
     "playNow": "Play Now →",
-    "comingSoon": "Coming Soon",
+    "comingSoon": "In Development",
     "topicsLabel": "Topics",
     "categoriesTitle": "Stories about things that actually matter.",
     "categoriesSubtitle": "Choose a category that matches your interests.",
@@ -989,7 +989,7 @@
   },
   "story": {
     "playNow": "Play Now →",
-    "comingSoon": "Coming Soon",
+    "comingSoon": "In Development",
     "editorsPick": "Editor's Pick",
     "minutes": "min",
     "beginner": "Beginner",
@@ -1318,9 +1318,9 @@
     "linkCopied": "Link copied!",
     "pathProgress": "Chapter {order} of {total} • Progress: {completed}/{progressTotal}",
     "features": {
-      "voiceActed": "🎙️ Voice Acted",
-      "multiplePaths": "🔀 Multiple Paths",
-      "achievements": "🏆 Achievements"
+      "voiceActed": "Voice Acted",
+      "multiplePaths": "Multiple Paths",
+      "achievements": "Achievements"
     }
   },
   "team": {

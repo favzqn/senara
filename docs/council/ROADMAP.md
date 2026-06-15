@@ -25,6 +25,8 @@
 
 - [x] Complete Digital Literacy Navigator Chapter 2 (18 scenes: algorithms, echo chambers, digital footprints, addiction, healthy habits)
 - [x] Complete Empty Wallet, Full Dreams Chapter 2 (Investasi untuk Pemula)
+- [x] Complete Communication & Conflict Resolution Chapter 2 (Empathy in Action)
+- [x] Complete Zero Waste Mission Chapter 2 (Zero Waste at Home)
 - [ ] Complete Digital Literacy Navigator Chapter 3-5
 - [ ] Complete Empty Wallet, Full Dreams Chapter 2-5
 - [ ] Add progress tracking (localStorage-based chapter completion)

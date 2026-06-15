@@ -29,6 +29,7 @@ monogatari.assets("scenes", {
   "scene-16": "16.jpg",
   "scene-17": "17.jpg",
   "scene-sit-right": "sit-right.jpg",
+  "loading-2": "loading-2.jpg",
 });
 
 monogatari.characters({
@@ -69,10 +70,19 @@ const mainStory = {
     "Chapter 1 : The Trash Mountain",
     "jump Scene-1",
   ],
+
+  "Loading-2": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene loading-2",
+    "Chapter 2 : Zero Waste at Home",
+    "jump Scene-19",
+  ],
 };
 
 const completeStory = Object.assign({},
   typeof window.Chapter1 !== 'undefined' ? window.Chapter1 : {},
+  typeof window.Chapter2 !== 'undefined' ? window.Chapter2 : {},
   mainStory
 );
 

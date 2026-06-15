@@ -713,7 +713,7 @@
     "featuredSubtitle": "コミュニティがキュレーションしたインタラクティブな物語。すべての選択があなただけの道を形作ります。",
     "seeAll": "すべて見る",
     "playNow": "プレイする →",
-    "comingSoon": "近日公開",
+    "comingSoon": "開発中",
     "topicsLabel": "トピック",
     "categoriesTitle": "本当に重要なことについての物語。",
     "categoriesSubtitle": "興味に合ったカテゴリーを選びましょう。",
@@ -1043,7 +1043,7 @@
   },
   "story": {
     "playNow": "プレイする →",
-    "comingSoon": "近日公開",
+    "comingSoon": "開発中",
     "editorsPick": "編集者のおすすめ",
     "minutes": "分",
     "beginner": "初級",
@@ -1372,9 +1372,9 @@
     "linkCopied": "リンクをコピーしました！",
     "pathProgress": "第{order}章 / 全{total}章 ・ 進捗：{completed}/{progressTotal}",
     "features": {
-      "voiceActed": "🎙️ ボイス付き",
-      "multiplePaths": "🔀 複数ルート",
-      "achievements": "🏆 実績"
+      "voiceActed": "ボイス付き",
+      "multiplePaths": "複数ルート",
+      "achievements": "実績"
     }
   }
 }
