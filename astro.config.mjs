@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://senara.id',
@@ -7,4 +8,5 @@ export default defineConfig({
   build: {
     assets: '_assets',
   },
+  integrations: [sitemap()],
 });

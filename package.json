@@ -15,7 +15,8 @@
     "watch:css": "tailwindcss -i style/tailwind-input.css -o public/style/tailwind.min.css --watch",
     "preview": "astro preview",
     "serve": "npx serve dist -l 8080",
-    "bump": "node bump-version.js"
+    "bump": "node bump-version.js",
+    "test": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/favzqn/senara/issues"
   },
@@ -34,6 +34,7 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.4.6",
     "serve": "^14.2.6"
   }
