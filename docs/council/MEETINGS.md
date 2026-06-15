@@ -81,6 +81,28 @@ Meeting log for the Senara Board of Directors.
 
 ---
 
+## Meeting #4 — Next Content (Focused)
+
+**Date:** 2026-06-15 19:24 WIB  
+**Type:** Focused (CEO, CCO, Editor-in-Chief, CPO, CTO)  
+**Topic:** Next story after Digital Literacy Navigator
+
+### Decisions
+
+1. **Next story: Empty Wallet, Full Dreams Chapter 2** — "Investasi untuk Pemula" (Investing for Beginners)
+2. **Same process** as Digital Literacy Navigator: Editor-in-Chief writes, CTO integrates
+3. **Diversifies platform** — financial literacy is a new category with no published content
+
+### Actions
+
+| # | Task | Owner | Status |
+|---|------|-------|--------|
+| 1 | Write Empty Wallet Chapter 2 script | Editor-in-Chief | Ready |
+| 2 | Technical integration | CTO | Blocked on #1 |
+| 3 | Update council docs | CEO | Blocked on #2 |
+
+---
+
 ## Meeting #3 — Phase 2 Kickoff (Focused)
 
 **Date:** 2026-06-15 18:08 WIB  
