@@ -42,7 +42,7 @@
 - [x] Add JSON-LD Article schema to story pages
 - [x] Add robots.txt
 - [ ] Verify Umami analytics is capturing data
-- [ ] Social sharing for story completions
+- [x] Social sharing — already on story detail page (Twitter/FB/WA/Copy)
 - [ ] Impact dashboard (stories completed, time spent, learning outcomes)
 - [ ] Partner outreach to schools and organizations
 - [ ] Grant applications (Kemendikbud, Google.org, AWS EdStart)

@@ -102,6 +102,7 @@ Meeting log for the Senara Board of Directors.
 | 2 | Add robots.txt | CTO | ✅ DONE |
 | 3 | Verify Umami analytics | Data Analyst | Pending (manual check) |
 | 4 | Update ROADMAP.md | CEO | ✅ DONE |
+| 5 | Social sharing for completions | CPO | Already exists on story page; in-game sharing needs Monogatari engine changes (deferred) |
 
 ### Technical Details
 
