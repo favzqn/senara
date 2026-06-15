@@ -104,7 +104,11 @@ function renderStory(story: Story): void {
   const backLink: string = pathId ? `/path-detail?id=${pathId}` : '/collection';
   const storyTitle: string = t(`stories.${story.id}.title`) !== `stories.${story.id}.title` ? t(`stories.${story.id}.title`) : story.title;
   const storyDesc: string = t(`stories.${story.id}.description`) !== `stories.${story.id}.description` ? t(`stories.${story.id}.description`) : story.description;
-  const storyLongDesc: string = story.longDescription || storyDesc;
+  const storyLongDesc: string = (() => {
+    const key = `stories.${story.id}.longDescription`;
+    const translated = t(key);
+    return translated !== key ? translated : (story.longDescription || storyDesc);
+  })();
   const storyInitial: string = storyTitle.charAt(0).toUpperCase();
 
   const categoryTitle: string = category
@@ -124,12 +128,15 @@ function renderStory(story: Story): void {
     'Advanced': 'difficulty-advanced'
   }[story.difficulty] || '';
 
-  const outcomesHTML: string = story.learningOutcomes ? story.learningOutcomes.map((outcome: string) => `
+  const outcomesHTML: string = story.learningOutcomes ? story.learningOutcomes.map((_: string, i: number) => {
+    const key = `stories.${story.id}.learningOutcomes.${i}`;
+    const label = t(key) !== key ? t(key) : story.learningOutcomes![i];
+    return `
     <div class="story-outcome">
       <div class="story-outcome-check">${ICONS.check}</div>
-      <span>${outcome}</span>
-    </div>
-  `).join('') : '';
+      <span>${label}</span>
+    </div>`;
+  }).join('') : '';
 
   const featuresHTML: string = `
     ${story.voiceActed ? `<span class="story-feature-badge">${ICONS.mic} ${t('storyPage.features.voiceActed', 'Voice Acted')}</span>` : ''}
@@ -164,15 +171,22 @@ function renderStory(story: Story): void {
           </h1>
 
           <div class="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
-            ${story.tags.map((tag: string) => `<span class="story-tag">${tag}</span>`).join('')}
+            ${story.tags.map((tag: string) => {
+              const tagKey = `tags.${tag.toLowerCase().replace(/[\s&]+/g, '-')}`;
+              const tagLabel = t(tagKey) !== tagKey ? t(tagKey) : tag;
+              return `<span class="story-tag">${tagLabel}</span>`;
+            }).join('')}
           </div>
 
-          ${story.collaboration ? `
+          ${story.collaboration ? (() => {
+            const collabKey = `stories.${story.id}.collaboration`;
+            const collabLabel = t(collabKey) !== collabKey ? t(collabKey) : story.collaboration;
+            return `
             <div class="story-collab inline-flex items-center gap-2 px-4 py-2 rounded-xl mb-6">
               ${ICONS.mic2}
-              <span class="story-collab-text">${story.collaboration}</span>
-            </div>
-          ` : ''}
+              <span class="story-collab-text">${collabLabel}</span>
+            </div>`;
+          })() : ''}
 
           <div class="grid grid-cols-4 gap-2 sm:gap-3 mb-4 sm:mb-8">
             <div class="story-stat">

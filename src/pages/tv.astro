@@ -39,30 +39,30 @@ try {
     <div id="tvContainer" class="tv-container" data-active-age="all" data-kids-mode="off">
     <div class="tv-topbar">
       <div class="tv-age-tabs" role="tablist">
-        <button class="tv-age-tab active" data-age="all" role="tab" aria-selected="true" data-umami-event="TV age all">All</button>
-        <button class="tv-age-tab" data-age="kids" role="tab" aria-selected="false" data-umami-event="TV age kids">Kids</button>
-        <button class="tv-age-tab" data-age="teen" role="tab" aria-selected="false" data-umami-event="TV age teen">Teens</button>
-        <button class="tv-age-tab" data-age="young-adult" role="tab" aria-selected="false" data-umami-event="TV age young-adult">Young Adults</button>
+        <button class="tv-age-tab active" data-age="all" role="tab" aria-selected="true" data-umami-event="TV age all" data-i18n="tv.ageAll">All</button>
+        <button class="tv-age-tab" data-age="kids" role="tab" aria-selected="false" data-umami-event="TV age kids" data-i18n="tv.ageKids">Kids</button>
+        <button class="tv-age-tab" data-age="teen" role="tab" aria-selected="false" data-umami-event="TV age teen" data-i18n="tv.ageTeen">Teens</button>
+        <button class="tv-age-tab" data-age="young-adult" role="tab" aria-selected="false" data-umami-event="TV age young-adult" data-i18n="tv.ageYoungAdult">Young Adults</button>
       </div>
 
       <button id="kidsModeToggle" class="tv-kids-toggle" type="button" data-umami-event="TV kids mode">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        Kids Mode
+        <span data-i18n="tv.kidsMode">Kids Mode</span>
       </button>
 
       <div class="tv-categories">
-        <button class="tv-cat active" data-cat="all" data-umami-event="TV cat all">All</button>
-        <button class="tv-cat" data-cat="mind-emotions" data-umami-event="TV cat mind">Mind</button>
-        <button class="tv-cat" data-cat="science-curiosity" data-umami-event="TV cat science">Science</button>
-        <button class="tv-cat" data-cat="self-growth" data-umami-event="TV cat growth">Growth</button>
-        <button class="tv-cat" data-cat="stories" data-umami-event="TV cat stories">Stories</button>
+        <button class="tv-cat active" data-cat="all" data-umami-event="TV cat all" data-i18n="tv.catAll">All</button>
+        <button class="tv-cat" data-cat="mind-emotions" data-umami-event="TV cat mind" data-i18n="tv.catMind">Mind</button>
+        <button class="tv-cat" data-cat="science-curiosity" data-umami-event="TV cat science" data-i18n="tv.catScience">Science</button>
+        <button class="tv-cat" data-cat="self-growth" data-umami-event="TV cat growth" data-i18n="tv.catGrowth">Growth</button>
+        <button class="tv-cat" data-cat="stories" data-umami-event="TV cat stories" data-i18n="tv.catStories">Stories</button>
       </div>
 
       <div class="tv-search-wrap">
         <span class="tv-search-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         </span>
-        <input type="search" id="tvSearch" placeholder="Search videos..." class="tv-search" data-umami-event="TV search" aria-label="Search videos">
+        <input type="search" id="tvSearch" class="tv-search" data-umami-event="TV search" aria-label="Search videos" data-i18n-placeholder="tv.searchPlaceholder" placeholder="Search videos...">
         <button id="tvSearchClear" class="tv-search-clear" hidden aria-label="Clear search">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
         </button>
@@ -76,11 +76,11 @@ try {
       <div class="tv-continue-header">
         <h2 class="tv-continue-title">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Continue Watching
+          <span data-i18n="tv.continueWatching">Continue Watching</span>
         </h2>
         <button id="kidsModeExit" class="tv-kids-exit hidden" type="button" data-umami-event="TV exit kids">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 019.9-1"/></svg>
-          Exit Kids Mode
+          <span data-i18n="tv.exitKidsMode">Exit Kids Mode</span>
         </button>
       </div>
       <div id="continueWatching" class="nf-row-scroll nf-continue-scroll"></div>
@@ -91,7 +91,7 @@ try {
 
     <section id="latestSection" class="tv-latest">
       <div class="tv-latest-header">
-        <h2 id="latestTitle" class="tv-latest-title">Latest Videos</h2>
+        <h2 id="latestTitle" class="tv-latest-title" data-i18n="tv.latestVideos">Latest Videos</h2>
         <span id="videoCount" class="tv-video-count"></span>
       </div>
       <div id="latestVideos" class="nf-grid is-loading">

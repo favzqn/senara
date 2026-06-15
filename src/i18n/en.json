@@ -244,6 +244,8 @@
       }
     },
     "methodsTitle": "Ways to Support",
+    "methodsDesc": "Senara is 100% free and community-built. Every contribution keeps stories free for everyone.",
+    "donateTrakteer": "Donate via Trakteer",
     "usageNote": "💡 We don’t have an office or full-time staff. Everything is remote and volunteer-based, which keeps operational costs low.",
     "principlesTitle": "Our Principles",
     "principles": {
@@ -1043,6 +1045,15 @@
     "ageKids": "Kids",
     "ageTeen": "Teens",
     "ageYoungAdult": "Young Adults",
+    "kidsMode": "Kids Mode",
+    "exitKidsMode": "Exit Kids Mode",
+    "continueWatching": "Continue Watching",
+    "catAll": "All",
+    "catMind": "Mind",
+    "catScience": "Science",
+    "catGrowth": "Growth",
+    "catStories": "Stories",
+    "searchPlaceholder": "Search videos...",
     "curatedVideo": "Curated educational video from Senara TV",
     "preparing": "Videos are being prepared...",
     "editorsPick": "✨ Editor's Pick",
@@ -1068,7 +1079,16 @@
   "stories": {
     "pahlawan-kesehatan-mental": {
       "title": "Mental Health Hero",
-      "description": "Join Vani as she faces emotional challenges and discovers the true strength in maintaining mental health."
+      "description": "Join Vani as she faces emotional challenges and discovers the true strength in maintaining mental health.",
+      "longDescription": "Mental health is not a weakness. It is a strength. Follow Vani's journey through emotional challenges, from anxiety to depression, while learning to recognize signs of mental disorders and understanding when to seek help. Through 5 in-depth chapters, you'll uncover myths surrounding mental health, reduce stigma, and master relaxation techniques you can practice right away. Be a Mental Health Hero, not just for yourself, but for the people you love.",
+      "collaboration": "In partnership with diceritain.id",
+      "learningOutcomes": {
+        "0": "Understand mental health literacy concepts",
+        "1": "Recognize symptoms of mental disorders",
+        "2": "Reduce stigma towards mental health",
+        "3": "Know when to seek professional help",
+        "4": "Learn relaxation techniques (Box Breathing, Progressive Muscle Relaxation)"
+      }
     },
     "teman-baru-di-kelas-8b": {
       "title": "New Friend in Class 8B",

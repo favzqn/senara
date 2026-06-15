@@ -125,6 +125,38 @@ Phase 3: 🟡 (SEO complete)
 
 ---
 
+## Meeting #9 — Branding & Social Media (Focused)
+
+**Date:** 2026-06-15 20:00 WIB  
+**Type:** Focused (CEO, CMO, Designer, Community Manager, CCO)  
+**Topic:** Brand identity, Instagram content strategy
+
+### Decisions
+
+1. **3 content pillars:** Educational (40%), Story Previews (30%), Quotes (20%), BTS (10%)
+2. **Posting cadence:** 3x/week (Mon/Wed/Fri)
+3. **Brand voice:** educational, Indonesian-first, youth-friendly, not preachy
+4. **Visual style:** clean, minimal, indigo + orange, Crimson Pro headlines
+
+### Deliverables Created
+
+- `docs/social/BRAND-GUIDE.md` — Colors, typography, visual style, logo placement
+- `docs/social/AI-PROMPTS.md` — 6 AI image generation prompts for launch posts
+- `docs/social/CONTENT-CALENDAR.md` — 6 launch posts with captions + 4-week calendar
+
+### Launch Posts
+
+| # | Day | Type | Topic |
+|---|-----|------|-------|
+| 1 | Mon | Announcement | Senara launch — 6 stories, 22 chapters, 3 languages |
+| 2 | Wed | Carousel | 5 Life Skills yang Nggak Diajarkan di Sekolah |
+| 3 | Fri | Quote | Vani: "Kesehatan mental itu bukan kelemahan" |
+| 4 | Mon | Carousel | Cara Bedakan Berita Asli vs Palsu |
+| 5 | Wed | Did-you-know | 1 dari 3 remaja alami cyberbullying |
+| 6 | Fri | Quote | Sari: "Mengatur uang bukan tentang kaya" |
+
+---
+
 ## Meeting #8 — What's Next (Focused)
 
 **Date:** 2026-06-15 19:58 WIB  

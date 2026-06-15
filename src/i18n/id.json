@@ -244,6 +244,8 @@
       }
     },
     "methodsTitle": "Cara Mendukung",
+    "methodsDesc": "Senara 100% gratis dan dibangun bersama. Setiap kontribusi menjaga cerita tetap gratis untuk semua.",
+    "donateTrakteer": "Donasi via Trakteer",
     "usageNote": "💡 Kami tidak memiliki kantor fisik atau karyawan tetap. Semua tim bekerja secara remote dan volunteer-based, sehingga biaya operasional bisa ditekan seminimal mungkin.",
     "principlesTitle": "Prinsip Kami",
     "principles": {
@@ -990,6 +992,15 @@
     "ageKids": "Anak-anak",
     "ageTeen": "Remaja",
     "ageYoungAdult": "Dewasa Muda",
+    "kidsMode": "Mode Anak",
+    "exitKidsMode": "Keluar Mode Anak",
+    "continueWatching": "Lanjutkan Nonton",
+    "catAll": "Semua",
+    "catMind": "Pikiran",
+    "catScience": "Sains",
+    "catGrowth": "Pengembangan",
+    "catStories": "Cerita",
+    "searchPlaceholder": "Cari video...",
     "curatedVideo": "Video edukatif pilihan dari Senara TV",
     "preparing": "Video sedang disiapkan...",
     "editorsPick": "✨ Pilihan Tim",
@@ -1015,7 +1026,16 @@
   "stories": {
     "pahlawan-kesehatan-mental": {
       "title": "Pahlawan Kesehatan Mental",
-      "description": "Temani Vani menghadapi tantangan emosional dan temukan kekuatan sejati dalam menjaga kesehatan mental."
+      "description": "Temani Vani menghadapi tantangan emosional dan temukan kekuatan sejati dalam menjaga kesehatan mental.",
+      "longDescription": "Kesehatan mental bukan kelemahan. Itu adalah kekuatan. Ikuti perjalanan Vani melalui tantangan emosional, dari kecemasan hingga depresi, sambil belajar mengenali tanda-tanda gangguan mental dan memahami kapan harus mencari bantuan. Melalui 5 bab yang mendalam, kamu akan mengungkap mitos seputar kesehatan mental, mengurangi stigma, dan menguasai teknik relaksasi yang bisa langsung dipraktikkan. Jadilah Pahlawan Kesehatan Mental, bukan hanya untuk dirimu sendiri, tapi untuk orang-orang yang kamu sayangi.",
+      "collaboration": "Bekerja sama dengan diceritain.id",
+      "learningOutcomes": {
+        "0": "Memahami konsep literasi kesehatan mental",
+        "1": "Mengenali gejala gangguan mental",
+        "2": "Mengurangi stigma terhadap kesehatan mental",
+        "3": "Tahu kapan harus mencari bantuan profesional",
+        "4": "Mempelajari teknik relaksasi (Box Breathing, Progressive Muscle Relaxation)"
+      }
     },
     "teman-baru-di-kelas-8b": {
       "title": "Teman Baru di Kelas 8B",

@@ -243,6 +243,9 @@
         "desc": "コラボレーション、デザイン、開発ツールのサブスクリプション。"
       }
     },
+    "methodsTitle": "支援方法",
+    "methodsDesc": "Senaraは100%無料でコミュニティが運営しています。すべての寄付が物語を無料に保つ助けとなります。",
+    "donateTrakteer": "Trakteerで寄付",
     "usageNote": "💡 事務所も常勤スタッフもいません。すべてリモートでボランティアベースで運営されているため、運営コストを低く抑えられています。",
     "principlesTitle": "私たちの原則",
     "principles": {
@@ -1097,6 +1100,15 @@
     "ageKids": "こども",
     "ageTeen": "ティーン",
     "ageYoungAdult": "ヤングアダルト",
+    "kidsMode": "キッズモード",
+    "exitKidsMode": "キッズモード終了",
+    "continueWatching": "視聴を続ける",
+    "catAll": "すべて",
+    "catMind": "こころ",
+    "catScience": "科学",
+    "catGrowth": "成長",
+    "catStories": "物語",
+    "searchPlaceholder": "動画を検索...",
     "curatedVideo": "Senara TVがキュレーションした教育動画",
     "preparing": "動画を準備中です...",
     "editorsPick": "✨ 編集者のおすすめ",
@@ -1122,7 +1134,16 @@
   "stories": {
     "pahlawan-kesehatan-mental": {
       "title": "Mental Health Hero",
-      "description": "Vaniと一緒に感情的な課題に立ち向かい、メンタルヘルスを守ることの本当の強さを発見しよう。"
+      "description": "Vaniと一緒に感情的な課題に立ち向かい、メンタルヘルスを守ることの本当の強さを発見しよう。",
+      "longDescription": "メンタルヘルスは弱さではなく強さだ。不安から抑うつまで、感情的な課題に直面するVaniの旅に同行しながら、精神疾患の兆候を認識し、助けを求めるタイミングを学ぼう。5章を通じて、メンタルヘルスにまつわる神話を暴き、 stigmaを減らし、今すぐ実践できるリラクゼーション技法をマスターしよう。自分自身だけでなく、愛する人のためにも、メンタルヘルスヒーローになろう。",
+      "collaboration": "diceritain.idとの提携",
+      "learningOutcomes": {
+        "0": "メンタルヘルスリテラシーの概念を理解する",
+        "1": "精神疾患の症状を認識する",
+        "2": "メンタルヘルスに対するstigmaを減らす",
+        "3": "専門家の助けを求めるタイミングを知る",
+        "4": "リラクゼーション技法を学ぶ（ボックスブリージング、漸進的筋弛緩法）"
+      }
     },
     "teman-baru-di-kelas-8b": {
       "title": "8Bクラスの新しい友達",
