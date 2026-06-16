@@ -1,0 +1,273 @@
+- generic [ref=e11]:
+  - generic [ref=e13]:
+    - link "Instagram" [ref=e342] [cursor=pointer]:
+      - /url: /
+      - img "Instagram" [ref=e343]
+    - generic [ref=e24]:
+      - link "Log In" [ref=e344] [cursor=pointer]:
+        - /url: /accounts/login/?next=%2Flimitlab.comic&source=desktop_nav
+      - link "Sign Up" [ref=e345] [cursor=pointer]:
+        - /url: /accounts/emailsignup/
+  - main [ref=e29]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - button "limitlab.comic's profile picture" [ref=e346] [cursor=pointer]:
+          - link "limitlab.comic's profile picture" [ref=e347]:
+            - img "limitlab.comic's profile picture" [ref=e348]
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - heading "limitlab.comic" [level=2] [ref=e349]
+            - button "Options" [ref=e350] [cursor=pointer]:
+              - img "Options" [ref=e351]
+          - generic [ref=e50]: Limitlab Comic
+          - list [ref=e52]:
+            - listitem [ref=e53]:
+              - link "18 posts" [ref=e352] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e56]:
+                  - generic [ref=e57]: "18"
+                  - text: posts
+            - listitem [ref=e58]:
+              - link "28 followers" [ref=e353] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e61]:
+                  - generic "28" [ref=e354]
+                  - text: followers
+            - listitem [ref=e63]:
+              - link "1 following" [ref=e355] [cursor=pointer]:
+                - /url: "#"
+                - generic [ref=e66]:
+                  - generic [ref=e67]: "1"
+                  - text: following
+          - generic [ref=e71]:
+            - generic [ref=e73]:
+              - text: Komik edukasi risiko PayLater 💳🌱
+              - text: k
+            - generic [ref=e74]:
+              - text: ...
+              - button "more" [ref=e356] [cursor=pointer]:
+                - generic [ref=e76]: more
+      - menu [ref=e77]:
+        - list [ref=e81]:
+          - listitem [ref=e82]
+          - listitem [ref=e83]
+          - listitem [ref=e84]:
+            - menuitem "View Highlights highlight Highlights" [ref=e357] [cursor=pointer]:
+              - link "View Highlights highlight" [ref=e358]:
+                - /url: /stories/highlights/18451578973117970/
+                - button "Highlights's profile picture" [disabled] [ref=e359]:
+                  - img "Highlights's profile picture" [ref=e360]
+              - generic [ref=e94]: Highlights
+          - listitem [ref=e95]:
+            - menuitem "View need vs want highlight need vs want" [ref=e361] [cursor=pointer]:
+              - link "View need vs want highlight" [ref=e362]:
+                - /url: /stories/highlights/18396558217080979/
+                - button "need vs want's profile picture" [disabled] [ref=e363]:
+                  - img "need vs want's profile picture" [ref=e364]
+              - generic [ref=e105]: need vs want
+          - listitem [ref=e106]:
+            - menuitem "View poster highlight poster" [ref=e365] [cursor=pointer]:
+              - link "View poster highlight" [ref=e366]:
+                - /url: /stories/highlights/18088011455267107/
+                - button "poster's profile picture" [disabled] [ref=e367]:
+                  - img "poster's profile picture" [ref=e368]
+              - generic [ref=e116]: poster
+      - generic [ref=e117]:
+        - tablist [ref=e118]:
+          - link "Posts" [ref=e369] [cursor=pointer]:
+            - /url: /limitlab.comic/
+            - img "Posts" [ref=e370]
+          - link "Reels" [ref=e371] [cursor=pointer]:
+            - /url: "#"
+            - img "Reels" [ref=e372]
+          - link "Tagged" [ref=e373] [cursor=pointer]:
+            - /url: "#"
+            - img "Tagged" [ref=e374]
+        - tabpanel
+      - article [ref=e144]:
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - 'link "Kalo hari ini rasanya berat, gapapa. Ga semua hal harus selesai dalam satu malam. Yang penting, tetap melangkah sesuai kemampuan kamuu 💐 #Komik #KomikEdukasi #PayLater #Keuangan Carousel" [ref=e375] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnefjDgfNF/
+              - 'img "Kalo hari ini rasanya berat, gapapa. Ga semua hal harus selesai dalam satu malam. Yang penting, tetap melangkah sesuai kemampuan kamuu 💐 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e376]'
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Carousel"
+            - 'link "share ke temenmu yang gabisa bedain kebutuhan sama keinginan! 😩 #Komik #KomikEdukasi #PayLater #Keuangan Carousel" [ref=e377] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZndebHgV-b/
+              - 'img "share ke temenmu yang gabisa bedain kebutuhan sama keinginan! 😩 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e378]'
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Carousel"
+            - 'link "siapa disini yang belum tau cara nentuin dana darurat? 🤭 #Komik #KomikEdukasi #Paylater #Keuangan Carousel" [ref=e379] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnczePAV1i/
+              - 'img "siapa disini yang belum tau cara nentuin dana darurat? 🤭 #Komik #KomikEdukasi #Paylater #Keuangan" [ref=e380]'
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Carousel"
+          - generic [ref=e166]:
+            - 'link "barangnya udah biasa aja, tapi tagihannya tetap ada 😤😩 #Komik #KomikEdukasi #Keuangan #PayLater Carousel" [ref=e381] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnb1SvgSP9/
+              - 'img "barangnya udah biasa aja, tapi tagihannya tetap ada 😤😩 #Komik #KomikEdukasi #Keuangan #PayLater" [ref=e382]'
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Carousel"
+            - 'link "masalah ekonomi emang suka bikin sensi, termasuk tagihan 😭😭 #Komik #KomikEdukasi #PayLater #Keuangan Carousel" [ref=e383] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnbOTZARXQ/
+              - 'img "masalah ekonomi emang suka bikin sensi, termasuk tagihan 😭😭 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e384]'
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Carousel"
+            - 'link "hayo ngaku pernah gini ga? 🗿 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e385] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnaalchBTR/
+              - 'img "hayo ngaku pernah gini ga? 🗿 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e386]'
+          - generic [ref=e185]:
+            - link "gapapa kalo progressnya pelan. Yang penting, kamu sedang berusaha keluar dari lingkaran itu 🤍🌷" [ref=e387] [cursor=pointer]:
+              - /url: /limitlab.comic/p/DZnaMF7hhPz/
+              - img "gapapa kalo progressnya pelan. Yang penting, kamu sedang berusaha keluar dari lingkaran itu 🤍🌷" [ref=e388]
+            - 'link "kamu tim udah tau atau baru tau nih? 👀 #Komik #KomikEdukasi #PayLater #Keuangan #SnowballEffect Carousel" [ref=e389] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnZQkSAfQu/
+              - 'img "kamu tim udah tau atau baru tau nih? 👀 #Komik #KomikEdukasi #PayLater #Keuangan #SnowballEffect" [ref=e390]'
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Carousel"
+            - 'link "definisi sedikit demi sedikit, lama-lama jadi bukit (in a bad way) 🗿 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e391] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnYYB-hq3K/
+              - 'img "definisi sedikit demi sedikit, lama-lama jadi bukit (in a bad way) 🗿 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e392]'
+          - generic [ref=e204]:
+            - 'link "siapa disini yang dana daruratnya dalam bentuk paylater? 🗿 #Komik #KomikEdukasi #PayLater #Keuangan Carousel" [ref=e393] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnWF_TAWFu/
+              - 'img "siapa disini yang dana daruratnya dalam bentuk paylater? 🗿 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e394]'
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Carousel"
+            - 'link "kamu tim ngingetin apa diingetin? 😏 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e395] [cursor=pointer]':
+              - /url: /limitlab.comic/p/DZnUmiYhJp5/
+              - 'img "kamu tim ngingetin apa diingetin? 😏 #Komik #KomikEdukasi #PayLater #Keuangan" [ref=e396]'
+            - 'link "tag temen kamu yang gajinya abis buat bayar tagihan! 😤😩 #PayLater #Keuangan Clip" [ref=e397] [cursor=pointer]':
+              - /url: /limitlab.comic/reel/DZnUJyhBVba/
+              - 'img "tag temen kamu yang gajinya abis buat bayar tagihan! 😤😩 #PayLater #Keuangan" [ref=e398]'
+              - generic:
+                - generic:
+                  - generic:
+                    - img "Clip"
+        - progressbar [ref=e224]:
+          - img "Loading..." [ref=e399]
+  - contentinfo [ref=e238]:
+    - generic [ref=e239]:
+      - generic [ref=e241]:
+        - link "Meta" [ref=e400] [cursor=pointer]:
+          - /url: https://about.meta.com/
+          - generic [ref=e244]: Meta
+        - link "About" [ref=e401] [cursor=pointer]:
+          - /url: https://about.instagram.com/
+          - generic [ref=e247]: About
+        - link "Blog" [ref=e402] [cursor=pointer]:
+          - /url: https://about.instagram.com/blog/
+          - generic [ref=e250]: Blog
+        - link "Jobs" [ref=e403] [cursor=pointer]:
+          - /url: https://about.instagram.com/about-us/careers
+          - generic [ref=e253]: Jobs
+        - link "Help" [ref=e404] [cursor=pointer]:
+          - /url: https://help.instagram.com/
+          - generic [ref=e256]: Help
+        - link "API" [ref=e405] [cursor=pointer]:
+          - /url: https://developers.facebook.com/docs/instagram
+          - generic [ref=e259]: API
+        - link "Privacy" [ref=e406] [cursor=pointer]:
+          - /url: /legal/privacy/
+          - generic [ref=e262]: Privacy
+        - link "Terms" [ref=e407] [cursor=pointer]:
+          - /url: /legal/terms/
+          - generic [ref=e265]: Terms
+        - link "Locations" [ref=e408] [cursor=pointer]:
+          - /url: /explore/locations/
+          - generic [ref=e268]: Locations
+        - link "Popular" [ref=e409] [cursor=pointer]:
+          - /url: /popular/
+          - generic [ref=e271]: Popular
+        - link "Instagram Lite" [ref=e410] [cursor=pointer]:
+          - /url: /web/lite/
+          - generic [ref=e274]: Instagram Lite
+        - link "Meta AI" [ref=e411] [cursor=pointer]:
+          - /url: https://www.meta.ai/?utm_source=foa_web_footer
+          - generic [ref=e277]: Meta AI
+        - link "Threads" [ref=e412] [cursor=pointer]:
+          - /url: https://www.threads.com/
+          - generic [ref=e280]: Threads
+        - link "Contact Uploading & Non-Users" [ref=e413] [cursor=pointer]:
+          - /url: https://www.facebook.com/help/instagram/261704639352628
+          - generic [ref=e283]: Contact Uploading & Non-Users
+        - link "Meta Verified" [ref=e414] [cursor=pointer]:
+          - /url: /accounts/meta_verified/?entrypoint=web_footer
+          - generic [ref=e286]: Meta Verified
+        - link "Meta in Indonesia" [ref=e415] [cursor=pointer]:
+          - /url: https://indonesia.fb.com/panduan-digital/
+          - generic [ref=e289]: Meta in Indonesia
+      - generic [ref=e290]:
+        - generic [ref=e291] [cursor=pointer]:
+          - generic [ref=e292]:
+            - generic [ref=e293]: English
+            - img "Down chevron icon" [ref=e416]
+          - combobox "Switch Display Language" [ref=e417]:
+            - option "Afrikaans"
+            - option "العربية"
+            - option "Čeština"
+            - option "Dansk"
+            - option "Deutsch"
+            - option "Ελληνικά"
+            - option "English" [selected]
+            - option "English (UK)"
+            - option "Español (España)"
+            - option "Español"
+            - option "فارسی"
+            - option "Suomi"
+            - option "Français"
+            - option "עברית"
+            - option "Bahasa Indonesia"
+            - option "Italiano"
+            - option "日本語"
+            - option "한국어"
+            - option "Bahasa Melayu"
+            - option "Norsk"
+            - option "Nederlands"
+            - option "Polski"
+            - option "Português (Brasil)"
+            - option "Português (Portugal)"
+            - option "Русский"
+            - option "Svenska"
+            - option "ภาษาไทย"
+            - option "Filipino"
+            - option "Türkçe"
+            - option "中文(简体)"
+            - option "中文(台灣)"
+            - option "বাংলা"
+            - option "ગુજરાતી"
+            - option "हिन्दी"
+            - option "Hrvatski"
+            - option "Magyar"
+            - option "ಕನ್ನಡ"
+            - option "മലയാളം"
+            - option "मराठी"
+            - option "नेपाली"
+            - option "ਪੰਜਾਬੀ"
+            - option "සිංහල"
+            - option "Slovenčina"
+            - option "தமிழ்"
+            - option "తెలుగు"
+            - option "اردو"
+            - option "Tiếng Việt"
+            - option "中文(香港)"
+            - option "Български"
+            - option "Français (Canada)"
+            - option "Română"
+            - option "Српски"
+            - option "Українська"
+        - generic [ref=e300]: © 2026 Instagram from Meta

@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/favzqn/senara#readme",
   "devDependencies": {
+    "playwright": "^1.61.0",
     "tailwindcss": "^3.4.19",
     "typescript": "^6.0.3"
   },

@@ -116,7 +116,9 @@ function renderFeaturedCards(stories: Story[]): void {
 
   container.innerHTML = '';
 
-  const displayStories: Story[] = stories.slice(0, 5);
+  const isMobile: boolean = window.innerWidth < 640;
+  const limit: number = isMobile ? 3 : 5;
+  const displayStories: Story[] = stories.slice(0, limit);
 
   displayStories.forEach((story: Story, index: number) => {
     const card: HTMLAnchorElement = createFeaturedCard(story, index);

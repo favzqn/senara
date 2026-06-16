@@ -80,11 +80,21 @@ body {
 
 .about-section:nth-child(even) {
   background: #F8FAFC;
-  margin-left: -2rem;
-  margin-right: -2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-radius: 16px;
+}
+
+@media (max-width: 640px) {
+  .about-section:nth-child(even) {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 12px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1450,7 +1460,16 @@ body {
 /* Responsive */
 @media (max-width: 640px) {
   .about-content {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
+  }
+
+  .section-tab {
+    padding: 0.75rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .section-nav {
+    padding: 0 0.5rem;
   }
 
   .pull-quote {

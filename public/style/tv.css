@@ -828,7 +828,14 @@
   .tv-topbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .tv-categories {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
   }
 
   .tv-search-wrap {
@@ -844,7 +851,7 @@
   }
 
   .nf-card {
-    width: 240px;
+    width: 200px;
   }
 
   .nf-hero-title {
@@ -852,19 +859,19 @@
   }
 
   .nf-hero-content {
-    padding: 2rem 1.25rem;
+    padding: 2rem 1rem;
   }
 
   .nf-row-header {
-    padding: 0 1rem;
+    padding: 0 0.75rem;
   }
 
   .nf-row-scroll {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
   }
 
   .tv-latest {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.75rem;
   }
 }
 
