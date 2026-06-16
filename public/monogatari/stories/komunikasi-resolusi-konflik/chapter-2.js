@@ -34,15 +34,15 @@ const Chapter2 = {
       Choice: {
         Dialog: "Teman kamu gagal ujian dan sedih. Mana respons yang menunjukkan empati?",
         A: {
-          Text: \"Yah, sabar ya. Mungkin emang belum rejeki.\",
+          Text: "Yah, sabar ya. Mungkin emang belum rejeki.",
           Do: "jump Scene-20-Salah",
         },
         B: {
-          Text: \"Aku ngerti gimana rasanya gagal. Dulu aku juga pernah dan rasanya hancur.\",
+          Text: "Aku ngerti gimana rasanya gagal. Dulu aku juga pernah dan rasanya hancur.",
           Do: "jump Scene-20-Benar",
         },
         C: {
-          Text: \"Udahlah, nggak usah dipikirin.\",
+          Text: "Udahlah, nggak usah dipikirin.",
           Do: "jump Scene-20-Salah",
         },
       },

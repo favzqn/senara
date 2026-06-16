@@ -24,11 +24,11 @@
     "contribTitle": "Contributors & Partnerships",
     "contribDesc": "Want to volunteer or collaborate? Visit our dedicated page for opportunities.",
     "contribButton": "See Opportunities",
-    "responseNote": "⏱️ We usually respond within 2-3 business days. For quicker answers, check our <a href='faq.html' style='color: #d97706; text-decoration: underline;'>FAQ</a>.",
+    "responseNote": "⏱We usually respond within 2-3 business days. For quicker answers, check our <a href='/faq' style='color: #d97706; text-decoration: underline;'>FAQ</a>.",
     "socialTitle": "Stay Connected",
     "socialLinks": {
-      "trakteer": "🍰 Trakteer",
-      "instagram": "📷 Instagram"
+      "trakteer": "Trakteer",
+      "instagram": "Instagram"
     }
   },
   "pendekatan": {
@@ -45,7 +45,7 @@
     "principlesIntro": "Every Senara story follows a few key principles:",
     "principles": [
       {
-        "title": "🪞 Reflection Over Instruction",
+        "title": "Reflection Over Instruction",
         "body": "We don't tell readers what's 'right' or 'wrong'. Stories invite them to reflect on their own choices."
       },
       {
@@ -53,15 +53,15 @@
         "body": "Stories mirror real situations readers can relate to. Characters face real dilemmas — from mental health struggles to financial decisions — in contexts that feel familiar."
       },
       {
-        "title": "🔄 Learn Through Consequences",
+        "title": "Learn Through Consequences",
         "body": "Every choice has an impact. Readers can see outcomes without facing those risks in real life."
       },
       {
-        "title": "💬 Conversation Starter",
+        "title": "Conversation Starter",
         "body": "Our stories are built to spark discussion. Teachers and facilitators can use them as a launchpad for deeper conversation."
       },
       {
-        "title": "🎭 No 'Perfect' Ending",
+        "title": "No 'Perfect' Ending",
         "body": "Real life isn't binary. Stories show that every decision has trade-offs, and there's rarely a single 'correct' path."
       }
     ],
@@ -105,19 +105,19 @@
     "interactiveIntro": "We chose the visual-novel format for a reason:",
     "interactivePoints": [
       {
-        "title": "🧠 Active Engagement",
+        "title": "Active Engagement",
         "body": "Making choices forces readers to think actively, not just consume content."
       },
       {
-        "title": "🔁 Safe Exploration",
+        "title": "Safe Exploration",
         "body": "Readers can try multiple paths and see consequences without real-world risks."
       },
       {
-        "title": "🎯 Personalization",
+        "title": "Personalization",
         "body": "Everyone's journey is slightly different, making it more personal and relevant."
       },
       {
-        "title": "💭 Inner Reflection",
+        "title": "Inner Reflection",
         "body": "Each choice is an inner question: 'What would I do?' This sparks deep reflection."
       }
     ],
@@ -136,7 +136,7 @@
   "terms": {
     "title": "Terms & Conditions",
     "subtitle": "Rules for using the Senara platform.",
-    "lastUpdated": "📅 Last updated: December 2025",
+    "lastUpdated": "Last updated: December 2025",
     "tocTitle": "Table of Contents",
     "sections": {
       "acceptance": {
@@ -186,7 +186,7 @@
         "title": "5. Disclaimer",
         "highlight": "<strong>Important:</strong> Senara is not a substitute for professional services. Our content promotes literacy and awareness; it doesn't diagnose, treat, or provide professional advice.",
         "mentalTitle": "Mental Health Content",
-        "mentalBody": "Stories covering mental health are educational. If you're facing challenges, please contact qualified professionals. See the <a href='safety.html' style='color: #d97706;'>Safety</a> page for support lines.",
+        "mentalBody": "Stories covering mental health are educational. If you're facing challenges, please contact qualified professionals. See the <a href='/safety' style='color: #d97706;'>Safety</a> page for support lines.",
         "accuracyTitle": "Information Accuracy",
         "accuracyBody": "We strive for accurate, up-to-date info, but can't guarantee it's error-free. Let us know if you spot issues."
       },
@@ -209,7 +209,7 @@
       "contact": {
         "title": "8. Contact Us",
         "body": "Questions about these terms? Reach out:",
-        "email": "📧 Email: <a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
+        "email": "Email: <a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
       }
     }
   },
@@ -246,7 +246,7 @@
     "methodsTitle": "Ways to Support",
     "methodsDesc": "Senara is 100% free and community-built. Every contribution keeps stories free for everyone.",
     "donateTrakteer": "Donate via Trakteer",
-    "usageNote": "💡 We don’t have an office or full-time staff. Everything is remote and volunteer-based, which keeps operational costs low.",
+    "usageNote": "We don’t have an office or full-time staff. Everything is remote and volunteer-based, which keeps operational costs low.",
     "principlesTitle": "Our Principles",
     "principles": {
       "noExclusive": {
@@ -266,21 +266,21 @@
         "desc": "We’re open about how funds are used. Ask us anything."
       }
     },
-    "gratitudeTitle": "🙏 Thank You",
+    "gratitudeTitle": "Thank You",
     "gratitudeP1": "To everyone who supports Senara through donations, sharing, or simply reading: thank you.",
     "gratitudeP2": "Every bit of support helps us keep creating meaningful stories for more people.",
-    "gratitudeCta": "🍰 Support via Trakteer"
+    "gratitudeCta": "Support via Trakteer"
   },
   "accessibility": {
     "title": "Accessibility",
     "subtitle": "Our commitment to making Senara accessible for everyone.",
-    "commitmentTitle": "🎯 Our Commitment",
+    "commitmentTitle": "Our Commitment",
     "commitmentBody": "We believe everyone deserves access to meaningful stories and learning experiences. Senara continues to improve accessibility so the platform stays inclusive for all users, including people with disabilities.",
     "intro": "These are the accessibility features already available and the ones we’re currently working on.",
     "statuses": {
-      "available": "✓ Available",
-      "partial": "⚡ In Progress",
-      "planned": "📋 Planned"
+      "available": "Available",
+      "partial": "In Progress",
+      "planned": "Planned"
     },
     "sections": {
       "visual": {
@@ -378,12 +378,12 @@
     ],
     "feedbackTitle": "Help Us Improve Accessibility",
     "feedbackDesc": "If you experience any accessibility issues or have suggestions, we’d love to hear from you.",
-    "feedbackCta": "✉️ Send Feedback"
+    "feedbackCta": "Send Feedback"
   },
   "safety": {
     "title": "Safety & Support",
     "subtitle": "A guide to staying emotionally safe while exploring Senara.",
-    "disclaimerTitle": "⚠️ Important Reminder",
+    "disclaimerTitle": "Important Reminder",
     "disclaimerBody": "<strong>Senara is not a substitute for professional mental health care.</strong> Our stories aim to raise literacy and awareness, not to diagnose, treat, or provide therapy. If you’re experiencing mental health challenges, please reach out to a professional.",
     "whenHelpTitle": "When to Reach Out for Help",
     "whenHelpIntro": "Reading sensitive topics can stir up strong feelings. That’s normal. Still, there are moments when talking to a trained professional is the best next step.",
@@ -403,27 +403,27 @@
       "sejiwa": {
         "title": "Sejiwa (Indonesian MoH)",
         "desc": "Mental health counseling from the Ministry of Health. Free, 24/7.",
-        "contact": "📞 119 ext. 8"
+        "contact": "119 ext. 8"
       },
       "itl": {
         "title": "Into The Light Indonesia",
         "desc": "Suicide prevention community offering resources and peer support.",
-        "contact": "🌐 intothelightid.org"
+        "contact": "intothelightid.org"
       },
       "pulih": {
         "title": "Yayasan Pulih",
         "desc": "Counseling services for trauma recovery and mental wellness.",
-        "contact": "📞 (021) 788-42580"
+        "contact": "(021) 788-42580"
       },
       "tepsa": {
         "title": "Child Social Service Line (TePSA)",
         "desc": "24/7 helpline for children and teens who need assistance.",
-        "contact": "📞 1500-771"
+        "contact": "1500-771"
       },
       "komnas": {
         "title": "Komnas Perempuan",
         "desc": "Support for women experiencing violence or in need of protection.",
-        "contact": "📞 (021) 390-3963"
+        "contact": "(021) 390-3963"
       }
     },
     "safeTipsTitle": "Tips for Reading Sensitive Stories",
@@ -445,12 +445,12 @@
     ],
     "supportTitle": "You're Not Alone",
     "supportBody1": "Whatever you’re going through, there are people who care and want to support you. Please reach out.",
-    "supportBody2": "If you find any Senara content that feels unsafe or needs improvement, <a href='contact.html' style='color: #047857; text-decoration: underline;'>let us know</a>. Your feedback really matters to us."
+    "supportBody2": "If you find any Senara content that feels unsafe or needs improvement, <a href='/contact' style='color: #047857; text-decoration: underline;'>let us know</a>. Your feedback really matters to us."
   },
   "privacy": {
     "title": "Privacy Policy",
     "subtitle": "How we collect, use, and protect your information.",
-    "lastUpdated": "📅 Last updated: December 2025",
+    "lastUpdated": "Last updated: December 2025",
     "summary": "<strong>Summary:</strong> We don’t collect personal data. No logins, no individual tracking. Senara is built with privacy in mind.",
     "tocTitle": "Table of Contents",
     "sections": {
@@ -521,7 +521,7 @@
       "contact": {
         "title": "8. Contact Us",
         "body": "If you have questions about this policy or how we handle data, reach out:",
-        "email": "📧 Email: <a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
+        "email": "Email: <a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
       }
     }
   },
@@ -578,27 +578,27 @@
       {
         "title": "Read Together in Class/Workshop",
         "body": "Project the story and vote on choices together. Every branch becomes a discussion point. Perfect for 30–60 minute sessions.",
-        "icon": "📱"
+        "icon": ""
       },
       {
         "title": "Individual Assignment + Reflection",
         "body": "Have participants read on their own, then submit reflections on the choices they made and why. Great for weekly assignments.",
-        "icon": "📝"
+        "icon": ""
       },
       {
         "title": "Pre-Workshop Primer",
         "body": "Send a story before the workshop as a warm-up so everyone arrives with the same context.",
-        "icon": "🎯"
+        "icon": ""
       },
       {
         "title": "Compare Story Paths",
         "body": "Split participants into groups, each exploring different branches. Compare endings and discuss what led to different outcomes.",
-        "icon": "🔄"
+        "icon": ""
       },
       {
         "title": "Informal Assessment",
         "body": "Use story quizzes as pre/post checks to gauge understanding on specific topics.",
-        "icon": "📊"
+        "icon": ""
       }
     ],
     "stepsTitle": "How to Get Started",
@@ -626,32 +626,32 @@
       {
         "title": "100% Free",
         "body": "No licensing fees or subscriptions",
-        "icon": "💰"
+        "icon": ""
       },
       {
         "title": "Easy Access",
         "body": "Runs in any browser, no app installs",
-        "icon": "📱"
+        "icon": ""
       },
       {
         "title": "Engaging",
         "body": "Interactive format keeps attention",
-        "icon": "🎯"
+        "icon": ""
       },
       {
         "title": "Discussion-Friendly",
         "body": "Choices turn into meaningful conversation",
-        "icon": "💬"
+        "icon": ""
       },
       {
         "title": "Safe",
         "body": "No logins, no data collection",
-        "icon": "🔒"
+        "icon": ""
       },
       {
         "title": "Local Context",
         "body": "Stories set in familiar Indonesian settings",
-        "icon": "🇮🇩"
+        "icon": ""
       }
     ],
     "storiesTitle": "Stories that Work Well",
@@ -668,8 +668,8 @@
     "testimonialCite": "Mental Health Workshop Facilitator",
     "ctaTitle": "Ready to Use Senara?",
     "ctaDesc": "Start today or reach out so we can discuss how Senara supports your programs.",
-    "ctaPrimary": "📚 Explore Collection",
-    "ctaSecondary": "✉️ Contact Us"
+    "ctaPrimary": "Explore Collection",
+    "ctaSecondary": "Contact Us"
   },
   "home": {
     "badge": "Free · Nonprofit · No Sign-up",
@@ -802,7 +802,7 @@
     "viewCollection": "View Collection →",
     "nonprofit": "Nonprofit",
     "freeForAll": "Free for everyone",
-    "copyright": "Senara. Made with ❤️ in Indonesia.",
+    "copyright": "Senara. Made with love in Indonesia.",
     "privacy": "Privacy",
     "terms": "Terms",
     "accessibility": "Accessibility"
@@ -825,15 +825,15 @@
     "filterDifficulty": "Difficulty Level",
     "filterDuration": "Duration",
     "statusTitle": "Status",
-    "statusAvailable": "✅ Available",
-    "statusComingSoon": "🔜 Coming Soon",
+    "statusAvailable": "Available",
+    "statusComingSoon": "Coming Soon",
     "allCategories": "All Categories",
     "allStories": "All Stories",
     "allDifficulties": "All Levels",
     "allDurations": "All Durations",
-    "durationShort": "⚡ Short (< 15 min)",
-    "durationMedium": "📖 Medium (15-30 min)",
-    "durationLong": "📚 Long (> 30 min)",
+    "durationShort": "Short (< 15 min)",
+    "durationMedium": "Medium (15-30 min)",
+    "durationLong": "Long (> 30 min)",
     "resetFilters": "Reset Filters",
     "resetAllFilters": "Reset All Filters",
     "noResults": "No stories match your filters.",
@@ -847,14 +847,14 @@
     "resultsPrefix": "Showing",
     "sortLabel": "Sort by:",
     "sortDefault": "Default",
-    "sortNewest": "🆕 Newest",
-    "sortOldest": "📅 Oldest",
-    "sortPopular": "🔥 Most Popular",
+    "sortNewest": "Newest",
+    "sortOldest": "Oldest",
+    "sortPopular": "Most Popular",
     "sortRating": "⭐ Highest Rated",
-    "sortDurationAsc": "⏱️ Duration: Short → Long",
-    "sortDurationDesc": "⏱️ Duration: Long → Short",
-    "sortTitleAsc": "🔤 Title: A → Z",
-    "sortTitleDesc": "🔤 Title: Z → A",
+    "sortDurationAsc": "⏱Duration: Short → Long",
+    "sortDurationDesc": "⏱Duration: Long → Short",
+    "sortTitleAsc": "Title: A → Z",
+    "sortTitleDesc": "Title: Z → A",
     "emptyTitle": "No stories found",
     "emptyDescription": "Try adjusting your filters or search terms to find stories that match what you're looking for.",
     "emptyReset": "Reset All Filters",
@@ -878,9 +878,9 @@
     "prob3Desc": "Online courses, workshops, books... they all cost money. We believe access to meaningful experiences shouldn't depend on finances.",
     "missionTitle": "Our Mission",
     "missionStatement": "Make meaningful experiences accessible to everyone, with no cost and no strings attached.",
-    "missionPoint1": "💚 Free forever",
-    "missionPoint2": "🤝 Nonprofit",
-    "missionPoint3": "👥 Community-driven",
+    "missionPoint1": "Free forever",
+    "missionPoint2": "Nonprofit",
+    "missionPoint3": "Community-driven",
     "missionP1": "Senara is a nonprofit platform. We don't sell anything. Every story is free, now and forever.",
     "missionP2": "No freemium, no trials. <strong>Completely free.</strong> No investors demanding profit, no revenue targets. Every story is created by caring volunteers.",
     "visionTitle": "Long-Term Vision",
@@ -902,9 +902,9 @@
     "closingP2": "We believe <strong>stories can change how people see the world.</strong> We'll keep creating stories that matter.",
     "closingP3": "Thank you for being part of this journey.",
     "closingLinks": {
-      "team": "👥 Meet Our Team",
-      "approach": "📖 Our Approach",
-      "roadmap": "🗺️ Roadmap"
+      "team": "Meet Our Team",
+      "approach": "Our Approach",
+      "roadmap": "Roadmap"
     },
     "tabs": {
       "story": "Our Story",
@@ -997,7 +997,7 @@
     "beginner": "Beginner",
     "intermediate": "Intermediate",
     "advanced": "Advanced",
-    "startHere": "🌱 Start Here",
+    "startHere": "Start Here",
     "duration": "Duration",
     "age": "Age",
     "play": "Play",
@@ -1056,7 +1056,7 @@
     "searchPlaceholder": "Search videos...",
     "curatedVideo": "Curated educational video from Senara TV",
     "preparing": "Videos are being prepared...",
-    "editorsPick": "✨ Editor's Pick",
+    "editorsPick": "Editor's Pick",
     "play": "Play",
     "watchNow": "Watch Now",
     "visitChannel": "Visit Channel",
@@ -1123,54 +1123,54 @@
     "storiesIntro": "New stories currently in development:",
     "stories": {
       "digital": {
-        "title": "📱 Digital & Social Media Literacy",
+        "title": "Digital & Social Media Literacy",
         "desc": "Stories about navigating the digital world: spotting hoaxes, protecting privacy online, and building healthy social media habits.",
-        "target": "📅 Target: Q1 2025",
-        "chapters": "📚 3-4 chapters"
+        "target": "Target: Q1 2025",
+        "chapters": "3-4 chapters"
       },
       "finance": {
-        "title": "💰 Financial Literacy for Beginners",
+        "title": "Financial Literacy for Beginners",
         "desc": "Learn to manage money, save, and make smart financial decisions through relatable character stories.",
-        "target": "📅 Target: Q2 2025",
-        "chapters": "📚 4-5 chapters"
+        "target": "Target: Q2 2025",
+        "chapters": "4-5 chapters"
       },
       "communication": {
-        "title": "🤝 Communication & Conflict Resolution",
+        "title": "Communication & Conflict Resolution",
         "desc": "How to communicate effectively, resolve conflicts, and build healthy relationships with others.",
-        "target": "📅 Target: 2025"
+        "target": "Target: 2025"
       }
     },
-    "storiesNote": "💡 Have a story idea? <a href='contact.html' style='color: #d97706; text-decoration: underline;'>Contact us</a> or <a href='about.html?tab=contribute' style='color: #d97706; text-decoration: underline;'>join as a contributor</a>.",
+    "storiesNote": "Have a story idea? <a href='/contact' style='color: #d97706; text-decoration: underline;'>Contact us</a> or <a href='/about?tab=contribute' style='color: #d97706; text-decoration: underline;'>join as a contributor</a>.",
     "statuses": {
-      "inProgress": "🔨 In Progress",
-      "planned": "📋 Planned",
-      "exploring": "💭 Exploring"
+      "inProgress": "In Progress",
+      "planned": "Planned",
+      "exploring": "Exploring"
     },
     "featuresTitle": "Platform Features",
     "featuresIntro": "Feature development to improve user experience:",
     "features": {
       "account": {
-        "title": "👤 Account System",
+        "title": "Account System",
         "desc": "Login to save progress and sync across devices."
       },
       "stats": {
-        "title": "📊 Learning Stats",
+        "title": "Learning Stats",
         "desc": "View stories read, playtime, and achievements."
       },
       "gamification": {
-        "title": "🏆 Gamification",
+        "title": "Gamification",
         "desc": "Badges, streaks, and rewards to motivate readers."
       },
       "mobile": {
-        "title": "📱 Mobile App",
+        "title": "Mobile App",
         "desc": "Access Senara via Android/iOS app."
       },
       "multilang": {
-        "title": "🌐 Multi-language",
+        "title": "Multi-language",
         "desc": "Story translations to English."
       },
       "offline": {
-        "title": "📥 Offline Mode",
+        "title": "Offline Mode",
         "desc": "Download stories to read without internet."
       }
     },
@@ -1190,9 +1190,9 @@
         "desc": "Search stories by category, duration, and difficulty."
       }
     },
-    "feedbackTitle": "💬 Help Us Prioritize",
+    "feedbackTitle": "Help Us Prioritize",
     "feedbackDesc": "This roadmap is shaped by community feedback. Which features or stories do you need most? What should we work on first?",
-    "feedbackCta": "✉️ Send Feedback"
+    "feedbackCta": "Send Feedback"
   },
   "faq": {
     "title": "FAQ",
@@ -1285,7 +1285,7 @@
         "desc": "Help spread Senara to the right communities, manage social media, or build partnerships with other organizations."
       }
     },
-    "noExpNote": "💡 <strong>No experience?</strong> No problem. We're open to beginners who want to learn. What matters is enthusiasm and commitment to contribute.",
+    "noExpNote": "<strong>No experience?</strong> No problem. We're open to beginners who want to learn. What matters is enthusiasm and commitment to contribute.",
     "processTitle": "How Collaboration Works",
     "processIntro": "The contribution process at Senara is designed to be flexible and not overwhelming:",
     "steps": {
@@ -1336,10 +1336,10 @@
     },
     "ctaTitle": "Interested in Joining?",
     "ctaDesc": "We'd love to hear from you. Tell us a bit about yourself and how you'd like to contribute.",
-    "ctaForm": "📝 Fill Contributor Form",
-    "ctaEmail": "✉️ Send Email",
+    "ctaForm": "Fill Contributor Form",
+    "ctaEmail": "Send Email",
     "ctaTeamLink": "Meet the team behind Senara →",
-    "partnerTitle": "🤝 For Organizations & Partnerships",
+    "partnerTitle": "For Organizations & Partnerships",
     "partnerDesc": "Do you represent a school, community, or organization that wants to collaborate with Senara? We're open to various forms of partnership, from custom story creation to joint programs.",
     "partnerCta": "Contact for Partnership"
   },
@@ -1355,10 +1355,10 @@
       "rating": "Rating"
     },
     "saveTip": {
-      "title": "💡 You can save your progress anytime!",
-      "desc": "Click <strong>☰ Menu</strong> in the bottom right → select <strong>\"Save\"</strong>. To continue, select <strong>\"Load\"</strong>."
+      "title": "You can save your progress anytime!",
+      "desc": "Click <strong>Menu</strong> in the bottom right → select <strong>\"Save\"</strong>. To continue, select <strong>\"Load\"</strong>."
     },
-    "comingSoon": "🔜 Coming Soon",
+    "comingSoon": "Coming Soon",
     "comingSoonDesc": "This story is currently in development",
     "playNow": "Play Now",
     "scrollMore": "Scroll for more info",
@@ -1422,15 +1422,15 @@
     "contribBoxTitle": "Thank you to everyone who has contributed!",
     "contribBoxDesc": "Writers, illustrators, editors, testers, and everyone who helped make these stories happen.",
     "roles": {
-      "writer": "✍️ Writers",
-      "illustrator": "🎨 Illustrators",
-      "editor": "📝 Editors",
-      "tester": "🧪 Testers",
-      "translator": "🌐 Translators",
-      "outreach": "📣 Outreach"
+      "writer": "Writers",
+      "illustrator": "Illustrators",
+      "editor": "Editors",
+      "tester": "Testers",
+      "translator": "Translators",
+      "outreach": "Outreach"
     },
     "ctaTitle": "Want to Join?",
     "ctaDesc": "We're always looking for people to contribute as writers, illustrators, editors, and beyond.",
-    "ctaButton": "✨ See How to Contribute"
+    "ctaButton": "See How to Contribute"
   }
 }

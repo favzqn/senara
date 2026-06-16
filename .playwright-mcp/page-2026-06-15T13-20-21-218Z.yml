@@ -1,0 +1,29 @@
+- generic [ref=e9]:
+  - generic [ref=e13]:
+    - generic [ref=e15]: Vani
+    - paragraph [ref=e17]: Oh, halo. Jadi, kamu ad
+  - generic [ref=e18]:
+    - button "Back" [ref=e19] [cursor=pointer]:
+      - img [ref=e20]
+      - generic [ref=e22]: Back
+    - button "Hide" [ref=e23] [cursor=pointer]:
+      - img [ref=e24]
+      - generic [ref=e26]: Hide
+    - button "Log" [ref=e27] [cursor=pointer]:
+      - img [ref=e28]
+      - generic [ref=e30]: Log
+    - button "Auto" [ref=e31] [cursor=pointer]:
+      - img [ref=e32]
+      - generic [ref=e34]: Auto
+    - button "Save" [ref=e35] [cursor=pointer]:
+      - img [ref=e36]
+      - generic [ref=e38]: Save
+    - button "Load" [ref=e39] [cursor=pointer]:
+      - img [ref=e40]
+      - generic [ref=e42]: Load
+    - button "Settings" [ref=e43] [cursor=pointer]:
+      - img [ref=e44]
+      - generic [ref=e46]: Settings
+    - button "Quit" [ref=e47] [cursor=pointer]:
+      - img [ref=e48]
+      - generic [ref=e50]: Quit

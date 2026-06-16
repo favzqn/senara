@@ -24,17 +24,17 @@
     "contribTitle": "Kontribusi & Kemitraan",
     "contribDesc": "Ingin berkontribusi sebagai relawan atau berkolaborasi sebagai organisasi? Kunjungi halaman khusus kami.",
     "contribButton": "Lihat Peluang",
-    "responseNote": "⏱️ Kami biasanya membalas dalam 2-3 hari kerja. Untuk pertanyaan umum, cek juga halaman <a href='faq.html' style='color: #d97706; text-decoration: underline;'>FAQ</a> kami.",
+    "responseNote": "⏱Kami biasanya membalas dalam 2-3 hari kerja. Untuk pertanyaan umum, cek juga halaman <a href='/faq' style='color: #d97706; text-decoration: underline;'>FAQ</a> kami.",
     "socialTitle": "Ikuti Perkembangan Senara",
     "socialLinks": {
-      "trakteer": "🍰 Trakteer",
-      "instagram": "📷 Instagram"
+      "trakteer": "Trakteer",
+      "instagram": "Instagram"
     }
   },
   "terms": {
     "title": "Syarat & Ketentuan",
     "subtitle": "Ketentuan penggunaan platform Senara.",
-    "lastUpdated": "📅 Terakhir diperbarui: Desember 2025",
+    "lastUpdated": "Terakhir diperbarui: Desember 2025",
     "tocTitle": "Daftar Isi",
     "sections": {
       "acceptance": {
@@ -84,7 +84,7 @@
         "title": "5. Disclaimer",
         "highlight": "<strong>Penting:</strong> Senara bukan pengganti layanan profesional. Konten kami bertujuan untuk meningkatkan literasi dan kesadaran, bukan untuk mendiagnosis, mengobati, atau memberikan nasihat profesional.",
         "mentalTitle": "Konten Kesehatan Mental",
-        "mentalBody": "Cerita bertopik kesehatan mental dimaksudkan untuk edukasi. Jika kamu mengalami masalah kesehatan mental, hubungi profesional yang berkualifikasi. Lihat halaman <a href='safety.html' style='color: #d97706;'>Keselamatan</a> untuk daftar layanan bantuan.",
+        "mentalBody": "Cerita bertopik kesehatan mental dimaksudkan untuk edukasi. Jika kamu mengalami masalah kesehatan mental, hubungi profesional yang berkualifikasi. Lihat halaman <a href='/safety' style='color: #d97706;'>Keselamatan</a> untuk daftar layanan bantuan.",
         "accuracyTitle": "Akurasi Informasi",
         "accuracyBody": "Kami berusaha menyajikan informasi yang akurat dan terkini, namun tidak menjamin bebas dari kesalahan. Jika kamu menemukan ketidakakuratan, silakan hubungi kami."
       },
@@ -107,7 +107,7 @@
       "contact": {
         "title": "8. Hubungi Kami",
         "body": "Jika kamu memiliki pertanyaan tentang syarat dan ketentuan ini, silakan hubungi kami:",
-        "email": "📧 Email: <a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
+        "email": "Email: <a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
       }
     }
   },
@@ -125,7 +125,7 @@
     "principlesIntro": "Setiap cerita di Senara dirancang dengan beberapa prinsip dasar:",
     "principles": [
       {
-        "title": "🪞 Refleksi, Bukan Instruksi",
+        "title": "Refleksi, Bukan Instruksi",
         "body": "Kami tidak memberitahu pembaca apa yang 'benar' atau 'salah'. Cerita kami mengajak pembaca untuk merefleksikan pilihan dan konsekuensinya sendiri."
       },
       {
@@ -133,15 +133,15 @@
         "body": "Cerita menggambarkan situasi nyata yang bisa dirasakan pembaca. Karakter menghadapi dilema nyata — dari kesehatan mental hingga keputusan keuangan — dalam konteks yang terasa dekat."
       },
       {
-        "title": "🔄 Belajar dari Konsekuensi",
+        "title": "Belajar dari Konsekuensi",
         "body": "Setiap pilihan punya konsekuensi. Pembaca bisa melihat dampak dari keputusan mereka tanpa harus mengalaminya di dunia nyata."
       },
       {
-        "title": "💬 Ruang untuk Diskusi",
+        "title": "Ruang untuk Diskusi",
         "body": "Cerita kami dirancang untuk memicu percakapan. Guru dan fasilitator bisa menggunakan cerita sebagai titik awal diskusi yang lebih dalam."
       },
       {
-        "title": "🎭 Tidak Ada Ending 'Sempurna'",
+        "title": "Tidak Ada Ending 'Sempurna'",
         "body": "Kehidupan nyata jarang hitam-putih. Cerita kami menunjukkan bahwa setiap pilihan punya trade-off, dan tidak selalu ada jawaban yang 'benar'."
       }
     ],
@@ -185,19 +185,19 @@
     "interactiveIntro": "Format visual novel interaktif dipilih karena beberapa alasan:",
     "interactivePoints": [
       {
-        "title": "🧠 Keterlibatan Aktif",
+        "title": "Keterlibatan Aktif",
         "body": "Membuat pilihan memaksa pembaca untuk berpikir aktif, bukan hanya menerima informasi secara pasif."
       },
       {
-        "title": "🔁 Eksplorasi Aman",
+        "title": "Eksplorasi Aman",
         "body": "Pembaca bisa mencoba berbagai pilihan dan melihat konsekuensinya tanpa risiko nyata. Ini menciptakan ruang aman untuk bereksperimen."
       },
       {
-        "title": "🎯 Personalisasi",
+        "title": "Personalisasi",
         "body": "Setiap pembaca punya perjalanan yang sedikit berbeda. Ini membuat pengalaman terasa lebih personal dan relevan."
       },
       {
-        "title": "💭 Refleksi Diri",
+        "title": "Refleksi Diri",
         "body": "Ketika pembaca memilih, mereka secara tidak langsung bertanya pada diri sendiri: 'Apa yang akan aku lakukan?' Ini memicu refleksi yang lebih dalam."
       }
     ],
@@ -246,7 +246,7 @@
     "methodsTitle": "Cara Mendukung",
     "methodsDesc": "Senara 100% gratis dan dibangun bersama. Setiap kontribusi menjaga cerita tetap gratis untuk semua.",
     "donateTrakteer": "Donasi via Trakteer",
-    "usageNote": "💡 Kami tidak memiliki kantor fisik atau karyawan tetap. Semua tim bekerja secara remote dan volunteer-based, sehingga biaya operasional bisa ditekan seminimal mungkin.",
+    "usageNote": "Kami tidak memiliki kantor fisik atau karyawan tetap. Semua tim bekerja secara remote dan volunteer-based, sehingga biaya operasional bisa ditekan seminimal mungkin.",
     "principlesTitle": "Prinsip Kami",
     "principles": {
       "noExclusive": {
@@ -266,21 +266,21 @@
         "desc": "Kami terbuka tentang bagaimana dana digunakan. Jika ada pertanyaan, silakan hubungi kami."
       }
     },
-    "gratitudeTitle": "🙏 Terima Kasih",
+    "gratitudeTitle": "Terima Kasih",
     "gratitudeP1": "Kepada semua yang sudah mendukung Senara, baik lewat donasi, berbagi ke teman, atau sekadar membaca cerita kami: terima kasih.",
     "gratitudeP2": "Setiap dukungan, sekecil apapun, membantu kami terus membuat cerita yang bermakna untuk lebih banyak orang.",
-    "gratitudeCta": "🍰 Dukung via Trakteer"
+    "gratitudeCta": "Dukung via Trakteer"
   },
   "accessibility": {
     "title": "Aksesibilitas",
     "subtitle": "Komitmen kami untuk membuat Senara bisa diakses oleh semua orang.",
-    "commitmentTitle": "🎯 Komitmen Kami",
+    "commitmentTitle": "Komitmen Kami",
     "commitmentBody": "Kami percaya bahwa setiap orang berhak mengakses cerita dan pengalaman belajar yang bermakna. Senara terus berupaya meningkatkan aksesibilitas platform agar inklusif untuk semua pengguna, termasuk mereka dengan disabilitas.",
     "intro": "Berikut adalah fitur aksesibilitas yang sudah tersedia dan yang sedang kami kembangkan.",
     "statuses": {
-      "available": "✓ Tersedia",
-      "partial": "⚡ Sebagian",
-      "planned": "📋 Direncanakan"
+      "available": "Tersedia",
+      "partial": "Sebagian",
+      "planned": "Direncanakan"
     },
     "sections": {
       "visual": {
@@ -378,12 +378,12 @@
     ],
     "feedbackTitle": "Bantu Kami Meningkatkan Aksesibilitas",
     "feedbackDesc": "Jika kamu mengalami kesulitan mengakses Senara atau punya saran untuk meningkatkan aksesibilitas, kami sangat ingin mendengarnya.",
-    "feedbackCta": "✉️ Kirim Feedback"
+    "feedbackCta": "Kirim Feedback"
   },
   "safety": {
     "title": "Keselamatan & Dukungan",
     "subtitle": "Panduan untuk menjaga kesejahteraan emosional saat menggunakan Senara.",
-    "disclaimerTitle": "⚠️ Penting untuk Diketahui",
+    "disclaimerTitle": "Penting untuk Diketahui",
     "disclaimerBody": "<strong>Senara bukan pengganti layanan kesehatan mental profesional.</strong> Cerita kami bertujuan untuk meningkatkan literasi dan kesadaran, bukan untuk mendiagnosis, mengobati, atau memberikan terapi. Jika kamu mengalami masalah kesehatan mental, silakan hubungi profesional.",
     "whenHelpTitle": "Kapan Harus Mencari Bantuan",
     "whenHelpIntro": "Membaca cerita tentang topik sensitif kadang bisa memicu perasaan yang kuat. Ini normal. Tapi ada saat-saat di mana kamu perlu berbicara dengan seseorang yang terlatih.",
@@ -403,27 +403,27 @@
       "sejiwa": {
         "title": "Sejiwa (Kemenkes RI)",
         "desc": "Layanan konseling kesehatan jiwa dari Kementerian Kesehatan. Gratis, 24 jam.",
-        "contact": "📞 119 ext. 8"
+        "contact": "119 ext. 8"
       },
       "itl": {
         "title": "Into The Light Indonesia",
         "desc": "Komunitas pencegahan bunuh diri. Menyediakan informasi dan dukungan.",
-        "contact": "🌐 intothelightid.org"
+        "contact": "intothelightid.org"
       },
       "pulih": {
         "title": "Yayasan Pulih",
         "desc": "Layanan konseling untuk trauma dan kesehatan mental.",
-        "contact": "📞 (021) 788-42580"
+        "contact": "(021) 788-42580"
       },
       "tepsa": {
         "title": "Telepon Pelayanan Sosial Anak (TePSA)",
         "desc": "Untuk anak dan remaja yang membutuhkan bantuan. Gratis, 24 jam.",
-        "contact": "📞 1500-771"
+        "contact": "1500-771"
       },
       "komnas": {
         "title": "Komnas Perempuan",
         "desc": "Untuk perempuan yang mengalami kekerasan atau membutuhkan dukungan.",
-        "contact": "📞 (021) 390-3963"
+        "contact": "(021) 390-3963"
       }
     },
     "safeTipsTitle": "Tips Membaca Cerita Sensitif",
@@ -445,12 +445,12 @@
     ],
     "supportTitle": "Kamu Tidak Sendirian",
     "supportBody1": "Apapun yang sedang kamu alami, ada orang-orang yang peduli dan siap membantu. Jangan ragu untuk menjangkau.",
-    "supportBody2": "Jika kamu merasa ada konten di Senara yang berpotensi berbahaya atau perlu diperbaiki, silakan <a href='contact.html' style='color: #047857; text-decoration: underline;'>hubungi kami</a>. Kami sangat menghargai masukanmu."
+    "supportBody2": "Jika kamu merasa ada konten di Senara yang berpotensi berbahaya atau perlu diperbaiki, silakan <a href='/contact' style='color: #047857; text-decoration: underline;'>hubungi kami</a>. Kami sangat menghargai masukanmu."
   },
   "privacy": {
     "title": "Kebijakan Privasi",
     "subtitle": "Bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi kamu.",
-    "lastUpdated": "📅 Terakhir diperbarui: Desember 2025",
+    "lastUpdated": "Terakhir diperbarui: Desember 2025",
     "summary": "<strong>Ringkasan:</strong> Kami tidak mengumpulkan data pribadi. Tidak ada login, tidak ada tracking individual. Senara dirancang dengan privasi sebagai prioritas.",
     "tocTitle": "Daftar Isi",
     "sections": {
@@ -521,7 +521,7 @@
       "contact": {
         "title": "8. Hubungi Kami",
         "body": "Jika kamu memiliki pertanyaan tentang kebijakan privasi ini atau bagaimana kami menangani data, silakan hubungi kami:",
-        "email": "📧 Email: <a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
+        "email": "Email: <a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
       }
     }
   },
@@ -578,27 +578,27 @@
       {
         "title": "Baca Bersama di Kelas/Workshop",
         "body": "Tampilkan cerita di layar proyektor dan ajak peserta memilih bersama. Setiap pilihan menjadi bahan diskusi. Cocok untuk sesi 30-60 menit.",
-        "icon": "📱"
+        "icon": ""
       },
       {
         "title": "Tugas Mandiri + Refleksi",
         "body": "Minta peserta membaca cerita secara mandiri, lalu tulis refleksi tentang pilihan yang mereka buat dan alasannya. Bagus untuk penugasan mingguan.",
-        "icon": "📝"
+        "icon": ""
       },
       {
         "title": "Pre-Workshop Primer",
         "body": "Kirim link cerita sebelum workshop sebagai 'pemanasan'. Peserta datang dengan konteks yang sama dan siap untuk diskusi lebih dalam.",
-        "icon": "🎯"
+        "icon": ""
       },
       {
         "title": "Perbandingan Jalur Cerita",
         "body": "Bagi peserta jadi kelompok, masing-masing pilih jalur berbeda. Lalu bandingkan ending dan diskusikan kenapa hasilnya berbeda.",
-        "icon": "🔄"
+        "icon": ""
       },
       {
         "title": "Assessment Informal",
         "body": "Gunakan quiz dalam cerita sebagai pre/post assessment untuk mengukur pemahaman peserta tentang topik tertentu.",
-        "icon": "📊"
+        "icon": ""
       }
     ],
     "stepsTitle": "Cara Memulai",
@@ -626,32 +626,32 @@
       {
         "title": "100% Gratis",
         "body": "Tidak ada biaya lisensi atau langganan",
-        "icon": "💰"
+        "icon": ""
       },
       {
         "title": "Akses Mudah",
         "body": "Cukup browser, tidak perlu install aplikasi",
-        "icon": "📱"
+        "icon": ""
       },
       {
         "title": "Engaging",
         "body": "Format interaktif yang menarik perhatian",
-        "icon": "🎯"
+        "icon": ""
       },
       {
         "title": "Pemicu Diskusi",
         "body": "Pilihan dalam cerita jadi bahan obrolan",
-        "icon": "💬"
+        "icon": ""
       },
       {
         "title": "Aman",
         "body": "Tidak perlu login, tidak ada data yang dikumpulkan",
-        "icon": "🔒"
+        "icon": ""
       },
       {
         "title": "Konteks Lokal",
         "body": "Cerita dengan latar dan karakter Indonesia",
-        "icon": "🇮🇩"
+        "icon": ""
       }
     ],
     "storiesTitle": "Cerita yang Cocok untuk Organisasi",
@@ -668,8 +668,8 @@
     "testimonialCite": "Fasilitator Workshop Kesehatan Mental",
     "ctaTitle": "Tertarik Menggunakan Senara?",
     "ctaDesc": "Mulai sekarang atau hubungi kami untuk diskusi lebih lanjut tentang bagaimana Senara bisa mendukung program organisasi kamu.",
-    "ctaPrimary": "📚 Jelajahi Koleksi",
-    "ctaSecondary": "✉️ Hubungi Kami"
+    "ctaPrimary": "Jelajahi Koleksi",
+    "ctaSecondary": "Hubungi Kami"
   },
   "home": {
     "badge": "Gratis · Nonprofit · Tanpa Daftar",
@@ -802,7 +802,7 @@
     "viewCollection": "Lihat Koleksi →",
     "nonprofit": "Nonprofit",
     "freeForAll": "Gratis untuk semua",
-    "copyright": "Senara. Dibuat dengan ❤️ di Indonesia.",
+    "copyright": "Senara. Dibuat dengan cinta di Indonesia.",
     "privacy": "Privasi",
     "terms": "Syarat",
     "accessibility": "Aksesibilitas"
@@ -825,15 +825,15 @@
     "filterDifficulty": "Tingkat Kesulitan",
     "filterDuration": "Durasi",
     "statusTitle": "Status",
-    "statusAvailable": "✅ Tersedia",
-    "statusComingSoon": "🔜 Segera Hadir",
+    "statusAvailable": "Tersedia",
+    "statusComingSoon": "Segera Hadir",
     "allCategories": "Semua Kategori",
     "allStories": "Semua Cerita",
     "allDifficulties": "Semua Tingkat",
     "allDurations": "Semua Durasi",
-    "durationShort": "⚡ Singkat (< 15 menit)",
-    "durationMedium": "📖 Sedang (15-30 menit)",
-    "durationLong": "📚 Panjang (> 30 menit)",
+    "durationShort": "Singkat (< 15 menit)",
+    "durationMedium": "Sedang (15-30 menit)",
+    "durationLong": "Panjang (> 30 menit)",
     "resetFilters": "Reset Filter",
     "resetAllFilters": "Reset Semua Filter",
     "noResults": "Tidak ada cerita yang cocok dengan filter.",
@@ -847,14 +847,14 @@
     "resultsPrefix": "Menampilkan",
     "sortLabel": "Urutkan:",
     "sortDefault": "Default",
-    "sortNewest": "🆕 Terbaru",
-    "sortOldest": "📅 Terlama",
-    "sortPopular": "🔥 Terpopuler",
+    "sortNewest": "Terbaru",
+    "sortOldest": "Terlama",
+    "sortPopular": "Terpopuler",
     "sortRating": "⭐ Rating Tertinggi",
-    "sortDurationAsc": "⏱️ Durasi: Singkat → Panjang",
-    "sortDurationDesc": "⏱️ Durasi: Panjang → Singkat",
-    "sortTitleAsc": "🔤 Judul: A → Z",
-    "sortTitleDesc": "🔤 Judul: Z → A",
+    "sortDurationAsc": "⏱Durasi: Singkat → Panjang",
+    "sortDurationDesc": "⏱Durasi: Panjang → Singkat",
+    "sortTitleAsc": "Judul: A → Z",
+    "sortTitleDesc": "Judul: Z → A",
     "emptyTitle": "Tidak ada cerita ditemukan",
     "emptyDescription": "Coba ubah filter atau kata kunci pencarian untuk menemukan cerita yang kamu cari",
     "emptyReset": "Reset Semua Filter",
@@ -944,7 +944,7 @@
     "beginner": "Pemula",
     "intermediate": "Menengah",
     "advanced": "Lanjutan",
-    "startHere": "🌱 Mulai dari Sini",
+    "startHere": "Mulai dari Sini",
     "duration": "Durasi",
     "age": "Usia",
     "play": "Mainkan",
@@ -1003,7 +1003,7 @@
     "searchPlaceholder": "Cari video...",
     "curatedVideo": "Video edukatif pilihan dari Senara TV",
     "preparing": "Video sedang disiapkan...",
-    "editorsPick": "✨ Pilihan Tim",
+    "editorsPick": "Pilihan Tim",
     "play": "Putar",
     "watchNow": "Tonton Sekarang",
     "visitChannel": "Kunjungi Channel",
@@ -1079,9 +1079,9 @@
     "prob3Desc": "Kursus online, workshop, buku. Semuanya butuh biaya. Kami percaya akses ke pengalaman yang bermakna seharusnya tidak dibatasi kemampuan finansial.",
     "missionTitle": "Misi Kami",
     "missionStatement": "Membuat pengalaman bermakna bisa diakses siapa saja, tanpa biaya, tanpa syarat.",
-    "missionPoint1": "💚 Gratis selamanya",
-    "missionPoint2": "🤝 Nonprofit",
-    "missionPoint3": "👥 Berbasis komunitas",
+    "missionPoint1": "Gratis selamanya",
+    "missionPoint2": "Nonprofit",
+    "missionPoint3": "Berbasis komunitas",
     "missionP1": "Senara adalah platform nonprofit. Kami tidak menjual apapun. Semua cerita bisa diakses gratis, sekarang dan selamanya.",
     "missionP2": "Bukan freemium, bukan trial. <strong>Gratis</strong>. Tidak ada investor yang menuntut profit, tidak ada target revenue yang harus dicapai. Cerita-cerita di Senara dibuat oleh relawan yang peduli.",
     "visionTitle": "Visi Jangka Panjang",
@@ -1103,9 +1103,9 @@
     "closingP2": "Tapi kami percaya: <strong>cerita punya kekuatan untuk mengubah cara orang melihat dunia.</strong> Dan kami ingin terus membuat cerita yang bermakna.",
     "closingP3": "Terima kasih sudah menjadi bagian dari perjalanan ini.",
     "closingLinks": {
-      "team": "👥 Kenali Tim Kami",
-      "approach": "📖 Pendekatan Kami",
-      "roadmap": "🗺️ Peta Jalan"
+      "team": "Kenali Tim Kami",
+      "approach": "Pendekatan Kami",
+      "roadmap": "Peta Jalan"
     },
     "tabs": {
       "story": "Cerita Kami",
@@ -1123,54 +1123,54 @@
     "storiesIntro": "Cerita-cerita baru yang sedang dalam proses pembuatan:",
     "stories": {
       "digital": {
-        "title": "📱 Literasi Digital & Media Sosial",
+        "title": "Literasi Digital & Media Sosial",
         "desc": "Cerita tentang navigasi dunia digital: mengenali hoax, menjaga privasi online, dan membangun hubungan sehat di media sosial.",
-        "target": "📅 Target: Q1 2025",
-        "chapters": "📚 3-4 chapter"
+        "target": "Target: Q1 2025",
+        "chapters": "3-4 chapter"
       },
       "finance": {
-        "title": "💰 Literasi Keuangan untuk Pemula",
+        "title": "Literasi Keuangan untuk Pemula",
         "desc": "Belajar mengelola uang, menabung, dan membuat keputusan finansial yang bijak lewat cerita karakter yang relatable.",
-        "target": "📅 Target: Q2 2025",
-        "chapters": "📚 4-5 chapter"
+        "target": "Target: Q2 2025",
+        "chapters": "4-5 chapter"
       },
       "communication": {
-        "title": "🤝 Komunikasi & Resolusi Konflik",
+        "title": "Komunikasi & Resolusi Konflik",
         "desc": "Bagaimana berkomunikasi efektif, menyelesaikan konflik, dan membangun hubungan yang sehat dengan orang lain.",
-        "target": "📅 Target: 2025"
+        "target": "Target: 2025"
       }
     },
-    "storiesNote": "💡 Punya ide cerita? <a href='contact.html' style='color: #d97706; text-decoration: underline;'>Hubungi kami</a> atau <a href='about.html?tab=contribute' style='color: #d97706; text-decoration: underline;'>bergabung sebagai kontributor</a>.",
+    "storiesNote": "Punya ide cerita? <a href='/contact' style='color: #d97706; text-decoration: underline;'>Hubungi kami</a> atau <a href='/about?tab=contribute' style='color: #d97706; text-decoration: underline;'>bergabung sebagai kontributor</a>.",
     "statuses": {
-      "inProgress": "🔨 Dalam Pengerjaan",
-      "planned": "📋 Direncanakan",
-      "exploring": "💭 Eksplorasi"
+      "inProgress": "Dalam Pengerjaan",
+      "planned": "Direncanakan",
+      "exploring": "Eksplorasi"
     },
     "featuresTitle": "Fitur Platform",
     "featuresIntro": "Pengembangan fitur untuk meningkatkan pengalaman pengguna:",
     "features": {
       "account": {
-        "title": "👤 Sistem Akun",
+        "title": "Sistem Akun",
         "desc": "Login untuk menyimpan progress dan sinkronisasi antar perangkat."
       },
       "stats": {
-        "title": "📊 Statistik Belajar",
+        "title": "Statistik Belajar",
         "desc": "Lihat cerita yang sudah dibaca, waktu bermain, dan pencapaian."
       },
       "gamification": {
-        "title": "🏆 Gamification",
+        "title": "Gamification",
         "desc": "Badge, streak, dan reward untuk memotivasi pembaca."
       },
       "mobile": {
-        "title": "📱 Aplikasi Mobile",
+        "title": "Aplikasi Mobile",
         "desc": "Akses Senara lewat aplikasi Android/iOS."
       },
       "multilang": {
-        "title": "🌐 Multi-bahasa",
+        "title": "Multi-bahasa",
         "desc": "Terjemahan cerita ke bahasa Inggris."
       },
       "offline": {
-        "title": "📥 Mode Offline",
+        "title": "Mode Offline",
         "desc": "Download cerita untuk dibaca tanpa internet."
       }
     },
@@ -1190,9 +1190,9 @@
         "desc": "Cari cerita berdasarkan kategori, durasi, dan tingkat kesulitan."
       }
     },
-    "feedbackTitle": "💬 Bantu Kami Prioritaskan",
+    "feedbackTitle": "Bantu Kami Prioritaskan",
     "feedbackDesc": "Roadmap ini dibentuk oleh feedback komunitas. Fitur atau cerita mana yang paling kamu butuhkan? Apa yang harus kami kerjakan lebih dulu?",
-    "feedbackCta": "✉️ Kirim Masukan"
+    "feedbackCta": "Kirim Masukan"
   },
   "faq": {
     "title": "Pertanyaan Umum",
@@ -1285,7 +1285,7 @@
         "desc": "Membantu menyebarkan Senara ke komunitas yang tepat, mengelola media sosial, atau menjalin kerjasama dengan organisasi lain."
       }
     },
-    "noExpNote": "💡 <strong>Tidak punya pengalaman?</strong> Tidak masalah. Kami terbuka untuk pemula yang mau belajar. Yang penting adalah semangat dan komitmen untuk berkontribusi.",
+    "noExpNote": "<strong>Tidak punya pengalaman?</strong> Tidak masalah. Kami terbuka untuk pemula yang mau belajar. Yang penting adalah semangat dan komitmen untuk berkontribusi.",
     "processTitle": "Bagaimana Kolaborasi Berjalan",
     "processIntro": "Proses kontribusi di Senara dirancang agar fleksibel dan tidak memberatkan:",
     "steps": {
@@ -1336,10 +1336,10 @@
     },
     "ctaTitle": "Tertarik Bergabung?",
     "ctaDesc": "Kami senang mendengar dari kamu. Ceritakan sedikit tentang dirimu dan bagaimana kamu ingin berkontribusi.",
-    "ctaForm": "📝 Isi Form Kontributor",
-    "ctaEmail": "✉️ Kirim Email",
+    "ctaForm": "Isi Form Kontributor",
+    "ctaEmail": "Kirim Email",
     "ctaTeamLink": "Kenali tim di balik Senara →",
-    "partnerTitle": "🤝 Untuk Organisasi & Kemitraan",
+    "partnerTitle": "Untuk Organisasi & Kemitraan",
     "partnerDesc": "Apakah kamu mewakili sekolah, komunitas, atau organisasi yang ingin berkolaborasi dengan Senara? Kami terbuka untuk berbagai bentuk kerjasama, mulai dari pembuatan cerita khusus hingga program bersama.",
     "partnerCta": "Hubungi untuk Kemitraan"
   },
@@ -1355,10 +1355,10 @@
       "rating": "Rating"
     },
     "saveTip": {
-      "title": "💡 Kamu bisa simpan progress kapan saja!",
-      "desc": "Klik <strong>☰ Menu</strong> di pojok kanan bawah → pilih <strong>\"Save\"</strong>. Untuk lanjutkan, pilih <strong>\"Load\"</strong>."
+      "title": "Kamu bisa simpan progress kapan saja!",
+      "desc": "Klik <strong>Menu</strong> di pojok kanan bawah → pilih <strong>\"Save\"</strong>. Untuk lanjutkan, pilih <strong>\"Load\"</strong>."
     },
-    "comingSoon": "🔜 Segera Hadir",
+    "comingSoon": "Segera Hadir",
     "comingSoonDesc": "Cerita ini sedang dalam pengembangan",
     "playNow": "Mainkan Sekarang",
     "scrollMore": "Scroll untuk info lebih lanjut",
@@ -1422,15 +1422,15 @@
     "contribBoxTitle": "Terima kasih kepada semua yang sudah berkontribusi!",
     "contribBoxDesc": "Penulis, ilustrator, editor, penguji, dan semua yang membantu mewujudkan cerita-cerita ini.",
     "roles": {
-      "writer": "✍️ Penulis",
-      "illustrator": "🎨 Ilustrator",
-      "editor": "📝 Editor",
-      "tester": "🧪 Penguji",
-      "translator": "🌐 Penerjemah",
-      "outreach": "📣 Outreach"
+      "writer": "Penulis",
+      "illustrator": "Ilustrator",
+      "editor": "Editor",
+      "tester": "Penguji",
+      "translator": "Penerjemah",
+      "outreach": "Outreach"
     },
     "ctaTitle": "Ingin Bergabung?",
     "ctaDesc": "Kami selalu mencari orang-orang yang ingin berkontribusi, baik sebagai penulis, ilustrator, editor, atau dalam peran lainnya.",
-    "ctaButton": "✨ Lihat Cara Berkontribusi"
+    "ctaButton": "Lihat Cara Berkontribusi"
   }
 }

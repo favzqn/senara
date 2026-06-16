@@ -24,11 +24,11 @@
     "contribTitle": "協力者・パートナーシップ",
     "contribDesc": "ボランティアやコラボレーションに興味がありますか？機会については専用ページをご覧ください。",
     "contribButton": "機会を見る",
-    "responseNote": "⏱️ 通常2〜3営業日以内に返信いたします。より早い回答が必要な場合は、<a href='faq.html' style='color: #d97706; text-decoration: underline;'>よくある質問</a>をご確認ください。",
+    "responseNote": "⏱通常2〜3営業日以内に返信いたします。より早い回答が必要な場合は、<a href='/faq' style='color: #d97706; text-decoration: underline;'>よくある質問</a>をご確認ください。",
     "socialTitle": "つながりましょう",
     "socialLinks": {
-      "trakteer": "🍰 Trakteer",
-      "instagram": "📷 Instagram"
+      "trakteer": "Trakteer",
+      "instagram": "Instagram"
     }
   },
   "pendekatan": {
@@ -45,23 +45,23 @@
     "principlesIntro": "Senaraのすべての物語は、いくつかの重要な原則に従っています：",
     "principles": [
       {
-        "title": "🪞 指示より内省を",
+        "title": "指示より内省を",
         "body": "読者に「正しい」「間違い」とは教えません。物語は読者自身の選択を振り返る機会を提供します。"
       },
       {
-        "title": "🌍 関連性のあるコンテキスト",
+        "title": "関連性のあるコンテキスト",
         "body": "物語はインドネシアの現実的な状況を反映しています。登場人物は読者が共感できる本物のジレンマに直面します。"
       },
       {
-        "title": "🔄 結果を通じて学ぶ",
+        "title": "結果を通じて学ぶ",
         "body": "すべての選択には影響があります。読者は現実のリスクを負うことなく、結果を体験できます。"
       },
       {
-        "title": "💬 会話のきっかけ",
+        "title": "会話のきっかけ",
         "body": "私たちの物語は議論を促すように作られています。教師やファシリテーターは、より深い対話のきっかけとして活用できます。"
       },
       {
-        "title": "🎭 「完璧な」結末はない",
+        "title": "「完璧な」結末はない",
         "body": "現実の人生は二元的ではありません。物語は、すべての決定にはトレードオフがあり、「唯一の正解」はほとんどないことを示します。"
       }
     ],
@@ -105,19 +105,19 @@
     "interactiveIntro": "ビジュアルノベル形式を選んだのには理由があります：",
     "interactivePoints": [
       {
-        "title": "🧠 能動的な参加",
+        "title": "能動的な参加",
         "body": "選択をすることで、読者はコンテンツを消費するだけでなく、能動的に考えるようになります。"
       },
       {
-        "title": "🔁 安全な探求",
+        "title": "安全な探求",
         "body": "読者は複数のルートを試し、現実のリスクなしに結果を確認できます。"
       },
       {
-        "title": "🎯 パーソナライゼーション",
+        "title": "パーソナライゼーション",
         "body": "誰の旅も少しずつ異なるため、より個人的で関連性の高い体験になります。"
       },
       {
-        "title": "💭 内省",
+        "title": "内省",
         "body": "各選択は内なる問いです：「自分ならどうする？」深い内省を促します。"
       }
     ],
@@ -136,7 +136,7 @@
   "terms": {
     "title": "利用規約",
     "subtitle": "Senaraプラットフォームのご利用に関する規則です。",
-    "lastUpdated": "📅 最終更新：2025年12月",
+    "lastUpdated": "最終更新：2025年12月",
     "tocTitle": "目次",
     "sections": {
       "acceptance": {
@@ -186,7 +186,7 @@
         "title": "5. 免責事項",
         "highlight": "<strong>重要：</strong>Senaraは専門的なサービスの代替ではありません。コンテンツはリテラシーと啓発を目的としたものであり、診断、治療、専門的なアドバイスを提供するものではありません。",
         "mentalTitle": "メンタルヘルスコンテンツ",
-        "mentalBody": "メンタルヘルスを扱う物語は教育目的です。課題を抱えている場合は、資格を持つ専門家にご相談ください。サポートラインについては<a href='safety.html' style='color: #d97706;'>安全に関するページ</a>をご覧ください。",
+        "mentalBody": "メンタルヘルスを扱う物語は教育目的です。課題を抱えている場合は、資格を持つ専門家にご相談ください。サポートラインについては<a href='/safety' style='color: #d97706;'>安全に関するページ</a>をご覧ください。",
         "accuracyTitle": "情報の正確性",
         "accuracyBody": "正確で最新の情報提供に努めていますが、エラーがないとは保証できません。問題を発見した場合はお知らせください。"
       },
@@ -209,7 +209,7 @@
       "contact": {
         "title": "8. お問い合わせ",
         "body": "本規約に関するご質問はこちらまで：",
-        "email": "📧 メール：<a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
+        "email": "メール：<a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
       }
     }
   },
@@ -246,7 +246,7 @@
     "methodsTitle": "支援方法",
     "methodsDesc": "Senaraは100%無料でコミュニティが運営しています。すべての寄付が物語を無料に保つ助けとなります。",
     "donateTrakteer": "Trakteerで寄付",
-    "usageNote": "💡 事務所も常勤スタッフもいません。すべてリモートでボランティアベースで運営されているため、運営コストを低く抑えられています。",
+    "usageNote": "事務所も常勤スタッフもいません。すべてリモートでボランティアベースで運営されているため、運営コストを低く抑えられています。",
     "principlesTitle": "私たちの原則",
     "principles": {
       "noExclusive": {
@@ -266,21 +266,21 @@
         "desc": "資金の使い道についてオープンにしています。何でもお聞きください。"
       }
     },
-    "gratitudeTitle": "🙏 ありがとうございます",
+    "gratitudeTitle": "ありがとうございます",
     "gratitudeP1": "寄付、共有、またはただ読んでくださることでSenaraを支えてくださるすべての方々に、心から感謝いたします。",
     "gratitudeP2": "皆さまのサポートが、より多くの人々のために有意義な物語を作り続ける力となります。",
-    "gratitudeCta": "🍰 Trakteerで支援する"
+    "gratitudeCta": "Trakteerで支援する"
   },
   "accessibility": {
     "title": "アクセシビリティ",
     "subtitle": "Senaraをすべての人が利用できるようにするための取り組みについて。",
-    "commitmentTitle": "🎯 私たちの約束",
+    "commitmentTitle": "私たちの約束",
     "commitmentBody": "すべての人が有意義な物語と学習体験にアクセスできるべきだと信じています。Senaraは、障がいのある方を含むすべてのユーザーにとって包括的なプラットフォームとなるよう、アクセシビリティの向上を続けています。",
     "intro": "以下は、すでに利用可能なアクセシビリティ機能と、現在開発中の機能です。",
     "statuses": {
-      "available": "✓ 利用可能",
-      "partial": "⚡ 対応中",
-      "planned": "📋 予定"
+      "available": "利用可能",
+      "partial": "対応中",
+      "planned": "予定"
     },
     "sections": {
       "visual": {
@@ -378,12 +378,12 @@
     ],
     "feedbackTitle": "アクセシビリティの改善にご協力ください",
     "feedbackDesc": "アクセシビリティに関する問題やご提案がありましたら、ぜひお知らせください。",
-    "feedbackCta": "✉️ フィードバックを送る"
+    "feedbackCta": "フィードバックを送る"
   },
   "safety": {
     "title": "安全とサポート",
     "subtitle": "Senaraを探索する際の心の安全についてのガイドです。",
-    "disclaimerTitle": "⚠️ 重要なお願い",
+    "disclaimerTitle": "重要なお願い",
     "disclaimerBody": "<strong>Senaraは専門的なメンタルヘルスケアの代替ではありません。</strong>物語はリテラシーと啓発を目的としたものであり、診断、治療、セラピーを提供するものではありません。メンタルヘルスの課題を抱えている場合は、専門家にご相談ください。",
     "whenHelpTitle": "助けを求めるべきとき",
     "whenHelpIntro": "センシティブなテーマの物語を読むと、強い感情が湧き上がることがあります。それは自然なことです。それでも、訓練された専門家に話すことが最善の次のステップになる場面があります。",
@@ -403,27 +403,27 @@
       "sejiwa": {
         "title": "Sejiwa（インドネシア保健省）",
         "desc": "保健省のメンタルヘルスカウンセリング。無料、24時間対応。",
-        "contact": "📞 119 ext. 8"
+        "contact": "119 ext. 8"
       },
       "itl": {
         "title": "Into The Light Indonesia",
         "desc": "自殺予防コミュニティ。リソースとピアサポートを提供。",
-        "contact": "🌐 intothelightid.org"
+        "contact": "intothelightid.org"
       },
       "pulih": {
         "title": "Yayasan Pulih",
         "desc": "トラウマ回復とメンタルウェルネスのためのカウンセリングサービス。",
-        "contact": "📞 (021) 788-42580"
+        "contact": "(021) 788-42580"
       },
       "tepsa": {
         "title": "こども社会サービスライン（TePSA）",
         "desc": "支援が必要なこどもや若者のための24時間対応ヘルプライン。",
-        "contact": "📞 1500-771"
+        "contact": "1500-771"
       },
       "komnas": {
         "title": "Komnas Perempuan",
         "desc": "暴力を受けている、または保護が必要な女性へのサポート。",
-        "contact": "📞 (021) 390-3963"
+        "contact": "(021) 390-3963"
       }
     },
     "safeTipsTitle": "センシティブな物語を読む際のヒント",
@@ -445,12 +445,12 @@
     ],
     "supportTitle": "あなたは一人ではありません",
     "supportBody1": "何を겪고いても、気にかけ支えてくれる人はいます。ぜひ助けを求めてください。",
-    "supportBody2": "Senaraのコンテンツで安全でないと感じるものや改善が必要なものを見つけた場合は、<a href='contact.html' style='color: #047857; text-decoration: underline;'>お知らせください</a>。皆さまのフィードバックは本当に大切にしています。"
+    "supportBody2": "Senaraのコンテンツで安全でないと感じるものや改善が必要なものを見つけた場合は、<a href='/contact' style='color: #047857; text-decoration: underline;'>お知らせください</a>。皆さまのフィードバックは本当に大切にしています。"
   },
   "privacy": {
     "title": "プライバシーポリシー",
     "subtitle": "情報の収集、使用、保護の方法について。",
-    "lastUpdated": "📅 最終更新：2025年12月",
+    "lastUpdated": "最終更新：2025年12月",
     "summary": "<strong>要約：</strong>個人データは収集しません。ログインも個別のトラッキングもありません。Senaraはプライバシーを重視して構築されています。",
     "tocTitle": "目次",
     "sections": {
@@ -521,7 +521,7 @@
       "contact": {
         "title": "8. お問い合わせ",
         "body": "このポリシーやデータの取り扱いについてご質問がある場合は、お気軽にご連絡ください：",
-        "email": "📧 メール：<a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
+        "email": "メール：<a href='mailto:fauzan08fauzan@gmail.com' style='color: #d97706;'>fauzan08fauzan@gmail.com</a>"
       }
     }
   },
@@ -578,27 +578,27 @@
       {
         "title": "授業・ワークショップで一緒に読む",
         "body": "物語をプロジェクトし、選択肢に一緒に投票します。すべての分岐がディスカッションポイントになります。30〜60分のセッションに最適です。",
-        "icon": "📱"
+        "icon": ""
       },
       {
         "title": "個人課題＋振り返り",
         "body": "参加者に自分で読んでもらい、その後に行った選択とその理由について振り返りを提出してもらいます。週次の課題に最適です。",
-        "icon": "📝"
+        "icon": ""
       },
       {
         "title": "ワークショップ前のウォームアップ",
         "body": "ワークショップの前に物語を送り、ウォームアップとして全員が同じコンテキストを持って参加できるようにします。",
-        "icon": "🎯"
+        "icon": ""
       },
       {
         "title": "ストーリーのルート比較",
         "body": "参加者をグループに分け、それぞれ異なる分岐を探索します。エンディングを比較し、異なる結果につながった理由を議論します。",
-        "icon": "🔄"
+        "icon": ""
       },
       {
         "title": "インフォーマルな評価",
         "body": "物語のクイズを、特定のトピックについての理解度を測る前後のチェックとして活用します。",
-        "icon": "📊"
+        "icon": ""
       }
     ],
     "stepsTitle": "始め方",
@@ -626,32 +626,32 @@
       {
         "title": "完全無料",
         "body": "ライセンス料やサブスクリプションなし",
-        "icon": "💰"
+        "icon": ""
       },
       {
         "title": "簡単アクセス",
         "body": "ブラウザで動作、アプリのインストール不要",
-        "icon": "📱"
+        "icon": ""
       },
       {
         "title": "魅力的",
         "body": "インタラクティブな形式で関心を維持",
-        "icon": "🎯"
+        "icon": ""
       },
       {
         "title": "ディスカッションに最適",
         "body": "選択肢が有意義な会話に変わる",
-        "icon": "💬"
+        "icon": ""
       },
       {
         "title": "安全",
         "body": "ログイン不要、データ収集なし",
-        "icon": "🔒"
+        "icon": ""
       },
       {
         "title": "ローカルコンテキスト",
         "body": "インドネシアの身近な設定の物語",
-        "icon": "🇮🇩"
+        "icon": ""
       }
     ],
     "storiesTitle": "おすすめの物語",
@@ -668,8 +668,8 @@
     "testimonialCite": "メンタルヘルスワークショップファシリテーター",
     "ctaTitle": "Senaraを使ってみませんか？",
     "ctaDesc": "今すぐ始めたり、Senaraがどのようにプログラムをサポートできるか話し合ったりしましょう。",
-    "ctaPrimary": "📚 コレクションを見る",
-    "ctaSecondary": "✉️ お問い合わせ"
+    "ctaPrimary": "コレクションを見る",
+    "ctaSecondary": "お問い合わせ"
   },
   "home": {
     "badge": "無料 ・ 非営利 ・ 登録不要",
@@ -802,7 +802,7 @@
     "viewCollection": "コレクションを見る →",
     "nonprofit": "非営利",
     "freeForAll": "誰もが無料",
-    "copyright": "Senara。インドネシアで ❤️ を込めて制作。",
+    "copyright": "Senara。インドネシアで を込めて制作。",
     "privacy": "プライバシー",
     "terms": "利用規約",
     "accessibility": "アクセシビリティ"
@@ -825,15 +825,15 @@
     "filterDifficulty": "難易度",
     "filterDuration": "所要時間",
     "statusTitle": "ステータス",
-    "statusAvailable": "✅ 利用可能",
-    "statusComingSoon": "🔜 近日公開",
+    "statusAvailable": "利用可能",
+    "statusComingSoon": "近日公開",
     "allCategories": "すべてのカテゴリー",
     "allStories": "すべての物語",
     "allDifficulties": "すべてのレベル",
     "allDurations": "すべての所要時間",
-    "durationShort": "⚡ 短い（15分未満）",
-    "durationMedium": "📖 中程度（15〜30分）",
-    "durationLong": "📚 長い（30分以上）",
+    "durationShort": "短い（15分未満）",
+    "durationMedium": "中程度（15〜30分）",
+    "durationLong": "長い（30分以上）",
     "resetFilters": "フィルターをリセット",
     "resetAllFilters": "すべてのフィルターをリセット",
     "noResults": "フィルターに一致する物語がありません。",
@@ -848,13 +848,13 @@
     "sortLabel": "並べ替え：",
     "sortDefault": "デフォルト",
     "sortNewest": "🆕 新しい順",
-    "sortOldest": "📅 古い順",
-    "sortPopular": "🔥 人気順",
+    "sortOldest": "古い順",
+    "sortPopular": "人気順",
     "sortRating": "⭐ 評価が高い順",
-    "sortDurationAsc": "⏱️ 所要時間：短い → 長い",
-    "sortDurationDesc": "⏱️ 所要時間：長い → 短い",
-    "sortTitleAsc": "🔤 タイトル：A → Z",
-    "sortTitleDesc": "🔤 タイトル：Z → A",
+    "sortDurationAsc": "⏱所要時間：短い → 長い",
+    "sortDurationDesc": "⏱所要時間：長い → 短い",
+    "sortTitleAsc": "タイトル：A → Z",
+    "sortTitleDesc": "タイトル：Z → A",
     "emptyTitle": "物語が見つかりません",
     "emptyDescription": "フィルターや検索条件を調整して、お探しの物語を見つけてください。",
     "emptyReset": "すべてのフィルターをリセット",
@@ -878,9 +878,9 @@
     "prob3Desc": "オンラインコース、ワークショップ、本…すべてお金がかかります。有意義な体験へのアクセスは経済状況に左右されるべきではないと信じています。",
     "missionTitle": "ミッション",
     "missionStatement": "コストや条件なしに、有意義な体験をすべての人に届ける。",
-    "missionPoint1": "💚 永遠に無料",
-    "missionPoint2": "🤝 非営利",
-    "missionPoint3": "👥 コミュニティ主導",
+    "missionPoint1": "永遠に無料",
+    "missionPoint2": "非営利",
+    "missionPoint3": "コミュニティ主導",
     "missionP1": "Senaraは非営利プラットフォームです。何も販売しません。すべての物語は無料で、今もこれからも。",
     "missionP2": "フリーミアムもトライアルもなし。<strong>完全に無料。</strong>利益を求める投資家も収益目標もありません。すべての物語は心あるボランテイアによって作られています。",
     "visionTitle": "長期ビジョン",
@@ -902,9 +902,9 @@
     "closingP2": "<strong>物語が人々の世界の見方を変えられると信じています。</strong>私たちは意味のある物語を作り続けます。",
     "closingP3": "この旅に参加してくださり、ありがとうございます。",
     "closingLinks": {
-      "team": "👥 チームに会う",
-      "approach": "📖 アプローチ",
-      "roadmap": "🗺️ ロードマップ"
+      "team": "チームに会う",
+      "approach": "アプローチ",
+      "roadmap": "ロードマップ"
     },
     "tabs": {
       "story": "私たちの物語",
@@ -958,16 +958,16 @@
     "contribBoxTitle": "貢献してくださったすべての方々に感謝します！",
     "contribBoxDesc": "ライター、イラストレーター、エディター、テスター、そしてこれらの物語を実現してくださったすべての方々。",
     "roles": {
-      "writer": "✍️ ライター",
-      "illustrator": "🎨 イラストレーター",
-      "editor": "📝 エディター",
-      "tester": "🧪 テスター",
-      "translator": "🌐 翻訳者",
-      "outreach": "📣 アウトリーチ"
+      "writer": "ライター",
+      "illustrator": "イラストレーター",
+      "editor": "エディター",
+      "tester": "テスター",
+      "translator": "翻訳者",
+      "outreach": "アウトリーチ"
     },
     "ctaTitle": "参加しませんか？",
     "ctaDesc": "ライター、イラストレーター、エディターとして貢献いただける方を常に募集しています。",
-    "ctaButton": "✨ 参加方法を見る"
+    "ctaButton": "参加方法を見る"
   },
   "whyVN": {
     "toggleVN": "ビジュアルノベル",
@@ -1052,7 +1052,7 @@
     "beginner": "初級",
     "intermediate": "中級",
     "advanced": "上級",
-    "startHere": "🌱 ここから始める",
+    "startHere": "ここから始める",
     "duration": "所要時間",
     "age": "年齢",
     "play": "プレイ",
@@ -1111,7 +1111,7 @@
     "searchPlaceholder": "動画を検索...",
     "curatedVideo": "Senara TVがキュレーションした教育動画",
     "preparing": "動画を準備中です...",
-    "editorsPick": "✨ 編集者のおすすめ",
+    "editorsPick": "編集者のおすすめ",
     "play": "再生",
     "watchNow": "今すぐ観る",
     "visitChannel": "チャンネルを見る",
@@ -1178,54 +1178,54 @@
     "storiesIntro": "現在開発中の新しい物語：",
     "stories": {
       "digital": {
-        "title": "📱 デジタル＆ソーシャルメディアリテラシー",
+        "title": "デジタル＆ソーシャルメディアリテラシー",
         "desc": "デジタル世界のナビゲーションについての物語：偽情報の見分け方、オンラインプライバシーの保護、健全なSNS習慣の構築。",
-        "target": "📅 目標：2025年Q1",
-        "chapters": "📚 3〜4章"
+        "target": "目標：2025年Q1",
+        "chapters": "3〜4章"
       },
       "finance": {
-        "title": "💰 ビギナー向け金融リテラシー",
+        "title": "ビギナー向け金融リテラシー",
         "desc": "身近なキャラクターの物語を通じて、お金の管理、貯蓄、賢い金融判断を学びましょう。",
-        "target": "📅 目標：2025年Q2",
-        "chapters": "📚 4〜5章"
+        "target": "目標：2025年Q2",
+        "chapters": "4〜5章"
       },
       "communication": {
-        "title": "🤝 コミュニケーションとconflict 解決",
+        "title": "コミュニケーションとconflict 解決",
         "desc": "効果的なコミュニケーション、conflict の解決、健全な人間関係の構築方法。",
-        "target": "📅 目標：2025年"
+        "target": "目標：2025年"
       }
     },
-    "storiesNote": "💡 ストーリーのアイデアがありますか？<a href='contact.html' style='color: #d97706; text-decoration: underline;'>お問い合わせ</a>または<a href='about.html?tab=contribute' style='color: #d97706; text-decoration: underline;'>協力者として参加</a>してください。",
+    "storiesNote": "ストーリーのアイデアがありますか？<a href='/contact' style='color: #d97706; text-decoration: underline;'>お問い合わせ</a>または<a href='/about?tab=contribute' style='color: #d97706; text-decoration: underline;'>協力者として参加</a>してください。",
     "statuses": {
-      "inProgress": "🔨 進行中",
-      "planned": "📋 予定",
-      "exploring": "💭 検討中"
+      "inProgress": "進行中",
+      "planned": "予定",
+      "exploring": "検討中"
     },
     "featuresTitle": "プラットフォーム機能",
     "featuresIntro": "ユーザーエクスペリエンス向上のための機能開発：",
     "features": {
       "account": {
-        "title": "👤 アカウントシステム",
+        "title": "アカウントシステム",
         "desc": "ログインして進行状況を保存し、デバイス間で同期。"
       },
       "stats": {
-        "title": "📊 学習統計",
+        "title": "学習統計",
         "desc": "読んだ物語、プレイ時間、実績を確認。"
       },
       "gamification": {
-        "title": "🏆 ゲーミフィケーション",
+        "title": "ゲーミフィケーション",
         "desc": "バッジ、連続記録、報酬で読者のモチベーションを維持。"
       },
       "mobile": {
-        "title": "📱 モバイルアプリ",
+        "title": "モバイルアプリ",
         "desc": "Android/iOSアプリからSenaraにアクセス。"
       },
       "multilang": {
-        "title": "🌐 多言語対応",
+        "title": "多言語対応",
         "desc": "英語への物語翻訳。"
       },
       "offline": {
-        "title": "📥 オフラインモード",
+        "title": "オフラインモード",
         "desc": "インターネットなしで読めるよう物語をダウンロード。"
       }
     },
@@ -1245,9 +1245,9 @@
         "desc": "カテゴリー、所要時間、難易度で物語を検索。"
       }
     },
-    "feedbackTitle": "💬 優先順位の決定をお手伝いください",
+    "feedbackTitle": "優先順位の決定をお手伝いください",
     "feedbackDesc": "このロードマップはコミュニティのフィードバックによって形作られています。どの機能や物語が最も必要ですか？最初に取り組むべきことは？",
-    "feedbackCta": "✉️ フィードバックを送る"
+    "feedbackCta": "フィードバックを送る"
   },
   "faq": {
     "title": "よくある質問",
@@ -1340,7 +1340,7 @@
         "desc": "適切なコミュニティにSenaraを広め、SNSを管理し、他の団体とのパートナーシップを構築します。"
       }
     },
-    "noExpNote": "💡 <strong>経験がなくても大丈夫ですか？</strong>問題ありません。学びたい初心者を歓迎しています。大切なのは貢献する意欲とCommitmentです。",
+    "noExpNote": "<strong>経験がなくても大丈夫ですか？</strong>問題ありません。学びたい初心者を歓迎しています。大切なのは貢献する意欲とCommitmentです。",
     "processTitle": "コラボレーションの流れ",
     "processIntro": "Senaraでの貢献プロセスは、柔軟で負担がかからないように設計されています：",
     "steps": {
@@ -1391,10 +1391,10 @@
     },
     "ctaTitle": "参加に興味がありますか？",
     "ctaDesc": "ぜひお声がけください。あなた自身と、どのように貢献したいか教えてください。",
-    "ctaForm": "📝 協力者フォームに記入",
-    "ctaEmail": "✉️ メールを送る",
+    "ctaForm": "協力者フォームに記入",
+    "ctaEmail": "メールを送る",
     "ctaTeamLink": "Senaraのチームに会う →",
-    "partnerTitle": "🤝 団体・パートナーシップ向け",
+    "partnerTitle": "団体・パートナーシップ向け",
     "partnerDesc": "Senaraとコラボレーションしたい学校、コミュニティ、団体を代表されていますか？カスタム物語の制作から共同プログラムまで、さまざまな形のパートナーシップに対応しています。",
     "partnerCta": "パートナーシップのお問い合わせ"
   },
@@ -1410,10 +1410,10 @@
       "rating": "評価"
     },
     "saveTip": {
-      "title": "💡 いつでも進行状況を保存できます！",
-      "desc": "右下の<strong>☰ メニュー</strong>をクリック → <strong>「保存」</strong>を選択。続きから読むには<strong>「読み込み」</strong>を選択してください。"
+      "title": "いつでも進行状況を保存できます！",
+      "desc": "右下の<strong>メニュー</strong>をクリック → <strong>「保存」</strong>を選択。続きから読むには<strong>「読み込み」</strong>を選択してください。"
     },
-    "comingSoon": "🔜 近日公開",
+    "comingSoon": "近日公開",
     "comingSoonDesc": "この物語は現在開発中です",
     "playNow": "今すぐプレイ",
     "scrollMore": "スクロールして詳細を見る",

@@ -55,7 +55,7 @@ monogatari.settings({
 	'AutoSave': 3,
 
 	// Enable service workers; Default: true *
-	'ServiceWorkers': true,
+	'ServiceWorkers': false,
 
 	// The Aspect Ratio your background images are on. This only has effect on
 	// web deployed novels if forceAspectRatio flag is on.

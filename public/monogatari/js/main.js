@@ -71,21 +71,13 @@ function setupAnalyticsHooks() {
 		return originalDoAction.call(this, action);
 	};
 
-	// Track choices
-	monogatari.action('choice').register('default', (title, choices) => {
-		return new Promise((resolve) => {
-			const choiceElement = document.querySelector('[data-component="choice"]');
-			if (choiceElement) {
-				const buttons = choiceElement.querySelectorAll('button');
-				buttons.forEach((button) => {
-					button.addEventListener('click', () => {
-						const choiceText = button.textContent.trim();
-						MonogatariAnalytics.trackChoice(choiceText, button.dataset.choice || choiceText);
-						resolve();
-					});
-				});
-			}
-		});
+	// Track choices via DOM event delegation (Monogatari v2.x doesn't support action().register())
+	document.addEventListener('click', (e) => {
+		const choiceBtn = e.target.closest('[data-choice]');
+		if (choiceBtn) {
+			const choiceText = choiceBtn.textContent.trim();
+			MonogatariAnalytics.trackChoice(choiceText, choiceBtn.dataset.choice || choiceText);
+		}
 	});
 
 	// Monitor for save/load UI interactions

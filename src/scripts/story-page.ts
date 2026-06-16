@@ -101,7 +101,7 @@ function renderStory(story: Story): void {
   const isComingSoon: boolean = story.status === 'coming-soon';
   const category = story.category ? getCategoryById(story.category) : undefined;
   const rating: number = story.rating || 0;
-  const backLink: string = pathId ? `/path-detail?id=${pathId}` : '/collection';
+  const backLink = '/collection';
   const storyTitle: string = t(`stories.${story.id}.title`) !== `stories.${story.id}.title` ? t(`stories.${story.id}.title`) : story.title;
   const storyDesc: string = t(`stories.${story.id}.description`) !== `stories.${story.id}.description` ? t(`stories.${story.id}.description`) : story.description;
   const storyLongDesc: string = (() => {

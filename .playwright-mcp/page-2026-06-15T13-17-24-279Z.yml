@@ -1,0 +1,181 @@
+- generic [active] [ref=e1]:
+  - link "Langsung ke konten utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Senara" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e7]: Belajar lewat cerita
+      - generic [ref=e8]:
+        - link "Beranda" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Koleksi" [ref=e10] [cursor=pointer]:
+          - /url: /collection
+        - link "Senara TV" [ref=e11] [cursor=pointer]:
+          - /url: /tv
+        - link "Tentang" [ref=e12] [cursor=pointer]:
+          - /url: /about
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /faq
+        - link "Donasi" [ref=e14] [cursor=pointer]:
+          - /url: /donate
+        - group "Language selection" [ref=e15]:
+          - generic [ref=e16]:
+            - button "Bahasa Indonesia" [pressed] [ref=e18] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e23]: ID
+            - button "English" [ref=e24] [cursor=pointer]:
+              - img [ref=e26]
+              - generic [ref=e35]: EN
+            - button "日本語" [ref=e36] [cursor=pointer]:
+              - img [ref=e38]
+              - generic [ref=e41]: JA
+        - button "Switch to dark mode" [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+  - generic:
+    - generic:
+      - link "Beranda":
+        - /url: /
+      - link "Koleksi":
+        - /url: /collection
+      - link "Senara TV":
+        - /url: /tv
+      - link "Tentang":
+        - /url: /about
+      - link "FAQ":
+        - /url: /faq
+      - link "Donasi":
+        - /url: /donate
+      - generic:
+        - group "Language selection":
+          - generic:
+            - button "Bahasa Indonesia" [pressed]:
+              - generic:
+                - img
+              - generic: ID
+            - button "English":
+              - generic:
+                - img
+              - generic: EN
+            - button "日本語":
+              - generic:
+                - img
+              - generic: JA
+        - button "Switch to dark mode":
+          - img
+  - main [ref=e45]:
+    - generic [ref=e47]:
+      - heading "Transparansi Donasi" [level=1] [ref=e48]
+      - paragraph [ref=e49]: Kami percaya kamu berhak tahu bagaimana donasimu digunakan.
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "Cara Mendukung" [level=2] [ref=e54]
+          - paragraph [ref=e55]: Senara 100% gratis dan dibangun bersama. Setiap kontribusi menjaga cerita tetap gratis untuk semua.
+        - generic [ref=e56]:
+          - link "Donasi via Trakteer" [ref=e57] [cursor=pointer]:
+            - /url: https://trakteer.id/senara.id
+          - link "Ko-fi" [ref=e58] [cursor=pointer]:
+            - /url: https://ko-fi.com/senara
+          - link "GitHub Sponsors" [ref=e59] [cursor=pointer]:
+            - /url: https://github.com/sponsors/senara-id
+      - paragraph [ref=e61]: 100% cerita Senara gratis untuk semua. Donasi membantu kami terus beroperasi, bukan untuk membuat konten eksklusif.
+      - generic [ref=e62]:
+        - heading "Bagaimana Donasi Digunakan?" [level=2] [ref=e63]
+        - paragraph [ref=e64]: "Setiap rupiah yang masuk digunakan untuk menjaga Senara tetap berjalan dan berkembang. Berikut rincian biaya operasional kami:"
+        - generic [ref=e65]:
+          - generic [ref=e67]:
+            - generic [ref=e68]: Ilustrasi & Aset Visual
+            - generic [ref=e69]: 50%
+          - generic [ref=e73]:
+            - generic [ref=e74]: Hosting & Domain
+            - generic [ref=e75]: 25%
+          - generic [ref=e79]:
+            - generic [ref=e80]: Honorarium Kontributor
+            - generic [ref=e81]: 15%
+          - generic [ref=e85]:
+            - generic [ref=e86]: Tools & Software
+            - generic [ref=e87]: 10%
+        - paragraph [ref=e91]: 💡 Kami tidak memiliki kantor fisik atau karyawan tetap. Semua tim bekerja secara remote dan volunteer-based, sehingga biaya operasional bisa ditekan seminimal mungkin.
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - heading "Kenapa Nonprofit?" [level=2] [ref=e94]
+          - paragraph [ref=e95]: "Senara didirikan dengan satu keyakinan: akses ke pengalaman yang bermakna seharusnya tidak dibatasi kemampuan finansial."
+          - paragraph [ref=e96]: "Kami tidak punya investor yang menuntut profit. Tidak ada target revenue yang harus dicapai. Ini membebaskan kami untuk fokus pada satu hal: membuat cerita yang benar-benar bermanfaat."
+          - paragraph [ref=e97]: Model nonprofit juga berarti kami tidak perlu menjual data pengguna atau memasang iklan yang mengganggu. Pengalaman membaca tetap bersih dan fokus.
+        - generic [ref=e98]:
+          - heading "Prinsip Kami" [level=2] [ref=e99]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - heading "Tidak Ada Konten Eksklusif" [level=3] [ref=e102]
+              - paragraph [ref=e103]: Donatur tidak mendapat akses ke cerita khusus. Semua konten tersedia gratis untuk semua orang.
+            - generic [ref=e104]:
+              - heading "Tidak Ada Paywall" [level=3] [ref=e105]
+              - paragraph [ref=e106]: Tidak ada fitur yang dikunci di balik pembayaran. Senara tetap gratis sepenuhnya.
+            - generic [ref=e107]:
+              - heading "Donasi Sukarela" [level=3] [ref=e108]
+              - paragraph [ref=e109]: Tidak ada tekanan untuk berdonasi. Jika kamu tidak bisa, tidak masalah. Cukup nikmati ceritanya.
+            - generic [ref=e110]:
+              - heading "Transparan" [level=3] [ref=e111]
+              - paragraph [ref=e112]: Kami terbuka tentang bagaimana dana digunakan. Jika ada pertanyaan, silakan hubungi kami.
+      - generic [ref=e113]:
+        - heading "🙏 Terima Kasih" [level=2] [ref=e114]
+        - paragraph [ref=e115]: "Kepada semua yang sudah mendukung Senara, baik lewat donasi, berbagi ke teman, atau sekadar membaca cerita kami: terima kasih."
+        - paragraph [ref=e116]: Setiap dukungan, sekecil apapun, membantu kami terus membuat cerita yang bermakna untuk lebih banyak orang.
+  - contentinfo [ref=e117]:
+    - generic [ref=e118]:
+      - generic [ref=e119]:
+        - generic [ref=e120]:
+          - link "Senara home" [ref=e121] [cursor=pointer]:
+            - /url: /
+            - text: Senara
+          - paragraph [ref=e122]: Platform cerita interaktif untuk belajar hal-hal penting lewat pengalaman yang bermakna.
+          - generic [ref=e123]:
+            - link "Instagram" [ref=e124] [cursor=pointer]:
+              - /url: https://instagram.com/idsenara
+              - img [ref=e125]
+            - link "Trakteer" [ref=e127] [cursor=pointer]:
+              - /url: https://trakteer.id/senara.id
+              - img [ref=e128]
+        - generic [ref=e130]:
+          - heading "Jelajahi" [level=4] [ref=e131]
+          - link "Beranda" [ref=e132] [cursor=pointer]:
+            - /url: /
+          - link "Koleksi Cerita" [ref=e133] [cursor=pointer]:
+            - /url: /collection
+          - link "Tentang Kami" [ref=e134] [cursor=pointer]:
+            - /url: /about
+          - link "Tim Senara" [ref=e135] [cursor=pointer]:
+            - /url: /about?tab=team
+        - generic [ref=e136]:
+          - heading "Dukungan" [level=4] [ref=e137]
+          - link "FAQ" [ref=e138] [cursor=pointer]:
+            - /url: /faq
+          - link "Keselamatan" [ref=e139] [cursor=pointer]:
+            - /url: /safety
+          - link "Hubungi Kami" [ref=e140] [cursor=pointer]:
+            - /url: /contact
+          - link "Berkontribusi" [ref=e141] [cursor=pointer]:
+            - /url: /about?tab=contribute
+          - link "Untuk Organisasi" [ref=e142] [cursor=pointer]:
+            - /url: /for-organizations
+          - link "Dukung Senara" [ref=e143] [cursor=pointer]:
+            - /url: /donate
+        - generic [ref=e144]:
+          - heading "Privasi" [level=4] [ref=e145]
+          - link "Privasi" [ref=e146] [cursor=pointer]:
+            - /url: /privacy
+          - link "Syarat" [ref=e147] [cursor=pointer]:
+            - /url: /terms
+          - link "Aksesibilitas" [ref=e148] [cursor=pointer]:
+            - /url: /accessibility
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - img [ref=e152]
+            - generic [ref=e154]: Nonprofit
+          - generic [ref=e155]:
+            - img [ref=e156]
+            - generic [ref=e158]: Gratis untuk semua
+        - paragraph [ref=e159]: © 2026 Senara. Dibuat dengan ❤️ di Indonesia.

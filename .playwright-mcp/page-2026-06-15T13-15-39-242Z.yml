@@ -1,0 +1,216 @@
+- generic [active] [ref=e1]:
+  - link "Langsung ke konten utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Senara" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e7]: Belajar lewat cerita
+      - generic [ref=e8]:
+        - link "Beranda" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Koleksi" [ref=e10] [cursor=pointer]:
+          - /url: /collection
+        - link "Senara TV" [ref=e11] [cursor=pointer]:
+          - /url: /tv
+        - link "Tentang" [ref=e12] [cursor=pointer]:
+          - /url: /about
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /faq
+        - link "Donasi" [ref=e14] [cursor=pointer]:
+          - /url: /donate
+        - group "Language selection" [ref=e15]:
+          - generic [ref=e16]:
+            - button "Bahasa Indonesia" [pressed] [ref=e18] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e23]: ID
+            - button "English" [ref=e24] [cursor=pointer]:
+              - img [ref=e26]
+              - generic [ref=e35]: EN
+            - button "日本語" [ref=e36] [cursor=pointer]:
+              - img [ref=e38]
+              - generic [ref=e41]: JA
+        - button "Switch to dark mode" [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+  - generic:
+    - generic:
+      - link "Beranda":
+        - /url: /
+      - link "Koleksi":
+        - /url: /collection
+      - link "Senara TV":
+        - /url: /tv
+      - link "Tentang":
+        - /url: /about
+      - link "FAQ":
+        - /url: /faq
+      - link "Donasi":
+        - /url: /donate
+      - generic:
+        - group "Language selection":
+          - generic:
+            - button "Bahasa Indonesia" [pressed]:
+              - generic:
+                - img
+              - generic: ID
+            - button "English":
+              - generic:
+                - img
+              - generic: EN
+            - button "日本語":
+              - generic:
+                - img
+              - generic: JA
+        - button "Switch to dark mode":
+          - img
+  - main [ref=e45]:
+    - generic [ref=e47]:
+      - heading "Koleksi Cerita" [level=1] [ref=e49]
+      - paragraph [ref=e50]: Temukan cerita yang cocok untukmu. Setiap cerita dirancang untuk menemanimu belajar dengan cara yang terasa personal dan bermakna.
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - img [ref=e53]
+          - generic [ref=e55]: Cerita Interaktif
+        - generic [ref=e56]:
+          - img [ref=e57]
+          - generic [ref=e60]: Quiz & Tantangan
+        - generic [ref=e61]:
+          - img [ref=e62]
+          - generic [ref=e64]: Belajar Sambil Bermain
+    - generic [ref=e66]:
+      - button "Filter & Urutkan" [ref=e67] [cursor=pointer]:
+        - generic [ref=e68]:
+          - img [ref=e69]
+          - generic [ref=e70]: Filter & Urutkan
+        - img [ref=e73]
+      - generic [ref=e75]:
+        - complementary [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - paragraph [ref=e79]: Ditemukan
+              - paragraph [ref=e80]: "0"
+              - paragraph [ref=e81]: cerita
+            - generic [ref=e82]:
+              - generic [ref=e83]:
+                - img [ref=e84]
+                - generic [ref=e87]: Cari Cerita
+              - textbox "Search stories" [ref=e89]:
+                - /placeholder: Ketik judul atau topik...
+            - generic [ref=e91]:
+              - img [ref=e92]
+              - generic [ref=e97]: Kategori
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - img [ref=e103]
+                - generic [ref=e105]: Tingkat Kesulitan
+              - generic [ref=e106]:
+                - generic [ref=e107] [cursor=pointer]:
+                  - checkbox "Pemula" [ref=e108]
+                  - generic [ref=e111]: Pemula
+                - generic [ref=e112] [cursor=pointer]:
+                  - checkbox "Menengah" [ref=e113]
+                  - generic [ref=e116]: Menengah
+                - generic [ref=e117] [cursor=pointer]:
+                  - checkbox "Lanjutan" [ref=e118]
+                  - generic [ref=e121]: Lanjutan
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - img [ref=e124]
+                - generic [ref=e127]: Durasi
+              - generic [ref=e128]:
+                - generic [ref=e129] [cursor=pointer]:
+                  - checkbox "⚡ Singkat (< 15 menit)" [ref=e130]
+                  - generic [ref=e131]: ⚡ Singkat (< 15 menit)
+                - generic [ref=e132] [cursor=pointer]:
+                  - checkbox "📖 Sedang (15-30 menit)" [ref=e133]
+                  - generic [ref=e134]: 📖 Sedang (15-30 menit)
+                - generic [ref=e135] [cursor=pointer]:
+                  - checkbox "📚 Panjang (> 30 menit)" [ref=e136]
+                  - generic [ref=e137]: 📚 Panjang (> 30 menit)
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - img [ref=e140]
+                - generic [ref=e143]: Status
+              - generic [ref=e144]:
+                - generic [ref=e145] [cursor=pointer]:
+                  - checkbox "✅ Tersedia" [checked] [ref=e146]
+                  - generic [ref=e147]: ✅ Tersedia
+                - generic [ref=e148] [cursor=pointer]:
+                  - checkbox "🔜 Segera Hadir" [checked] [ref=e149]
+                  - generic [ref=e150]: 🔜 Segera Hadir
+            - button "Reset Semua Filter" [ref=e151] [cursor=pointer]:
+              - img [ref=e152]
+              - generic [ref=e155]: Reset Semua Filter
+        - generic [ref=e156]:
+          - generic [ref=e157]:
+            - paragraph [ref=e159]: Menampilkan 0 cerita
+            - generic [ref=e160]:
+              - generic [ref=e161]: "Urutkan:"
+              - combobox "Urutkan:" [ref=e162] [cursor=pointer]:
+                - option "Default" [selected]
+                - option "🆕 Terbaru"
+                - option "📅 Terlama"
+                - option "🔥 Terpopuler"
+                - option "⭐ Rating Tertinggi"
+                - 'option "⏱️ Durasi: Singkat → Panjang"'
+                - 'option "⏱️ Durasi: Panjang → Singkat"'
+                - 'option "🔤 Judul: A → Z"'
+                - 'option "🔤 Judul: Z → A"'
+          - generic "Story search results" [ref=e163]
+  - contentinfo [ref=e224]:
+    - generic [ref=e225]:
+      - generic [ref=e226]:
+        - generic [ref=e227]:
+          - link "Senara home" [ref=e228] [cursor=pointer]:
+            - /url: /
+            - text: Senara
+          - paragraph [ref=e229]: Platform cerita interaktif untuk belajar hal-hal penting lewat pengalaman yang bermakna.
+          - generic [ref=e230]:
+            - link "Instagram" [ref=e231] [cursor=pointer]:
+              - /url: https://instagram.com/idsenara
+              - img [ref=e232]
+            - link "Trakteer" [ref=e234] [cursor=pointer]:
+              - /url: https://trakteer.id/senara.id
+              - img [ref=e235]
+        - generic [ref=e237]:
+          - heading "Jelajahi" [level=4] [ref=e238]
+          - link "Beranda" [ref=e239] [cursor=pointer]:
+            - /url: /
+          - link "Koleksi Cerita" [ref=e240] [cursor=pointer]:
+            - /url: /collection
+          - link "Tentang Kami" [ref=e241] [cursor=pointer]:
+            - /url: /about
+          - link "Tim Senara" [ref=e242] [cursor=pointer]:
+            - /url: /about?tab=team
+        - generic [ref=e243]:
+          - heading "Dukungan" [level=4] [ref=e244]
+          - link "FAQ" [ref=e245] [cursor=pointer]:
+            - /url: /faq
+          - link "Keselamatan" [ref=e246] [cursor=pointer]:
+            - /url: /safety
+          - link "Hubungi Kami" [ref=e247] [cursor=pointer]:
+            - /url: /contact
+          - link "Berkontribusi" [ref=e248] [cursor=pointer]:
+            - /url: /about?tab=contribute
+          - link "Untuk Organisasi" [ref=e249] [cursor=pointer]:
+            - /url: /for-organizations
+          - link "Dukung Senara" [ref=e250] [cursor=pointer]:
+            - /url: /donate
+        - generic [ref=e251]:
+          - heading "Privasi" [level=4] [ref=e252]
+          - link "Privasi" [ref=e253] [cursor=pointer]:
+            - /url: /privacy
+          - link "Syarat" [ref=e254] [cursor=pointer]:
+            - /url: /terms
+          - link "Aksesibilitas" [ref=e255] [cursor=pointer]:
+            - /url: /accessibility
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - generic [ref=e258]:
+            - img [ref=e259]
+            - generic [ref=e261]: Nonprofit
+          - generic [ref=e262]:
+            - img [ref=e263]
+            - generic [ref=e265]: Gratis untuk semua
+        - paragraph [ref=e266]: © 2026 Senara. Dibuat dengan ❤️ di Indonesia.
