@@ -1,7 +1,5 @@
-/* global monogatari */
-
 const Chapter7 = {
-  "Scene-50": [
+  "Scene-48": [
     "show scene hitam",
     "play music intro with loop fade 20 volume 10",
     "Malam pertunjukan akhir semester.",
@@ -11,44 +9,51 @@ const Chapter7 = {
     "poppy Deg-degan banget aku...",
     "eki Sama. Tangan aku gemetar.",
     "arum Tenang, kita udah latihan berkali-kali. Pasti bisa.",
-    "jump Scene-51",
+    "Arum melirik Alya yang berdiri di sudut.",
+    "arum Ly, kamu oke?",
+    "jump Scene-49",
   ],
 
-  "Scene-51": [
+  "Scene-49": [
     "show scene panggung-lampu",
     "Alya berdiri di sudut, menatap panggung dari balik tirai.",
-    "alya ...",
+    "Tangannya sedikit gemetar. Matanya menatap lampu panggung yang terang.",
     "rafi Ly, kamu oke?",
-    "alya Aku... deg-degan.",
+    "Alya diam sejenak. Lalu menulis di kertas kecil.",
+    '"Aku deg-degan."',
     "rafi Itu wajar. Tapi kamu nggak sendirian. Kita semua di sini.",
-    "alya ...Iya.",
-    "alya Aku siap.",
-    "jump Scene-52",
+    "Alya mengangguk. Lalu menulis lagi.",
+    '"Aku mau buat Mama Papa bangga."',
+    "rafi Mereka pasti bangga, Ly.",
+    "Alya menatap Rafi. Lalu mengangguk.",
+    "alya ...Iya. Aku siap.",
+    "jump Scene-50",
   ],
 
-  "Scene-52": [
+  "Scene-50": [
     "show scene panggung",
     "Pertunjukan dimulai. Kelas 8B naik ke panggung.",
     "Cerita tentang persahabatan. Dialog mengalir. Penonton hanyut dalam cerita.",
     "arum Kadang, kita nggak butuh kata-kata untuk memahami seseorang.",
     "poppy Kadang, cukup hadir di samping mereka.",
-    "jump Scene-53",
+    "jump Scene-51",
   ],
 
-  "Scene-53": [
+  "Scene-51": [
     "show scene panggung-lampu",
     "Saatnya bagian BISINDO. Lampu panggung meredup, menyisakan satu spotlight.",
     "Alya melangkah ke depan panggung. Sendirian di bawah cahaya.",
     "Penonton hening.",
     "Perlahan, Alya mengangkat tangannya.",
-    "alya ...",
     "Alya mulai menandatangani. Gerakannya lembut tapi penuh kekuatan.",
     "Setiap gerakan menceritakan perjalanan seorang gadis yang merasa berbeda.",
+    "Yang datang ke sekolah baru tanpa kenal siapa pun.",
+    "Yang makan sendirian. Yang diam di pojok kelas.",
     "Yang akhirnya menemukan tempatnya.",
-    "jump Scene-54",
+    "jump Scene-52",
   ],
 
-  "Scene-54": [
+  "Scene-52": [
     "show scene panggung-lampu",
     "Alya menandatangani klimaks cerita dengan penuh percaya diri.",
     "Tangannya bergerak dengan pasti. Matanya berbinar.",
@@ -58,22 +63,29 @@ const Chapter7 = {
     "Mama menggenggam tangan Papa. Air mata mengalir di pipi mereka.",
     "Mereka tidak bersuara. Tapi tangan mereka berbicara.",
     "Genggaman itu mengatakan segalanya: kebanggaan, haru, syukur.",
-    "jump Scene-55",
+    "Papa mengeluarkan HP-nya. Tangannya gemetar.",
+    "Papa merekam putrinya di panggung. Putri yang dulu bilang:",
+    '"Aku nggak akan pernah bisa tampil di depan orang."',
+    "Dan sekarang, dia berdiri di sana. Di bawah lampu. Di depan semua orang.",
+    "Bukan meski dia tuna rungu.",
+    "Karena dia tuna rungu. Dan itu adalah kekuatannya.",
+    "jump Scene-53",
   ],
 
-  "Scene-55": [
+  "Scene-53": [
     "show scene panggung-lampu",
     "Pertunjukan selesai. Hening sesaat.",
     "Lalu... tepuk tangan menggema.",
     "play sound clap with volume 80",
     "Penonton berdiri. Standing ovation.",
     "Alya terdiam di panggung, menatap penonton yang berdiri untuknya.",
-    "alya ...",
     "Mata Alya berkaca-kaca. Tapi dia tersenyum.",
-    "jump Scene-56",
+    "Di belakang panggung, Rafi, Arum, Poppy, dan Eki berdiri bersama. Mereka juga bertepuk tangan.",
+    "rafi (Dia berhasil. Ly berhasil.)",
+    "jump Scene-54",
   ],
 
-  "Scene-56": [
+  "Scene-54": [
     "show scene panggung-lampu",
     "Tepuk tangan perlahan mereda.",
     "Alya berdiri menghadap teman-teman sekelasnya yang juga ada di panggung.",
@@ -82,21 +94,24 @@ const Chapter7 = {
     "Jeda sejenak. Lalu Alya melanjutkan.",
     "alya Kalian... keluarga.",
     "Kelas 8B terdiam. Beberapa mata berkaca-kaca.",
-    "jump Scene-57",
-  ],
-
-  "Scene-57": [
-    "show scene panggung-lampu",
-    "Lalu, satu per satu, teman-teman Kelas 8B mengangkat tangan mereka.",
-    "Mereka menandatangani satu kata yang sama.",
+    "Arum melangkah maju. Ia mengangkat tangannya dan menandatangani satu kata.",
+    "arum Sama-sama.",
+    "Lalu Poppy. Lalu Eki. Lalu Rafi.",
+    "Satu per satu, mereka mengangkat tangan mereka.",
+    "Mereka menandatangani kata yang sama.",
     "Sama-sama.",
-    "alya ...",
-    "Alya menatap mereka semua. Teman-temannya. Keluarganya.",
     "play sound clap with volume 60",
     "Sorakan dan tepuk tangan kembali menggema. Malam ini, Kelas 8B tidak hanya membawakan drama.",
     "Mereka membawakan cerita tentang arti sesungguhnya dari persahabatan.",
-    "Bab 7 selesai. Di malam pertunjukan itu, Alya bukan lagi gadis yang berbeda. Dia adalah bagian dari sesuatu yang indah.",
     "jump Loading-8",
+  ],
+
+  "Loading-8": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene kelas-pagi",
+    "Bab 8: Epilog - Hari-Hari Baru",
+    "jump Scene-55",
   ],
 };
 

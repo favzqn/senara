@@ -92,7 +92,7 @@ export const senaraTVChannels: TVChannel[] = [
     lang: 'en',
   },
   {
-    id: 'UCX6b17PVs2BcFIaQ3o7a9iQ',
+    id: 'UCX6b17PVsYBQ0ip5gyeme-Q',
     name: 'CrashCourse',
     handle: '@crashcourse',
     category: 'stories',

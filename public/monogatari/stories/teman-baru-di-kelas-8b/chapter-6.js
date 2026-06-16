@@ -1,5 +1,3 @@
-/* global monogatari */
-
 const Chapter6 = {
   "Scene-42": [
     "show scene kelas-siang",
@@ -7,33 +5,37 @@ const Chapter6 = {
     "Kelas Bahasa Indonesia. Bu Hasna berdiri di depan kelas.",
     "hasna Anak-anak, minggu depan ada pertunjukan akhir semester. Setiap kelas harus menampilkan drama.",
     "hasna Kelas kita akan membawakan cerita tentang persahabatan. Ada ide?",
-    "poppy Bu, gimana kalau kita pakai BISINDO juga?",
+    "Poppy mengangkat tangan. Matanya melirik Alya sebentar.",
+    "poppy Bu, gimana kalau kita gabungin dialog bicara sama BISINDO?",
     "hasna BISINDO?",
     "jump Scene-43",
   ],
 
   "Scene-43": [
     "show scene kelas-siang",
-    "poppy Iya, Bu. Alya bisa bahasa isyarat. Kita bisa gabungin dialog bicara sama BISINDO.",
+    "poppy Iya, Bu. Alya bisa bahasa isyarat. Kita bisa gabungin.",
+    "poppy Jadi penonton nggak cuma denger, tapi juga lihat. Dua bahasa sekaligus.",
     "Kelas hening sejenak. Semua mata tertuju pada Alya.",
-    "alya ...",
+    "Arum langsung mengangguk.",
     "arum Setuju! Itu pasti keren banget.",
     "eki Aku juga mau ikut.",
     "hasna Bagus sekali idenya, Poppy. Alya, kamu bersedia membantu teman-teman?",
-    "alya ...Iya, Bu. Aku bersedia.",
+    "Alya menatap kelas. Ada keraguan sebentar di matanya. Lalu ia mengangguk.",
+    "alya Iya, Bu. Aku bersedia.",
     "jump Scene-44",
   ],
 
   "Scene-44": [
     "show scene kelas-siang",
     "Latihan dimulai. Alya berdiri di depan kelas untuk pertama kalinya.",
+    "Tangannya sedikit gemetar. Tapi ia mengambil napas dan mulai.",
     "alya Oke, pertama kalian harus tahu kata tanya dalam BISINDO.",
     "alya 'Apa' gerakannya begini.",
     "Alya menunjukkan gerakan tangan yang jelas.",
     "alya 'Siapa' begini. 'Di mana' begini. 'Kapan' begini.",
     "alya 'Kenapa' begini. 'Bagaimana' begini.",
     "rafi Wah, banyak juga ya!",
-    "alya Tapi nggak susah kalau sering latihan.",
+    "alya Tapi nggak susah kalau sering latihan. Kayak belajar bahasa Inggris, cuma pakai tangan.",
     "jump Scene-45",
   ],
 
@@ -44,36 +46,17 @@ const Chapter6 = {
     "Poppy mencoba meniru. Gerakannya cukup bagus.",
     "alya Bagus, Pop! Sekarang 'Ayo mulai'.",
     "eki Ayo mulai!",
-    "Eki meniru dengan semangat berlebihan. Semua tertawa.",
+    "Eki meniru dengan semangat berlebihan. Tangannya malah menunjuk ke arah yang salah.",
+    "arum Eki! Itu bukan 'ayo mulai', itu 'apa-apaan'!",
+    "play sound wrong with volume 40",
+    "eki Hah?! Serius?!",
+    "Semua tertawa. Eki langsung merona merah.",
+    "eki Malu aku...",
+    "alya Nggak apa-apa, Eki. Aku juga dulu sering salah. Yang penting coba.",
     "jump Scene-46",
   ],
 
   "Scene-46": [
-    "show scene kelas-siang",
-    "alya Kata terakhir yang kita butuhkan untuk drama ini: 'advokasi'.",
-    "rafi Advokasi? Itu gerakannya gimana?",
-    "alya Coba perhatikan.",
-    "Alya menunjukkan gerakan 'advokasi' dengan hati-hati.",
-    "alya Rafi, coba kamu.",
-    "Rafi mencoba meniru. Tapi gerakannya salah — tangannya malah menunjuk ke arah yang berbeda.",
-    "arum Rafi! Itu bukan 'advokasi', itu 'kekerasan'!",
-    "play sound wrong with volume 40",
-    "jump Scene-47",
-  ],
-
-  "Scene-47": [
-    "show scene kelas-siang",
-    "Seluruh kelas langsung tertawa. Termasuk Rafi yang langsung merona merah.",
-    "rafi Eh?! Serius?!",
-    "Tapi yang paling kencang tertawanya... justru Alya.",
-    "alya Hahaha! Rafi, gerakannya kebalik!",
-    "alya Nggak apa-apa, aku juga dulu sering salah.",
-    "rafi Malu aku...",
-    "poppy Haha, tenang Raf. Namanya juga belajar.",
-    "jump Scene-48",
-  ],
-
-  "Scene-48": [
     "show scene kelas-siang",
     "Mereka melanjutkan latihan. Kali ini Alya memimpin.",
     "alya Oke, mulai dari awal lagi ya. Semua perhatikan.",
@@ -82,12 +65,13 @@ const Chapter6 = {
     "eki Tapi kamu emang jago, Ly. Kamu harus jadi ketua kelompok BISINDO kita.",
     "alya Aku?",
     "rafi Iya. Kamu yang paling ngerti.",
+    "Alya menatap mereka semua. Ada sesuatu yang berubah di matanya.",
     "alya ...Oke. Aku coba.",
     "Untuk pertama kalinya, Alya memimpin — bukan mengikuti.",
-    "jump Scene-49",
+    "jump Scene-47",
   ],
 
-  "Scene-49": [
+  "Scene-47": [
     "show scene kelas-siang",
     "Latihan selesai. Semua pulang dengan semangat baru.",
     "Alya berdiri di depan kelas kosong, menatap papan tulis.",
@@ -95,8 +79,17 @@ const Chapter6 = {
     "alya Tadi aku memimpin mereka.",
     "alya Ini pertama kalinya aku merasa... nggak berbeda.",
     "alya Ini pertama kalinya aku merasa jadi bagian dari kelas.",
-    "Bab 6 selesai. Alya menemukan keberanian untuk memimpin, dan kelas menemukan bahasa baru yang menyatukan mereka.",
+    "Alya menatap jendela. Langit sore berubah jingga.",
+    "alya Mungkin... ini yang namanya punya tempat.",
     "jump Loading-7",
+  ],
+
+  "Loading-7": [
+    "stop sound typewriter",
+    "play sound typewriter",
+    "show scene panggung-lampu",
+    "Bab 7: Hari Pertunjukan",
+    "jump Scene-48",
   ],
 };
 

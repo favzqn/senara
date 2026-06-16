@@ -1,0 +1,206 @@
+- generic [active] [ref=e1]:
+  - link "Langsung ke konten utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Senara" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e7]: Belajar lewat cerita
+      - generic [ref=e8]:
+        - link "Beranda" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Koleksi" [ref=e10] [cursor=pointer]:
+          - /url: /collection
+        - link "Senara TV" [ref=e11] [cursor=pointer]:
+          - /url: /tv
+        - link "Tentang" [ref=e12] [cursor=pointer]:
+          - /url: /about
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /faq
+        - link "Donasi" [ref=e14] [cursor=pointer]:
+          - /url: /donate
+        - group "Language selection" [ref=e15]:
+          - generic [ref=e16]:
+            - button "Bahasa Indonesia" [pressed] [ref=e18] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e23]: ID
+            - button "English" [ref=e24] [cursor=pointer]:
+              - img [ref=e26]
+              - generic [ref=e35]: EN
+            - button "日本語" [ref=e36] [cursor=pointer]:
+              - img [ref=e38]
+              - generic [ref=e41]: JA
+        - button "Switch to light mode" [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+  - generic:
+    - generic:
+      - link "Beranda":
+        - /url: /
+      - link "Koleksi":
+        - /url: /collection
+      - link "Senara TV":
+        - /url: /tv
+      - link "Tentang":
+        - /url: /about
+      - link "FAQ":
+        - /url: /faq
+      - link "Donasi":
+        - /url: /donate
+      - generic:
+        - group "Language selection":
+          - generic:
+            - button "Bahasa Indonesia" [pressed]:
+              - generic:
+                - img
+              - generic: ID
+            - button "English":
+              - generic:
+                - img
+              - generic: EN
+            - button "日本語":
+              - generic:
+                - img
+              - generic: JA
+        - button "Switch to light mode":
+          - img
+  - main [ref=e49]:
+    - generic [ref=e51]:
+      - heading "Pertanyaan Umum" [level=1] [ref=e52]
+      - paragraph [ref=e53]: Jawaban untuk pertanyaan yang sering ditanyakan tentang Senara.
+      - generic [ref=e54]:
+        - img
+        - textbox "Search frequently asked questions" [ref=e55]:
+          - /placeholder: Search questions...
+        - generic: /
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - button "All" [ref=e59] [cursor=pointer]
+        - button "Umum" [ref=e60] [cursor=pointer]
+        - button "Konten" [ref=e61] [cursor=pointer]
+        - button "Penggunaan" [ref=e62] [cursor=pointer]
+        - button "Privasi & Dukungan" [ref=e63] [cursor=pointer]
+      - paragraph [ref=e64]: Umum
+      - generic [ref=e65]:
+        - button "Apa itu Senara?" [ref=e66] [cursor=pointer]:
+          - heading "Apa itu Senara?" [level=3] [ref=e67]
+          - img [ref=e68]
+        - paragraph [ref=e71]: Senara adalah platform cerita interaktif berbasis visual novel. Kamu bisa membaca cerita, membuat pilihan, dan setiap keputusan membentuk jalan ceritamu sendiri. Topik cerita kami mencakup kesehatan mental, literasi keuangan, dan berbagai life skills lainnya.
+      - generic [ref=e72]:
+        - button "Untuk siapa platform ini dibuat?" [ref=e73] [cursor=pointer]:
+          - heading "Untuk siapa platform ini dibuat?" [level=3] [ref=e74]
+          - img [ref=e75]
+        - paragraph [ref=e78]: Senara dibuat untuk siapa saja yang ingin belajar lewat cerita. Kami punya cerita untuk remaja (13+), dewasa muda, hingga umum. Guru dan fasilitator juga bisa menggunakan Senara sebagai bahan diskusi di kelas atau workshop.
+      - generic [ref=e79]:
+        - button "Apakah Senara benar-benar gratis?" [ref=e80] [cursor=pointer]:
+          - heading "Apakah Senara benar-benar gratis?" [level=3] [ref=e81]
+          - img [ref=e82]
+        - paragraph [ref=e85]: Ya, 100% gratis. Bukan freemium, bukan trial. Semua cerita bisa diakses tanpa bayar, sekarang dan selamanya. Senara adalah platform nonprofit yang dibangun oleh komunitas relawan.
+      - generic [ref=e86]:
+        - button "Apakah saya perlu membuat akun?" [ref=e87] [cursor=pointer]:
+          - heading "Apakah saya perlu membuat akun?" [level=3] [ref=e88]
+          - img [ref=e89]
+        - paragraph [ref=e92]: Tidak perlu. Kamu bisa langsung membaca cerita tanpa login atau registrasi. Progress ceritamu tersimpan otomatis di browser. Fitur akun mungkin akan hadir di masa depan untuk sinkronisasi antar perangkat.
+      - paragraph [ref=e93]: Konten
+      - generic [ref=e94]:
+        - button "Apakah Senara bisa menggantikan psikolog atau konselor?" [ref=e95] [cursor=pointer]:
+          - heading "Apakah Senara bisa menggantikan psikolog atau konselor?" [level=3] [ref=e96]
+          - img [ref=e97]
+        - paragraph [ref=e100]: Tidak. Senara bukan pengganti layanan kesehatan mental profesional. Cerita kami bertujuan untuk meningkatkan literasi dan kesadaran, bukan untuk mendiagnosis atau mengobati. Jika kamu membutuhkan bantuan profesional, silakan hubungi psikolog atau konselor terdekat.
+      - generic [ref=e101]:
+        - button "Siapa yang membuat cerita di Senara?" [ref=e102] [cursor=pointer]:
+          - heading "Siapa yang membuat cerita di Senara?" [level=3] [ref=e103]
+          - img [ref=e104]
+        - paragraph [ref=e107]: "Cerita dibuat oleh tim relawan dari berbagai latar belakang: penulis, desainer, developer, dan ahli di bidang terkait. Setiap cerita melalui proses review untuk memastikan akurasi dan kualitas konten."
+      - generic [ref=e108]:
+        - button "Apakah konten Senara aman untuk remaja?" [ref=e109] [cursor=pointer]:
+          - heading "Apakah konten Senara aman untuk remaja?" [level=3] [ref=e110]
+          - img [ref=e111]
+        - paragraph [ref=e114]: Ya. Setiap cerita memiliki label usia yang jelas (misalnya 13+). Kami menghindari konten eksplisit dan selalu memberikan peringatan jika ada topik sensitif. Orang tua dan guru bisa melihat deskripsi cerita sebelum merekomendasikan ke anak atau siswa.
+      - paragraph [ref=e115]: Penggunaan
+      - generic [ref=e116]:
+        - button "Bagaimana guru bisa menggunakan Senara?" [ref=e117] [cursor=pointer]:
+          - heading "Bagaimana guru bisa menggunakan Senara?" [level=3] [ref=e118]
+          - img [ref=e119]
+        - paragraph [ref=e122]: Guru bisa menggunakan cerita Senara sebagai bahan diskusi di kelas, tugas refleksi, atau ice breaker di awal sesi. Cukup pilih cerita yang sesuai dengan topik, lalu ajak siswa membaca bersama atau mandiri. Setelah selesai, diskusikan pilihan dan pelajaran dari cerita tersebut.
+      - generic [ref=e123]:
+        - button "Bisa diakses di HP atau hanya di komputer?" [ref=e124] [cursor=pointer]:
+          - heading "Bisa diakses di HP atau hanya di komputer?" [level=3] [ref=e125]
+          - img [ref=e126]
+        - paragraph [ref=e129]: "Senara bisa diakses di semua perangkat: HP, tablet, atau komputer. Cukup buka browser dan kunjungi website kami. Tidak perlu download aplikasi."
+      - paragraph [ref=e130]: Privasi & Dukungan
+      - generic [ref=e131]:
+        - button "Bagaimana privasi saya dilindungi?" [ref=e132] [cursor=pointer]:
+          - heading "Bagaimana privasi saya dilindungi?" [level=3] [ref=e133]
+          - img [ref=e134]
+        - paragraph [ref=e137]: Kami tidak mengumpulkan data pribadi. Tidak ada login, tidak ada tracking individual. Kami hanya menggunakan analytics anonim untuk memahami cerita mana yang paling diminati. Progress ceritamu tersimpan lokal di browsermu sendiri.
+      - generic [ref=e138]:
+        - button "Bagaimana cara mendukung Senara?" [ref=e139] [cursor=pointer]:
+          - heading "Bagaimana cara mendukung Senara?" [level=3] [ref=e140]
+          - img [ref=e141]
+        - paragraph [ref=e144]:
+          - text: "Ada beberapa cara: (1) Bagikan Senara ke teman atau komunitas, (2) Donasi via"
+          - link "Trakteer" [ref=e145] [cursor=pointer]:
+            - /url: https://trakteer.id/senara.id
+          - text: untuk mendukung operasional, atau (3) Bergabung sebagai kontributor jika kamu punya keahlian di bidang penulisan, desain, atau pengembangan.
+      - generic [ref=e146]:
+        - heading "Masih punya pertanyaan?" [level=3] [ref=e147]
+        - paragraph [ref=e148]: Kami senang mendengar dari kamu.
+        - link "Hubungi Kami" [ref=e149] [cursor=pointer]:
+          - /url: mailto:fauzan08fauzan@gmail.com
+  - contentinfo [ref=e150]:
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - link "Senara home" [ref=e154] [cursor=pointer]:
+            - /url: /
+            - text: Senara
+          - paragraph [ref=e155]: Platform cerita interaktif untuk belajar hal-hal penting lewat pengalaman yang bermakna.
+          - generic [ref=e156]:
+            - link "Instagram" [ref=e157] [cursor=pointer]:
+              - /url: https://instagram.com/idsenara
+              - img [ref=e158]
+            - link "Trakteer" [ref=e160] [cursor=pointer]:
+              - /url: https://trakteer.id/senara.id
+              - img [ref=e161]
+        - generic [ref=e163]:
+          - heading "Jelajahi" [level=4] [ref=e164]
+          - link "Beranda" [ref=e165] [cursor=pointer]:
+            - /url: /
+          - link "Koleksi Cerita" [ref=e166] [cursor=pointer]:
+            - /url: /collection
+          - link "Tentang Kami" [ref=e167] [cursor=pointer]:
+            - /url: /about
+          - link "Tim Senara" [ref=e168] [cursor=pointer]:
+            - /url: /about?tab=team
+        - generic [ref=e169]:
+          - heading "Dukungan" [level=4] [ref=e170]
+          - link "FAQ" [ref=e171] [cursor=pointer]:
+            - /url: /faq
+          - link "Keselamatan" [ref=e172] [cursor=pointer]:
+            - /url: /safety
+          - link "Hubungi Kami" [ref=e173] [cursor=pointer]:
+            - /url: /contact
+          - link "Berkontribusi" [ref=e174] [cursor=pointer]:
+            - /url: /about?tab=contribute
+          - link "Untuk Organisasi" [ref=e175] [cursor=pointer]:
+            - /url: /for-organizations
+          - link "Dukung Senara" [ref=e176] [cursor=pointer]:
+            - /url: /donate
+        - generic [ref=e177]:
+          - heading "Privasi" [level=4] [ref=e178]
+          - link "Privasi" [ref=e179] [cursor=pointer]:
+            - /url: /privacy
+          - link "Syarat" [ref=e180] [cursor=pointer]:
+            - /url: /terms
+          - link "Aksesibilitas" [ref=e181] [cursor=pointer]:
+            - /url: /accessibility
+      - generic [ref=e182]:
+        - generic [ref=e183]:
+          - generic [ref=e184]:
+            - img [ref=e185]
+            - generic [ref=e187]: Nonprofit
+          - generic [ref=e188]:
+            - img [ref=e189]
+            - generic [ref=e191]: Gratis untuk semua
+        - paragraph [ref=e192]: © 2026 Senara. Dibuat dengan cinta di Indonesia.

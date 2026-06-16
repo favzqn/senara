@@ -1,0 +1,258 @@
+- generic [active] [ref=e1]:
+  - link "Langsung ke konten utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Senara" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e7]: Belajar lewat cerita
+      - generic [ref=e8]:
+        - link "Beranda" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Koleksi" [ref=e10] [cursor=pointer]:
+          - /url: /collection
+        - link "Senara TV" [ref=e11] [cursor=pointer]:
+          - /url: /tv
+        - link "Tentang" [ref=e12] [cursor=pointer]:
+          - /url: /about
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /faq
+        - link "Donasi" [ref=e14] [cursor=pointer]:
+          - /url: /donate
+        - group "Language selection" [ref=e15]:
+          - generic [ref=e16]:
+            - button "Bahasa Indonesia" [pressed] [ref=e18] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e23]: ID
+            - button "English" [ref=e24] [cursor=pointer]:
+              - img [ref=e26]
+              - generic [ref=e35]: EN
+            - button "日本語" [ref=e36] [cursor=pointer]:
+              - img [ref=e38]
+              - generic [ref=e41]: JA
+        - button "Switch to light mode" [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+  - generic:
+    - generic:
+      - link "Beranda":
+        - /url: /
+      - link "Koleksi":
+        - /url: /collection
+      - link "Senara TV":
+        - /url: /tv
+      - link "Tentang":
+        - /url: /about
+      - link "FAQ":
+        - /url: /faq
+      - link "Donasi":
+        - /url: /donate
+      - generic:
+        - group "Language selection":
+          - generic:
+            - button "Bahasa Indonesia" [pressed]:
+              - generic:
+                - img
+              - generic: ID
+            - button "English":
+              - generic:
+                - img
+              - generic: EN
+            - button "日本語":
+              - generic:
+                - img
+              - generic: JA
+        - button "Switch to light mode":
+          - img
+  - main [ref=e49]:
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: T
+          - generic [ref=e54]: T
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - img [ref=e59]
+              - text: Hubungan & Dinamika Sosial
+            - generic [ref=e61]:
+              - img [ref=e62]
+              - text: Pemula
+          - heading "Teman Baru di Kelas 8B" [level=1] [ref=e64]
+          - generic [ref=e65]:
+            - generic [ref=e66]: Inklusi
+            - generic [ref=e67]: BISINDO
+            - generic [ref=e68]: Bahasa Isyarat
+            - generic [ref=e69]: Empati
+            - generic [ref=e70]: Pertemanan
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e73]:
+                - img [ref=e74]
+                - text: "25"
+              - generic [ref=e77]: Menit
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - img [ref=e80]
+                - text: "8"
+              - generic [ref=e83]: Chapter
+            - generic [ref=e84]:
+              - generic [ref=e85]: 10+
+              - generic [ref=e86]: Usia
+            - generic [ref=e87]:
+              - generic [ref=e88]: "4.5"
+              - generic [ref=e89]: Rating
+          - generic [ref=e91]:
+            - img [ref=e92]
+            - generic [ref=e96]:
+              - paragraph [ref=e97]: Kamu bisa simpan progress kapan saja!
+              - paragraph [ref=e98]:
+                - text: Klik
+                - strong [ref=e99]: Menu
+                - text: di pojok kanan bawah → pilih
+                - strong [ref=e100]: "\"Save\""
+                - text: . Untuk lanjutkan, pilih
+                - strong [ref=e101]: "\"Load\""
+                - text: .
+          - button "Mainkan Sekarang" [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]:
+              - img [ref=e104]
+              - generic [ref=e106]: Mainkan Sekarang
+          - generic [ref=e107]:
+            - img [ref=e108]
+            - paragraph [ref=e110]: Scroll untuk info lebih lanjut
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - heading "Tentang Cerita Ini" [level=2] [ref=e114]:
+            - img [ref=e115]
+            - text: Tentang Cerita Ini
+          - paragraph [ref=e118]: A warm story about inclusion and sign language. Alya is a Deaf student who just transferred to Class 8B. Through Rafi's journey learning BISINDO and classmates who begin to understand how to communicate with Alya, you'll learn about empathy, inclusion, and the basics of Indonesian Sign Language (BISINDO). A story about friendship that transcends language barriers.
+          - generic [ref=e119]:
+            - generic [ref=e120]:
+              - img [ref=e121]
+              - text: Multiple Paths
+            - generic [ref=e127]:
+              - img [ref=e128]
+              - text: Achievements
+        - generic [ref=e134]:
+          - heading "Yang Akan Kamu Pelajari" [level=2] [ref=e135]:
+            - img [ref=e136]
+            - text: Yang Akan Kamu Pelajari
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - img [ref=e143]
+              - generic [ref=e145]: Understand how to communicate with Deaf friends
+            - generic [ref=e146]:
+              - img [ref=e148]
+              - generic [ref=e150]: Learn the basics of BISINDO (Indonesian Sign Language)
+            - generic [ref=e151]:
+              - img [ref=e153]
+              - generic [ref=e155]: Build empathy and inclusion in school environments
+            - generic [ref=e156]:
+              - img [ref=e158]
+              - generic [ref=e160]: Appreciate diverse ways of communicating
+            - generic [ref=e161]:
+              - img [ref=e163]
+              - generic [ref=e165]: Learn to be a good ally for friends with disabilities
+        - generic [ref=e166]:
+          - heading "Kredit" [level=2] [ref=e167]:
+            - img [ref=e168]
+            - text: Kredit
+          - generic [ref=e170]:
+            - generic [ref=e171]:
+              - img [ref=e173]
+              - generic [ref=e176]:
+                - paragraph [ref=e177]: Penulis
+                - paragraph [ref=e178]: Senara Team
+            - generic [ref=e179]:
+              - img [ref=e181]
+              - generic [ref=e183]:
+                - paragraph [ref=e184]: Skenario
+                - paragraph [ref=e185]: Senara Team
+            - generic [ref=e186]:
+              - img [ref=e188]
+              - generic [ref=e191]:
+                - paragraph [ref=e192]: Seri
+                - paragraph [ref=e193]: Inklusi Series
+            - generic [ref=e194]:
+              - img [ref=e196]
+              - generic [ref=e198]:
+                - paragraph [ref=e199]: Tanggal Rilis
+                - paragraph [ref=e200]: 10 Des 2024
+        - generic [ref=e201]:
+          - heading "Bagikan Cerita Ini" [level=2] [ref=e202]
+          - generic [ref=e203]:
+            - link "Share on Twitter" [ref=e204] [cursor=pointer]:
+              - /url: https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4321%2Fstory%3Fid%3Dteman-baru-di-kelas-8b&text=Baca%20di%20Senara
+              - img [ref=e205]
+            - link "Share on Facebook" [ref=e207] [cursor=pointer]:
+              - /url: https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4321%2Fstory%3Fid%3Dteman-baru-di-kelas-8b
+              - img [ref=e208]
+            - link "Share on WhatsApp" [ref=e210] [cursor=pointer]:
+              - /url: https://wa.me/?text=Baca%20di%20Senara%20http%3A%2F%2Flocalhost%3A4321%2Fstory%3Fid%3Dteman-baru-di-kelas-8b
+              - img [ref=e211]
+            - button "Copy Link" [ref=e213] [cursor=pointer]:
+              - img [ref=e214]
+          - paragraph [ref=e217]: Link berhasil disalin!
+        - button "Mainkan Sekarang" [ref=e219] [cursor=pointer]:
+          - generic [ref=e220]:
+            - img [ref=e221]
+            - generic [ref=e223]: Mainkan Sekarang
+        - link "← Kembali ke Koleksi" [ref=e225] [cursor=pointer]:
+          - /url: /collection
+  - contentinfo [ref=e226]:
+    - generic [ref=e227]:
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - link "Senara home" [ref=e230] [cursor=pointer]:
+            - /url: /
+            - text: Senara
+          - paragraph [ref=e231]: Platform cerita interaktif untuk belajar hal-hal penting lewat pengalaman yang bermakna.
+          - generic [ref=e232]:
+            - link "Instagram" [ref=e233] [cursor=pointer]:
+              - /url: https://instagram.com/idsenara
+              - img [ref=e234]
+            - link "Trakteer" [ref=e236] [cursor=pointer]:
+              - /url: https://trakteer.id/senara.id
+              - img [ref=e237]
+        - generic [ref=e239]:
+          - heading "Jelajahi" [level=4] [ref=e240]
+          - link "Beranda" [ref=e241] [cursor=pointer]:
+            - /url: /
+          - link "Koleksi Cerita" [ref=e242] [cursor=pointer]:
+            - /url: /collection
+          - link "Tentang Kami" [ref=e243] [cursor=pointer]:
+            - /url: /about
+          - link "Tim Senara" [ref=e244] [cursor=pointer]:
+            - /url: /about?tab=team
+        - generic [ref=e245]:
+          - heading "Dukungan" [level=4] [ref=e246]
+          - link "FAQ" [ref=e247] [cursor=pointer]:
+            - /url: /faq
+          - link "Keselamatan" [ref=e248] [cursor=pointer]:
+            - /url: /safety
+          - link "Hubungi Kami" [ref=e249] [cursor=pointer]:
+            - /url: /contact
+          - link "Berkontribusi" [ref=e250] [cursor=pointer]:
+            - /url: /about?tab=contribute
+          - link "Untuk Organisasi" [ref=e251] [cursor=pointer]:
+            - /url: /for-organizations
+          - link "Dukung Senara" [ref=e252] [cursor=pointer]:
+            - /url: /donate
+        - generic [ref=e253]:
+          - heading "Privasi" [level=4] [ref=e254]
+          - link "Privasi" [ref=e255] [cursor=pointer]:
+            - /url: /privacy
+          - link "Syarat" [ref=e256] [cursor=pointer]:
+            - /url: /terms
+          - link "Aksesibilitas" [ref=e257] [cursor=pointer]:
+            - /url: /accessibility
+      - generic [ref=e258]:
+        - generic [ref=e259]:
+          - generic [ref=e260]:
+            - img [ref=e261]
+            - generic [ref=e263]: Nonprofit
+          - generic [ref=e264]:
+            - img [ref=e265]
+            - generic [ref=e267]: Gratis untuk semua
+        - paragraph [ref=e268]: © 2026 Senara. Dibuat dengan cinta di Indonesia.

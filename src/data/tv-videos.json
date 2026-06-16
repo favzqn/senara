@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-06-16T00:18:16.247Z",
+  "fetchedAt": "2026-06-16T00:34:51.749Z",
   "channels": {
     "UC_eifcIIjgN8Q_8m34nWo3Q": [
       {
@@ -272,7 +272,62 @@
         "url": "https://www.youtube.com/watch?v=KayBys8gaJY"
       }
     ],
-    "UCX6b17PVs2BcFIaQ3o7a9iQ": [],
+    "UCX6b17PVsYBQ0ip5gyeme-Q": [
+      {
+        "id": "AF2eYuAKsao",
+        "title": "Where Do Diamonds Come From?: Crash Course Geology #8",
+        "published": "2026-06-11T16:12:35+00:00",
+        "thumbnail": "https://i2.ytimg.com/vi/AF2eYuAKsao/hqdefault.jpg",
+        "description": "Diamonds are a girl’s best friend. But they’re so much more than that. They’re sources of power, wealth, and conflict. They’re tickets into Earth’s de",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=AF2eYuAKsao"
+      },
+      {
+        "id": "eKnl_Jp8jsg",
+        "title": "How Do Gems Form?: Crash Course Geology #7",
+        "published": "2026-06-04T16:00:20+00:00",
+        "thumbnail": "https://i2.ytimg.com/vi/eKnl_Jp8jsg/hqdefault.jpg",
+        "description": "For most of human history, one thing has been true  – we LOVE shiny things. Gems are the crown jewels (pun intended) of geology, and for thousands of ",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=eKnl_Jp8jsg"
+      },
+      {
+        "id": "lT_QAkL6lj0",
+        "title": "The Rock Episode: Crash Course Geology #6",
+        "published": "2026-05-21T16:01:05+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/lT_QAkL6lj0/hqdefault.jpg",
+        "description": "Where do rocks come from? In this episode of Crash Course Geology, we’ll discover how the rock cycle transforms one type of rock into another, while r",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=lT_QAkL6lj0"
+      },
+      {
+        "id": "jQvv7CskMuo",
+        "title": "How Do Minerals Form?: Crash Course Geology #5",
+        "published": "2026-05-14T16:01:10+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/jQvv7CskMuo/hqdefault.jpg",
+        "description": "Minerals are amazing and they’re all around us, in the food we eat and even in our very bones. But what actually is a mineral? In this episode of Cras",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=jQvv7CskMuo"
+      },
+      {
+        "id": "rm46SdVfB4I",
+        "title": "What’s at the center of the earth?: Crash Course Geology #4",
+        "published": "2026-05-07T16:01:33+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/rm46SdVfB4I/hqdefault.jpg",
+        "description": "The crust and the mantle are cool, but Earth’s real hero is its core, which helps protect us from all kinds of stuff. In this episode of Crash Course ",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=rm46SdVfB4I"
+      },
+      {
+        "id": "bouvNyq8xCY",
+        "title": "Earth's Crust and Mantle Explained: Crash Course Geology #3",
+        "published": "2026-04-23T16:01:04+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/bouvNyq8xCY/hqdefault.jpg",
+        "description": "Nobody has made it to the center of the Earth—but not for lack of trying. In this episode of Crash Course Geology, we’ll journey through the crust and",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=bouvNyq8xCY"
+      }
+    ],
     "UCsooa4yRKGN_zEE8iknghZA": [
       {
         "id": "JDqpcHGfJ2I",

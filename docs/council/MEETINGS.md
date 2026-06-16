@@ -125,6 +125,48 @@ Phase 3: 🟡 (SEO complete)
 
 ---
 
+## Meeting #10 — VN Specialist Review (Focused)
+
+**Date:** 2026-06-16 07:30 WIB  
+**Type:** Focused (VN Specialist, CCO, CTO)  
+**Topic:** Teman Baru di Kelas 8B full rewrite
+
+### Review Score: 7/10 → rewrite applied
+
+### All 10 Fixes Implemented
+
+| # | Fix | Status |
+|---|-----|--------|
+| 1 | Differentiate character voices | ✅ DONE |
+| 2 | Add quiet moments between chapters | ✅ DONE |
+| 3 | Give Alya a WANT in Chapter 1 | ✅ DONE |
+| 4 | Add Rafi's deeper conflict | ✅ DONE |
+| 5 | Fix Scene 17 (Alya too accepting) | ✅ DONE |
+| 6 | Fix Scene 32 (weight the emotional core) | ✅ DONE |
+| 7 | Fix Scene 54 (climax buildup) | ✅ DONE |
+| 8 | Show Arum/Poppy transition on-screen | ✅ DONE |
+| 9 | Make BISINDO lessons more natural | ✅ DONE |
+| 10 | Add realism to epilogue | ✅ DONE |
+
+### Key Changes
+
+- **Alya:** Now has a WANT (missing old school, wanting to perform), shown in Ch1
+- **Rafi:** Has deeper conflict (past experience of being ignored, promise to not be that person)
+- **Arum:** Gets her own arc — watches BISINDO video at night, apologizes on-screen in Ch5
+- **Poppy:** Shows guilt for not speaking up, apologizes in Ch5
+- **Eki:** Stays as the comic relief but with warmth
+- **Ch5:** Arum/Poppy transition now shown on-screen (not off-screen)
+- **Ch7:** Scene 52 rewritten with Papa filming, Alya's past quote about "never performing"
+- **Ch8:** Epilogue has Arum apologizing, realistic note about not everyone changing
+
+### Files Changed
+
+- `chapter-1.js` through `chapter-8.js` — full rewrite
+- `docs/vn-reviews/teman-baru-di-kelas-8b-review.md` — review document
+- `index.js` — character definitions (sprites removed)
+
+---
+
 ## Meeting #9 — Branding & Social Media (Focused)
 
 **Date:** 2026-06-15 20:00 WIB  

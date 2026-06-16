@@ -1,0 +1,403 @@
+- generic [active] [ref=e1]:
+  - link "Langsung ke konten utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Senara" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - paragraph [ref=e7]: Belajar lewat cerita
+      - generic [ref=e8]:
+        - link "Beranda" [ref=e9] [cursor=pointer]:
+          - /url: /
+        - link "Koleksi" [ref=e10] [cursor=pointer]:
+          - /url: /collection
+        - link "Senara TV" [ref=e11] [cursor=pointer]:
+          - /url: /tv
+        - link "Tentang" [ref=e12] [cursor=pointer]:
+          - /url: /about
+        - link "FAQ" [ref=e13] [cursor=pointer]:
+          - /url: /faq
+        - link "Donasi" [ref=e14] [cursor=pointer]:
+          - /url: /donate
+        - group "Language selection" [ref=e15]:
+          - generic [ref=e16]:
+            - button "Bahasa Indonesia" [pressed] [ref=e18] [cursor=pointer]:
+              - img [ref=e20]
+              - generic [ref=e23]: ID
+            - button "English" [ref=e24] [cursor=pointer]:
+              - img [ref=e26]
+              - generic [ref=e35]: EN
+            - button "日本語" [ref=e36] [cursor=pointer]:
+              - img [ref=e38]
+              - generic [ref=e41]: JA
+        - button "Switch to light mode" [ref=e42] [cursor=pointer]:
+          - img [ref=e43]
+  - generic:
+    - generic:
+      - link "Beranda":
+        - /url: /
+      - link "Koleksi":
+        - /url: /collection
+      - link "Senara TV":
+        - /url: /tv
+      - link "Tentang":
+        - /url: /about
+      - link "FAQ":
+        - /url: /faq
+      - link "Donasi":
+        - /url: /donate
+      - generic:
+        - group "Language selection":
+          - generic:
+            - button "Bahasa Indonesia" [pressed]:
+              - generic:
+                - img
+              - generic: ID
+            - button "English":
+              - generic:
+                - img
+              - generic: EN
+            - button "日本語":
+              - generic:
+                - img
+              - generic: JA
+        - button "Switch to light mode":
+          - img
+  - main [ref=e49]:
+    - generic [ref=e52]:
+      - paragraph [ref=e53]: Gratis · Nonprofit · Tanpa Daftar
+      - heading "Kamu tidak hanya membaca cerita ini. Kamu menjalaninya." [level=1] [ref=e54]:
+        - text: Kamu tidak hanya membaca cerita ini.
+        - text: Kamu menjalaninya.
+      - paragraph [ref=e55]: Cerita interaktif tentang kesehatan mental, hubungan, uang, dan kehidupan — diceritakan melalui karakter yang terasa nyata. Setiap pilihan yang kamu buat mengajarkan sesuatu yang tak akan kamu lupakan.
+      - generic [ref=e56]:
+        - link "Mulai Cerita" [ref=e57] [cursor=pointer]:
+          - /url: /collection
+        - link "Lihat Cara Kerjanya" [ref=e58] [cursor=pointer]:
+          - /url: "#chapter-1"
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - img [ref=e61]
+          - generic [ref=e63]: Rating 4.8 dari pembaca
+        - generic [ref=e65]: 1,250+ pembaca
+        - generic [ref=e67]: 100% gratis
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - paragraph [ref=e71]: Coba Sekarang
+        - heading "Lihat apa yang dimaksud \"cerita interaktif\"." [level=2] [ref=e72]
+      - generic [ref=e73]:
+        - button "Story demo — click or press Enter to advance" [ref=e74] [cursor=pointer]:
+          - img "Story scene" [ref=e75]
+          - generic [ref=e76]:
+            - generic [ref=e78]: Vani
+            - paragraph [ref=e79]
+        - generic [ref=e81]:
+          - generic [ref=e82]: Pahlawan Kesehatan Mental — Bab 1
+          - link "Mainkan Cerita" [ref=e83] [cursor=pointer]:
+            - /url: /story?id=pahlawan-kesehatan-mental
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - paragraph [ref=e87]: Masalahnya
+        - heading "Topik yang paling penting paling sulit dipelajari." [level=2] [ref=e88]:
+          - text: Topik yang paling penting
+          - text: paling sulit dipelajari.
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - img [ref=e92]
+          - heading "Kesehatan mental sering disalahpahami" [level=3] [ref=e94]
+          - paragraph [ref=e95]: 1 dari 5 remaja berjuang dengan kesehatan mental, tapi kebanyakan bingung harus mulai dari mana.
+        - generic [ref=e96]:
+          - img [ref=e98]
+          - heading "Buku teks terasa jauh" [level=3] [ref=e100]
+          - paragraph [ref=e101]: Topik penting dikemas dalam format membosankan. Kamu baca, kamu lupa. Tidak ada yang menempel.
+        - generic [ref=e102]:
+          - img [ref=e104]
+          - heading "Konten bagus & gratis susah dicari" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Konten edukatif yang bagus terkunci di balik paywall. Konten gratis dangkal atau clickbait.
+      - paragraph [ref=e109]: Bagaimana kalau belajar tentang kehidupan terasa seperti hidup di dalam cerita?
+    - generic [ref=e111]:
+      - generic [ref=e112]:
+        - paragraph [ref=e113]: Pengalaman
+        - heading "Kenali karakternya. Buat pilihanmu. Belajar dengan mengalami." [level=2] [ref=e114]:
+          - text: Kenali karakternya.
+          - text: Buat pilihanmu. Belajar dengan mengalami.
+      - generic [ref=e115]:
+        - link "D Editor's Pick 4 Pemula · 40 menit Dompet Kosong, Mimpi Penuh Ikuti Sari belajar mengelola uang, membuat anggaran, dan mengambil kendali atas masa depan finansialnya. Mainkan Sekarang → 2 ch" [ref=e116] [cursor=pointer]:
+          - /url: /story?id=dompet-kosong-mimpi-penuh
+          - generic [ref=e117]:
+            - generic [ref=e118]: D
+            - generic [ref=e119]:
+              - img [ref=e120]
+              - text: Editor's Pick
+            - generic [ref=e122]:
+              - img [ref=e123]
+              - text: "4"
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e127]: Pemula
+              - generic [ref=e128]: ·
+              - generic [ref=e129]: 40 menit
+            - heading "Dompet Kosong, Mimpi Penuh" [level=3] [ref=e130]
+            - paragraph [ref=e131]: Ikuti Sari belajar mengelola uang, membuat anggaran, dan mengambil kendali atas masa depan finansialnya.
+            - generic [ref=e132]:
+              - generic [ref=e133]:
+                - text: Mainkan Sekarang →
+                - img [ref=e134]
+              - generic [ref=e136]: 2 ch
+        - link "K 4 Pemula · 35 menit Komunikasi & Resolusi Konflik Ikuti Dimas menghadapi konflik pertemanan, belajar active listening, dan menemukan kekuatan komunikasi yang damai. Mainkan Sekarang → 2 ch" [ref=e137] [cursor=pointer]:
+          - /url: /story?id=komunikasi-resolusi-konflik
+          - generic [ref=e138]:
+            - generic [ref=e139]: K
+            - generic [ref=e140]:
+              - img [ref=e141]
+              - text: "4"
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - generic [ref=e145]: Pemula
+              - generic [ref=e146]: ·
+              - generic [ref=e147]: 35 menit
+            - heading "Komunikasi & Resolusi Konflik" [level=3] [ref=e148]
+            - paragraph [ref=e149]: Ikuti Dimas menghadapi konflik pertemanan, belajar active listening, dan menemukan kekuatan komunikasi yang damai.
+            - generic [ref=e150]:
+              - generic [ref=e151]:
+                - text: Mainkan Sekarang →
+                - img [ref=e152]
+              - generic [ref=e154]: 2 ch
+        - link "M 4 Pemula · 35 menit Misi Nol Sampah Ikuti Naya memulai inisiatif zero waste di sekolahnya, mempelajari kerangka 5R, dan menginspirasi orang lain untuk bertindak. Mainkan Sekarang → 2 ch" [ref=e155] [cursor=pointer]:
+          - /url: /story?id=misi-nol-sampah
+          - generic [ref=e156]:
+            - generic [ref=e157]: M
+            - generic [ref=e158]:
+              - img [ref=e159]
+              - text: "4"
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e163]: Pemula
+              - generic [ref=e164]: ·
+              - generic [ref=e165]: 35 menit
+            - heading "Misi Nol Sampah" [level=3] [ref=e166]
+            - paragraph [ref=e167]: Ikuti Naya memulai inisiatif zero waste di sekolahnya, mempelajari kerangka 5R, dan menginspirasi orang lain untuk bertindak.
+            - generic [ref=e168]:
+              - generic [ref=e169]:
+                - text: Mainkan Sekarang →
+                - img [ref=e170]
+              - generic [ref=e172]: 2 ch
+        - link "D 4 Pemula · 35 menit Digital Literacy Navigator Ikuti Raka belajar menjelajahi media sosial dengan aman, mengenali berita palsu, menjaga privasi, dan menghadapi cyberbullying. Mainkan Sekarang → 2 ch" [ref=e173] [cursor=pointer]:
+          - /url: /story?id=digital-literacy-navigator
+          - generic [ref=e174]:
+            - generic [ref=e175]: D
+            - generic [ref=e176]:
+              - img [ref=e177]
+              - text: "4"
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - generic [ref=e181]: Pemula
+              - generic [ref=e182]: ·
+              - generic [ref=e183]: 35 menit
+            - heading "Digital Literacy Navigator" [level=3] [ref=e184]
+            - paragraph [ref=e185]: Ikuti Raka belajar menjelajahi media sosial dengan aman, mengenali berita palsu, menjaga privasi, dan menghadapi cyberbullying.
+            - generic [ref=e186]:
+              - generic [ref=e187]:
+                - text: Mainkan Sekarang →
+                - img [ref=e188]
+              - generic [ref=e190]: 2 ch
+        - link "T 4.5 Pemula · 25 menit Teman Baru di Kelas 8B Ikuti Alya, siswa Tuli yang masuk kelas baru, dan Rafi yang belajar menjadi teman yang baik lewat BISINDO. Mainkan Sekarang → 8 ch" [ref=e191] [cursor=pointer]:
+          - /url: /story?id=teman-baru-di-kelas-8b
+          - generic [ref=e192]:
+            - generic [ref=e193]: T
+            - generic [ref=e194]:
+              - img [ref=e195]
+              - text: "4.5"
+          - generic [ref=e197]:
+            - generic [ref=e198]:
+              - generic [ref=e199]: Pemula
+              - generic [ref=e200]: ·
+              - generic [ref=e201]: 25 menit
+            - heading "Teman Baru di Kelas 8B" [level=3] [ref=e202]
+            - paragraph [ref=e203]: Ikuti Alya, siswa Tuli yang masuk kelas baru, dan Rafi yang belajar menjadi teman yang baik lewat BISINDO.
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - text: Mainkan Sekarang →
+                - img [ref=e206]
+              - generic [ref=e208]: 8 ch
+      - link "Lihat Semua" [ref=e210] [cursor=pointer]:
+        - /url: /collection
+        - generic [ref=e211]: Lihat Semua
+        - img [ref=e212]
+    - generic [ref=e215]:
+      - generic [ref=e216]:
+        - paragraph [ref=e217]: Cara Kerja
+        - heading "Tiga langkah. Tanpa ribet." [level=2] [ref=e218]
+      - generic [ref=e219]:
+        - generic [ref=e220]:
+          - img [ref=e222]
+          - generic [ref=e224]: Langkah 1
+          - heading "Pilih cerita" [level=3] [ref=e225]
+          - paragraph [ref=e226]: Jelajahi topik — kesehatan mental, uang, hubungan, dan lainnya. Setiap cerita adalah dunia yang berbeda.
+        - generic [ref=e227]:
+          - img [ref=e229]
+          - generic [ref=e231]: Langkah 2
+          - heading "Buat pilihan" [level=3] [ref=e232]
+          - paragraph [ref=e233]: Kamu bukan penonton. Kamu di dalam cerita. Setiap keputusan mengarah ke tempat yang berbeda.
+        - generic [ref=e234]:
+          - img [ref=e236]
+          - generic [ref=e238]: Langkah 3
+          - heading "Belajar sesuatu yang nyata" [level=3] [ref=e239]
+          - paragraph [ref=e240]: Pelajarannya bukan sekadar fakta. Ini soal perasaan. Sesuatu yang kamu alami, bukan hafalkan.
+    - generic [ref=e242]:
+      - generic [ref=e243]:
+        - paragraph [ref=e244]: Topik
+        - heading "Cerita tentang hal-hal yang benar-benar penting." [level=2] [ref=e245]
+      - generic [ref=e246]:
+        - link "Pikiran & Emosi" [ref=e247] [cursor=pointer]:
+          - /url: /collection?category=mind-emotions
+          - img [ref=e249]
+          - generic [ref=e251]: Pikiran & Emosi
+        - link "Kesadaran Diri & Identitas" [ref=e252] [cursor=pointer]:
+          - /url: /collection?category=self-awareness-identity
+          - img [ref=e254]
+          - generic [ref=e257]: Kesadaran Diri & Identitas
+        - link "Hubungan & Dinamika Sosial" [ref=e258] [cursor=pointer]:
+          - /url: /collection?category=relationships-social
+          - img [ref=e260]
+          - generic [ref=e262]: Hubungan & Dinamika Sosial
+        - link "Kehidupan Digital & Identitas Online" [ref=e263] [cursor=pointer]:
+          - /url: /collection?category=digital-life-online
+          - img [ref=e265]
+          - generic [ref=e267]: Kehidupan Digital & Identitas Online
+        - link "Kuliah, Kerja & Dewasa Muda" [ref=e268] [cursor=pointer]:
+          - /url: /collection?category=college-work-adulthood
+          - img [ref=e270]
+          - generic [ref=e273]: Kuliah, Kerja & Dewasa Muda
+        - link "Isu Sosial" [ref=e274] [cursor=pointer]:
+          - /url: /collection?category=social-issues
+          - img [ref=e276]
+          - generic [ref=e279]: Isu Sosial
+        - link "Uang & Kehidupan Dewasa Muda" [ref=e280] [cursor=pointer]:
+          - /url: /collection?category=money-young-adult-life
+          - img [ref=e282]
+          - generic [ref=e285]: Uang & Kehidupan Dewasa Muda
+    - generic [ref=e287]:
+      - generic [ref=e288]:
+        - paragraph [ref=e289]: Kenapa Ini Efektif
+        - heading "Membaca itu pasif. Cerita itu pengalaman." [level=2] [ref=e290]:
+          - text: Membaca itu pasif.
+          - text: Cerita itu pengalaman.
+      - generic [ref=e291]:
+        - generic [ref=e292]:
+          - heading "Belajar Tradisional" [level=3] [ref=e293]
+          - list [ref=e294]:
+            - listitem [ref=e295]:
+              - img [ref=e296]
+              - generic [ref=e298]: Baca buku teks, lupa seminggu kemudian
+            - listitem [ref=e299]:
+              - img [ref=e300]
+              - generic [ref=e302]: Ceramah satu arah, tanpa partisipasi
+            - listitem [ref=e303]:
+              - img [ref=e304]
+              - generic [ref=e306]: Konsep abstrak, tanpa contoh nyata
+            - listitem [ref=e307]:
+              - img [ref=e308]
+              - generic [ref=e310]: Sering terkunci di balik paywall
+        - generic [ref=e311]:
+          - heading "Senara" [level=3] [ref=e312]
+          - list [ref=e313]:
+            - listitem [ref=e314]:
+              - img [ref=e315]
+              - generic [ref=e317]: Alami pelajaran lewat mata karakter
+            - listitem [ref=e318]:
+              - img [ref=e319]
+              - generic [ref=e321]: Kamu yang memilih — cerita mengikuti
+            - listitem [ref=e322]:
+              - img [ref=e323]
+              - generic [ref=e325]: Topik yang diangkat dari kehidupan sehari-hari
+            - listitem [ref=e326]:
+              - img [ref=e327]
+              - generic [ref=e329]: Gratis. Tanpa akun. Tanpa syarat.
+      - generic [ref=e330]:
+        - generic [ref=e331]:
+          - generic [ref=e332]: ★★★★★
+          - paragraph [ref=e333]: "\"Anak-anak jadi lebih berani berdiskusi. Mereka bilang ceritanya terasa dekat dengan pengalaman mereka.\""
+          - generic [ref=e334]:
+            - generic [ref=e335]: T
+            - generic [ref=e336]:
+              - paragraph [ref=e337]: Seorang Guru
+              - paragraph [ref=e338]: Pengguna Senara
+        - generic [ref=e339]:
+          - generic [ref=e340]: ★★★★★
+          - paragraph [ref=e341]: "\"Belajar lewat cerita terasa lebih santai. Nggak kerasa udah selesai satu chapter!\""
+          - generic [ref=e342]:
+            - generic [ref=e343]: R
+            - generic [ref=e344]:
+              - paragraph [ref=e345]: Pembaca
+              - paragraph [ref=e346]: Pengguna Senara
+        - generic [ref=e347]:
+          - generic [ref=e348]: ★★★★★
+          - paragraph [ref=e349]: "\"Format ini membantu peserta lebih terlibat. Diskusi setelahnya jadi lebih hidup.\""
+          - generic [ref=e350]:
+            - generic [ref=e351]: F
+            - generic [ref=e352]:
+              - paragraph [ref=e353]: Fasilitator
+              - paragraph [ref=e354]: Pengguna Senara
+    - generic [ref=e356]:
+      - heading "Cerita pertamamu sudah menunggu." [level=2] [ref=e357]
+      - paragraph [ref=e358]: Tanpa daftar. Tanpa bayar. Pilih cerita dan langsung mulai.
+      - link "Jelajahi Cerita" [ref=e359] [cursor=pointer]:
+        - /url: /collection
+  - contentinfo [ref=e360]:
+    - generic [ref=e361]:
+      - generic [ref=e362]:
+        - generic [ref=e363]:
+          - link "Senara home" [ref=e364] [cursor=pointer]:
+            - /url: /
+            - text: Senara
+          - paragraph [ref=e365]: Platform cerita interaktif untuk belajar hal-hal penting lewat pengalaman yang bermakna.
+          - generic [ref=e366]:
+            - link "Instagram" [ref=e367] [cursor=pointer]:
+              - /url: https://instagram.com/idsenara
+              - img [ref=e368]
+            - link "Trakteer" [ref=e370] [cursor=pointer]:
+              - /url: https://trakteer.id/senara.id
+              - img [ref=e371]
+        - generic [ref=e373]:
+          - heading "Jelajahi" [level=4] [ref=e374]
+          - link "Beranda" [ref=e375] [cursor=pointer]:
+            - /url: /
+          - link "Koleksi Cerita" [ref=e376] [cursor=pointer]:
+            - /url: /collection
+          - link "Tentang Kami" [ref=e377] [cursor=pointer]:
+            - /url: /about
+          - link "Tim Senara" [ref=e378] [cursor=pointer]:
+            - /url: /about?tab=team
+        - generic [ref=e379]:
+          - heading "Dukungan" [level=4] [ref=e380]
+          - link "FAQ" [ref=e381] [cursor=pointer]:
+            - /url: /faq
+          - link "Keselamatan" [ref=e382] [cursor=pointer]:
+            - /url: /safety
+          - link "Hubungi Kami" [ref=e383] [cursor=pointer]:
+            - /url: /contact
+          - link "Berkontribusi" [ref=e384] [cursor=pointer]:
+            - /url: /about?tab=contribute
+          - link "Untuk Organisasi" [ref=e385] [cursor=pointer]:
+            - /url: /for-organizations
+          - link "Dukung Senara" [ref=e386] [cursor=pointer]:
+            - /url: /donate
+        - generic [ref=e387]:
+          - heading "Privasi" [level=4] [ref=e388]
+          - link "Privasi" [ref=e389] [cursor=pointer]:
+            - /url: /privacy
+          - link "Syarat" [ref=e390] [cursor=pointer]:
+            - /url: /terms
+          - link "Aksesibilitas" [ref=e391] [cursor=pointer]:
+            - /url: /accessibility
+      - generic [ref=e392]:
+        - generic [ref=e393]:
+          - generic [ref=e394]:
+            - img [ref=e395]
+            - generic [ref=e397]: Nonprofit
+          - generic [ref=e398]:
+            - img [ref=e399]
+            - generic [ref=e401]: Gratis untuk semua
+        - paragraph [ref=e402]: © 2026 Senara. Dibuat dengan cinta di Indonesia.
