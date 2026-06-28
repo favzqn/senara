@@ -1,0 +1,1038 @@
+{
+  "title": "Pahlawan Kesehatan Mental",
+  "start": {
+    "welcome": "Selamat Datang di Permainan Visual Novel Pahlawan Kesehatan Mental!",
+    "intro": "Kamu akan mempelajari banyak hal mengenai kesehatan mental di petualangan ini, ayo kita mulai!"
+  },
+  "chapters": {
+    "1": "Chapter 1 : Siapa Pahlawan Kesehatan Mental?",
+    "2": "Chapter 2 : Memahami Depresi",
+    "3": "Chapter 3 : Strategi Pertolongan Mandiri",
+    "4": "Chapter 4 : Bantuan Profesional",
+    "5": "Chapter 5 : Literasi Kesehatan Mental dalam Aksi"
+  },
+  "ch1": {
+    "scene1": {
+      "greeting": "Oh, halo. Jadi, kamu adalah Calon Pahlawan Kesehatan Mental yang baru?",
+      "ask_name": "Boleh tahu siapa nama mu?",
+      "warning": "Boleh masukkan namamu?",
+      "welcome": "Hi {{player.name}}, Selamat datang di Pusat Pelatihan Pahlawan Kesehatan Mental.",
+      "intro_vani": "Namaku Vani, aku yang akan menjadi instrukturmu sepanjang pelatihan hingga kamu resmi diangkat menjadi Pahlawan Kesehatan Mental.",
+      "praise": "Orang-orang bilang kamu adalah Calon Pahlawan Kesehatan Mental yang hebat. Kamu berani untuk belajar hal baru dan kamu berkomitmen meluangkan waktumu untuk belajar agar dapat membantu orang lain.",
+      "serious": "Tapi, aku tidak akan bersikap lembut padamu. Menjadi Pahlawan Kesehatan Mental adalah perkara serius. Mengapa? Lihatlah ke layar dan mari kutunjukkan mengapa."
+    },
+    "scene2": {
+      "intro": "Aku ada sedikit tebak-tebakan.",
+      "question": "Coba tebak. Menurutmu, berapa persen (%) penduduk Indonesia dengan usia 15-24 tahun yang mengalami gangguan mental emosional?",
+      "correct": "Hebat, tebakanmu benar. Masalah gangguan mental merupakan masalah yang umum terjadi dan perlu mendapatkan perhatian kita.",
+      "wrong": "Hmmm. Sepertinya kamu cukup meremehkan masalah gangguan mental pada remaja di Indonesia"
+    },
+    "scene3": {
+      "stat": "Menurut riset dari Kementerian Kesehatan pada tahun 2018, 10% atau 1 dari 10 pemuda berusia 15-24 tahun mengalami gangguan mental-emosional."
+    },
+    "scene4": {
+      "types": "Ya, kita baru berbicara jenis gangguan mental-emosional. Masih ada jenis gangguan mental lain seperti gangguan perilaku, gangguan makan, psikosis, dan jenis-jenis gangguan mental lainnya yang akan kita bahas nanti."
+    },
+    "scene5": {
+      "intro": "Aku ada tebak-tebakan lagi!",
+      "question": "Coba tebak. Menurutmu, berapa persen (%) pemuda berusia 15-24 tahun dengan depresi yang mendapatkan penanganan profesional?"
+    },
+    "scene6": {
+      "correct": "Wah tebakanmu benar!",
+      "wrong": "Sayangnya tebakanmu tidak sesuai kenyataan."
+    },
+    "scene7": {
+      "stat": "Menurut riset dari Kementerian Kesehatan pada tahun 2018, hanya 5,2% atau sekitar 1 dari 20 pemuda berusia 15-24 tahun dengan depresi yang mendapatkan penanganan profesional seperti bantuan psikiater dan psikolog."
+    },
+    "scene8": {
+      "gap": "Angka ini masih jauh dari harapan kita agar 100% pemuda yang mengalami gangguan mental mendapatkan bantuan profesional."
+    },
+    "scene9": {
+      "barriers": "Mengapa Remaja dengan Gangguan Mental Tidak Mendapatkan Bantuan Profesional?"
+    },
+    "scene10": {
+      "barrier1": "Pertama, karena tidak dapat mengenali gejala gangguan mental"
+    },
+    "scene11": {
+      "barrier2": "Kedua, karena tidak mengetahui pentingnya bantuan profesional"
+    },
+    "scene12": {
+      "barrier3": "Ketiga, karena stigma negatif terkait gangguan mental dan bantuan profesional"
+    },
+    "scene13": {
+      "why_matters": "Mengapa fenomena yang kita bahas sebelumnya itu mengkhawatirkan?"
+    },
+    "scene14": {
+      "analogy": "Bayangkan jika seandainya kamu mengalami luka fisik karena terjatuh. Apa yang akan kamu lakukan?"
+    },
+    "scene15": {
+      "treatment1": "Mungkin kamu akan mencoba memberikan pengobatan ringan seperti plester luka.",
+      "treatment2": "Jika lukanya berat, mungkin kamu akan memeriksakan lukanya ke dokter untuk memastikan proses penyembuhan yang baik."
+    },
+    "scene16": {
+      "mental_challenge": "Namun, bagaimana seandainya masalah yang kamu hadapi bukanlah luka fisik, melainkan masalah kesehatan mental?",
+      "mental_detail": "Masalah yang membuatmu merasakan hal-hal negatif dalam waktu panjang, melakukan hal-hal di luar kewajaran secara terus-menerus, kesulitan untuk menjalani keseharian seperti bersekolah, atau bahkan membahayakan diri sendiri dan orang lain."
+    },
+    "scene17": {
+      "heroes_needed": "Kita memerlukan orang-orang sepertimu yang ingin belajar dan membantu memperbaiki kondisi kesehatan mental dunia. Ya, kita membutuhkan para Pahlawan Kesehatan Mental."
+    },
+    "scene18": {
+      "serious": "Ya, ini bukanlah masalah yang mudah. Aku sudah mengatakannya sejak awal. Ini masalah serius yang sayangnya sudah kita bahas juga bahwa hal ini sering kali terjadi pada remaja.",
+      "empower": "Oleh karena itu, kita perlu memberikan para remaja kemampuan, pengetahuan, dan sikap yang sesuai untuk menangani masalah ini"
+    },
+    "scene19": {
+      "mission": "Kita ingin agar seluruh masalah kesehatan mental remaja dapat ditangani dengan tepat."
+    },
+    "scene20": {
+      "definition": "Siapa yang dimaksud dengan Pahlawan Kesehatan Mental? Mereka adalah para remaja yang memiliki literasi kesehatan mental.",
+      "knowledge": "Mereka memiliki pengetahuan yang baik mengenai kesehatan mental. Lalu, mereka juga memiliki keyakinan yang tepat masalah kesehatan mental.",
+      "skills": "Dengan pengetahuan dan keyakinan ini mereka dapat mengenali, mengatasi, dan mencegah masalah kesehatan mental."
+    },
+    "scene21": {
+      "literacy_intro": "Baik. Jika pahlawan kesehatan mental adalah remaja yang memiliki literasi kesehatan mental, menurutmu dari daftar kemampuan ini,",
+      "literacy_which": "Mana yang termasuk ke dalam literasi kesehatan mental?"
+    },
+    "scene22": {
+      "all": "Semuanya!"
+    },
+    "scene23": {
+      "symbols": "Jika, kamu menyadarinya. 6 simbol di atas telah ditunjukkan sejak pertama kali kamu memulai petualangan. 6 simbol tersebut melambangkan komponen literasi kesehatan mental.",
+      "benefits": "Menurut berbagai penelitian, keenam simbol ini memiliki banyak manfaat:"
+    },
+    "scene24": {
+      "benefit1": "Mulai dari dikenalinya gangguan mental berdasarkan gejala yang berkembang"
+    },
+    "scene25": {
+      "benefit2": "Mengurangi stigma yang seseorang miliki mengenai gangguan mental"
+    },
+    "scene26": {
+      "benefit3": "Membuat seseorang merekomendasikan bantuan profesional ketika diperlukan"
+    },
+    "scene27": {
+      "benefit4": "Dan kesehatan mental komunitas yang menjadi semakin baik karena mampu mencegah masalah kesehatan mental dan memastikan bantuan profesional didapatkan ketika diperlukan."
+    },
+    "scene28": {
+      "why_heroes": "Inilah mengapa para remaja dengan literasi kesehatan disebut Pahlawan Kesehatan Mental.",
+      "help_others": "Mereka tidak hanya dapat menangani masalah kesehatan mentalnya sendiri dengan baik, namun juga membantu orang-orang di sekitarnya."
+    },
+    "scene29": {
+      "are_you": "Apakah kamu termasuk ke dalam Pahlawan Kesehatan Mental? Aku belum dapat memastikannya.",
+      "training": "Kamu perlu menjalani 4 rangkaian pelatihan literasi kesehatan mental terlebih dahulu. Masih ada 4 chapter dalam petualanganmu."
+    },
+    "scene30": {
+      "badges": "Dalam tiap bagian petualangan, kamu akan mendapatkan lencana yang menandakan kamu sudah melewati pelatihan untuk 6 komponen literasi kesehatan mental yang telah kita bahas sebelumnya."
+    },
+    "scene31": {
+      "collect": "Jika kamu sudah dapat mengumpulkan ke-6 lencana, maka kamu berhak untuk mengikuti tes Pahlawan Kesehatan Mental untuk menguji literasi kesehatan mentalmu."
+    },
+    "scene32": {
+      "collect2": "Jika kamu sudah dapat mengumpulkan ke-6 lencana, maka kamu berhak untuk mengikuti tes Pahlawan Kesehatan Mental untuk menguji literasi kesehatan mentalmu."
+    },
+    "scene33": {
+      "certify": "Jika kamu dapat mengikuti tes tersebut dengan baik, maka kamu dapat resmi menjadi Pahlawan Kesehatan Mental."
+    },
+    "scene34": {
+      "understand": "Sampai di sini, apakah kamu sudah memahami apa yang perlu kamu lakukan untuk dapat menjadi Pahlawan Kesehatan Mental?",
+      "help_menu": "Jika ada hal yang ingin kamu tanyakan, setelah ini silakan kembali ke halaman awal dan klik \"Bantuan Penggunaan\" untuk bertanya padaku."
+    },
+    "scene35": {
+      "relax_intro": "Oh, sebelum melanjutkan proses latihanmu sebagai Calon Pahlawan Kesehatan Mental, aku ingin memberikanmu sedikit bekal untuk membantumu siap menghadapi berbagai tantangan yang ada.",
+      "challenges": "Sepanjang proses latihanmu untuk menjadi Pahlawan Kesehatan Mental, tentunya akan ada banyak tantangan yang kamu hadapi.",
+      "not_only": "Mungkin tidak hanya tantangan dari proses latihan, tapi juga faktor lainnya seperti rasa lelah setelah melakukan aktivitas lain.",
+      "techniques": "Oleh karena itu, aku akan memberikanmu 2 teknik yang telah terbukti oleh banyak penelitian untuk bisa membuat fisik dan mentalmu rileks dan siap menghadapi tantangan baru."
+    },
+    "scene36": {
+      "box_desc": "Teknik relaksasi yang pertama adalah Box Breathing. Teknik ini sangat efektif hingga digunakan oleh tantara khusus Amerika Serikat, Navy SEAL untuk dapat tenang dan fokus sebelum dan sesudah pertempuran yang intens.",
+      "box_how": "Cara melakukannya sangat sederhana. Siapkan dirimu untuk fokus. Jika memungkinkan, lakukanlah dengan duduk dan sambil memejamkan mata. Jika tidak bisa, fokuskan saja pada pernapasanmu. Baik, kita praktikkan tekniknya ya. Bersiaplah!.",
+      "box_easy": "Ya sesederhana itu caranya, lakukan beberapa kali hingga kamu merasa rileks tiap akan menghadapi tantangan.",
+      "box_also": "Tidak hanya saat berlatih menjadi Pahlawan Kesehatan Mental, namun juga untuk keperluan lain seperti saat akan menghadapi ujian.",
+      "box_again": "Setelah ini, lakukan sekali lagi ya agar kamu hafal tekniknya!"
+    },
+    "scene37": {
+      "pmr_desc": "Teknik yang kedua Bernama Progressive Muscle Relaxation dan lebih mudah lagi untuk dilakukan. Kita langsung praktikkan ya! Oke, usahakan kamu berada di tempat yang tenang. Sekarang, fokuskan perhatian pada kedua tanganmu.",
+      "pmr_again": "Sama seperti Box Breathing, kamu dapat mencobanya kapanpun secara berulang ya. Sekarang kita coba sekali lagi dulu agar kamu mahir!"
+    },
+    "scene38": {
+      "outro1": "Sekian petualanganmu di CHAPTER 1: Siapa Pahlawan Kesehatan Mental! Maafkan jika aku tadi sedikit terlalu tegas ya. Aku hanya ingin proses pelatihanmu untuk menjadi Pahlawan Kesehatan Mental berlangsung dengan maksimal.",
+      "outro2": "Oh iya, kamu bisa juga menggabungkan 2 teknik relaksasi tadi ya. Aku pribadi biasanya melakukan Progressive Muscle Relaxation dahulu, lalu dilanjutkan dengan 2x melakukan Box Breathing.",
+      "outro3": "Sekian sesi latihan kita kali ini. Terima kasih sudah berjuang dengan keras. Aku tidak sabar untuk bertemu kamu kembali dan melihatmu segera menjadi Pahlawan Kesehatan Mental.",
+      "outro4": "Kamu boleh beristirahat dan bertemu denganku lagi nanti atau segera lanjut ke CHAPTER 2 setelah ini jika kamu masih memiliki waktu dan tenaga yang cukup.",
+      "outro5": "Sampai jumpa, Calon Pahlawan Kesehatan Mental!"
+    },
+    "loading2": "Chapter 2 : Lawan Dari Pahlawan Kesehatan Mental"
+  },
+  "ch2": {
+    "scene39": {
+      "v1": "Oh, halo, Calon Pahlawan Kesehatan Mental. Masih ingat aku? Kalau lupa, tidak papa hahaha. Yang penting kamu tidak melupakan seluruh pelajaran yang ada dalam proses latihanmu menjadi Pahlawan Kesehatan Mental.",
+      "v2": "Aku kenalkan diriku kembali. Namaku Vani, aku akan menjadi instrukturmu sepanjang pelatihan hingga kamu resmi diangkat menjadi Pahlawan Kesehatan Mental.",
+      "v3": "Apakah kamu masih ingat teknik relaksasi yang kita pelajari di sesi sebelumnya? Jika kamu perlu untuk menenangkan diri terlebih dahulu, setelah ini aku sediakan alat bantunya ya!"
+    },
+    "scene40": {
+      "v1": "Tarik nafasmu selama 4 detik.",
+      "v2": "Tahan nafasmu selama 4 detik.",
+      "v3": "Hembuskan nafasmu selama 4 detik.",
+      "v4": "Tahan kembali nafasmu selama 4 detik."
+    },
+    "scene41": {
+      "v1": "Tarik nafas, lalu kepalkan kedua tanganmu selama 7 sampai 10 detik. Sekuat-kuatnya hingga bergetar, namun tidak sakit.",
+      "v2": "Hembuskan nafasmu dan fokuslah pada sensasi rileks yang perlahan muncul dari kedua tangan sekitar 10 hingga 20 detik."
+    },
+    "scene42": {
+      "v1": "Oke! Setelah melakukan teknik relaksasi, semoga tubuh dan mentalmu lebih siap untuk berlatih!",
+      "v2": "Hari ini, aku akan mengajakmu untuk mengenal siapa sebenarnya lawan-lawan dari Pahlawan Kesehatan Mental.",
+      "v3": "Sebelum itu, mari kita lihat dulu apa yang kamu ketahui terkait kesehatan mental."
+    },
+    "scene43": {
+      "v1": "Dengarkan baik-baik pernyataan setelah ini dan tentukan apakah pernyataan tersebut benar atau salah…",
+      "text2": "Pernyataan di bawah benar",
+      "text3": "Pernyataan di bawah salah"
+    },
+    "scene44": {
+      "v1": "Hebat! Pemahamanmu sudah tepat. Kesehatan mental itu lebih dari kondisi tidak adanya gangguan mental."
+    },
+    "scene45": {
+      "v1": "Sepertinya kamu perlu benar-benar memerhatikan pembelajaran setelah ini karena yang dimaksud dengan kesehatan mental itu lebih dari kondisi tidak adanya gangguan mental."
+    },
+    "scene46": {
+      "v1": "Menurut World Health Organization atau Organisasi Kesehatan Dunia, kesehatan mental mengacu kepada kondisi kesejahteraan di mana seorang individu menyadari kemampuannya, mampu menghadapi tekanan normal dalam hidup, dapat bekerja secara produktif dan bermanfaat, serta dapat berkontribusi bagi komunitasnya."
+    },
+    "scene47": {
+      "v1": "Seseorang yang sehat mental bukan berarti mereka tidak pernah memiliki perasaan negatif atau perasaan yang tidak mengenakan. Terkadang perasaan negatif justru membantu kita untuk menghadapi berbagai tekanan dalam hidup."
+    },
+    "scene48": {
+      "v1": "Sebagai contoh, kamu mungkin pernah merasa takut atau tertekan untuk menghadapi sebuah ujian yang materinya belum kamu kuasai…",
+      "v2": "Perasaan yang kamu rasakan tersebut sangatlah normal karena perasaan tersebut membuatmu menjadi sadar bahwa kamu perlu belajar lebih giat yang akhirnya membuatmu dapat mengerjakan ujian dengan lebih baik...",
+      "v3": "Dalam hal ini, kamu mampu menghadapi tekanan normal dalam hidup seperti berbagai ujian-ujian yang ada di sekolah."
+    },
+    "scene49": {
+      "v1": "Kata kunci yang sudah kita garis bawahi tadi berkaitan dengan komponen kesehatan mental lainnya. Untuk menghadapi tekanan, penting untuk menyadari kemampuan yang kita miliki. ",
+      "v2": "Dalam contoh menghadapi ujian di sekolah yang menantang, kita perlu menyadari bahwa sesulit apapun materinya, jika kita belajar dengan tekun menggunakan strategi belajar yang tepat, maka kita dapat menyelesaikan ujiannya dengan baik. ",
+      "v3": "Tidak hanya itu, kita juga memiliki kemampuan untuk meminta bantuan kepada teman yang lebih mahir atau meminta panduan lebih lanjut kepada guru."
+    },
+    "scene50": {
+      "v1": "Dengan terus menghadapi tekanan, kita akan menjadi pribadi yang lebih kuat dan lebih baik. Coba ingat saat-saat di mana kamu mendapatkan nilai baik di ujian yang sebelumnya kamu anggap sulit… ",
+      "v2": "Setelah berhasil menghadapi ujian tersebut kamu jadi menyadari bahwa sebenarnya kamu bisa melakukan hal-hal sulit tersebut jika kamu bekerja keras dan menggunakan strategi belajar yang baik. "
+    },
+    "scene51": {
+      "v1": "Saat TK kamu kesulitan menghitung 5 + 5… "
+    },
+    "scene52": {
+      "v1": "Saat SD kamu kesulitan menghitung 5 x 5… "
+    },
+    "scene53": {
+      "v1": "Saat SMP kamu kesulitan menghitung 5 pangkat 5, dan seterusnya... "
+    },
+    "scene54": {
+      "v1": "Kesulitan akan terus ada tapi kamu terus menghadapinya. Lama-kelamaan mungkin kamu akan bisa menghitung hal-hal rumit layaknya ilmuwan matematika atau insinyur yang berkontribusi untuk masyarakat banyak.",
+      "v2": "Bahkan, sejak sekarang pun jika kamu berhasil menghadapi tantangan sebelumnya, kamu bisa membantu adik kelas atau temanmu yang sedang menghadapi tantangan serupa. Jika mereka tidak bisa menghitung 5 pangkat 5 misalnya."
+    },
+    "scene55": {
+      "v1": "Aku yakin sekarang pemahamanmu terkait kesehatan mental sudah menjadi semakin baik. Sekarang, mari kita uji pemahamanmu terkait gangguan mental. ",
+      "v2": "Dengarkan baik-baik pernyataan setelah ini dan tentukan apakah pernyataan tersebut benar atau salah.",
+      "text3": "Pernyataan di bawah benar",
+      "text4": "Pernyataan di bawah salah"
+    },
+    "scene56": {
+      "v1": "Aku sangat senang dengan jawabanmu."
+    },
+    "scene57": {
+      "v1": "Aku perlu tegas di sini. Jawabanmu tidak dapat dibenarkan."
+    },
+    "scene58": {
+      "v1": "Gangguan mental adalah lawan utama dari pahlawan kesehatan mental dan perlu mendapat perhatian serius. Gangguan mental HANYA dapat didiagnosis atau ditentukan oleh profesional seperti psikolog dan psikiater.",
+      "v2": "Mengapa? Karena sifatnya sangat rumit sehingga perlu ditangani langsung oleh profesional yang sudah banyak mempelajari penelitian terkait gangguan mental. Coba perhatikan definisi gangguan mental menurut Asosiasi Psikiater Amerika ini.",
+      "v3": "Gangguan mental adalah sindrom yang dikarakterisasikan oleh gangguan klinis yang signifikan pada kognisi, regulasi emosi, dan perilaku yang merefleksikan disfungsi pada aspek psikologis, biologis, atau proses perkembangan yang mendasari fungsi mental."
+    },
+    "scene59": {
+      "v1": "Sama seperti pengertian dari kesehatan mental, terdapat beberapa kata kunci yang perlu kita perhatikan dalam pengertian gangguan mental. ",
+      "v2": "Yang pertama adalah “sindrom yang dikarakterisasikan oleh gangguan klinis yang signifikan”. Sindrom sendiri artinya adalah kumpulan gejala yang muncul secara bersamaan. ",
+      "v3": "Pada gangguan mental, sindrom ini menyebabkan gangguan yang sangat berdampak pada kondisi klinis atau medis seseorang. ",
+      "v4": "Gangguannya ini dapat berdampak pada berbagai aspek. Mulai dari aspek kognisi atau pikiran seperti delusi atau keyakinan yang sangat tidak sesuai dengan kenyataan, keinginan untuk mengakhiri hidup, hingga keyakanan bahwa diri sendiri tidak berdaya dan hidup tidak ada artinya. ",
+      "v5": "Pada aspek emosi, gangguan mental dapat menyebabkan perasaan negatif depresi dan kecemasan yang berat dan atau berkepanjangan. Pada aspek perilaku, gangguan mental dapat berdampak pada menarik diri dari hubungan sosial, menolak untuk pergi ke sekolah, hingga tidak merawat diri.",
+      "v6": "Dampak-dampak yang sudah kita bahas tadi berkaitan dengan kata kunci yang kedua, yaitu “merefleksikan disfungsi” atau kesulitan untuk berlangsungnya berbagai aspek diri dan hidup secara normal.",
+      "v7": "Jika tidak ditangani dengan baik, gangguan mental dapat menghambat seseorang untuk menjalankan kegiatan sosial dan aktivitas kehidupan lain seperti kesulitan untuk bersekolah dan bekerja."
+    },
+    "scene60": {
+      "v1": "Agar kita lebih memahami makna dari gangguan mental. Mari kita bahas beberapa contohnya. Menurut American Psychiatric Association dalam Diagnostic dalam buku Statistical Manual of Mental Disorder, gejala dari 70% gangguan mental sudah dapat terlihat sebelum usia 25 tahun.",
+      "v2": "Contoh pertamanya adalah gangguan kecemasan yang merupakan kelompok dari beberapa gangguan mental yang dicirikan dengan perasaan cemas dan takut yang sangat kuat dan terjadi secara terus-menerus. Gejala lainnya dari gangguan ini adalah kehabisan nafas, detak jantung yang sangat cepat, dan rasa pusing yang kuat. Beberapa jenis gangguan kecemasan adalah gangguan kecemasan umum, gangguan panik, dan gangguan kecemasan sosial. ",
+      "v3": "Lalu, terdapat pula jenis gangguan psikosis yang merupakan kelompok gangguan dengan ciri ketidakmampuan untuk membedakan apa yang nyata dengan yang tidak seperti delusi dan halusinasi. Akibatnya, orang-orang dengan psikosis mengalami kesulitan untuk melakukan aktivitas sehari-hari. Contoh dari gangguan psikosis adalah skizofrenia yang terjadi pada sekitar 1% dari seluruh populasi atau 1 dari 100 orang. ",
+      "v4": "Jenis gangguan lainnya adalah gangguan makan yang ditandai dengan gangguan pola makan secara terus-menerus yang menyebabkan terganggunya kesehatan fisik maupun mental. Salah satu contoh gangguan makan adalah Anorexia Nervosa di mana orang yang megalaminya secara berlebihan berusaha mengontrol berat badan, merasa ia memiliki penampilan atau bentuk tubuh yang buruk, dan sangat takut untuk mengalami kenaikan berat badan sehingga mereka menolak untuk memiliki berat badan yang normal.  ",
+      "v5": "Akibatnya, orang-prang dengan Anorexia menolak untuk makan atau berusaha mengeluarkan apa yang ia makan dengan memuntahkannya atau menyalahgunakan obat pencuci perut. Contoh gangguan makan lainnya adalah Bulimia Bervosa di mana orang yang mengalaminya secara rutin melakukan binge-eating di mana ia makan dengan jumlah yang banyak dalam waktu singkat, lalu berusaha mencegah kenaikan berat badan dengan perilaku-perilaku seperti berusaha memuntahkannya atau menggunakan obat pencuci perut.",
+      "v6": "Di sesi berikutnya, kita akan membahas secara mendalam gangguan depresi yang merupakan bagian dari gangguan mood atau suasana hati di mana orang yang mengalaminya memiliki suasana hati yang tidak sesuai dengan situasi yang ia alami dan membuatnya sulit untuk berfungsi atau melakukan aktivitas secara normal.",
+      "v7": "Orang-orang dengan gangguan mood dapat merasakan suasana hati yang negatif seperti sedih secara ekstrim, suasana hati yang positif secara ekstrim, atau suasana hati yang negatif ekstrim dan positif ekstrim bergantian."
+    },
+    "scene61": {
+      "v1": "Sebelum kita lanjut membahas gangguan mental. Aku ingin mengetahui apakah kamu memiliki pandangan yang tepat mengenai orang dengan gangguan mental. Jawab pertanyaanku… ",
+      "text2": "Ya, tentu saja bisa!",
+      "text3": "Sepertinya tidak…"
+    },
+    "scene62": {
+      "v1": "Kamu memiliki pandangan yang baik mengenai orang dengan gangguan mental!"
+    },
+    "scene63": {
+      "v1": "Hmmm sepertinya kamu memiliki pandangan yang kurang tepat mengenai orang dengan gangguan mental."
+    },
+    "scene64": {
+      "v1": "Meskipun gangguan mental dapat menghambat keseharian seseorang, bukan berarti mereka tidak bisa sukses dalam hidup dan berkontribusi kepada masyarakat luas."
+    },
+    "scene65": {
+      "v1": "Ada banyak tokoh terkenal yang berjuang menghadapi gangguan mental dalam hidupnya. Coba tebak siapa saja tokoh yang ada di dalam gambar ini."
+    },
+    "scene66": {
+      "v1": "Orang yang pertama adalah salah satu ahli fisika dan matematika paling berpengaruh di dunia yang terkenal dengan inspirasi setelah melihat apel jatuh."
+    },
+    "scene67": {
+      "v1": "Orang yang kedua adalah salah satu pemain bola terbaik dunia dari Inggris yang terkenal dengan tendangannya yang dapat melengkung."
+    },
+    "scene68": {
+      "v1": "Orang yang ketiga adalah penyanyi terkenal dari Canada yang terkenal dengan lagunya “Baby, baby, baby … Ohhhh”.",
+      "v2": "Coba tebak siapa mereka dan bagaimana mereka menghadapi gangguan mental? Kamu boleh menggunakan Internet ya untuk mencari informasi tentang mereka!",
+      "v3": "Ketiga tokoh ini benar-benar membuktikan bahwa gangguan mental bukanlah akhir dari segalanya dan kita tidak dapat mendefinisikan seseorang hanya berdasarkan gangguan mental yang ia alami. Gangguan mental hanyalah sebagian dari aspek kehidupan seseorang.",
+      "v4": "Newton yang terkenal menemukan gaya gravitas dan ada di seluruh buku fisika mengalami gejala bipolar dan psikosis... ",
+      "v5": "David Beckham bercerita bagaimana ia berjuang menghadapi obsessive-compulsive disorder atau OCD… ",
+      "v6": "…dan Justin Bieber memiliki perjuangan serupa dengan depresi yang ia alami.",
+      "v7": "Ketiga orang ini membuktikan bahwa seseorang dengan gangguan mental tetap dapat berkarya dan sukses, terutama jika gangguan mentalnya ditangani dengan tepat. ",
+      "v8": "Kamu dapat menemukan informasi di Internet mengenai cerita David Beckham dan Justin Bieber merasakan manfaat dari sesi terapi dengan profesional kesehatan mental."
+    },
+    "scene69": {
+      "v1": "Nah, Sesuai yang kutakan sebelumnya. Kita akan membahas gangguan depresi secara mendalam. Sebelum itu, aku ingin mengingatkan bahwa gangguan mental HANYA DAPAT DIDIAGNOSIS ATAU DITENTUKAN oleh profesional seperti psikiater atau psikolog."
+    },
+    "scene70": {
+      "v1": "Oleh karena itu, jika kamu merasa bahwa ada kemungkinan bahwa kamu mengalami depresi, maka kamu dapat menghubungi profesional-profesional di atas dengan langsung mengklik logo Ikatan Psikolog Klinis atau Perhimpunan Dokter Spesialis Kedokteran Jiwa."
+    },
+    "scene71": {
+      "v1": "Gangguan depresi memiliki banyak gejalanya karena banyak pula jenis gangguan depresi. Gejala yang akan kita bahas merupakan gejala yang umumnya terjadi. Seseorang dikatakan memiliki depresi ketika profesional seperti psikolog dan psikiater menemukan gejala-gejala ini berlangsung secara terus-menerus dengan minimal waktu 2 minggu dan menganggu keberfungsian untuk melakukan hubungan sosial, merawat diri, dan aktivitas lainnya seperti bersekolah dan bekerja.",
+      "v2": "Gejala pertamanya adalah suasana hati depresif yang ditandai dengan perasaan sedih, kosong, atau sering menangis. ",
+      "v3": "Gejala yang kedua adalah kehilangan minat pada hampir seluruh aktivitas di hampir setiap harinya. ",
+      "v4": "Gejala yang ketiga adalah perubahan pada pola makan baik itu kehilangan nafsu makan atau makan dengan jumlah berlebih untuk mengatasi suasana hati yang negatif. ",
+      "v5": "Gejala yang keempat adalah gangguan tidur seperti kesulitan tidur di malam hari atau tidur secara berlebihan.",
+      "v6": "Gejala yang kelima adalah gangguan psikomotor seperti kesulitan untuk menyeimbangkan gerakan tubuh ",
+      "v7": "Gejala yang keenam adalah perasaan lelah secara kronis atau secara terus menerus merasa lelah dan tidak memiliki energi",
+      "v8": "Gejala yang ketujuh adalah secara berlebihan merasa bahwa diri sendiri tidak berharga atau memiliki banyak kesalahan dan kegagalan",
+      "v9": "Gejala yang kedelapan adalah kesulitan untuk berkonsentrasi dan mengambil keputusan. Orang-orang dengan depresi merasa kesulitan untuk berpikir secara jernih",
+      "v10": "Gejala yang terakhir adalah pemikiran-pemikiran untuk mati atau bunuh diri."
+    },
+    "scene72": {
+      "v1": "Tidak ada satu hal khusus yang dapat dikatakan sebagai penyebab depresi. Depresi dapat terjadi karena kombinasi berbagai faktor biologis, psikologis, dan faktor sosial."
+    },
+    "scene73": {
+      "v1": "Dari aspek biologis terdapat faktor genetik meskipun kebanyakan orang yang memiliki keluarga dengan gangguan depresi tidak mengalami hal yang sama.",
+      "v2": "Faktor biologis lainnya adalah ketidakseimbangan hormon seperti dopamin dan serotonin yang berperan terhadap suasana hati.",
+      "v3": "Faktor psikologis yang dapat berdampak pada depresi adalah stress yang terjadi dan pola pikir yang membuat seseorang merasakan perasaan negatif dengan lebih intens dan cenderung memikirkan hal-hal negatif. Kejadian sosial seperti kehilangan orang terdekat, kehilangan pekerjaan, dan isolasi juga berkaitan dengan depresi."
+    },
+    "scene74": {
+      "v1": "Gejala-gejala depresi perlu ditangani langsung bersama profesional seperti psikolog dan psikiater yang dapat membantu mereka untuk kembali merasakan perasaan-perasaan dengan normal dan menikmati hidup. Penanganan yang diberikan oleh profesional dapat bervariasi sesuai gejalanya. Berikut adalah beberapa penanganan yang biasanya diberikan:"
+    },
+    "scene75": {
+      "v1": "Psikoterapi diberikan untuk membantu individu memahami apa yang ia pikirkan, apa yang ia lakukan, dan mengatur kembali hubungan sosialnya. Penanganan ini biasanya berlangsung 8 hingga 12 minggu untuk menunjukkan dampak positif"
+    },
+    "scene76": {
+      "v1": "Obat-obatan seperti antidepresan juga dapat membantu menangani gejala seperti perasaan depresif, menormalkan kembali pola tidur dan pola makan, serta mengurangi kecemasan. Pengobatan untuk depresi biasanya membutuhkan waktu 8 hingga 10 minggu untuk menunjukkan dampak. Perlu diketahui bahwa antidepresan tidak bersifat adiktif!"
+    },
+    "scene77": {
+      "v1": "Konseling secara umum juga membantu individu untuk mengatasi masalah-masalah praktis dan konflik, serta membantu seseorang untuk menghadapi depresinya. Perubahan gaya hidup seperti rutin berolahraga juga ditemukan dapat membantu meringankan gejala depresi."
+    },
+    "scene78": {
+      "v1": "Lalu, untuk beberapa kasus dengan gejala depresi yang berat membutuhkan penanganan khusus di rumah sakit seperti electroconvulsive therapy (ECT) dibutuhkan untuk penanganan yang aman dan efektif terutama ketika depresi yang dialami sudah membahayakan keamanan nyawa seseorang seperti adanya percobaan bunuh diri dan adanya gejala psikosis."
+    },
+    "scene79": {
+      "v1": "Kalau kamu perhatikan baik-baik pembahasan mendalam kita mengenai depresi, ada satu hal menarik yang dapat kita pelajari, yaitu tidak ada satu penyebab pasti dari gangguan depresi. Hal ini juga berlaku untuk kondisi kesehatan mental lainnya. Kesehatan mental kita akan selalu dipengaruhi oleh 3 faktor, yaitu faktor biologis, psikologis, dan sosial atau dapat juga disingkat sebagai faktor bio-psiko-sosial.",
+      "v2": "Dalam kasus depresi, kita sudah membahas bahwa ada faktor genetik yang berpreran, tapi kebanyakan orang dengan anggota keluarga yang memiliki depresi tidak mengalaminya. Aa juga faktor ketidakseimbangan hormon. ",
+      "v3": "Dari situ kita mengetahui bahwa faktor biologis berperan, tapi juga ada faktor psikologis seperti pengalaman penuh stress atau tekanan dan cara seseorang memaknakan kejadian hidupnya yang dapat mendorong terjadinya depresi. Lalu, kondisi sosial seperti adanya keluarga dan teman yang suportif dan membantu akan sangat memengaruhi kondisi depresi."
+    },
+    "scene80": {
+      "v1": "Coba tebak ya… daftar faktor-faktor yang mempengaruhi kesehatan mental di samping termasuk ke dalam faktor biologis, psikologis, atau sosial?",
+      "text2": "Faktor Biologis",
+      "text3": "Faktor Psikologis",
+      "text4": "Faktor Sosial"
+    },
+    "scene81benar": {
+      "v1": "Keren, tebakanmu tepat! Sepertinya kamu benar-benar memerhatikan diskusi kita. Daftar faktor-faktor ini termasuk ke dalam faktor biologis yang perlu kamu perhatikan untuk menjadi sehat mental."
+    },
+    "scene81salah": {
+      "v1": "Hmmmm kamu perlu lebih memerhatikan sesi latihan kita ya! Daftar faktor-faktor ini termasuk ke dalam faktor biologis yang perlu kamu perhatikan untuk menjadi sehat mental."
+    },
+    "scene82": {
+      "v1": "Jika kamu memiliki keluarga dengan gangguan mental, kamu dapat berkonsultasi dengan psikolog atau psikiater mengenai kemungkinan kamu dapat mengalami kondisi yang sama karena faktor genetic.",
+      "v2": "Lalu, kamu juga perlu memerhatikan pola hidup seperti olahraga yang rutin dan makan yang teratur dan sehat alias memiliki gizi seimbang!",
+      "v3": "Hal ini membantu menjaga hormone dan kondisi kesehatan fisikmu terus prima yang berdampak juga pada kesehatan mentalmu.",
+      "v4": "Bayangkan bagaimana tertekannya mentalmu jika kamu terus-terusan sakit dan tidak memiliki energi untuk menajalani aktivitas sehari-hari?",
+      "v5": "Terakhir, kamu perlu berhati-hati terhadap zat-zat berbahaya seperti narkoba, zat adiktif seperti rokok, dan zat beracun lainnya ya!"
+    },
+    "scene83": {
+      "v1": "Coba tebak ya… daftar faktor-faktor yang mempengaruhi kesehatan mental di samping termasuk ke dalam faktor biologis, psikologis, atau sosial?",
+      "text2": "Faktor Biologis",
+      "text3": "Faktor Psikologis",
+      "text4": "Faktor Sosial"
+    },
+    "scene84benar": {
+      "v1": "Tebakan yang baik! Kamu benar-benar memerhatikan diskusi kita. Daftar faktor-faktor ini termasuk ke dalam faktor psikologis yang perlu kamu perhatikan untuk menjadi sehat mental."
+    },
+    "scene84salah": {
+      "v1": "Sepertinya kamu perlu memerhatikan diskusi kita dengan lebih baik ya! Daftar faktor-faktor ini termasuk ke dalam faktor psikologis yang perlu kamu perhatikan untuk menjadi sehat mental."
+    },
+    "scene85": {
+      "v1": "Faktor psikologis merupakan faktor yang paling dapat kamu kontrol untuk meningkatkan kesehatan mentalmu! Dapat menyadari emosi negatif yang kamu rasakan dan menanganinya dengan baik dapat benar-benar mengubah hidupmu. ",
+      "v2": "Sebagai contoh, kita sudah belajar bagaimana emosi negatif tidak selamanya berdampak buruk. Menyadari bahwa kamu takut saat akan ujian dapat mendorongmu menjadi giat belajar. Tidak hanya emosi, hal yang kamu pikirkan juga dapat berdampak pada kesehatan mentalmu. ",
+      "v3": "Akan sangat baik jika kamu memiliki keyakinan bahwa kamu dapat menghadapi berbagai tantangan hidup, hal ini akan membantumu untuk tidak menyerah dan menghadapi masalah dengan efektif. ",
+      "v4": "Di Chapter berikutnya, kita akan belajar bagaimana cara efektif untuk menghadapi berbagai stress alias tekanan dalam hidup!"
+    },
+    "scene86": {
+      "v1": "Coba tebak ya… daftar faktor-faktor yang mempengaruhi kesehatan mental di samping termasuk ke dalam faktor biologis, psikologis, atau sosial?",
+      "text2": "Faktor Biologis",
+      "text3": "Faktor Psikologis",
+      "text4": "Faktor Sosial"
+    },
+    "scene87benar": {
+      "v1": "Good, tebakan yang tepat! Aku yakin kamu benar-benar memerhatikan diskusi kita. Daftar faktor-faktor ini termasuk ke dalam faktor sosial yang perlu kamu perhatikan untuk menjadi sehat mental."
+    },
+    "scene87salah": {
+      "v1": "Hmmmm aku ragu kamu benar-benar memerhatikan diskusi kita. Daftar faktor-faktor ini termasuk ke dalam faktor sosial yang perlu kamu perhatikan untuk menjadi sehat mental."
+    },
+    "scene88": {
+      "v1": "Faktor sosial juga dapat memengaruhi kesehatan mental kita. Memiliki orang-orang yang dapat mendukung kita untuk berbagai hal dalam hidup merupakan hal yang sangat penting bagi kesehatan mental.",
+      "v2": "Mulai dari mereka yang dapat menjadi tempat untuk bercerita, mengerjakan tugas bersama, hingga sekadar bercanda. Jaga baik-baik hubunganmu dengan mereka ya!",
+      "v3": "Faktor sosial sendiri tidak sebatas teman dan keluarga ya. Media masa dan media sosial secara umum juga dapat berdampak bagi kesehatan mental.  ",
+      "v4": "Terus-terusan mengonsumsi informasi dan konten negatif akan membuatmu merasakan hal-hal negatif hingga perasaan tertekan. Oleh karena itu, kamu perlu benar-benar memilah lingkungan sosialmu mulai dari media yang kamu konsumsi hingga dengan siapa kamu bergaul."
+    },
+    "scene89": {
+      "v1": "Artinya, dari setiap pengetahuan yang kita miliki, ada tanggungjawab untuk menggunakan pengetahuan tersebut dengan bijak. Oleh karena itu, karena kamu sudah banyak mempelajari istilah-istilah terkait kesehatan mental, maka kamu perlu menggunakannya dengan bijak."
+    },
+    "scene90": {
+      "v1": "Sebagai contoh menggunakan kata “depresi” untuk mendeskripsikan perasaaan kecewa, sedih, atau kebingungan bukanlah hal yang bijak. Apalagi jika dilakukan hanya untuk bercanda. Sebelumnya kamu sudah belajar bahwa depresi dan gangguan mental lainnya adalah kondisi serius yang memerlukan perhatian profesional, bukan istilah yang dapat sembarang digunakan.",
+      "v2": "Di sisi lain, kamu juga sudah belajar bahwa mental distress atau tekanan mental seperti perasaan-perasaan negatif adalah hal tak terhindarkan dalam hidup dan orang yang sehat mental pun tetap merasakan hal negatif karena merupakan sesuatu yang wajar dan dapat berampak positif karena mendorong seseorang untuk menyelesaikan masalah dan belajar menjadi lebih baik."
+    },
+    "scene91": {
+      "v1": "Di sisi lain, ada juga kondisi-kondisi mental yang tidak menunjukkan bahaya apapun, namun terkadang dikaitkan dengan masalah-masalah kesehatan mental. Termenung, berefleksi, dan berkontemplasi adalah perilaku yang wajar dilakukan apalagi jika seseorang perlu untuk mempertimbangkan suatu keputusan secara matang.",
+      "v2": "Beberapa istilah seperti “putus asa” dan “berduka” menunjukkan masalah kesehatan mental yang biasanya muncul saat terdapat tekanan berat dalam hidup seperti kehilangan orang terdekat, berpindah tempat tinggal, atau memiliki penyakit fisik yang serius. ",
+      "v3": "Masalah kesehatan mental memerlukan perhatian lebih, namun belum dapat dikatakan sebagai gangguan mental. Karena, ingat! Gangguan mental hanya dapat didiagnosis atau ditentukan oleh profesional seperti psikolog dan psikiater."
+    },
+    "scene92": {
+      "v1": "Menggunakan istilah-istilah ini dengan tepat dapat membantu penanganan berbagai kondisi kesehatan mental dengan baik. Saat seseorang termenung atau berkontemplasi, kita tidak bereaksi berlebihan. Lalu, saat menghadapi perasaan negatif dalam kondisi distress, kita tetap dapat bersikap positif untuk menyelesaikan masalah dengan efektif.",
+      "v2": "Saat terdapat masalah kesehatan mental yang memerlukan perhatian lebih, kita dapat meminta atau memberikan bantuan kepada teman atau orang yang lebih berpengalaman seperti orang tua dan guru. Yang terpenting, saat diduga ada gangguan mental seperti depresi, kita dapat mengarahkan bantuan profesional seperti psikolog dan psikiater untuk memberikan penanganan yang tepat."
+    },
+    "scene93": {
+      "v1": "Terakhir, perhatikan baik-baik diagram segi tiga ini! Mereka menjadi satu dalam segitiga dan tidak terpisah karena dapat saling berkaitan dan terjadi secara bersamaan! Seseorang dengan depresi, tetap dapat merasakan hal-hal positif seperti bersyukur dan bahagia dalam bagian-bagian tertentu di kehidupannya."
+    },
+    "scene94": {
+      "v1": "Oke, sesi terakhir dari petualangan belajarmu di Chapter ini. Masih terkait penggunaan istilah yang tepat. Kali ini berkaitan dengan istilah paling utama dan yang pertama kamu pelajari, yaitu “kesehatan mental”. ",
+      "text2": "Bebas dari gangguan mental",
+      "text3": "Sejahtera dengan menyadari kemampuannya, mampu menghadapi tekanan normal, belajar dengan giat dan senang membantu orang lain",
+      "text4": "Bebas dari gangguan mental dan bahagia"
+    },
+    "scene95benar": {
+      "v1": "Selamat, Calon Pahlawan Kesehatan Mental! Kamu sudah melewati sesi latihan di Chapter 2: Lawan dari Pahlawan Kesehatan Mental. Oleh karena itu, aku akan memberikan 2 lencana berikut ke tamengmu."
+    },
+    "scene95salah": {
+      "v1": "Hmmmm, kamu menjawab pertanyaan paling penting ini dengan kurang tepat. Meski begitu, aku tetap berikan ucapan selamat karena kamu sudah melewati sesi latihan di Chapter 2: Lawan dari Pahlawan Kesehatan Mental. Oleh karena itu, aku akan memberikan 2 lencana berikut ke tamengmu."
+    },
+    "scene96": {
+      "v1": "Lencana pertama ini menunjukkan bahwa kamu sudah berlatih untuk memahami makna kesehatan & gangguan mental. Lalu, lencana kedua menunjukkan bahwa kamu sudah berlatih untuk memahami faktor-faktor kesehatan mental."
+    },
+    "scene97": {
+      "v1": "Jika kamu masih belum yakin bahwa kamu layak untuk mendapatkan kedua lencana ini. Mungkin jika kamu banyak menjawab pertanyaan dengan salah atau kurang yakin kamu memahami materinya, kamu dapat mengulang kembali Chapter latihan kita ini ya!",
+      "v2": "Sampai jumpa di sesi latihan kita berikutnya, Calon Pahlawan Kesehatan Mental!"
+    }
+  },
+  "ch3": {
+    "scene98": {
+      "v1": "Halo, Calon Pahlawan Kesehatan Mental! Aku bangga sekali padamu karena sudah berlatih sampai sejauh ini. ",
+      "v2": "Di sesi latihan kita yang sebelumnya kita sudah membahas lawan-lawan dari Pahlawan Kesehatan Mental. ",
+      "v3": "Menurutmu, apakah masalah-masalah tersebut terdengar serius? Aku harap jawabanmu adalah “Ya” karena di sesi latihan kali ini aku ingin kamu juga serius berlatih untuk melakukan teknik-teknik yang dapat membantu menjaga kesehatan mental!"
+    },
+    "scene99": {
+      "v1": "Sebelum kita mulai latihan, aku ingin tahu apakah kamu setuju dengan pendapat bahwa dunia remaja itu hanya penuh dengan kebahagiaan tanpa ada sedikitpun stress atau rasa tertekan? ",
+      "text2": "Saya setuju dengan pendapat di bawah",
+      "text3": "Saya tidak setuju dengan pendapat di bawah"
+    },
+    "scene100benar": {
+      "v1": "Ya benar sekali!"
+    },
+    "scene100salah": {
+      "v1": "Wah, sayang sekali pandanganmu kurang tepat hufttt."
+    },
+    "scene101": {
+      "v1": "Merasa stres atau tertekan itu wajar karena akan selalu ada cobaan atau tantangan dalam hidup ini. Coba kamu bayangkan jika kejadian berikut terjadi padamu atau mungkin kamu pernah mengalaminya, coba ingat-ingat…"
+    },
+    "scene102": {
+      "v1": "Saat di mana kamu kesulitan mengerjakan tugas atau mempersiapkan ujian…"
+    },
+    "scene103": {
+      "v1": "lalu tiba-tiba kamu bertengkar dengan Saudara atau temanmu,"
+    },
+    "scene104": {
+      "v1": "ditambah lagi saat akan mengerjakan tugas dan ujian yang sulit kamu mengalami kendala seperti Internet yang buruk atau listrik yang tidak menyala…"
+    },
+    "scene105": {
+      "v1": "… akhirnya kamu pun merasa bahwa di dunia ini tidak ada yang suka kepadamu."
+    },
+    "scene106": {
+      "v1": "Setelah ini kita akan banyak membahas bagaimana cara mengelola stres dengan baik hingga memanfaatkannya untuk membuat mental kita menjadi lebih kuat! Ini sangat penting karena stres adalah sesuatu yang tidak akan pernah lepas dari keseharian kita. ",
+      "v2": "Tidak menutup kemungkinan juga bahwa kamu saat ini sedang mengalami stres, mungkin cerita tadi membuatmu teringat akan suatu pengalaman yang buruk. Jika kamu merasa tertekan, setelah ini aku akan menyediakan teknik relaksasi yang sudah sering kita gunakan. Silakan gunakan hingga stresmu mereda ya!"
+    },
+    "scene107": {
+      "v1": "Tarik nafasmu selama 4 detik.",
+      "v2": "Tahan nafasmu selama 4 detik.",
+      "v3": "Hembuskan nafasmu selama 4 detik.",
+      "v4": "Tahan kembali nafasmu selama 4 detik."
+    },
+    "scene108": {
+      "v1": "Tarik nafas, lalu kepalkan kedua tanganmu selama 7 sampai 10 detik. Sekuat-kuatnya hingga bergetar, namun tidak sakit.",
+      "v2": "Hembuskan nafasmu dan fokuslah pada sensasi rileks yang perlahan muncul dari kedua tangan sekitar 10 hingga 20 detik."
+    },
+    "scene109": {
+      "v1": "Sebelumnya, apa itu stres …?"
+    },
+    "scene110": {
+      "v1": "Stres adalah reaksi kognitif (pikiran), fisik, emosi, atau perilaku yang muncul akibat dari adanya stressor berupa tantangan atau ancaman.",
+      "v2": "Stres atau perasaan tertekan muncul karena kita meyakini bahwa ada tantangan yang perlu kita hadapi atau yang disebut juga dengan stressor.",
+      "v3": "Ada banyak sekali bentuk stressor yang sudah kita bahas sebelumnya, mulai dari tugas, masalah dengan teman, hingga lingkungan yang tidak mendukung."
+    },
+    "scene111": {
+      "v1": "Namun, apakah stres selalu memiliki dampak yang buruk? Coba tebak! ",
+      "q2": "Stres hanya memiliki dampak buruk",
+      "text3": "Pernyataan di bawah benar",
+      "text4": "Pernyataan di bawah salah"
+    },
+    "scene112benar": {
+      "v1": "Ya, tebakan yang baik! Kamu benar-benar memahami diskusi kita sejak sesi pertama. Stres tidaklah selalu berdampak buruk."
+    },
+    "scene112salah": {
+      "v1": "Hmm, tebakanmu kurang tepat! Di sesi latihan sebelumnya kita sudah beberapa kali membahas bahwa perasaan negatif dan stres tidak selalu berdampak buruk."
+    },
+    "scene113": {
+      "v1": "Ingat bahwa stres muncul karena adanya perasaan tertantang dan perasaan ini dapat membantu kita mengetahui kapan kita berusaha lebih keras!",
+      "v2": "Bayangkan seandainya kamu besok akan menghadapi ujian yang sangat sulit, jika kamu merasa tidak bisa menghadapi ujiannya sama sekali atau kamu belajar dengan cara yang terlalu keras, mungkin fisik dan mentalmu akan merasa sangat kelelahan.",
+      "v3": "Namun bagaimana seandainya kamu tidak mengetahui bahwa besok ada ujian yang sulit? Tentunya kamu tidak akan merasa tertantang dan tingkat stresmu akan sangat rendah. Lalu, kira-kira apakah kamu akan belajar dengan giat? Mungkin tidak ya..",
+      "v4": "Berbeda jika kamu menyadari bahwa akan ada ujian yang sulit di esok hari, maka kamu mungkin akan lebih tertantang dan bersemangat untuk belajar. ",
+      "v5": "Di level stres optimum inilah performa tubuh dan mentalmu akan menjadi optimal karena otakmu memberikan sinyal bahwa ada ‘tantangan’ yang perlu kita hadapi dengan baik. Itulah gunanya stres!"
+    },
+    "scene114": {
+      "v1": "Kabar baiknya lagi! Tiap kali kamu berhasil mengatasi stres, kamu juga akan melatih kekuatan mentalmu untuk menjadi lebih kuat lho!"
+    },
+    "scene115": {
+      "v1": "Pada kasus stres karena ujian tadi, karena kamu merasa ujiannya sulit, maka kamu belajar dengan giat. Hasilnya, kamu belajar kemampuan baru seperti strategi belajar yang baik untuk menghadapi ujian. ",
+      "v2": "Hasilnya, ketika kamu akan menghadapi ujian yang sulit lagi, kamu jadi tahu apa yang perlu kamu lakukan! Sebagai contoh, mungkin karena kamu merasa materi Matematika di buku tidak cukup, kamu mencari tutor atau video belajar di Internet, lalu kamu merasa bahwa itu adalah strategi yang tepat. ",
+      "v3": "Di masa depan, kamu sudah tahu apa yang kamu perlu lakukan untuk menghadapi ujian matematika lagi!"
+    },
+    "scene116": {
+      "v1": "Sebaliknya, jika kamu merasa bahwa stres harus dihindari, kamu mungkin tidak akan berusaha untuk belajar dengan lebih giat. Akibatnya, kamu kehilangan kesempatan untuk belajar kemampuan baru.",
+      "v2": "Dengan terus berani menghadapi tantangan stres, kamu akan membangun kekuatan mental Bernama “resiliensi” atau kelentingan, yaitu kemampuan untuk bangkit dari tekanan."
+    },
+    "scene117": {
+      "v1": "Ibaratnya, kamu bisa menjadi karet gelang yang mendapatkan tekanan dan tarikan dari sana-sini masih bisa kembali kuat dan bahkan menjadi lebih besar! What doesn’t kill you, makes you stronger! that’s resilience looks alike!"
+    },
+    "scene118": {
+      "v1": "Untuk mengetahui cara mengelola stress yang baik, kamu perlu tahu dulu apa saja stressor atau sumber-sumber dari stress. Secara umum terdapat 4 sumber stress yang perlu kamu perhatikan, yaitu stress akademik, stress lingkungan, stress interpersonal, dan stress intrapersonal.",
+      "v2": "Keempat jenis stress ini sudah kita bahas di awal sesi latihan. Setelah ini kita tebak-tebakan terkait sumber-sumber stress ya!"
+    },
+    "scene120": {
+      "v1": "Di awal cerita kita sudah membahas stress yang berasal dari tugas dan ujian yang sulit. Kira-kira ini jenis stress apa ya?",
+      "text2": "Stres Akademik",
+      "text3": "Stres Intrapersonal",
+      "text4": "Stres Interpersonal",
+      "text5": "Stres Lingkungan"
+    },
+    "scene121benar": {
+      "v1": "Ya benar!"
+    },
+    "scene121salah": {
+      "v1": "Wah, jawabanmu kurang tepat."
+    },
+    "scene122": {
+      "v1": "Stres akademik merupakan jenis stres yang berkaitan dengan kegiatan belajar seperti materi belajar yang sulit, tugas yang sangat banyak, dan nilai yang buruk"
+    },
+    "scene123": {
+      "v1": "Seperti jatuh tertimpa tangga. Sudah lelah mengerjakan tugas, bertengkar dengan Saudara, listrik dan Internet juga mati!",
+      "text2": "Stres Akademik",
+      "text3": "Stres Intrapersonal",
+      "text4": "Stres Interpersonal",
+      "text5": "Stres Lingkungan"
+    },
+    "scene124benar": {
+      "v1": "Tebakanmu benar! keren!"
+    },
+    "scene124salah": {
+      "v1": "Wah, sayang sekali tebakanmu meleset."
+    },
+    "scene125": {
+      "v1": "Stres interpersonal merupakan jenis stres yang berkaitan dengan hubungan sosial seperti konflik atau masalah dengan teman dan keluarga."
+    },
+    "scene126": {
+      "v1": "Seperti jatuh tertimpa tangga. Sudah lelah mengerjakan tugas, bertengkar dengan Saudara, listrik dan Internet juga mati!",
+      "text2": "Stres Akademik",
+      "text3": "Stres Intrapersonal",
+      "text4": "Stres Interpersonal",
+      "text5": "Stres Lingkungan"
+    },
+    "scene127benar": {
+      "v1": "Ya benar!"
+    },
+    "scene127salah": {
+      "v1": "Wah, jawabanmu kurang tepat."
+    },
+    "scene128": {
+      "v1": "Stres lingkungan merupakan jenis stres yang berkaitan dengan dengan dengan lingkungan tempatmu beraktivitas seperti ruangan yang berantakan, fasilitas seperti Internet yang rusak, hingga keributan atau suhu ruangan yang membuat kesulitan untuk berkonsentrasi."
+    },
+    "scene129": {
+      "v1": "Di awal cerita kita sudah membahas bagaimana pikiran-pikiran yang terlalu negatif seperti merasa tidak ada yang menyenangi kita dapat meningkatkan stress atau perasaan tertekan. ",
+      "text2": "Stres Akademik",
+      "text3": "Stres Intrapersonal",
+      "text4": "Stres Interpersonal",
+      "text5": "Stres Lingkungan"
+    },
+    "scene130benar": {
+      "v1": "Yey! Tebakan yang baik hahaha."
+    },
+    "scene130salah": {
+      "v1": "Sayang sekali tebakanmu kurang tepat."
+    },
+    "scene131": {
+      "v1": "Stres intrapersonal merupakan jenis stres yang berkaitan dengan proses di dalam diri kita seperti cara berpikir dan berperilaku. ",
+      "v2": "Misalnya, terus-terusan memikirkan masalah yang tidak bisa kita kendalikan, terlalu menyalahkan diri sendiri, kurang berolahraga, dan tidak makan dengan sehat."
+    },
+    "scene132": {
+      "v1": "Sekarang kamu sudah mengetahui hal-hal yang dapat membuat remaja stress, saatnya latihan untuk mengelola stress dengan baik. Caranya mudah. Semudah menguras air di dalam ember! Maksudnya apa ya? Mari kita pelajari!"
+    },
+    "scene133": {
+      "v1": "Bayangkan bahwa kapasitasmu untuk menghadapi stress itu sama dengan kapasitas ember untuk menampung air. Maka, kamu perlu mencegah agar air di dalam ember tidak tumpah. Dengan kata lain, kamu perlu menguras stress yang masuk agar tidak berlebihan.",
+      "v2": "Idealnya kamu mengetahui “buffer zone” di mana kamu mulai kelalahan sehingga ketika stresnya sudah membuatmu tidak dapat beraktivitas dengan baik, kamu tahu bahwa kamu perlu mengendalikan stresnya!"
+    },
+    "scene134": {
+      "v1": "Cara pertama untuk menguras stress adalah dengan emotion-focused coping, yaitu strategi untuk mengurangi emosi dan proses mental negatif. Misalnya, kamu sedang menghadapi materi belajar yang sangat sulit. Contoh dari emotion-focused coping adalah teknik relaksasi seperti box breathing dan progressive muscle relaxation yang biasa kita praktikkan sebelum latihan! ",
+      "v2": "Contoh lainnya adalah beristirahat dengan cukup, mencari hiburan dan candaan, dan bercerita kepada teman terkait masalah yang kamu hadapi.",
+      "v3": "Kamu dapat menggunakan emotion-focused coping ketika menghadapi masalah sulit untuk diatasi langsung. Misalnya, kamu sedang mempelajari materi yang sangat sulit hingga membuatmu merasa tertekan. Tidak ada cara singkat untuk mengatasi stress ini selain belajar dengan giat menggunakan cara belajar yang tepat. ",
+      "v4": "Namun, agar cara belajarmu efektif, kamu perlu mengurangi stress yang kamu rasakan. Kamu dapat melakukan teknik relaksasi terlebih dahulu agar stressmu terkuras dan kamu dapat berpikir dengan jernih dan siap untuk belajar dengan giat!"
+    },
+    "scene135": {
+      "v1": "Jika kamu perhatikan, posisi keran untuk mengeluarkan stress dengan emotion-focused coping itu tidak dapat menghabiskan air hingga 100% habis. Sebagai contoh, saat kesulitan menghadapi materi belajar yang sulit, melakukan teknik relaksasi dan mencari hiburan 100x pun tidak akan membuat materinya menjadi dapat dikuasai dengan instan.  ",
+      "v2": "Oleh karena itu, kamu perlu melakukan problem-focused coping, yaitu strategi menghadapi stress dengan mengatasi sumber masalahnya secara langsung!",
+      "v3": "Di sesi sebelumnya, kita sudah membahas jenis-jenis sumber stres. Mengenali sumber stres penting untuk memastikan kamu dapat mengatasi masalah dengan tepat. Sebagai contoh, jika kamu kesulitan dalam belajar, meminta bantuan teman dan menggunakan strategi belajar baru seperti mencari tutor online mungkin adalah strategi yang tepat. ",
+      "v4": "Namun, ketika masalah yang kamu hadapi adalah bertengkar dengan teman atau merasa kesepian, tentu saja mencari strategi belajar bukanlah solusinya. Solusi yang dapat digunakan mungkin adalah meminta saran dari teman lain atau saran dari orang tuamu tentang cara menyelesaikan pertengkaran dan bergabung dengan komunitas positif untuk berkenalan dengan lebih banyak orang."
+    },
+    "scene136": {
+      "v1": "Satu catatan penting terakhir dalam mengelola stres! Berhati-hatilah dengan unhelpful coping yang dapat menggodamu untuk memberikan kelegaan secara instan, namun sebenarnya akan menambah stresmu di masa mendatang!",
+      "v2": "Contoh dari unhelpful coping adalah menggunakan zat-zat berbahaya seperti rokok, minuman keras, dan narkoba. Di masa mendatang, kamu akan kesulitan untuk mengatasi stress karena zat-zat ini menghabiskan uangmu, membuatmu ketergantungan, hingga akhirnya merusak tubuh dan mentalmu!",
+      "v3": "Contoh unhelpful coping lainnya lebih samar-samar seperti berperilaku agresif dan kasar saat menghadapi masalah. Perilaku seperti memukul dan memaki tidak akan menyelesaikan masalah dan justru membuatmu merasa lebih buruk serta menambah masalah dengan orang di sekitar.",
+      "v4": "Contoh unhelpful coping yang terakhir adalah lari dari masalah seperti memutuskan menyerah untuk belajar materi yang sulit. Coba ingat-ingat saat kamu kesulitan memahami suatu materi karena tidak menguasai materi sebelumnya. Pernah kan ya? Ibaratnya, bagaimana bisa kamu memahami perkalian jika kamu tidak mengetahui pertambahan?",
+      "v5": "Lagi pula, kita sudah membahas bahwa setelah mengatasi stress, kamu akan menjadi lebih kuat. What doesn’t kill you, makes you stronger! Kamu juga sudah latihan kekuatan kesehatan mental denganku, aku yakin kamu bisa menghadapi apapun jenis stress yang kamu hadapi. Kamu adalah Calon Pahlawan Kesehatan Mental yang aku banggakan."
+    },
+    "scene137": {
+      "v1": "Oke, dalam diskusi kita, stress akademik sering kali menjadi masalah utama yang membuat stress. ",
+      "v2": "Jenis stress lainnya seperti stress interpersonal dan stress lingkungan pun berkaitan dengan akademik seperti bertengkar dengan teman sekolah hingga lingkungan belajar yang kurang baik. ",
+      "v3": "Nah, aku akan memberimu prinsip sederhana untuk menjaga stress sebagai seorang siswa sekolah.",
+      "v4": "Prinsipnya adalah…"
+    },
+    "scene138": {
+      "v1": "…menjaga kesehatan mental di sekolah = menjadi seorang atlet."
+    },
+    "scene148": {
+      "v1": "Ingat, bahwa kekuatan mental itu dibangun secara perlahan dengan terus berani menghadapi tantangan. Jadi, pastikan latihanmu tidak berakhir di sini ya.  ",
+      "text2": "Atlet lari jarak pendek",
+      "text3": "Atlet lari marathon"
+    },
+    "scene149benar": {
+      "v1": "Yey! Tebakan yang baik hahaha."
+    },
+    "scene149salah": {
+      "v1": "Sayang sekali tebakanmu kurang tepat."
+    },
+    "scene147": {
+      "v1": "Oke. Sekian sesi latihan kekuatan Pahlawan Kesehatan Mental! Karena kamu sudah berjuang dengan keras, aku memberikan satu lencana baru lagi untuk tamengmu. ",
+      "v2": "Lencana ini menandakan bahwa kamu memiliki kemampuan berupa pemahaman yang baik untuk menjaga kesehatan mental. "
+    },
+    "scene149": {
+      "v1": "Sampai jumpa di sesi latihan kita berikutnya, Calon Pahlawan Kesehatan Mental!"
+    }
+  },
+  "ch4": {
+    "scene150": {
+      "v1": "Halo, Calon Pahlawan Kesehatan Mental! Kamu sudah menyelesaikan lebih dari setengah latihan untuk menjadi Pahlawan Kesehatan Mental. ",
+      "v2": "Aku yakin kamu sudah memiliki banyak bekal untuk menjaga kesehatan mental, oleh karena itu aku akan mengenalkanmu pada pejuang kesehatan mental lainnya.",
+      "v3": "Sebelum itu! Jawab satu pertanyaanku untuk mengetahui mengapa penting mengenal para pejuang kesehatan mental"
+    },
+    "scene151": {
+      "v1": "Apakah kamu setuju dengan pernyataan bahwa …",
+      "text2": "Saya setuju dengan pendapat di bawah",
+      "text3": "Saya tidak setuju dengan pendapat di bawah"
+    },
+    "scene151benar": {
+      "v1": "Aku senang sekali dengan jawabanmu! Kamu sangat bersungguh-sungguh memahami latihan yang kita jalankan."
+    },
+    "scene151salah": {
+      "v1": "Hmmmm jawabanmu mengecewakan!"
+    },
+    "scene152": {
+      "v1": "Sejak awal kita berlatih, kita sudah sepakat bahwa salah satu tujuannya adalah untuk membantu para remaja yang memiliki masalah kesehatan mental untuk mendapatkan pertolongan. ",
+      "v2": "Saat membahas lawan-lawan dari Pahlawan Kesehatan Mental pun kita sudah membahas bahwa ada faktor-faktor gangguan mental yang sulit untuk ditangani sendiri seperti ketidakseimbangan hormon dan kebiasaan yang sulit diubah."
+    },
+    "scene153": {
+      "v1": "Sederhananya, coba bayangkan seorang dokter yang terjatuh dan merasakan sakit yang sangat kuat di kakinya. Dokter tersebut memiliki pengetahuan yang baik terkait masalah kesehatan fisik, namun apakah dokter tersebut tidak membutuhkan bantuan dokter lain? Bagaimana jika ternyata kakinya patah?"
+    },
+    "scene154": {
+      "v1": "Hal ini juga berlaku untuk masalah kesehatan mental. Terlebih, kita sudah membahas bahwa gangguan mental hanya dapat didiagnosis oleh profesional, yaitu psikolog dan psikiater. Ya, sama dengan masalah kesehatan fisik seperti kanker, diabetes, dan patah tulang. Kita tidak dapat sembarang mengatakan bahwa kita memiliki masalah tersebut sebelum mendapat diagnosis dari dokter."
+    },
+    "scene155": {
+      "v1": "Kabar baiknya, lagi-lagi sama dengan masalah kesehatan fisik, jika masalah kesehatan mental ditangani dengan baik, maka orang yang mengalaminya juga tetap dapat merasakan kesehatan mental. ",
+      "v2": "Layaknya orang dengan kanker, diabetes, atau patah tulang tetap dapat produktif dalam bekerja, belajar, dan bersosialisasi jika dibantu oleh dokter . Orang-orang dengan gangguan mental pun tetap dapat melakukannya jika dibantu oleh psikolog dan psikiater."
+    },
+    "scene156": {
+      "v1": "Oke, aku harap sekarang kamu memahami mengapa perlu untuk mengenal para pejuang kesehatan mental lainnya. Mereka memang tidak setiap hari berinteraksi dengan para remaja seperti Pahlawan Kesehatan Mental, namun ada kalanya hanya merekalah yang benar-benar dapat membantu dalam menyelesaikan masalah kesehatan mental.  ",
+      "v2": "Oleh karena itu, Pahlawan Kesehatan Mental perlu tahu kapan dirinya perlu meminta bantuan para pejuang kesehatan mental atau mengarahkan remaja lainnya untuk meminta bantuan.",
+      "v3": "Pada umumnya, Para Pejuang Kesehatan Mental yang merupakan profesional dibutuhkan ketika masalah yang dihadapi sulit untuk ditangani secara mandiri oleh remaja dan orang terdekatnya. ",
+      "v4": "Ya, bahasan kita pada sesi latihan kali ini mungkin akan membangkitkan perasaan negatif karena kita juga akan membahas kondisi-kondisi yang sulit. ",
+      "v5": "Jadi, setelah ini kita akan kembali melakukan teknik relaksasi seperti biasanya. Lalu, jika kamu merasa bahwa kamu berpotensi memiliki gangguan mental atau masalah kesehatan mentalmu sudah menganggu keseharianmu, segera hubungi profesional seperti psikolog dan psikiater ya!"
+    },
+    "scene157": {
+      "v1": "Tarik nafasmu selama 4 detik.",
+      "v2": "Tahan nafasmu selama 4 detik.",
+      "v3": "Hembuskan nafasmu selama 4 detik.",
+      "v4": "Tahan kembali nafasmu selama 4 detik."
+    },
+    "scene158": {
+      "v1": "Tarik nafas, lalu kepalkan kedua tanganmu selama 7 sampai 10 detik. Sekuat-kuatnya hingga bergetar, namun tidak sakit.",
+      "v2": "Hembuskan nafasmu dan fokuslah pada sensasi rileks yang perlahan muncul dari kedua tangan sekitar 10 hingga 20 detik."
+    },
+    "scene159": {
+      "v1": "Aku baru saja mendapatkan kabar dari para pejuang kesehatan mental. Mereka menyampaikan bahwa mereka tidak ingin langsung mengenalkan diri mereka padamu … ",
+      "v2": "Tenang, tenang! Mereka bukan tidak ingin berkenalan. Mereka hanya ingin sedikit melakukan permainan. Jadi, mereka akan memberikan petunjuk mengenai siapa diri mereka dan kamu diminta untuk menebak siapakah mereka?"
+    },
+    "scene160": {
+      "v1": "Siapakah aku?",
+      "text2": "Psikiater",
+      "text3": "Psikolog",
+      "text4": "Konselor"
+    },
+    "scene160benar": {
+      "v1": "Aku senang sekali dengan jawabanmu! Kamu sangat bersungguh-sungguh memahami latihan yang kita jalankan."
+    },
+    "scene160salah": {
+      "v1": "Hmmmm jawabanmu mengecewakan!"
+    },
+    "scene161": {
+      "v1": "Mari berkenalan dengan psikolog! Mereka ini sangat ahli dalam mengelola perilaku dan proses mental manusia loh! Tidak perlu heran. Mereka sudah menamatkan pendidikan sarjana alias S1 psikologi di mana mereka telah belajar seluruh aspek psikologis seseorang, mulai dari kepribadian, emosi, pikiran, perilaku, hingga faktor-faktor yang memengaruhinya seperti perkembangan, hubungan sosial, pendidikan, dan pekerjaan.  ",
+      "v2": "Tidak cukup hanya belajar dari penelitian saja, para psikolog juga telah melakukan pendidikan berupa praktik langsung untuk menangani masalah kesehatan mental. Mulai dari asesmen atau penilaian kondisi kesehatan mental, diagnosis gangguan mental, hingga penanganannya dengan mengelola reaksi empsi, cara berpikir, hingga pola perilaku! ",
+      "v3": "Jadi, sudah dipastikan para psikolog bisa banget untuk membantu kamu memaksimalkan kesehatan mental! Mereka tidak hanya membantu orang-orang dengan gangguan mental loh, namun juga masalah kesehatan mental pada umumnya."
+    },
+    "scene162": {
+      "v1": "Siapakah aku?",
+      "text2": "Psikiater",
+      "text3": "Psikolog",
+      "text4": "Konselor"
+    },
+    "scene162benar": {
+      "v1": "Aku senang sekali dengan jawabanmu! Kamu sangat bersungguh-sungguh memahami latihan yang kita jalankan."
+    },
+    "scene162salah": {
+      "v1": "Hmmmm jawabanmu mengecewakan!"
+    },
+    "scene163": {
+      "v1": "Profesional yang satu ini juga tidak perlu diragukan! Psikiater telah menyelesaikan pendidikan dokter yang pada umumnya membutuhkan waktu 6 tahun. Lalu, mereka juga menyelesaikan pendidikan untuk mendapatkan gelar Sp.KJ alias Spesialis Kesehatan Jiwa yang membutuhkan waktu sekitar 4 tahun.",
+      "v2": "Dengan latar belakang pendidikan kedokterannya, psikiater dapat memberikan resep obat-obatan untuk menangani masalah kesehatan mental. Kewenangan ini tidak dimiliki oleh profesional kesehatan mental lainnya. Para psikiater juga sudah terlatih untuk menangani masalah kesehatan yang rumit dan membutuhkan perawatan di rumah sakit jiwa."
+    },
+    "scene164": {
+      "v1": "Siapakah aku?",
+      "text2": "Psikiater",
+      "text3": "Psikolog",
+      "text4": "Konselor"
+    },
+    "scene164benar": {
+      "v1": "Aku senang sekali dengan jawabanmu! Kamu sangat bersungguh-sungguh memahami latihan yang kita jalankan."
+    },
+    "scene164salah": {
+      "v1": "Hmmmm jawabanmu mengecewakan!"
+    },
+    "scene165": {
+      "v1": "Konselor adalah profesional kesehatan mental terdekatmu! Tidak seluruh sekolah memiliki psikolognya sendiri, namun setiap sekolah pada umumnya memiliki konselor. Pastikan kamu mengenal konselormu dan bagaimana cara meminta bantuannya ya! Konselor adalah orang terdekat yang bisa kamu dapatkan bantuannya dengan segera untuk masalah kesehatan mental. ",
+      "v2": "Para konselor ini memiliki latar belakang pendidikan konselor adalah sarjana (S1) Psikologi atau Bimbingan dan Konseling. Lalu, mereka juga terlatih untuk menjadi konselor di bidang keahliannya masing-masing seperti bidang pendidikan, keluarga, pekerjaan, dan masih banyak lagi!",
+      "v3": "Konselor tidak dapat memberikan diagnosis atau terapi untuk gangguan mental, namun mereka dapat membantumu untuk menyelesaikan masalah dengan efektif, termasuk memutuskan untuk meminta bantuan dari psikolog atau psikiater. Mereka dapat membantumu menyelesaikan masalah dengan menjadi tempat bercerita yang nyaman, membantu memahami masalah, mengeksplorasi solusi yang dapat kamu lakukan, hingga mengevaluasi solusi terbaik apa yang dapat kamu lakukan."
+    },
+    "scene166": {
+      "v1": "Dari perkenalan kita dengan 3 profesional tadi, kita dapat merangkum 4 alasan mengapa bantuan profesional diperlukan untuk menangani masalah kesehatan mental. "
+    },
+    "scene167": {
+      "v1": "Alasan pertamanya adalah para profesional ini telah terlatih secara pendidikan dan profesional. Sebelumnya kita telah membahas bagaimana para profesional ini perlu menjalani pendidikan selama bertahun-tahun di perguruan tinggi. Yang perlu kamu ketahui juga adalah, setelah lulus mereka tidak begitu saja dilepas loh! ",
+      "v2": "Para profesional ini perlu melakukan sertifikasi dari institusi yang berwewenang untuk menguji bahwa mereka benar-benar memiliki kemampuan untuk membantu penanganan masalah kesehatan mental. Ujiannya pun dilakukan secara berkala dalam beberapa tahun untuk memastikan kompetensi yang mereka miliki terus dikembangkan. "
+    },
+    "scene168": {
+      "v1": "Ini juga berkaitan dengan alasan kedua untuk mendapatkan bantuan profesional. Jadi, selama menjalani proses pendidikan, para profesional ini belajar dari teori-teori dan penelitian ilmiah mengenai masalah kesehatan mental. Mereka juga sudah belajar untuk mempraktikkan keterampilan ilmiah tersebut sehingga mereka dapat memberikan layanan kesehatan mental terbaik! Uji sertifikasi yang dilakukan secara berkala pun menuntut mereka untuk terus belajar penelitian terkini terkait kesehatan mental. "
+    },
+    "scene169": {
+      "v1": "Alasan yang ketiga dapat membuatmu merasa 100% aman untuk mendapatkan bantuan profesional, yaitu mereka telah disumpah dan diawasi untuk mengikuti kode etik profesi. Dalam sumpah ini, mereka harus memastikan bahwa setiap tindakan mereka dilakukan demi kesejahteraanmu. ",
+      "v2": "Hal-hal sensitif seperti kerahasiaan masalahmu akan dijaga dengan baik oleh para profesional. Mereka juga tidak akan menjudge pribadimu buruk atau melakukan hal-hal yang tidak profesional lainnya. Jika mereka tidak menghargai kesejahteraanmu, izin mereka untuk dapat melakukan praktik secara profesional dapat terancam!"
+    },
+    "scene170": {
+      "v1": "Dengan segala jaminan ini, maka alasan keempat untuk mendapatkan bantuan profesional adalah kondisi kesehatan mental yang akan membaik! Mulai dari berkurangnya gejala-gejala masalah kesehatan mental, kemampuan untuk berfungsi seperti bersekolah dan menjalin hubungan yang membaik, hingga mencegah masalah lain untuk muncul, yang pada akhirnya akan meningkatkan kesejahteraan hidupmu!"
+    },
+    "scene171": {
+      "v1": "Setelah berkenalan dengan profesional, jadi apakah kamu merasa bahwa seluruh masalah kesehatan mental membutuhkan bantuan profesional?",
+      "text2": "Saya setuju dengan pendapat di bawah",
+      "text3": "Saya tidak setuju dengan pendapat di bawah"
+    },
+    "scene171benar": {
+      "v1": "Jawaban yang tepat untuk pertanyaan yang sulit. Aku sangat senang! Tentu saja kita ingin memastikan agar seluruh masalah kesehatan mental mendapatkan bantuan terbaik."
+    },
+    "scene171salah": {
+      "v1": "Hmmmmm. Sayang sekali jawabanmu kurang tepat, namun tidak masalah. Mungkin kamu sangat peduli pada masalah kesehatan mental sehingga ingin memastikan bantuan terbaik didapatkan."
+    },
+    "scene172": {
+      "v1": "Namun, terkadang bantuan terbaik sangat bisa kita dapatkan dengan belajar mengatasi masalah dan meminta bantuan orang terdekat. Profesional pada umumnya dibutuhkan ketika: ",
+      "v2": "1.Masalah yang dihadapi sudah mengganggu keseharian seperti mengganggu kegiatan sekolah dan hubungan sosial.\\n2.Menyebabkan perasaan buruk secara terus-menerus dalam waktu panjang.\\n3.Membahayakan diri sendiri atau orang lain.",
+      "v3": "Alasan lain mengapa tidak seluruh masalah kesehatan mental memerlukan bantuan profesional adalah jumlah profesional yang terbatas. ",
+      "v4": "Saat ini, hanya terdapat sekitar 3000 psikolog klinis dan 1000 psikiater di Indonesia. Ingat-ingat kembali segitiga kesehatan mental yang sudah kita bahas sebelumnya!"
+    },
+    "scene173": {
+      "v1": "Sebelum melanjutkan…. Yuk, ingat kembali bahasa yang tepat untuk kondisi mental!"
+    },
+    "scene174": {
+      "v1": "Mari kita mulai dari perilaku-perilaku yang menyulitkan …, namun sebenarnya cukup “wajar” untuk terjadi dalam kehidupan sehari-hari yang memang tidak akan pernah lepas dari tekanan atau stress. Di antaranya adalah:"
+    },
+    "scene175": {
+      "v1": "Bersikap kasar, melakukan hal-hal ceroboh, merasa malas, menarik diri, perasaan sensitive, merasa malu, bersikap menjengkelkan, memberontak, bersikap emosional, hingga menantang orang lain."
+    },
+    "scene176": {
+      "v1": "Perilaku-perilaku ini pada umumnya terjadi sebagai reaksi dari stress dalam hidup. Oleh karena itu, akan sangat wajar jika seseorang menunjukkan perilaku ini saat memiliki masalah hubungan dengan keluarga atau teman, berduka karena kehilangan orang terdekat, mengalami kesulitan belajar seperti nilai yang rendah, adaptasi dengan lingkungan baru seperti berpindah sekolah, atau mengalami sakit fisik yang mengganggu aktivitas sehari-hari."
+    },
+    "scene177": {
+      "v1": "Respon terbaik yang dapat kamu berikan jika kamu atau orang di sekitarmu menunjukkan perilaku ini adalah dengan tidak bereaksi berlebihan. Ingat, berhasil menghadapi stress dalam kehidupan sehari-hari adalah sumber dari resiliensi alias kekuatan mental! Yang dibutuhkan saat menghadapi stress adalah dukungan suportif dari orang di sekitar dengan menjadi pendengar yang baik dan menawarkan bantuan tanpa memaksa saran alias adu nasib hehe.",
+      "v2": "Saat masalah yang dihadapi sangatlah sulit, ada baiknya untuk meminta bantuan dari orang yang berpengalaman. Mulai dari teman sekolah yang dapat membantu kesulitan belajar atau bersosialisasi, orang tua yang dapat menceritakan pengalamannya, hingga konselor sekolah yang siap menemani penyelesaian masalah. Bantuan profesional dibutuhkan ketika perilaku ini terus-menerus ditunjukkan dalam waktu panjang."
+    },
+    "scene178": {
+      "v1": "Lalu bagaimana cara kita mengetahui perbedaan antara “hari yang buruk” dengan porensi masalah kesehatan mental yang lebih serius? Di sesi sebelumnya kita telah membahas gejala-gejala gangguan mental. Tujuannya adalah agar ketika gejala-gejala ini terjadi pada diri kita dan orang di sekitar, kita langsung bergerak cepat untuk memastikan bantuan profesional didapatkan!",
+      "v2": "Sebagai contoh, bantuan profesional perlu didapatkan jika hal-hal berikut dirasakan hampir setiap hari selama beberapa minggu secara berturut-turut.",
+      "v3": "Jika kamu masih ingat, di sesi sebelumnya kita telah membahas bahwa hal-hal tersebut adalah bagian dari gejala depresi. Bukan berarti kamu dapat mendiagnosis dirimu memiliki gangguan mental. Ingat juga bahwa gangguan mental hanya dapat didiagnosis oleh psikolog dan psikiater. ",
+      "v4": "Jadi, jika gejala-gejala ini dirasakan, maka segera dapatkanlah bantuan profesional. Semakin cepat bantuan profesional didapatkan, semakin baik pula proses penanganan dapat dilakukan. Kamu juga dapat meminta bantuan dari konselor jika ragu atau kesulitan untuk mendapatkan bantuan profesional."
+    },
+    "scene179": {
+      "v1": "Jika daftar perilaku sebelumnya merupakan gejala-gejala yang perlu diwaspadai, daftar yang akan kita bahas setelah ini adalah PERTANDA SERIUS yang membutuhkan bantuan profesional dengan segera. ",
+      "v2": "INGAT, semakin cepat ditangani, maka semakin baik pula penanganan yang dapat diberikan dan semakin baik kesehatan mentalnya di masa depan. "
+    },
+    "scene180": {
+      "v1": "Perhatikan baik-baik ya segera hubungi profesional jika kamu merasakan atau melihat perilaku-perilaku abnormal berikut yang dapat berdampak serius bagi diri sendiri maupun orang lain. Lalu, bagaimana caranya mendapatkan bantuan profesional? Akan langsung kita bahas setelah ini! "
+    },
+    "scene181": {
+      "v1": "Di Indonesia, setiap sekolah wajib memiliki seorang konselor. Jadi, dapat dipastikan sekolahmu juga memiliki konselor. Pastikan kamu mengenal siapa konselor di sekolahmu dan bagaimana cara meminta bantuan mereka. Meski belum akan meminta bantuan… ",
+      "v2": "…kamu dapat berkenalan terlebih dahulu dengan konselor yang ada di sekolah agar nanti kamu dapat merasa lebih nyaman untuk meminta bantuan. Konselor tidak dapat memberikan diagnosis atau terapi gangguan mental, namun ketika psikolog dan psikiater dibutuhkam, konselor sekolahmu dapat membantu untuk memastikan siswa mendapat bantuan profesional!"
+    },
+    "scene182": {
+      "v1": "Ada juga layanan profesional di luar sekolah yang gratis loh! Misalnya Layanan Sejiwa yang disediakan oleh Pemerintah Indonesia bersama Himpunan Psikologi Indonesia alias HIMPSI atau Bantuan Konseling Daring Gratis dari Ikatan Psikolog Klinis Indonesia. Pastikan kamu mengikuti media sosial kedua lembaga ini untuk mendapatkan informasi terbaru mengenai layanan psikologi gratis yang ada. "
+    },
+    "scene183": {
+      "v1": "Untuk mencari psikolog klinis yang ada di sekitarmu, kamu dapat mengunjungi website Ikatan Psikolog Klinis Indonesia di ipkindonesia.or.id dan mencari menu 'Cari Psikolog Klinis'. ",
+      "v2": "Setelahnya, kamu akan diarahkan pada direktori ikatan psikolog klinis. Dalam menu ini, kamu dapat memasukkan kota tempatmu berada dan klik “cari psikolog”. Website akan menampilkan daftar nama psikolog klinis yang ada di kotamu lengkap dengan keahlian dan alamat praktiknya."
+    },
+    "scene184": {
+      "v1": "Mencari psikiater yang ada di sekitarmu pun juga sama mudahnya! Kamu tinggal mengunjungi website Perhimpunan Dokter Spesialis Kedokteran Jiwa Indonesia di pdskji.org. ",
+      "v2": "Dalam website tersebut, di bagian kanannya terdapat kolom “Cari Dokter” yang dapat kamu isi dengan kota tempatmu berada dan klik “search”, website akan menampilkan daftar nama psikiater yang ada di sekitarmu dan lokasi praktiknya!"
+    },
+    "scene185": {
+      "v1": "Dengan perkembangan teknologi di masa sekarang, kamu bisa mendapatkan layanan konseling bersama psikolog secara daring loh! Gimana caranya? Ada dua cara yang bisa kamu lakukan. Cara yang pertama adalah dengan mengunjungi Instagram @diceritain.id lalu mengklik link yang ada di bio Instagram tersebut. Nanti kamu akan mendapatkan menu “psikolog diceritain” dan diarahkan kepada formular pendaftaran sesi konseling bersama psikolog. "
+    },
+    "scene186": {
+      "v1": "Cara kedua yang dapat kamu lakukan adalah dengan mengunjungi website diceritain.id dan masuk ke menu product 'layanan konseling psikolog'. Setelahnya, kamu tinggal melakukan penjadwalan sesi konseling! "
+    },
+    "scene187": {
+      "v1": "Jika kamu masih ragu untuk menghubungi profesional, kamu dapat terlebih dahulu menceritakan masalahmu dengan konselor sebaya Diceritain! Caranya mudah banget, kamu tinggal download aplikasi Diceritain di Google Playstore. Setelah mendaftarkan diri, kamu dapat langsung terhubung dengan konselor sebaya yang sudah terlatih untuk menjadi tempat bercerita yang nyaman dan terpercaya! "
+    },
+    "scene188": {
+      "v1": "Oke! Kita sudah berada di akhir sesi latihan kali ini. Untuk memastikan kamu memilih tindakan yang tepat untuk menyelesaikan masalah kesehatan mental, mari kita buat rencana tindakan untuk menghadapi situasi yang serupa dengan checklist yang telah kita bahas!"
+    },
+    "scene189": {
+      "v1": "Bayangkan … ",
+      "text2": "Teman yang suportif dan menawarkan bantuan",
+      "text3": "Mendapatkan bantuan profesional"
+    },
+    "scene189benar": {
+      "v1": "Yap. Tindakan yang tepat! Dalam keseharian, tidak jarang kita menemukan situasi yang membuat kita tertekan, salah satunya adalah kesulitan belajar seperti mendapat nilai yang rendah. "
+    },
+    "scene189salah": {
+      "v1": "Hmmmm, pilihanmu kurang tepat. Dalam keseharian, tidak jarang kita menemukan situasi yang membuat kita tertekan, salah satunya adalah kesulitan belajar seperti mendapat nilai yang rendah. "
+    },
+    "scene190": {
+      "v1": "Perilaku temanmu yang marah saat mendiskusikan nilai matematik adalah reaksi yang wajar saat merasa tertekan, meskipun ya … menyulitkan orang di sekitarnya. Masalah seperti ini secara umum tidak membutuhkan bantuan profesional, kecuali terjadi dalam waktu yang panjang. ",
+      "v2": "Yang temanmu butuhkan adalah teman yang suportif yang tidak menghakiminya! Cobalah tawarkan bantuan seperti belajar bersama jika kamu menguasai materi yang ia gagal selesaikan dengan baik, namun jangan memaksanya untuk melakukan sesuatu. ",
+      "v3": "Cukup dengarkan dan tawarkan bantuan agar ia tidak merasa sendirian. Setelah berhasil menyelesaikan masalah ini, temanmu akan menjadi lebih kuat dalam menghadapi tekanan serupa. Misalnya, ia jadi mengetahui cara belajar yang lebih tepat untuk matematika."
+    },
+    "scene191": {
+      "v1": "Bayangkan … ",
+      "text2": "Teman yang suportif dan menawarkan bantuan",
+      "text3": "Mendapatkan bantuan profesional"
+    },
+    "scene191benar": {
+      "v1": "Yes, kamu memilih tindakan yang tepat! Perilaku yang ditunjukkan oleh temanmu menunjukkan masalah dalam mengenali realita yang dapat mengganggu kesehariannya, bahkan mengancam keselamatannya."
+    },
+    "scene191salah": {
+      "v1": "Kamu memilih Tindakan yang tidak tepat dan dapat membahayakan nyawa!"
+    },
+    "scene192benar": {
+      "v1": "Dalam kondisi seperti ini, kamu perlu memastikan bahwa ia mendapatkan bantuan profesional. Gunakan pengetahuanmu terkait cara mengakses bantuan profesional yang telah kita bahas sebelumnya.",
+      "v2": "Ingat, semakin cepat masalah seperti ini ditangani, maka semakin baik pula kondisi kesehatan mental yang dapat kita harapkan di masa depan! Jangan pernah mau diminta untuk merahasiakan keinginan untuk bunuh diri! Ceritakan kepada orang tua dan konselor sekolah jika temanmu menceritakan keinganan untuk bunuh diri."
+    },
+    "scene192salah": {
+      "v1": "Perilaku yang ditunjukkan oleh temanmu menunjukkan masalah dalam mengenali realita yang dapat mengganggu kesehariannya, bahkan mengancam keselamatannya. Dalam kondisi seperti ini, kamu perlu memastikan bahwa ia mendapatkan bantuan profesional. ",
+      "v2": "Gunakan pengetahuanmu terkait cara mengakses bantuan profesional yang telah kita bahas sebelumnya. Ingat, semakin cepat masalah seperti ini ditangani, maka semakin baik pula kondisi kesehatan mental yang dapat kita harapkan di masa depan! Jangan pernah mau diminta untuk merahasiakan keinginan untuk bunuh diri! Ceritakan kepada orang tua dan konselor sekolah jika temanmu menceritakan keinganan untuk bunuh diri."
+    },
+    "scene193": {
+      "v1": "Kamu sudah menyelesaikan sesi latihan Para Pejuang Kesehatan Mental! Dalam sesi ini, kamu akan mendapatkan 2 buah lencana. "
+    },
+    "scene194": {
+      "v1": "Lencana yang pertama menandakan bahwa kamu sudah belajar mengapa bantuan profesional seperti psikolog, psikiater, dan konselor dibutuhkan dan kapan mereka dibutuhkan.",
+      "v2": "Lalu, lencana yang kedua menandakan bahwa kamu sudah mengetahui cara untuk mendapatkan bantuan dari profesional. Mulai dari konselor yang ada di sekolah, layanan psikologis gratis, hingga mencari psikolog dan psikiater secara online."
+    },
+    "scene195": {
+      "v1": "Ingat! Sebaik apapun pengetahuan seseorang mengenai kesehatan mental, ada kalanya ia membutuhkan bantuan orang lain. ",
+      "v2": "Meminta bantuan tidaklah menandakan kelemahan, melainkan menandakan kebijakan dan keberanian untuk memilih langkah yang tepat dalam menjaga kesehatan mental. "
+    },
+    "scene196": {
+      "v1": "Apakah kamu dapat menjawab dua rencana tindakan terakhir dengan tepat?",
+      "v2": "Jika kamu belum dapat menjawabnya dengan tepat, aku menyarankanmu untuk mengulang sesi latihan ini karena akan sangat penting untuk penanganan masalah kesehatan mental yang tepat.",
+      "v3": "Ingat! Sebaik apapun pengetahuan seseorang mengenai kesehatan mental, ada kalanya ia membutuhkan bantuan orang lain. ",
+      "v4": "Meminta bantuan tidaklah menandakan kelemahan, melainkan menandakan kebijakan dan keberanian untuk memilih langkah yang tepat dalam menjaga kesehatan mental",
+      "v5": "Sampai jumpa di sesi latihan berikutnya yang merupakan sesi latihan terakhir kita!"
+    }
+  },
+  "ch5": {
+    "scene197": {
+      "v1": "Coba kamu bayangkan seseorang dengan gangguan mental … ya coba tutup matamu dan bayangkan",
+      "v2": "seseorang-yang-memiliki-gangguan-mental… Sosok seperti apakah yang ada di dalam bayanganmu?",
+      "v3": "Saat diminta membayangkan orang dengan gangguan mental, apakah yang muncul dalam bayanganmu adalah seseorang yang berbahaya dan sering melakukan kekerasan?"
+    },
+    "scene198": {
+      "v1": "Saat diminta membayangkan orang dengan gangguan mental, apakah yang muncul dalam bayanganmu adalah seseorang yang berbahaya dan sering melakukan kekerasan?"
+    },
+    "scene199": {
+      "v1": "Jika ya, sebenarnya bayangan tersebut dapat dikatakan kurang akurat"
+    },
+    "scene200": {
+      "v1": "Banyak film seperti Joker sering kali menggambarkan bahwa orang dengan gangguan mental melakukan kekerasan. Hal yang sama juga terjadi dalam media masa. Penggambaran orang dengan gangguan mental melakukan kekerasan lebih sering diberitakan untuk menarik perhatian pembaca.",
+      "v2": "Padahal, pada kenyataannya orang dengan gangguan mental lebih mungkin untuk menjadi korban kekerasan. Sebagaimana yang telah kita bahas, ada banyak stigma dan diskriminasi yang terjadi pada orang dengan gangguan mental, bahkan praktik pemasungan untuk gangguan mental masih banyak terjadi di Indonesia.",
+      "v3": "Dalam film-film dan berita yang kita konsumsi juga sering kali diceritakan bahwa ada penyebab spesifik atau kejadian tertentu yang menyebabkan kesehatan mental.",
+      "v4": "Seperti yang sudah kita bahas: gangguan mental memiliki faktor biologis, psikologis, dan sosial yang kompleks. Penggambaran yang tidak akurat ini dapat berbahaya karena dapat membuat kita meremehkan masalah kesehatan mental dan tidak menjaga faktor-faktornya dengan baik.",
+      "v5": "Gambaran berbahaya lainnya tentang kesehatan mental adalah keyakinan bahwa gangguan mental dapat dengan mudah hilang dengan sendirinya. Dalam film-film, hal ini sering kali digambarkan dengan adanya “kekuatan cinta”. ",
+      "v6": "Padahal … kita sudah membahas pentingnya bantuan profesional dalam penanganan gangguan mental. Gambaran yang tidak akurat ini dapat membuat orang-orang ragu untuk mencari bantuan profesional saat menghadapi masalah kesehatan mental."
+    },
+    "scene201": {
+      "v1": "Sebenarnya masih ada banyak lagi gambaran tentang kesehatan mental yang kurang akurat di media. Kesimpulannya adalah, Calon Pahlawan Kesehatan Mental perlu pandai menyaring informasi mengenai kesehatan mental yang ada di media. "
+    },
+    "scene202": {
+      "v1": "Sesi latihan kita kali ini adalah sesi latihan terakhir. Ya, ini hanyalah bagian singkat dari petualanganmu sebagai Pahlawan Kesehatan Mental nantinya. Kamu perlu terus memperbaharui pengetahuanmu mengenai kesehatan mental. Media dapat menjadi senjata utamamu, namun juga dapat menjadi pisau bermata dua jika kamu tidak pandai memilah informasi mengenai kesehatan mental yang disajikan di media."
+    },
+    "scene203": {
+      "v1": "Diskusi kesehatan mental di media pada dasarnya dapat memberikan dampak positif. Film A Beautiful Mind misalnya banyak mendapatkan pujian dari profesional kesehatan mental karena menggambarkan pentingnya bantuan profesional dan dukungan sosial dalam penanganan gangguan mental hingga tokoh utama dalam film A Beautiful Mind, John Nash yang memiliki gangguan jiwa skizofrenia, bisa mendapatkan penghargaan Nobel Matematika."
+    },
+    "scene204": {
+      "v1": "Diskusi kesehatan mental di media secara umum dapat meningkatkan kesadaran kita mengenai pentingnya kesehatan mental. "
+    },
+    "scene205": {
+      "v1": "Per April 2022, terdapat lebih dari 38 juta post di Instagram dengan hashtag #MentalHealth dan dari 32 miliar view untuk hashtag #MentalHealth di Tiktok. Namun, pertanyaannya adalah apakah seluruh informasi yang tersedia di media tersebut akurat?",
+      "v2": "Kedua media ini dapat menghubungkan profesional dengan masyarakat untuk membahas masalah kesehatan mental. Sayangnya, profesional pun dapat melakukan kesalahan selayaknya manusia tidak ada yang sempurna."
+    },
+    "scene206": {
+      "v1": "Apalagi untuk konten yang dibuat oleh masyarakat umum. Tidak jarang konten di media menyajikan informasi yang tidak akurat mengenai kesehatan mental, meremehkan gangguan mental, atau tidak menyarankan bantuan profesional dalam penanganan masalah kesehatan mental.",
+      "v2": "Ada tiga langkah sederhana yang bisa kamu terapkan untuk menyaring informasi kesehatan mental yang kamu konsumsi benar-benar akurat dan bermanfaat. "
+    },
+    "scene207": {
+      "v1": "Kedua media ini dapat menghubungkan profesional dengan masyarakat untuk membahas masalah kesehatan mental. Sayangnya, profesional pun dapat melakukan kesalahan selayaknya manusia tidak ada yang sempurna."
+    },
+    "scene208": {
+      "v1": "Langkah keduanya adalah periksa apakah informasi yang diberikan berbasis ilmiah dan didukung profesional"
+    },
+    "scene209": {
+      "v1": "Langkah ketiganya adalah jika merasakan keraguan atau risiko bahaya, konsultasikan kepada psikolog atau psikiater."
+    },
+    "scene210": {
+      "v1": "Agar kamu lebih memahami penerapan 3 langkah menyaring informasi kesehatan mental, mari kita lakukan action plan simulasi untuk melihat perilaku yang sesuai dengan 3 langkah tersebut!"
+    },
+    "scene211": {
+      "text1": "Bebas. Semua informasi sama saja",
+      "text2": "Artikel dari organisasi kesehatan mental "
+    },
+    "scene211benar": {
+      "v1": "Pilihan yang tepat untuk menyaring informasi kesehatan mental. Saat melakukan pencarian dengan kata “Kecemasan” di Google, kamu akan mendapati lebih dari 26 juta hasil. Tentunya, tidak semua informasi tersebut benar-benar akurat."
+    },
+    "scene211salah": {
+      "v1": "Hmmm, kamu gagal menerapkan langkah dalam menyaring informasi kesehatan mental. Saat melakukan pencarian dengan kata “Kecemasan” di Google, kamu akan mendapati lebih dari 26 juta hasil. Tentunya, tidak semua informasi tersebut benar-benar akurat. "
+    },
+    "scene212": {
+      "v1": "Saat melakukan pencarian informasi, sangat disarankan untuk mengutamakan memilih informasi informasi kesehatan dari organisasi atau profesional kesehatan mental. ",
+      "v2": "Kamu juga dapat menggabungkan kata kunci pencarianmu dengan nama organisasi atau kesehatan mental, misalnya dalam mencari informasi terkait kecemasan kamu dapat menggunakan kata kunci “PDSKJI Kecemasan” atau “Psikolog Kecemasan” sehingga informasi yang kamu dapatkan benar-benar tersaring dengan baik karena diawasi oleh lembaga yang berwenang.",
+      "v3": "Beberapa organisasi yang ada di dalam layar adalah lembaga yang memiliki fokus di bidang kesehatan mental. Mulai dari PDSKJI atau Perhumpunan Dokter Spesialis Kesehatan Jiwa Indonesia, Himpunan Psikologi Indonesia, hingga Ikatan Psikolog Klinis. ",
+      "v4": "Mereka menyediakan banyak sekali informasi kesehatan mental yang dapat kamu akses dengan gratis. Mulai dari artikel, video, audio, hingga teknik-teknik untuk menjaga kesehatan mental."
+    },
+    "scene213": {
+      "v1": "Selain lembaga-lembaga tersebut, kamu juga dapat mengutamakan informasi yang disediakan oleh penyedia jasa layanan profesional kesehatan mental seperti Diceritain! Para penyedia jasa layanan kesehatan mental pada umumnya mempekerjakan pihak-pihak yang terlatih untuk menyebarkan informasi terkait kesehatan mental."
+    },
+    "scene214": {
+      "v1": "Tentu saja kamu juga perlu mengutamakan informasi yang ditulis langsung atau telah diperiksa oleh profesional seperti psikolog, psikiater, dan peneliti kesehatan mental. Selain menulis artikel atau membuat konten di Internet, para profesional juga biasanya menulis buku-buku kesehatan mental."
+    },
+    "scene215": {
+      "v1": "Selain mengonsumsi konten dari profesional, kamu juga dapat belajar langsung dari para profesional kesehatan mental melalui kegiatan-kegiatan seperti workshop, pelatihan, dan webinar. Agar kamu terus mendapatkan informasi terbaru mengenai kegiatannya, ikuti akun-akun media sosial dari pihak-pihak terkait yang sudah kita bahas ya. ",
+      "v2": "By the way, kamu bisa loh mengundang Diceritain buat cerita tentang kesehatan mental di sekolahmu! Bisa langsung follow dan hubung Instagram Diceritain di @diceritain.id ya!"
+    },
+    "scene216": {
+      "text1": "Kamu perlu memeriksa akurasi informasi dari layanan yang ditawarkan karena tidak menunjukkan sifat ilmiah",
+      "text2": "Testimoni dari pengguna jasa sebelumnya membuktikan bahwa terapi tersebut tentunya dapat membantu orang lain juga"
+    },
+    "scene216benar": {
+      "v1": "Good job! Pilihanmu sesuai dengan langkah dalam menyaring informasi kesehatan mental."
+    },
+    "scene216salah": {
+      "v1": "Hmmm, pilihanmu tidak sesuai dengan langkah dalam menyaring informasi kesehatan mental. "
+    },
+    "scene217": {
+      "v1": "Gelar sarjana psikologi orang yang menawarkan 'terapi inner child' mungkin membuatnya terkesan sebagai seorang ahli. Tapi! Kamu perlu ingat bahwa terapi untuk gangguan mental seperti depresi hanya bisa diberikan oleh psikolog dan psikiater!"
+    },
+    "scene218": {
+      "v1": "Jika kamu melakukan pencarian terkait “terapi inner child” pun kamu tidak akan mendapat hasil yang memuaskan karena “inner child” adalah salah satu konsep yang belum banyak diteliti sehingga penggunaannya sering kali disalahgunakan, apalagi untuk digunakan sebagai terapi. ",
+      "v2": "Sebuah informasi dapat dikatakan ilmiah ketika telah diuji coba berkali-kali dan memiliki hasil yang memuaskan. Uji coba yang dilakukan pun perlu dilakukan pada jumlah orang yang besar sehingga testimoni dari beberapa orang tidak dapat menjamin sebuah informasi dapat dikatakan ilmiah."
+    },
+    "scene219": {
+      "text1": "Merasa 100% yakin bahwa kamu sedang mengalami gangguan depresi",
+      "text2": "Berkonsultasi dengan psikolog mengenai gejala yang kamu rasakan"
+    },
+    "scene219benar": {
+      "v1": "Kamu berhasil memilih pilihan yang lebih aman!"
+    },
+    "scene219salah": {
+      "v1": "Pilihanmu dapat membahayakan kesehatan mentalmu!"
+    },
+    "scene220": {
+      "v1": "Pertama-tama, informasi mengenai gejala depresi dalam Tiktok tersebut belum tentu sesuai dengan literatur yang digunakan oleh profesional seperti Diagnostic and Statistical Manual of Mental Disorders atau Pedoman Penggolongan dan Diagnosis Gangguan Jiwa. ",
+      "v2": "Bahkan, jika informasinya sesuai pun kamu tetap tidak bisa mendiagnosis dirimu sendiri memiliki gangguan mental. "
+    },
+    "scene221": {
+      "v1": "Di sesi latihan sebelumnya kita telah membahas gejala-gejala depresi dan dalam sesi tersebut aku selalu menekankan bahwa interpretasi atau diagnosis gangguan mental hanya bisa diberikan oleh psikolog atau psikiater. ",
+      "v2": "Kita juga telah sepakat untuk selalu menekankan pentingnya berkonsultasi kepada profesional seperti psikolog dan psikiater untuk mendapatkan penanganan terbaik ketika merasakan gejala-gejala gangguan mental!”"
+    },
+    "scene222": {
+      "v1": "Jika kamu merasa kesulitan untuk mendapatkan bantuan psikolog atau psikiater, kamu dapat menggunakan solusi kesehatan mental lainnya seperti Konselor Sebaya yang dapat kamu akses melalui aplikasi Diceritain yang dapat didownload di PlayStore. "
+    },
+    "scene223": {
+      "v1": "Selain itu, ada layanan gratis lainnya juga seperti konselor sekolah dan layanan dari pemerintah yang telah kita bahas sebelumnya."
+    },
+    "scene224": {
+      "v1": "Bagaimana hasil simulasimu? Apakah kamu berhasil memilih tindakan yang tepat dalam seluruh simulasi? "
+    },
+    "scene225": {
+      "v1": "Sebelum kamu mengikuti Tes Pahlawan Kesehatan Mental. Aku ingin mengulas kembali apa makna dari badge yang telah kamu kumpulkan. 6 badge yang kamu kumpulkan merupakan symbol yang melambangkan komponen literasi kesehatan mental. "
+    },
+    "scene226": {
+      "v1": "Lencana pertama melambangkan bahwa kamu memahami makna kesehatan & gangguan mental",
+      "v2": "Lencana kedua melambangkan bahwa kamu dapat mengidentifikasi faktor-faktor kesehatan mental"
+    },
+    "scene227": {
+      "v1": "Lencana ketiga melambangkan bahwa kamu memiliki strategi pertolongan mandiri yang baik untuk kesehatan mental"
+    },
+    "scene228": {
+      "v1": "Lencana keempat melambangkan bahwa kamu memahami pentingnya bantuan profesional kesehatan mental",
+      "v2": "Lencana kelima melambangkan bahwa kamu tahu bagaimana cara mendapatkan bantuan profesional yang ada di sekitarmu"
+    },
+    "scene229": {
+      "v1": "Lencana keenam melambangkan bahwa memiliki kemampuan untuk mencari informasi kesehatan mental yang akurat",
+      "v2": "Bagaimana? Apakah kamu merasa sudah memiliki kemampuan untuk menjadi seorang Pahlawan Kesehatan Mental sesuai dengan lencana yang telah kamu miliki? Tes Pahlawan Kesehatan Mental akan menguji seluruh kemampuan tersebut. ",
+      "v3": "Jika kamu dapat menjalankannya dengan baik, maka kamu akan mendapatkan sertifikat yang menandakan bahwa kamu telah mengikuti seluruh rangkaian latihan Calon Pahlawan Kesehatan Mental dengan baik.",
+      "v4": "Jika kamu merasa ragu dengan kemampuanmu, kamu dapat mengulang seluruh sesi latihan yang telah kamu lakukan. Ingat, aku akan selalu ada di sini untuk menemanimu berlatih menjadi Pahlawan Kesehatan Mental.",
+      "v5": "Jika kamu sudah merasa yakin untuk mengikuti Tes Pahlawan Kesehatan Mental, aku ucapkan selamat berjuang! Baik untuk tesnya, maupun perjuanganmu menjaga kesehatan mental dirimu pribadi dan remaja-remaja lainnya yang ada di sekitarmu sebagai Pahlawan Kesehatan Mental!"
+    }
+  }
+}

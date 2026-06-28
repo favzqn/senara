@@ -37,6 +37,12 @@ $_ready (async () => {
 		console.log('Story scripts loaded, initializing Monogatari...');
 	}
 
+	// Wait for multi-language script generation to complete
+	if (window.multiLangPromise) {
+		await window.multiLangPromise;
+		console.log('Multi-language scripts ready.');
+	}
+
 	monogatari.init ('#monogatari').then (() => {
 		// 3. Inside the init function:
 		
