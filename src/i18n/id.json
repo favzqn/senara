@@ -661,13 +661,69 @@
       {
         "title": "Pahlawan Kesehatan Mental",
         "desc": "Literasi kesehatan mental, mengenali gejala, mengurangi stigma",
-        "cta": "Lihat Cerita"
+        "cta": "Lihat Cerita",
+        "category": "Mind & Emotions"
+      },
+      {
+        "title": "Teman Baru di Kelas 8B",
+        "desc": "Inklusi, bahasa isyarat BISINDO, empati dan persahabatan",
+        "cta": "Lihat Detail",
+        "category": "Relationships & Social"
+      },
+      {
+        "title": "Digital Literacy Navigator",
+        "desc": "Literasi digital, hoax, privasi, dan cyberbullying",
+        "cta": "Lihat Detail",
+        "category": "Digital Life & Online"
+      },
+      {
+        "title": "Dompet Kosong Mimpi Penuh",
+        "desc": "Literasi keuangan, anggaran, dan perencanaan masa depan",
+        "cta": "Lihat Detail",
+        "category": "Money & Young Adult Life"
+      },
+      {
+        "title": "Komunikasi & Resolusi Konflik",
+        "desc": "Komunikasi efektif, mendengarkan aktif, dan penyelesaian konflik",
+        "cta": "Lihat Detail",
+        "category": "Relationships & Social"
+      },
+      {
+        "title": "Misi Nol Sampah",
+        "desc": "Lingkungan, kerangka 5R, dan aksi iklim",
+        "cta": "Lihat Detail",
+        "category": "Social Issues"
       }
     ],
+    "storyTagPublished": "Published",
+    "storyTagComingSoon": "Segera Hadir",
+    "impactTitle": "Dampak Platform",
+    "impactSubtitle": "Senara memberikan dampak nyata dalam cara anak muda belajar life skills.",
+    "impactPlays": "1.250+",
+    "impactPlaysLabel": "Permainan Cerita",
+    "impactStories": "6",
+    "impactStoriesLabel": "Cerita Interaktif",
+    "impactLanguages": "3",
+    "impactLanguagesLabel": "Bahasa",
+    "impactCategories": "5",
+    "impactCategoriesLabel": "Kategori Life Skills",
+    "sdgTitle": "Selaras dengan Sustainable Development Goals PBB",
+    "sdg3": "Good Health & Well-Being",
+    "sdg4": "Quality Education",
+    "sdg10": "Reduced Inequalities",
+    "sdg16": "Peace, Justice & Strong Institutions",
+    "testimonialSectionTitle": "Apa Kata Organisasi",
     "testimonialQuote": "\"Cerita interaktif membuat peserta lebih terlibat dibanding presentasi biasa. Mereka jadi lebih terbuka untuk diskusi karena sudah 'mengalami' situasinya lewat cerita.\"",
     "testimonialCite": "Fasilitator Workshop Kesehatan Mental",
-    "ctaTitle": "Tertarik Menggunakan Senara?",
-    "ctaDesc": "Mulai sekarang atau hubungi kami untuk diskusi lebih lanjut tentang bagaimana Senara bisa mendukung program organisasi kamu.",
+    "testimonial2Quote": "\"Cerita ini sangat cocok untuk program edukasi kami. Peserta benar-benar terlibat dan banyak insight yang didapat.\"",
+    "testimonial2Cite": "Koordinator Program",
+    "testimonial2Org": "NGO Pendidikan Pemuda",
+    "testimonial3Quote": "\"Format interaktifnya membuat workshop kami lebih hidup. Sangat direkomendasikan untuk sesi awareness.\"",
+    "testimonial3Cite": "Pemimpin Workshop",
+    "testimonial3Org": "Pusat Kesehatan Komunitas",
+    "testimonialInvite": "Ingin berbagi pengalaman? Hubungi kami untuk menambahkan testimoni Anda.",
+    "ctaTitle": "Mari Berkolaborasi dengan Senara",
+    "ctaDesc": "Apakah Anda sekolah, NGO, atau perusahaan — Senara gratis dan siap untuk program Anda. Mari berkolaborasi menghadirkan edukasi life skills ke lebih banyak orang.",
     "ctaPrimary": "Jelajahi Koleksi",
     "ctaSecondary": "Hubungi Kami"
   },

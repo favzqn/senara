@@ -21,6 +21,8 @@ jobs:
 
       - run: npm run build:css
 
+      - run: npm run test:unit
+
       - run: npx astro build
         env:
           NODE_ENV: production

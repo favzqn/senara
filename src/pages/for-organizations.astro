@@ -41,6 +41,65 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Senara dirancang untuk bisa digunakan oleh siapa saja, termasuk organisasi yang ingin menyampaikan pesan penting lewat cerita interaktif. Berikut panduan bagaimana berbagai jenis organisasi bisa memanfaatkan platform kami.
       </p>
 
+      <!-- Impact Dashboard -->
+      <section class="impact-metrics">
+        <h2 data-i18n="partner.impactTitle">Dampak Platform</h2>
+        <p class="impact-subtitle" data-i18n="partner.impactSubtitle">Senara memberikan dampak nyata dalam cara anak muda belajar life skills.</p>
+        <div class="impact-grid">
+          <div class="impact-stat">
+            <div class="impact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="impact-number" data-i18n="partner.impactPlays">1.250+</div>
+            <div class="impact-label" data-i18n="partner.impactPlaysLabel">Permainan Cerita</div>
+          </div>
+          <div class="impact-stat">
+            <div class="impact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+            </div>
+            <div class="impact-number" data-i18n="partner.impactStories">6</div>
+            <div class="impact-label" data-i18n="partner.impactStoriesLabel">Cerita Interaktif</div>
+          </div>
+          <div class="impact-stat">
+            <div class="impact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div class="impact-number" data-i18n="partner.impactLanguages">3</div>
+            <div class="impact-label" data-i18n="partner.impactLanguagesLabel">Bahasa</div>
+          </div>
+          <div class="impact-stat">
+            <div class="impact-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 000 20 14.5 14.5 0 000-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="impact-number" data-i18n="partner.impactCategories">5</div>
+            <div class="impact-label" data-i18n="partner.impactCategoriesLabel">Kategori Life Skills</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SDG Alignment -->
+      <section class="sdg-section">
+        <h2 data-i18n="partner.sdgTitle">Selaras dengan Sustainable Development Goals PBB</h2>
+        <div class="sdg-grid">
+          <div class="sdg-badge sdg-3">
+            <span class="sdg-number">3</span>
+            <span data-i18n="partner.sdg3">Good Health &amp; Well-Being</span>
+          </div>
+          <div class="sdg-badge sdg-4">
+            <span class="sdg-number">4</span>
+            <span data-i18n="partner.sdg4">Quality Education</span>
+          </div>
+          <div class="sdg-badge sdg-10">
+            <span class="sdg-number">10</span>
+            <span data-i18n="partner.sdg10">Reduced Inequalities</span>
+          </div>
+          <div class="sdg-badge sdg-16">
+            <span class="sdg-number">16</span>
+            <span data-i18n="partner.sdg16">Peace, Justice &amp; Strong Institutions</span>
+          </div>
+        </div>
+      </section>
+
       <section class="content-section">
         <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22V12h6v10"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M16 10h.01M12 10h.01"/></svg></span> <span data-i18n="partner.audienceTitle">Siapa yang Bisa Menggunakan?</span></h2>
 
@@ -238,32 +297,118 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="story-list">
             <div class="story-item">
               <div class="story-item-info">
-                <h4 data-i18n="partner.storyItems.0.title">Pahlawan Kesehatan Mental</h4>
+                <div class="story-item-header">
+                  <h4 data-i18n="partner.storyItems.0.title">Pahlawan Kesehatan Mental</h4>
+                  <span class="story-tag story-tag-published" data-i18n="partner.storyTagPublished">Published</span>
+                </div>
                 <p data-i18n="partner.storyItems.0.desc">Literasi kesehatan mental, mengenali gejala, mengurangi stigma</p>
+                <span class="story-category-tag" data-i18n="partner.storyItems.0.category">Mind &amp; Emotions</span>
               </div>
               <a href="/story?id=pahlawan-kesehatan-mental" data-umami-event="Org page story PKM" data-i18n="partner.storyItems.0.cta">Lihat Cerita</a>
+            </div>
+            <div class="story-item">
+              <div class="story-item-info">
+                <div class="story-item-header">
+                  <h4 data-i18n="partner.storyItems.1.title">Teman Baru di Kelas 8B</h4>
+                  <span class="story-tag story-tag-coming-soon" data-i18n="partner.storyTagComingSoon">Segera Hadir</span>
+                </div>
+                <p data-i18n="partner.storyItems.1.desc">Inklusi, bahasa isyarat BISINDO, empati dan persahabatan</p>
+                <span class="story-category-tag" data-i18n="partner.storyItems.1.category">Relationships &amp; Social</span>
+              </div>
+              <a href="/collection" data-umami-event="Org page story TK8B" data-i18n="partner.storyItems.1.cta">Lihat Detail</a>
+            </div>
+            <div class="story-item">
+              <div class="story-item-info">
+                <div class="story-item-header">
+                  <h4 data-i18n="partner.storyItems.2.title">Digital Literacy Navigator</h4>
+                  <span class="story-tag story-tag-coming-soon" data-i18n="partner.storyTagComingSoon">Segera Hadir</span>
+                </div>
+                <p data-i18n="partner.storyItems.2.desc">Literasi digital, hoax, privasi, dan cyberbullying</p>
+                <span class="story-category-tag" data-i18n="partner.storyItems.2.category">Digital Life &amp; Online</span>
+              </div>
+              <a href="/collection" data-umami-event="Org page story DLN" data-i18n="partner.storyItems.2.cta">Lihat Detail</a>
+            </div>
+            <div class="story-item">
+              <div class="story-item-info">
+                <div class="story-item-header">
+                  <h4 data-i18n="partner.storyItems.3.title">Dompet Kosong Mimpi Penuh</h4>
+                  <span class="story-tag story-tag-coming-soon" data-i18n="partner.storyTagComingSoon">Segera Hadir</span>
+                </div>
+                <p data-i18n="partner.storyItems.3.desc">Literasi keuangan, anggaran, dan perencanaan masa depan</p>
+                <span class="story-category-tag" data-i18n="partner.storyItems.3.category">Money &amp; Young Adult Life</span>
+              </div>
+              <a href="/collection" data-umami-event="Org page story DKMP" data-i18n="partner.storyItems.3.cta">Lihat Detail</a>
+            </div>
+            <div class="story-item">
+              <div class="story-item-info">
+                <div class="story-item-header">
+                  <h4 data-i18n="partner.storyItems.4.title">Komunikasi &amp; Resolusi Konflik</h4>
+                  <span class="story-tag story-tag-coming-soon" data-i18n="partner.storyTagComingSoon">Segera Hadir</span>
+                </div>
+                <p data-i18n="partner.storyItems.4.desc">Komunikasi efektif, mendengarkan aktif, dan penyelesaian konflik</p>
+                <span class="story-category-tag" data-i18n="partner.storyItems.4.category">Relationships &amp; Social</span>
+              </div>
+              <a href="/collection" data-umami-event="Org page story KRK" data-i18n="partner.storyItems.4.cta">Lihat Detail</a>
+            </div>
+            <div class="story-item">
+              <div class="story-item-info">
+                <div class="story-item-header">
+                  <h4 data-i18n="partner.storyItems.5.title">Misi Nol Sampah</h4>
+                  <span class="story-tag story-tag-coming-soon" data-i18n="partner.storyTagComingSoon">Segera Hadir</span>
+                </div>
+                <p data-i18n="partner.storyItems.5.desc">Lingkungan, kerangka 5R, dan aksi iklim</p>
+                <span class="story-category-tag" data-i18n="partner.storyItems.5.category">Social Issues</span>
+              </div>
+              <a href="/collection" data-umami-event="Org page story MNS" data-i18n="partner.storyItems.5.cta">Lihat Detail</a>
             </div>
           </div>
         </div>
       </section>
 
-      <div class="testimonial-box">
-        <blockquote data-i18n="partner.testimonialQuote">
-          "Cerita interaktif membuat peserta lebih terlibat dibanding presentasi biasa. Mereka jadi lebih terbuka untuk diskusi karena sudah 'mengalami' situasinya lewat cerita."
-        </blockquote>
-        <cite data-i18n="partner.testimonialCite">— Fasilitator Workshop Kesehatan Mental</cite>
-      </div>
+      <section class="content-section">
+        <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></span> <span data-i18n="partner.testimonialSectionTitle">Apa Kata Organisasi</span></h2>
+
+        <div class="testimonial-grid">
+          <div class="testimonial-box">
+            <blockquote data-i18n="partner.testimonialQuote">
+              "Cerita interaktif membuat peserta lebih terlibat dibanding presentasi biasa. Mereka jadi lebih terbuka untuk diskusi karena sudah 'mengalami' situasinya lewat cerita."
+            </blockquote>
+            <cite data-i18n="partner.testimonialCite">— Fasilitator Workshop Kesehatan Mental</cite>
+          </div>
+
+          <div class="testimonial-box testimonial-placeholder">
+            <blockquote data-i18n="partner.testimonial2Quote">
+              "Placeholder: Cerita ini sangat cocok untuk program edukasi kami. Peserta benar-benar terlibat dan banyak insight yang didapat."
+            </blockquote>
+            <cite data-i18n="partner.testimonial2Cite">— Koordinator Program</cite>
+            <span class="testimonial-org" data-i18n="partner.testimonial2Org">NGO Pendidikan Pemuda</span>
+          </div>
+
+          <div class="testimonial-box testimonial-placeholder">
+            <blockquote data-i18n="partner.testimonial3Quote">
+              "Placeholder: Format interaktifnya membuat workshop kami lebih hidup. Sangat direkomendasikan untuk sesi awareness."
+            </blockquote>
+            <cite data-i18n="partner.testimonial3Cite">— Pemimpin Workshop</cite>
+            <span class="testimonial-org" data-i18n="partner.testimonial3Org">Pusat Kesehatan Komunitas</span>
+          </div>
+        </div>
+
+        <div class="testimonial-invite">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <span data-i18n="partner.testimonialInvite">Ingin berbagi pengalaman? Hubungi kami untuk menambahkan testimoni Anda.</span>
+        </div>
+      </section>
 
       <div class="cta-section">
-        <h2 data-i18n="partner.ctaTitle">Tertarik Menggunakan Senara?</h2>
+        <h2 data-i18n="partner.ctaTitle">Mari Berkolaborasi dengan Senara</h2>
         <p data-i18n="partner.ctaDesc">
-          Mulai sekarang atau hubungi kami untuk diskusi lebih lanjut tentang bagaimana Senara bisa mendukung program organisasi kamu.
+          Apakah Anda sekolah, NGO, atau perusahaan — Senara gratis dan siap untuk program Anda. Mari berkolaborasi menghadirkan edukasi life skills ke lebih banyak orang.
         </p>
         <div class="cta-buttons">
           <a href="/collection" class="cta-btn cta-btn-primary" data-umami-event="Org page explore CTA">
             <span data-i18n="partner.ctaPrimary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Jelajahi Koleksi</span>
           </a>
-          <a href="mailto:fauzan08fauzan@gmail.com?subject=Penggunaan%20Senara%20untuk%20Organisasi" class="cta-btn cta-btn-secondary" data-umami-event="Org page contact CTA">
+          <a href="mailto:hello@senara.id?subject=Partnership%20Inquiry%20-%20Senara" class="cta-btn cta-btn-secondary" data-umami-event="Org page contact CTA">
             <span data-i18n="partner.ctaSecondary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Hubungi Kami</span>
           </a>
         </div>
