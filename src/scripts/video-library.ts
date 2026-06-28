@@ -464,12 +464,14 @@ class SenaraVideoLibrary {
 function renderHeroSection(library: SenaraVideoLibrary, age: string = 'all'): void {
   const el = document.getElementById('tvHero');
   if (!el) return;
+  el.setAttribute('aria-busy', 'true');
 
   const { video, channel, config } = library.getHeroVideo(age);
 
   if (!video || !channel) {
     el.innerHTML = `<div class="nf-empty">${TV_ICONS.empty}<p>${getText('tv.preparing', 'Videos are being prepared...')}</p></div>`;
     el.classList.remove('is-loading');
+    el.setAttribute('aria-busy', 'false');
     return;
   }
 
@@ -511,6 +513,7 @@ function renderHeroSection(library: SenaraVideoLibrary, age: string = 'all'): vo
 
   attachVideoHandlers(el, library);
   el.classList.remove('is-loading');
+  el.setAttribute('aria-busy', 'false');
 }
 
 function renderChannelRows(library: SenaraVideoLibrary, age: string = 'all'): void {
@@ -568,6 +571,7 @@ function renderLatestVideos(library: SenaraVideoLibrary, { age = 'all', category
   const titleEl   = document.getElementById('latestTitle');
   const countEl   = document.getElementById('videoCount');
   if (!container) return;
+  container.setAttribute('aria-busy', 'true');
 
   const videos = library.getFilteredVideos({ age, category, query });
 
@@ -599,12 +603,14 @@ function renderLatestVideos(library: SenaraVideoLibrary, { age = 'all', category
       </div>
     `;
     container.classList.remove('is-loading');
+    container.setAttribute('aria-busy', 'false');
     return;
   }
 
   container.innerHTML = videos.map(v => createNetflixVideoCard(v, library.channelLookup)).join('');
   attachVideoHandlers(container, library);
   container.classList.remove('is-loading');
+  container.setAttribute('aria-busy', 'false');
 }
 
 function renderContinueWatching(library: SenaraVideoLibrary): void {
@@ -758,6 +764,7 @@ function setupKidsMode(state: FilterState, triggerUpdate: () => void): void {
 
   const applyKidsMode = (on: boolean): void => {
     container.dataset.kidsMode = on ? 'on' : 'off';
+    kidsBtn.setAttribute('aria-pressed', String(on));
     const ageTabs = document.querySelectorAll<HTMLElement>('.tv-age-tab');
     if (on) {
       state.age = 'kids';

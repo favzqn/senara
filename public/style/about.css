@@ -1528,3 +1528,48 @@ body {
     padding: 1.5rem;
   }
 }
+
+/* === EVIDENCE SECTION STYLES === */
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.evidence-card {
+  background: white;
+  border: 1px solid #E0E7FF;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.evidence-card:hover {
+  border-color: #C7D2FE;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
+}
+
+.evidence-icon {
+  margin-bottom: 1rem;
+}
+
+.evidence-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1E1B4B;
+  margin-bottom: 0.5rem;
+}
+
+.evidence-card p {
+  font-size: 0.9rem;
+  color: #4338CA;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+}

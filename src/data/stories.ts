@@ -85,7 +85,7 @@ export const allStoriesData: Story[] = [
     scriptBy: "Senara Team",
     createdAt: "2024-12-10",
     releaseDate: "2024-12-10",
-    status: "coming-soon",
+    status: "published",
     rating: 4.5,
     plays: 120,
     voiceActed: false,

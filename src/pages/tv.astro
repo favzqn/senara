@@ -45,7 +45,7 @@ try {
         <button class="tv-age-tab" data-age="young-adult" role="tab" aria-selected="false" data-umami-event="TV age young-adult" data-i18n="tv.ageYoungAdult">Young Adults</button>
       </div>
 
-      <button id="kidsModeToggle" class="tv-kids-toggle" type="button" data-umami-event="TV kids mode">
+      <button id="kidsModeToggle" class="tv-kids-toggle" type="button" data-umami-event="TV kids mode" aria-pressed="false">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
         <span data-i18n="tv.kidsMode">Kids Mode</span>
       </button>
@@ -69,7 +69,7 @@ try {
       </div>
     </div>
 
-    <section id="tvHero" class="tv-hero is-loading">
+    <section id="tvHero" class="tv-hero is-loading" aria-busy="true">
     </section>
 
     <section id="continueSection" class="tv-continue hidden">
@@ -78,7 +78,7 @@ try {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           <span data-i18n="tv.continueWatching">Continue Watching</span>
         </h2>
-        <button id="kidsModeExit" class="tv-kids-exit hidden" type="button" data-umami-event="TV exit kids">
+        <button id="kidsModeExit" class="tv-kids-exit hidden" type="button" data-umami-event="TV exit kids" aria-label="Exit Kids Mode">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 019.9-1"/></svg>
           <span data-i18n="tv.exitKidsMode">Exit Kids Mode</span>
         </button>
@@ -94,7 +94,7 @@ try {
         <h2 id="latestTitle" class="tv-latest-title" data-i18n="tv.latestVideos">Latest Videos</h2>
         <span id="videoCount" class="tv-video-count"></span>
       </div>
-      <div id="latestVideos" class="nf-grid is-loading">
+      <div id="latestVideos" class="nf-grid is-loading" aria-busy="true" aria-live="polite" aria-label="Video search results">
       </div>
     </section>
   </div>

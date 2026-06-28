@@ -982,7 +982,21 @@
       "team": "Team",
       "roadmap": "Roadmap",
       "contribute": "Contribute"
-    }
+    },
+    "orgTitle": "The Organization",
+    "orgFoundedP": "Senara was founded in 2024 as a nonprofit initiative to make life-skills education accessible to everyone through interactive storytelling. We are registered as a community-driven, open platform with no investors and no profit motive.",
+    "orgCollabP": "Our first story, <em>Mental Health Hero</em>, was developed in collaboration with <strong>diceritain.id</strong>, an established interactive story platform with 30,000+ users. This partnership validated our approach and helped us reach readers from day one.",
+    "orgTechP": "Senara is built with <strong>Astro</strong>, a modern open-source web framework, and our entire codebase is open source. The platform is available in <strong>3 languages</strong> (Indonesian, English, Japanese) and works as a static site — no server, no database, no tracking.",
+    "orgAccessibilityP": "We follow an accessibility-first philosophy: no login required, no paywalls, no data collection. The platform works offline via service worker and is designed to be lightweight enough for low-bandwidth connections.",
+    "evidenceTitle": "Evidence & Research",
+    "evidenceIntro": "Our approach is grounded in established educational research and designed to address real-world needs.",
+    "evidenceInteractiveTitle": "Interactive Storytelling for Education",
+    "evidenceInteractiveP": "Research in narrative transportation theory (Green &amp; Brock, 2000) shows that people who are absorbed in a story experience greater attitude change and deeper comprehension. Interactive elements add active learning (Chi &amp; Wylie, 2014), where making decisions and seeing consequences promotes higher-order thinking beyond passive consumption.",
+    "evidenceLifeSkillsTitle": "Life Skills Focus",
+    "evidenceLifeSkillsP": "The WHO identifies life skills — critical thinking, decision-making, communication, coping — as essential for healthy development. Senara stories are designed around these competencies, placing characters in realistic dilemmas that mirror the challenges young people actually face.",
+    "evidenceAccessTitle": "Accessibility-First Design",
+    "evidenceAccessP": "Quality educational content should not be gated by cost, accounts, or connectivity. Senara is free, requires no login, collects no personal data, and works offline. This design philosophy ensures that learners in resource-constrained environments can access the same content as anyone else.",
+    "evidenceResearchNote": "<strong>How we use research:</strong> We don't claim interactive stories are superior to all other methods. We use research to inform design decisions — such as giving readers meaningful choices, using relatable characters, and connecting emotional engagement to learning outcomes."
   },
   "whyVN": {
     "toggleVN": "Visual Novel",

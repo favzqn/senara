@@ -115,6 +115,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </section>
 
         <section class="about-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span> <span data-i18n="about.orgTitle">The Organization</span></h2>
+          <p data-i18n-html="about.orgFoundedP"></p>
+          <p data-i18n-html="about.orgCollabP"></p>
+          <p data-i18n-html="about.orgTechP"></p>
+          <p data-i18n="about.orgAccessibilityP"></p>
+        </section>
+
+        <section class="about-section">
           <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span> <span data-i18n="about.visionTitle">Visi Jangka Panjang</span></h2>
           
           <div class="pull-quote">
@@ -285,6 +293,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                 <p data-i18n="pendekatan.processSteps.4.body"></p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2><span class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></span> <span data-i18n="about.evidenceTitle">Evidence &amp; Research</span></h2>
+          <p data-i18n="about.evidenceIntro"></p>
+
+          <div class="evidence-grid">
+            <div class="evidence-card">
+              <div class="evidence-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+              <h3 data-i18n="about.evidenceInteractiveTitle">Interactive Storytelling for Education</h3>
+              <p data-i18n-html="about.evidenceInteractiveP"></p>
+            </div>
+
+            <div class="evidence-card">
+              <div class="evidence-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h3 data-i18n="about.evidenceLifeSkillsTitle">Life Skills Focus</h3>
+              <p data-i18n="about.evidenceLifeSkillsP"></p>
+            </div>
+
+            <div class="evidence-card">
+              <div class="evidence-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+              <h3 data-i18n="about.evidenceAccessTitle">Accessibility-First Design</h3>
+              <p data-i18n="about.evidenceAccessP"></p>
+            </div>
+          </div>
+
+          <div class="research-note" style="margin-top: 1.5rem;">
+            <p data-i18n-html="about.evidenceResearchNote"></p>
           </div>
         </section>
 
