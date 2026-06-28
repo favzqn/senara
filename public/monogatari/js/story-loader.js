@@ -10,14 +10,16 @@
 const STORY_CONFIG = {
   'pahlawan-kesehatan-mental': {
     scripts: [
-      './stories/pahlawan-kesehatan-mental/chapter-1.js',
-      './stories/pahlawan-kesehatan-mental/chapter-2.js',
-      './stories/pahlawan-kesehatan-mental/chapter-3.js',
-      './stories/pahlawan-kesehatan-mental/chapter-4.js',
-      './stories/pahlawan-kesehatan-mental/chapter-5.js',
+      './js/lang-loader.js',
+      './stories/pahlawan-kesehatan-mental/chapter-1.template.js',
+      './stories/pahlawan-kesehatan-mental/chapter-2.template.js',
+      './stories/pahlawan-kesehatan-mental/chapter-3.template.js',
+      './stories/pahlawan-kesehatan-mental/chapter-4.template.js',
+      './stories/pahlawan-kesehatan-mental/chapter-5.template.js',
       './stories/pahlawan-kesehatan-mental/index.js',
     ],
-    title: 'Pahlawan Kesehatan Mental | Senara'
+    title: 'Pahlawan Kesehatan Mental | Senara',
+    languages: ['id', 'en'],
   },
   'teman-baru-di-kelas-8b': {
     scripts: [
@@ -109,6 +111,9 @@ async function loadStoryScripts(storyId) {
       </div>`;
     return Promise.reject(new Error(`Story not found: ${storyId}`));
   }
+
+  // Expose story config for index.js
+  window._storyConfig = config;
 
   // Update page title
   if (config.title) {

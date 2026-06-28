@@ -192,66 +192,149 @@ monogatari.assets("sounds", {
   wrong: "wrong.mp3",
 });
 
-// Define main story scenes
-const mainStory = {
-  // The game starts here.
-  Start: [
-    "show scene intro",
-    "play music intro with loop fade 20 volume 10",
-    "Selamat Datang di Permainan Visual Novel Pahlawan Kesehatan Mental!",
-    "Kamu akan mempelajari banyak hal mengenai kesehatan mental di petualangan ini, ayo kita mulai!",
-    "jump Loading-1",
-  ],
+/**
+ * Generate the main story labels (Start, Loading screens) for a language.
+ * These are shared across all chapters.
+ */
+function generateMainStory(lang) {
+  return {
+    Start: [
+      "show scene intro",
+      "play music intro with loop fade 20 volume 10",
+      t('start.welcome'),
+      t('start.intro'),
+      "jump Loading-1",
+    ],
 
-  "Loading-1": [
-    "stop music intro",
-    "play sound typewriter",
-    "show scene loading-1",
-    "Chapter 1 : Siapa Pahlawan Kesehatan Mental?",
-    "jump Scene-1",
-  ],
+    "Loading-1": [
+      "stop music intro",
+      "play sound typewriter",
+      "show scene loading-1",
+      t('chapters.1'),
+      "jump Scene-1",
+    ],
 
-  "Loading-2": [
-    "stop sound typewriter",
-    "play sound typewriter",
-    "show scene loading-2",
-    "Chapter 2 : Memahami Depresi",
-    "jump Scene-39",
-  ],
+    "Loading-2": [
+      "stop sound typewriter",
+      "play sound typewriter",
+      "show scene loading-2",
+      t('chapters.2'),
+      "jump Scene-39",
+    ],
 
-  "Loading-3": [
-    "stop sound typewriter",
-    "play sound typewriter",
-    "show scene loading-3",
-    "Chapter 3 : Strategi Pertolongan Mandiri",
-    "jump Scene-98",
-  ],
+    "Loading-3": [
+      "stop sound typewriter",
+      "play sound typewriter",
+      "show scene loading-3",
+      t('chapters.3'),
+      "jump Scene-98",
+    ],
 
-  "Loading-4": [
-    "stop sound typewriter",
-    "play sound typewriter",
-    "show scene loading-4",
-    "Chapter 4 : Bantuan Profesional",
-    "jump Scene-150",
-  ],
+    "Loading-4": [
+      "stop sound typewriter",
+      "play sound typewriter",
+      "show scene loading-4",
+      t('chapters.4'),
+      "jump Scene-150",
+    ],
 
-  "Loading-5": [
-    "stop sound typewriter",
-    "play sound typewriter",
-    "show scene loading-5",
-    "Chapter 5 : Literasi Kesehatan Mental dalam Aksi",
-    "jump Scene-197",
-  ],
-};
+    "Loading-5": [
+      "stop sound typewriter",
+      "play sound typewriter",
+      "show scene loading-5",
+      t('chapters.5'),
+      "jump Scene-197",
+    ],
+  };
+}
 
-// Merge all chapter scenes with main story
-const completeStory = Object.assign({}, 
-  typeof window.Chapter1 !== 'undefined' ? window.Chapter1 : {},
-  typeof window.Chapter2 !== 'undefined' ? window.Chapter2 : {},
-  typeof window.Chapter3 !== 'undefined' ? window.Chapter3 : {},
-  typeof window.Chapter4 !== 'undefined' ? window.Chapter4 : {},
-  typeof window.Chapter5 !== 'undefined' ? window.Chapter5 : {},
-  mainStory
-);
+/**
+ * Generate a complete script for one language by merging templates.
+ */
+function generateScriptForLanguage(lang) {
+  const mainStory = generateMainStory(lang);
 
-monogatari.script(completeStory);
+  // Merge all chapter templates + main story
+  // Templates are functions that take lang and return scene objects
+  return Object.assign({},
+    typeof window.Chapter1Template === 'function' ? window.Chapter1Template(lang) : {},
+    typeof window.Chapter2Template === 'function' ? window.Chapter2Template(lang) : {},
+    typeof window.Chapter3Template === 'function' ? window.Chapter3Template(lang) : {},
+    typeof window.Chapter4Template === 'function' ? window.Chapter4Template(lang) : {},
+    typeof window.Chapter5Template === 'function' ? window.Chapter5Template(lang) : {},
+    mainStory
+  );
+}
+
+/**
+ * Initialize multi-language support.
+ * Loads language data, generates scripts, and passes to Monogatari.
+ */
+async function initMultiLanguage() {
+  const storyId = window._storyConfig ? 
+    new URLSearchParams(window.location.search).get('story') || 'pahlawan-kesehatan-mental' :
+    'pahlawan-kesehatan-mental';
+  
+  const languages = (window._storyConfig && window._storyConfig.languages) || ['id', 'en'];
+
+  // Load language JSON files
+  const loadedLangs = await loadStoryLanguages(storyId, languages);
+
+  if (loadedLangs.length === 0) {
+    console.error('No languages loaded! Falling back to single-language mode.');
+    // Fallback: use original Chapter objects if available
+    const fallback = Object.assign({},
+      typeof window.Chapter1 !== 'undefined' ? window.Chapter1 : {},
+      typeof window.Chapter2 !== 'undefined' ? window.Chapter2 : {},
+      typeof window.Chapter3 !== 'undefined' ? window.Chapter3 : {},
+      typeof window.Chapter4 !== 'undefined' ? window.Chapter4 : {},
+      typeof window.Chapter5 !== 'undefined' ? window.Chapter5 : {},
+      {
+        Start: ["show scene intro", "play music intro with loop fade 20 volume 10",
+          "Selamat Datang!", "jump Loading-1"],
+        "Loading-1": ["stop music intro", "play sound typewriter", "show scene loading-1",
+          "Chapter 1", "jump Scene-1"],
+      }
+    );
+    monogatari.script(fallback);
+    return;
+  }
+
+  // Map language file codes to Monogatari display names
+  const langDisplayNames = {
+    'id': 'Bahasa Indonesia',
+    'en': 'English',
+    'ja': '日本語',
+  };
+
+  // Generate language-keyed script: { 'Bahasa Indonesia': {...}, 'English': {...} }
+  const multiScript = {};
+  for (const langCode of loadedLangs) {
+    const displayName = langDisplayNames[langCode] || langCode;
+    // Set language code for t() to resolve correctly during generation
+    setLangCode(langCode);
+    multiScript[displayName] = generateScriptForLanguage(langCode);
+  }
+
+  // Reset to default
+  setLangCode('id');
+
+  // Register language metadata for the selection screen
+  const langMetadata = {};
+  for (const langCode of loadedLangs) {
+    const displayName = langDisplayNames[langCode] || langCode;
+    langMetadata[displayName] = {
+      name: displayName,
+      icon: `assets/flags/${langCode}.png`,
+    };
+  }
+  monogatari.languageMetadata(langMetadata);
+
+  // Pass the multi-language script to Monogatari
+  monogatari.script(multiScript);
+
+  console.log(`Multi-language script generated for: ${loadedLangs.join(', ')}`);
+}
+
+// Store the init promise so main.js can await it
+window.multiLangPromise = initMultiLanguage();
