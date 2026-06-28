@@ -1183,7 +1183,21 @@
       "team": "Tim",
       "roadmap": "Peta Jalan",
       "contribute": "Berkontribusi"
-    }
+    },
+    "orgTitle": "Organisasi",
+    "orgFoundedP": "Senara didirikan pada tahun 2024 sebagai inisiatif nonprofit untuk membuat pendidikan keterampilan hidup dapat diakses oleh semua orang melalui cerita interaktif. Kami adalah platform terbuka yang digerakkan oleh komunitas, tanpa investor dan tanpa motif profit.",
+    "orgCollabP": "Cerita pertama kami, <em>Pahlawan Kesehatan Mental</em>, dikembangkan bersama <strong>diceritain.id</strong>, platform cerita interaktif yang sudah memiliki 30.000+ pengguna. Kemitraan ini memvalidasi pendekatan kami dan membantu kami menjangkau pembaca sejak hari pertama.",
+    "orgTechP": "Senara dibangun dengan <strong>Astro</strong>, framework web open-source modern, dan seluruh kode sumber kami terbuka. Tersedia dalam <strong>3 bahasa</strong> (Indonesia, Inggris, Jepang) dan berjalan sebagai situs statis — tanpa server, tanpa database, tanpa pelacakan.",
+    "orgAccessibilityP": "Kami mengikuti filosofi aksesibilitas-utama: tidak perlu login, tidak ada paywall, tidak ada pengumpulan data. Platform berfungsi offline melalui service worker dan dirancang ringan untuk koneksi bandwidth rendah.",
+    "evidenceTitle": "Bukti & Riset",
+    "evidenceIntro": "Pendekatan kami didasarkan pada riset pendidikan yang mapan dan dirancang untuk menjawab kebutuhan dunia nyata.",
+    "evidenceInteractiveTitle": "Cerita Interaktif untuk Pendidikan",
+    "evidenceInteractiveP": "Riset tentang teori naratif transportasi (Green &amp; Brock, 2000) menunjukkan bahwa orang yang terserap dalam cerita mengalami perubahan sikap yang lebih besar dan pemahaman yang lebih dalam. Elemen interaktif menambah pembelajaran aktif (Chi &amp; Wylie, 2014), di mana mengambil keputusan dan melihat konsekuensi mendorong berpikir tingkat tinggi melampaui konsumsi pasif.",
+    "evidenceLifeSkillsTitle": "Fokus Keterampilan Hidup",
+    "evidenceLifeSkillsP": "WHO mengidentifikasi keterampilan hidup — berpikir kritis, pengambilan keputusan, komunikasi, koping — sebagai esensial untuk perkembangan yang sehat. Cerita Senara dirancang di sekitar kompetensi ini, menempatkan karakter dalam dilema realistis yang mencerminkan tantangan yang benar-benar dihadapi anak muda.",
+    "evidenceAccessTitle": "Desain Aksesibilitas-Utama",
+    "evidenceAccessP": "Konten pendidikan berkualitas tidak boleh dibatasi oleh biaya, akun, atau konektivitas. Senara gratis, tidak perlu login, tidak mengumpulkan data pribadi, dan berfungsi offline. Filosofi desain ini memastikan bahwa pelajar di lingkungan dengan sumber daya terbatas dapat mengakses konten yang sama seperti orang lain.",
+    "evidenceResearchNote": "<strong>Cara kami menggunakan riset:</strong> Kami tidak mengklaim cerita interaktif lebih unggul dari semua metode lain. Kami menggunakan riset untuk menginformasikan keputusan desain — seperti memberi pembaca pilihan bermakna, menggunakan karakter yang relatable, dan menghubungkan keterlibatan emosional dengan hasil pembelajaran."
   },
   "roadmap": {
     "title": "Peta Jalan",

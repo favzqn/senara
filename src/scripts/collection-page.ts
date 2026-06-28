@@ -16,6 +16,7 @@ let isFilterPanelOpen = true;
 function showLoadingSkeleton(): void {
   const container = document.getElementById('storiesContainer');
   if (!container) return;
+  container.setAttribute('aria-busy', 'true');
 
   const skeletonHTML = Array(6)
     .fill(0)
@@ -98,6 +99,7 @@ function loadCategories(): void {
     <button 
       class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/80 text-[#0F172A] font-medium text-sm border border-[#E2E8F0] flex items-center gap-2.5 active" 
       data-category="all" 
+      aria-pressed="true"
       data-umami-event="Collection filter All"
     >
       <span class="flex-1">${getText('collection.allStories', 'All Stories')}</span>
@@ -111,6 +113,7 @@ function loadCategories(): void {
       <button 
         class="category-btn w-full text-left px-3.5 py-2.5 rounded-xl bg-white/60 text-[#0F172A] font-medium text-sm border border-[#E2E8F0]/80 flex items-center gap-2.5" 
         data-category="${cat.id}" 
+        aria-pressed="false"
         data-umami-event="Collection filter ${catTitle}"
       >
         <span class="flex-1 truncate" title="${catTitle}">${catTitle}</span>
@@ -124,7 +127,9 @@ function loadCategories(): void {
   container.querySelectorAll<HTMLButtonElement>('.category-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       container.querySelectorAll('.category-btn').forEach((b) => b.classList.remove('active'));
+      container.querySelectorAll<HTMLButtonElement>('.category-btn').forEach((b) => b.setAttribute('aria-pressed', 'false'));
       btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
 
       currentCategory = btn.dataset.category!;
       filterAndRender();
@@ -339,6 +344,7 @@ function updateActiveFiltersDisplay(): void {
 function renderStories(stories: Story[]): void {
   const container = document.getElementById('storiesContainer');
   if (!container) return;
+  container.setAttribute('aria-busy', 'false');
 
   if (stories.length === 0) {
     const emptyTitle = getText('collection.emptyTitle', 'No stories found');
@@ -446,10 +452,12 @@ function setupEventListeners(): void {
         panel?.classList.remove('collapsed');
         panel?.classList.add('expanded');
         if (icon) icon.style.transform = 'rotate(0deg)';
+        filterToggle.setAttribute('aria-expanded', 'true');
       } else {
         panel?.classList.remove('expanded');
         panel?.classList.add('collapsed');
         if (icon) icon.style.transform = 'rotate(-90deg)';
+        filterToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -496,8 +504,12 @@ function resetAllFilters(): void {
   document.querySelectorAll<HTMLInputElement>('.status-filter').forEach((cb) => (cb.checked = true));
 
   document.querySelectorAll('.category-btn').forEach((b) => b.classList.remove('active'));
+  document.querySelectorAll<HTMLButtonElement>('.category-btn').forEach((b) => b.setAttribute('aria-pressed', 'false'));
   const allBtn = document.querySelector('[data-category="all"]');
-  if (allBtn) allBtn.classList.add('active');
+  if (allBtn) {
+    allBtn.classList.add('active');
+    (allBtn as HTMLButtonElement).setAttribute('aria-pressed', 'true');
+  }
 
   filterAndRender();
 }

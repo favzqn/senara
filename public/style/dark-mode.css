@@ -972,6 +972,24 @@ html.dark {
     color: #CBD5E1;
   }
 
+  .evidence-card {
+    background: #1E293B;
+    border-color: #334155;
+  }
+
+  .evidence-card:hover {
+    border-color: #4338CA;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .evidence-card h3 {
+    color: #F1F5F9;
+  }
+
+  .evidence-card p {
+    color: #CBD5E1;
+  }
+
   .principle-card-compact {
     background: #1E293B;
     border-color: #334155;
