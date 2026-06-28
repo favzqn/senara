@@ -231,6 +231,39 @@ export const allStoriesData: Story[] = [
     voiceActed: false,
     hasChoices: true,
     hasAchievements: true
+  },
+  {
+    id: "mental-health-hero-en",
+    title: "Mental Health Hero",
+    description: "Join Vani as she faces emotional challenges and discovers the true strength in maintaining mental health.",
+    longDescription: "Mental health is not a weakness. It is a strength. Follow Vani's journey through emotional challenges, from anxiety to depression, while learning to recognize signs of mental disorders and understanding when to seek help. Through 5 in-depth chapters, you'll uncover myths surrounding mental health, reduce stigma, and master relaxation techniques you can practice right away. Be a Mental Health Hero, not just for yourself, but for the people you love.",
+    category: "mind-emotions",
+    tags: ["Mental Health", "Emotional Skills", "Self-Care"],
+    age: "13+",
+    series: "Mental Health Series",
+    featured: false,
+    thumbnail: "assets/thumbnails/pahlawan-kesehatan-mental.svg",
+    duration: 45,
+    chapters: 5,
+    difficulty: "Intermediate",
+    learningOutcomes: [
+      "Understand mental health literacy concepts",
+      "Recognize symptoms of mental disorders",
+      "Reduce stigma towards mental health",
+      "Know when to seek professional help",
+      "Learn relaxation techniques (Box Breathing, Progressive Muscle Relaxation)"
+    ],
+    author: "Senara Team",
+    scriptBy: "Diceritain Team",
+    collaboration: "In partnership with diceritain.id",
+    createdAt: "2026-06-29",
+    releaseDate: "2026-06-29",
+    status: "published",
+    rating: 4.8,
+    plays: 0,
+    voiceActed: false,
+    hasChoices: true,
+    hasAchievements: true
   }
 ];
 

@@ -19,6 +19,17 @@ const STORY_CONFIG = {
     ],
     title: 'Pahlawan Kesehatan Mental | Senara'
   },
+  'mental-health-hero-en': {
+    scripts: [
+      './stories/mental-health-hero-en/chapter-1.js',
+      './stories/mental-health-hero-en/chapter-2.js',
+      './stories/mental-health-hero-en/chapter-3.js',
+      './stories/mental-health-hero-en/chapter-4.js',
+      './stories/mental-health-hero-en/chapter-5.js',
+      './stories/mental-health-hero-en/index.js',
+    ],
+    title: 'Mental Health Hero | Senara'
+  },
   'teman-baru-di-kelas-8b': {
     scripts: [
       './stories/teman-baru-di-kelas-8b/chapter-1.js',
