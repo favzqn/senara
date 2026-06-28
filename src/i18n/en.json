@@ -659,15 +659,71 @@
     "storiesListTitle": "Recommended Stories",
     "storyItems": [
       {
-        "title": "Pahlawan Kesehatan Mental",
+        "title": "Mental Health Hero",
         "desc": "Mental health literacy, recognizing signs, reducing stigma",
-        "cta": "View Story"
+        "cta": "View Story",
+        "category": "Mind & Emotions"
+      },
+      {
+        "title": "New Friend in Class 8B",
+        "desc": "Inclusion, BISINDO sign language, empathy and friendship",
+        "cta": "View Details",
+        "category": "Relationships & Social"
+      },
+      {
+        "title": "Digital Literacy Navigator",
+        "desc": "Digital literacy, fake news, privacy, and cyberbullying",
+        "cta": "View Details",
+        "category": "Digital Life & Online"
+      },
+      {
+        "title": "Empty Wallet, Full Dreams",
+        "desc": "Financial literacy, budgeting, and future planning",
+        "cta": "View Details",
+        "category": "Money & Young Adult Life"
+      },
+      {
+        "title": "Communication & Conflict Resolution",
+        "desc": "Effective communication, active listening, and conflict resolution",
+        "cta": "View Details",
+        "category": "Relationships & Social"
+      },
+      {
+        "title": "Zero Waste Mission",
+        "desc": "Environment, 5R framework, and climate action",
+        "cta": "View Details",
+        "category": "Social Issues"
       }
     ],
-    "testimonialQuote": "\"Interactive stories make participants far more engaged than traditional presentations. They open up because they’ve already ‘experienced’ the situation.\"",
+    "storyTagPublished": "Published",
+    "storyTagComingSoon": "Coming Soon",
+    "impactTitle": "Platform Impact",
+    "impactSubtitle": "Senara is making a measurable difference in how young people learn life skills.",
+    "impactPlays": "1,250+",
+    "impactPlaysLabel": "Story Plays",
+    "impactStories": "6",
+    "impactStoriesLabel": "Interactive Stories",
+    "impactLanguages": "3",
+    "impactLanguagesLabel": "Languages",
+    "impactCategories": "5",
+    "impactCategoriesLabel": "Life Skill Categories",
+    "sdgTitle": "Aligned with UN Sustainable Development Goals",
+    "sdg3": "Good Health & Well-Being",
+    "sdg4": "Quality Education",
+    "sdg10": "Reduced Inequalities",
+    "sdg16": "Peace, Justice & Strong Institutions",
+    "testimonialSectionTitle": "What Organizations Say",
+    "testimonialQuote": "\"Interactive stories make participants far more engaged than traditional presentations. They open up because they've already 'experienced' the situation.\"",
     "testimonialCite": "Mental Health Workshop Facilitator",
-    "ctaTitle": "Ready to Use Senara?",
-    "ctaDesc": "Start today or reach out so we can discuss how Senara supports your programs.",
+    "testimonial2Quote": "\"This story was perfect for our education program. Participants were truly engaged and gained many insights from the experience.\"",
+    "testimonial2Cite": "Program Coordinator",
+    "testimonial2Org": "Youth Education NGO",
+    "testimonial3Quote": "\"The interactive format brought our workshop to life. Highly recommended for awareness sessions.\"",
+    "testimonial3Cite": "Workshop Leader",
+    "testimonial3Org": "Community Health Center",
+    "testimonialInvite": "Want to share your experience? Contact us to add your testimonial.",
+    "ctaTitle": "Partner With Senara",
+    "ctaDesc": "Whether you're a school, NGO, or company — Senara is free and ready for your programs. Let's collaborate to bring life skills education to more people.",
     "ctaPrimary": "Explore Collection",
     "ctaSecondary": "Contact Us"
   },

@@ -659,15 +659,71 @@
     "storiesListTitle": "おすすめの物語",
     "storyItems": [
       {
-        "title": "Pahlawan Kesehatan Mental",
+        "title": "メンタルヘルスヒーロー",
         "desc": "メンタルヘルスリテラシー、兆候の認識、スティグマの軽減",
-        "cta": "物語を見る"
+        "cta": "物語を見る",
+        "category": "Mind & Emotions"
+      },
+      {
+        "title": "8年B組の新しい友達",
+        "desc": "インクルージョン、BISINDO手話、共感と友情",
+        "cta": "詳細を見る",
+        "category": "Relationships & Social"
+      },
+      {
+        "title": "デジタルリテラシーナビゲーター",
+        "desc": "デジタルリテラシー、フェイクニュース、プライバシー、サイバーいじめ",
+        "cta": "詳細を見る",
+        "category": "Digital Life & Online"
+      },
+      {
+        "title": "空っぽの財布、いっぱいの夢",
+        "desc": "金融リテラシー、予算管理、将来の計画",
+        "cta": "詳細を見る",
+        "category": "Money & Young Adult Life"
+      },
+      {
+        "title": "コミュニケーションと紛争解決",
+        "desc": "効果的なコミュニケーション、アクティブリスニング、紛争解決",
+        "cta": "詳細を見る",
+        "category": "Relationships & Social"
+      },
+      {
+        "title": "ゼロウェイストミッション",
+        "desc": "環境、5Rフレームワーク、気候変動への行動",
+        "cta": "詳細を見る",
+        "category": "Social Issues"
       }
     ],
+    "storyTagPublished": "公開済み",
+    "storyTagComingSoon": "近日公開",
+    "impactTitle": "プラットフォームのインパクト",
+    "impactSubtitle": "Senaraは若者のライフスキル学び方に測定可能な変化をもたらしています。",
+    "impactPlays": "1,250+",
+    "impactPlaysLabel": "ストーリー再生数",
+    "impactStories": "6",
+    "impactStoriesLabel": "インタラクティブストーリー",
+    "impactLanguages": "3",
+    "impactLanguagesLabel": "対応言語",
+    "impactCategories": "5",
+    "impactCategoriesLabel": "ライフスキルカテゴリ",
+    "sdgTitle": "国連持続可能な開発目標との連携",
+    "sdg3": "Good Health & Well-Being",
+    "sdg4": "Quality Education",
+    "sdg10": "Reduced Inequalities",
+    "sdg16": "Peace, Justice & Strong Institutions",
+    "testimonialSectionTitle": "団体の声",
     "testimonialQuote": "「インタラクティブな物語は、従来のプレゼンテーションよりもはるかに参加者の関心を引きます。すでに『その状況を経験した』からこそ、本音で話してくれるようになります。」",
     "testimonialCite": "メンタルヘルスワークショップファシリテーター",
-    "ctaTitle": "Senaraを使ってみませんか？",
-    "ctaDesc": "今すぐ始めたり、Senaraがどのようにプログラムをサポートできるか話し合ったりしましょう。",
+    "testimonial2Quote": "「この物語は私たちの教育プログラムに最適でした。参加者は本当に没頭し、多くのインサイトを得ました。」",
+    "testimonial2Cite": "プログラムコーディネーター",
+    "testimonial2Org": "青少年教育NGO",
+    "testimonial3Quote": "「インタラクティブな形式がワークショップに命を吹き込みました。意識向上セッションに強くお勧めします。」",
+    "testimonial3Cite": "ワークショップリーダー",
+    "testimonial3Org": "コミュニティヘルスセンター",
+    "testimonialInvite": "ご体験を共有しませんか？テストモニアルを追加するにはお問い合わせください。",
+    "ctaTitle": "Senaraとパートナーシップを",
+    "ctaDesc": "学校、NGO、企業問わず — Senaraは無料でプログラムに対応しています。ライフスキル教育をより多くの人々に届けるために、一緒に協力しましょう。",
     "ctaPrimary": "コレクションを見る",
     "ctaSecondary": "お問い合わせ"
   },

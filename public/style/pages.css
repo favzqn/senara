@@ -1644,6 +1644,215 @@ body {
   background: #f59e0b;
 }
 
+/* --- Impact Dashboard --- */
+.impact-metrics {
+  background: linear-gradient(135deg, #1E1B4B 0%, #4338CA 100%);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.impact-metrics h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.impact-subtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.impact-stat {
+  text-align: center;
+}
+
+.impact-icon {
+  color: #fbbf24;
+  margin-bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.impact-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.impact-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .impact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .impact-metrics {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* --- SDG Alignment --- */
+.sdg-section {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sdg-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1E1B4B;
+  margin-bottom: 1rem;
+}
+
+.sdg-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.sdg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid;
+}
+
+.sdg-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+}
+
+.sdg-3 {
+  background: #ecfdf5;
+  border-color: #6ee7b7;
+  color: #065f46;
+}
+.sdg-3 .sdg-number { background: #059669; }
+
+.sdg-4 {
+  background: #fef3c7;
+  border-color: #fbbf24;
+  color: #92400e;
+}
+.sdg-4 .sdg-number { background: #d97706; }
+
+.sdg-10 {
+  background: #ede9fe;
+  border-color: #a78bfa;
+  color: #5b21b6;
+}
+.sdg-10 .sdg-number { background: #7c3aed; }
+
+.sdg-16 {
+  background: #dbeafe;
+  border-color: #60a5fa;
+  color: #1e3a5f;
+}
+.sdg-16 .sdg-number { background: #2563eb; }
+
+/* --- Story Tags --- */
+.story-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.story-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.125rem 0.5rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.story-tag-published {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.story-tag-coming-soon {
+  background: #EEF2FF;
+  color: #4338CA;
+}
+
+.story-category-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #64748B;
+  margin-top: 0.25rem;
+}
+
+/* --- Testimonial Grid --- */
+.testimonial-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial-placeholder {
+  opacity: 0.7;
+  border-style: dashed;
+}
+
+.testimonial-org {
+  display: block;
+  font-size: 0.8rem;
+  color: #94A3B8;
+  margin-top: 0.25rem;
+}
+
+.testimonial-invite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fffbeb;
+  border: 1px dashed #fbbf24;
+  border-radius: 12px;
+  color: #92400e;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 .cta-section {
   background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
   border-radius: 20px;
