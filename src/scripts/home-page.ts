@@ -374,8 +374,66 @@ function setupContributionAccordion(): void {
   }
 }
 
+interface WhatsNewItem {
+  dateKey: string;
+  titleKey: string;
+  descKey: string;
+  icon: string;
+  color: string;
+}
+
+const WHATS_NEW_DATA: WhatsNewItem[] = [
+  {
+    dateKey: 'home.whatsNewDate1',
+    titleKey: 'home.whatsNew1Title',
+    descKey: 'home.whatsNew1Desc',
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>',
+    color: '#4F46E5'
+  },
+  {
+    dateKey: 'home.whatsNewDate2',
+    titleKey: 'home.whatsNew2Title',
+    descKey: 'home.whatsNew2Desc',
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>',
+    color: '#EC4899'
+  },
+  {
+    dateKey: 'home.whatsNewDate3',
+    titleKey: 'home.whatsNew3Title',
+    descKey: 'home.whatsNew3Desc',
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>',
+    color: '#10B981'
+  },
+  {
+    dateKey: 'home.whatsNewDate4',
+    titleKey: 'home.whatsNew4Title',
+    descKey: 'home.whatsNew4Desc',
+    icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
+    color: '#F59E0B'
+  }
+];
+
+function loadWhatsNew(): void {
+  const container: HTMLElement | null = document.getElementById('whatsNewContainer');
+  if (!container) return;
+
+  container.innerHTML = WHATS_NEW_DATA.map((item: WhatsNewItem) => `
+    <div class="whats-new-card">
+      <div class="whats-new-icon" style="color:${item.color};background:${item.color}15">
+        ${item.icon}
+      </div>
+      <div class="whats-new-body">
+        <span class="whats-new-date" style="color:${item.color}">${t(item.dateKey)}</span>
+        <h3 class="whats-new-title">${t(item.titleKey)}</h3>
+        <p class="whats-new-desc">${t(item.descKey)}</p>
+      </div>
+    </div>
+  `).join('');
+}
+
 export function initHomePage(): void {
   loadFeaturedStories();
+  loadWhatsNew();
   setupFeaturedFilters();
   renderCategories();
   setupCategoryToggle();

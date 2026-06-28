@@ -80,6 +80,7 @@ const ICONS = {
 function showError(message: string): void {
   const storyPage = document.getElementById('storyPage');
   if (!storyPage) return;
+  storyPage.setAttribute('aria-busy', 'false');
 
   storyPage.innerHTML = `
     <div class="min-h-screen flex items-center justify-center px-4">
@@ -331,7 +332,7 @@ function renderStory(story: Story): void {
               ${ICONS.link}
             </button>
           </div>
-          <p id="copyFeedback" class="story-copy-feedback">${t('storyPage.linkCopied', 'Link copied!')}</p>
+          <p id="copyFeedback" class="story-copy-feedback" role="status" aria-live="polite">${t('storyPage.linkCopied', 'Link copied!')}</p>
         </div>
 
         ${!isComingSoon ? `
@@ -355,7 +356,10 @@ function renderStory(story: Story): void {
   `;
 
   const storyPage = document.getElementById('storyPage');
-  if (storyPage) storyPage.innerHTML = html;
+  if (storyPage) {
+    storyPage.setAttribute('aria-busy', 'false');
+    storyPage.innerHTML = html;
+  }
 
   setupPlayButtons(story, pathId, isComingSoon);
   setupSocialSharing(story);

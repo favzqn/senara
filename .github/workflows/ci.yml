@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build:css
+
+      - run: npx astro build
+        env:
+          NODE_ENV: production
+
+      - name: Check for broken internal links
+        run: |
+          # Verify all local stylesheet/script references exist
+          for html in dist/**/*.html; do
+            grep -oP 'href="/[^"]*\.css"|src="/[^"]*\.js"' "$html" | while read -r ref; do
+              file=$(echo "$ref" | grep -oP '"/[^"]*"' | tr -d '"')
+              if [ ! -f "dist${file}" ] && [ ! -f "dist${file}.html" ]; then
+                echo "WARNING: Broken reference in $html: $file"
+              fi
+            done
+          done
+
+      - name: Build output summary
+        run: |
+          echo "Pages built:"
+          find dist -name "*.html" | wc -l
+          echo "Total size:"
+          du -sh dist/
