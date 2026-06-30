@@ -1,7 +1,34 @@
 {
-  "fetchedAt": "2026-06-16T11:09:05.019Z",
+  "fetchedAt": "2026-06-30T12:19:47.428Z",
   "channels": {
     "UC_eifcIIjgN8Q_8m34nWo3Q": [
+      {
+        "id": "4rLxAJg-jbo",
+        "title": "Alasan Ilmiah Kenapa Lo Gak Bisa Move-On",
+        "published": "2026-06-29T11:30:06+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/4rLxAJg-jbo/hqdefault.jpg",
+        "description": "Kenapa lo gak bisa move on padahal udah tau hubungannya selesai? Ternyata bukan karena lo lemah atau baperan. Di video ini kita bedah alasan ilmiah pa",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=4rLxAJg-jbo"
+      },
+      {
+        "id": "wzAlvo4Pnoc",
+        "title": "Apa Jadinya kalau Selat Hormuz Ditutup Selamanya?",
+        "published": "2026-06-24T13:47:18+00:00",
+        "thumbnail": "https://i4.ytimg.com/vi/wzAlvo4Pnoc/hqdefault.jpg",
+        "description": "Apa yang terjadi pada dunia jika selat Hormuz ditutup selamanya?\n\nWell, tonton video ini sampai habis buat dapat keseluruhan insight-nya!\n\nBuat lo jug",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=wzAlvo4Pnoc"
+      },
+      {
+        "id": "DjvBue9tI3Q",
+        "title": "Emas TERNYATA BUKAN Safe Haven Saat Krisis",
+        "published": "2026-06-18T12:30:24+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/DjvBue9tI3Q/hqdefault.jpg",
+        "description": "Katanya emas adalah aset safe haven saat krisis. Tapi kok, justru harganya malah turun pas perang?\n\nWell, tonton video ini sampai habis buat dapat kes",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=DjvBue9tI3Q"
+      },
       {
         "id": "fytYGnQGnWk",
         "title": "Alasan Lo Gampang Capek Padahal Gak Ngapa-Ngapain",
@@ -46,36 +73,45 @@
         "description": "Banyak orang merasa terjebak dalam siklus hubungan yang menyakitkan secara emosional. Fenomena ini berkaitan erat dengan pola kelekatan atau attachmen",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=JptpQqWdSv4"
-      },
-      {
-        "id": "fMwLj6OjAjc",
-        "title": "Mindset Uang ala Konglo: Rahasia yang Keluarga Kaya Ajarin ke Anaknya",
-        "published": "2026-05-22T12:45:07+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/fMwLj6OjAjc/hqdefault.jpg",
-        "description": "Banyak orang mengira perbedaan antara keluarga kaya dan keluarga biasa hanya terletak pada jumlah saldo bank. Namun, perbedaan yang paling mendasar se",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=fMwLj6OjAjc"
-      },
-      {
-        "id": "s6NFrQVKd_0",
-        "title": "Ada yang ANEH dengan Emas di Indonesia Tahun 2026 Ini...",
-        "published": "2026-05-20T12:45:01+00:00",
-        "thumbnail": "https://i4.ytimg.com/vi/s6NFrQVKd_0/hqdefault.jpg",
-        "description": "Pergerakan harga emas di Indonesia pada tahun 2026 menunjukkan pola yang tidak biasa. Harga emas domestik sering kali tidak sejalan dengan tren harga ",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=s6NFrQVKd_0"
-      },
-      {
-        "id": "x180iuk_8ms",
-        "title": "KRONOLOGI KORUPSI CHROMEBOOK: Kenapa Nadiem dan Ibam Bersalah? (versi Jaksa)",
-        "published": "2026-05-18T12:45:06+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/x180iuk_8ms/hqdefault.jpg",
-        "description": "Kasus dugaan korupsi pengadaan laptop Chromebook kembali menjadi sorotan publik. Proyek ini melibatkan anggaran negara yang sangat besar untuk sektor ",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=x180iuk_8ms"
       }
     ],
     "UCu0yQD7NFMyLu_-TmKa4Hqg": [
+      {
+        "id": "5J6o5eIKqOY",
+        "title": "Apa Rasanya Jadi Orang Autis?",
+        "published": "2026-06-28T13:57:34+00:00",
+        "thumbnail": "https://i2.ytimg.com/vi/5J6o5eIKqOY/hqdefault.jpg",
+        "description": "Satu dari seratus orang di seluruh dunia adalah individu dengan autisme. Artinya, ratusan juta orang di dunia punya kondisi ini! Di negara kita, ada j",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=5J6o5eIKqOY"
+      },
+      {
+        "id": "IOu2jcTk9JQ",
+        "title": "Kenapa Banyak Anak Kecil Punya Temen Khayalan?",
+        "published": "2026-06-24T13:06:04+00:00",
+        "thumbnail": "https://i2.ytimg.com/vi/IOu2jcTk9JQ/hqdefault.jpg",
+        "description": "Waktu kecil mungkin beberapa dari kita pernah punya temen yanggg cuma bisa diliat sama kita doang. Bukan, tentu bukan makhluk gaib, tapi… temen khayal",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=IOu2jcTk9JQ"
+      },
+      {
+        "id": "IOSSrNitwr4",
+        "title": "Satu Orang yang Merombak Kekuatan Nuklir Dunia",
+        "published": "2026-06-20T12:15:07+00:00",
+        "thumbnail": "https://i2.ytimg.com/vi/IOSSrNitwr4/hqdefault.jpg",
+        "description": "Dulu, cuma segelintir negara yang punya nuklir karena risetnya yang super-duper rahasia dan luar biasa mahal. Tapi ada satu orang yang berhasil nyebar",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=IOSSrNitwr4"
+      },
+      {
+        "id": "d7O6Eujw7tQ",
+        "title": "Apa Jadinya Jika ASEAN Punya Satu Mata Uang?",
+        "published": "2026-06-17T14:30:30+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/d7O6Eujw7tQ/hqdefault.jpg",
+        "description": "ASEAN~ Sekumpulan negara di Asia Tenggara yang hampir semuanya bekas jajahan, mayoritas warganya gak pernah main salju, dannn sering berantem kayak ad",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=d7O6Eujw7tQ"
+      },
       {
         "id": "sTPRtmpQi1Y",
         "title": "Cara Gila Baru untuk Mencoba Nyetop Penuaan",
@@ -93,42 +129,6 @@
         "description": "Siapa di sini yang suka ngidam yang manis-manis? 😋 Gilanya, ada penelitian yang nunjukin kalo minuman manis bisa nyumbang ratusan ribu kematian tiap ",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=iWv_ZyP3peI"
-      },
-      {
-        "id": "LWk3psIofA8",
-        "title": "Pasukan Janda Terkuat Indonesia yang Mengusir Penjajah",
-        "published": "2026-06-06T14:17:10+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/LWk3psIofA8/hqdefault.jpg",
-        "description": "Di atas sebuah kapal penjajah, terjadi duel sengit antara kapten kapal dan kapten pasukan penyusup. Makin terpojok, mata sang kapten mulai melotot tak",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=LWk3psIofA8"
-      },
-      {
-        "id": "ssSG6ckMET0",
-        "title": "Apakah Kita Lagi Ada di Bawah Pemerintah Otoriter?",
-        "published": "2026-06-04T13:27:50+00:00",
-        "thumbnail": "https://i4.ytimg.com/vi/ssSG6ckMET0/hqdefault.jpg",
-        "description": "Pemerintahan otoriter. Sistem yang bikin pemerintah punya kuasa penuh tanpa harus peduli pendapat rakyatnya. Tapi, gimana suatu pemerintahan bisa jadi",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=ssSG6ckMET0"
-      },
-      {
-        "id": "juNYew15Ha8",
-        "title": "Benarkah Jualan Bubur Bisa Sampai Naik Haji?",
-        "published": "2026-05-30T12:03:01+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/juNYew15Ha8/hqdefault.jpg",
-        "description": "Siapa yang pernah denger soal sinetron legendaris ini? Ya, sinetron yang jumlah episodenya jauh ngalahin anime~ Kalau kalian tonton maraton tanpa tidu",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=juNYew15Ha8"
-      },
-      {
-        "id": "nt_boLxX8ng",
-        "title": "Gimana Jika Kita Jalan Kaki 24 Jam Non-stop?",
-        "published": "2026-05-27T08:51:21+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/nt_boLxX8ng/hqdefault.jpg",
-        "description": "Kalau disuruh jalan kaki sejam, mungkin kita mau-mau aja. Tapi gimana kalau jalan kaki… 24 jam nonstop?! Apa yang bakal terjadi sama tubuh? Apakah kak",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=nt_boLxX8ng"
       }
     ],
     "UCYO_jab_esuFRV4b17AJtAw": [
@@ -161,24 +161,24 @@
       },
       {
         "id": "BHdbsHFs2P0",
-        "title": "The Hairy Ball Theorem",
+        "title": "Why you can't comb a hairy ball, and why we care",
         "published": "2026-01-31T14:57:42+00:00",
         "thumbnail": "https://i3.ytimg.com/vi/BHdbsHFs2P0/hqdefault.jpg",
         "description": "Unexpected applications and a beautiful proof.\nLooking for a new career? Check out https://3b1b.co/talent\nSupporters get early access to new videos: h",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=BHdbsHFs2P0"
-      },
-      {
-        "id": "FE-hM1kRK4Y",
-        "title": "Why Laplace transforms are so useful",
-        "published": "2025-11-05T13:09:45+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/FE-hM1kRK4Y/hqdefault.jpg",
-        "description": "Studying the forced harmonic oscillator by taking a Laplace transform and studying its poles.\nInstead of sponsored ad reads, these lessons are funded ",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=FE-hM1kRK4Y"
       }
     ],
     "UCsXVk37bltHxD1rDPwtNM8Q": [
+      {
+        "id": "PqtggjVAi8M",
+        "title": "How Are Memories Stored Inside Your Brain?",
+        "published": "2026-06-16T14:00:03+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/PqtggjVAi8M/hqdefault.jpg",
+        "description": "Avoid your blindspots and get every side of every story at https://ground.news/nutshell. Subscribe for 40% off unlimited access.\n\nBrighten your space ",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=PqtggjVAi8M"
+      },
       {
         "id": "8qQW4LTWgtc",
         "title": "Why Earth Sucks Compared to the Planet Hestia",
@@ -205,15 +205,6 @@
         "description": "Do you have a balanced news diet? Go to https://ground.news/nutshell to see reporting from a variety of sources and perspectives around the world. Sub",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=n-gYFcVx-8Y"
-      },
-      {
-        "id": "dl0-TveDDGA",
-        "title": "Our Minds Are Weirder than You Think",
-        "published": "2026-04-21T14:00:01+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/dl0-TveDDGA/hqdefault.jpg",
-        "description": "Discover Odoo 👉 https://www.odoo.com/r/ysX\nThe first app is free for life. Thanks to Odoo for sponsoring this video!\n\nOur LIMITED EDITION Visiting Co",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=dl0-TveDDGA"
       }
     ],
     "UCc_xdkOBgSYLmXTn-VSQ4uA": [
@@ -274,6 +265,24 @@
     ],
     "UCX6b17PVsYBQ0ip5gyeme-Q": [
       {
+        "id": "krXXSCb_P9Y",
+        "title": "What is Plate Tectonics: Crash Course Geology #10",
+        "published": "2026-06-25T16:00:32+00:00",
+        "thumbnail": "https://i4.ytimg.com/vi/krXXSCb_P9Y/hqdefault.jpg",
+        "description": "A long, long time ago, Earth was home to one giant super continent. So, what happened? In this episode of Crash Course Geology, we’ll break down plate",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=krXXSCb_P9Y"
+      },
+      {
+        "id": "xDll-p5g2EQ",
+        "title": "How Water Shapes the Land: Crash Course Geology #9",
+        "published": "2026-06-18T16:00:19+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/xDll-p5g2EQ/hqdefault.jpg",
+        "description": "Drop by drop, water has the power to break rock and create whole new landforms. But how? In this episode of Crash Course Geology, we’ll trace how the ",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=xDll-p5g2EQ"
+      },
+      {
         "id": "AF2eYuAKsao",
         "title": "Where Do Diamonds Come From?: Crash Course Geology #8",
         "published": "2026-06-11T16:12:35+00:00",
@@ -308,27 +317,45 @@
         "description": "Minerals are amazing and they’re all around us, in the food we eat and even in our very bones. But what actually is a mineral? In this episode of Cras",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=jQvv7CskMuo"
-      },
-      {
-        "id": "rm46SdVfB4I",
-        "title": "What’s at the center of the earth?: Crash Course Geology #4",
-        "published": "2026-05-07T16:01:33+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/rm46SdVfB4I/hqdefault.jpg",
-        "description": "The crust and the mantle are cool, but Earth’s real hero is its core, which helps protect us from all kinds of stuff. In this episode of Crash Course ",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=rm46SdVfB4I"
-      },
-      {
-        "id": "bouvNyq8xCY",
-        "title": "Earth's Crust and Mantle Explained: Crash Course Geology #3",
-        "published": "2026-04-23T16:01:04+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/bouvNyq8xCY/hqdefault.jpg",
-        "description": "Nobody has made it to the center of the Earth—but not for lack of trying. In this episode of Crash Course Geology, we’ll journey through the crust and",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=bouvNyq8xCY"
       }
     ],
     "UCsooa4yRKGN_zEE8iknghZA": [
+      {
+        "id": "DbEZmLoGDbk",
+        "title": "How a broken heart affects your body - Roni Shanoada",
+        "published": "2026-06-25T15:01:31+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/DbEZmLoGDbk/hqdefault.jpg",
+        "description": "Dig into broken heart syndrome, and find out how grief and traumatic events can affect your body and health.\n\n--\n\n\nLosing a loved one can be one of th",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=DbEZmLoGDbk"
+      },
+      {
+        "id": "6hCo4S_1Fhw",
+        "title": "What causes avalanches, and can you survive them? - Simon Trautman",
+        "published": "2026-06-23T15:00:20+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/6hCo4S_1Fhw/hqdefault.jpg",
+        "description": "Explore the three conditions needed to trigger an avalanche, and what makes these natural disasters so hard to survive.\n\n--\n\nAvalanches are the rapid ",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=6hCo4S_1Fhw"
+      },
+      {
+        "id": "FBpBUwlDId0",
+        "title": "Should you rinse your dishes before placing them in the dishwasher? - Rachel Yang",
+        "published": "2026-06-18T15:01:59+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/FBpBUwlDId0/hqdefault.jpg",
+        "description": "Take a look inside a dishwasher to explore how these machines work, and find out how to get the cleanest dishes from every use.\n\n--\n\nAfter years of ho",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=FBpBUwlDId0"
+      },
+      {
+        "id": "eR5blcjll8o",
+        "title": "How to attack (and defend) a medieval castle - Connor C. Wilson",
+        "published": "2026-06-16T15:01:01+00:00",
+        "thumbnail": "https://i2.ytimg.com/vi/eR5blcjll8o/hqdefault.jpg",
+        "description": "Dig into the history of medieval European castles, and explore how the design of these formidable fortresses evolved over time.\n\n--\n\nMedieval European",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=eR5blcjll8o"
+      },
       {
         "id": "JDqpcHGfJ2I",
         "title": "Meet the slow loris, the only venomous primate in existence - Stephanie A. Poindexter",
@@ -346,45 +373,27 @@
         "description": "Trace the history of sumo, and explore how the sport was designed and modified to reflect ancient Japan’s culture and traditions.\n\n--\n\nSumo wrestling ",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=Q9Vt6NGBVBc"
-      },
-      {
-        "id": "HDt_rTPPh70",
-        "title": "Why does catnip make cats go crazy? - Jaap de Roode",
-        "published": "2026-06-04T15:01:03+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/HDt_rTPPh70/hqdefault.jpg",
-        "description": "Explore the fascinating reason why cats go crazy for catnip, and what evolutionary purpose the plant served to feline species.\n\n--\n\nOf the many bewild",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=HDt_rTPPh70"
-      },
-      {
-        "id": "pyDZpDkU46Y",
-        "title": "The dark origins of Disney fairy tales - Claudia Schwabe",
-        "published": "2026-06-02T15:00:47+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/pyDZpDkU46Y/hqdefault.jpg",
-        "description": "Dig into the infamous tales of the Brothers Grimm, and explore how these gory stories evolved as they spread around the world.\n\n--\n\nAn evil stepmother",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=pyDZpDkU46Y"
-      },
-      {
-        "id": "BlK23YzqXOM",
-        "title": "Why your best ideas usually start as bad ones | Think Like A Musician",
-        "published": "2026-05-28T15:00:54+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/BlK23YzqXOM/hqdefault.jpg",
-        "description": "Professional songwriters share the importance of embracing mistakes, collaboration, and experimentation in the creative process.\n\n--\n\n&quot;Think Like",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=BlK23YzqXOM"
-      },
-      {
-        "id": "aob7rM5PV5A",
-        "title": "What toys have kids played with throughout history?",
-        "published": "2026-05-26T15:00:33+00:00",
-        "thumbnail": "https://i2.ytimg.com/vi/aob7rM5PV5A/hqdefault.jpg",
-        "description": "Trace the ancient origins of toys and games throughout history, and discover how play has evolved — and stayed the same.\n\n--\n\nArchaeologists have foun",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=aob7rM5PV5A"
       }
     ],
     "UC7IcJI8PUf5Z3zKxnZvTBog": [
+      {
+        "id": "O8xqi5tpD7I",
+        "title": "5 Philosophical Lessons to Cure Modern Burnout",
+        "published": "2026-06-24T13:00:07+00:00",
+        "thumbnail": "https://i4.ytimg.com/vi/O8xqi5tpD7I/hqdefault.jpg",
+        "description": "Emotional Intelligence, Daily. Start now: https://www.theschooloflife.com/subscription/ In a world that demands constant achievement and relentless op",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=O8xqi5tpD7I"
+      },
+      {
+        "id": "rTZTR3qx69Q",
+        "title": "Learning to Speak ... Again",
+        "published": "2026-06-17T13:44:02+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/rTZTR3qx69Q/hqdefault.jpg",
+        "description": "Emotional Intelligence, Daily. Start now: https://www.theschooloflife.com/subscription/ \nAs children, we spoke with unfiltered wonder and raw honesty.",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=rTZTR3qx69Q"
+      },
       {
         "id": "O9INMnsoUxU",
         "title": "Understanding the Fear of Intimacy",
@@ -411,83 +420,83 @@
         "description": "Emotional Intelligence, Daily. Start now: https://www.theschooloflife.com/subscription/ \nWhen a relationship ends, our minds immediately turn to a rel",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=tv6WwOFQIY0"
-      },
-      {
-        "id": "yaCVfTQWhE8",
-        "title": "Those Who Are Terrified of Love",
-        "published": "2026-05-20T13:01:31+00:00",
-        "thumbnail": "https://i2.ytimg.com/vi/yaCVfTQWhE8/hqdefault.jpg",
-        "description": "Emotional Intelligence, Daily. Start now: https://www.theschooloflife.com/subscription/ \nWhy do we treat the mechanics of love as a mysterious, unsolv",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=yaCVfTQWhE8"
-      },
-      {
-        "id": "KquM_52cAIE",
-        "title": "How to Survive Being Alone",
-        "published": "2026-05-13T13:00:29+00:00",
-        "thumbnail": "https://i4.ytimg.com/vi/KquM_52cAIE/hqdefault.jpg",
-        "description": "Emotional Intelligence, Daily. Start now: https://www.theschooloflife.com/subscription/ \nIt is deeply humiliating to admit, but the truth is simple: b",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=KquM_52cAIE"
       }
     ],
     "UC_qs3c0ehDvZkbiEbOj6Drg": [
       {
-        "id": "1axqK1fdYdI",
-        "title": "Letter Blends FL FR | Lesson Twenty - Phonics Made Easy Compilation | Alphablocks",
-        "published": "2026-06-14T11:00:00+00:00",
-        "thumbnail": "https://i2.ytimg.com/vi/1axqK1fdYdI/hqdefault.jpg",
+        "id": "8lxGl1ZGvDg",
+        "title": "Letter Blends with S | Lesson Twenty Two - Phonics Made Easy Compilation | Alphablocks",
+        "published": "2026-06-28T11:00:00+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/8lxGl1ZGvDg/hqdefault.jpg",
+        "description": "In the next phonics lesson let's learn all about even more letter blends. Enhance your reading and writing skills with this level four skill.\n\n\n#alpha",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=8lxGl1ZGvDg"
+      },
+      {
+        "id": "Ojk4-i-hoO8",
+        "title": "The Longest Words in Alphaland | Learn to Read and Spell for Kids Compilation | Alphablocks",
+        "published": "2026-06-27T11:00:00+00:00",
+        "thumbnail": "https://i4.ytimg.com/vi/Ojk4-i-hoO8/hqdefault.jpg",
+        "description": "Can you count how many letters are in the longest words in Alphaland? Set yourself a challenge and dive into the longest words you've ever seen!\n\n#alp",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=Ojk4-i-hoO8"
+      },
+      {
+        "id": "ncsnkal_tJY",
+        "title": "Get Ready for School with the Alphablocks | Learn to Read & Spell for Kids Compilation | Alphablocks",
+        "published": "2026-06-26T11:00:39+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/ncsnkal_tJY/hqdefault.jpg",
+        "description": "Pack up those pencil cases and back packs as we get back into the classroom! Join the Alphablocks as we get ready for school.\n#alphablocks #spellingfo",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=ncsnkal_tJY"
+      },
+      {
+        "id": "Az8HjUlqUro",
+        "title": "Sunday Teatime with T | Learn to Read and Spell for Kids Compilation | Alphablocks",
+        "published": "2026-06-21T11:00:00+00:00",
+        "thumbnail": "https://i2.ytimg.com/vi/Az8HjUlqUro/hqdefault.jpg",
+        "description": "Gather around for some Sunday Teatime stories with Alphablock T. Learn to read in a relaxing, fun environment.\n\n#alphablocks #spellingforkids #reading",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=Az8HjUlqUro"
+      },
+      {
+        "id": "coF0mWt9fmU",
+        "title": "Letter Blends CL CR DR PL  | Lesson Twenty One - Phonics Made Easy Compilation | Alphablocks",
+        "published": "2026-06-20T11:00:00+00:00",
+        "thumbnail": "https://i4.ytimg.com/vi/coF0mWt9fmU/hqdefault.jpg",
         "description": "In the next phonics lesson let's learn all about some more letter blends. Enhance your reading and writing skills with this level four skill.\n\n#alphab",
         "duration": "—",
-        "url": "https://www.youtube.com/watch?v=1axqK1fdYdI"
+        "url": "https://www.youtube.com/watch?v=coF0mWt9fmU"
       },
       {
-        "id": "Y9vIY2Okowc",
-        "title": "My First ABC's | Learn to Read and Spell for Kids Compilation | Alphablocks",
-        "published": "2026-06-13T11:00:17+00:00",
-        "thumbnail": "https://i2.ytimg.com/vi/Y9vIY2Okowc/hqdefault.jpg",
-        "description": "Start here to begin your little learners language journey. Join us in Alphaland and learn your very first ABC's.\n\n#alphablocks #spellingforkids #readi",
+        "id": "7BqzvjF1Ufs",
+        "title": "Super Summer Stories | LIVE | Reading and Writing for Kids | Alphablocks",
+        "published": "2026-06-19T12:06:01+00:00",
+        "thumbnail": "https://i4.ytimg.com/vi/7BqzvjF1Ufs/hqdefault.jpg",
+        "description": "What a wonderful time, it's summer time! Join the Alphablocks and read some exciting summer stories and learn to read in this super fun and educationa",
         "duration": "—",
-        "url": "https://www.youtube.com/watch?v=Y9vIY2Okowc"
-      },
-      {
-        "id": "JwGAZc3-oOc",
-        "title": "Let's Make Our Own Pirate Story Book | Learn to Read and Spell for Kids Compilation | Alphablocks",
-        "published": "2026-06-12T11:00:09+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/JwGAZc3-oOc/hqdefault.jpg",
-        "description": "Be a storyteller and learn how to make your very own storybook featuring Alphablock R!\n\n\n#alphablocks #spellingforkids #readingforkids #phoneticsforki",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=JwGAZc3-oOc"
-      },
-      {
-        "id": "Oo_lGdKJ6-Y",
-        "title": "Let's Have the Best Day Ever! | Learn to Read and Spell for Kids Compilation | Alphablocks",
-        "published": "2026-06-07T11:00:00+00:00",
-        "thumbnail": "https://i4.ytimg.com/vi/Oo_lGdKJ6-Y/hqdefault.jpg",
-        "description": "Alphablock T plans the best day ever! But with Alphablock S joining the fun, it all goes wrong! Can the Alphablocks figure out how to make everyone ha",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=Oo_lGdKJ6-Y"
-      },
-      {
-        "id": "toe3p_BuPNM",
-        "title": "Learn to Read! E-books for Kids | Learn to Read and Spell for Kids Compilation | Alphablocks",
-        "published": "2026-06-06T11:00:00+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/toe3p_BuPNM/hqdefault.jpg",
-        "description": "Enjoy these read along Alphablock stories for Kids in this fun story-time compilation.\n\n#alphablocks #spellingforkids #readingforkids #phoneticsforkid",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=toe3p_BuPNM"
-      },
-      {
-        "id": "XKL37Swop88",
-        "title": "Puppet Show Storytime - The Gingerbread Man | Learn to Read & Spell Compilation | Alphablocks",
-        "published": "2026-06-05T11:00:08+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/XKL37Swop88/hqdefault.jpg",
-        "description": "The curtains are up for the fable of The Gingerbread Man. Follow along this funny story for kids.\n\n#alphablocks #spellingforkids #readingforkids #phon",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=XKL37Swop88"
+        "url": "https://www.youtube.com/watch?v=7BqzvjF1Ufs"
       }
     ],
     "UCLsooMJoIpl_7ux2jvdPB-Q": [
+      {
+        "id": "N8gOM-A3cUw",
+        "title": "Top 20 Active Songs! | Super Simple’s 20th Anniversary! | Let's Move!",
+        "published": "2026-06-25T14:00:34+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/N8gOM-A3cUw/hqdefault.jpg",
+        "description": "Get the Super Simple App! ► http://bit.ly/TheSuperSimpleApp\nJump into summer with fun active songs and games from Super Simple Songs! \n\nPARENTS AND TE",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=N8gOM-A3cUw"
+      },
+      {
+        "id": "CXb9llX_LoU",
+        "title": "Sports! | Kids Song | Song of Summer ⚽️ | Super Simple Songs",
+        "published": "2026-06-18T14:00:19+00:00",
+        "thumbnail": "https://i4.ytimg.com/vi/CXb9llX_LoU/hqdefault.jpg",
+        "description": "Get the Super Simple App! ► http://bit.ly/TheSuperSimpleApp\nLet's sing about our favorite sports and how to play them. This song includes sports vocab",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=CXb9llX_LoU"
+      },
       {
         "id": "L1C9NJpQMRk",
         "title": "Top 20 Food Songs 🍕| Celebrating 20 Years of Kids Music With Super Simple Songs!",
@@ -523,24 +532,6 @@
         "description": "Get the Super Simple App! ► http://bit.ly/TheSuperSimpleApp \nYum! Enjoy some bossa nova &quot;beets&quot; for your digestive system with @BumbleNums \ud83d",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=tjT_nFtKTas"
-      },
-      {
-        "id": "8msljf_aMDs",
-        "title": "Top 20 Family Songs | Super Simple’s 20th Anniversary! | Super Simple Songs",
-        "published": "2026-05-14T14:00:12+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/8msljf_aMDs/hqdefault.jpg",
-        "description": "Get the Super Simple App! ► http://bit.ly/TheSuperSimpleApp\nAll 20 songs in this compilation video celebrate family, friends, and have songs that teac",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=8msljf_aMDs"
-      },
-      {
-        "id": "ecm9HEFcfdQ",
-        "title": "The Family Tree 🌳 | Learn & Sing Family Words! | Super Simple Songs",
-        "published": "2026-05-07T14:01:09+00:00",
-        "thumbnail": "https://i2.ytimg.com/vi/ecm9HEFcfdQ/hqdefault.jpg",
-        "description": "Get the Super Simple App! ► http://bit.ly/TheSuperSimpleApp\nEnjoy this lovely song about a family picnic while practicing family vocabulary! Sing and ",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=ecm9HEFcfdQ"
       }
     ],
     "UC1Nj4gkoi_n5eCcrKCVOXKA": [
@@ -612,6 +603,15 @@
     ],
     "UCeiYXex_fwgYDonaTcSIk6w": [
       {
+        "id": "fPHVuxOsvI8",
+        "title": "How High Can Birds Fly?",
+        "published": "2026-06-19T15:56:49+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/fPHVuxOsvI8/hqdefault.jpg",
+        "description": "Get started with Brilliant's tutor for free and get 20% off an annual subscription at https://brilliant.org/minuteearth\n\nIn 1973, an airliner struck a",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=fPHVuxOsvI8"
+      },
+      {
         "id": "TQEVini21nk",
         "title": "How To Kill A Volcano",
         "published": "2026-05-28T15:58:07+00:00",
@@ -655,71 +655,62 @@
         "description": "Even though there are a lot of causes of death out there, they all actually boil down to one thing.\n\nLEARN MORE\n**************\nTo learn more about thi",
         "duration": "—",
         "url": "https://www.youtube.com/watch?v=5i1AGIJghZg"
-      },
-      {
-        "id": "f91p64gOFF0",
-        "title": "Could This Thing *Really* Fly?",
-        "published": "2026-03-11T18:45:21+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/f91p64gOFF0/hqdefault.jpg",
-        "description": "Help stop the worst parts of factory farming: https://www.farmkind.giving/minute-earth?promo=minute_earth\n\nThe Quetzalcoatlus – one of the largest pte",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=f91p64gOFF0"
       }
     ],
     "UC8u2mS-ZGT2PldXH8-zvx3A": [
       {
-        "id": "7v1oMSVkzWQ",
-        "title": "Scaredy Fish | NEW COMPILATION | Weird Waters | Scholastic After School",
-        "published": "2026-06-15T19:55:34+00:00",
-        "thumbnail": "https://i4.ytimg.com/vi/7v1oMSVkzWQ/hqdefault.jpg",
-        "description": "#wierdwaters #cartoons #animation #funny #scholastickids\n \nSubscribe to Scholastic After School for the best TV shows! https://www.youtube.com/@Schola",
+        "id": "xN_Hye4FHsA",
+        "title": "What If You Turned Into Water? Learn About the Water Cycle | The Magic School Bus",
+        "published": "2026-06-29T17:34:30+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/xN_Hye4FHsA/hqdefault.jpg",
+        "description": "The Friz’s class is excited about going to Waterland. Wanda and Arnold are working on a project together and somehow she convinces him to go to the gi",
         "duration": "—",
-        "url": "https://www.youtube.com/watch?v=7v1oMSVkzWQ"
+        "url": "https://www.youtube.com/watch?v=xN_Hye4FHsA"
       },
       {
-        "id": "ZrF4spZKXxc",
-        "title": "The Mysteries of Plants | Full Episodes | The Magic School Bus | Scholastic After School",
-        "published": "2026-06-15T18:25:15+00:00",
-        "thumbnail": "https://i3.ytimg.com/vi/ZrF4spZKXxc/hqdefault.jpg",
-        "description": "🔔 Subscribe to Scholastic After School for the best TV shows! https://www.youtube.com/@ScholasticAfterSchool?sub_confirmation=1\n \nThe Magic School Bu",
-        "duration": "—",
-        "url": "https://www.youtube.com/watch?v=ZrF4spZKXxc"
-      },
-      {
-        "id": "35PsMjXZakw",
-        "title": "Learn About POISON | Educational Videos for Kids | Finding Stuff Out | Scholastic After School",
-        "published": "2026-06-15T14:02:30+00:00",
-        "thumbnail": "https://i4.ytimg.com/vi/35PsMjXZakw/hqdefault.jpg",
+        "id": "UAzAiFzK3co",
+        "title": "Why Does That Sound Make Us Cringe? The Secret Life of Sound | Finding Stuff Out",
+        "published": "2026-06-28T18:11:44+00:00",
+        "thumbnail": "https://i2.ytimg.com/vi/UAzAiFzK3co/hqdefault.jpg",
         "description": "#findingstuffout #learning #education \n\nSubscribe to Scholastic After School for the best TV shows! https://www.youtube.com/@ScholasticAfterSchool?sub",
         "duration": "—",
-        "url": "https://www.youtube.com/watch?v=35PsMjXZakw"
+        "url": "https://www.youtube.com/watch?v=UAzAiFzK3co"
       },
       {
-        "id": "kI9524Xf_zk",
-        "title": "DIY SLIME + Amazing Slime Experiments | Science Max | Scholastic After School",
-        "published": "2026-06-15T12:40:11+00:00",
-        "thumbnail": "https://i4.ytimg.com/vi/kI9524Xf_zk/hqdefault.jpg",
-        "description": "Discover the fascinating science of polymers and learn how to create your own slimy concoctions at home!\n\n#ScienceMax #science #ScienceExperiments #sl",
+        "id": "zZGuI1jD6-s",
+        "title": "Can an Orange Peel POP a Balloon? 😳 🤯 Science Experiment | Science Max | Scholastic After School",
+        "published": "2026-06-27T13:50:40+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/zZGuI1jD6-s/hqdefault.jpg",
+        "description": "When antacid tablets mix with water, you get a chemical reaction.   Phil harnesses this to make several variations on rockets!  Plus: Why acids and ba",
         "duration": "—",
-        "url": "https://www.youtube.com/watch?v=kI9524Xf_zk"
+        "url": "https://www.youtube.com/watch?v=zZGuI1jD6-s"
       },
       {
-        "id": "ylcGIDjQzWs",
-        "title": "The Ghost Next Door Part 1 | Spooky Cartoons for Kids | Goosebumps | Scholastic After School",
-        "published": "2026-06-12T22:02:35+00:00",
-        "thumbnail": "https://i2.ytimg.com/vi/ylcGIDjQzWs/hqdefault.jpg",
-        "description": "#goosebumps #cartoons #spookystories \n\nSubscribe to Scholastic After School for the best TV shows! https://www.youtube.com/@ScholasticAfterSchool?sub_",
+        "id": "TekdEOSA4h0",
+        "title": "Alien Invasion Takes Over | Funny Cartoons for Kids | Camp Lakebottom | Scholastic After School",
+        "published": "2026-06-26T21:16:22+00:00",
+        "thumbnail": "https://i1.ytimg.com/vi/TekdEOSA4h0/hqdefault.jpg",
+        "description": "McGee tries takes care of a young dragon.\n\n#CampLakebottom #cartoons #forkids #fullepisodes \n \nSubscribe to Scholastic After School for the best TV sh",
         "duration": "—",
-        "url": "https://www.youtube.com/watch?v=ylcGIDjQzWs"
+        "url": "https://www.youtube.com/watch?v=TekdEOSA4h0"
       },
       {
-        "id": "LMw58EjXw8g",
-        "title": "A Kind of Spark Full Season | Full Episodes | Season 1 | Scholastic After School",
-        "published": "2026-06-12T21:00:15+00:00",
-        "thumbnail": "https://i1.ytimg.com/vi/LMw58EjXw8g/hqdefault.jpg",
-        "description": "Addie has a meltdown on a school trip and finds a strange witch jar. It’s the start of a life changing adventure full of friendship, frenemies, and a ",
+        "id": "Vjyl9NaY2vE",
+        "title": "Goosebumps | You Can't Scare Me | A Scary Adventure Kids Will Love | Scholastic After School",
+        "published": "2026-06-26T19:38:59+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/Vjyl9NaY2vE/hqdefault.jpg",
+        "description": "Subscribe to Scholastic After School for the best TV shows! https://www.youtube.com/@ScholasticAfterSchool?sub_confirmation=1\n\nCheck out the below lin",
         "duration": "—",
-        "url": "https://www.youtube.com/watch?v=LMw58EjXw8g"
+        "url": "https://www.youtube.com/watch?v=Vjyl9NaY2vE"
+      },
+      {
+        "id": "jH3XMHUtXGI",
+        "title": "Adorable Puppies Summer Fun | FULL EPISODES | Paris & Pups | @ScholasticAfterSchool",
+        "published": "2026-06-26T19:00:14+00:00",
+        "thumbnail": "https://i3.ytimg.com/vi/jH3XMHUtXGI/hqdefault.jpg",
+        "description": "Subscribe to Scholastic After School for the best TV shows! https://www.youtube.com/@ScholasticAfterSchool?sub_confirmation=1\n\nWelcome to Scholastic A",
+        "duration": "—",
+        "url": "https://www.youtube.com/watch?v=jH3XMHUtXGI"
       }
     ],
     "UC6107grRI4m0o2-emgoDnAA": [

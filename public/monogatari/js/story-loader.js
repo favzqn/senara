@@ -33,7 +33,8 @@ const STORY_CONFIG = {
       './stories/teman-baru-di-kelas-8b/chapter-8.js',
       './stories/teman-baru-di-kelas-8b/index.js',
     ],
-    title: 'Teman Baru di Kelas 8B | Senara'
+    title: 'Teman Baru di Kelas 8B | Senara',
+    secret: 'k8b-preview-2026',
   },
   'digital-literacy-navigator': {
     scripts: [
@@ -110,6 +111,22 @@ async function loadStoryScripts(storyId) {
         </div>
       </div>`;
     return Promise.reject(new Error(`Story not found: ${storyId}`));
+  }
+
+  // Secret gate — block stories with a secret unless URL has matching ?secret=
+  if (config.secret) {
+    const urlSecret = new URLSearchParams(window.location.search).get('secret');
+    if (urlSecret !== config.secret) {
+      document.body.innerHTML = `
+        <div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:Inter,sans-serif;text-align:center;padding:2rem;">
+          <div>
+            <h1 style="font-size:2rem;margin-bottom:1rem;">Cerita belum tersedia</h1>
+            <p style="color:#666;margin-bottom:2rem;">Cerita ini masih dalam pengembangan.</p>
+            <a href="/collection" style="display:inline-block;padding:0.75rem 2rem;background:#b45309;color:white;border-radius:0.5rem;text-decoration:none;font-weight:600;">Kembali ke Koleksi</a>
+          </div>
+        </div>`;
+      return Promise.reject(new Error(`Story "${storyId}" requires a secret key`));
+    }
   }
 
   // Expose story config for index.js

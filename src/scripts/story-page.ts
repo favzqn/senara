@@ -5,6 +5,11 @@ import { allStoriesData } from '../data/stories';
 import type { Story } from '../data/stories';
 import { getCategoryById } from '../data/categories';
 
+// Stories with secret preview access — must match story-loader.js
+const STORY_SECRETS: Record<string, string> = {
+  'teman-baru-di-kelas-8b': 'k8b-preview-2026',
+};
+
 function updateMetaTags(story: Story): void {
   document.title = `${story.title} | Senara`;
 
@@ -99,7 +104,10 @@ function showError(message: string): void {
 function renderStory(story: Story): void {
   updateMetaTags(story);
   const pathId: string | null = getUrlParam('path');
-  const isComingSoon: boolean = story.status === 'coming-soon';
+  const urlSecret: string | null = getUrlParam('secret');
+  const expectedSecret: string | undefined = STORY_SECRETS[story.id];
+  const hasSecretAccess: boolean = !!expectedSecret && urlSecret === expectedSecret;
+  const isComingSoon: boolean = story.status === 'coming-soon' && !hasSecretAccess;
   const category = story.category ? getCategoryById(story.category) : undefined;
   const rating: number = story.rating || 0;
   const backLink = '/collection';
@@ -361,12 +369,12 @@ function renderStory(story: Story): void {
     storyPage.innerHTML = html;
   }
 
-  setupPlayButtons(story, pathId, isComingSoon);
+  setupPlayButtons(story, pathId, isComingSoon, urlSecret);
   setupSocialSharing(story);
   setupCopyLink();
 }
 
-function setupPlayButtons(story: Story, pathId: string | null, isComingSoon: boolean): void {
+function setupPlayButtons(story: Story, pathId: string | null, isComingSoon: boolean, urlSecret: string | null): void {
   if (isComingSoon) return;
 
   const playHandler = (): void => {
@@ -374,7 +382,12 @@ function setupPlayButtons(story: Story, pathId: string | null, isComingSoon: boo
       sessionStorage.setItem('currentPathId', pathId);
       sessionStorage.setItem('currentStoryId', story.id);
     }
-    window.location.href = CONFIG.paths.monogatari + `?story=${story.id}`;
+    let playUrl = CONFIG.paths.monogatari + `?story=${story.id}`;
+    const secret = STORY_SECRETS[story.id];
+    if (secret && urlSecret === secret) {
+      playUrl += `&secret=${secret}`;
+    }
+    window.location.href = playUrl;
   };
 
   document.getElementById('playBtn')?.addEventListener('click', playHandler);
