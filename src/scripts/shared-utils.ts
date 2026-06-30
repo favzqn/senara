@@ -129,7 +129,7 @@ export function createStoryCard(story: StoryBasic, options: { showDescription?: 
         <div class="pt-1">
           ${isComingSoon
             ? `<button class="play-btn w-full py-3 rounded-lg font-semibold text-center opacity-50 cursor-not-allowed" disabled>${comingSoonSvg} ${comingSoonLabel}</button>`
-            : `<a href="/story?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center">${playSvg} ${playLabel}</a>`
+            : `<a href="/story/?id=${story.id}" class="play-btn w-full py-3 rounded-lg font-semibold text-center">${playSvg} ${playLabel}</a>`
           }
         </div>
       </div>

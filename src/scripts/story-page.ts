@@ -39,7 +39,7 @@ function updateMetaTags(story: Story): void {
     '@type': 'Article',
     headline: story.title,
     description: story.description,
-    url: `https://senara.id/story?id=${story.id}`,
+    url: `https://senara.id/story/?id=${story.id}`,
     datePublished: story.releaseDate,
     dateModified: story.releaseDate,
     author: { '@type': 'Organization', name: story.author || 'Senara Team' },
