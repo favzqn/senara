@@ -225,7 +225,7 @@ function showEndCard(): void {
   card.innerHTML =
     '<p style="color:#818CF8;font-weight:700;font-size:1.1rem;margin-bottom:0.5rem;font-family:Crimson Pro,serif;">' + endTitle + '</p>' +
     '<p style="color:#94A3B8;font-size:0.85rem;margin-bottom:1rem;">' + endDesc + '</p>' +
-    '<a href="/story?id=pahlawan-kesehatan-mental" class="btn-primary inline-block px-6 py-2.5 text-sm" data-umami-event="Demo End CTA" style="border-radius:10px;">' + endCta + '</a>';
+    '<a href="/story/?id=pahlawan-kesehatan-mental" class="btn-primary inline-block px-6 py-2.5 text-sm" data-umami-event="Demo End CTA" style="border-radius:10px;">' + endCta + '</a>';
   dialog.appendChild(card);
 }
 

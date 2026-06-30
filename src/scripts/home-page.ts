@@ -45,7 +45,7 @@ function createFeaturedCard(story: Story, index: number = 0): HTMLAnchorElement 
   const accentColor: string = categoryStyle?.color || '#4F46E5';
 
   const card: HTMLAnchorElement = document.createElement('a');
-  card.href = isComingSoon ? '#' : `/story?id=${story.id}`;
+  card.href = isComingSoon ? '#' : `/story/?id=${story.id}`;
   card.className = `featured-card-v2 ${isFirst ? 'featured-card-hero' : ''}`;
   card.dataset.storyId = story.id;
   if (!isComingSoon) {
