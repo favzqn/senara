@@ -1,5 +1,5 @@
 monogatari.assets("scenes", {
-  "kelas-pagi": "sit-right.jpg",
+  "kelas-pagi": "kelas-pagi.jpg",
   "kelas-siang": "sit-chapter-5.jpg",
   "lorsekolah": "sit-chapter-5-2.jpg",
   "kantin": "sit-chapter-5-3.jpg",
