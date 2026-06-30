@@ -1,6 +1,6 @@
 export const CONFIG = {
   paths: {
-    monogatari: './monogatari/index.html',
+    monogatari: '/monogatari/index.html',
   },
   social: {
     twitter: (url: string, text: string) =>
