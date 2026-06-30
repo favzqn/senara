@@ -18,6 +18,10 @@ monogatari.characters({
   rafi: {
     name: "Rafi",
     color: "#2563eb",
+    directory: "rafi",
+    sprites: {
+      normal: "normal.png",
+    },
   },
   arum: {
     name: "Arum",
