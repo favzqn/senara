@@ -150,4 +150,15 @@ const completeStory = Object.assign({},
   mainStory
 );
 
-monogatari.script(completeStory);
+// Wrap script in language key for MultiLanguage mode
+monogatari.script({
+  'Bahasa Indonesia': completeStory,
+});
+
+// Register language metadata for selection screen
+monogatari.languageMetadata({
+  'Bahasa Indonesia': {
+    src: 'https://flagcdn.com/id.svg',
+    alt: 'Bahasa Indonesia',
+  },
+});
