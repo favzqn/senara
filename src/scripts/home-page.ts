@@ -177,7 +177,7 @@ function renderCategories(): void {
 
   categories.forEach((category: Category) => {
     const link: HTMLAnchorElement = document.createElement('a');
-    link.href = `/collection?category=${category.id}`;
+    link.href = `/collection/?category=${category.id}`;
     link.className = 'category-chip hover:no-underline';
     link.dataset.umamiEvent = `Home category ${category.title}`;
 

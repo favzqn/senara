@@ -1,6 +1,6 @@
 'use strict';
 
-const CACHE_NAME = 'senara-v2.0.0';
+const CACHE_NAME = 'senara-v2.0.1';
 
 const PRECACHE = [
   '/',
@@ -54,6 +54,21 @@ self.addEventListener('fetch', event => {
   if (url.origin !== location.origin) return;
   if (request.method !== 'GET') return;
 
+  // HTML/navigation: network-first so a new deploy's HTML (and its fresh
+  // hashed asset URLs) always wins. Cache-first here served stale HTML that
+  // pointed at old JS bundles, resurfacing already-fixed bugs.
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request).then(response => {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
+        return response;
+      }).catch(() => caches.match(request).then(cached => cached || caches.match('/offline/')))
+    );
+    return;
+  }
+
+  // Hashed assets, CSS, images: cache-first (content-addressed, immutable).
   event.respondWith(
     caches.match(request).then(cached => {
       if (cached) return cached;
@@ -62,12 +77,7 @@ self.addEventListener('fetch', event => {
         const clone = response.clone();
         caches.open(CACHE_NAME).then(cache => cache.put(request, clone));
         return response;
-      }).catch(() => {
-        if (request.mode === 'navigate') {
-          return caches.match('/offline/');
-        }
-        return new Response('Offline', { status: 503 });
-      });
+      }).catch(() => new Response('Offline', { status: 503 }));
     })
   );
 });
