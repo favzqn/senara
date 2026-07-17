@@ -3,10 +3,12 @@ import { readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 
 /**
- * Story link URL validation.
+ * Internal query-link URL validation.
  *
- * Wasmer Edge redirects /story?id=X → /story/ (308), stripping query params.
- * All story links MUST use trailing slash: /story/?id=X
+ * Wasmer Edge 308-redirects a bare directory path to a trailing slash and
+ * strips the query string in the process, so /story?id=X and
+ * /collection?category=Y lose their params. Query links MUST use a trailing
+ * slash: /story/?id=X, /collection/?category=Y.
  * @see https://github.com/favzqn/senara/pull/6
  */
 
@@ -25,32 +27,20 @@ function collectSourceFiles(dir: string, exts: string[]): string[] {
   return results;
 }
 
-describe('story links', () => {
-  const files = collectSourceFiles(SRC_DIR, ['.ts', '.astro']);
+describe('internal query links', () => {
+  // This test file documents the bare patterns, so exclude it from the scan.
+  const files = collectSourceFiles(SRC_DIR, ['.ts', '.astro'])
+    .filter(f => !f.endsWith('story-links.test.ts'));
 
-  it.each(files)('no bare /story?id= in %s', (file) => {
+  // /story? matches the bad form but /story/? does not — no lookbehind needed.
+  const bare = /\/(story|collection)\?/;
+
+  it.each(files)('no bare query link (missing trailing slash) in %s', (file) => {
     const content = readFileSync(file, 'utf-8');
-    // Match /story?id= but NOT /story/?id= (i.e. missing trailing slash)
-    const barePattern = /\/story\?id=/g;
-    const matches = content.match(barePattern);
-    if (matches) {
-      // Verify each match is NOT preceded by a slash (i.e. it's /story?id not /story/?id)
-      const badMatches: string[] = [];
-      let m: RegExpExecArray | null;
-      const re = /\/story\?id=/g;
-      while ((m = re.exec(content)) !== null) {
-        const before = content.substring(Math.max(0, m.index - 1), m.index);
-        if (before !== '/') {
-          badMatches.push(`line ~${content.substring(0, m.index).split('\n').length}`);
-        }
-      }
-      if (badMatches.length > 0) {
-        expect.fail(
-          `Found bare /story?id= (missing trailing slash) in ${file}.\n` +
-          `Use /story/?id= to avoid Wasmer Edge query-param stripping.\n` +
-          `Matches at: ${badMatches.join(', ')}`
-        );
-      }
-    }
+    const lines = content
+      .split('\n')
+      .map((line, i) => bare.test(line) ? `line ${i + 1}: ${line.trim()}` : null)
+      .filter(Boolean);
+    expect(lines, `Use a trailing slash (e.g. /story/?id=) to avoid Wasmer Edge stripping the query.`).toEqual([]);
   });
 });
