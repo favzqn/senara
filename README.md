@@ -13,12 +13,12 @@ Senara is a nonprofit, open-source platform for learning through interactive vis
 
 | Story | Topic | Chapters | Status |
 |-------|-------|----------|--------|
-| [Mental Health Hero](https://senara.id/story?id=pahlawan-kesehatan-mental) | Mental health literacy | 5 | Published (voice acted) |
-| [New Friend in Class 8B](https://senara.id/story?id=teman-baru-di-kelas-8b) | Social skills / BISINDO | 8 | Published |
-| [Digital Literacy Navigator](https://senara.id/story?id=digital-literacy-navigator) | Online safety | 1 | Coming soon |
-| [Empty Wallet, Full Dreams](https://senara.id/story?id=dompet-kosong-mimpi-penuh) | Financial literacy | 1 | Coming soon |
-| [Communication & Conflict](https://senara.id/story?id=komunikasi-resolusi-konflik) | Conflict resolution | 1 | Coming soon |
-| [Zero Waste Mission](https://senara.id/story?id=misi-nol-sampah) | Environmental awareness | 1 | Coming soon |
+| [Mental Health Hero](https://senara.id/story/?id=pahlawan-kesehatan-mental) | Mental health literacy | 5 | Published (voice acted) |
+| [New Friend in Class 8B](https://senara.id/story/?id=teman-baru-di-kelas-8b) | Social skills / BISINDO | 8 | Published |
+| [Digital Literacy Navigator](https://senara.id/story/?id=digital-literacy-navigator) | Online safety | 1 | Coming soon |
+| [Empty Wallet, Full Dreams](https://senara.id/story/?id=dompet-kosong-mimpi-penuh) | Financial literacy | 1 | Coming soon |
+| [Communication & Conflict](https://senara.id/story/?id=komunikasi-resolusi-konflik) | Conflict resolution | 1 | Coming soon |
+| [Zero Waste Mission](https://senara.id/story/?id=misi-nol-sampah) | Environmental awareness | 1 | Coming soon |
 
 ## Pages
 
