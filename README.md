@@ -44,9 +44,38 @@ Senara is a nonprofit, open-source platform for learning through interactive vis
 - **Astro 6** — Static site generator with TypeScript
 - **Tailwind CSS 3** — Built to 22KB (from CDN ~300KB)
 - **Monogatari** — Visual novel engine for story playback
+- **OpenAI API** — Story generation & development assistance
 - **Service Worker** — Offline support + caching
 - **JSON-LD** — Structured data for SEO
 - **Umami** — Privacy-focused analytics
+
+## OpenAI Integration
+
+Senara uses OpenAI models to enhance the storytelling creation process.
+
+### GPT-5.6 Usage
+
+GPT-5.6 was used to help:
+
+- Generate and expand interactive story scenarios
+- Create realistic character dialogue
+- Design branching choices and consequences
+- Structure educational narratives
+- Assist creators in producing stories faster
+
+The goal is not to replace human creativity, but to help writers and educators create meaningful interactive learning experiences at scale.
+
+### Codex Usage
+
+Codex was used throughout development to accelerate engineering workflows:
+
+- Generate and refine frontend components
+- Assist with implementation of new features
+- Debug development issues
+- Refactor and improve existing code
+- Speed up iteration during development
+
+Codex allowed us to focus more on product decisions and user experience while reducing repetitive development work.
 
 ## Quick Start
 
