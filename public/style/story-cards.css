@@ -52,3 +52,9 @@
   justify-content: center;
   font-size: 3rem;
 }
+
+.card-hover:focus-visible,
+.play-btn:focus-visible {
+  outline: 2px solid #4F46E5;
+  outline-offset: 2px;
+}

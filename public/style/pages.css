@@ -110,7 +110,7 @@ body {
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #94A3B8;
+  color: #64748B;
   pointer-events: none;
 }
 
@@ -132,7 +132,7 @@ body {
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
-.faq-search::placeholder { color: #94A3B8; }
+.faq-search::placeholder { color: #64748B; }
 
 .faq-search-kbd {
   position: absolute;
@@ -635,7 +635,7 @@ body {
   .donate-cta-actions { justify-content: center; }
 }
 
-/* Cost bars — horizontal bar chart */
+/* Cost bars : horizontal bar chart */
 .cost-bars {
   display: flex;
   flex-direction: column;
@@ -700,7 +700,7 @@ body {
   }
 }
 
-/* Principles — compact 2x2 card grid */
+/* Principles : compact 2x2 card grid */
 .principles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1834,7 +1834,7 @@ body {
 .testimonial-org {
   display: block;
   font-size: 0.8rem;
-  color: #94A3B8;
+  color: #64748B;
   margin-top: 0.25rem;
 }
 

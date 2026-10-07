@@ -367,11 +367,11 @@ html.dark .story-credit-item:hover {
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #94A3B8;
+  color: #64748B;
   font-weight: 700;
 }
 
-html.dark .story-credit-label { color: #64748B; }
+html.dark .story-credit-label { color: #94A3B8; }
 
 .story-credit-value {
   font-weight: 700;

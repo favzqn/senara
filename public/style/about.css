@@ -382,7 +382,7 @@ body {
   color: #1E1B4B;
 }
 
-/* Principle cards — bento grid */
+/* Principle cards : bento grid */
 .principle-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1190,7 +1190,7 @@ body {
   border-radius: 100px;
 }
 
-/* Process steps (contribute) — horizontal */
+/* Process steps (contribute) : horizontal */
 .process-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1234,7 +1234,7 @@ body {
   line-height: 1.5;
 }
 
-/* Benefits — compact 3x2 */
+/* Benefits : compact 3x2 */
 .benefits-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

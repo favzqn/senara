@@ -1,5 +1,5 @@
 /**
- * Design System Utility Classes — Refined Clay
+ * Design System Utility Classes : Refined Clay
  * Softer, more professional approach
  */
 
@@ -576,7 +576,7 @@ html.dark {
 
   .search-input:hover { border-color: #475569 !important; }
   .search-input:focus { border-color: #818CF8 !important; box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15) !important; }
-  .search-input::placeholder { color: #64748B !important; }
+  .search-input::placeholder { color: #94A3B8 !important; }
 
   .sort-select {
     background-color: #1E293B !important;
@@ -1141,8 +1141,8 @@ html.dark {
     box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15) !important;
   }
 
-  .faq-search::placeholder { color: #64748B !important; }
-  .faq-search-icon { color: #64748B !important; }
+  .faq-search::placeholder { color: #94A3B8 !important; }
+  .faq-search-icon { color: #94A3B8 !important; }
 
   .faq-cat-btn {
     background: #1E293B !important;
@@ -1521,7 +1521,7 @@ html.dark {
   [style*="background: #F8FAFC"] { background: #1E293B !important; }
   [style*="background: #ffffff"] { background: #1E293B !important; }
 
-  /* ── Footer — already dark, minor adjustments ───────────────── */
+  /* ── Footer : already dark, minor adjustments ───────────────── */
   .senara-footer {
     background: #0B1120;
   }
@@ -1547,4 +1547,12 @@ html.dark {
     background: rgba(129, 140, 248, 0.3);
     color: #F1F5F9;
   }
+}
+
+html.dark .featured-card-meta {
+  color: #94A3B8 !important;
+}
+
+html.dark .testimonial-org {
+  color: #94A3B8 !important;
 }

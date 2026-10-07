@@ -249,7 +249,7 @@
 
 .search-input:hover { border-color: #CBD5E1; }
 .search-input:focus { border-color: #4F46E5; outline: none; box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1); }
-.search-input::placeholder { color: #94A3B8; }
+.search-input::placeholder { color: #64748B; }
 
 .empty-state {
   background: white;

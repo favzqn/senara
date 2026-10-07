@@ -1,5 +1,5 @@
 /* ===========================================
- * Senara — Refined Claymorphism Design System
+ * Senara : Refined Claymorphism Design System
  * Softer clay, vibrant accents, professional
  * Primary: #4F46E5 | Accent: #F97316
  * Success: #10B981 | Pink: #EC4899
@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===========================
- * Clay Utilities — Softer
+ * Clay Utilities : Softer
  * =========================== */
 .clay {
   background: #ffffff;
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===========================
- * Navbar — Clean & Modern
+ * Navbar : Clean & Modern
  * =========================== */
 .senara-nav {
   position: sticky;
@@ -598,7 +598,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .featured-card-badge-soon {
-  background: #94A3B8;
+  background: #64748B;
   box-shadow: 0 2px 8px rgba(148, 163, 184, 0.3);
 }
 
@@ -700,7 +700,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .featured-card-meta {
   font-size: 0.7rem;
-  color: #94A3B8;
+  color: #64748B;
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -1200,6 +1200,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ===========================
  * CTA Bar
  * =========================== */
+/* touch target floor: 44px (WCAG 2.5.5) */
+.cta-bar .cta-primary,
+.cta-bar .cta-secondary,
+.vn-choice {
+  min-height: 44px;
+}
+
 .cta-bar .cta-primary {
   background: #F97316;
   color: white;
@@ -1555,7 +1562,7 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
 }
 
-/* Textbox — anime VN frame style */
+/* Textbox : anime VN frame style */
 .vn-textbox {
   position: absolute;
   bottom: 0;
@@ -1581,7 +1588,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(90deg, transparent, rgba(129, 140, 248, 0.5), transparent);
 }
 
-/* Speaker name — anime name box */
+/* Speaker name : anime name box */
 .vn-speaker {
   position: absolute;
   top: -1px;
@@ -1620,7 +1627,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Continue indicator — bouncing triangle */
+/* Continue indicator : bouncing triangle */
 .vn-continue {
   position: absolute;
   bottom: 10px;
@@ -1643,7 +1650,7 @@ h1, h2, h3, h4, h5, h6 {
   50% { transform: translateY(4px); }
 }
 
-/* Choices — anime VN style */
+/* Choices : anime VN style */
 .vn-choices {
   position: absolute;
   bottom: 0;
