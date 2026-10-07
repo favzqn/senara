@@ -5,7 +5,9 @@
 [![Live](https://img.shields.io/badge/live-senara.id-4F46E5?style=flat-square)](https://senara.id)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
-Senara is a nonprofit, open-source platform for learning through interactive visual novel stories. Topics include mental health, financial literacy, digital literacy, communication, and environmental awareness.
+Senara is a free, open-source platform for learning through interactive visual novel stories. Topics include mental health, financial literacy, digital literacy, communication, and environmental awareness.
+
+**Senara is built and maintained by one person.** It is open to contributions (see [CONTRIBUTING.md](CONTRIBUTING.md)), but there is no team, no company, and no roadmap driven by anyone else. The roadmap lives in [docs/ROADMAP.md](docs/ROADMAP.md).
 
 **No sign-up. No payment. Just pick a story and start.**
 
@@ -14,11 +16,14 @@ Senara is a nonprofit, open-source platform for learning through interactive vis
 | Story | Topic | Chapters | Status |
 |-------|-------|----------|--------|
 | [Mental Health Hero](https://senara.id/story/?id=pahlawan-kesehatan-mental) | Mental health literacy | 5 | Published (voice acted) |
-| [New Friend in Class 8B](https://senara.id/story/?id=teman-baru-di-kelas-8b) | Social skills / BISINDO | 8 | Published |
-| [Digital Literacy Navigator](https://senara.id/story/?id=digital-literacy-navigator) | Online safety | 1 | Coming soon |
-| [Empty Wallet, Full Dreams](https://senara.id/story/?id=dompet-kosong-mimpi-penuh) | Financial literacy | 1 | Coming soon |
-| [Communication & Conflict](https://senara.id/story/?id=komunikasi-resolusi-konflik) | Conflict resolution | 1 | Coming soon |
-| [Zero Waste Mission](https://senara.id/story/?id=misi-nol-sampah) | Environmental awareness | 1 | Coming soon |
+| [New Friend in Class 8B](https://senara.id/story/?id=teman-baru-di-kelas-8b) | Social skills / BISINDO | 8 | Coming soon |
+| [Digital Literacy Navigator](https://senara.id/story/?id=digital-literacy-navigator) | Online safety | 2 | Coming soon |
+| [Empty Wallet, Full Dreams](https://senara.id/story/?id=dompet-kosong-mimpi-penuh) | Financial literacy | 2 | Coming soon |
+| [Communication & Conflict](https://senara.id/story/?id=komunikasi-resolusi-konflik) | Conflict resolution | 2 | Coming soon |
+| [Zero Waste Mission](https://senara.id/story/?id=misi-nol-sampah) | Environmental awareness | 2 | Coming soon |
+
+Target is 5 chapters per story. Chapters 3-5 for the four stub stories are
+the current focus: see [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Pages
 
@@ -26,7 +31,7 @@ Senara is a nonprofit, open-source platform for learning through interactive vis
 |------|-------------|
 | [Home](https://senara.id/) | Landing page with interactive VN demo |
 | [Collection](https://senara.id/collection) | Story browser with filters, search, sort |
-| [About](https://senara.id/about) | Our story, approach, team, contribute |
+| [About](https://senara.id/about) | Our story, approach, contribute |
 | [TV](https://senara.id/tv) | Curated educational YouTube channels |
 | [FAQ](https://senara.id/faq) | Frequently asked questions |
 | [Safety](https://senara.id/safety) | Mental health resources & hotlines |
@@ -35,19 +40,19 @@ Senara is a nonprofit, open-source platform for learning through interactive vis
 
 ## Languages
 
-- **Indonesian** (default) — `?lang=id`
-- **English** — `?lang=en`
-- **Japanese** — `?lang=ja`
+- **Indonesian** (default): `?lang=id`
+- **English**: `?lang=en`
+- **Japanese**: `?lang=ja`
 
 ## Tech Stack
 
-- **Astro 6** — Static site generator with TypeScript
-- **Tailwind CSS 3** — Built to 22KB (from CDN ~300KB)
-- **Monogatari** — Visual novel engine for story playback
-- **OpenAI API** — Story generation & development assistance
-- **Service Worker** — Offline support + caching
-- **JSON-LD** — Structured data for SEO
-- **Umami** — Privacy-focused analytics
+- **Astro 6**: Static site generator with TypeScript
+- **Tailwind CSS 3**: Built to 22KB (from CDN ~300KB)
+- **Monogatari**: Visual novel engine for story playback
+- **OpenAI API**: Story generation & development assistance
+- **Service Worker**: Offline support + caching
+- **JSON-LD**: Structured data for SEO
+- **Umami**: Privacy-focused analytics
 
 ## OpenAI Integration
 
@@ -75,7 +80,8 @@ Codex was used throughout development to accelerate engineering workflows:
 - Refactor and improve existing code
 - Speed up iteration during development
 
-Codex allowed us to focus more on product decisions and user experience while reducing repetitive development work.
+Codex handled the mechanical parts of development, leaving the product
+decisions and user experience to human judgment.
 
 ## Quick Start
 
@@ -117,7 +123,7 @@ senara/
 │   ├── manifest.json       # PWA manifest
 │   └── service-worker.js   # Service worker
 │
-├── docs/council/           # Board of Directors docs
+├── docs/                   # Roadmap, decision log, architecture, guides
 ├── tailwind.config.js      # Tailwind config
 ├── astro.config.mjs        # Astro config
 ├── AGENTS.md               # AI agent instructions
@@ -140,11 +146,13 @@ senara/
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to get involved.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and story feedback via
+issues are the most helpful contributions right now; the story-writing format
+is documented there too.
 
 ## License
 
-MIT — See [LICENSE](LICENSE) for details.
+MIT: See [LICENSE](LICENSE) for details.
 
 ## Support
 
