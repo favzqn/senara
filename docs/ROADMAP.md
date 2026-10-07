@@ -47,7 +47,6 @@ The four stub stories have 2 chapters each; they need 5 (matching the
 
 ## Next: Small hygiene (cheap, do between chapters)
 
-- [ ] What's New section on landing page
 - [ ] Update privacy policy date (stale since Dec 2025)
 - [ ] Switch contact email to hello@senara.id
 - [ ] aria-live on story loading states
