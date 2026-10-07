@@ -85,7 +85,7 @@ function formatDuration(secs: number | null, desc: string): string {
     return h > 0 ? `${h}:${pm}:${ps}` : `${pm}:${ps}`;
   }
   const m = desc.match(/(\d+):(\d+)/);
-  return m ? `${m[1]}:${m[2]}` : '—';
+  return m ? `${m[1]}:${m[2]}` : '-';
 }
 
 function isShort(entry: { title: string; description: string; durationSeconds: number | null; link: string }): boolean {

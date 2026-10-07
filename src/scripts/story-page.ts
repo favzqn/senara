@@ -5,7 +5,7 @@ import { allStoriesData } from '../data/stories';
 import type { Story } from '../data/stories';
 import { getCategoryById } from '../data/categories';
 
-// Stories with secret preview access — must match story-loader.js
+// Stories with secret preview access: must match story-loader.js
 const STORY_SECRETS: Record<string, string> = {
   'teman-baru-di-kelas-8b': 'k8b-preview-2026',
 };

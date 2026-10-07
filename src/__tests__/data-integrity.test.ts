@@ -93,12 +93,12 @@ describe('data integrity - categories', () => {
     },
   );
 
-  it('every category is referenced by at least one story (or none are orphaned unused — soft check)', () => {
+  it('every category is referenced by at least one story (or none are orphaned unused (soft check))', () => {
     // Informational: which categories have stories
     const usedCategories = new Set(allStoriesData.map((s) => s.category));
     const allCategoryIds = allCategoriesData.map((c) => c.id);
     const unused = allCategoryIds.filter((id) => !usedCategories.has(id));
-    // Just log — not all categories must have stories yet
+    // Just log: not all categories must have stories yet
     if (unused.length > 0) {
       console.log('Categories without stories:', unused);
     }

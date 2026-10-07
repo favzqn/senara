@@ -250,7 +250,7 @@ export function initVNDemo(): void {
   bg.src = BASE + '1.jpg';
   screen.setAttribute('tabindex', '0');
   screen.setAttribute('role', 'button');
-  screen.setAttribute('aria-label', 'Story demo — click or press Enter to advance');
+  screen.setAttribute('aria-label', 'Story demo: click or press Enter to advance');
   screen.addEventListener('click', onClick);
   screen.addEventListener('keydown', function (e: KeyboardEvent) {
     if (e.key === 'Enter' || e.key === ' ') {

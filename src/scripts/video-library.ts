@@ -134,7 +134,7 @@ function createNetflixVideoCard(video: Video, channelLookup: ChannelLookup): str
     >
       <div class="nf-card-thumb">
         <img src="${video.thumbnail}" alt="" loading="lazy">
-        <span class="nf-card-duration">${video.duration || '—'}</span>
+        <span class="nf-card-duration">${video.duration || '-'}</span>
         <div class="nf-card-overlay">
           <div class="nf-card-play">${TV_ICONS.playCircle}</div>
         </div>
@@ -386,7 +386,7 @@ class SenaraVideoLibrary {
             <img src="${v.thumbnail}" alt="" loading="lazy" class="nf-up-next-thumb">
             <div class="nf-up-next-info">
               <span class="nf-up-next-name">${v.title}</span>
-              <span class="nf-up-next-duration">${v.duration || '—'}</span>
+              <span class="nf-up-next-duration">${v.duration || '-'}</span>
             </div>
           </button>
         `).join('')}
@@ -588,7 +588,7 @@ function renderLatestVideos(library: SenaraVideoLibrary, { age = 'all', category
       titleEl.textContent = labels[category] || category;
     } else {
       titleEl.textContent = age !== 'all'
-        ? `${getText('tv.latestVideos', 'Latest Videos')} — ${AGE_STYLES[age]?.label || age}`
+        ? `${getText('tv.latestVideos', 'Latest Videos')} · ${AGE_STYLES[age]?.label || age}`
         : `${getText('tv.latestVideos', 'Latest Videos')}`;
     }
   }

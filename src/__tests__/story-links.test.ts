@@ -32,7 +32,7 @@ describe('internal query links', () => {
   const files = collectSourceFiles(SRC_DIR, ['.ts', '.astro'])
     .filter(f => !f.endsWith('story-links.test.ts'));
 
-  // /story? matches the bad form but /story/? does not — no lookbehind needed.
+  // /story? matches the bad form but /story/? does not: no lookbehind needed.
   const bare = /\/(story|collection)\?/;
 
   it.each(files)('no bare query link (missing trailing slash) in %s', (file) => {

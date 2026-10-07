@@ -78,7 +78,7 @@ describe('i18n - language file structure', () => {
 
   it.each(Object.entries(languages))('%s file has non-empty string values for leaf keys', (lang, data) => {
     const leafKeys = collectLeafKeys(data as JsonObject);
-    expect(leafKeys.length).toBeGreaterThan(100); // sanity check — these are big files
+    expect(leafKeys.length).toBeGreaterThan(100); // sanity check: these are big files
 
     // Spot-check a few essential keys
     const essentialKeys = ['nav.home', 'nav.collection', 'nav.about'];

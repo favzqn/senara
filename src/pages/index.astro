@@ -33,12 +33,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </p>
 
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F172A] leading-[1.1] tracking-tight mb-6" data-i18n-html="home.headline">
-          You don't just read these stories.<br>
-          <span class="text-[#4F46E5]">You live them.</span>
+          Step into the story.<br>
+          <span class="text-[#4F46E5]">You live it.</span>
         </h1>
 
         <p class="text-lg md:text-xl text-[#64748B] leading-relaxed max-w-2xl mx-auto mb-10" data-i18n="home.subheadline">
-          Interactive stories about mental health, relationships, money, and life — told through characters who feel real. Every choice you make teaches something you won't forget.
+          Interactive stories about mental health, relationships, money, and life, told through characters who feel real. Your choices decide where the story goes.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 justify-center mb-12">
@@ -50,13 +50,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </a>
         </div>
 
-        <div class="flex items-center justify-center gap-6 text-sm text-[#94A3B8]">
+        <div class="flex items-center justify-center gap-6 text-sm text-[#64748B]">
           <div class="flex items-center gap-1.5">
-            <svg class="w-4 h-4 text-[#F97316]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <span data-i18n="home.rating">4.8 reader rating</span>
+            <span data-i18n="home.statLangs">3 languages</span>
           </div>
           <div class="w-px h-4 bg-[#E2E8F0]"></div>
-          <span data-i18n="home.readers">1,250+ readers</span>
+          <span data-i18n="home.statNoSignup">No sign-up</span>
           <div class="w-px h-4 bg-[#E2E8F0]"></div>
           <span data-i18n="home.free">100% free</span>
         </div>
@@ -74,7 +73,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="vn-player" id="vnDemo">
-        <div class="vn-screen" tabindex="0" role="button" aria-label="Story demo — click or press Enter to advance">
+        <div class="vn-screen" tabindex="0" role="button" aria-label="Story demo: click or press Enter to advance">
           <img class="vn-bg" id="vnBg" src="/monogatari/assets/scenes/1.jpg" alt="Story scene" loading="eager">
           <div class="vn-overlay"></div>
 
@@ -90,7 +89,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
 
         <div class="vn-footer">
-          <span class="vn-story-tag" data-i18n="home.demoStoryTag">Mental Health Hero — Chapter 1</span>
+          <span class="vn-story-tag" data-i18n="home.demoStoryTag">Mental Health Hero · Chapter 1</span>
           <a href="/story/?id=pahlawan-kesehatan-mental" class="vn-full-link" data-umami-event="Demo Play Full" data-i18n="home.demoPlayFull">
             Play Full Story
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -137,7 +136,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="text-center">
         <p class="text-lg text-[#64748B] italic" data-i18n="home.problemBridge">
-          What if learning about life felt like living through a story?
+          Learning about life can feel like living through a story.
         </p>
       </div>
     </div>
@@ -148,7 +147,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="text-center mb-14">
         <p class="text-sm font-semibold text-[#4F46E5] tracking-widest uppercase mb-3" data-i18n="home.experienceLabel">The Experience</p>
         <h2 class="text-3xl md:text-4xl font-bold text-[#0F172A] leading-tight" data-i18n-html="home.experienceTitle">
-          Meet the characters.<br>Make the choices. Learn by living.
+          Meet the characters, make your choices, and learn by living.
         </h2>
       </div>
 
@@ -191,7 +190,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="text-xs font-bold text-[#4F46E5] mb-2" data-i18n="home.step1Label">Step 1</div>
           <h3 class="text-lg font-bold text-[#0F172A] mb-2" data-i18n="home.step1Title">Pick a story</h3>
-          <p class="text-sm text-[#64748B] leading-relaxed" data-i18n="home.step1Desc">Browse topics — mental health, money, relationships, and more. Each story is a different world.</p>
+          <p class="text-sm text-[#64748B] leading-relaxed" data-i18n="home.step1Desc">Browse topics: mental health, money, relationships, and more. Each story is a different world.</p>
         </div>
 
         <div class="text-center">
@@ -200,7 +199,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="text-xs font-bold text-[#F97316] mb-2" data-i18n="home.step2Label">Step 2</div>
           <h3 class="text-lg font-bold text-[#0F172A] mb-2" data-i18n="home.step2Title">Make choices</h3>
-          <p class="text-sm text-[#64748B] leading-relaxed" data-i18n="home.step2Desc">You're not a spectator. You're in the story. Every decision leads somewhere different.</p>
+          <p class="text-sm text-[#64748B] leading-relaxed" data-i18n="home.step2Desc">You're in the story. Every decision leads somewhere different.</p>
         </div>
 
         <div class="text-center">
@@ -209,7 +208,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="text-xs font-bold text-[#10B981] mb-2" data-i18n="home.step3Label">Step 3</div>
           <h3 class="text-lg font-bold text-[#0F172A] mb-2" data-i18n="home.step3Title">Learn something real</h3>
-          <p class="text-sm text-[#64748B] leading-relaxed" data-i18n="home.step3Desc">The lesson isn't a bullet point. It's a feeling. Something you experienced, not memorized.</p>
+          <p class="text-sm text-[#64748B] leading-relaxed" data-i18n="home.step3Desc">You experience the lesson as the story unfolds.</p>
         </div>
       </div>
     </div>
@@ -268,7 +267,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-[#4F46E5] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span class="text-[#334155]" data-i18n="home.sen2">You make decisions — the story responds</span>
+              <span class="text-[#334155]" data-i18n="home.sen2">You make decisions, the story responds</span>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-[#4F46E5] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
