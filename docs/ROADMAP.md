@@ -48,7 +48,7 @@ The four stub stories have 2 chapters each; they need 5 (matching the
 ## Next: Small hygiene (cheap, do between chapters)
 
 - [ ] Update privacy policy date (stale since Dec 2025)
-- [ ] Switch contact email to hello@senara.id
+- [x] Switch contact email to hi@senara.id (done Oct 2026; all 6 public contact points migrated, mailbox = ImprovMX free forwarding)
 - [ ] aria-live on story loading states
 - [ ] Verify Umami analytics is actually capturing data
 

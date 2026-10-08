@@ -53,8 +53,7 @@ Perf 7 | i18n 9 | PWA 7 | Content 5 | Tests 0 | CI/CD 0 | Docs 8 | Legal 7
 8. **Complete Digital Literacy Navigator first**: online safety is
    universal, story already has 21 scene backgrounds.
 9. **Privacy policy needs refresh**: last updated December 2025. **OPEN**
-10. **Personal email exposure**: `fauzan08fauzan@gmail.com` in 6+ places.
-    Switch to `hello@senara.id` when domain email is set up. **OPEN**
+10. **Personal email exposure**: was `fauzan08fauzan@gmail.com` in 6+ public places. **RESOLVED Oct 2026**: every contact point now uses `hi@senara.id` (site pages, i18n strings, README, CONTRIBUTING, grant draft). Mailbox runs on ImprovMX free forwarding to the owner's inbox.
 
 ---
 

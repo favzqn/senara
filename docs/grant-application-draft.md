@@ -2,7 +2,7 @@
 
 > Prepared: June 2026  
 > Project: [senara.id](https://senara.id)  
-> Contact: fauzan08fauzan@gmail.com | [@idsenara](https://instagram.com/idsenara)
+> Contact: hi@senara.id | [@idsenara](https://instagram.com/idsenara)
 
 ---
 

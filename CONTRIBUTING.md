@@ -118,4 +118,4 @@ Title/description strings go in all 3 locale files:
 
 ## Questions?
 
-Open an issue, or email fauzan08fauzan@gmail.com.
+Open an issue, or email hi@senara.id.

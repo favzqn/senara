@@ -157,5 +157,5 @@ MIT: See [LICENSE](LICENSE) for details.
 ## Support
 
 - **Donate:** [Trakteer](https://trakteer.id/senara.id) · [Ko-fi](https://ko-fi.com/senara)
-- **Email:** fauzan08fauzan@gmail.com
+- **Email:** hi@senara.id
 - **Instagram:** [@idsenara](https://instagram.com/idsenara)
